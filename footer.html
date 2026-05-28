@@ -8,254 +8,296 @@
 <link rel="stylesheet" href="MDB5-STANDARD-UI-KIT-Free-9.3.0 (2)/css/mdb.rtl.min.css">
 
 <style>
+
 :root{
   --rose:#b93b56;
   --rose-hover:#a22f49;
   --gold:#c89b2c;
   --white:#ffffff;
   --white-light:rgba(255,255,255,0.72);
-  --glass:rgba(15,10,14,0.55);
-  --dark:#070707;
+  --glass:rgba(255,255,255,0.05);
+  --dark:#000000;
 }
 
 body{
   font-family: "Poppins", sans-serif;
+  background:#000000;
 }
 
-/* ===== FOOTER ===== */
+/* ================= FOOTER ================= */
+
 .footer-modern{
-  background: radial-gradient(circle at top left, #12080c, var(--dark));
-  color: var(--white);
-  position: relative;
-  overflow: hidden;
-  padding-top: 80px;
+  position:relative;
+  overflow:hidden;
+  background:
+  radial-gradient(circle at top left, rgba(0, 0, 0, 0.18), transparent 35%),
+  radial-gradient(circle at bottom right, rgba(200,155,44,0.12), transparent 35%),
+  linear-gradient(135deg,#000000,#000000,#000000);
+  color:#fff;
+  padding:90px 0 30px;
 }
 
-/* glow background */
+/* GLOW EFFECTS */
+
 .footer-modern::before{
   content:"";
   position:absolute;
-  width:500px;
-  height:500px;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.25), transparent 70%);
-  top:-150px;
-  left:-150px;
-  filter: blur(60px);
+  width:450px;
+  height:450px;
+  background:radial-gradient(circle, rgba(0, 0, 0, 0.18), transparent 70%);
+  top:-180px;
+  left:-120px;
+  filter:blur(50px);
 }
+
+.footer-modern::after{
+  content:"";
+  position:absolute;
+  width:350px;
+  height:350px;
+  background:radial-gradient(circle, rgba(0, 0, 0, 0.15), transparent 70%);
+  bottom:-150px;
+  right:-100px;
+  filter:blur(50px);
+}
+
+/* ================= LOGO ================= */
 
 .footer-logo{
   width:220px;
-  filter: drop-shadow(0 0 18px rgba(0, 0, 0, 0.5));
-  transition: all 0.4s ease;
+  transition:0.4s ease;
+  filter:drop-shadow(0 0 20px rgba(0, 0, 0, 0.2));
 }
 
 .footer-logo:hover{
-  transform: scale(1.08);
-  filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.6));
+  transform:scale(1.08);
+  filter:drop-shadow(0 0 28px rgba(0, 0, 0, 0.4));
 }
 
-/* text */
+/* ================= TEXT ================= */
+
 .footer-text{
+  color:var(--white-light);
+  line-height:1.9;
   font-size:14px;
-  color: var(--white-light);
-  line-height:1.7;
+  margin-top:15px;
 }
 
-/* titles */
+/* ================= TITLES ================= */
+
 .footer-title{
-  font-size:17px;
+  font-size:18px;
   font-weight:600;
-  margin-bottom:18px;
-  position: relative;
+  margin-bottom:25px;
+  position:relative;
+  display:inline-block;
 }
 
 .footer-title::after{
   content:"";
-  width:40px;
-  height:2px;
-  background: var(--gold);
   position:absolute;
   left:0;
-  bottom:-6px;
+  bottom:-8px;
+  width:45px;
+  height:2px;
+  border-radius:10px;
+  background:linear-gradient(to right,var(--gold),transparent);
 }
 
-/* links */
+/* ================= LINKS ================= */
+
 .footer-links{
   list-style:none;
   padding:0;
+  margin:0;
 }
 
 .footer-links li{
-  margin-bottom:10px;
-  color: var(--white-light);
-  cursor:pointer;
+  margin-bottom:13px;
+}
+
+.footer-links a{
+  text-decoration:none;
+  color:var(--white-light);
+  transition:0.3s ease;
+  font-size:14px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.footer-links a i{
+  color:var(--gold);
+  font-size:12px;
   transition:0.3s;
-  font-size:14px;
 }
 
-.footer-links li:hover{
-  color: var(--rose);
-  transform: translateX(6px);
+.footer-links a:hover{
+  color:#fff;
+  transform:translateX(6px);
 }
 
-/* contact */
+.footer-links a:hover i{
+  color:var(--rose);
+}
+
+/* ================= CONTACT ================= */
+
 .footer-contact{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  margin-bottom:18px;
+  color:var(--white-light);
   font-size:14px;
-  margin-bottom:10px;
-  color: var(--white-light);
 }
 
 .footer-contact i{
-  color: var(--gold);
-  margin-right:10px;
+  color:var(--gold);
+  font-size:15px;
+  margin-top:4px;
 }
 
-/* social */
+/* ================= SOCIAL ================= */
+
+.footer-social{
+  display:flex;
+  gap:10px;
+  margin-top:25px;
+}
+
 .footer-social a{
-  width:42px;
-  height:42px;
+  width:45px;
+  height:45px;
   border-radius:50%;
-  display:inline-flex;
+  display:flex;
   align-items:center;
   justify-content:center;
-  margin-right:8px;
-  border:1px solid var(--gold);
+  text-decoration:none;
   color:#fff;
-  transition:0.4s;
-  backdrop-filter: blur(10px);
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  transition:0.4s ease;
 }
 
 .footer-social a:hover{
-  background: var(--rose);
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(185,59,86,0.4);
+  background:linear-gradient(135deg,var(--rose),var(--rose-hover));
+  transform:translateY(-6px);
+  box-shadow:0 0 20px rgba(185,59,86,0.4);
+  border-color:transparent;
 }
 
-/* live button */
+/* ================= BUTTON ================= */
+
 .btn-live{
-  background: linear-gradient(135deg, var(--rose), var(--rose-hover));
+  margin-top:15px;
   border:none;
-  padding:10px 20px;
-  border-radius:30px;
+  outline:none;
+  padding:12px 24px;
+  border-radius:40px;
+  background:linear-gradient(135deg,var(--rose),var(--rose-hover));
   color:#fff;
-  margin-top:10px;
+  font-size:14px;
   font-weight:500;
-  transition:0.3s;
+  transition:0.4s ease;
+  box-shadow:0 10px 25px rgba(185,59,86,0.25);
+}
+
+.btn-live i{
+  margin-right:8px;
 }
 
 .btn-live:hover{
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(185,59,86,0.4);
+  transform:translateY(-3px) scale(1.04);
+  box-shadow:0 12px 30px rgba(185,59,86,0.4);
 }
 
-/* subscribe */
+/* ================= SUBSCRIBE ================= */
+
 .footer-subscribe{
+  margin:50px auto 25px;
+  max-width:750px;
   display:flex;
+  align-items:center;
   justify-content:center;
-  gap:10px;
-  margin:35px 0;
-}
-.footer-subscribe input{
-  width:320px;
-  padding:12px 15px;
-  border-radius:30px;
-  border:2px solid var(--gold);
-  background: rgba(255,255,255,0.08);
-  color:#fff;
-  outline:none;
-  transition:0.3s;
+  gap:14px;
+  padding:14px;
+  border-radius:70px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(18px);
 }
 
-.footer-subscribe input:focus{
-  border-color: var(--rose);
-  box-shadow: 0 0 12px rgba(200,155,44,0.5);
+.footer-subscribe input{
+  flex:1;
+  border:none;
+  outline:none;
+  background:transparent;
+  color:#fff;
+  padding:14px 18px;
+  font-size:14px;
 }
+
+.footer-subscribe input::placeholder{
+  color:rgba(255,255,255,0.5);
+}
+
+.footer-subscribe button{
+  border:none;
+  padding:14px 28px;
+  border-radius:40px;
+  background:linear-gradient(135deg,var(--gold),#e0b84d);
+  color:#000;
+  font-weight:600;
+  transition:0.4s ease;
+}
+
+.footer-subscribe button:hover{
+  background:linear-gradient(135deg,var(--rose),var(--rose-hover));
+  color:#fff;
+  transform:translateY(-2px);
+  box-shadow:0 0 18px rgba(185,59,86,0.35);
+}
+
+.footer-subscribe button:active{
+  transform:scale(0.96);
+}
+
+/* ================= MESSAGE ================= */
 
 #msg{
   text-align:center;
-  margin-top:10px;
-  font-size:13px;
-}
-.footer-subscribe button{
-  background: var(--gold);
-  border: 2px solid var(--gold);
-  padding: 12px 22px;
-  border-radius: 30px;
-  font-weight: 600;
-  color: #000;
-  cursor: pointer;
-  transition: 0.3s ease;
+  font-size:14px;
+  margin-top:12px;
 }
 
-/* hover */
-.footer-subscribe button:hover{
-  background: var(--rose);
-  border-color: var(--rose);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 0 15px rgba(200,155,44,0.4);
+/* ================= LINE ================= */
+
+.footer-line{
+  border-color:rgba(255,255,255,0.08);
+  margin:35px 0;
 }
 
-/* click effect */
-.footer-subscribe button:active{
-  transform: scale(0.95);
-}
+/* ================= BOTTOM ================= */
 
-/* bottom */
 .footer-bottom{
   display:flex;
+  align-items:center;
   justify-content:space-between;
+  gap:15px;
   flex-wrap:wrap;
-  font-size:13px;
-  color: var(--white-light);
 }
 
-.footer-bottom-links a{
-  margin-left:15px;
-  color: var(--white-light);
-  text-decoration:none;
-  transition:0.3s;
-}
-
-.footer-bottom-links a:hover{
-  color: var(--gold);
-}
-
-/* line */
-.footer-line{
-  border:1px solid rgba(255,255,255,0.08);
-  margin:25px 0;
-}
-
-/* responsive */
-@media(max-width:768px){
-  .footer-subscribe{
-    flex-direction:column;
-    align-items:center;
-  }
-
-  .footer-subscribe input{
-    width:100%;
-  }
-
-  .footer-bottom{
-    flex-direction:column;
-    text-align:center;
-    gap:10px;
-  }
-}
 .footer-credit{
+  color:rgba(255,255,255,0.7);
   font-size:13px;
-  color: rgba(255,255,255,0.75);
-  text-align:center;
-  margin-top:20px;
-  letter-spacing:0.5px;
+  letter-spacing:0.4px;
   position:relative;
   display:inline-block;
   transition:0.4s;
 }
 
-/* GOLD SHIMMER LINE */
 .footer-credit::after{
   content:"";
   position:absolute;
@@ -263,116 +305,244 @@ body{
   bottom:-5px;
   width:0%;
   height:2px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  background:linear-gradient(to right,var(--gold),transparent);
   transition:0.5s;
 }
 
-/* HOVER EFFECT */
 .footer-credit:hover{
   color:#fff;
-  text-shadow:0 0 10px rgba(200,155,44,0.5);
-  transform: translateY(-2px);
+  text-shadow:0 0 10px rgba(200,155,44,0.4);
 }
 
 .footer-credit:hover::after{
   width:100%;
 }
+
+.footer-bottom-links{
+  display:flex;
+  gap:18px;
+}
+
+.footer-bottom-links a{
+  text-decoration:none;
+  color:rgba(255,255,255,0.7);
+  font-size:13px;
+  transition:0.3s;
+}
+
+.footer-bottom-links a:hover{
+  color:var(--gold);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:991px){
+
+  .footer-modern{
+    text-align:center;
+  }
+
+  .footer-title::after{
+    left:50%;
+    transform:translateX(-50%);
+  }
+
+  .footer-contact{
+    justify-content:center;
+  }
+
+  .footer-social{
+    justify-content:center;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    text-align:center;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .footer-modern{
+    padding-top:70px;
+  }
+
+  .footer-subscribe{
+    flex-direction:column;
+    border-radius:25px;
+  }
+
+  .footer-subscribe input{
+    width:100%;
+    text-align:center;
+  }
+
+  .footer-subscribe button{
+    width:100%;
+  }
+
+  .footer-logo{
+    width:180px;
+  }
+
+}
+
 </style>
 
+<!-- ================= FOOTER ================= -->
 
-<!-- ===== FOOTER HTML ===== -->
 <footer class="footer-modern">
 
   <div class="container">
 
-    <div class="row gy-4">
+    <div class="row gy-5">
 
       <!-- LOGO -->
-      <div class="col-md-3">
-        <img src="navelogo.jpeg" class="footer-logo mb-3">
+
+      <div class="col-lg-4 col-md-6">
+
+        <img src="navelogo.jpeg" class="footer-logo" alt="logo">
 
         <p class="footer-text">
-          Creating unforgettable wedding experiences with elegance, style & perfection.
+          Creating unforgettable wedding experiences with elegance, luxury and timeless perfection for your dream celebration.
         </p>
 
-        <div class="footer-social mt-3">
-          <a href="https://www.facebook.com/profile.php?id=100016793528002"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/owais_ansari____3211"><i class="fab fa-instagram"></i></a>
+        <div class="footer-social">
 
-         <a href="https://wa.me/923112795023" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
+          <a href="https://www.facebook.com/profile.php?id=100016793528002">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <a href="https://www.instagram.com/owais_ansari____3211">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="https://wa.me/923112795023" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+
         </div>
+
       </div>
 
-
       <!-- SERVICES -->
-      <div class="col-md-3">
+
+      <div class="col-lg-2 col-md-6">
+
         <h5 class="footer-title">Services</h5>
+
         <ul class="footer-links">
-          <li>Wedding Halls</li>
-          <li>Catering</li>
-          <li>Luxury Cars</li>
-          <li>Decorations</li>
-          <li>Photography</li>
-          <li>Invitations</li>
+
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Wedding Halls</a></li>
+
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Catering</a></li>
+
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Luxury Cars</a></li>
+
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Decorations</a></li>
+
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Photography</a></li>
+
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Invitations</a></li>
+
         </ul>
+
       </div>
 
       <!-- QUICK LINKS -->
-      <div class="col-md-3">
+
+      <div class="col-lg-2 col-md-6">
+
         <h5 class="footer-title">Quick Links</h5>
+
         <ul class="footer-links">
-          <li>Home</li>
-          <li>About</li>
-          <li>Gallery</li>
-          <li>AI Planner</li>
-          <li>Contact</li>
-          <li>Blog</li>
+
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> About</a></li>
+
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Gallery</a></li>
+
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> AI Planner</a></li>
+
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
+
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Blog</a></li>
+
         </ul>
+
       </div>
 
       <!-- CONTACT -->
-      <div class="col-md-3">
-        <h5 class="footer-title">Contact</h5>
 
-        <p class="footer-contact"><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</p>
-        <p class="footer-contact"><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
-        <p class="footer-contact"><i class="fa-solid fa-envelope"></i> hello@wedream.pk</p>
+      <div class="col-lg-4 col-md-6">
 
-        <button class="btn-live">Live Chat</button>
+        <h5 class="footer-title">Contact Info</h5>
+
+        <div class="footer-contact">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Karachi, Pakistan</span>
+        </div>
+
+        <div class="footer-contact">
+          <i class="fa-solid fa-phone"></i>
+          <span>+92 300 1234567</span>
+        </div>
+
+        <div class="footer-contact">
+          <i class="fa-solid fa-envelope"></i>
+          <span>hello@wedream.pk</span>
+        </div>
+
+        <button class="btn-live">
+          <i class="fa-solid fa-comments"></i>
+          Live Chat
+        </button>
+
       </div>
 
     </div>
 
     <hr class="footer-line">
-<!-- SUBSCRIBE -->
-<form class="footer-subscribe" action="https://formspree.io/f/your-id" method="POST" id="subscribeForm">
 
-  <input 
-    type="email" 
-    name="email"
-    id="email"
-    placeholder="Enter your email address"
-    required
-  >
+    <!-- SUBSCRIBE -->
 
-  <button type="submit" id="btn">Subscribe</button>
+    <form class="footer-subscribe"
+    action="https://formspree.io/f/your-id"
+    method="POST"
+    id="subscribeForm">
 
-</form>
+      <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="Enter your email address"
+      required>
 
-<p id="msg"></p>
+      <button type="submit" id="btn">
+        Subscribe
+      </button>
+
+    </form>
+
+    <p id="msg"></p>
+
     <hr class="footer-line">
 
     <!-- BOTTOM -->
+
     <div class="footer-bottom">
-    <p class="footer-credit">
-  © 2026 WeDream. Crafted with passion by Owais Ansari & Team ✨
-</p>
+
+      <p class="footer-credit">
+        © 2026 WeDream. Crafted with passion by Owais Ansari & Team✨
+      </p>
+
       <div class="footer-bottom-links">
         <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
+        <a href="#">Terms & Conditions</a>
       </div>
+
     </div>
 
   </div>
@@ -380,54 +550,71 @@ body{
 </footer>
 
 <script>
+
 const form = document.getElementById("subscribeForm");
 const email = document.getElementById("email");
 const msg = document.getElementById("msg");
 const btn = document.getElementById("btn");
 
-// email regex
 const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 form.addEventListener("submit", function(e){
+
   e.preventDefault();
 
-  // validation
   if(!regex.test(email.value)){
+
     msg.innerText = "❌ Please enter valid email";
-    msg.style.color = "red";
-    email.style.border = "2px solid red";
+    msg.style.color = "#ff4d4d";
+
     return;
   }
 
-  // loading
   btn.innerText = "Sending...";
   btn.disabled = true;
+
   msg.innerText = "⏳ Subscribing...";
   msg.style.color = "#c89b2c";
 
-  // REAL SUBMIT (Formspree)
-  fetch(form.action, {
-    method: "POST",
-    body: new FormData(form),
-    headers: { "Accept": "application/json" }
+  fetch(form.action,{
+
+    method:"POST",
+    body:new FormData(form),
+    headers:{
+      "Accept":"application/json"
+    }
+
   })
+
   .then(res => {
+
     if(res.ok){
+
       msg.innerText = "🎉 Successfully Subscribed!";
       msg.style.color = "lightgreen";
 
       btn.innerText = "Subscribed ✔";
 
       email.value = "";
-    } else {
+
+    }else{
+
       throw new Error();
+
     }
+
   })
+
   .catch(() => {
+
     msg.innerText = "❌ Try again later";
-    msg.style.color = "red";
+    msg.style.color = "#ff4d4d";
+
     btn.innerText = "Subscribe";
     btn.disabled = false;
+
   });
+
 });
+
 </script>
