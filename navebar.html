@@ -602,11 +602,11 @@ body{
     <ul class="nav-menu">
 
       <li class="nav-item">
-        <a href="#" class="nav-link active-link">Home</a>
+        <a href="index.html" class="nav-link active-link">Home</a>
       </li>
 
       <li class="nav-item">
-        <a href="#" class="nav-link">About Us</a>
+        <a href="aboutme.html" class="nav-link">About Us</a>
       </li>
 
       <!-- Services -->
@@ -624,7 +624,7 @@ body{
       </li>
 
       <li class="nav-item">
-        <a href="#" class="nav-link">Gallery</a>
+        <a href="#" class="nav-link">Guest List</a>
       </li>
 
       <!-- Vendors -->
@@ -675,11 +675,11 @@ body{
   <ul>
 
     <li>
-      <a href="#" class="active-link">Home</a>
+      <a href="index.html" class="active-link">Home</a>
     </li>
 
     <li>
-      <a href="#">About Us</a>
+      <a href="aboutme.html">About Us</a>
     </li>
 
     <!-- Services -->
@@ -702,7 +702,7 @@ body{
     </li>
 
     <li>
-      <a href="#">Gallery</a>
+      <a href="#">Guest List</a>
     </li>
 
     <!-- Vendors -->
@@ -747,84 +747,128 @@ body{
 
 <script>
 
-  // ================= MOBILE MENU =================
+  /* =========================================
+     MOBILE MENU
+  ========================================= */
 
-  const btn = document.getElementById('hamburgerBtn');
-  const menu = document.getElementById('mobileMenu');
+  const hamburgerBtn =
+    document.getElementById('hamburgerBtn');
 
-  btn.addEventListener('click', () => {
-
-    btn.classList.toggle('open');
-    menu.classList.toggle('open');
-
-  });
+  const mobileMenu =
+    document.getElementById('mobileMenu');
 
 
-  // ================= MOBILE SUB MENU =================
+  if (hamburgerBtn && mobileMenu) {
 
-  document.querySelectorAll('.mobile-toggle-sub').forEach(link => {
+    hamburgerBtn.addEventListener('click', () => {
 
-    link.addEventListener('click', (e) => {
+      hamburgerBtn.classList.toggle('open');
+
+      mobileMenu.classList.toggle('open');
+
+    });
+
+  }
+
+
+  /* =========================================
+     MOBILE SUB MENU
+  ========================================= */
+
+  const mobileSubLinks =
+    document.querySelectorAll('.mobile-toggle-sub');
+
+
+  mobileSubLinks.forEach((subLink) => {
+
+    subLink.addEventListener('click', (e) => {
 
       e.preventDefault();
 
-      const target = document.getElementById(
-        link.getAttribute('data-target')
-      );
+      const targetId =
+        subLink.getAttribute('data-target');
 
-      target.classList.toggle('open');
+      const targetMenu =
+        document.getElementById(targetId);
 
-      const icon = link.querySelector('i');
 
-      icon.style.transform =
-      target.classList.contains('open')
-      ? 'rotate(180deg)'
-      : 'rotate(0deg)';
+      if (targetMenu) {
+
+        targetMenu.classList.toggle('open');
+
+        const icon =
+          subLink.querySelector('i');
+
+        if (icon) {
+
+          icon.style.transform =
+            targetMenu.classList.contains('open')
+            ? 'rotate(180deg)'
+            : 'rotate(0deg)';
+
+        }
+
+      }
 
     });
 
   });
 
 
-  // ================= DESKTOP DROPDOWN =================
+  /* =========================================
+     DESKTOP DROPDOWN
+  ========================================= */
 
-  const dropdownBtns = document.querySelectorAll('.dropdown-toggle-btn');
+  const desktopDropdownBtns =
+    document.querySelectorAll('.dropdown-toggle-btn');
 
-  dropdownBtns.forEach(btn => {
 
-    btn.addEventListener('click', function(e){
+  desktopDropdownBtns.forEach((dropdownBtn) => {
+
+    dropdownBtn.addEventListener('click', function(e){
 
       e.preventDefault();
 
-      const parent = this.parentElement;
+      const parentNavItem =
+        this.parentElement;
 
-      // close others
 
-      document.querySelectorAll('.nav-item').forEach(item => {
+      // Close other dropdowns
 
-        if(item !== parent){
-          item.classList.remove('open');
+      document.querySelectorAll('.nav-item')
+      .forEach((navItem) => {
+
+        if(navItem !== parentNavItem){
+
+          navItem.classList.remove('open');
+
         }
 
       });
 
-      // toggle current
 
-      parent.classList.toggle('open');
+      // Toggle current dropdown
+
+      parentNavItem.classList.toggle('open');
 
     });
 
   });
 
 
-  // ================= OUTSIDE CLICK CLOSE =================
+  /* =========================================
+     OUTSIDE CLICK CLOSE
+  ========================================= */
 
   document.addEventListener('click', function(e){
 
     if(!e.target.closest('.nav-item')){
 
-      document.querySelectorAll('.nav-item').forEach(item => {
-        item.classList.remove('open');
+      document.querySelectorAll('.nav-item')
+      .forEach((navItem) => {
+
+        navItem.classList.remove('open');
+
       });
 
     }
@@ -832,16 +876,22 @@ body{
   });
 
 
-  // ================= ACTIVE LINK =================
+  /* =========================================
+     ACTIVE NAV LINK
+  ========================================= */
 
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navigationLinks =
+    document.querySelectorAll('.nav-link');
 
-  navLinks.forEach(link => {
 
-    link.addEventListener('click', function(){
+  navigationLinks.forEach((navLink) => {
 
-      navLinks.forEach(nav => {
-        nav.classList.remove('active-link');
+    navLink.addEventListener('click', function(){
+
+      navigationLinks.forEach((singleLink) => {
+
+        singleLink.classList.remove('active-link');
+
       });
 
       this.classList.add('active-link');

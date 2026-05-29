@@ -977,7 +977,7 @@ body{
   animation: twinkle 2.8s ease-in-out infinite;
 }
 .sparkle.s1 { top: 18%; left: 5%;  font-size: 26px; animation-delay: 0s; }
-.sparkle.s2 { top: 22%; right: 7%; color: var(--rose); font-size: 20px; animation-delay: 0.7s; }
+.sparkle.s2 { top: 22%; right: 7%; font-size: 20px; animation-delay: 0.7s; }
 .sparkle.s3 { bottom: 20%; right: 4%; font-size: 24px; animation-delay: 1.4s; }
 .sparkle.s4 { bottom: 18%; left: 9%; font-size: 18px; animation-delay: 0.4s; }
 

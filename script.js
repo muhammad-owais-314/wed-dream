@@ -37,35 +37,90 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const dotsEl = document.getElementById('sliderDots');
 const cards = track.querySelectorAll('.cat-card');
-const total = cards.length;
-const visible = 5;
-const maxSlide = total - visible;
-let current = 0;
 
+let current = 0;
+let visible = 5;
+let maxSlide = 0;
+
+// 🔥 Responsive visible cards
+function updateVisible() {
+  const w = window.innerWidth;
+
+  if (w < 576) {
+    visible = 1;   // mobile
+  } else if (w < 768) {
+    visible = 2;   // small tablets
+  } else if (w < 992) {
+    visible = 3;   // tablets
+  } else if (w < 1200) {
+    visible = 4;   // small laptops
+  } else {
+    visible = 5;   // desktop
+  }
+
+  maxSlide = Math.max(0, cards.length - visible);
+}
+
+// card width including gap
 function getCardW() {
-  return cards[0].getBoundingClientRect().width + 16;
+  const style = window.getComputedStyle(track);
+  const gap = parseFloat(style.gap || 0);
+  return cards[0].offsetWidth + gap;
+}
+
+function renderDots() {
+  dotsEl.innerHTML = '';
+
+  for (let i = 0; i <= maxSlide; i++) {
+    const d = document.createElement('button');
+    d.className = 'dot' + (i === current ? ' active' : '');
+    d.onclick = () => {
+      current = i;
+      updateSlider();
+    };
+    dotsEl.appendChild(d);
+  }
 }
 
 function updateSlider() {
-  track.style.transform = `translateX(-${current * getCardW()}px)`;
+  const cardW = getCardW();
+  track.style.transform = `translateX(-${current * cardW}px)`;
+
   prevBtn.disabled = current === 0;
   nextBtn.disabled = current >= maxSlide;
-  document.querySelectorAll('.dot').forEach((d,i) =>
-    d.classList.toggle('active', i === current));
+
+  document.querySelectorAll('.dot').forEach((d, i) =>
+    d.classList.toggle('active', i === current)
+  );
 }
 
-for (let i = 0; i <= maxSlide; i++) {
-  const d = document.createElement('button');
-  d.className = 'dot' + (i === 0 ? ' active' : '');
-  d.onclick = () => { current = i; updateSlider(); };
-  dotsEl.appendChild(d);
+function init() {
+  updateVisible();
+
+  // reset if current out of range
+  if (current > maxSlide) current = maxSlide;
+
+  renderDots();
+  updateSlider();
 }
 
-prevBtn.onclick = () => { if(current > 0) { current--; updateSlider(); } };
-nextBtn.onclick = () => { if(current < maxSlide) { current++; updateSlider(); } };
+prevBtn.onclick = () => {
+  if (current > 0) {
+    current--;
+    updateSlider();
+  }
+};
 
-updateSlider();
-window.addEventListener('resize', updateSlider);
+nextBtn.onclick = () => {
+  if (current < maxSlide) {
+    current++;
+    updateSlider();
+  }
+};
+
+window.addEventListener('resize', init);
+
+init();
 
 // ==================================================================
 
