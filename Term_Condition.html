@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>WedDream | Terms & Conditions</title>
+  <!-- Font Awesome 6 & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Josefin+Sans:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- jQuery for loading navbar/footer -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    /* =========================================================
+       PREMIUM WEDDING THEME - TERMS & CONDITIONS PAGE
+    ========================================================= */
+    :root {
+      --rose: #b93b56;
+      --rose-hover: #a22f49;
+      --gold: #c89b2c;
+      --gold-light: #e0b04a;
+      --white: #ffffff;
+      --white-light: rgba(255,255,255,0.72);
+      --glass: rgba(15,10,14,0.55);
+      --dark: #070707;
+      --dark-card: #0d0a0e;
+      --border-gold: rgba(200,155,44,0.25);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--dark);
+      font-family: 'Jost', sans-serif;
+      overflow-x: hidden;
+      color: var(--white-light);
+    }
+
+    /* =========================================================
+       REUSABLE COMPONENTS
+    ========================================================= */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* Gold divider */
+    .gold-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      position: relative;
+    }
+    .gold-divider::before,
+    .gold-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .divider-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      margin: 0 12px;
+      flex-shrink: 0;
+    }
+
+    /* Section header */
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .section-eyebrow::before,
+    .section-eyebrow::after {
+      content: '';
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.6;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+    .section-subtitle {
+      color: var(--white-light);
+      font-size: 14px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* =========================================================
+       NAVBAR (SAME AS MAIN WEBSITE)
+    ========================================================= */
+    .wd-nav {
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background: rgba(4, 2, 6, 0.97);
+      border-bottom: 1px solid rgba(200,155,44,0.25);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      height: 76px;
+      display: flex;
+      align-items: center;
+      transition: height 0.25s ease, background 0.25s;
+    }
+    .wd-nav.scrolled {
+      height: 66px;
+      background: rgba(4, 2, 6, 0.99);
+      border-bottom-color: rgba(200,155,44,0.4);
+    }
+    .wd-nav-inner {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      gap: 20px;
+    }
+    .wd-logo {
+      flex-shrink: 0;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    .wd-logo img {
+      width: 190px;
+      object-fit: contain;
+      transition: width 0.2s ease;
+    }
+    .wd-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 4px;
+      margin: 0;
+      padding: 0;
+    }
+    .wd-menu-item { position: relative; }
+    .wd-menu-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,0.82);
+      text-decoration: none;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 8px 14px;
+      border-radius: 8px;
+      position: relative;
+      transition: color 0.25s, background 0.25s;
+    }
+    .wd-menu-link:hover, .wd-menu-link.active {
+      color: #c89b2c;
+      background: rgba(200,155,44,0.07);
+    }
+    .wd-menu-link::after {
+      content: '';
+      position: absolute;
+      bottom: 3px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      border-radius: 2px;
+      background: #c89b2c;
+      transition: width 0.3s;
+    }
+    .wd-menu-link:hover::after, .wd-menu-link.active::after { width: 20px; }
+    .wd-menu-link.wd-ai {
+      background: linear-gradient(135deg, rgba(185,59,86,0.18), rgba(185,59,86,0.08));
+      border: 1px solid rgba(185,59,86,0.45);
+      color: #e06080;
+      border-radius: 50px;
+    }
+    .wd-menu-link.wd-ai::after { display: none; }
+    .wd-dropdown {
+      position: absolute;
+      top: calc(100% + 12px);
+      left: 0;
+      min-width: 200px;
+      background: #0e0a12;
+      border: 1px solid rgba(200,155,44,0.2);
+      border-top: 2px solid #c89b2c;
+      border-radius: 12px;
+      padding: 8px 0;
+      list-style: none;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: all 0.25s;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    .wd-menu-item:hover .wd-dropdown,
+    .wd-menu-item.open .wd-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+    .wd-dropdown li a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      padding: 11px 20px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .wd-dropdown li a i { color: #c89b2c; width: 16px; }
+    .wd-nav-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .wd-icon-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 15px;
+      transition: all 0.25s;
+    }
+    .wd-hamburger {
+      display: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .wd-bar {
+      width: 20px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.35s;
+    }
+    .wd-bar:nth-child(2) { width: 14px; }
+    .wd-mobile {
+      position: fixed;
+      top: 76px;
+      right: -100%;
+      width: 100%;
+      max-width: 360px;
+      height: calc(100vh - 76px);
+      background: #070409;
+      border-left: 1px solid rgba(200,155,44,0.2);
+      z-index: 9998;
+      transition: right 0.35s;
+      overflow-y: auto;
+      padding: 24px 0 48px;
+    }
+    .wd-mobile.open { right: 0; }
+    .wd-overlay {
+      position: fixed;
+      inset: 0;
+      top: 76px;
+      background: rgba(0,0,0,0.55);
+      z-index: 9997;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      backdrop-filter: blur(4px);
+    }
+    .wd-overlay.open { opacity: 1; pointer-events: auto; }
+    .wd-mobile-list { list-style: none; padding: 0 20px; }
+    .wd-mobile-list li a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      padding: 17px 4px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+    .wd-mobile-sub {
+      display: none;
+      padding: 0 0 12px 16px;
+      list-style: none;
+    }
+    .wd-mobile-sub.open { display: block; }
+    .wd-mobile-icons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 30px 24px 20px;
+      border-top: 1px solid rgba(200,155,44,0.2);
+    }
+    .wd-mobile-ai {
+      margin: 20px 20px 8px;
+      display: block;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(185,59,86,0.25), rgba(185,59,86,0.12));
+      border: 1px solid rgba(185,59,86,0.5);
+      border-radius: 50px;
+      color: #e06080;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    @media (min-width: 901px) { .wd-hamburger { display: none; } }
+    @media (max-width: 900px) {
+      .wd-menu { display: none; }
+      .wd-hamburger { display: flex; }
+    }
+    @media (max-width: 768px) {
+      .wd-nav-inner { padding: 0 24px; }
+      .wd-logo img { width: 160px; }
+    }
+    @media (max-width: 576px) {
+      .wd-nav-inner { padding: 0 16px; }
+      .wd-logo img { width: 140px; }
+      .wd-icon-btn, .wd-hamburger { width: 36px; height: 36px; }
+    }
+
+    /* =========================================================
+       TERMS & CONDITIONS MAIN CONTENT
+    ========================================================= */
+    .terms-page {
+      padding: 80px 0 100px;
+      min-height: calc(100vh - 76px);
+    }
+
+    /* Last updated badge */
+    .last-updated {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .update-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(200,155,44,0.12);
+      border: 1px solid rgba(200,155,44,0.25);
+      border-radius: 50px;
+      padding: 8px 20px;
+      font-size: 12px;
+      color: var(--gold);
+    }
+
+    /* Terms card grid */
+    .terms-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .terms-card {
+      background: var(--dark-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    .terms-card:hover {
+      border-color: rgba(200,155,44,0.4);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    }
+    .terms-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 22px 28px;
+      background: rgba(200,155,44,0.04);
+      border-bottom: 1px solid rgba(200,155,44,0.1);
+      cursor: pointer;
+    }
+    .terms-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(200,155,44,0.15), rgba(200,155,44,0.05));
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .terms-title {
+      flex: 1;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 1px;
+    }
+    .terms-toggle {
+      color: var(--gold);
+      font-size: 14px;
+      transition: transform 0.3s;
+    }
+    .terms-card.open .terms-toggle {
+      transform: rotate(180deg);
+    }
+    .terms-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 0 28px;
+    }
+    .terms-card.open .terms-body {
+      max-height: 800px;
+      padding: 24px 28px 28px;
+    }
+    .terms-body p {
+      margin-bottom: 16px;
+      line-height: 1.7;
+      font-size: 15px;
+      color: var(--white-light);
+    }
+    .terms-body p:last-child {
+      margin-bottom: 0;
+    }
+    .terms-body ul, .terms-body ol {
+      margin: 12px 0 16px 24px;
+    }
+    .terms-body li {
+      margin: 8px 0;
+      line-height: 1.6;
+    }
+    .terms-highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    /* Contact section */
+    .contact-info-card {
+      margin-top: 48px;
+      background: linear-gradient(135deg, rgba(185,59,86,0.08), rgba(15,10,14,0.95));
+      border: 1px solid rgba(185,59,86,0.3);
+      border-radius: 24px;
+      padding: 36px 32px;
+      text-align: center;
+    }
+    .contact-info-card .icon {
+      font-size: 42px;
+      color: var(--rose);
+      margin-bottom: 16px;
+    }
+    .contact-info-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .contact-info-card p {
+      color: var(--white-light);
+      margin-bottom: 20px;
+    }
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--rose);
+      color: white;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    .contact-email:hover {
+      background: var(--rose-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    .footer-mini {
+      padding: 30px 0;
+      text-align: center;
+      border-top: 1px solid rgba(200,155,44,0.15);
+      margin-top: 20px;
+    }
+    .footer-mini p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 24px; }
+      .terms-header { padding: 18px 20px; }
+      .terms-title { font-size: 18px; }
+      .terms-number { width: 38px; height: 38px; font-size: 20px; }
+      .contact-info-card { padding: 28px 20px; }
+    }
+
+    /* Hide containers until loaded */
+    #nav-container, #footer-container {
+      min-height: auto;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ================= NAVBAR CONTAINER ================= -->
+<div id="nav-container">
+  <!-- Built-in fallback navbar in case external file fails -->
+  <nav class="wd-nav" id="wdNav">
+    <div class="wd-nav-inner">
+      <a href="index.html" class="wd-logo">
+        <img src="navelogo.jpeg" alt="WedDream" onerror="this.src='https://placehold.co/190x48/c89b2c/white?text=WedDream'">
+      </a>
+      <ul class="wd-menu">
+        <li class="wd-menu-item"><a href="index.html" class="wd-menu-link">Home</a></li>
+        <li class="wd-menu-item"><a href="aboutme.html" class="wd-menu-link">About Us</a></li>
+        <li class="wd-menu-item wd-has-drop">
+          <a href="#" class="wd-menu-link wd-drop-toggle">Services <i class="fa-solid fa-chevron-down" style="font-size:9px;"></i></a>
+          <ul class="wd-dropdown">
+            <li><a href="#"><i class="fa-solid fa-rings-wedding"></i> Wedding</a></li>
+            <li><a href="#"><i class="fa-solid fa-flower"></i> Decoration</a></li>
+          </ul>
+        </li>
+        <li class="wd-menu-item"><a href="#" class="wd-menu-link">Guest List</a></li>
+        <li class="wd-menu-item wd-has-drop">
+          <a href="#" class="wd-menu-link wd-drop-toggle">Vendors <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="wd-dropdown">
+            <li><a href="#"><i class="fa-solid fa-camera"></i> Photographer</a></li>
+            <li><a href="#"><i class="fa-solid fa-star"></i> Makeup Artist</a></li>
+          </ul>
+        </li>
+        <li class="wd-menu-item"><a href="#" class="wd-menu-link wd-ai">✨ AI Planner</a></li>
+      </ul>
+      <div class="wd-nav-right">
+        <a href="#" class="wd-icon-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#" class="wd-icon-btn"><i class="fa-regular fa-user"></i></a>
+        <button class="wd-hamburger" id="wdHamburger"><span class="wd-bar"></span><span class="wd-bar"></span><span class="wd-bar"></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="wd-overlay" id="wdOverlay"></div>
+  <div class="wd-mobile" id="wdMobile">
+    <ul class="wd-mobile-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About Us</a></li>
+      <li><a href="#" class="wd-mob-toggle" data-sub="mob-services">Services <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="wd-mobile-sub" id="mob-services"><li><a href="#">Wedding</a></li><li><a href="#">Decoration</a></li></ul>
+      </li>
+      <li><a href="#">Guest List</a></li>
+      <li><a href="#" class="wd-mob-toggle" data-sub="mob-vendors">Vendors <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="wd-mobile-sub" id="mob-vendors"><li><a href="#">Photographer</a></li><li><a href="#">Makeup Artist</a></li></ul>
+      </li>
+    </ul>
+    <a href="#" class="wd-mobile-ai">✨ AI Planner</a>
+    <div class="wd-mobile-icons"><a href="#" class="wd-icon-btn"><i class="fa-solid fa-magnifying-glass"></i></a><a href="#" class="wd-icon-btn"><i class="fa-regular fa-user"></i></a></div>
+  </div>
+</div>
+
+<!-- ========== TERMS & CONDITIONS MAIN ========== -->
+<main class="terms-page">
+  <div class="container">
+    
+   
+
+    <!-- Section Header -->
+    <div class="section-header">
+      <div class="section-eyebrow">Legal Agreement</div>
+      <h1 class="section-title">Terms & Conditions</h1>
+      <p class="section-subtitle">Please read these terms carefully before using WedDream's services and platform.</p>
+    </div>
+
+    <!-- Last Updated Badge -->
+    <div class="last-updated">
+      <span class="update-badge"><i class="fa-regular fa-calendar-alt"></i> Last Updated: June 01, 2026</span>
+    </div>
+
+    <!-- Accordion Terms Grid -->
+    <div class="terms-grid">
+      
+      <div class="terms-card">
+        <div class="terms-header">
+          <div class="terms-number">1</div>
+          <div class="terms-title">Acceptance of Terms</div>
+          <i class="fa-solid fa-chevron-down terms-toggle"></i>
+        </div>
+        <div class="terms-body">
+          <p>By accessing or using WedDream's website, mobile application, or any related services (collectively, the "<span class="terms-highlight">Platform</span>"), you agree to be bound by these Terms & Conditions. If you do not agree to all of these terms, please do not use our Platform.</p>
+          <p>WedDream reserves the right to modify, update, or replace these Terms at any time without prior notice. Your continued use of the Platform after any changes constitutes acceptance of the revised Terms.</p>
+        </div>
+      </div>
+
+      <div class="terms-card">
+        <div class="terms-header">
+          <div class="terms-number">2</div>
+          <div class="terms-title">Services Overview</div>
+          <i class="fa-solid fa-chevron-down terms-toggle"></i>
+        </div>
+        <div class="terms-body">
+          <p>WedDream provides a curated wedding planning ecosystem including but not limited to:</p>
+          <ul>
+            <li><i class="fa-regular fa-circle-check" style="color: #c89b2c; margin-right: 8px;"></i> Vendor discovery and booking (photographers, makeup artists, decorators, etc.)</li>
+            <li><i class="fa-regular fa-circle-check" style="color: #c89b2c; margin-right: 8px;"></i> AI-powered wedding planning assistant</li>
+            <li><i class="fa-regular fa-circle-check" style="color: #c89b2c; margin-right: 8px;"></i> Guest list management tools</li>
+            <li><i class="fa-regular fa-circle-check" style="color: #c89b2c; margin-right: 8px;"></i> Personalized wedding inspiration and mood boards</li>
+          </ul>
+          <p>All services are provided "as available" and we continuously work to improve your experience. We do not guarantee specific vendor availability or pricing.</p>
+        </div>
+      </div>
+
+      <div class="terms-card">
+        <div class="terms-header">
+          <div class="terms-number">3</div>
+          <div class="terms-title">User Accounts & Responsibilities</div>
+          <i class="fa-solid fa-chevron-down terms-toggle"></i>
+        </div>
+        <div class="terms-body">
+          <p>To access certain features, you may need to register for an account. You agree to:</p>
+          <ul>
+            <li>Provide accurate, current, and complete information during registration</li>
+            <li>Maintain the security of your password and account</li>
+            <li>Accept responsibility for all activities that occur under your account</li>
+            <li>Notify us immediately of any unauthorized use of your account</li>
+          </ul>
+          <p>WedDream reserves the right to suspend or terminate accounts that violate these Terms or engage in fraudulent activity.</p>
+        </div>
+      </div>
+
+      <div class="terms-card">
+        <div class="terms-header">
+          <div class="terms-number">4</div>
+          <div class="terms-title">Payments & Cancellations</div>
+          <i class="fa-solid fa-chevron-down terms-toggle"></i>
+        </div>
+        <div class="terms-body">
+          <p>WedDream facilitates connections between couples and vendors. Payment terms vary by vendor service:</p>
+          <ul>
+            <li><span class="terms-highlight">Booking Deposits:</span> Non-refundable retainers may be required to secure vendor services</li>
+            <li><span class="terms-highlight">Final Payments:</span> Due according to vendor agreement schedules</li>
+            <li><span class="terms-highlight">Cancellation Policy:</span> Cancellation fees depend on vendor terms; please review vendor contracts carefully</li>
+          </ul>
+          <p>WedDream is not responsible for disputes between users and vendors. We encourage clear communication and written agreements.</p>
+        </div>
+      </div>
+
+      <div class="terms-card">
+        <div class="terms-header">
+          <div class="terms-number">5</div>
+          <div class="terms-title">Intellectual Property</div>
+          <i class="fa-solid fa-chevron-down terms-toggle"></i>
+        </div>
+        <div class="terms-body">
+          <p>All content on the WedDream Platform — including logos, graphics, text, images, videos, software, and the overall design — is the exclusive property of WedDream or its licensors and is protected by copyright, trademark, and other intellectual property laws.</p>
+          <p>You may not reproduce, distribute, modify, or create derivative works without our express written permission. User-generated content (such as reviews or uploaded photos) remains your property, but you grant WedDream a worldwide, royalty-free license to display and promote such content on our Platform.</p>
+        </div>
+      </div>
+
+      <div class="terms-card">
+        <div class="terms-header">
+          <div class="terms-number">6</div>
+          <div class="terms-title">Limitation of Liability</div>
+          <i class="fa-solid fa-chevron-down terms-toggle"></i>
+        </div>
+        <div class="terms-body">
+          <p>To the maximum extent permitted by law, WedDream shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation loss of profits, data, or goodwill, arising from:</p>
+          <ul>
+            <li>Your use or inability to use the Platform</li>
+            <li>Any conduct or content of third-party vendors or users</li>
+            <li>Unauthorized access to or alteration of your transmissions or data</li>
+          </ul>
+          <p>WedDream's total liability for any claim arising from these Terms shall not exceed the amount you paid us (if any) during the preceding 12 months.</p>
+        </div>
+      </div>
+
+      <div class="terms-card">
+        <div class="terms-header">
+          <div class="terms-number">7</div>
+          <div class="terms-title">Privacy & Data Protection</div>
+          <i class="fa-solid fa-chevron-down terms-toggle"></i>
+        </div>
+        <div class="terms-body">
+          <p>Your privacy is important to us. Our <span class="terms-highlight">Privacy Policy</span> explains how we collect, use, and protect your personal information. By using WedDream, you consent to our data practices as outlined in the Privacy Policy.</p>
+          <p>We implement industry-standard security measures, but no method of transmission over the Internet is 100% secure. You acknowledge the inherent risks.</p>
+        </div>
+      </div>
+
+      <div class="terms-card">
+        <div class="terms-header">
+          <div class="terms-number">8</div>
+          <div class="terms-title">Governing Law & Disputes</div>
+          <i class="fa-solid fa-chevron-down terms-toggle"></i>
+        </div>
+        <div class="terms-body">
+          <p>These Terms shall be governed by and construed in accordance with the laws of Pakistan, without regard to its conflict of law principles. Any dispute arising from these Terms or your use of the Platform shall be resolved through binding arbitration in Islamabad, Pakistan, unless otherwise agreed in writing.</p>
+          <p>You agree to first attempt to resolve any dispute informally by contacting us. If resolution is not reached within 60 days, either party may initiate arbitration.</p>
+        </div>
+      </div>
+
+      <div class="terms-card">
+        <div class="terms-header">
+          <div class="terms-number">9</div>
+          <div class="terms-title">Contact Information</div>
+          <i class="fa-solid fa-chevron-down terms-toggle"></i>
+        </div>
+        <div class="terms-body">
+          <p>For questions about these Terms & Conditions, please reach out to our support team:</p>
+          <ul>
+            <li><i class="fa-regular fa-envelope" style="color: #c89b2c; margin-right: 8px;"></i> Email: <span class="terms-highlight">its.owaisansari314@gmail.com</span></li>
+            <li><i class="fa-regular fa-building" style="color: #c89b2c; margin-right: 8px;"></i> Address: WedDream HQ, Main Boulevard, Gulberg, Lahore, Pakistan</li>
+            <li><i class="fa-regular fa-phone" style="color: #c89b2c; margin-right: 8px;"></i> Phone: +92 300 123 4567</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Contact Support Card with YOUR Gmail -->
+    <div class="contact-info-card">
+      <div class="icon"><i class="fa-regular fa-hand-peace"></i></div>
+      <h3>Need Clarification?</h3>
+      <p>Our support team is here to help you understand any term or condition. We believe in transparency and joyful planning.</p>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=its.owaisansari314@gmail.com&su=Support%20Request&body=Hello%20Support%20Team," 
+   target="_blank" 
+   class="contact-email">
+  <i class="fa-regular fa-envelope"></i> Contact Support Team
+</a>
+    </div>
+
+    <div class="gold-divider" style="margin: 40px 0 20px;">
+      <div class="divider-dot"></div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ================= FOOTER CONTAINER ================= -->
+<div id="footer-container">
+  <div class="footer-mini">
+    <p>© 2026 WedDream — Crafting Timeless Celebrations. All Rights Reserved.</p>
+  </div>
+</div>
+
+<!-- ========== SCRIPTS ========== -->
+<script>
+  // Load navbar from external file if available, otherwise keep fallback
+  $(document).ready(function() {
+    $.get('navebar.html', function(data) {
+      $('#nav-container').html(data);
+      // Re-initialize navbar functionality after loading
+      initNavbarFunctions();
+    }).fail(function() {
+      console.log('navbar file not found, using fallback navbar');
+      initNavbarFunctions();
+    });
+    
+    $.get('footer.html', function(data) {
+      $('#footer-container').html(data);
+    }).fail(function() {
+      console.log('footer file not found, using fallback footer');
+    });
+  });
+  
+  function initNavbarFunctions() {
+    // Navbar functionality
+    const hamburger = document.getElementById('wdHamburger');
+    const mobile = document.getElementById('wdMobile');
+    const overlay = document.getElementById('wdOverlay');
+    const nav = document.getElementById('wdNav');
+
+    function closeMenu() {
+      if(hamburger) hamburger.classList.remove('open');
+      if(mobile) mobile.classList.remove('open');
+      if(overlay) overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function openMenu() {
+      if(hamburger) hamburger.classList.add('open');
+      if(mobile) mobile.classList.add('open');
+      if(overlay) overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    if(hamburger) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if(mobile && mobile.classList.contains('open')) closeMenu();
+        else openMenu();
+      });
+    }
+    if(overlay) overlay.addEventListener('click', closeMenu);
+
+    // Mobile submenus
+    document.querySelectorAll('.wd-mob-toggle').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const subId = this.getAttribute('data-sub');
+        const sub = document.getElementById(subId);
+        if(sub) sub.classList.toggle('open');
+      });
+    });
+
+    // Desktop dropdowns
+    document.querySelectorAll('.wd-drop-toggle').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const parent = this.parentElement;
+        document.querySelectorAll('.wd-has-drop').forEach(el => {
+          if(el !== parent) el.classList.remove('open');
+        });
+        parent.classList.toggle('open');
+      });
+    });
+    
+    document.addEventListener('click', function(e) {
+      if(!e.target.closest('.wd-has-drop')) {
+        document.querySelectorAll('.wd-has-drop').forEach(el => el.classList.remove('open'));
+      }
+    });
+    
+    window.addEventListener('scroll', function() {
+      if(nav) nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+  }
+  
+  // Terms accordion functionality
+  (function initTerms() {
+    const termsCards = document.querySelectorAll('.terms-card');
+    termsCards.forEach(card => {
+      const header = card.querySelector('.terms-header');
+      if(header) {
+        header.addEventListener('click', () => {
+          card.classList.toggle('open');
+        });
+      }
+    });
+    if(termsCards.length > 0) termsCards[0].classList.add('open');
+  })();
+</script>
+</body>
+</html>

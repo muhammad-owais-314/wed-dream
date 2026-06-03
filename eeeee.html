@@ -1,0 +1,582 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Josefin+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ── WEDREAM NAVBAR ── */
+.wd-nav {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: rgba(4, 2, 6, 0.97);
+  border-bottom: 1px solid rgba(200,155,44,0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  height: 76px;
+  display: flex;
+  align-items: center;
+}
+
+.wd-nav-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  gap: 20px;
+}
+
+/* LOGO */
+.wd-logo {
+  flex-shrink: 0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.wd-logo img {
+  width: 190px;
+  object-fit: contain;
+}
+
+/* DESKTOP MENU */
+.wd-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+}
+
+.wd-menu-item {
+  position: relative;
+}
+
+.wd-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.82);
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border-radius: 8px;
+  position: relative;
+  transition: color 0.25s, background 0.25s;
+}
+
+.wd-menu-link:hover,
+.wd-menu-link.active {
+  color: #c89b2c;
+  background: rgba(200,155,44,0.07);
+}
+
+/* Dot underline */
+.wd-menu-link::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: #c89b2c;
+  transition: width 0.3s;
+}
+.wd-menu-link:hover::after,
+.wd-menu-link.active::after {
+  width: 20px;
+}
+
+/* AI BUTTON */
+.wd-menu-link.wd-ai {
+  background: linear-gradient(135deg, rgba(185,59,86,0.18), rgba(185,59,86,0.08));
+  border: 1px solid rgba(185,59,86,0.45);
+  color: #e06080;
+  padding: 8px 16px;
+  border-radius: 50px;
+}
+.wd-menu-link.wd-ai:hover {
+  background: #b93b56;
+  color: #fff;
+  border-color: #b93b56;
+}
+.wd-menu-link.wd-ai::after { display: none; }
+
+/* DROPDOWN */
+.wd-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  min-width: 200px;
+  background: #0e0a12;
+  border: 1px solid rgba(200,155,44,0.2);
+  border-top: 2px solid #c89b2c;
+  border-radius: 12px;
+  padding: 8px 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+.wd-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  background: #c89b2c;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.wd-menu-item:hover .wd-dropdown,
+.wd-menu-item.open .wd-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.wd-dropdown li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  padding: 11px 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.2s, padding-left 0.2s, background 0.2s;
+}
+.wd-dropdown li a i {
+  font-size: 13px;
+  color: #c89b2c;
+  width: 16px;
+}
+.wd-dropdown li a:hover {
+  color: #c89b2c;
+  padding-left: 26px;
+  background: rgba(200,155,44,0.05);
+}
+
+/* RIGHT SIDE ICONS */
+.wd-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.wd-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+.wd-icon-btn:hover {
+  background: rgba(200,155,44,0.1);
+  border-color: rgba(200,155,44,0.35);
+  color: #c89b2c;
+  transform: translateY(-1px);
+}
+
+/* HAMBURGER */
+.wd-hamburger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  transition: all 0.25s;
+  flex-shrink: 0;
+}
+.wd-hamburger:hover {
+  border-color: rgba(185,59,86,0.5);
+  background: rgba(185,59,86,0.08);
+}
+.wd-bar {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  transform-origin: center;
+}
+.wd-bar:nth-child(2) { width: 15px; align-self: flex-end; }
+.wd-hamburger.open .wd-bar:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); background: #b93b56; }
+.wd-hamburger.open .wd-bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.wd-hamburger.open .wd-bar:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); background: #b93b56; }
+
+/* MOBILE PANEL */
+.wd-mobile {
+  position: fixed;
+  top: 76px;
+  right: -100%;
+  width: 100%;
+  max-width: 360px;
+  height: calc(100vh - 76px);
+  background: #070409;
+  border-left: 1px solid rgba(200,155,44,0.15);
+  z-index: 9998;
+  transition: right 0.4s cubic-bezier(0.4,0,0.2,1);
+  overflow-y: auto;
+  padding: 24px 0 48px;
+}
+.wd-mobile.open { right: 0; }
+
+/* Mobile overlay */
+.wd-overlay {
+  position: fixed;
+  inset: 0;
+  top: 76px;
+  background: rgba(0,0,0,0.6);
+  z-index: 9997;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  backdrop-filter: blur(4px);
+}
+.wd-overlay.open { opacity: 1; pointer-events: auto; }
+
+.wd-mobile-list {
+  list-style: none;
+  padding: 0 20px;
+}
+.wd-mobile-list li {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.wd-mobile-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  padding: 17px 4px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.wd-mobile-list li a:hover,
+.wd-mobile-list li a.active { color: #c89b2c; }
+
+.wd-mobile-sub {
+  display: none;
+  padding: 0 0 12px 16px;
+  list-style: none;
+}
+.wd-mobile-sub.open { display: block; }
+.wd-mobile-sub li { border: none !important; }
+.wd-mobile-sub li a {
+  color: rgba(255,255,255,0.45) !important;
+  font-size: 11px !important;
+  letter-spacing: 1.5px !important;
+  padding: 10px 4px !important;
+  justify-content: flex-start !important;
+  gap: 8px;
+}
+.wd-mobile-sub li a i { color: #c89b2c; font-size: 12px; }
+.wd-mobile-sub li a:hover { color: #c89b2c !important; }
+
+/* Mobile right icons row */
+.wd-mobile-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 28px 24px 0;
+}
+
+.wd-mobile-ai {
+  margin: 20px 20px 0;
+  display: block;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(185,59,86,0.25), rgba(185,59,86,0.12));
+  border: 1px solid rgba(185,59,86,0.45);
+  border-radius: 50px;
+  color: #e06080;
+  padding: 14px 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+.wd-mobile-ai:hover { background: #b93b56; color: #fff; }
+
+/* SCROLL EFFECT */
+.wd-nav.scrolled {
+  height: 66px;
+  background: rgba(4, 2, 6, 0.99);
+  border-bottom-color: rgba(200,155,44,0.35);
+}
+
+/* === RESPONSIVE FIX === */
+
+/* Desktop menu thora pehle hide ho jaye */
+@media (max-width: 1200px) {
+  .wd-menu {
+    display: none;
+  }
+
+  .wd-hamburger {
+    display: flex;
+  }
+
+  .wd-nav-inner {
+    padding: 0 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .wd-nav-inner {
+    padding: 0 16px;
+  }
+
+  .wd-logo img {
+    width: 150px;
+  }
+
+  .wd-icon-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+
+  .wd-hamburger {
+    width: 38px;
+    height: 38px;
+  }
+
+  .wd-mobile {
+    max-width: 320px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .wd-logo img {
+    width: 130px;
+  }
+
+  .wd-nav-right {
+    gap: 4px;
+  }
+
+  .wd-icon-btn,
+  .wd-hamburger {
+    width: 36px;
+    height: 36px;
+  }
+
+  .wd-mobile {
+    max-width: 100%;
+    border-left: none;
+  }
+}
+
+</style>
+
+<!-- NAVBAR -->
+<nav class="wd-nav" id="wdNav">
+  <div class="wd-nav-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="wd-logo">
+      <img src="navelogo.jpeg" alt="WedDream">
+    </a>
+
+    <!-- Desktop Menu -->
+    <ul class="wd-menu">
+      <li class="wd-menu-item">
+        <a href="index.html" class="wd-menu-link active">Home</a>
+      </li>
+      <li class="wd-menu-item">
+        <a href="aboutme.html" class="wd-menu-link">About Us</a>
+      </li>
+      <!-- Services Dropdown -->
+      <li class="wd-menu-item wd-has-drop">
+        <a href="#" class="wd-menu-link wd-drop-toggle">
+          Services <i class="fa-solid fa-chevron-down" style="font-size:9px; transition:0.3s;"></i>
+        </a>
+        <ul class="wd-dropdown">
+          <li><a href="#"><i class="fa-solid fa-rings-wedding"></i> Wedding</a></li>
+          <li><a href="#"><i class="fa-solid fa-flower"></i> Decoration</a></li>
+        </ul>
+      </li>
+      <li class="wd-menu-item">
+        <a href="#" class="wd-menu-link">Guest List</a>
+      </li>
+      <!-- Vendors Dropdown -->
+      <li class="wd-menu-item wd-has-drop">
+        <a href="#" class="wd-menu-link wd-drop-toggle">
+          Vendors <i class="fa-solid fa-chevron-down" style="font-size:9px; transition:0.3s;"></i>
+        </a>
+        <ul class="wd-dropdown">
+          <li><a href="#"><i class="fa-solid fa-camera"></i> Photographer</a></li>
+          <li><a href="#"><i class="fa-solid fa-star"></i> Makeup Artist</a></li>
+        </ul>
+      </li>
+      <li class="wd-menu-item">
+        <a href="#" class="wd-menu-link wd-ai">✨ AI Planner</a>
+      </li>
+    </ul>
+
+    <!-- Right Side -->
+    <div class="wd-nav-right">
+      <a href="#" class="wd-icon-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="#" class="wd-icon-btn" title="Account"><i class="fa-regular fa-user"></i></a>
+      <!-- Hamburger (mobile only) -->
+      <button class="wd-hamburger" id="wdHamburger" aria-label="Menu">
+        <span class="wd-bar"></span>
+        <span class="wd-bar"></span>
+        <span class="wd-bar"></span>
+      </button>
+    </div>
+
+  </div>
+</nav>
+
+<!-- Overlay -->
+<div class="wd-overlay" id="wdOverlay"></div>
+
+<!-- Mobile Panel -->
+<div class="wd-mobile" id="wdMobile">
+  <ul class="wd-mobile-list">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="aboutme.html">About Us</a></li>
+    <li>
+      <a href="#" class="wd-mob-toggle" data-sub="mob-services">
+        Services <i class="fa-solid fa-chevron-down" style="font-size:10px;transition:0.3s;"></i>
+      </a>
+      <ul class="wd-mobile-sub" id="mob-services">
+        <li><a href="#"><i class="fa-solid fa-rings-wedding"></i> Wedding</a></li>
+        <li><a href="#"><i class="fa-solid fa-flower"></i> Decoration</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Guest List</a></li>
+    <li>
+      <a href="#" class="wd-mob-toggle" data-sub="mob-vendors">
+        Vendors <i class="fa-solid fa-chevron-down" style="font-size:10px;transition:0.3s;"></i>
+      </a>
+      <ul class="wd-mobile-sub" id="mob-vendors">
+        <li><a href="#"><i class="fa-solid fa-camera"></i> Photographer</a></li>
+        <li><a href="#"><i class="fa-solid fa-star"></i> Makeup Artist</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <a href="#" class="wd-mobile-ai">✨ AI Planner</a>
+
+  <div class="wd-mobile-icons">
+    <a href="#" class="wd-icon-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+    <a href="#" class="wd-icon-btn"><i class="fa-regular fa-user"></i></a>
+  </div>
+</div>
+
+<script>
+(function(){
+  const hamburger = document.getElementById('wdHamburger');
+  const mobile = document.getElementById('wdMobile');
+  const overlay = document.getElementById('wdOverlay');
+  const nav = document.getElementById('wdNav');
+
+  function closeMenu(){
+    hamburger.classList.remove('open');
+    mobile.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  if(hamburger){
+    hamburger.addEventListener('click', function(){
+      const isOpen = mobile.classList.contains('open');
+      if(isOpen){ closeMenu(); }
+      else {
+        hamburger.classList.add('open');
+        mobile.classList.add('open');
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  }
+
+  if(overlay){ overlay.addEventListener('click', closeMenu); }
+
+  /* Mobile sub-menus */
+  document.querySelectorAll('.wd-mob-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      const subId = this.getAttribute('data-sub');
+      const sub = document.getElementById(subId);
+      const icon = this.querySelector('i');
+      if(sub){
+        sub.classList.toggle('open');
+        if(icon) icon.style.transform = sub.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0)';
+      }
+    });
+  });
+
+  /* Desktop dropdowns — click toggle */
+  document.querySelectorAll('.wd-drop-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      const parent = this.parentElement;
+      const icon = this.querySelector('i');
+      const isOpen = parent.classList.contains('open');
+      document.querySelectorAll('.wd-has-drop').forEach(function(el){
+        el.classList.remove('open');
+        const ic = el.querySelector('.wd-drop-toggle i');
+        if(ic) ic.style.transform = 'rotate(0)';
+      });
+      if(!isOpen){
+        parent.classList.add('open');
+        if(icon) icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+
+  /* Close desktop dropdowns on outside click */
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.wd-has-drop')){
+      document.querySelectorAll('.wd-has-drop').forEach(function(el){
+        el.classList.remove('open');
+        const ic = el.querySelector('.wd-drop-toggle i');
+        if(ic) ic.style.transform = 'rotate(0)';
+      });
+    }
+  });
+
+  /* Scroll shrink */
+  window.addEventListener('scroll', function(){
+    if(nav) nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+})();
+</script>

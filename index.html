@@ -82,77 +82,101 @@
 </section>
 
 <!-- ========== POPULAR CATEGORIES SECTION ========== -->
-<section class="cat-section py-5">
-  <div class="container-fluid px-4">
 
-    <!-- Header -->
-    <div class="cat-header text-center position-relative mb-5">
-      <h2 class="cat-title fw-bold mb-3">Popular Categories</h2>
-      <div class="cat-divider d-flex align-items-center justify-content-center gap-2">
-        <span class="divider-line"></span>
-        <span class="cat-heart">&#9829;</span>
-        <span class="divider-line"></span>
+
+<section class="cat-section">
+
+  <!-- HEADER -->
+  <div class="cat-header-wrap">
+
+    <div class="cat-header-center">
+      <div class="cat-eyebrow">Wedding Services</div>
+      <h2 class="cat-title">Popular Categories</h2>
+      <div class="cat-divider">
+        <span class="cat-divider-line"></span>
+        <span class="cat-divider-heart"><i class="bi bi-heart-fill"></i></span>
+        <span class="cat-divider-line"></span>
       </div>
-      <a href="#" class="view-all-link position-absolute top-0 end-0">View All &rarr;</a>
     </div>
 
-    <!-- Slider -->
-    <div class="position-relative d-flex align-items-center gap-3">
-      <button class="slider-btn" id="prevBtn" disabled>
-        <i class="bi bi-chevron-left"></i>
-      </button>
-
-      <div class="slider-outer overflow-hidden flex-grow-1">
-        <div class="slider-track d-flex gap-3" id="catTrack">
-
-          <div class="cat-card text-center">
-            <div class="cat-icon"><i class="bi bi-building"></i></div>
-            <span class="cat-label">Halls</span>
-          </div>
-
-          <div class="cat-card text-center">
-            <div class="cat-icon"><i class="bi bi-egg-fried"></i></div>
-            <span class="cat-label">Caterers</span>
-          </div>
-
-          <div class="cat-card text-center">
-            <div class="cat-icon"><i class="bi bi-car-front"></i></div>
-            <span class="cat-label">Cars</span>
-          </div>
-
-          <div class="cat-card text-center">
-            <div class="cat-icon"><i class="bi bi-flower1"></i></div>
-            <span class="cat-label">Decorators</span>
-          </div>
-
-          <div class="cat-card text-center">
-            <div class="cat-icon"><i class="bi bi-camera"></i></div>
-            <span class="cat-label">Photographers</span>
-          </div>
-
-          <div class="cat-card text-center">
-            <div class="cat-icon"><i class="bi bi-envelope"></i></div>
-            <span class="cat-label">Invitation Cards</span>
-          </div>
-
-          <div class="cat-card text-center">
-            <div class="cat-icon"><i class="bi bi-stars"></i></div>
-            <span class="cat-label">AI Planner</span>
-          </div>
-
-        </div>
-      </div>
-
-      <button class="slider-btn" id="nextBtn">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-    </div>
-
-    <!-- Dots -->
-    <div class="slider-dots d-flex justify-content-center gap-2 mt-4" id="sliderDots"></div>
+    <a href="#" class="cat-view-all">
+      View All <i class="bi bi-arrow-right"></i>
+    </a>
 
   </div>
+
+  <!-- SLIDER -->
+  <div class="cat-slider-wrap">
+
+    <!-- Prev Arrow -->
+    <button class="cat-arrow cat-arrow-prev" id="catPrev" disabled aria-label="Previous">
+      <i class="bi bi-chevron-left"></i>
+    </button>
+
+    <!-- Track -->
+    <div class="cat-slider-outer">
+      <div class="cat-track" id="catTrack">
+
+        <div class="cat-card">
+          <i class="bi bi-building cat-card-icon"></i>
+          <span class="cat-card-label">Halls</span>
+        </div>
+
+        <div class="cat-card">
+          <i class="bi bi-egg-fried cat-card-icon"></i>
+          <span class="cat-card-label">Caterers</span>
+        </div>
+
+        <div class="cat-card">
+          <i class="bi bi-car-front cat-card-icon"></i>
+          <span class="cat-card-label">Cars</span>
+        </div>
+
+        <div class="cat-card">
+          <i class="bi bi-flower1 cat-card-icon"></i>
+          <span class="cat-card-label">Decorators</span>
+        </div>
+
+        <div class="cat-card">
+          <i class="bi bi-camera cat-card-icon"></i>
+          <span class="cat-card-label">Photographers</span>
+        </div>
+
+        <div class="cat-card">
+          <i class="bi bi-envelope-heart cat-card-icon"></i>
+          <span class="cat-card-label">Invitations</span>
+        </div>
+
+        <div class="cat-card is-ai">
+          <i class="bi bi-stars cat-card-icon"></i>
+          <span class="cat-card-label">AI Planner</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Next Arrow -->
+    <button class="cat-arrow cat-arrow-next" id="catNext" aria-label="Next">
+      <i class="bi bi-chevron-right"></i>
+    </button>
+
+  </div>
+
+  <!-- DOTS -->
+  <div class="cat-dots" id="catDots"></div>
+
+  <!-- Mobile swipe hint -->
+  <div class="cat-drag-hint">
+    <i class="bi bi-arrow-left-right" style="font-size:12px; color:rgba(200,155,44,0.4);"></i>
+    <span>Swipe to explore</span>
+  </div>
+
 </section>
+
+<!-- ========== GOLD DIVIDER ========== -->
+<div class="gold-divider">
+  <span class="divider-dot"></span>
+</div>
 
 <!-- ========== HOW IT WORKS ========== -->
 <section class="hiw-section py-5">

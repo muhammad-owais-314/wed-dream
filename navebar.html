@@ -1,903 +1,1114 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Josefin+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
+/* ══════════════════════════════════════
+   WEDREAM NAVBAR — FIXED VERSION
+══════════════════════════════════════ */
 
-:root{
-  --gold:#c89b2c;
-   --rose:#b93b56;
-  --black:#000;
-  --white:#fff;
-
-  --nav-font:'Josefin Sans', sans-serif;
-  --logo-font:'Cormorant Garamond', serif;
+.wd-nav {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: rgba(4, 2, 6, 0.97);
+  border-bottom: 1px solid rgba(200,155,44,0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  height: 76px;
+  display: flex;
+  align-items: center;
+  transition: height 0.3s;
+}
+.wd-nav.scrolled {
+  height: 66px;
+  background: rgba(4, 2, 6, 0.99);
+  border-bottom-color: rgba(200,155,44,0.35);
 }
 
-/* =========================
-   GLOBAL
-========================= */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+.wd-nav-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  gap: 20px;
 }
 
-html{
-  scroll-behavior:smooth;
+/* ── LOGO ── */
+.wd-logo {
+  flex-shrink: 0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 11px;
 }
 
-body{
-  background:#0a0a0a;
-  font-family:var(--nav-font);
-  overflow-x:hidden;
+.wd-logo-img-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(200,155,44,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: rgba(200,155,44,0.06);
 }
 
-/* =========================
-   NAVBAR
-========================= */
-.custom-navbar{
-  width:100%;
-  height:78px;
-
-  background:rgba(0,0,0,0.96);
-
-  border-bottom:1px solid rgba(200,155,44,0.4);
-
-  backdrop-filter:blur(12px);
-
-  position:sticky;
-  top:0;
-  left:0;
-
-  z-index:9999;
-
-  display:flex;
-  align-items:center;
+.wd-logo-img-wrap img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-/* Container */
-.nav-container{
-  width:100%;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  padding:0 55px;
+/* ── LOGO TEXT — FIXED FONT STYLE ── */
+.wd-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 3px;
 }
 
-/* =========================
-   LOGO
-========================= */
-.logo{
-  display:flex;
-  align-items:center;
-  text-decoration:none;
-  flex-shrink:0;
+.wd-logo-main {
+  font-family: 'Cinzel', serif;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #c89b2c;
+  text-transform: uppercase;
+  line-height: 1;
 }
 
-.logo img{
-  width:200px;
-  max-width:100%;
-  object-fit:contain;
+.wd-logo-main em {
+  font-style: italic;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #e06080;
+  font-style: italic;
 }
 
-/* =========================
-   DESKTOP MENU
-========================= */
-.nav-menu{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  padding-top: 20px;
-
-  list-style:none;
+.wd-logo-sub {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 7.5px;
+  font-weight: 400;
+  letter-spacing: 3.5px;
+  color: rgba(200,155,44,0.45);
+  text-transform: uppercase;
 }
 
-/* Nav Item */
-.nav-item{
-  position:relative;
+/* ── DESKTOP MENU ── */
+.wd-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+}
+.wd-menu-item { position: relative; }
+.wd-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.82);
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border-radius: 8px;
+  position: relative;
+  transition: color 0.25s, background 0.25s;
+}
+.wd-menu-link:hover,
+.wd-menu-link.active {
+  color: #c89b2c;
+  background: rgba(200,155,44,0.07);
+}
+.wd-menu-link::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: #c89b2c;
+  transition: width 0.3s;
+}
+.wd-menu-link:hover::after,
+.wd-menu-link.active::after { width: 20px; }
+
+.wd-menu-link.wd-ai {
+  background: linear-gradient(135deg, rgba(185,59,86,0.18), rgba(185,59,86,0.08));
+  border: 1px solid rgba(185,59,86,0.45);
+  color: #e06080;
+  padding: 8px 16px;
+  border-radius: 50px;
+}
+.wd-menu-link.wd-ai:hover {
+  background: #b93b56;
+  color: #fff;
+  border-color: #b93b56;
+}
+.wd-menu-link.wd-ai::after { display: none; }
+
+/* ── DROPDOWN ── */
+.wd-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  min-width: 200px;
+  background: #0e0a12;
+  border: 1px solid rgba(200,155,44,0.2);
+  border-top: 2px solid #c89b2c;
+  border-radius: 12px;
+  padding: 8px 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+.wd-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  background: #c89b2c;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.wd-menu-item:hover .wd-dropdown,
+.wd-menu-item.open .wd-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.wd-dropdown li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  padding: 11px 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.2s, padding-left 0.2s, background 0.2s;
+}
+.wd-dropdown li a i { font-size: 13px; color: #c89b2c; width: 16px; }
+.wd-dropdown li a:hover {
+  color: #c89b2c;
+  padding-left: 26px;
+  background: rgba(200,155,44,0.05);
 }
 
-/* Links */
-.nav-link{
-  position:relative;
-
-  display:flex;
-  align-items:center;
-  gap:7px;
-
-  color:#fff;
-  text-decoration:none;
-
-  padding:10px 16px;
-
-  font-size:13px;
-  font-weight:600;
-
-  letter-spacing:2px;
-  text-transform:uppercase;
-
-  transition:0.3s;
+/* ══════════════════════════════════════
+   RIGHT SIDE ICONS — FIXED HOVER
+══════════════════════════════════════ */
+.wd-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
 }
 
-/* Hover */
-.nav-link:hover{
-  color:var(--rose);
+/* Base icon button — NO hover color by default */
+.wd-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.25s;
+  cursor: pointer;
+  position: relative;
 }
 
-/* Active */
-.nav-link.active-link{
-  color:var(--rose);
+/* Search icon — gold hover */
+.wd-icon-btn.wd-search-icon:hover {
+  background: rgba(200,155,44,0.1);
+  border-color: rgba(200,155,44,0.4);
+  color: #c89b2c;
+  transform: translateY(-1px);
+}
+.wd-icon-btn.wd-search-icon.active {
+  background: rgba(200,155,44,0.15);
+  border-color: rgba(200,155,44,0.5);
+  color: #c89b2c;
 }
 
-/* Underline effect */
-.nav-link::after{
-  content:"";
-
-  position:absolute;
-  bottom:0;
-  left:15px;
-
-  width:0;
-  height:1px;
-
-  background:var(--rose);
-
-  transition:0.35s;
+/* Account icon — rose hover */
+.wd-icon-btn.wd-account-icon:hover {
+  background: rgba(185,59,86,0.1);
+  border-color: rgba(185,59,86,0.4);
+  color: #e06080;
+  transform: translateY(-1px);
+}
+.wd-icon-btn.wd-account-icon.active {
+  background: rgba(185,59,86,0.15);
+  border-color: rgba(185,59,86,0.5);
+  color: #e06080;
 }
 
-.nav-link:hover::after,
-.nav-link.active-link::after{
-  width:60%;
+/* ── HAMBURGER ── */
+.wd-hamburger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  transition: all 0.25s;
+  flex-shrink: 0;
 }
-
-/* Arrow */
-.arrow{
-  font-size:9px;
-  transition:0.35s;
+.wd-hamburger:hover {
+  border-color: rgba(185,59,86,0.5);
+  background: rgba(185,59,86,0.08);
 }
-
-/* Rotate Arrow */
-.nav-item.open .arrow{
-  transform:rotate(180deg);
+.wd-bar {
+  width: 22px; height: 2px;
+  background: #fff; border-radius: 2px;
+  transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  transform-origin: center;
 }
+.wd-bar:nth-child(2) { width: 15px; align-self: flex-end; }
+.wd-hamburger.open .wd-bar:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); background: #b93b56; }
+.wd-hamburger.open .wd-bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.wd-hamburger.open .wd-bar:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); background: #b93b56; }
 
-/* =========================
-   DROPDOWN
-========================= */
-.dropdown-menu{
-  position:absolute;
-
-  top:calc(100% + 16px);
-  left:0;
-
-  min-width:220px;
-
-  background:#0d0d0d;
-
-  border:1px solid rgba(255,255,255,0.06);
-  border-top:2px solid var(--gold);
-
-  border-radius:12px;
-
-  padding:10px 0;
-
-  list-style:none;
-
-  opacity:0;
-  visibility:hidden;
-
-  transform:translateY(10px);
-
-  transition:0.3s;
-
-  z-index:999;
+/* ── MOBILE PANEL ── */
+.wd-mobile {
+  position: fixed;
+  top: 76px; right: -100%;
+  width: 100%; max-width: 360px;
+  height: calc(100vh - 76px);
+  background: #070409;
+  border-left: 1px solid rgba(200,155,44,0.15);
+  z-index: 9998;
+  transition: right 0.4s cubic-bezier(0.4,0,0.2,1);
+  overflow-y: auto;
+  padding: 24px 0 48px;
 }
-
-/* Open */
-.nav-item.open .dropdown-menu{
-  opacity:1;
-  visibility:visible;
-  transform:translateY(0);
+.wd-mobile.open { right: 0; }
+.wd-overlay {
+  position: fixed; inset: 0; top: 76px;
+  background: rgba(0,0,0,0.6);
+  z-index: 9997; opacity: 0; pointer-events: none;
+  transition: opacity 0.3s; backdrop-filter: blur(4px);
 }
-
-/* Dropdown Links */
-.dropdown-menu li a{
-  display:block;
-
-  color:#bbb;
-  text-decoration:none;
-
-  padding:13px 22px;
-
-  font-size:12px;
-  letter-spacing:1.5px;
-
-  text-transform:uppercase;
-
-  transition:0.3s;
+.wd-overlay.open { opacity: 1; pointer-events: auto; }
+.wd-mobile-list { list-style: none; padding: 0 20px; }
+.wd-mobile-list li { border-bottom: 1px solid rgba(255,255,255,0.05); }
+.wd-mobile-list li a {
+  display: flex; align-items: center; justify-content: space-between;
+  color: rgba(255,255,255,0.8); text-decoration: none;
+  padding: 17px 4px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+  transition: color 0.2s;
 }
-
-/* Hover */
-.dropdown-menu li a:hover{
-  background:#161616;
-  color:var(--gold);
-
-  padding-left:30px;
+.wd-mobile-list li a:hover,
+.wd-mobile-list li a.active { color: #c89b2c; }
+.wd-mobile-sub { display: none; padding: 0 0 12px 16px; list-style: none; }
+.wd-mobile-sub.open { display: block; }
+.wd-mobile-sub li { border: none !important; }
+.wd-mobile-sub li a {
+  color: rgba(255,255,255,0.45) !important;
+  font-size: 11px !important; letter-spacing: 1.5px !important;
+  padding: 10px 4px !important; justify-content: flex-start !important; gap: 8px;
 }
-
-/* =========================
-   AI BUTTON
-========================= */
-.ai-link{
-  background:linear-gradient(135deg,#250014,#3f0026);
-
-  border:1px solid rgba(255,0,127,0.5);
-
-  border-radius:30px;
-
-  color:var(--rose) !important;
-
-  padding:10px 18px !important;
+.wd-mobile-sub li a i { color: #c89b2c; font-size: 12px; }
+.wd-mobile-sub li a:hover { color: #c89b2c !important; }
+.wd-mobile-icons { display: flex; align-items: center; gap: 12px; padding: 28px 24px 0; }
+.wd-mobile-ai {
+  margin: 20px 20px 0; display: block; text-align: center;
+  background: linear-gradient(135deg, rgba(185,59,86,0.25), rgba(185,59,86,0.12));
+  border: 1px solid rgba(185,59,86,0.45); border-radius: 50px;
+  color: #e06080; padding: 14px 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+  text-decoration: none; transition: all 0.25s;
 }
+.wd-mobile-ai:hover { background: #b93b56; color: #fff; }
 
-.ai-link:hover{
-  background:var(--rose);
-  color:#fff !important;
+/* ══════════════════════════════════════
+   SEARCH POPUP
+══════════════════════════════════════ */
+.wd-search-popup {
+  position: fixed;
+  top: 76px; left: 0; right: 0;
+  z-index: 9990;
+  background: rgba(4,2,6,0.98);
+  border-bottom: 1px solid rgba(200,155,44,0.2);
+  backdrop-filter: blur(20px);
+  padding: 24px 48px;
+  transform: translateY(-110%); opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
+  pointer-events: none;
 }
-
-/* Remove underline */
-.ai-link::after{
-  display:none;
+.wd-search-popup.open { transform: translateY(0); opacity: 1; pointer-events: all; }
+.wd-search-inner { max-width: 720px; margin: 0 auto; }
+.wd-search-bar {
+  display: flex; align-items: center; gap: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1.5px solid rgba(200,155,44,0.3);
+  border-radius: 14px; padding: 14px 20px;
+  transition: border-color 0.25s;
 }
-
-/* =========================
-   ICONS
-========================= */
-.nav-icons{
-  display:flex;
-  align-items:center;
-  gap:22px;
+.wd-search-bar:focus-within {
+  border-color: rgba(200,155,44,0.7);
+  background: rgba(200,155,44,0.04);
 }
-
-.nav-icons a{
-  color:#fff;
-
-  font-size:18px;
-
-  transition:0.3s;
-
-  text-decoration:none;
+.wd-search-bar i { color: #c89b2c; font-size: 18px; flex-shrink: 0; }
+.wd-search-bar input {
+  flex: 1; background: none; border: none; outline: none;
+  color: #fff; font-family: 'DM Sans', sans-serif; font-size: 16px;
 }
-
-.nav-icons a:hover{
-  color:var(--rose);
-  transform:translateY(-2px);
+.wd-search-bar input::placeholder { color: rgba(255,255,255,0.3); }
+.wd-search-close {
+  background: none; border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.5);
+  width: 36px; height: 36px; border-radius: 8px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s; flex-shrink: 0;
 }
-
-/* =========================
-   HAMBURGER
-========================= */
-.hamburger-btn{
-  width:52px;
-  height:52px;
-
-  border:none;
-  outline:none;
-
-  background:rgba(255,255,255,0.04);
-
-  border:1px solid rgba(255,255,255,0.08);
-
-  border-radius:14px;
-
-  display:none;
-
-  align-items:center;
-  justify-content:center;
-
-  cursor:pointer;
-
-  position:relative;
-
-  overflow:hidden;
-
-  transition:0.3s;
-
-  z-index:10000;
+.wd-search-close:hover { border-color: rgba(185,59,86,0.5); color: #e06080; }
+.wd-search-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+.wd-search-tag {
+  background: rgba(200,155,44,0.08); border: 1px solid rgba(200,155,44,0.2);
+  border-radius: 50px; padding: 6px 14px;
+  font-family: 'Josefin Sans', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: rgba(255,255,255,0.5); cursor: pointer; transition: all 0.2s;
 }
-
-/* Hover */
-.hamburger-btn:hover{
-  border-color:rgba(255,0,127,0.5);
-  background:rgba(255,0,127,0.08);
+.wd-search-tag:hover { background: rgba(200,155,44,0.15); color: #c89b2c; border-color: rgba(200,155,44,0.4); }
+.wd-search-results { margin-top: 20px; max-height: 300px; overflow-y: auto; }
+.wd-search-result-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 12px 16px; border-radius: 10px;
+  cursor: pointer; transition: background 0.2s; text-decoration: none;
 }
-
-/* Icon Box */
-.h-icon{
-  width:24px;
-  height:18px;
-
-  position:relative;
+.wd-search-result-item:hover { background: rgba(200,155,44,0.06); }
+.wd-search-result-icon {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: rgba(200,155,44,0.1); border: 1px solid rgba(200,155,44,0.2);
+  display: flex; align-items: center; justify-content: center;
+  color: #c89b2c; font-size: 15px; flex-shrink: 0;
 }
+.wd-search-result-text .title { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; color: #fff; }
+.wd-search-result-text .sub { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+.wd-search-empty { text-align: center; padding: 32px; color: rgba(255,255,255,0.3); font-size: 14px; }
 
-/* Bars */
-.bar{
-  position:absolute;
-
-  width:100%;
-  height:2px;
-
-  background:#fff;
-
-  border-radius:10px;
-
-  transition:0.4s;
+/* ══════════════════════════════════════
+   AUTH POPUP
+══════════════════════════════════════ */
+.wd-auth-overlay {
+  position: fixed; inset: 0; z-index: 10000;
+  background: rgba(0,0,0,0.7); backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center; padding: 24px;
+  opacity: 0; pointer-events: none; transition: opacity 0.3s;
 }
-
-.bar:nth-child(1){
-  top:0;
+.wd-auth-overlay.open { opacity: 1; pointer-events: all; }
+.wd-auth-popup {
+  background: #0f0a0e;
+  border: 1px solid rgba(200,155,44,0.3);
+  border-radius: 20px;
+  padding: 40px 36px 32px;
+  width: 100%; max-width: 440px;
+  position: relative;
+  transform: translateY(24px) scale(0.97);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+  max-height: 90vh; overflow-y: auto;
 }
+.wd-auth-overlay.open .wd-auth-popup { transform: translateY(0) scale(1); }
 
-.bar:nth-child(2){
-  top:8px;
-  width:70%;
-  right:0;
+.wd-sparkle { position: absolute; color: #c89b2c; opacity: 0.15; font-size: 16px; animation: wdtwinkle 3s ease-in-out infinite; pointer-events: none; }
+.wd-sparkle.sp1 { top: 12%; left: 8%; animation-delay: 0s; }
+.wd-sparkle.sp2 { top: 18%; right: 10%; color: #b93b56; animation-delay: 1s; font-size: 13px; }
+.wd-sparkle.sp3 { bottom: 15%; left: 10%; animation-delay: 1.8s; }
+.wd-sparkle.sp4 { bottom: 20%; right: 8%; animation-delay: 0.5s; }
+@keyframes wdtwinkle { 0%,100%{opacity:0.08;transform:scale(1) rotate(0deg);} 50%{opacity:0.3;transform:scale(1.3) rotate(20deg);} }
+
+.wd-auth-close {
+  position: absolute; top: 16px; right: 16px;
+  width: 34px; height: 34px; border-radius: 8px;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.5); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; transition: all 0.2s;
 }
+.wd-auth-close:hover { background: rgba(185,59,86,0.15); border-color: rgba(185,59,86,0.4); color: #e06080; }
 
-.bar:nth-child(3){
-  top:16px;
+.wd-auth-brand { text-align: center; margin-bottom: 24px; }
+.wd-auth-brand-logo { font-family: 'Cinzel', serif; font-size: 20px; font-weight: 600; color: #c89b2c; letter-spacing: 2px; text-transform: uppercase; }
+.wd-auth-brand-logo em { font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 23px; color: #e06080; }
+.wd-auth-brand-tag { font-size: 10px; color: rgba(255,255,255,0.3); margin-top: 4px; letter-spacing: 2px; text-transform: uppercase; font-family: 'Josefin Sans', sans-serif; }
+
+.wd-auth-tabs { display: flex; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 4px; margin-bottom: 24px; }
+.wd-auth-tab { flex: 1; padding: 10px; text-align: center; font-family: 'Josefin Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); cursor: pointer; border-radius: 9px; transition: all 0.25s; }
+.wd-auth-tab.active { background: #b93b56; color: #fff; }
+
+.wd-auth-h { font-family: 'Playfair Display', serif; font-size: 20px; color: #fff; text-align: center; margin-bottom: 4px; }
+.wd-auth-sub { font-size: 13px; color: rgba(255,255,255,0.35); text-align: center; margin-bottom: 22px; }
+
+.wd-fg { margin-bottom: 14px; position: relative; }
+.wd-fg label { display: block; font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.6); margin-bottom: 5px; letter-spacing: 0.5px; text-transform: uppercase; }
+.wd-input-wrap { position: relative; }
+.wd-input-wrap i.il { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: #c89b2c; font-size: 14px; pointer-events: none; }
+.wd-input-wrap i.ir { position: absolute; right: 13px; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.3); font-size: 14px; cursor: pointer; transition: color 0.2s; z-index: 2; }
+.wd-input-wrap i.ir:hover { color: #c89b2c; }
+.wd-fg input { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(200,155,44,0.25); border-radius: 10px; color: #fff; font-family: 'DM Sans', sans-serif; font-size: 14px; padding: 11px 13px 11px 38px; outline: none; transition: border-color 0.25s, background 0.25s, box-shadow 0.25s; }
+.wd-fg input.pr { padding-right: 38px; }
+.wd-fg input::placeholder { color: rgba(255,255,255,0.25); }
+.wd-fg input:focus { border-color: rgba(200,155,44,0.7); background: rgba(200,155,44,0.04); box-shadow: 0 0 0 3px rgba(200,155,44,0.1); }
+.wd-fg input.err-f { border-color: #e05c5c; box-shadow: 0 0 0 3px rgba(224,92,92,0.12); }
+.wd-fg input.ok-f { border-color: #4caf82; }
+
+.wd-form-row { display: flex; gap: 12px; }
+.wd-form-row .wd-fg { flex: 1; min-width: 0; }
+
+.wd-fmsg { font-size: 11px; margin-top: 4px; display: none; align-items: center; gap: 4px; }
+.wd-fmsg.show { display: flex; }
+.wd-fmsg.err { color: #e05c5c; }
+.wd-fmsg.ok { color: #4caf82; }
+
+.wd-sbar { display: none; margin-top: 7px; gap: 4px; }
+.wd-sbar.show { display: flex; }
+.wd-sbar span { height: 3px; flex: 1; border-radius: 2px; background: rgba(255,255,255,0.1); transition: background 0.3s; }
+.wd-slbl { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 3px; text-align: right; height: 13px; }
+
+.wd-btn-submit { width: 100%; border: none; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 13px; cursor: pointer; transition: all 0.2s; letter-spacing: 0.3px; position: relative; overflow: hidden; margin-top: 4px; }
+.wd-btn-login { background: #c89b2c; color: #070409; }
+.wd-btn-login:hover { background: #e8b93c; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(200,155,44,0.3); }
+.wd-btn-signup { background: #b93b56; color: #fff; }
+.wd-btn-signup:hover { background: #a22f49; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(185,59,86,0.35); }
+.wd-btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+.wd-btn-submit .wsp { display: none; width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: wspin 0.7s linear infinite; margin: 0 auto; }
+.wd-btn-login .wsp { border-color: rgba(0,0,0,0.2); border-top-color: #070409; }
+@keyframes wspin { to { transform: rotate(360deg); } }
+
+.wd-err-banner { background: rgba(224,92,92,0.1); border: 1px solid rgba(224,92,92,0.3); border-radius: 10px; padding: 11px 14px; color: #e05c5c; font-size: 13px; display: none; align-items: center; gap: 8px; margin-bottom: 16px; }
+.wd-err-banner.show { display: flex; }
+
+.wd-terms-row { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 16px; }
+.wd-terms-row input[type=checkbox] { width: 15px; height: 15px; accent-color: #c89b2c; margin-top: 2px; cursor: pointer; flex-shrink: 0; }
+.wd-terms-row label { font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.5; cursor: pointer; }
+.wd-terms-row label a { color: #c89b2c; text-decoration: none; }
+.wd-terms-err { font-size: 11px; color: #e05c5c; display: none; align-items: center; gap: 4px; margin-top: -10px; margin-bottom: 12px; }
+.wd-terms-err.show { display: flex; }
+
+.wd-auth-footer-link { text-align: center; margin-top: 16px; font-size: 13px; color: rgba(255,255,255,0.35); }
+.wd-auth-footer-link a { color: #c89b2c; text-decoration: none; font-weight: 500; }
+.wd-auth-footer-link a:hover { text-decoration: underline; }
+
+.wd-attempt-badge { text-align: center; font-size: 12px; color: #e05c5c; margin-bottom: 10px; display: none; }
+.wd-locked-msg { text-align: center; font-size: 13px; color: #e05c5c; background: rgba(224,92,92,0.08); border-radius: 8px; padding: 10px; margin-bottom: 12px; display: none; }
+.wd-locked-msg.show { display: block; }
+
+.wd-toast-wrap { position: fixed; top: 24px; right: 24px; z-index: 10999; display: flex; flex-direction: column; gap: 10px; pointer-events: none; }
+.wd-toast { background: #1a1118; border-left: 3px solid #c89b2c; border-radius: 10px; padding: 12px 16px; color: #fff; font-size: 13px; min-width: 220px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); display: flex; align-items: center; gap: 8px; animation: wdToastIn 0.35s ease both; pointer-events: none; }
+.wd-toast.terr { border-left-color: #e05c5c; }
+.wd-toast.tok { border-left-color: #4caf82; }
+@keyframes wdToastIn { from{opacity:0;transform:translateX(20px);} to{opacity:1;transform:translateX(0);} }
+
+.wd-divider { display: flex; align-items: center; gap: 12px; margin: 16px 0; }
+.wd-divider::before, .wd-divider::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(200,155,44,0.2), transparent); }
+.wd-divider span { font-size: 12px; color: rgba(255,255,255,0.25); }
+
+#wd-signup-panel { display: none; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1200px) {
+  .wd-menu { display: none; }
+  .wd-hamburger { display: flex; }
+  .wd-nav-inner { padding: 0 24px; }
 }
-
-/* Open Animation */
-.hamburger-btn.open .bar:nth-child(1){
-  transform:rotate(45deg);
-  top:8px;
-
-  background:var(--rose);
+@media (max-width: 768px) {
+  .wd-nav-inner { padding: 0 16px; }
+  .wd-logo-main { font-size: 16px; }
+  .wd-logo-sub { font-size: 6.5px; }
+  .wd-icon-btn { width: 38px; height: 38px; font-size: 14px; }
+  .wd-hamburger { width: 38px; height: 38px; }
+  .wd-mobile { max-width: 320px; }
+  .wd-search-popup { padding: 20px; }
+  .wd-auth-popup { padding: 32px 20px 28px; }
+  .wd-form-row { flex-direction: column; gap: 0; }
 }
-
-.hamburger-btn.open .bar:nth-child(2){
-  opacity:0;
+@media (max-width: 480px) {
+  .wd-logo-img-wrap { width: 40px; height: 40px; }
+  .wd-logo-img-wrap img { width: 36px; height: 36px; }
+  .wd-logo-main { font-size: 14px; }
+  .wd-logo-sub { display: none; }
+  .wd-nav-right { gap: 4px; }
+  .wd-icon-btn, .wd-hamburger { width: 36px; height: 36px; }
+  .wd-mobile { max-width: 100%; border-left: none; }
 }
-
-.hamburger-btn.open .bar:nth-child(3){
-  transform:rotate(-45deg);
-  top:8px;
-
-  background:var(--rose);
-}
-
-/* =========================
-   MOBILE MENU
-========================= */
-.mobile-menu{
-  position:fixed;
-
-  top:78px;
-  right:-100%;
-
-  width:100%;
-  height:calc(100vh - 78px);
-
-  background:#050505;
-
-  z-index:9998;
-
-  transition:0.45s ease;
-
-  overflow-y:auto;
-
-  padding:20px 0 40px;
-}
-
-/* Open */
-.mobile-menu.open{
-  right:0;
-}
-
-/* Menu List */
-.mobile-menu ul{
-  list-style:none;
-  padding:0 24px;
-}
-
-/* List */
-.mobile-menu ul li{
-  border-bottom:1px solid rgba(255,255,255,0.06);
-}
-
-/* Mobile Links */
-.mobile-menu ul li a{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  color:#ddd;
-  text-decoration:none;
-
-  padding:18px 0;
-
-  font-size:14px;
-  font-weight:500;
-
-  letter-spacing:2px;
-  text-transform:uppercase;
-
-  transition:0.3s;
-}
-
-.mobile-menu ul li a:hover{
-  color:var(--rose);
-}
-
-/* Active */
-.mobile-menu ul li a.active-link{
-  color:var(--rose);
-}
-
-/* =========================
-   MOBILE SUB MENU
-========================= */
-.mobile-sub{
-  display:none;
-
-  padding-left:18px;
-  padding-bottom:10px;
-}
-
-/* Open */
-.mobile-sub.open{
-  display:block;
-}
-
-/* Remove Border */
-.mobile-sub li{
-  border:none !important;
-}
-
-/* Sub Links */
-.mobile-sub li a{
-  color:#777 !important;
-
-  font-size:11px !important;
-
-  padding:10px 0 !important;
-
-  letter-spacing:1.5px !important;
-}
-
-/* Hover */
-.mobile-sub li a:hover{
-  color:var(--gold) !important;
-}
-
-/* =========================
-   MOBILE ICONS
-========================= */
-.mobile-icons{
-  display:flex;
-  align-items:center;
-  gap:26px;
-
-  padding:30px 24px 0;
-}
-
-.mobile-icons a{
-  color:#fff;
-  font-size:20px;
-
-  transition:0.3s;
-}
-
-.mobile-icons a:hover{
-  color:var(--rose);
-}
-
-/* =========================
-   LARGE LAPTOP
-========================= */
-@media(max-width:1200px){
-
-  .nav-container{
-    padding:0 30px;
-  }
-
-  .nav-link{
-    padding:10px 12px;
-    font-size:12px;
-  }
-
-}
-
-/* =========================
-   TABLET
-========================= */
-@media(max-width:991px){
-
-  /* Hide Desktop */
-  .nav-menu,
-  .nav-icons{
-    display:none;
-  }
-
-  /* Show Hamburger */
-  .hamburger-btn{
-    display:flex;
-  }
-
-  /* Navbar */
-  .custom-navbar{
-    height:74px;
-  }
-
-  .nav-container{
-    padding:0 24px;
-  }
-
-  /* Logo */
-  .logo img{
-    width:170px;
-  }
-
-  /* Mobile Menu */
-  .mobile-menu{
-    top:74px;
-    height:calc(100vh - 74px);
-  }
-
-}
-
-/* =========================
-   MOBILE
-========================= */
-@media(max-width:576px){
-
-  .custom-navbar{
-    height:70px;
-  }
-
-  .nav-container{
-    padding:0 18px;
-  }
-
-  .logo img{
-    width:145px;
-  }
-
-  .hamburger-btn{
-    width:48px;
-    height:48px;
-  }
-
-  .mobile-menu{
-    top:70px;
-    height:calc(100vh - 70px);
-  }
-
-  .mobile-menu ul{
-    padding:0 18px;
-  }
-
-  .mobile-menu ul li a{
-    font-size:13px;
-  }
-
-}
-
 </style>
 
+<!-- Toast -->
+<div class="wd-toast-wrap" id="wdToastWrap"></div>
 
-<!-- ================= NAVBAR ================= -->
-
-<nav class="custom-navbar">
-
-  <div class="nav-container">
+<!-- ══ NAVBAR ══ -->
+<nav class="wd-nav" id="wdNav">
+  <div class="wd-nav-inner">
 
     <!-- Logo -->
-    <a href="#" class="logo">
-      <img src="navelogo.jpeg" alt="">
+    <a href="index.html" class="wd-logo">
+      <div class="wd-logo-img-wrap">
+        <img src="wdlogo.jpeg" alt="WedDream Logo"
+          onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-family:Cinzel,serif;font-size:18px;color:#c89b2c;font-weight:700;\'>W</span>'"/>
+      </div>
+      <div class="wd-logo-text">
+        <div class="wd-logo-main">Wed<em>Dream</em></div>
+        <div class="wd-logo-sub">Wedding Planners</div>
+      </div>
     </a>
 
     <!-- Desktop Menu -->
-    <ul class="nav-menu">
-
-      <li class="nav-item">
-        <a href="index.html" class="nav-link active-link">Home</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="aboutme.html" class="nav-link">About Us</a>
-      </li>
-
-      <!-- Services -->
-      <li class="nav-item">
-
-        <a href="#" class="nav-link dropdown-toggle-btn">
-          Services <span class="arrow">&#9660;</span>
+    <ul class="wd-menu">
+      <li class="wd-menu-item"><a href="index.html" class="wd-menu-link active">Home</a></li>
+      <li class="wd-menu-item"><a href="aboutme.html" class="wd-menu-link">About Us</a></li>
+      <li class="wd-menu-item wd-has-drop">
+        <a href="#" class="wd-menu-link wd-drop-toggle">
+          Services <i class="fa-solid fa-chevron-down" style="font-size:9px;transition:0.3s;"></i>
         </a>
-
-        <ul class="dropdown-menu">
-          <li><a href="#">Wedding</a></li>
-          <li><a href="#">Decoration</a></li>
+        <ul class="wd-dropdown">
+          <li><a href="#"><i class="fa-solid fa-rings-wedding"></i> Wedding</a></li>
+          <li><a href="#"><i class="fa-solid fa-flower"></i> Decoration</a></li>
         </ul>
-
       </li>
-
-      <li class="nav-item">
-        <a href="#" class="nav-link">Guest List</a>
-      </li>
-
-      <!-- Vendors -->
-      <li class="nav-item">
-
-        <a href="#" class="nav-link dropdown-toggle-btn">
-          Vendors <span class="arrow">&#9660;</span>
+      <li class="wd-menu-item"><a href="#" class="wd-menu-link">Guest List</a></li>
+      <li class="wd-menu-item wd-has-drop">
+        <a href="#" class="wd-menu-link wd-drop-toggle">
+          Vendors <i class="fa-solid fa-chevron-down" style="font-size:9px;transition:0.3s;"></i>
         </a>
-
-        <ul class="dropdown-menu">
-          <li><a href="#">Photographer</a></li>
-          <li><a href="#">Makeup Artist</a></li>
+        <ul class="wd-dropdown">
+          <li><a href="#"><i class="fa-solid fa-camera"></i> Photographer</a></li>
+          <li><a href="#"><i class="fa-solid fa-star"></i> Makeup Artist</a></li>
         </ul>
-
       </li>
-
-      <li class="nav-item">
-        <a href="#" class="nav-link ai-link">✨ AI Planner</a>
-      </li>
-
+      <li class="wd-menu-item"><a href="#" class="wd-menu-link wd-ai">✨ AI Planner</a></li>
     </ul>
 
-    <!-- Icons -->
-    <div class="nav-icons">
-      <a href="#"><i class="fa-regular fa-user"></i></a>
-      <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+    <!-- Right Icons -->
+    <div class="wd-nav-right">
+      <!-- Search: gold hover -->
+      <button class="wd-icon-btn wd-search-icon" id="wdSearchBtn" title="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <!-- Account: rose hover -->
+      <button class="wd-icon-btn wd-account-icon" id="wdAuthBtn" title="My Account">
+        <i class="fa-regular fa-user"></i>
+      </button>
+      <!-- Hamburger -->
+      <button class="wd-hamburger" id="wdHamburger" aria-label="Menu">
+        <span class="wd-bar"></span>
+        <span class="wd-bar"></span>
+        <span class="wd-bar"></span>
+      </button>
     </div>
-
-    <!-- Hamburger -->
-    <button class="hamburger-btn" id="hamburgerBtn">
-
-      <span class="h-icon">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </span>
-
-    </button>
-
   </div>
-
 </nav>
 
-<!-- ================= MOBILE MENU ================= -->
+<!-- Overlay -->
+<div class="wd-overlay" id="wdOverlay"></div>
 
-<div class="mobile-menu" id="mobileMenu">
-
-  <ul>
-
+<!-- Mobile Panel -->
+<div class="wd-mobile" id="wdMobile">
+  <ul class="wd-mobile-list">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="aboutme.html">About Us</a></li>
     <li>
-      <a href="index.html" class="active-link">Home</a>
-    </li>
-
-    <li>
-      <a href="aboutme.html">About Us</a>
-    </li>
-
-    <!-- Services -->
-    <li>
-
-      <a href="#" class="mobile-toggle-sub" data-target="sub-services">
-
-        Services
-
-        <i class="fa-solid fa-chevron-down"
-        style="font-size:10px; transition:0.3s;"></i>
-
+      <a href="#" class="wd-mob-toggle" data-sub="mob-services">
+        Services <i class="fa-solid fa-chevron-down" style="font-size:10px;transition:0.3s;"></i>
       </a>
-
-      <ul class="mobile-sub" id="sub-services">
-        <li><a href="#">Wedding</a></li>
-        <li><a href="#">Decoration</a></li>
+      <ul class="wd-mobile-sub" id="mob-services">
+        <li><a href="#"><i class="fa-solid fa-rings-wedding"></i> Wedding</a></li>
+        <li><a href="#"><i class="fa-solid fa-flower"></i> Decoration</a></li>
       </ul>
-
     </li>
-
+    <li><a href="#">Guest List</a></li>
     <li>
-      <a href="#">Guest List</a>
-    </li>
-
-    <!-- Vendors -->
-    <li>
-
-      <a href="#" class="mobile-toggle-sub" data-target="sub-vendors">
-
-        Vendors
-
-        <i class="fa-solid fa-chevron-down"
-        style="font-size:10px; transition:0.3s;"></i>
-
+      <a href="#" class="wd-mob-toggle" data-sub="mob-vendors">
+        Vendors <i class="fa-solid fa-chevron-down" style="font-size:10px;transition:0.3s;"></i>
       </a>
-
-      <ul class="mobile-sub" id="sub-vendors">
-        <li><a href="#">Photographer</a></li>
-        <li><a href="#">Makeup Artist</a></li>
+      <ul class="wd-mobile-sub" id="mob-vendors">
+        <li><a href="#"><i class="fa-solid fa-camera"></i> Photographer</a></li>
+        <li><a href="#"><i class="fa-solid fa-star"></i> Makeup Artist</a></li>
       </ul>
-
     </li>
-
-    <li>
-      <a href="#" style="color:#ff007f;">
-        ✨ AI Planner
-      </a>
-    </li>
-
   </ul>
-
-  <!-- Mobile Icons -->
-
-  <div class="mobile-icons">
-    <a href="#"><i class="fa-regular fa-user"></i></a>
-    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+  <a href="#" class="wd-mobile-ai">✨ AI Planner</a>
+  <div class="wd-mobile-icons">
+    <button class="wd-icon-btn wd-search-icon" onclick="toggleSearch()">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    <button class="wd-icon-btn wd-account-icon" onclick="openAuthPopup()">
+      <i class="fa-regular fa-user"></i>
+    </button>
   </div>
-
 </div>
 
+<!-- ══ SEARCH POPUP ══ -->
+<div class="wd-search-popup" id="wdSearchPopup">
+  <div class="wd-search-inner">
+    <div class="wd-search-bar">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="wdSearchInput" placeholder="Search venues, photographers, decoration..." autocomplete="off"/>
+      <button class="wd-search-close" id="wdSearchClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="wd-search-tags">
+      <span class="wd-search-tag" onclick="doSearch('Wedding Venues')">Wedding Venues</span>
+      <span class="wd-search-tag" onclick="doSearch('Photographers')">Photographers</span>
+      <span class="wd-search-tag" onclick="doSearch('Decoration')">Decoration</span>
+      <span class="wd-search-tag" onclick="doSearch('Makeup Artist')">Makeup Artist</span>
+      <span class="wd-search-tag" onclick="doSearch('Catering')">Catering</span>
+      <span class="wd-search-tag" onclick="doSearch('Invitation Cards')">Invitation Cards</span>
+    </div>
+    <div class="wd-search-results" id="wdSearchResults"></div>
+  </div>
+</div>
 
+<!-- ══ AUTH POPUP ══ -->
+<div class="wd-auth-overlay" id="wdAuthOverlay">
+  <div class="wd-auth-popup">
+    <span class="wd-sparkle sp1">✦</span>
+    <span class="wd-sparkle sp2">✦</span>
+    <span class="wd-sparkle sp3">✦</span>
+    <span class="wd-sparkle sp4">✦</span>
+    <button class="wd-auth-close" id="wdAuthClose"><i class="fa-solid fa-xmark"></i></button>
 
-<!-- ================= JAVASCRIPT ================= -->
+    <div class="wd-auth-brand">
+      <div class="wd-auth-brand-logo">Wed<em>Dream</em></div>
+      <div class="wd-auth-brand-tag">Your Perfect Wedding Awaits</div>
+    </div>
+
+    <div class="wd-auth-tabs">
+      <div class="wd-auth-tab active" id="tabLogin" onclick="switchTab('login')">Sign In</div>
+      <div class="wd-auth-tab" id="tabSignup" onclick="switchTab('signup')">Create Account</div>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="wd-login-panel">
+      <h2 class="wd-auth-h">Welcome Back</h2>
+      <p class="wd-auth-sub">Sign in to continue planning your perfect wedding</p>
+      <div class="wd-err-banner" id="wdLoginErr">
+        <i class="fa-solid fa-triangle-exclamation" style="font-size:15px;flex-shrink:0;"></i>
+        <span id="wdLoginErrText"></span>
+      </div>
+      <div class="wd-locked-msg" id="wdLockedMsg"></div>
+      <div class="wd-attempt-badge" id="wdAttemptBadge"></div>
+      <form id="wdLoginForm" novalidate>
+        <div class="wd-fg">
+          <label>Email Address</label>
+          <div class="wd-input-wrap">
+            <i class="fa-regular fa-envelope il"></i>
+            <input type="email" id="l-email" placeholder="your@email.com" autocomplete="email"/>
+          </div>
+          <div class="wd-fmsg err" id="lerr-email"><i class="fa-solid fa-circle-xmark"></i><span></span></div>
+        </div>
+        <div class="wd-fg">
+          <label>Password</label>
+          <div class="wd-input-wrap">
+            <i class="fa-solid fa-lock il"></i>
+            <input type="password" id="l-pass" placeholder="Your password" class="pr" autocomplete="current-password"/>
+            <i class="fa-regular fa-eye ir" id="lTogglePass"></i>
+          </div>
+          <div class="wd-fmsg err" id="lerr-pass"><i class="fa-solid fa-circle-xmark"></i><span></span></div>
+        </div>
+        <button type="submit" class="wd-btn-submit wd-btn-login" id="wdLoginBtn">
+          <span id="lBtnTxt">Sign In</span>
+          <div class="wsp" id="lBtnSpin"></div>
+        </button>
+      </form>
+      <div class="wd-divider"><span>New to WeDream?</span></div>
+      <div class="wd-auth-footer-link">
+        <a href="#" onclick="switchTab('signup');return false;"><i class="fa-solid fa-user-plus"></i> Create an Account</a>
+      </div>
+    </div>
+
+    <!-- SIGNUP -->
+    <div id="wd-signup-panel">
+      <h2 class="wd-auth-h">Create Your Account</h2>
+      <p class="wd-auth-sub">Join thousands of couples planning their dream wedding</p>
+      <form id="wdSignupForm" novalidate>
+        <div class="wd-form-row">
+          <div class="wd-fg">
+            <label>First Name</label>
+            <div class="wd-input-wrap">
+              <i class="fa-regular fa-user il"></i>
+              <input type="text" id="s-fname" placeholder="Muhammad" autocomplete="given-name"/>
+            </div>
+            <div class="wd-fmsg err" id="serr-fname"><i class="fa-solid fa-circle-xmark"></i><span></span></div>
+          </div>
+          <div class="wd-fg">
+            <label>Last Name</label>
+            <div class="wd-input-wrap">
+              <i class="fa-regular fa-user il"></i>
+              <input type="text" id="s-lname" placeholder="Owais" autocomplete="family-name"/>
+            </div>
+            <div class="wd-fmsg err" id="serr-lname"><i class="fa-solid fa-circle-xmark"></i><span></span></div>
+          </div>
+        </div>
+        <div class="wd-fg">
+          <label>Email Address</label>
+          <div class="wd-input-wrap">
+            <i class="fa-regular fa-envelope il"></i>
+            <input type="email" id="s-email" placeholder="your@email.com" autocomplete="email"/>
+          </div>
+          <div class="wd-fmsg err" id="serr-email"><i class="fa-solid fa-circle-xmark"></i><span></span></div>
+        </div>
+        <div class="wd-fg">
+          <label>Phone Number</label>
+          <div class="wd-input-wrap">
+            <i class="fa-solid fa-phone il"></i>
+            <input type="tel" id="s-phone" placeholder="03XX-XXXXXXX" autocomplete="tel"/>
+          </div>
+          <div class="wd-fmsg err" id="serr-phone"><i class="fa-solid fa-circle-xmark"></i><span></span></div>
+        </div>
+        <div class="wd-fg">
+          <label>Password</label>
+          <div class="wd-input-wrap">
+            <i class="fa-solid fa-lock il"></i>
+            <input type="password" id="s-pass" placeholder="Create a strong password" class="pr" autocomplete="new-password"/>
+            <i class="fa-regular fa-eye ir" id="sTogglePass"></i>
+          </div>
+          <div class="wd-sbar" id="wdSbar"><span id="wsb1"></span><span id="wsb2"></span><span id="wsb3"></span><span id="wsb4"></span></div>
+          <div class="wd-slbl" id="wdSlbl"></div>
+          <div class="wd-fmsg err" id="serr-pass"><i class="fa-solid fa-circle-xmark"></i><span></span></div>
+        </div>
+        <div class="wd-fg">
+          <label>Confirm Password</label>
+          <div class="wd-input-wrap">
+            <i class="fa-solid fa-lock il"></i>
+            <input type="password" id="s-cpass" placeholder="Repeat your password" class="pr" autocomplete="new-password"/>
+            <i class="fa-regular fa-eye ir" id="sToggleCpass"></i>
+          </div>
+          <div class="wd-fmsg err" id="serr-cpass"><i class="fa-solid fa-circle-xmark"></i><span></span></div>
+          <div class="wd-fmsg ok" id="sok-cpass"><i class="fa-solid fa-circle-check"></i><span>Passwords match</span></div>
+        </div>
+        <div class="wd-terms-row">
+          <input type="checkbox" id="s-terms"/>
+          <label for="s-terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+        </div>
+        <div class="wd-terms-err" id="serr-terms"><i class="fa-solid fa-circle-xmark"></i><span>Please accept terms to continue</span></div>
+        <button type="submit" class="wd-btn-submit wd-btn-signup" id="wdSignupBtn">
+          <span id="sBtnTxt">Create Account</span>
+          <div class="wsp" id="sBtnSpin"></div>
+        </button>
+      </form>
+      <div class="wd-divider"><span>Already have an account?</span></div>
+      <div class="wd-auth-footer-link">
+        <a href="#" onclick="switchTab('login');return false;"><i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In to WeDream</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
+(function(){
 
-  /* =========================================
-     MOBILE MENU
-  ========================================= */
+// ── TOAST ────────────────────────────────────
+function wdToast(msg, type){
+  type = type || 'ok';
+  var wrap = document.getElementById('wdToastWrap');
+  var t = document.createElement('div');
+  t.className = 'wd-toast t' + type;
+  var ic = type === 'err' ? 'fa-circle-xmark' : 'fa-circle-check';
+  var col = type === 'err' ? '#e05c5c' : '#4caf82';
+  t.innerHTML = '<i class="fa-solid ' + ic + '" style="color:' + col + ';font-size:16px;flex-shrink:0;"></i> ' + msg;
+  wrap.appendChild(t);
+  setTimeout(function(){ t.style.opacity='0'; t.style.transition='opacity 0.4s'; setTimeout(function(){ t.remove(); }, 400); }, 3500);
+}
+window.wdToast = wdToast;
 
-  const hamburgerBtn =
-    document.getElementById('hamburgerBtn');
+// ── HAMBURGER ────────────────────────────────
+var ham = document.getElementById('wdHamburger');
+var mob = document.getElementById('wdMobile');
+var ov  = document.getElementById('wdOverlay');
+var nav = document.getElementById('wdNav');
 
-  const mobileMenu =
-    document.getElementById('mobileMenu');
+function closeMob(){
+  ham.classList.remove('open');
+  mob.classList.remove('open');
+  ov.classList.remove('open');
+  document.body.style.overflow = '';
+}
+ham.addEventListener('click', function(){
+  var op = mob.classList.contains('open');
+  if(op){ closeMob(); }
+  else { ham.classList.add('open'); mob.classList.add('open'); ov.classList.add('open'); document.body.style.overflow = 'hidden'; }
+});
+ov.addEventListener('click', closeMob);
 
+document.querySelectorAll('.wd-mob-toggle').forEach(function(btn){
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    var sub = document.getElementById(this.getAttribute('data-sub'));
+    var ic  = this.querySelector('i');
+    if(sub){ sub.classList.toggle('open'); if(ic) ic.style.transform = sub.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0)'; }
+  });
+});
 
-  if (hamburgerBtn && mobileMenu) {
-
-    hamburgerBtn.addEventListener('click', () => {
-
-      hamburgerBtn.classList.toggle('open');
-
-      mobileMenu.classList.toggle('open');
-
+document.querySelectorAll('.wd-drop-toggle').forEach(function(btn){
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    var par = this.parentElement;
+    var ic  = this.querySelector('i');
+    var op  = par.classList.contains('open');
+    document.querySelectorAll('.wd-has-drop').forEach(function(el){
+      el.classList.remove('open');
+      var i2 = el.querySelector('.wd-drop-toggle i');
+      if(i2) i2.style.transform = 'rotate(0)';
     });
-
+    if(!op){ par.classList.add('open'); if(ic) ic.style.transform = 'rotate(180deg)'; }
+  });
+});
+document.addEventListener('click', function(e){
+  if(!e.target.closest('.wd-has-drop')){
+    document.querySelectorAll('.wd-has-drop').forEach(function(el){
+      el.classList.remove('open');
+      var ic = el.querySelector('.wd-drop-toggle i');
+      if(ic) ic.style.transform = 'rotate(0)';
+    });
   }
+});
+window.addEventListener('scroll', function(){ if(nav) nav.classList.toggle('scrolled', window.scrollY > 60); });
 
+// ── SEARCH POPUP ─────────────────────────────
+var searchPopup  = document.getElementById('wdSearchPopup');
+var searchBtn    = document.getElementById('wdSearchBtn');
+var searchClose  = document.getElementById('wdSearchClose');
+var searchInput  = document.getElementById('wdSearchInput');
+var searchResults= document.getElementById('wdSearchResults');
 
-  /* =========================================
-     MOBILE SUB MENU
-  ========================================= */
+var wdPages = [
+  {title:'Wedding Services',   sub:'Full wedding planning & coordination', icon:'fa-rings-wedding',     href:'services.html'},
+  {title:'Decoration Packages',sub:'Floral & theme decoration',            icon:'fa-flower',             href:'decoration.html'},
+  {title:'Photographer Gallery',sub:'Top wedding photographers',           icon:'fa-camera',             href:'photographers.html'},
+  {title:'Makeup Artists',     sub:'Bridal makeup specialists',            icon:'fa-star',               href:'makeup.html'},
+  {title:'Guest List Manager', sub:'Manage your wedding guests',           icon:'fa-list-check',         href:'guestlist.html'},
+  {title:'AI Wedding Planner', sub:'Plan your wedding with AI',            icon:'fa-robot',              href:'ai-planner.html'},
+  {title:'About WedDream',     sub:'Learn about our story',                icon:'fa-heart',              href:'aboutme.html'},
+  {title:'Catering Services',  sub:'Delicious wedding menus',              icon:'fa-utensils',           href:'catering.html'},
+  {title:'Invitation Cards',   sub:'Custom wedding invitations',           icon:'fa-envelope-open-text', href:'invitations.html'},
+  {title:'Venue Finder',       sub:'Discover perfect venues',              icon:'fa-location-dot',       href:'venues.html'},
+];
 
-  const mobileSubLinks =
-    document.querySelectorAll('.mobile-toggle-sub');
+function toggleSearch(){
+  var op = searchPopup.classList.contains('open');
+  searchPopup.classList.toggle('open');
+  searchBtn.classList.toggle('active');
+  if(!op){ setTimeout(function(){ searchInput.focus(); }, 300); searchResults.innerHTML = ''; }
+}
+window.toggleSearch = toggleSearch;
 
+searchBtn.addEventListener('click', function(e){ e.stopPropagation(); toggleSearch(); });
+searchClose.addEventListener('click', function(){ searchPopup.classList.remove('open'); searchBtn.classList.remove('active'); searchInput.value = ''; searchResults.innerHTML = ''; });
+document.addEventListener('click', function(e){
+  if(!e.target.closest('#wdSearchPopup') && !e.target.closest('#wdSearchBtn')){
+    searchPopup.classList.remove('open'); searchBtn.classList.remove('active');
+  }
+});
 
-  mobileSubLinks.forEach((subLink) => {
+function renderResults(arr){
+  if(!arr.length){ searchResults.innerHTML = '<div class="wd-search-empty"><i class="fa-solid fa-magnifying-glass" style="font-size:24px;margin-bottom:8px;display:block;"></i>No results found</div>'; return; }
+  searchResults.innerHTML = arr.map(function(r){
+    return '<a class="wd-search-result-item" href="'+r.href+'">'
+      +'<div class="wd-search-result-icon"><i class="fa-solid '+r.icon+'"></i></div>'
+      +'<div class="wd-search-result-text"><div class="title">'+r.title+'</div><div class="sub">'+r.sub+'</div></div>'
+      +'</a>';
+  }).join('');
+}
 
-    subLink.addEventListener('click', (e) => {
+function doSearch(q){
+  searchInput.value = q;
+  var v = q.toLowerCase();
+  renderResults(wdPages.filter(function(p){ return p.title.toLowerCase().indexOf(v)>-1 || p.sub.toLowerCase().indexOf(v)>-1; }));
+}
+window.doSearch = doSearch;
 
-      e.preventDefault();
+searchInput.addEventListener('input', function(){
+  var v = this.value.trim().toLowerCase();
+  if(!v){ searchResults.innerHTML = ''; return; }
+  renderResults(wdPages.filter(function(p){ return p.title.toLowerCase().indexOf(v)>-1 || p.sub.toLowerCase().indexOf(v)>-1; }));
+});
+searchInput.addEventListener('keydown', function(e){ if(e.key==='Escape'){ searchPopup.classList.remove('open'); searchBtn.classList.remove('active'); } });
 
-      const targetId =
-        subLink.getAttribute('data-target');
+// ── AUTH POPUP ────────────────────────────────
+var authOv   = document.getElementById('wdAuthOverlay');
+var authBtn  = document.getElementById('wdAuthBtn');
+var authClose= document.getElementById('wdAuthClose');
 
-      const targetMenu =
-        document.getElementById(targetId);
+function openAuthPopup(){ authOv.classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeAuthPopup(){ authOv.classList.remove('open'); document.body.style.overflow = ''; }
+window.openAuthPopup = openAuthPopup;
 
+authBtn.addEventListener('click', function(e){ e.stopPropagation(); openAuthPopup(); });
+authClose.addEventListener('click', closeAuthPopup);
+authOv.addEventListener('click', function(e){ if(e.target === authOv) closeAuthPopup(); });
 
-      if (targetMenu) {
+function switchTab(tab){
+  document.getElementById('wd-login-panel').style.display  = tab==='login'  ? 'block' : 'none';
+  document.getElementById('wd-signup-panel').style.display = tab==='signup' ? 'block' : 'none';
+  document.getElementById('tabLogin').className  = 'wd-auth-tab' + (tab==='login'  ? ' active' : '');
+  document.getElementById('tabSignup').className = 'wd-auth-tab' + (tab==='signup' ? ' active' : '');
+}
+window.switchTab = switchTab;
+switchTab('login');
 
-        targetMenu.classList.toggle('open');
+// ── HELPERS ──────────────────────────────────
+function lshowErr(id, msg){ var el=document.getElementById('lerr-'+id); if(el){el.querySelector('span').textContent=msg;el.classList.add('show');} var inp=document.getElementById('l-'+id); if(inp)inp.classList.add('err-f'); }
+function lclearErr(id){ var el=document.getElementById('lerr-'+id); if(el)el.classList.remove('show'); var inp=document.getElementById('l-'+id); if(inp)inp.classList.remove('err-f'); }
+function sshowErr(id, msg){ var el=document.getElementById('serr-'+id); if(el){el.querySelector('span').textContent=msg;el.classList.add('show');} var inp=document.getElementById('s-'+id); if(inp)inp.classList.add('err-f'); }
+function sclearErr(id){ var el=document.getElementById('serr-'+id); if(el)el.classList.remove('show'); var inp=document.getElementById('s-'+id); if(inp){inp.classList.remove('err-f');} }
+function smarkOk(id){ sclearErr(id); var inp=document.getElementById('s-'+id); if(inp)inp.classList.add('ok-f'); }
 
-        const icon =
-          subLink.querySelector('i');
+// ── PASSWORD STRENGTH ─────────────────────────
+var sPassInp = document.getElementById('s-pass');
+var wdSbar   = document.getElementById('wdSbar');
+var wdSlbl   = document.getElementById('wdSlbl');
+var sbars    = [document.getElementById('wsb1'),document.getElementById('wsb2'),document.getElementById('wsb3'),document.getElementById('wsb4')];
+var scols    = ['#e05c5c','#e0943c','#c89b2c','#4caf82'];
+var slbls    = ['Weak','Fair','Good','Strong'];
+function calcStr(p){ var s=0; if(p.length>=8)s++; if(/[A-Z]/.test(p))s++; if(/[0-9]/.test(p))s++; if(/[^A-Za-z0-9]/.test(p))s++; return s; }
+sPassInp.addEventListener('input', function(){
+  var v = this.value;
+  if(!v.length){ wdSbar.classList.remove('show'); wdSlbl.textContent=''; return; }
+  wdSbar.classList.add('show');
+  var s = calcStr(v);
+  sbars.forEach(function(b,i){ b.style.background = i<s ? scols[s-1] : 'rgba(255,255,255,0.1)'; });
+  wdSlbl.style.color = scols[s-1]; wdSlbl.textContent = slbls[s-1] || '';
+});
 
-        if (icon) {
+// ── PASSWORD TOGGLES ──────────────────────────
+document.getElementById('lTogglePass').addEventListener('click', function(){ var i=document.getElementById('l-pass'); var s=i.type==='password'; i.type=s?'text':'password'; this.className=s?'fa-regular fa-eye-slash ir':'fa-regular fa-eye ir'; });
+document.getElementById('sTogglePass').addEventListener('click', function(){ var i=document.getElementById('s-pass'); var s=i.type==='password'; i.type=s?'text':'password'; this.className=s?'fa-regular fa-eye-slash ir':'fa-regular fa-eye ir'; });
+document.getElementById('sToggleCpass').addEventListener('click', function(){ var i=document.getElementById('s-cpass'); var s=i.type==='password'; i.type=s?'text':'password'; this.className=s?'fa-regular fa-eye-slash ir':'fa-regular fa-eye ir'; });
 
-          icon.style.transform =
-            targetMenu.classList.contains('open')
-            ? 'rotate(180deg)'
-            : 'rotate(0deg)';
+// Live confirm check
+document.getElementById('s-cpass').addEventListener('input', function(){
+  var p=document.getElementById('s-pass').value; var c=this.value;
+  if(!c.length){ sclearErr('cpass'); document.getElementById('sok-cpass').classList.remove('show'); return; }
+  if(p===c){ sclearErr('cpass'); document.getElementById('sok-cpass').classList.add('show'); this.classList.add('ok-f'); }
+  else { document.getElementById('sok-cpass').classList.remove('show'); sshowErr('cpass','Passwords do not match'); }
+});
 
-        }
+// Clear on input
+['email','pass'].forEach(function(id){ var el=document.getElementById('l-'+id); if(el)el.addEventListener('input',function(){ lclearErr(id); document.getElementById('wdLoginErr').classList.remove('show'); }); });
+['fname','lname','email','phone','pass'].forEach(function(id){ var el=document.getElementById('s-'+id); if(el)el.addEventListener('input',function(){ sclearErr(id); }); });
 
-      }
+// ── LOCK SYSTEM ───────────────────────────────
+var MAX_ATT=5, LOCK_DUR=5*60*1000;
+var EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+var NAME_RE=/^[A-Za-z\s]{2,30}$/;
+var PHONE_RE=/^(\+92|0)(3\d{9}|[0-9]{9,10})$/;
+function getAtt(){ return JSON.parse(localStorage.getItem('wd_login_attempts')||'{"count":0,"lockedUntil":0}'); }
+function saveAtt(d){ localStorage.setItem('wd_login_attempts',JSON.stringify(d)); }
+function resetAtt(){ saveAtt({count:0,lockedUntil:0}); }
+function isLocked(){ var d=getAtt(); if(d.lockedUntil&&Date.now()<d.lockedUntil)return d.lockedUntil; if(d.lockedUntil&&Date.now()>=d.lockedUntil)resetAtt(); return false; }
+function checkLock(){
+  var until=isLocked(); var lm=document.getElementById('wdLockedMsg'); var btn=document.getElementById('wdLoginBtn');
+  if(until){ var mins=Math.ceil((until-Date.now())/60000); lm.textContent='Too many attempts. Try again in '+mins+' min.'; lm.classList.add('show'); btn.disabled=true; return true; }
+  lm.classList.remove('show'); btn.disabled=false; return false;
+}
+function updateAttBadge(){ var d=getAtt(); var b=document.getElementById('wdAttemptBadge'); if(d.count>0&&d.count<MAX_ATT){b.textContent=(MAX_ATT-d.count)+' attempts left';b.style.display='block';}else b.style.display='none'; }
 
-    });
-
-  });
-
-
-  /* =========================================
-     DESKTOP DROPDOWN
-  ========================================= */
-
-  const desktopDropdownBtns =
-    document.querySelectorAll('.dropdown-toggle-btn');
-
-
-  desktopDropdownBtns.forEach((dropdownBtn) => {
-
-    dropdownBtn.addEventListener('click', function(e){
-
-      e.preventDefault();
-
-      const parentNavItem =
-        this.parentElement;
-
-
-      // Close other dropdowns
-
-      document.querySelectorAll('.nav-item')
-      .forEach((navItem) => {
-
-        if(navItem !== parentNavItem){
-
-          navItem.classList.remove('open');
-
-        }
-
-      });
-
-
-      // Toggle current dropdown
-
-      parentNavItem.classList.toggle('open');
-
-    });
-
-  });
-
-
-  /* =========================================
-     OUTSIDE CLICK CLOSE
-  ========================================= */
-
-  document.addEventListener('click', function(e){
-
-    if(!e.target.closest('.nav-item')){
-
-      document.querySelectorAll('.nav-item')
-      .forEach((navItem) => {
-
-        navItem.classList.remove('open');
-
-      });
-
+// ── LOGIN SUBMIT ──────────────────────────────
+document.getElementById('wdLoginForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  document.getElementById('wdLoginErr').classList.remove('show');
+  if(checkLock()) return;
+  var email=document.getElementById('l-email').value.trim();
+  var pass=document.getElementById('l-pass').value;
+  var v=true;
+  if(!email){lshowErr('email','Email required');v=false;}else if(!EMAIL_RE.test(email)){lshowErr('email','Invalid email');v=false;}else lclearErr('email');
+  if(!pass){lshowErr('pass','Password required');v=false;}else lclearErr('pass');
+  if(!v) return;
+  var btn=document.getElementById('wdLoginBtn');
+  document.getElementById('lBtnTxt').style.display='none'; document.getElementById('lBtnSpin').style.display='block'; btn.disabled=true;
+  setTimeout(function(){
+    var users=JSON.parse(localStorage.getItem('wd_users')||'[]');
+    var user=users.find(function(u){return u.email===email.toLowerCase();});
+    if(!user){
+      document.getElementById('lBtnTxt').style.display='block'; document.getElementById('lBtnSpin').style.display='none'; btn.disabled=false;
+      var d=getAtt(); d.count++; if(d.count>=MAX_ATT) d.lockedUntil=Date.now()+LOCK_DUR; saveAtt(d); updateAttBadge(); checkLock();
+      lshowErr('email','Not registered');
+      document.getElementById('wdLoginErr').classList.add('show'); document.getElementById('wdLoginErrText').textContent='Account not found';
+      wdToast('User not found','err'); return;
     }
+    if(atob(user.password)!==pass){
+      document.getElementById('lBtnTxt').style.display='block'; document.getElementById('lBtnSpin').style.display='none'; btn.disabled=false;
+      var d2=getAtt(); d2.count++; if(d2.count>=MAX_ATT) d2.lockedUntil=Date.now()+LOCK_DUR; saveAtt(d2); updateAttBadge(); checkLock();
+      lshowErr('pass','Wrong password');
+      document.getElementById('wdLoginErr').classList.add('show'); document.getElementById('wdLoginErrText').textContent='Incorrect password';
+      wdToast('Wrong password','err'); return;
+    }
+    resetAtt();
+    localStorage.setItem('wd_session', JSON.stringify({email:user.email,fname:user.fname,loggedInAt:new Date().toISOString()}));
+    wdToast('Welcome back, '+user.fname+'! 🎊','ok');
+    setTimeout(function(){ closeAuthPopup(); document.getElementById('lBtnTxt').style.display='block'; document.getElementById('lBtnSpin').style.display='none'; btn.disabled=false; },1500);
+  }, 800);
+});
 
-  });
+// ── SIGNUP SUBMIT ─────────────────────────────
+document.getElementById('wdSignupForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var fname=document.getElementById('s-fname').value.trim();
+  var lname=document.getElementById('s-lname').value.trim();
+  var email=document.getElementById('s-email').value.trim();
+  var phone=document.getElementById('s-phone').value.trim().replace(/[\s-]/g,'');
+  var pass=document.getElementById('s-pass').value;
+  var cpass=document.getElementById('s-cpass').value;
+  var terms=document.getElementById('s-terms').checked;
+  var v=true;
+  if(!fname){sshowErr('fname','First name required');v=false;}else if(!NAME_RE.test(fname)){sshowErr('fname','Only letters (2-30 chars)');v=false;}else smarkOk('fname');
+  if(!lname){sshowErr('lname','Last name required');v=false;}else if(!NAME_RE.test(lname)){sshowErr('lname','Only letters (2-30 chars)');v=false;}else smarkOk('lname');
+  if(!email){sshowErr('email','Email required');v=false;}else if(!EMAIL_RE.test(email)){sshowErr('email','Enter valid email');v=false;}else smarkOk('email');
+  if(!phone){sshowErr('phone','Phone required');v=false;}else if(!PHONE_RE.test(phone)){sshowErr('phone','Valid Pakistani number (03XX-XXXXXXX)');v=false;}else smarkOk('phone');
+  if(!pass){sshowErr('pass','Password required');v=false;}else if(pass.length<8){sshowErr('pass','Min 8 characters');v=false;}else if(calcStr(pass)<2){sshowErr('pass','Too weak — add uppercase, numbers or symbols');v=false;}else smarkOk('pass');
+  if(!cpass){sshowErr('cpass','Confirm your password');v=false;}else if(pass!==cpass){sshowErr('cpass','Passwords do not match');v=false;}else smarkOk('cpass');
+  if(!terms){document.getElementById('serr-terms').classList.add('show');v=false;}else document.getElementById('serr-terms').classList.remove('show');
+  if(!v) return;
+  var existing=JSON.parse(localStorage.getItem('wd_users')||'[]');
+  if(existing.find(function(u){return u.email===email.toLowerCase();})){sshowErr('email','Email already registered');wdToast('Email already registered','err');return;}
+  var btn=document.getElementById('wdSignupBtn');
+  document.getElementById('sBtnTxt').style.display='none'; document.getElementById('sBtnSpin').style.display='block'; btn.disabled=true;
+  setTimeout(function(){
+    var user={fname:fname,lname:lname,email:email.toLowerCase(),phone:document.getElementById('s-phone').value.trim(),password:btoa(pass),createdAt:new Date().toISOString()};
+    existing.push(user); localStorage.setItem('wd_users',JSON.stringify(existing));
+    wdToast('Account created! Please sign in. 🎉','ok');
+    document.getElementById('sBtnTxt').style.display='block'; document.getElementById('sBtnSpin').style.display='none'; btn.disabled=false;
+    setTimeout(function(){ switchTab('login'); },1800);
+  }, 1200);
+});
 
+checkLock();
+updateAttBadge();
+setInterval(function(){ checkLock(); updateAttBadge(); }, 30000);
 
-  /* =========================================
-     ACTIVE NAV LINK
-  ========================================= */
-
-  const navigationLinks =
-    document.querySelectorAll('.nav-link');
-
-
-  navigationLinks.forEach((navLink) => {
-
-    navLink.addEventListener('click', function(){
-
-      navigationLinks.forEach((singleLink) => {
-
-        singleLink.classList.remove('active-link');
-
-      });
-
-      this.classList.add('active-link');
-
-    });
-
-  });
-
+})();
 </script>
