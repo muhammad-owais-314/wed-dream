@@ -1,20 +1,42 @@
   /* ── nave bar ── */
+$(document).ready(() => {
+    $.get('navebar.html', (data) => {
+        $('#nav-container').html(data);
 
-$(document).ready(() =>{
-    $.get('navebar.html', (data) =>{
-        console.log(data)
-        $('#nav-container').html(data)
-    })
-})
-  
+        // ✅ Navbar inject hone ke BAAD active set karo
+        var page = window.location.pathname.split('/').pop().replace('.html','').toLowerCase() || 'index';
+
+        var pageMap = {
+            'index'        : 'home',
+            'aboutme'      : 'about',
+            'services'     : 'services',
+            'decoration'   : 'services',
+            'guestlist'    : 'guestlist',
+            'gustlist'     : 'guestlist',
+            'photographers': 'vendors',
+            'makeup'       : 'vendors',
+            'catering'     : 'vendors',
+            'ai-planner'   : 'ai'
+        };
+
+        var activeKey = pageMap[page] || 'home';
+
+        $('.wd-menu-link').removeClass('active');
+        $('.wd-mobile-list > li > a').removeClass('active');
+
+        $('.wd-menu-link[data-nav="' + activeKey + '"]').addClass('active');
+        $('.wd-mobile-list > li > a[data-nav="' + activeKey + '"]').addClass('active');
+    });
+});
+
 /* ── FOOTER ── */
 
-$(document).ready(() =>{
-    $.get('footer.html', (data) =>{
-        console.log(data)
-        $('#footer-container').html(data)
-    })
-})
+$(document).ready(() => {
+    $.get('footer.html', (data) => {
+        $('#footer-container').html(data);
+    });
+});
+
 
 /* =========================
    HERO ANIMATION

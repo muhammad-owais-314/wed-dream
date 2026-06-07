@@ -708,98 +708,121 @@
 
  <!-- ========== SCRIPTS ========== -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 <script>
 
+/* ================= NAVBAR LOAD ================= */
 
-  /* ── nave bar ── */
+$(document).ready(function () {
 
-$(document).ready(() =>{
-    $.get('navebar.html', (data) =>{
-        console.log(data)
-        $('#nav-container').html(data)
-    })
-})
-  
-/* ── FOOTER ── */
+    // Navbar Load
+    $.get('navebar.html', function (data) {
+        $('#nav-container').html(data);
+    });
 
-$(document).ready(() =>{
-    $.get('footer.html', (data) =>{
-        console.log(data)
-        $('#footer-container').html(data)
-    })
-})
+    // Footer Load
+    $.get('footer.html', function (data) {
+        $('#footer-container').html(data);
+    });
+
+});
 
 
+/* ================= DROPDOWNS ================= */
 
-  (function(){
-    // Navbar functionality
-    const hamburger = document.getElementById('wdHamburger');
-    const mobile = document.getElementById('wdMobile');
-    const overlay = document.getElementById('wdOverlay');
-    const nav = document.getElementById('wdNav');
+// Desktop Dropdown
+$(document).on('click', '.wd-drop-toggle', function (e) {
 
-    function closeMenu(){
-      if(hamburger) hamburger.classList.remove('open');
-      if(mobile) mobile.classList.remove('open');
-      if(overlay) overlay.classList.remove('open');
-      document.body.style.overflow = '';
+    e.preventDefault();
+    e.stopPropagation();
+
+    const parent = $(this).closest('.wd-has-drop');
+
+    $('.wd-has-drop').not(parent).removeClass('open');
+
+    parent.toggleClass('open');
+
+});
+
+// Close dropdown when clicking outside
+$(document).on('click', function () {
+    $('.wd-has-drop').removeClass('open');
+});
+
+
+/* ================= MOBILE SUBMENU ================= */
+
+$(document).on('click', '.wd-mob-toggle', function (e) {
+
+    e.preventDefault();
+
+    const subId = $(this).attr('data-sub');
+
+    $('#' + subId).toggleClass('open');
+
+});
+
+
+/* ================= HAMBURGER MENU ================= */
+
+$(document).on('click', '#wdHamburger', function () {
+
+    $(this).toggleClass('open');
+    $('#wdMobile').toggleClass('open');
+    $('#wdOverlay').toggleClass('open');
+
+    if ($('#wdMobile').hasClass('open')) {
+        $('body').css('overflow', 'hidden');
+    } else {
+        $('body').css('overflow', '');
     }
-    function openMenu(){
-      if(hamburger) hamburger.classList.add('open');
-      if(mobile) mobile.classList.add('open');
-      if(overlay) overlay.classList.add('open');
-      document.body.style.overflow = 'hidden';
+
+});
+
+
+/* ================= OVERLAY CLOSE ================= */
+
+$(document).on('click', '#wdOverlay', function () {
+
+    $('#wdHamburger').removeClass('open');
+    $('#wdMobile').removeClass('open');
+    $('#wdOverlay').removeClass('open');
+
+    $('body').css('overflow', '');
+
+});
+
+
+/* ================= NAVBAR SCROLL ================= */
+
+$(window).on('scroll', function () {
+
+    const nav = $('#wdNav');
+
+    if ($(window).scrollTop() > 60) {
+        nav.addClass('scrolled');
+    } else {
+        nav.removeClass('scrolled');
     }
-    if(hamburger){
-      hamburger.addEventListener('click', function(e){
-        e.stopPropagation();
-        if(mobile && mobile.classList.contains('open')) closeMenu();
-        else openMenu();
-      });
-    }
-    if(overlay) overlay.addEventListener('click', closeMenu);
 
-    // Mobile submenus
-    document.querySelectorAll('.wd-mob-toggle').forEach(btn => {
-      btn.addEventListener('click', function(e){
-        e.preventDefault();
-        const subId = this.getAttribute('data-sub');
-        const sub = document.getElementById(subId);
-        if(sub) sub.classList.toggle('open');
-      });
-    });
+});
 
-    // Desktop dropdowns
-    document.querySelectorAll('.wd-drop-toggle').forEach(btn => {
-      btn.addEventListener('click', function(e){
-        e.preventDefault();
-        const parent = this.parentElement;
-        document.querySelectorAll('.wd-has-drop').forEach(el => {
-          if(el !== parent) el.classList.remove('open');
-        });
-        parent.classList.toggle('open');
-      });
-    });
-    document.addEventListener('click', function(e){
-      if(!e.target.closest('.wd-has-drop')){
-        document.querySelectorAll('.wd-has-drop').forEach(el => el.classList.remove('open'));
-      }
-    });
-    window.addEventListener('scroll', function(){
-      if(nav) nav.classList.toggle('scrolled', window.scrollY > 60);
-    });
 
-    // Privacy Policy accordion functionality
-    const privacyCards = document.querySelectorAll('.privacy-card');
-    privacyCards.forEach((card, index) => {
-      const header = card.querySelector('.privacy-card-header');
-      header.addEventListener('click', () => {
-        card.classList.toggle('open');
-      });
-    });
-    // Open first card by default for better UX
-    if(privacyCards.length > 0) privacyCards[0].classList.add('open');
-  })();
+/* ================= PRIVACY ACCORDION ================= */
+
+$(document).on('click', '.privacy-card-header', function () {
+
+    $(this).closest('.privacy-card').toggleClass('open');
+
+});
+
+$(document).ready(function () {
+
+    $('.privacy-card:first').addClass('open');
+
+});
+
 </script>
 
 <!-- Bootstrap JS -->

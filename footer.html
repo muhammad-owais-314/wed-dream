@@ -1,505 +1,266 @@
-<!-- ===== GOOGLE FONT ===== -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<!-- ===== GOOGLE FONTS ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Josefin+Sans:wght@400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <!-- ===== FONT AWESOME ===== -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <!-- ===== MDBOOTSTRAP ===== -->
 <link rel="stylesheet" href="MDB5-STANDARD-UI-KIT-Free-9.3.0 (2)/css/mdb.rtl.min.css">
 
 <style>
-
 :root{
-  --rose:#b93b56;
-  --rose-hover:#a22f49;
-  --gold:#c89b2c;
-  --white:#ffffff;
-  --white-light:rgba(255,255,255,0.72);
-  --glass:rgba(255,255,255,0.05);
+  --rose:#b93b56;--rose-hover:#a22f49;
+  --gold:#c89b2c;--gold-light:#e8c96e;
+  --white:#ffffff;--white-light:rgba(255,255,255,0.72);
   --dark:#000000;
 }
+body{ font-family:"Poppins",sans-serif; background:#000000; }
 
-body{
-  font-family: "Poppins", sans-serif;
-  background:#000000;
-}
-
-/* ================= FOOTER ================= */
-
+/* ══════════════════════════════════
+   FOOTER WRAPPER
+══════════════════════════════════ */
 .footer-modern{
   position:relative;
   overflow:hidden;
-  background:
-  radial-gradient(circle at top left, rgba(0, 0, 0, 0.18), transparent 35%),
-  radial-gradient(circle at bottom right, rgba(200,155,44,0.12), transparent 35%),
-  linear-gradient(135deg,#000000,#000000,#000000);
+  background:#000000;
   color:#fff;
   padding:90px 0 30px;
 }
 
-/* GLOW EFFECTS */
-
-.footer-modern::before{
-  content:"";
+/* ── Canvas sits behind everything ── */
+#footerCanvas{
   position:absolute;
-  width:450px;
-  height:450px;
-  background:radial-gradient(circle, rgba(0, 0, 0, 0.18), transparent 70%);
-  top:-180px;
-  left:-120px;
-  filter:blur(50px);
+  inset:0;
+  width:100%; height:100%;
+  pointer-events:none;
+  z-index:0;
 }
 
-.footer-modern::after{
-  content:"";
+/* Top shimmer line */
+.footer-top-line{
   position:absolute;
-  width:350px;
-  height:350px;
-  background:radial-gradient(circle, rgba(0, 0, 0, 0.15), transparent 70%);
-  bottom:-150px;
-  right:-100px;
-  filter:blur(50px);
+  top:0; left:0; right:0; height:1px;
+  background:linear-gradient(90deg,transparent,rgba(200,155,44,0.5),rgba(185,59,86,0.35),rgba(200,155,44,0.5),transparent);
+  z-index:2;
 }
 
-/* ================= LOGO ================= */
+/* All content above canvas */
+.footer-modern .container{ position:relative; z-index:2; }
 
-.footer-logo{
-  width:220px;
-  transition:0.4s ease;
-  filter:drop-shadow(0 0 20px rgba(0, 0, 0, 0.2));
+/* ══════════════════════════════════
+   LOGO — navbar style
+══════════════════════════════════ */
+.footer-brand{
+  display:inline-flex; align-items:center; gap:12px;
+  text-decoration:none; transition:transform 0.3s;
 }
+.footer-brand:hover{ transform:translateX(2px); }
 
-.footer-logo:hover{
-  transform:scale(1.08);
-  filter:drop-shadow(0 0 28px rgba(0, 0, 0, 0.4));
+.footer-logo-img-wrap{
+  width:52px; height:52px; border-radius:50%;
+  border:1.5px solid rgba(200,155,44,0.4);
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden; flex-shrink:0; background:#000000;
+  transition:border-color 0.3s, box-shadow 0.3s, transform 0.35s cubic-bezier(0.4,0,0.2,1);
 }
-
-/* ================= TEXT ================= */
-
-.footer-text{
-  color:var(--white-light);
-  line-height:1.9;
-  font-size:14px;
-  margin-top:15px;
+.footer-brand:hover .footer-logo-img-wrap{
+  border-color:rgba(200,155,44,0.75);
+  box-shadow:0 0 22px rgba(200,155,44,0.22);
+  transform:rotate(-4deg) scale(1.06);
 }
+.footer-logo-img-wrap img{ width:48px; height:48px; object-fit:cover; border-radius:50%; }
 
-/* ================= TITLES ================= */
+.footer-logo-text{ display:flex; flex-direction:column; line-height:1; gap:3px; }
+.footer-logo-main{
+  font-family:'Cinzel',serif; font-size:20px; font-weight:600;
+  letter-spacing:2px; color:#c89b2c; text-transform:uppercase; line-height:1;
+  transition:letter-spacing 0.3s;
+}
+.footer-brand:hover .footer-logo-main{ letter-spacing:3px; }
+.footer-logo-main em{
+  font-style:italic; font-family:'Cormorant Garamond',serif;
+  font-size:23px; font-weight:600; letter-spacing:1px; color:#e06080;
+}
+.footer-logo-sub{
+  font-family:'Josefin Sans',sans-serif; font-size:8px; font-weight:400;
+  letter-spacing:3.5px; color:rgba(200,155,44,0.45); text-transform:uppercase;
+  transition:color 0.3s, letter-spacing 0.3s;
+}
+.footer-brand:hover .footer-logo-sub{ color:rgba(200,155,44,0.7); letter-spacing:4.5px; }
+
+/* ══════════════════════════════════
+   REST OF FOOTER ELEMENTS
+══════════════════════════════════ */
+.footer-text{ color:var(--white-light); line-height:1.9; font-size:14px; margin-top:18px; }
 
 .footer-title{
-  font-size:18px;
-  font-weight:600;
-  margin-bottom:25px;
-  position:relative;
-  display:inline-block;
+  font-size:17px; font-weight:600; margin-bottom:25px;
+  position:relative; display:inline-block;
+  font-family:'Josefin Sans',sans-serif; letter-spacing:1.5px; text-transform:uppercase; color:#fff;
 }
-
 .footer-title::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-8px;
-  width:45px;
-  height:2px;
-  border-radius:10px;
+  content:""; position:absolute; left:0; bottom:-8px;
+  width:40px; height:2px; border-radius:10px;
   background:linear-gradient(to right,var(--gold),transparent);
 }
 
-/* ================= LINKS ================= */
-
-.footer-links{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-
-.footer-links li{
-  margin-bottom:13px;
-}
-
+.footer-links{ list-style:none; padding:0; margin:0; }
+.footer-links li{ margin-bottom:13px; }
 .footer-links a{
-  text-decoration:none;
-  color:var(--white-light);
-  transition:0.3s ease;
-  font-size:14px;
-  display:flex;
-  align-items:center;
-  gap:10px;
+  text-decoration:none; color:var(--white-light); transition:0.3s ease;
+  font-size:14px; display:flex; align-items:center; gap:10px;
 }
+.footer-links a i{ color:var(--gold); font-size:12px; transition:0.3s; }
+.footer-links a:hover{ color:#fff; transform:translateX(6px); }
+.footer-links a:hover i{ color:var(--rose); }
 
-.footer-links a i{
-  color:var(--gold);
-  font-size:12px;
-  transition:0.3s;
-}
+.footer-contact{ display:flex; align-items:flex-start; gap:12px; margin-bottom:18px; color:var(--white-light); font-size:14px; }
+.footer-contact i{ color:var(--gold); font-size:15px; margin-top:4px; }
 
-.footer-links a:hover{
-  color:#fff;
-  transform:translateX(6px);
-}
-
-.footer-links a:hover i{
-  color:var(--rose);
-}
-
-/* ================= CONTACT ================= */
-
-.footer-contact{
-  display:flex;
-  align-items:flex-start;
-  gap:12px;
-  margin-bottom:18px;
-  color:var(--white-light);
-  font-size:14px;
-}
-
-.footer-contact i{
-  color:var(--gold);
-  font-size:15px;
-  margin-top:4px;
-}
-
-/* ================= SOCIAL ================= */
-
-.footer-social{
-  display:flex;
-  gap:10px;
-  margin-top:25px;
-}
-
+.footer-social{ display:flex; gap:10px; margin-top:25px; }
 .footer-social a{
-  width:45px;
-  height:45px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  color:#fff;
-  background:rgba(255,255,255,0.04);
-  border:1px solid rgba(255,255,255,0.08);
-  backdrop-filter:blur(12px);
-  transition:0.4s ease;
+  width:45px; height:45px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  text-decoration:none; color:#fff;
+  background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px); transition:0.4s ease;
 }
-
 .footer-social a:hover{
   background:linear-gradient(135deg,var(--rose),var(--rose-hover));
-  transform:translateY(-6px);
-  box-shadow:0 0 20px rgba(185,59,86,0.4);
-  border-color:transparent;
+  transform:translateY(-6px); box-shadow:0 0 20px rgba(185,59,86,0.4); border-color:transparent;
 }
-
-/* ================= BUTTON ================= */
 
 .btn-live{
-  margin-top:15px;
-  border:none;
-  outline:none;
-  padding:12px 24px;
-  border-radius:40px;
+  margin-top:15px; border:none; outline:none; padding:12px 24px; border-radius:40px;
   background:linear-gradient(135deg,var(--rose),var(--rose-hover));
-  color:#fff;
-  font-size:14px;
-  font-weight:500;
-  transition:0.4s ease;
+  color:#fff; font-size:14px; font-weight:500; transition:0.4s ease;
   box-shadow:0 10px 25px rgba(185,59,86,0.25);
 }
-
-.btn-live i{
-  margin-right:8px;
-}
-
-.btn-live:hover{
-  transform:translateY(-3px) scale(1.04);
-  box-shadow:0 12px 30px rgba(185,59,86,0.4);
-}
-
-/* ================= SUBSCRIBE ================= */
+.btn-live i{ margin-right:8px; }
+.btn-live:hover{ transform:translateY(-3px) scale(1.04); box-shadow:0 12px 30px rgba(185,59,86,0.4); }
 
 .footer-subscribe{
-  margin:50px auto 25px;
-  max-width:750px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:14px;
-  padding:14px;
-  border-radius:70px;
-  background:rgba(255,255,255,0.04);
-  border:1px solid rgba(255,255,255,0.08);
-  backdrop-filter:blur(18px);
+  margin:50px auto 25px; max-width:750px;
+  display:flex; align-items:center; justify-content:center;
+  gap:14px; padding:14px; border-radius:70px;
+  background:rgba(255,255,255,0.04); border:1px solid rgba(200,155,44,0.2);
+  backdrop-filter:blur(18px); transition:border-color 0.3s, box-shadow 0.3s;
 }
-
-.footer-subscribe input{
-  flex:1;
-  border:none;
-  outline:none;
-  background:transparent;
-  color:#fff;
-  padding:14px 18px;
-  font-size:14px;
-}
-
-.footer-subscribe input::placeholder{
-  color:rgba(255,255,255,0.5);
-}
-
+.footer-subscribe:focus-within{ border-color:rgba(200,155,44,0.5); box-shadow:0 0 0 3px rgba(200,155,44,0.08); }
+.footer-subscribe input{ flex:1; border:none; outline:none; background:transparent; color:#fff; padding:14px 18px; font-size:14px; }
+.footer-subscribe input::placeholder{ color:rgba(255,255,255,0.4); }
 .footer-subscribe button{
-  border:none;
-  padding:14px 28px;
-  border-radius:40px;
-  background:linear-gradient(135deg,var(--gold),#e0b84d);
-  color:#000;
-  font-weight:600;
-  transition:0.4s ease;
+  border:none; padding:14px 28px; border-radius:40px;
+  background:linear-gradient(135deg,var(--gold),#e0b84d); color:#000; font-weight:600; transition:0.4s ease;
 }
-
 .footer-subscribe button:hover{
-  background:linear-gradient(135deg,var(--rose),var(--rose-hover));
-  color:#fff;
-  transform:translateY(-2px);
-  box-shadow:0 0 18px rgba(185,59,86,0.35);
+  background:linear-gradient(135deg,var(--rose),var(--rose-hover)); color:#fff;
+  transform:translateY(-2px); box-shadow:0 0 18px rgba(185,59,86,0.35);
 }
-
-.footer-subscribe button:active{
-  transform:scale(0.96);
-}
-
-/* ================= MESSAGE ================= */
-
-#msg{
-  text-align:center;
-  font-size:14px;
-  margin-top:12px;
-}
-
-/* ================= LINE ================= */
+.footer-subscribe button:active{ transform:scale(0.96); }
+#msg{ text-align:center; font-size:14px; margin-top:12px; }
 
 .footer-line{
-  border-color:rgba(255,255,255,0.08);
+  border:none; height:1px;
+  background:linear-gradient(90deg,transparent,rgba(200,155,44,0.2),rgba(185,59,86,0.15),rgba(200,155,44,0.2),transparent);
   margin:35px 0;
 }
 
-/* ================= BOTTOM ================= */
-
-.footer-bottom{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:15px;
-  flex-wrap:wrap;
-}
-
+.footer-bottom{ display:flex; align-items:center; justify-content:space-between; gap:15px; flex-wrap:wrap; }
 .footer-credit{
-  color:rgba(255,255,255,0.7);
-  font-size:13px;
-  letter-spacing:0.4px;
-  position:relative;
-  display:inline-block;
-  transition:0.4s;
+  color:rgba(255,255,255,0.6); font-size:13px; letter-spacing:0.4px;
+  position:relative; display:inline-block; transition:0.4s;
 }
-
 .footer-credit::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-5px;
-  width:0%;
-  height:2px;
-  background:linear-gradient(to right,var(--gold),transparent);
-  transition:0.5s;
+  content:""; position:absolute; left:0; bottom:-5px; width:0%; height:1px;
+  background:linear-gradient(to right,var(--gold),transparent); transition:0.5s;
 }
-
-.footer-credit:hover{
-  color:#fff;
-  text-shadow:0 0 10px rgba(200,155,44,0.4);
-}
-
-.footer-credit:hover::after{
-  width:100%;
-}
-
-.footer-bottom-links{
-  display:flex;
-  gap:18px;
-}
-
-.footer-bottom-links a{
-  text-decoration:none;
-  color:rgba(255,255,255,0.7);
-  font-size:13px;
-  transition:0.3s;
-}
-
-.footer-bottom-links a:hover{
-  color:var(--gold);
-}
-
-/* ================= RESPONSIVE ================= */
+.footer-credit:hover{ color:#fff; text-shadow:0 0 10px rgba(200,155,44,0.3); }
+.footer-credit:hover::after{ width:100%; }
+.footer-bottom-links{ display:flex; gap:18px; }
+.footer-bottom-links a{ text-decoration:none; color:rgba(255,255,255,0.6); font-size:13px; transition:0.3s; z-index:2; }
+.footer-bottom-links a:hover{ color:var(--gold); }
 
 @media(max-width:991px){
-
-  .footer-modern{
-    text-align:center;
-  }
-
-  .footer-title::after{
-    left:50%;
-    transform:translateX(-50%);
-  }
-
-  .footer-contact{
-    justify-content:center;
-  }
-
-  .footer-social{
-    justify-content:center;
-  }
-
-  .footer-bottom{
-    flex-direction:column;
-    text-align:center;
-  }
-
+  .footer-modern{ text-align:center; }
+  .footer-title::after{ left:50%; transform:translateX(-50%); }
+  .footer-contact{ justify-content:center; }
+  .footer-social{ justify-content:center; }
+  .footer-bottom{ flex-direction:column; text-align:center; }
+  .footer-brand{ justify-content:center; }
 }
-
 @media(max-width:768px){
-
-  .footer-modern{
-    padding-top:70px;
-  }
-
-  .footer-subscribe{
-    flex-direction:column;
-    border-radius:25px;
-  }
-
-  .footer-subscribe input{
-    width:100%;
-    text-align:center;
-  }
-
-  .footer-subscribe button{
-    width:100%;
-  }
-
-  .footer-logo{
-    width:180px;
-  }
-
+  .footer-modern{ padding-top:70px; }
+  .footer-subscribe{ flex-direction:column; border-radius:25px; }
+  .footer-subscribe input{ width:100%; text-align:center; }
+  .footer-subscribe button{ width:100%; }
+  .footer-logo-main{ font-size:17px; }
 }
-
 </style>
 
-<!-- ================= FOOTER ================= -->
+<!-- ═══════════ FOOTER HTML ═══════════ -->
+<footer class="footer-modern" id="footerSection">
 
-<footer class="footer-modern">
+  <!-- ── ANIMATED CANVAS BACKGROUND ── -->
+  <canvas id="footerCanvas"></canvas>
+
+  <!-- top line -->
+  <div class="footer-top-line"></div>
 
   <div class="container">
-
     <div class="row gy-5">
 
       <!-- LOGO -->
-
       <div class="col-lg-4 col-md-6">
-
-        <img src="navelogo.jpeg" class="footer-logo" alt="logo">
-
-        <p class="footer-text">
-          Creating unforgettable wedding experiences with elegance, luxury and timeless perfection for your dream celebration.
-        </p>
-
+        <a href="index.html" class="footer-brand">
+          <div class="footer-logo-img-wrap">
+            <img src="wdlogo.jpeg" alt="WedDream Logo"
+              onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-family:Cinzel,serif;font-size:20px;color:#c89b2c;font-weight:700;\'>W</span>'"/>
+          </div>
+          <div class="footer-logo-text">
+            <div class="footer-logo-main">Wed<em>Dream</em></div>
+            <div class="footer-logo-sub">Wedding Planners</div>
+          </div>
+        </a>
+        <p class="footer-text">Creating unforgettable wedding experiences with elegance, luxury and timeless perfection for your dream celebration.</p>
         <div class="footer-social">
-
-          <a href="https://www.facebook.com/profile.php?id=100016793528002">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-
-          <a href="https://www.instagram.com/owais_ansari____3211">
-            <i class="fab fa-instagram"></i>
-          </a>
-
-          <a href="https://wa.me/923112795023" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-
+          <a href="https://www.facebook.com/profile.php?id=100016793528002" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/owais_ansari____3211" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/923112795023" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
-
       </div>
 
       <!-- SERVICES -->
-
       <div class="col-lg-2 col-md-6">
-
         <h5 class="footer-title">Services</h5>
-
         <ul class="footer-links">
-
           <li><a href="#"><i class="fa-solid fa-angle-right"></i> Wedding Halls</a></li>
-
           <li><a href="#"><i class="fa-solid fa-angle-right"></i> Catering</a></li>
-
           <li><a href="#"><i class="fa-solid fa-angle-right"></i> Luxury Cars</a></li>
-
           <li><a href="#"><i class="fa-solid fa-angle-right"></i> Decorations</a></li>
-
           <li><a href="#"><i class="fa-solid fa-angle-right"></i> Photography</a></li>
-
           <li><a href="#"><i class="fa-solid fa-angle-right"></i> Invitations</a></li>
-
         </ul>
-
       </div>
 
       <!-- QUICK LINKS -->
-
       <div class="col-lg-2 col-md-6">
-
         <h5 class="footer-title">Quick Links</h5>
-
         <ul class="footer-links">
-
           <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home</a></li>
-
           <li><a href="aboutme.html"><i class="fa-solid fa-angle-right"></i> About</a></li>
-
           <li><a href="#"><i class="fa-solid fa-angle-right"></i> Guest List</a></li>
-
           <li><a href="#"><i class="fa-solid fa-angle-right"></i> AI Planner</a></li>
-
           <li><a href="#"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
-
           <li><a href="#"><i class="fa-solid fa-angle-right"></i> Blog</a></li>
-
         </ul>
-
       </div>
 
       <!-- CONTACT -->
-
       <div class="col-lg-4 col-md-6">
-
         <h5 class="footer-title">Contact Info</h5>
-
-        <div class="footer-contact">
-          <i class="fa-solid fa-location-dot"></i>
-          <span>Karachi, Pakistan</span>
-        </div>
-
-        <div class="footer-contact">
-          <i class="fa-solid fa-phone"></i>
-          <span>+92 300 1234567</span>
-        </div>
-
-        <div class="footer-contact">
-          <i class="fa-solid fa-envelope"></i>
-          <span>hello@wedream.pk</span>
-        </div>
-
-        <button class="btn-live">
-          <i class="fa-solid fa-comments"></i>
-          Live Chat
-        </button>
-
+        <div class="footer-contact"><i class="fa-solid fa-location-dot"></i><span>Karachi, Pakistan</span></div>
+        <div class="footer-contact"><i class="fa-solid fa-phone"></i><span>+92 300 1234567</span></div>
+        <div class="footer-contact"><i class="fa-solid fa-envelope"></i><span>hello@wedream.pk</span></div>
+        <button class="btn-live"><i class="fa-solid fa-comments"></i> Live Chat</button>
       </div>
 
     </div>
@@ -507,223 +268,337 @@ body{
     <hr class="footer-line">
 
     <!-- SUBSCRIBE -->
-
-    <form class="footer-subscribe"
-    action="https://formspree.io/f/your-id"
-    method="POST"
-    id="subscribeForm">
-
-      <input
-      type="email"
-      name="email"
-      id="email"
-      placeholder="Enter your email address"
-      required>
-
-      <button type="submit" id="btn">
-        Subscribe
-      </button>
-
+    <form class="footer-subscribe" action="https://formspree.io/f/your-id" method="POST" id="subscribeForm">
+      <input type="email" name="email" id="subEmail" placeholder="Enter your email address" required/>
+      <button type="submit" id="subBtn">Subscribe</button>
     </form>
-
     <p id="msg"></p>
 
     <hr class="footer-line">
 
     <!-- BOTTOM -->
-
     <div class="footer-bottom">
-
-      <p class="footer-credit">
-        © 2026 WeDream. Crafted with passion by Owais Ansari & Team✨
-      </p>
-
+      <p class="footer-credit">© 2026 WeDream. Crafted with passion by Owais Ansari & Team ✨</p>
       <div class="footer-bottom-links">
         <a href="Privacy_Policy.html">Privacy Policy</a>
         <a href="Term_Condition.html">Terms & Conditions</a>
-     
       </div>
-
     </div>
 
   </div>
-
 </footer>
+
 <script>
-// ==================== FIXED SUBSCRIPTION SCRIPT ====================
-// This script handles email validation, Formspree submission, and user feedback
+/* ══════════════════════════════════════════════════
+   FOOTER BACKGROUND ANIMATION
+   3 layers:
+   1. Floating sparkle particles (gold + rose)
+   2. Drifting soft orbs (radial glow blobs)
+   3. Diagonal shimmer lines that scroll across
+══════════════════════════════════════════════════ */
+(function(){
+  var canvas = document.getElementById('footerCanvas');
+  var footer = document.getElementById('footerSection');
+  if(!canvas || !footer) return;
 
-const form = document.getElementById("subscribeForm");
-const email = document.getElementById("email");
-const msg = document.getElementById("msg");
-const btn = document.getElementById("btn");
+  var ctx = canvas.getContext('2d');
+  var W, H, raf;
 
-// Email validation regex - checks for valid email format
-const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-// Store original button text for reset
-const originalBtnText = btn ? btn.innerText : "Subscribe";
-
-// Function to show error message
-function showError(message) {
-  msg.innerText = message;
-  msg.style.color = "#ff4d4d";
-  msg.style.fontSize = "13px";
-  msg.style.marginTop = "10px";
-  
-  // Auto-hide error after 4 seconds
-  setTimeout(() => {
-    if (msg.innerText === message) {
-      msg.innerText = "";
-    }
-  }, 4000);
-}
-
-// Function to show success message
-function showSuccess(message) {
-  msg.innerText = message;
-  msg.style.color = "#6fcf97";
-  msg.style.fontSize = "13px";
-  msg.style.marginTop = "10px";
-  
-  // Auto-hide success after 4 seconds
-  setTimeout(() => {
-    if (msg.innerText === message) {
-      msg.innerText = "";
-    }
-  }, 4000);
-}
-
-// Function to reset button state
-function resetButton() {
-  btn.innerText = originalBtnText;
-  btn.disabled = false;
-}
-
-// Check if form exists before adding event listener
-if (form) {
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    
-    // Get email value and trim whitespace
-    const emailValue = email.value.trim();
-    
-    // Validate email format
-    if (!regex.test(emailValue)) {
-      showError("❌ Please enter a valid email address");
-      email.style.borderColor = "#ff4d4d";
-      
-      // Reset border after 2 seconds
-      setTimeout(() => {
-        email.style.borderColor = "";
-      }, 2000);
-      
-      return;
-    }
-    
-    // Reset border style
-    email.style.borderColor = "";
-    
-    // Disable button and show loading state
-    btn.innerText = "⏳ Sending...";
-    btn.disabled = true;
-    
-    // Show subscribing message
-    msg.innerText = "📧 Subscribing...";
-    msg.style.color = "#c89b2c";
-    
-    // Get form action URL
-    const formAction = form.action;
-    
-    // Check if using demo/placeholder Formspree ID
-    if (formAction.includes("your-id") || formAction === "https://formspree.io/f/your-id") {
-      // DEMO MODE - Save to localStorage for testing
-      setTimeout(() => {
-        try {
-          // Get existing subscriptions from localStorage
-          let subscriptions = JSON.parse(localStorage.getItem("weddream_subscribers") || "[]");
-          
-          // Check if email already exists
-          if (subscriptions.includes(emailValue)) {
-            showError("📧 This email is already subscribed!");
-            resetButton();
-            return;
-          }
-          
-          // Add new email
-          subscriptions.push(emailValue);
-          localStorage.setItem("weddream_subscribers", JSON.stringify(subscriptions));
-          
-          // Success
-          showSuccess("🎉 Successfully Subscribed! Welcome to WedDream ✨");
-          btn.innerText = "✅ Subscribed!";
-          email.value = "";
-          
-          // Reset button after 2 seconds
-          setTimeout(() => {
-            resetButton();
-          }, 2000);
-          
-        } catch (error) {
-          showError("❌ Something went wrong. Please try again.");
-          resetButton();
-        }
-      }, 800);
-      
-      return;
-    }
-    
-    // REAL FORMSPREE SUBMISSION
-    // Create FormData object
-    const formData = new FormData(form);
-    
-    // Send data to Formspree
-    fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: {
-        "Accept": "application/json"
-      }
-    })
-    .then(response => {
-      if (response.ok) {
-        // Success response from Formspree
-        showSuccess("🎉 Successfully Subscribed! Thank you for joining ✨");
-        btn.innerText = "✅ Subscribed!";
-        email.value = "";
-        
-        // Reset button after 2 seconds
-        setTimeout(() => {
-          resetButton();
-        }, 2000);
-      } else {
-        // Server returned error
-        throw new Error("Server responded with " + response.status);
-      }
-    })
-    .catch(error => {
-      console.error("Subscription error:", error);
-      showError("❌ Network error. Please try again later.");
-      resetButton();
-    });
-  });
-  
-  // Clear message when user starts typing
-  if (email) {
-    email.addEventListener("input", function() {
-      msg.innerText = "";
-      email.style.borderColor = "";
-    });
+  /* ── Resize canvas to match footer ── */
+  function resize(){
+    W = canvas.width  = footer.offsetWidth;
+    H = canvas.height = footer.offsetHeight;
   }
-} else {
-  console.error("Subscribe form not found! Make sure form has id='subscribeForm'");
-}
+  resize();
+  window.addEventListener('resize', resize);
 
-// Optional: Add console log for setup instructions
-console.log("%c✨ WedDream Subscription System Active ✨", "color: #c89b2c; font-size: 14px; font-weight: bold;");
-console.log("%cTo receive emails to your Gmail:", "color: #ffffff;");
-console.log("%c1. Go to https://formspree.io/", "color: #b93b56;");
-console.log("%c2. Sign up and create a new form", "color: #b93b56;");
-console.log("%c3. Copy your endpoint URL", "color: #c89b2c;");
-console.log("%c4. Replace 'your-id' in form action attribute", "color: #c89b2c;");
+  /* ══════════════════
+     1. PARTICLES
+  ══════════════════ */
+  var PARTICLE_COUNT = 90;
+  var particles = [];
+
+  function randomBetween(a, b){ return a + Math.random() * (b - a); }
+
+  function Particle(){
+    this.reset();
+  }
+  Particle.prototype.reset = function(){
+    this.x    = randomBetween(0, W);
+    this.y    = randomBetween(0, H);
+    this.r    = randomBetween(0.6, 2.2);
+    this.vx   = randomBetween(-0.18, 0.18);
+    this.vy   = randomBetween(-0.35, -0.08); /* float upward */
+    this.life = 0;
+    this.maxLife = randomBetween(180, 400);
+    /* gold or rose */
+    var isGold = Math.random() > 0.42;
+    this.color = isGold
+      ? 'rgba(200,155,44,' : 'rgba(185,59,86,';
+    /* twinkle phase */
+    this.phase = randomBetween(0, Math.PI * 2);
+    this.phaseSpeed = randomBetween(0.02, 0.055);
+    /* shape: circle or diamond sparkle */
+    this.shape = Math.random() > 0.6 ? 'diamond' : 'circle';
+  };
+  Particle.prototype.update = function(){
+    this.x += this.vx;
+    this.y += this.vy;
+    this.life++;
+    this.phase += this.phaseSpeed;
+    if(this.life > this.maxLife || this.y < -10) this.reset();
+  };
+  Particle.prototype.draw = function(ctx){
+    var progress = this.life / this.maxLife;
+    /* fade in/out */
+    var alpha = progress < 0.15
+      ? progress / 0.15
+      : progress > 0.75
+        ? (1 - progress) / 0.25
+        : 1;
+    /* twinkle */
+    alpha *= 0.35 + 0.55 * (0.5 + 0.5 * Math.sin(this.phase));
+    alpha = Math.max(0, Math.min(1, alpha));
+
+    ctx.save();
+    ctx.globalAlpha = alpha;
+
+    if(this.shape === 'diamond'){
+      /* small 4-point star / diamond */
+      ctx.translate(this.x, this.y);
+      ctx.rotate(this.phase * 0.4);
+      ctx.fillStyle = this.color + '1)';
+      ctx.beginPath();
+      var s = this.r * 2.2;
+      ctx.moveTo(0, -s);
+      ctx.lineTo(s * 0.35, 0);
+      ctx.lineTo(0,  s);
+      ctx.lineTo(-s * 0.35, 0);
+      ctx.closePath();
+      ctx.fill();
+    } else {
+      ctx.fillStyle = this.color + '1)';
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.restore();
+  };
+
+  for(var i = 0; i < PARTICLE_COUNT; i++){
+    var p = new Particle();
+    p.life = Math.floor(Math.random() * p.maxLife); /* stagger start */
+    particles.push(p);
+  }
+
+  /* ══════════════════
+     2. DRIFTING ORBS
+  ══════════════════ */
+  var ORB_COUNT = 5;
+  var orbs = [];
+
+  function Orb(){
+    this.reset(true);
+  }
+  Orb.prototype.reset = function(initial){
+    this.x   = randomBetween(0.05, 0.95) * W;
+    this.y   = initial ? randomBetween(0, H) : H + 200;
+    this.vy  = randomBetween(-0.12, -0.04);
+    this.vx  = randomBetween(-0.06, 0.06);
+    this.rad = randomBetween(120, 260);
+    this.life = 0;
+    this.maxLife = randomBetween(600, 1200);
+    /* alternate gold / rose */
+    this.isGold = Math.random() > 0.5;
+    this.wobble = 0;
+    this.wobbleSpeed = randomBetween(0.008, 0.018);
+    this.wobbleAmp   = randomBetween(0.4, 1.2);
+  };
+  Orb.prototype.update = function(){
+    this.wobble += this.wobbleSpeed;
+    this.x += this.vx + Math.sin(this.wobble) * this.wobbleAmp;
+    this.y += this.vy;
+    this.life++;
+    if(this.life > this.maxLife || this.y < -300) this.reset(false);
+  };
+  Orb.prototype.draw = function(ctx){
+    var progress = this.life / this.maxLife;
+    var alpha = progress < 0.1
+      ? progress / 0.1
+      : progress > 0.8
+        ? (1 - progress) / 0.2
+        : 1;
+    alpha *= 0.055; /* very subtle */
+
+    var grd = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.rad);
+    if(this.isGold){
+      grd.addColorStop(0,   'rgba(200,155,44,' + alpha + ')');
+      grd.addColorStop(0.5, 'rgba(200,155,44,' + (alpha*0.4) + ')');
+    } else {
+      grd.addColorStop(0,   'rgba(185,59,86,' + alpha + ')');
+      grd.addColorStop(0.5, 'rgba(185,59,86,' + (alpha*0.4) + ')');
+    }
+    grd.addColorStop(1, 'rgba(0,0,0,0)');
+
+    ctx.save();
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = grd;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.rad, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+  };
+
+  for(var j = 0; j < ORB_COUNT; j++){
+    orbs.push(new Orb());
+  }
+
+  /* ══════════════════
+     3. SHIMMER LINES
+  ══════════════════ */
+  var SHIMMER_COUNT = 4;
+  var shimmerLines = [];
+
+  function ShimmerLine(){
+    this.reset(true);
+  }
+  ShimmerLine.prototype.reset = function(initial){
+    this.angle  = randomBetween(-30, -15); /* degrees, diagonal */
+    this.x      = initial ? randomBetween(-W, W*1.5) : -W * 0.3;
+    this.speed  = randomBetween(0.25, 0.7);
+    this.width  = randomBetween(60, 200);
+    this.alpha  = randomBetween(0.02, 0.07);
+    this.isGold = Math.random() > 0.45;
+    this.life   = 0;
+    this.maxLife = Math.floor((W * 2) / this.speed);
+  };
+  ShimmerLine.prototype.update = function(){
+    this.x += this.speed;
+    this.life++;
+    if(this.x > W * 1.4) this.reset(false);
+  };
+  ShimmerLine.prototype.draw = function(ctx){
+    ctx.save();
+    ctx.globalAlpha = this.alpha;
+    /* rotate around canvas center */
+    ctx.translate(W / 2, H / 2);
+    ctx.rotate(this.angle * Math.PI / 180);
+    ctx.translate(-W / 2, -H / 2);
+
+    var color = this.isGold ? '200,155,44' : '185,59,86';
+    var grd = ctx.createLinearGradient(this.x, 0, this.x + this.width, 0);
+    grd.addColorStop(0,   'rgba(' + color + ',0)');
+    grd.addColorStop(0.5, 'rgba(' + color + ',1)');
+    grd.addColorStop(1,   'rgba(' + color + ',0)');
+
+    ctx.fillStyle = grd;
+    ctx.fillRect(this.x, -H * 0.5, this.width, H * 3);
+    ctx.restore();
+  };
+
+  for(var k = 0; k < SHIMMER_COUNT; k++){
+    var sl = new ShimmerLine();
+    sl.x = randomBetween(-W * 0.2, W * 1.2); /* stagger */
+    shimmerLines.push(sl);
+  }
+
+  /* ══════════════════
+     MAIN LOOP
+  ══════════════════ */
+  function draw(){
+    ctx.clearRect(0, 0, W, H);
+
+    /* ── Orbs first (background layer) ── */
+    for(var o = 0; o < orbs.length; o++){
+      orbs[o].update();
+      orbs[o].draw(ctx);
+    }
+
+    /* ── Shimmer lines ── */
+    for(var s = 0; s < shimmerLines.length; s++){
+      shimmerLines[s].update();
+      shimmerLines[s].draw(ctx);
+    }
+
+    /* ── Particles on top ── */
+    for(var p = 0; p < particles.length; p++){
+      particles[p].update();
+      particles[p].draw(ctx);
+    }
+
+    raf = requestAnimationFrame(draw);
+  }
+
+  /* Start when footer is visible (IntersectionObserver) */
+  var started = false;
+  if('IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting && !started){
+          started = true;
+          draw();
+        } else if(!entry.isIntersecting && started){
+          /* pause when off screen */
+          cancelAnimationFrame(raf);
+          started = false;
+        }
+      });
+    }, { threshold: 0.05 });
+    obs.observe(footer);
+  } else {
+    draw(); /* fallback */
+  }
+
+  /* Resize handler — rebuild on resize */
+  window.addEventListener('resize', function(){
+    resize();
+    particles.forEach(function(p){ p.reset(); });
+    orbs.forEach(function(ob){ ob.reset(true); });
+  });
+
+})();
+
+/* ══════════════════════════════════
+   SUBSCRIBE FORM
+══════════════════════════════════ */
+(function(){
+  var form  = document.getElementById('subscribeForm');
+  var email = document.getElementById('subEmail');
+  var msg   = document.getElementById('msg');
+  var btn   = document.getElementById('subBtn');
+  var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function showMsg(text, color){
+    msg.innerText = text; msg.style.color = color;
+    setTimeout(function(){ if(msg.innerText===text) msg.innerText=''; }, 4000);
+  }
+  if(!form) return;
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var val = email.value.trim();
+    if(!regex.test(val)){ showMsg('❌ Please enter a valid email address','#ff4d4d'); return; }
+    btn.innerText='⏳ Sending...'; btn.disabled=true;
+    msg.innerText='📧 Subscribing...'; msg.style.color='#c89b2c';
+
+    if(form.action.indexOf('your-id') > -1){
+      setTimeout(function(){
+        var subs = JSON.parse(localStorage.getItem('weddream_subscribers')||'[]');
+        if(subs.indexOf(val)>-1){ showMsg('📧 This email is already subscribed!','#ff4d4d'); btn.innerText='Subscribe'; btn.disabled=false; return; }
+        subs.push(val); localStorage.setItem('weddream_subscribers',JSON.stringify(subs));
+        showMsg('🎉 Successfully Subscribed! Welcome to WedDream ✨','#6fcf97');
+        btn.innerText='✅ Subscribed!'; email.value='';
+        setTimeout(function(){ btn.innerText='Subscribe'; btn.disabled=false; },2000);
+      },800);
+      return;
+    }
+    fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+    .then(function(r){
+      if(r.ok){ showMsg('🎉 Successfully Subscribed! Thank you ✨','#6fcf97'); btn.innerText='✅ Subscribed!'; email.value=''; setTimeout(function(){btn.innerText='Subscribe';btn.disabled=false;},2000); }
+      else throw new Error();
+    })
+    .catch(function(){ showMsg('❌ Network error. Please try again.','#ff4d4d'); btn.innerText='Subscribe'; btn.disabled=false; });
+  });
+  email.addEventListener('input', function(){ msg.innerText=''; });
+})();
 </script>

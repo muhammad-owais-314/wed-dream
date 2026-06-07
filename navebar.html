@@ -64,7 +64,6 @@
   border-radius: 50%;
 }
 
-/* ── LOGO TEXT — FIXED FONT STYLE ── */
 .wd-logo-text {
   display: flex;
   flex-direction: column;
@@ -89,7 +88,6 @@
   font-weight: 600;
   letter-spacing: 1px;
   color: #e06080;
-  font-style: italic;
 }
 
 .wd-logo-sub {
@@ -215,9 +213,7 @@
   background: rgba(200,155,44,0.05);
 }
 
-/* ══════════════════════════════════════
-   RIGHT SIDE ICONS — FIXED HOVER
-══════════════════════════════════════ */
+/* ── RIGHT ICONS ── */
 .wd-nav-right {
   display: flex;
   align-items: center;
@@ -225,7 +221,6 @@
   flex-shrink: 0;
 }
 
-/* Base icon button — NO hover color by default */
 .wd-icon-btn {
   width: 40px;
   height: 40px;
@@ -243,7 +238,6 @@
   position: relative;
 }
 
-/* Search icon — gold hover */
 .wd-icon-btn.wd-search-icon:hover {
   background: rgba(200,155,44,0.1);
   border-color: rgba(200,155,44,0.4);
@@ -256,7 +250,6 @@
   color: #c89b2c;
 }
 
-/* Account icon — rose hover */
 .wd-icon-btn.wd-account-icon:hover {
   background: rgba(185,59,86,0.1);
   border-color: rgba(185,59,86,0.4);
@@ -355,9 +348,7 @@
 }
 .wd-mobile-ai:hover { background: #b93b56; color: #fff; }
 
-/* ══════════════════════════════════════
-   SEARCH POPUP
-══════════════════════════════════════ */
+/* ── SEARCH POPUP ── */
 .wd-search-popup {
   position: fixed;
   top: 76px; left: 0; right: 0;
@@ -422,9 +413,7 @@
 .wd-search-result-text .sub { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 2px; }
 .wd-search-empty { text-align: center; padding: 32px; color: rgba(255,255,255,0.3); font-size: 14px; }
 
-/* ══════════════════════════════════════
-   AUTH POPUP
-══════════════════════════════════════ */
+/* ── AUTH POPUP ── */
 .wd-auth-overlay {
   position: fixed; inset: 0; z-index: 10000;
   background: rgba(0,0,0,0.7); backdrop-filter: blur(8px);
@@ -589,41 +578,38 @@
 
     <!-- Desktop Menu -->
     <ul class="wd-menu">
-      <li class="wd-menu-item"><a href="index.html" class="wd-menu-link active">Home</a></li>
-      <li class="wd-menu-item"><a href="aboutme.html" class="wd-menu-link">About Us</a></li>
+      <li class="wd-menu-item"><a href="index.html" class="wd-menu-link" data-nav="home">Home</a></li>
+      <li class="wd-menu-item"><a href="aboutme.html" class="wd-menu-link" data-nav="about">About Us</a></li>
       <li class="wd-menu-item wd-has-drop">
-        <a href="#" class="wd-menu-link wd-drop-toggle">
+        <a href="#" class="wd-menu-link wd-drop-toggle" data-nav="services">
           Services <i class="fa-solid fa-chevron-down" style="font-size:9px;transition:0.3s;"></i>
         </a>
         <ul class="wd-dropdown">
-          <li><a href="#"><i class="fa-solid fa-rings-wedding"></i> Wedding</a></li>
-          <li><a href="#"><i class="fa-solid fa-flower"></i> Decoration</a></li>
+          <li><a href="services.html" data-nav="services"><i class="fa-solid fa-rings-wedding"></i> Wedding</a></li>
+          <li><a href="decoration.html" data-nav="services"><i class="fa-solid fa-flower"></i> Decoration</a></li>
         </ul>
       </li>
-      <li class="wd-menu-item"><a href="#" class="wd-menu-link">Guest List</a></li>
+      <li class="wd-menu-item"><a href="guestlist.html" class="wd-menu-link" data-nav="guestlist">Guest List</a></li>
       <li class="wd-menu-item wd-has-drop">
-        <a href="#" class="wd-menu-link wd-drop-toggle">
+        <a href="#" class="wd-menu-link wd-drop-toggle" data-nav="vendors">
           Vendors <i class="fa-solid fa-chevron-down" style="font-size:9px;transition:0.3s;"></i>
         </a>
         <ul class="wd-dropdown">
-          <li><a href="#"><i class="fa-solid fa-camera"></i> Photographer</a></li>
-          <li><a href="#"><i class="fa-solid fa-star"></i> Makeup Artist</a></li>
+          <li><a href="photographers.html" data-nav="vendors"><i class="fa-solid fa-camera"></i> Photographer</a></li>
+          <li><a href="makeup.html" data-nav="vendors"><i class="fa-solid fa-star"></i> Makeup Artist</a></li>
         </ul>
       </li>
-      <li class="wd-menu-item"><a href="#" class="wd-menu-link wd-ai">✨ AI Planner</a></li>
+      <li class="wd-menu-item"><a href="ai-planner.html" class="wd-menu-link wd-ai" data-nav="ai">✨ AI Planner</a></li>
     </ul>
 
     <!-- Right Icons -->
     <div class="wd-nav-right">
-      <!-- Search: gold hover -->
       <button class="wd-icon-btn wd-search-icon" id="wdSearchBtn" title="Search">
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
-      <!-- Account: rose hover -->
       <button class="wd-icon-btn wd-account-icon" id="wdAuthBtn" title="My Account">
         <i class="fa-regular fa-user"></i>
       </button>
-      <!-- Hamburger -->
       <button class="wd-hamburger" id="wdHamburger" aria-label="Menu">
         <span class="wd-bar"></span>
         <span class="wd-bar"></span>
@@ -639,29 +625,29 @@
 <!-- Mobile Panel -->
 <div class="wd-mobile" id="wdMobile">
   <ul class="wd-mobile-list">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="aboutme.html">About Us</a></li>
+    <li><a href="index.html" data-nav="home">Home</a></li>
+    <li><a href="aboutme.html" data-nav="about">About Us</a></li>
     <li>
-      <a href="#" class="wd-mob-toggle" data-sub="mob-services">
+      <a href="#" class="wd-mob-toggle" data-sub="mob-services" data-nav="services">
         Services <i class="fa-solid fa-chevron-down" style="font-size:10px;transition:0.3s;"></i>
       </a>
       <ul class="wd-mobile-sub" id="mob-services">
-        <li><a href="#"><i class="fa-solid fa-rings-wedding"></i> Wedding</a></li>
-        <li><a href="#"><i class="fa-solid fa-flower"></i> Decoration</a></li>
+        <li><a href="services.html" data-nav="services"><i class="fa-solid fa-rings-wedding"></i> Wedding</a></li>
+        <li><a href="decoration.html" data-nav="services"><i class="fa-solid fa-flower"></i> Decoration</a></li>
       </ul>
     </li>
-    <li><a href="#">Guest List</a></li>
+    <li><a href="guestlist.html" data-nav="guestlist">Guest List</a></li>
     <li>
-      <a href="#" class="wd-mob-toggle" data-sub="mob-vendors">
+      <a href="#" class="wd-mob-toggle" data-sub="mob-vendors" data-nav="vendors">
         Vendors <i class="fa-solid fa-chevron-down" style="font-size:10px;transition:0.3s;"></i>
       </a>
       <ul class="wd-mobile-sub" id="mob-vendors">
-        <li><a href="#"><i class="fa-solid fa-camera"></i> Photographer</a></li>
-        <li><a href="#"><i class="fa-solid fa-star"></i> Makeup Artist</a></li>
+        <li><a href="photographers.html" data-nav="vendors"><i class="fa-solid fa-camera"></i> Photographer</a></li>
+        <li><a href="makeup.html" data-nav="vendors"><i class="fa-solid fa-star"></i> Makeup Artist</a></li>
       </ul>
     </li>
   </ul>
-  <a href="#" class="wd-mobile-ai">✨ AI Planner</a>
+  <a href="ai-planner.html" class="wd-mobile-ai" data-nav="ai">✨ AI Planner</a>
   <div class="wd-mobile-icons">
     <button class="wd-icon-btn wd-search-icon" onclick="toggleSearch()">
       <i class="fa-solid fa-magnifying-glass"></i>
@@ -812,7 +798,7 @@
         </div>
         <div class="wd-terms-row">
           <input type="checkbox" id="s-terms"/>
-          <label for="s-terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+          <label for="s-terms">I agree to the <a href="Term_Condition.html">Terms of Service</a> and <a href="Privacy_Policy.html">Privacy Policy</a></label>
         </div>
         <div class="wd-terms-err" id="serr-terms"><i class="fa-solid fa-circle-xmark"></i><span>Please accept terms to continue</span></div>
         <button type="submit" class="wd-btn-submit wd-btn-signup" id="wdSignupBtn">
@@ -831,7 +817,86 @@
 <script>
 (function(){
 
-// ── TOAST ────────────────────────────────────
+// ══════════════════════════════════════════════
+// ACTIVE LINK SYSTEM — URL + Click dono se kaam karta hai
+// Har page pe yahi navbar paste karo — khud sahi hoga
+// ══════════════════════════════════════════════
+
+// Kaunsa nav key kaunsi file se match karta hai
+var WD_PAGE_MAP = {
+  'home'      : ['index', ''],
+  'about'     : ['aboutme', 'about'],
+  'services'  : ['services', 'wedding', 'decoration'],
+  'guestlist' : ['guestlist', 'gustlist'],
+  'vendors'   : ['vendors', 'photographers', 'makeup', 'catering'],
+  'ai'        : ['ai-planner', 'ai']
+};
+
+// Current page filename nikalo — file://, localhost, server sab pe kaam karta hai
+function wdCurrentPage() {
+  // href se nikalo — yeh sab environments mein reliable hai
+  var href = window.location.href;
+  // file name extract karo
+  var match = href.match(/\/([^\/\?#]+)\.html/i);
+  if(match) return match[1].toLowerCase();
+  // agar koi .html nahi to check karo kya root pe hain
+  var path = window.location.pathname;
+  if(path === '/' || path === '' || path.match(/\/index\.html?$/i)) return 'index';
+  // last segment lo
+  var seg = path.split('/').filter(Boolean).pop() || '';
+  return seg.replace(/\.html?$/i,'').toLowerCase() || 'index';
+}
+
+// Kisi bhi nav-key ko active karo
+function wdSetActive(navKey) {
+  document.querySelectorAll('.wd-menu-link').forEach(function(el){ el.classList.remove('active'); });
+  document.querySelectorAll('.wd-mobile-list a').forEach(function(el){ el.classList.remove('active'); });
+  if(!navKey) return;
+  document.querySelectorAll('.wd-menu-link[data-nav="'+navKey+'"]').forEach(function(el){
+    el.classList.add('active');
+  });
+  document.querySelectorAll('.wd-mobile-list > li > a[data-nav="'+navKey+'"]').forEach(function(el){
+    el.classList.add('active');
+  });
+  // Save karo — SIRF tab jab real page ho (# nahi)
+  if(window.location.pathname !== '/' || navKey !== 'home') {
+    try { localStorage.setItem('wd_nav', navKey); } catch(e){}
+  }
+}
+
+// URL se detect karo
+function wdDetectFromURL() {
+  var cur = wdCurrentPage();
+  for(var key in WD_PAGE_MAP) {
+    if(WD_PAGE_MAP[key].indexOf(cur) > -1) return key;
+  }
+  return null;
+}
+
+// Page load pe: HAMESHA pehle URL check karo — localStorage sirf fallback hai
+(function(){
+  var fromURL = wdDetectFromURL();
+  if(fromURL) {
+    // URL se mila — yahi use karo, localStorage ignore karo
+    wdSetActive(fromURL);
+  } else {
+    // URL se nahi mila — localStorage try karo
+    try {
+      var saved = localStorage.getItem('wd_nav');
+      if(saved) wdSetActive(saved);
+    } catch(e){}
+  }
+})();
+
+// Click pe active set karo
+document.querySelectorAll('[data-nav]').forEach(function(link) {
+  link.addEventListener('click', function() {
+    var key = this.getAttribute('data-nav');
+    if(key) wdSetActive(key);
+  });
+});
+
+// ── TOAST ──
 function wdToast(msg, type){
   type = type || 'ok';
   var wrap = document.getElementById('wdToastWrap');
@@ -845,7 +910,7 @@ function wdToast(msg, type){
 }
 window.wdToast = wdToast;
 
-// ── HAMBURGER ────────────────────────────────
+// ── HAMBURGER ──
 var ham = document.getElementById('wdHamburger');
 var mob = document.getElementById('wdMobile');
 var ov  = document.getElementById('wdOverlay');
@@ -898,7 +963,7 @@ document.addEventListener('click', function(e){
 });
 window.addEventListener('scroll', function(){ if(nav) nav.classList.toggle('scrolled', window.scrollY > 60); });
 
-// ── SEARCH POPUP ─────────────────────────────
+// ── SEARCH ──
 var searchPopup  = document.getElementById('wdSearchPopup');
 var searchBtn    = document.getElementById('wdSearchBtn');
 var searchClose  = document.getElementById('wdSearchClose');
@@ -906,16 +971,16 @@ var searchInput  = document.getElementById('wdSearchInput');
 var searchResults= document.getElementById('wdSearchResults');
 
 var wdPages = [
-  {title:'Wedding Services',   sub:'Full wedding planning & coordination', icon:'fa-rings-wedding',     href:'services.html'},
-  {title:'Decoration Packages',sub:'Floral & theme decoration',            icon:'fa-flower',             href:'decoration.html'},
-  {title:'Photographer Gallery',sub:'Top wedding photographers',           icon:'fa-camera',             href:'photographers.html'},
-  {title:'Makeup Artists',     sub:'Bridal makeup specialists',            icon:'fa-star',               href:'makeup.html'},
-  {title:'Guest List Manager', sub:'Manage your wedding guests',           icon:'fa-list-check',         href:'guestlist.html'},
-  {title:'AI Wedding Planner', sub:'Plan your wedding with AI',            icon:'fa-robot',              href:'ai-planner.html'},
-  {title:'About WedDream',     sub:'Learn about our story',                icon:'fa-heart',              href:'aboutme.html'},
-  {title:'Catering Services',  sub:'Delicious wedding menus',              icon:'fa-utensils',           href:'catering.html'},
-  {title:'Invitation Cards',   sub:'Custom wedding invitations',           icon:'fa-envelope-open-text', href:'invitations.html'},
-  {title:'Venue Finder',       sub:'Discover perfect venues',              icon:'fa-location-dot',       href:'venues.html'},
+  {title:'Wedding Services',    sub:'Full wedding planning & coordination', icon:'fa-rings-wedding',     href:'services.html'},
+  {title:'Decoration Packages', sub:'Floral & theme decoration',            icon:'fa-flower',             href:'decoration.html'},
+  {title:'Photographer Gallery',sub:'Top wedding photographers',            icon:'fa-camera',             href:'photographers.html'},
+  {title:'Makeup Artists',      sub:'Bridal makeup specialists',            icon:'fa-star',               href:'makeup.html'},
+  {title:'Guest List Manager',  sub:'Manage your wedding guests',           icon:'fa-list-check',         href:'guestlist.html'},
+  {title:'AI Wedding Planner',  sub:'Plan your wedding with AI',            icon:'fa-robot',              href:'ai-planner.html'},
+  {title:'About WedDream',      sub:'Learn about our story',                icon:'fa-heart',              href:'aboutme.html'},
+  {title:'Catering Services',   sub:'Delicious wedding menus',              icon:'fa-utensils',           href:'catering.html'},
+  {title:'Invitation Cards',    sub:'Custom wedding invitations',           icon:'fa-envelope-open-text', href:'invitations.html'},
+  {title:'Venue Finder',        sub:'Discover perfect venues',              icon:'fa-location-dot',       href:'venues.html'},
 ];
 
 function toggleSearch(){
@@ -943,14 +1008,12 @@ function renderResults(arr){
       +'</a>';
   }).join('');
 }
-
 function doSearch(q){
   searchInput.value = q;
   var v = q.toLowerCase();
   renderResults(wdPages.filter(function(p){ return p.title.toLowerCase().indexOf(v)>-1 || p.sub.toLowerCase().indexOf(v)>-1; }));
 }
 window.doSearch = doSearch;
-
 searchInput.addEventListener('input', function(){
   var v = this.value.trim().toLowerCase();
   if(!v){ searchResults.innerHTML = ''; return; }
@@ -958,7 +1021,7 @@ searchInput.addEventListener('input', function(){
 });
 searchInput.addEventListener('keydown', function(e){ if(e.key==='Escape'){ searchPopup.classList.remove('open'); searchBtn.classList.remove('active'); } });
 
-// ── AUTH POPUP ────────────────────────────────
+// ── AUTH ──
 var authOv   = document.getElementById('wdAuthOverlay');
 var authBtn  = document.getElementById('wdAuthBtn');
 var authClose= document.getElementById('wdAuthClose');
@@ -980,14 +1043,14 @@ function switchTab(tab){
 window.switchTab = switchTab;
 switchTab('login');
 
-// ── HELPERS ──────────────────────────────────
+// ── HELPERS ──
 function lshowErr(id, msg){ var el=document.getElementById('lerr-'+id); if(el){el.querySelector('span').textContent=msg;el.classList.add('show');} var inp=document.getElementById('l-'+id); if(inp)inp.classList.add('err-f'); }
 function lclearErr(id){ var el=document.getElementById('lerr-'+id); if(el)el.classList.remove('show'); var inp=document.getElementById('l-'+id); if(inp)inp.classList.remove('err-f'); }
 function sshowErr(id, msg){ var el=document.getElementById('serr-'+id); if(el){el.querySelector('span').textContent=msg;el.classList.add('show');} var inp=document.getElementById('s-'+id); if(inp)inp.classList.add('err-f'); }
 function sclearErr(id){ var el=document.getElementById('serr-'+id); if(el)el.classList.remove('show'); var inp=document.getElementById('s-'+id); if(inp){inp.classList.remove('err-f');} }
 function smarkOk(id){ sclearErr(id); var inp=document.getElementById('s-'+id); if(inp)inp.classList.add('ok-f'); }
 
-// ── PASSWORD STRENGTH ─────────────────────────
+// ── PASSWORD STRENGTH ──
 var sPassInp = document.getElementById('s-pass');
 var wdSbar   = document.getElementById('wdSbar');
 var wdSlbl   = document.getElementById('wdSlbl');
@@ -1004,12 +1067,11 @@ sPassInp.addEventListener('input', function(){
   wdSlbl.style.color = scols[s-1]; wdSlbl.textContent = slbls[s-1] || '';
 });
 
-// ── PASSWORD TOGGLES ──────────────────────────
+// ── PASSWORD TOGGLES ──
 document.getElementById('lTogglePass').addEventListener('click', function(){ var i=document.getElementById('l-pass'); var s=i.type==='password'; i.type=s?'text':'password'; this.className=s?'fa-regular fa-eye-slash ir':'fa-regular fa-eye ir'; });
 document.getElementById('sTogglePass').addEventListener('click', function(){ var i=document.getElementById('s-pass'); var s=i.type==='password'; i.type=s?'text':'password'; this.className=s?'fa-regular fa-eye-slash ir':'fa-regular fa-eye ir'; });
 document.getElementById('sToggleCpass').addEventListener('click', function(){ var i=document.getElementById('s-cpass'); var s=i.type==='password'; i.type=s?'text':'password'; this.className=s?'fa-regular fa-eye-slash ir':'fa-regular fa-eye ir'; });
 
-// Live confirm check
 document.getElementById('s-cpass').addEventListener('input', function(){
   var p=document.getElementById('s-pass').value; var c=this.value;
   if(!c.length){ sclearErr('cpass'); document.getElementById('sok-cpass').classList.remove('show'); return; }
@@ -1017,17 +1079,16 @@ document.getElementById('s-cpass').addEventListener('input', function(){
   else { document.getElementById('sok-cpass').classList.remove('show'); sshowErr('cpass','Passwords do not match'); }
 });
 
-// Clear on input
 ['email','pass'].forEach(function(id){ var el=document.getElementById('l-'+id); if(el)el.addEventListener('input',function(){ lclearErr(id); document.getElementById('wdLoginErr').classList.remove('show'); }); });
 ['fname','lname','email','phone','pass'].forEach(function(id){ var el=document.getElementById('s-'+id); if(el)el.addEventListener('input',function(){ sclearErr(id); }); });
 
-// ── LOCK SYSTEM ───────────────────────────────
+// ── LOCK SYSTEM ──
 var MAX_ATT=5, LOCK_DUR=5*60*1000;
 var EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 var NAME_RE=/^[A-Za-z\s]{2,30}$/;
 var PHONE_RE=/^(\+92|0)(3\d{9}|[0-9]{9,10})$/;
-function getAtt(){ return JSON.parse(localStorage.getItem('wd_login_attempts')||'{"count":0,"lockedUntil":0}'); }
-function saveAtt(d){ localStorage.setItem('wd_login_attempts',JSON.stringify(d)); }
+function getAtt(){ try{return JSON.parse(localStorage.getItem('wd_login_attempts')||'{"count":0,"lockedUntil":0}');}catch(e){return{count:0,lockedUntil:0};} }
+function saveAtt(d){ try{localStorage.setItem('wd_login_attempts',JSON.stringify(d));}catch(e){} }
 function resetAtt(){ saveAtt({count:0,lockedUntil:0}); }
 function isLocked(){ var d=getAtt(); if(d.lockedUntil&&Date.now()<d.lockedUntil)return d.lockedUntil; if(d.lockedUntil&&Date.now()>=d.lockedUntil)resetAtt(); return false; }
 function checkLock(){
@@ -1037,7 +1098,7 @@ function checkLock(){
 }
 function updateAttBadge(){ var d=getAtt(); var b=document.getElementById('wdAttemptBadge'); if(d.count>0&&d.count<MAX_ATT){b.textContent=(MAX_ATT-d.count)+' attempts left';b.style.display='block';}else b.style.display='none'; }
 
-// ── LOGIN SUBMIT ──────────────────────────────
+// ── LOGIN ──
 document.getElementById('wdLoginForm').addEventListener('submit', function(e){
   e.preventDefault();
   document.getElementById('wdLoginErr').classList.remove('show');
@@ -1051,7 +1112,7 @@ document.getElementById('wdLoginForm').addEventListener('submit', function(e){
   var btn=document.getElementById('wdLoginBtn');
   document.getElementById('lBtnTxt').style.display='none'; document.getElementById('lBtnSpin').style.display='block'; btn.disabled=true;
   setTimeout(function(){
-    var users=JSON.parse(localStorage.getItem('wd_users')||'[]');
+    var users=[]; try{users=JSON.parse(localStorage.getItem('wd_users')||'[]');}catch(e){}
     var user=users.find(function(u){return u.email===email.toLowerCase();});
     if(!user){
       document.getElementById('lBtnTxt').style.display='block'; document.getElementById('lBtnSpin').style.display='none'; btn.disabled=false;
@@ -1068,13 +1129,13 @@ document.getElementById('wdLoginForm').addEventListener('submit', function(e){
       wdToast('Wrong password','err'); return;
     }
     resetAtt();
-    localStorage.setItem('wd_session', JSON.stringify({email:user.email,fname:user.fname,loggedInAt:new Date().toISOString()}));
+    try{localStorage.setItem('wd_session',JSON.stringify({email:user.email,fname:user.fname,loggedInAt:new Date().toISOString()}));}catch(e){}
     wdToast('Welcome back, '+user.fname+'! 🎊','ok');
     setTimeout(function(){ closeAuthPopup(); document.getElementById('lBtnTxt').style.display='block'; document.getElementById('lBtnSpin').style.display='none'; btn.disabled=false; },1500);
   }, 800);
 });
 
-// ── SIGNUP SUBMIT ─────────────────────────────
+// ── SIGNUP ──
 document.getElementById('wdSignupForm').addEventListener('submit', function(e){
   e.preventDefault();
   var fname=document.getElementById('s-fname').value.trim();
@@ -1093,13 +1154,13 @@ document.getElementById('wdSignupForm').addEventListener('submit', function(e){
   if(!cpass){sshowErr('cpass','Confirm your password');v=false;}else if(pass!==cpass){sshowErr('cpass','Passwords do not match');v=false;}else smarkOk('cpass');
   if(!terms){document.getElementById('serr-terms').classList.add('show');v=false;}else document.getElementById('serr-terms').classList.remove('show');
   if(!v) return;
-  var existing=JSON.parse(localStorage.getItem('wd_users')||'[]');
+  var existing=[]; try{existing=JSON.parse(localStorage.getItem('wd_users')||'[]');}catch(e){}
   if(existing.find(function(u){return u.email===email.toLowerCase();})){sshowErr('email','Email already registered');wdToast('Email already registered','err');return;}
   var btn=document.getElementById('wdSignupBtn');
   document.getElementById('sBtnTxt').style.display='none'; document.getElementById('sBtnSpin').style.display='block'; btn.disabled=true;
   setTimeout(function(){
     var user={fname:fname,lname:lname,email:email.toLowerCase(),phone:document.getElementById('s-phone').value.trim(),password:btoa(pass),createdAt:new Date().toISOString()};
-    existing.push(user); localStorage.setItem('wd_users',JSON.stringify(existing));
+    existing.push(user); try{localStorage.setItem('wd_users',JSON.stringify(existing));}catch(e){}
     wdToast('Account created! Please sign in. 🎉','ok');
     document.getElementById('sBtnTxt').style.display='block'; document.getElementById('sBtnSpin').style.display='none'; btn.disabled=false;
     setTimeout(function(){ switchTab('login'); },1800);
