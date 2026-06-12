@@ -980,29 +980,112 @@ html { scroll-behavior: smooth; }
 $(document).ready(function(){
   $.get('navebar.html', function(data){
     $('#nav-container').html(data);
-    // After nav loads, check session for logged-in user
+
+    // ── SESSION CHECK ──
     try{
       const session = localStorage.getItem('wd_session');
       if(session){
         const u = JSON.parse(session);
-        const cta = document.querySelector('#nav-container .nav-cta');
-        if(cta){
-          cta.textContent = u.fname || 'My Account';
-          cta.href = 'index.html';
-          cta.style.background = 'rgba(200,155,44,0.15)';
-          cta.style.color = 'var(--gold)';
-          cta.style.border = '1px solid rgba(200,155,44,0.3)';
+        if(u && u.email){
+
+          // Account button highlight karo
+          const authBtn = document.querySelector('#nav-container #wdAuthBtn');
+          if(authBtn){
+            authBtn.innerHTML = `<i class="fa-regular fa-user" style="color:#c89b2c;"></i>`;
+            authBtn.style.borderColor = 'rgba(200,155,44,0.4)';
+            authBtn.style.background  = 'rgba(200,155,44,0.1)';
+            authBtn.title = u.fname || 'My Account';
+
+            // Click pe dropdown — popup nahi
+            authBtn.addEventListener('click', function(e){
+              e.stopPropagation();
+
+              const existing = document.getElementById('wd-loggedin-menu');
+              if(existing){ existing.remove(); return; }
+
+              const menu = document.createElement('div');
+              menu.id = 'wd-loggedin-menu';
+              menu.style.cssText = `
+                position:fixed; top:80px; right:24px; z-index:99999;
+                background:#0f0a0e;
+                border:1px solid rgba(200,155,44,0.3);
+                border-radius:12px; padding:8px; min-width:210px;
+                box-shadow:0 20px 40px rgba(0,0,0,0.6);
+                animation:wdMenuIn 0.2s ease;
+              `;
+              menu.innerHTML = `
+                <style>
+                  @keyframes wdMenuIn {
+                    from{opacity:0;transform:translateY(-8px)}
+                    to  {opacity:1;transform:translateY(0)}
+                  }
+                </style>
+                <div style="padding:12px 16px 10px;border-bottom:1px solid rgba(200,155,44,0.15);margin-bottom:6px;">
+                  <div style="font-size:13px;color:#fff;font-weight:600;">
+                    ${u.fname}${u.lname ? ' '+u.lname : ''}
+                  </div>
+                  <div style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:3px;">
+                    ${u.email}
+                  </div>
+                </div>
+                <a href="index.html"
+                  style="display:flex;align-items:center;gap:10px;padding:10px 16px;
+                         color:rgba(255,255,255,0.7);text-decoration:none;font-size:13px;
+                         border-radius:8px;transition:background 0.2s;"
+                  onmouseover="this.style.background='rgba(200,155,44,0.08)'"
+                  onmouseout="this.style.background='transparent'">
+                  <i class="fa-solid fa-house" style="color:#c89b2c;width:16px;"></i> Home
+                </a>
+                <div onclick="
+                    localStorage.removeItem('wd_session');
+                    document.getElementById('wd-loggedin-menu').remove();
+                    location.reload();
+                  "
+                  style="display:flex;align-items:center;gap:10px;padding:10px 16px;
+                         color:rgba(255,255,255,0.7);font-size:13px;border-radius:8px;
+                         cursor:pointer;transition:all 0.2s;"
+                  onmouseover="this.style.background='rgba(224,92,92,0.08)';this.style.color='#e05c5c'"
+                  onmouseout="this.style.background='transparent';this.style.color='rgba(255,255,255,0.7)'">
+                  <i class="fa-solid fa-right-from-bracket" style="color:#e05c5c;width:16px;"></i>
+                  Sign Out
+                </div>
+              `;
+
+              document.body.appendChild(menu);
+
+              setTimeout(()=>{
+                document.addEventListener('click', function closeit(ev){
+                  if(!menu.contains(ev.target) && ev.target !== authBtn){
+                    menu.remove();
+                    document.removeEventListener('click', closeit);
+                  }
+                });
+              }, 100);
+
+            }, true); // capture:true — purane handler ko override karta hai
+          }
+
+          // Fallback: agar purani nav-cta ho
+          const cta = document.querySelector('#nav-container .nav-cta');
+          if(cta){
+            cta.textContent = u.fname || 'My Account';
+            cta.href = 'index.html';
+            cta.style.background = 'rgba(200,155,44,0.15)';
+            cta.style.color = '#c89b2c';
+            cta.style.border = '1px solid rgba(200,155,44,0.3)';
+          }
         }
       }
-    }catch(e){}
+    }catch(e){ console.warn('Session check error:', e); }
+
     // Navbar scroll effect
     $(window).on('scroll.nav', function(){
       const nav = $('#nav-container nav, #nav-container .navbar').first();
       if(window.scrollY > 60) nav.addClass('scrolled');
       else nav.removeClass('scrolled');
     });
+
   }).fail(function(){
-    // Fallback if navebar.html not found
     $('#nav-container').html(`
       <nav class="fallback-nav" id="mainNav">
         <a href="index.html" class="nav-logo">We<span>Dream</span></a>
@@ -1023,7 +1106,6 @@ $(document).ready(function(){
   $.get('footer.html', function(data){
     $('#footer-container').html(data);
   }).fail(function(){
-    // Fallback if footer.html not found
     $('#footer-container').html(`
       <footer class="fallback-footer">
         <div class="footer-logo">We<span>Dream</span></div>

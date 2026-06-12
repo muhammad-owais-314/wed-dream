@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="MDB5-STANDARD-UI-KIT-Free-9.3.0 (2)/css/mdb.min.css">
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -25,58 +25,147 @@
 
 <section id="hero" class="hero">
 
- 
+  <!-- 3 Image Slides -->
+  <div class="hero-slide hero-slide-1 active"></div>
+  <div class="hero-slide hero-slide-2"></div>
+  <div class="hero-slide hero-slide-3"></div>
 
-  <!-- Hero Content -->
+  <!-- Glow Layers -->
+  <div class="hero-glow"></div>
+  <div class="hero-glow-rose"></div>
+
+  <!-- Lines -->
+  <div class="hero-line-left"></div>
+  <div class="hero-line-right"></div>
+
+  <!-- Shimmer border -->
+  <div class="hero-shimmer"></div>
+
+  <!-- Corner SVG Ornaments -->
+  <div class="corner tl">
+    <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+      <path d="M2 54V2H54" stroke="#c89b2c" stroke-width="1.2" fill="none"/>
+      <path d="M2 2L13 2M2 2L2 13" stroke="#c89b2c" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <circle cx="2" cy="2" r="2" fill="#c89b2c"/>
+      <path d="M18 2L22 2M2 18L2 22" stroke="#c89b2c" stroke-width="0.8" opacity="0.4" fill="none"/>
+    </svg>
+  </div>
+  <div class="corner tr">
+    <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+      <path d="M2 54V2H54" stroke="#c89b2c" stroke-width="1.2" fill="none"/>
+      <path d="M2 2L13 2M2 2L2 13" stroke="#c89b2c" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <circle cx="2" cy="2" r="2" fill="#c89b2c"/>
+      <path d="M18 2L22 2M2 18L2 22" stroke="#c89b2c" stroke-width="0.8" opacity="0.4" fill="none"/>
+    </svg>
+  </div>
+  <div class="corner bl">
+    <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+      <path d="M2 54V2H54" stroke="#c89b2c" stroke-width="1.2" fill="none"/>
+      <path d="M2 2L13 2M2 2L2 13" stroke="#c89b2c" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <circle cx="2" cy="2" r="2" fill="#c89b2c"/>
+    </svg>
+  </div>
+  <div class="corner br">
+    <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+      <path d="M2 54V2H54" stroke="#c89b2c" stroke-width="1.2" fill="none"/>
+      <path d="M2 2L13 2M2 2L2 13" stroke="#c89b2c" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <circle cx="2" cy="2" r="2" fill="#c89b2c"/>
+    </svg>
+  </div>
+
+  <!-- Sparkles -->
+  <em class="hero-sparkle" style="top:20%;left:7%;font-size:13px;animation-delay:0s;">✦</em>
+  <em class="hero-sparkle" style="top:28%;right:8%;font-size:10px;color:#b93b56;animation-delay:1.4s;">✦</em>
+  <em class="hero-sparkle" style="bottom:32%;left:11%;font-size:11px;animation-delay:2.2s;">✦</em>
+  <em class="hero-sparkle" style="bottom:24%;right:10%;font-size:9px;animation-delay:0.8s;">✦</em>
+  <em class="hero-sparkle" style="top:52%;left:4%;font-size:8px;color:#b93b56;animation-delay:3.1s;">✦</em>
+  <em class="hero-sparkle" style="top:16%;right:20%;font-size:7px;animation-delay:1.9s;">✦</em>
+
+  <!-- ── CONTENT ── -->
   <div class="hero-content">
 
-    <p class="hero-eyebrow fade-up delay-1">
-      ✦ WE PLANE YOUR ✦
+    <div class="hero-badge">
+      <i class="fa-solid fa-heart"></i>
+      Pakistan's Premier Wedding Platform
+    </div>
+
+    <p class="hero-eyebrow">We Plan Your</p>
+
+    <h1 class="hero-title">Dream</h1>
+    <span class="hero-title-gold">Wedding</span>
+
+    <div class="hero-divider">
+      <div class="hero-divider-line"></div>
+      <span class="hero-divider-icon">❧ ✦ ❧</span>
+      <div class="hero-divider-line right"></div>
+    </div>
+
+    <p class="hero-subtitle">
+      From intimate ceremonies to grand celebrations —<br>
+      we create unforgettable moments filled with elegance,<br>
+      emotion and timeless memories.
     </p>
 
-    <h1 class="hero-title fade-up delay-2">
-      Dream Wedding
-    </h1>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">500+</span>
+        <span class="hero-stat-lbl">Vendors</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">1000+</span>
+        <span class="hero-stat-lbl">Weddings</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">50+</span>
+        <span class="hero-stat-lbl">Cities</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">4.9★</span>
+        <span class="hero-stat-lbl">Rating</span>
+      </div>
+    </div>
 
-    <p class="hero-subtitle fade-up delay-3">
-      From intimate ceremonies to grand celebrations,
-      we create unforgettable moments filled with elegance,
-      emotions and timeless memories.
-    </p>
-
-    <!-- Buttons -->
-    <div class="hero-buttons fade-up delay-4">
-
-      <button class="btn-rose">
+    <div class="hero-buttons">
+      <button class="btn-rose" onclick="document.querySelector('a[href=\'services.html\']') && (window.location='services.html')">
         <i class="fa-solid fa-heart"></i>
         Plan Your Wedding
       </button>
-
-      <button class="btn-outline">
+      <button class="btn-gold-outline" onclick="window.location='ai-planner.html'">
         <i class="fa-solid fa-wand-magic-sparkles"></i>
         AI Planner
       </button>
-
     </div>
 
-    <!-- Search -->
-    <div class="hero-search-wrap fade-up delay-5">
-
-      <div class="search-bar">
-
-        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-
+    <!-- Search — opens navbar search popup -->
+    <div class="hero-search-wrap">
+      <div class="search-bar" onclick="if(typeof toggleSearch==='function') toggleSearch()">
+        <span class="search-icon-wrap"><i class="fa-solid fa-magnifying-glass"></i></span>
         <input
           type="text"
-          placeholder="Search wedding halls, photographers, caterers..."
-        >
-
-        <button>Explore</button>
-
+          placeholder="Search venues, photographers, caterers..."
+          readonly
+          onclick="if(typeof toggleSearch==='function'){ event.stopPropagation(); toggleSearch(); }"
+        />
+        <button class="search-bar-btn" onclick="event.stopPropagation(); if(typeof toggleSearch==='function') toggleSearch();">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          Search
+        </button>
       </div>
-
     </div>
 
+  </div>
+
+  <!-- Slide dots -->
+  <div class="slide-dots" id="heroSlideDots">
+    <div class="slide-dot active" onclick="goToSlide(0)"></div>
+    <div class="slide-dot" onclick="goToSlide(1)"></div>
+    <div class="slide-dot" onclick="goToSlide(2)"></div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
   </div>
 
 </section>
@@ -84,99 +173,106 @@
 <!-- ========== POPULAR CATEGORIES SECTION ========== -->
 
 
+
+     <!-- HTML
+======================================================  -->
 <section class="cat-section">
 
-  <!-- HEADER -->
-  <div class="cat-header-wrap">
+  <!-- Sparkle dots -->
+  <em class="cat-sparkle" style="top:12%;left:6%;font-size:13px;animation-delay:0s;">✦</em>
+  <em class="cat-sparkle" style="top:20%;right:7%;font-size:10px;color:#b93b56;animation-delay:1.3s;">✦</em>
+  <em class="cat-sparkle" style="bottom:18%;left:9%;font-size:9px;animation-delay:2.1s;">✦</em>
+  <em class="cat-sparkle" style="bottom:14%;right:8%;font-size:8px;animation-delay:0.7s;">✦</em>
+  <em class="cat-sparkle" style="top:55%;left:3%;font-size:7px;animation-delay:1.8s;">✦</em>
 
+  <!-- Header -->
+  <div class="cat-header-wrap">
     <div class="cat-header-center">
       <div class="cat-eyebrow">Wedding Services</div>
-      <h2 class="cat-title">Popular Categories</h2>
+      <h2 class="cat-title">Popular <em>Categories</em></h2>
       <div class="cat-divider">
         <span class="cat-divider-line"></span>
         <span class="cat-divider-heart"><i class="bi bi-heart-fill"></i></span>
-        <span class="cat-divider-line"></span>
+        <span class="cat-divider-line r"></span>
       </div>
     </div>
-
-    <a href="#" class="cat-view-all">
-      View All <i class="bi bi-arrow-right"></i>
-    </a>
-
+    <a href="#" class="cat-view-all">View All <i class="bi bi-arrow-right"></i></a>
   </div>
 
-  <!-- SLIDER -->
+  <!-- Slider -->
   <div class="cat-slider-wrap">
-
-    <!-- Prev Arrow -->
     <button class="cat-arrow cat-arrow-prev" id="catPrev" disabled aria-label="Previous">
       <i class="bi bi-chevron-left"></i>
     </button>
 
-    <!-- Track -->
     <div class="cat-slider-outer">
       <div class="cat-track" id="catTrack">
 
-        <div class="cat-card">
-          <i class="bi bi-building cat-card-icon"></i>
-          <span class="cat-card-label">Halls</span>
+        <div class="cat-card" onclick="window.location='services.html'">
+          <span class="cat-card-count">24 Vendors</span>
+          <div class="cat-icon-wrap"><i class="bi bi-building cat-card-icon"></i></div>
+          <span class="cat-card-label">Wedding Halls</span>
         </div>
 
-        <div class="cat-card">
-          <i class="bi bi-egg-fried cat-card-icon"></i>
+        <div class="cat-card" onclick="window.location='catering.html'">
+          <span class="cat-card-count">18 Vendors</span>
+          <div class="cat-icon-wrap"><i class="bi bi-egg-fried cat-card-icon"></i></div>
           <span class="cat-card-label">Caterers</span>
         </div>
 
-        <div class="cat-card">
-          <i class="bi bi-car-front cat-card-icon"></i>
-          <span class="cat-card-label">Cars</span>
+        <div class="cat-card" onclick="window.location='#'">
+          <span class="cat-card-count">32 Vendors</span>
+          <div class="cat-icon-wrap"><i class="bi bi-car-front cat-card-icon"></i></div>
+          <span class="cat-card-label">Bridal Cars</span>
         </div>
 
-        <div class="cat-card">
-          <i class="bi bi-flower1 cat-card-icon"></i>
+        <div class="cat-card" onclick="window.location='decoration.html'">
+          <span class="cat-card-count">40 Vendors</span>
+          <div class="cat-icon-wrap"><i class="bi bi-flower1 cat-card-icon"></i></div>
           <span class="cat-card-label">Decorators</span>
         </div>
 
-        <div class="cat-card">
-          <i class="bi bi-camera cat-card-icon"></i>
+        <div class="cat-card" onclick="window.location='photographers.html'">
+          <span class="cat-card-count">55 Vendors</span>
+          <div class="cat-icon-wrap"><i class="bi bi-camera cat-card-icon"></i></div>
           <span class="cat-card-label">Photographers</span>
         </div>
 
-        <div class="cat-card">
-          <i class="bi bi-envelope-heart cat-card-icon"></i>
+        <div class="cat-card" onclick="window.location='makeup.html'">
+          <span class="cat-card-count">28 Vendors</span>
+          <div class="cat-icon-wrap"><i class="bi bi-stars cat-card-icon"></i></div>
+          <span class="cat-card-label">Makeup Artists</span>
+        </div>
+
+        <div class="cat-card" onclick="window.location='#'">
+          <span class="cat-card-count">15 Vendors</span>
+          <div class="cat-icon-wrap"><i class="bi bi-envelope-heart cat-card-icon"></i></div>
           <span class="cat-card-label">Invitations</span>
         </div>
 
-        <div class="cat-card is-ai">
-          <i class="bi bi-stars cat-card-icon"></i>
+        <div class="cat-card is-ai" onclick="window.location='ai-planner.html'">
+          <span class="cat-ai-pill">✦ AI Powered</span>
+          <div class="cat-icon-wrap"><i class="bi bi-cpu cat-card-icon"></i></div>
           <span class="cat-card-label">AI Planner</span>
         </div>
 
       </div>
     </div>
 
-    <!-- Next Arrow -->
     <button class="cat-arrow cat-arrow-next" id="catNext" aria-label="Next">
       <i class="bi bi-chevron-right"></i>
     </button>
-
   </div>
 
-  <!-- DOTS -->
   <div class="cat-dots" id="catDots"></div>
 
-  <!-- Mobile swipe hint -->
   <div class="cat-drag-hint">
-    <i class="bi bi-arrow-left-right" style="font-size:12px; color:rgba(200,155,44,0.4);"></i>
+    <i class="bi bi-arrow-left-right" style="font-size:12px;color:rgba(200,155,44,0.35);"></i>
     <span>Swipe to explore</span>
   </div>
 
 </section>
 
-<!-- ========== GOLD DIVIDER ========== -->
-<div class="gold-divider">
-  <span class="divider-dot"></span>
-</div>
 
 <!-- ========== HOW IT WORKS ========== -->
 <section class="hiw-section py-5">

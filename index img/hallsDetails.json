@@ -1,0 +1,2902 @@
+[
+  {
+    "id": 1,
+    "name": "Royal Banquet DHA",
+    "area": "DHA",
+    "rating": 4.8,
+    "starting_price": 450000,
+    "address": "Khayaban-e-Shahbaz, Phase 6, DHA, Karachi, Pakistan",
+    "phone": "+92 301 1000137",
+    "whatsapp": "+92 301 1000137",
+    "gallery": [
+      "https://picsum.photos/seed/wedream1a/900/600",
+      "https://picsum.photos/seed/wedream1b/900/600",
+      "https://picsum.photos/seed/wedream1c/900/600"
+    ],
+    "capacity": 1100,
+    "parking_capacity": 200,
+    "features": [
+      "Sound System & DJ",
+      "Stage with LED Lighting",
+      "In-house Catering",
+      "Valet Parking",
+      "Separate Mehendi Lawn"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 450000
+      },
+      {
+        "name": "Gold",
+        "price": 585000
+      },
+      {
+        "name": "Platinum",
+        "price": 720000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bilal Ahmed",
+        "rating": 5,
+        "comment": "Staff cooperative thay aur sab kuch waqt par ho gaya."
+      },
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Food quality average thi, baqi sab theek tha."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 2,
+    "name": "Al Noor Banquet DHA",
+    "area": "DHA",
+    "rating": 4.6,
+    "starting_price": 380000,
+    "address": "Khayaban-e-Bukhari, Phase 6, DHA, Karachi, Pakistan",
+    "phone": "+92 302 1000274",
+    "whatsapp": "+92 302 1000274",
+    "gallery": [
+      "https://picsum.photos/seed/wedream2a/900/600",
+      "https://picsum.photos/seed/wedream2b/900/600",
+      "https://picsum.photos/seed/wedream2c/900/600"
+    ],
+    "capacity": 1000,
+    "parking_capacity": 180,
+    "features": [
+      "Valet Parking",
+      "Separate Mehendi Lawn",
+      "CCTV Security",
+      "Elevator Access",
+      "Family Lounge"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 380000
+      },
+      {
+        "name": "Gold",
+        "price": 494000
+      },
+      {
+        "name": "Platinum",
+        "price": 608000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Sana Tariq",
+        "rating": 5,
+        "comment": "Parking thori tight thi lekin overall experience good rahi."
+      },
+      {
+        "name": "Usman Ali",
+        "rating": 4,
+        "comment": "Booking se le kar event tak management bohat smooth thi."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 3,
+    "name": "Pearl Marquee DHA",
+    "area": "DHA",
+    "rating": 4.7,
+    "starting_price": 500000,
+    "address": "Khayaban-e-Ittehad, Phase 7, DHA, Karachi, Pakistan",
+    "phone": "+92 311 1000411",
+    "whatsapp": "+92 311 1000411",
+    "gallery": [
+      "https://picsum.photos/seed/wedream3a/900/600",
+      "https://picsum.photos/seed/wedream3b/900/600",
+      "https://picsum.photos/seed/wedream3c/900/600"
+    ],
+    "capacity": 1200,
+    "parking_capacity": 220,
+    "features": [
+      "Elevator Access",
+      "Family Lounge",
+      "Decor Services Available",
+      "Air Conditioned Hall",
+      "Bridal Room"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 500000
+      },
+      {
+        "name": "Gold",
+        "price": 650000
+      },
+      {
+        "name": "Platinum",
+        "price": 800000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Hassan Raza",
+        "rating": 5,
+        "comment": "Food quality average thi, baqi sab theek tha."
+      },
+      {
+        "name": "Mariam Iqbal",
+        "rating": 4,
+        "comment": "AC system bohat acha tha, garmi mein bhi comfortable raha."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 4,
+    "name": "Skyline Banquet DHA",
+    "area": "DHA",
+    "rating": 4.5,
+    "starting_price": 420000,
+    "address": "Khayaban-e-Tanzeem, Phase 5, DHA, Karachi, Pakistan",
+    "phone": "+92 321 1000548",
+    "whatsapp": "+92 321 1000548",
+    "gallery": [
+      "https://picsum.photos/seed/wedream4a/900/600",
+      "https://picsum.photos/seed/wedream4b/900/600",
+      "https://picsum.photos/seed/wedream4c/900/600"
+    ],
+    "capacity": 1000,
+    "parking_capacity": 180,
+    "features": [
+      "Air Conditioned Hall",
+      "Bridal Room",
+      "Generator Backup",
+      "Sound System & DJ",
+      "Stage with LED Lighting"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 420000
+      },
+      {
+        "name": "Gold",
+        "price": 546000
+      },
+      {
+        "name": "Platinum",
+        "price": 672000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Booking se le kar event tak management bohat smooth thi."
+      },
+      {
+        "name": "Faizan Sheikh",
+        "rating": 4,
+        "comment": "Hall ka decor bohat acha tha, mehmano ne bohat tareef ki."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 5,
+    "name": "Elite Hall DHA",
+    "area": "DHA",
+    "rating": 4.6,
+    "starting_price": 390000,
+    "address": "26th Street, Phase 5, DHA, Karachi, Pakistan",
+    "phone": "+92 333 1000685",
+    "whatsapp": "+92 333 1000685",
+    "gallery": [
+      "https://picsum.photos/seed/wedream5a/900/600",
+      "https://picsum.photos/seed/wedream5b/900/600",
+      "https://picsum.photos/seed/wedream5c/900/600"
+    ],
+    "capacity": 1000,
+    "parking_capacity": 180,
+    "features": [
+      "Sound System & DJ",
+      "Stage with LED Lighting",
+      "In-house Catering",
+      "Valet Parking",
+      "Separate Mehendi Lawn"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 390000
+      },
+      {
+        "name": "Gold",
+        "price": 507000
+      },
+      {
+        "name": "Platinum",
+        "price": 624000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Usman Ali",
+        "rating": 5,
+        "comment": "AC system bohat acha tha, garmi mein bhi comfortable raha."
+      },
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "Staff cooperative thay aur sab kuch waqt par ho gaya."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 6,
+    "name": "Clifton Grand Hall",
+    "area": "Clifton",
+    "rating": 4.9,
+    "starting_price": 600000,
+    "address": "Block 2, Clifton, Clifton, Karachi, Pakistan",
+    "phone": "+92 345 1000822",
+    "whatsapp": "+92 345 1000822",
+    "gallery": [
+      "https://picsum.photos/seed/wedream6a/900/600",
+      "https://picsum.photos/seed/wedream6b/900/600",
+      "https://picsum.photos/seed/wedream6c/900/600"
+    ],
+    "capacity": 1500,
+    "parking_capacity": 270,
+    "features": [
+      "Valet Parking",
+      "Separate Mehendi Lawn",
+      "CCTV Security",
+      "Elevator Access",
+      "Family Lounge"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 600000
+      },
+      {
+        "name": "Gold",
+        "price": 780000
+      },
+      {
+        "name": "Platinum",
+        "price": 960000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Mariam Iqbal",
+        "rating": 5,
+        "comment": "Hall ka decor bohat acha tha, mehmano ne bohat tareef ki."
+      },
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 4,
+        "comment": "Parking thori tight thi lekin overall experience good rahi."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 7,
+    "name": "Sea View Banquet Clifton",
+    "area": "Clifton",
+    "rating": 4.7,
+    "starting_price": 550000,
+    "address": "Block 4, Clifton, Clifton, Karachi, Pakistan",
+    "phone": "+92 300 1000959",
+    "whatsapp": "+92 300 1000959",
+    "gallery": [
+      "https://picsum.photos/seed/wedream7a/900/600",
+      "https://picsum.photos/seed/wedream7b/900/600",
+      "https://picsum.photos/seed/wedream7c/900/600"
+    ],
+    "capacity": 1400,
+    "parking_capacity": 250,
+    "features": [
+      "Elevator Access",
+      "Family Lounge",
+      "Decor Services Available",
+      "Air Conditioned Hall",
+      "Bridal Room"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 550000
+      },
+      {
+        "name": "Gold",
+        "price": 715000
+      },
+      {
+        "name": "Platinum",
+        "price": 880000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Faizan Sheikh",
+        "rating": 5,
+        "comment": "Staff cooperative thay aur sab kuch waqt par ho gaya."
+      },
+      {
+        "name": "Ayesha Khan",
+        "rating": 4,
+        "comment": "Food quality average thi, baqi sab theek tha."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 8,
+    "name": "Pearl Ocean Banquet",
+    "area": "Clifton",
+    "rating": 4.6,
+    "starting_price": 500000,
+    "address": "Block 5, Clifton, Clifton, Karachi, Pakistan",
+    "phone": "+92 301 1001096",
+    "whatsapp": "+92 301 1001096",
+    "gallery": [
+      "https://picsum.photos/seed/wedream8a/900/600",
+      "https://picsum.photos/seed/wedream8b/900/600",
+      "https://picsum.photos/seed/wedream8c/900/600"
+    ],
+    "capacity": 1200,
+    "parking_capacity": 220,
+    "features": [
+      "Air Conditioned Hall",
+      "Bridal Room",
+      "Generator Backup",
+      "Sound System & DJ",
+      "Stage with LED Lighting"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 500000
+      },
+      {
+        "name": "Gold",
+        "price": 650000
+      },
+      {
+        "name": "Platinum",
+        "price": 800000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Zainab Malik",
+        "rating": 5,
+        "comment": "Parking thori tight thi lekin overall experience good rahi."
+      },
+      {
+        "name": "Bilal Ahmed",
+        "rating": 4,
+        "comment": "Booking se le kar event tak management bohat smooth thi."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 9,
+    "name": "Royal Clifton Hall",
+    "area": "Clifton",
+    "rating": 4.8,
+    "starting_price": 650000,
+    "address": "Block 7, Clifton, Clifton, Karachi, Pakistan",
+    "phone": "+92 302 1001233",
+    "whatsapp": "+92 302 1001233",
+    "gallery": [
+      "https://picsum.photos/seed/wedream9a/900/600",
+      "https://picsum.photos/seed/wedream9b/900/600",
+      "https://picsum.photos/seed/wedream9c/900/600"
+    ],
+    "capacity": 1500,
+    "parking_capacity": 270,
+    "features": [
+      "Sound System & DJ",
+      "Stage with LED Lighting",
+      "In-house Catering",
+      "Valet Parking",
+      "Separate Mehendi Lawn"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 650000
+      },
+      {
+        "name": "Gold",
+        "price": 845000
+      },
+      {
+        "name": "Platinum",
+        "price": 1040000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 5,
+        "comment": "Food quality average thi, baqi sab theek tha."
+      },
+      {
+        "name": "Sana Tariq",
+        "rating": 4,
+        "comment": "AC system bohat acha tha, garmi mein bhi comfortable raha."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 10,
+    "name": "Ocean Pearl Hall",
+    "area": "Clifton",
+    "rating": 4.5,
+    "starting_price": 480000,
+    "address": "Block 9, Clifton, Clifton, Karachi, Pakistan",
+    "phone": "+92 311 1001370",
+    "whatsapp": "+92 311 1001370",
+    "gallery": [
+      "https://picsum.photos/seed/wedream10a/900/600",
+      "https://picsum.photos/seed/wedream10b/900/600",
+      "https://picsum.photos/seed/wedream10c/900/600"
+    ],
+    "capacity": 1200,
+    "parking_capacity": 220,
+    "features": [
+      "Valet Parking",
+      "Separate Mehendi Lawn",
+      "CCTV Security",
+      "Elevator Access",
+      "Family Lounge"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 480000
+      },
+      {
+        "name": "Gold",
+        "price": 624000
+      },
+      {
+        "name": "Platinum",
+        "price": 768000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ayesha Khan",
+        "rating": 4,
+        "comment": "Booking se le kar event tak management bohat smooth thi."
+      },
+      {
+        "name": "Hassan Raza",
+        "rating": 4,
+        "comment": "Hall ka decor bohat acha tha, mehmano ne bohat tareef ki."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 11,
+    "name": "PECHS Royal Banquet",
+    "area": "PECHS",
+    "rating": 4.6,
+    "starting_price": 350000,
+    "address": "Block 2, PECHS, PECHS, Karachi, Pakistan",
+    "phone": "+92 321 1001507",
+    "whatsapp": "+92 321 1001507",
+    "gallery": [
+      "https://picsum.photos/seed/wedream11a/900/600",
+      "https://picsum.photos/seed/wedream11b/900/600",
+      "https://picsum.photos/seed/wedream11c/900/600"
+    ],
+    "capacity": 900,
+    "parking_capacity": 160,
+    "features": [
+      "Elevator Access",
+      "Family Lounge",
+      "Decor Services Available",
+      "Air Conditioned Hall",
+      "Bridal Room"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 350000
+      },
+      {
+        "name": "Gold",
+        "price": 455000
+      },
+      {
+        "name": "Platinum",
+        "price": 560000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bilal Ahmed",
+        "rating": 5,
+        "comment": "AC system bohat acha tha, garmi mein bhi comfortable raha."
+      },
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Staff cooperative thay aur sab kuch waqt par ho gaya."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 12,
+    "name": "Diamond Hall PECHS",
+    "area": "PECHS",
+    "rating": 4.5,
+    "starting_price": 320000,
+    "address": "Block 3, PECHS, PECHS, Karachi, Pakistan",
+    "phone": "+92 333 1001644",
+    "whatsapp": "+92 333 1001644",
+    "gallery": [
+      "https://picsum.photos/seed/wedream12a/900/600",
+      "https://picsum.photos/seed/wedream12b/900/600",
+      "https://picsum.photos/seed/wedream12c/900/600"
+    ],
+    "capacity": 800,
+    "parking_capacity": 140,
+    "features": [
+      "Air Conditioned Hall",
+      "Bridal Room",
+      "Generator Backup",
+      "Sound System & DJ",
+      "Stage with LED Lighting"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 320000
+      },
+      {
+        "name": "Gold",
+        "price": 416000
+      },
+      {
+        "name": "Platinum",
+        "price": 512000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Sana Tariq",
+        "rating": 4,
+        "comment": "Hall ka decor bohat acha tha, mehmano ne bohat tareef ki."
+      },
+      {
+        "name": "Usman Ali",
+        "rating": 4,
+        "comment": "Parking thori tight thi lekin overall experience good rahi."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 13,
+    "name": "Star Banquet PECHS",
+    "area": "PECHS",
+    "rating": 4.4,
+    "starting_price": 300000,
+    "address": "Block 6, PECHS, PECHS, Karachi, Pakistan",
+    "phone": "+92 345 1001781",
+    "whatsapp": "+92 345 1001781",
+    "gallery": [
+      "https://picsum.photos/seed/wedream13a/900/600",
+      "https://picsum.photos/seed/wedream13b/900/600",
+      "https://picsum.photos/seed/wedream13c/900/600"
+    ],
+    "capacity": 800,
+    "parking_capacity": 140,
+    "features": [
+      "Sound System & DJ",
+      "Stage with LED Lighting",
+      "In-house Catering",
+      "Valet Parking",
+      "Separate Mehendi Lawn"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 300000
+      },
+      {
+        "name": "Gold",
+        "price": 390000
+      },
+      {
+        "name": "Platinum",
+        "price": 480000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Hassan Raza",
+        "rating": 4,
+        "comment": "Staff cooperative thay aur sab kuch waqt par ho gaya."
+      },
+      {
+        "name": "Mariam Iqbal",
+        "rating": 4,
+        "comment": "Food quality average thi, baqi sab theek tha."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 14,
+    "name": "Imperial Hall PECHS",
+    "area": "PECHS",
+    "rating": 4.7,
+    "starting_price": 370000,
+    "address": "Tariq Road, PECHS, PECHS, Karachi, Pakistan",
+    "phone": "+92 300 1001918",
+    "whatsapp": "+92 300 1001918",
+    "gallery": [
+      "https://picsum.photos/seed/wedream14a/900/600",
+      "https://picsum.photos/seed/wedream14b/900/600",
+      "https://picsum.photos/seed/wedream14c/900/600"
+    ],
+    "capacity": 900,
+    "parking_capacity": 160,
+    "features": [
+      "Valet Parking",
+      "Separate Mehendi Lawn",
+      "CCTV Security",
+      "Elevator Access",
+      "Family Lounge"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 370000
+      },
+      {
+        "name": "Gold",
+        "price": 481000
+      },
+      {
+        "name": "Platinum",
+        "price": 592000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Fatima Sheikh",
+        "rating": 5,
+        "comment": "Parking thori tight thi lekin overall experience good rahi."
+      },
+      {
+        "name": "Faizan Sheikh",
+        "rating": 4,
+        "comment": "Booking se le kar event tak management bohat smooth thi."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 15,
+    "name": "Elite PECHS Banquet",
+    "area": "PECHS",
+    "rating": 4.6,
+    "starting_price": 340000,
+    "address": "Block 4, PECHS, PECHS, Karachi, Pakistan",
+    "phone": "+92 301 1002055",
+    "whatsapp": "+92 301 1002055",
+    "gallery": [
+      "https://picsum.photos/seed/wedream15a/900/600",
+      "https://picsum.photos/seed/wedream15b/900/600",
+      "https://picsum.photos/seed/wedream15c/900/600"
+    ],
+    "capacity": 800,
+    "parking_capacity": 140,
+    "features": [
+      "Elevator Access",
+      "Family Lounge",
+      "Decor Services Available",
+      "Air Conditioned Hall",
+      "Bridal Room"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 340000
+      },
+      {
+        "name": "Gold",
+        "price": 442000
+      },
+      {
+        "name": "Platinum",
+        "price": 544000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Usman Ali",
+        "rating": 5,
+        "comment": "Food quality average thi, baqi sab theek tha."
+      },
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "AC system bohat acha tha, garmi mein bhi comfortable raha."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 16,
+    "name": "Gulshan Grand Hall",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.7,
+    "starting_price": 400000,
+    "address": "Block 4, Gulshan-e-Iqbal, Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 302 1002192",
+    "whatsapp": "+92 302 1002192",
+    "gallery": [
+      "https://picsum.photos/seed/wedream16a/900/600",
+      "https://picsum.photos/seed/wedream16b/900/600",
+      "https://picsum.photos/seed/wedream16c/900/600"
+    ],
+    "capacity": 1000,
+    "parking_capacity": 180,
+    "features": [
+      "Air Conditioned Hall",
+      "Bridal Room",
+      "Generator Backup",
+      "Sound System & DJ",
+      "Stage with LED Lighting"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 400000
+      },
+      {
+        "name": "Gold",
+        "price": 520000
+      },
+      {
+        "name": "Platinum",
+        "price": 640000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Mariam Iqbal",
+        "rating": 5,
+        "comment": "Booking se le kar event tak management bohat smooth thi."
+      },
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 4,
+        "comment": "Hall ka decor bohat acha tha, mehmano ne bohat tareef ki."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 17,
+    "name": "Royal Gulshan Banquet",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.6,
+    "starting_price": 380000,
+    "address": "Block 5, Gulshan-e-Iqbal, Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 311 1002329",
+    "whatsapp": "+92 311 1002329",
+    "gallery": [
+      "https://picsum.photos/seed/wedream17a/900/600",
+      "https://picsum.photos/seed/wedream17b/900/600",
+      "https://picsum.photos/seed/wedream17c/900/600"
+    ],
+    "capacity": 1000,
+    "parking_capacity": 180,
+    "features": [
+      "Sound System & DJ",
+      "Stage with LED Lighting",
+      "In-house Catering",
+      "Valet Parking",
+      "Separate Mehendi Lawn"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 380000
+      },
+      {
+        "name": "Gold",
+        "price": 494000
+      },
+      {
+        "name": "Platinum",
+        "price": 608000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Faizan Sheikh",
+        "rating": 5,
+        "comment": "AC system bohat acha tha, garmi mein bhi comfortable raha."
+      },
+      {
+        "name": "Ayesha Khan",
+        "rating": 4,
+        "comment": "Staff cooperative thay aur sab kuch waqt par ho gaya."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 18,
+    "name": "Pearl Gulshan Hall",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.5,
+    "starting_price": 360000,
+    "address": "Block 6, Gulshan-e-Iqbal, Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 321 1002466",
+    "whatsapp": "+92 321 1002466",
+    "gallery": [
+      "https://picsum.photos/seed/wedream18a/900/600",
+      "https://picsum.photos/seed/wedream18b/900/600",
+      "https://picsum.photos/seed/wedream18c/900/600"
+    ],
+    "capacity": 900,
+    "parking_capacity": 160,
+    "features": [
+      "Valet Parking",
+      "Separate Mehendi Lawn",
+      "CCTV Security",
+      "Elevator Access",
+      "Family Lounge"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 360000
+      },
+      {
+        "name": "Gold",
+        "price": 468000
+      },
+      {
+        "name": "Platinum",
+        "price": 576000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "Hall ka decor bohat acha tha, mehmano ne bohat tareef ki."
+      },
+      {
+        "name": "Bilal Ahmed",
+        "rating": 4,
+        "comment": "Parking thori tight thi lekin overall experience good rahi."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 19,
+    "name": "Diamond Gulshan Banquet",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.4,
+    "starting_price": 340000,
+    "address": "Block 13, Gulshan-e-Iqbal, Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 333 1002603",
+    "whatsapp": "+92 333 1002603",
+    "gallery": [
+      "https://picsum.photos/seed/wedream19a/900/600",
+      "https://picsum.photos/seed/wedream19b/900/600",
+      "https://picsum.photos/seed/wedream19c/900/600"
+    ],
+    "capacity": 800,
+    "parking_capacity": 140,
+    "features": [
+      "Elevator Access",
+      "Family Lounge",
+      "Decor Services Available",
+      "Air Conditioned Hall",
+      "Bridal Room"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 340000
+      },
+      {
+        "name": "Gold",
+        "price": 442000
+      },
+      {
+        "name": "Platinum",
+        "price": 544000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 4,
+        "comment": "Staff cooperative thay aur sab kuch waqt par ho gaya."
+      },
+      {
+        "name": "Sana Tariq",
+        "rating": 4,
+        "comment": "Food quality average thi, baqi sab theek tha."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 20,
+    "name": "Star Gulshan Hall",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.6,
+    "starting_price": 390000,
+    "address": "Block 10-A, Gulshan-e-Iqbal, Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 345 1002740",
+    "whatsapp": "+92 345 1002740",
+    "gallery": [
+      "https://picsum.photos/seed/wedream20a/900/600",
+      "https://picsum.photos/seed/wedream20b/900/600",
+      "https://picsum.photos/seed/wedream20c/900/600"
+    ],
+    "capacity": 1000,
+    "parking_capacity": 180,
+    "features": [
+      "Air Conditioned Hall",
+      "Bridal Room",
+      "Generator Backup",
+      "Sound System & DJ",
+      "Stage with LED Lighting"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 390000
+      },
+      {
+        "name": "Gold",
+        "price": 507000
+      },
+      {
+        "name": "Platinum",
+        "price": 624000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ayesha Khan",
+        "rating": 5,
+        "comment": "Parking thori tight thi lekin overall experience good rahi."
+      },
+      {
+        "name": "Hassan Raza",
+        "rating": 4,
+        "comment": "Booking se le kar event tak management bohat smooth thi."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 21,
+    "name": "Johar Mega Hall",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.5,
+    "starting_price": 300000,
+    "address": "Block 7, Gulistan-e-Johar, Gulistan-e-Johar, Karachi, Pakistan",
+    "phone": "+92 300 1002877",
+    "whatsapp": "+92 300 1002877",
+    "gallery": [
+      "https://picsum.photos/seed/wedream21a/900/600",
+      "https://picsum.photos/seed/wedream21b/900/600",
+      "https://picsum.photos/seed/wedream21c/900/600"
+    ],
+    "capacity": 800,
+    "parking_capacity": 140,
+    "features": [
+      "Sound System & DJ",
+      "Stage with LED Lighting",
+      "In-house Catering",
+      "Valet Parking",
+      "Separate Mehendi Lawn"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 300000
+      },
+      {
+        "name": "Gold",
+        "price": 390000
+      },
+      {
+        "name": "Platinum",
+        "price": 480000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bilal Ahmed",
+        "rating": 4,
+        "comment": "Food quality average thi, baqi sab theek tha."
+      },
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "AC system bohat acha tha, garmi mein bhi comfortable raha."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 22,
+    "name": "Royal Johar Banquet",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.4,
+    "starting_price": 280000,
+    "address": "Block 13, Gulistan-e-Johar, Gulistan-e-Johar, Karachi, Pakistan",
+    "phone": "+92 301 1003014",
+    "whatsapp": "+92 301 1003014",
+    "gallery": [
+      "https://picsum.photos/seed/wedream22a/900/600",
+      "https://picsum.photos/seed/wedream22b/900/600",
+      "https://picsum.photos/seed/wedream22c/900/600"
+    ],
+    "capacity": 700,
+    "parking_capacity": 130,
+    "features": [
+      "Valet Parking",
+      "Separate Mehendi Lawn",
+      "CCTV Security",
+      "Elevator Access",
+      "Family Lounge"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 280000
+      },
+      {
+        "name": "Gold",
+        "price": 364000
+      },
+      {
+        "name": "Platinum",
+        "price": 448000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Sana Tariq",
+        "rating": 4,
+        "comment": "Booking se le kar event tak management bohat smooth thi."
+      },
+      {
+        "name": "Usman Ali",
+        "rating": 4,
+        "comment": "Hall ka decor bohat acha tha, mehmano ne bohat tareef ki."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 23,
+    "name": "Diamond Johar Hall",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.6,
+    "starting_price": 320000,
+    "address": "Block 15, Gulistan-e-Johar, Gulistan-e-Johar, Karachi, Pakistan",
+    "phone": "+92 302 1003151",
+    "whatsapp": "+92 302 1003151",
+    "gallery": [
+      "https://picsum.photos/seed/wedream23a/900/600",
+      "https://picsum.photos/seed/wedream23b/900/600",
+      "https://picsum.photos/seed/wedream23c/900/600"
+    ],
+    "capacity": 800,
+    "parking_capacity": 140,
+    "features": [
+      "Elevator Access",
+      "Family Lounge",
+      "Decor Services Available",
+      "Air Conditioned Hall",
+      "Bridal Room"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 320000
+      },
+      {
+        "name": "Gold",
+        "price": 416000
+      },
+      {
+        "name": "Platinum",
+        "price": 512000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Hassan Raza",
+        "rating": 5,
+        "comment": "AC system bohat acha tha, garmi mein bhi comfortable raha."
+      },
+      {
+        "name": "Mariam Iqbal",
+        "rating": 4,
+        "comment": "Staff cooperative thay aur sab kuch waqt par ho gaya."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 24,
+    "name": "Pearl Johar Banquet",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.5,
+    "starting_price": 310000,
+    "address": "Block 17, Gulistan-e-Johar, Gulistan-e-Johar, Karachi, Pakistan",
+    "phone": "+92 311 1003288",
+    "whatsapp": "+92 311 1003288",
+    "gallery": [
+      "https://picsum.photos/seed/wedream24a/900/600",
+      "https://picsum.photos/seed/wedream24b/900/600",
+      "https://picsum.photos/seed/wedream24c/900/600"
+    ],
+    "capacity": 800,
+    "parking_capacity": 140,
+    "features": [
+      "Air Conditioned Hall",
+      "Bridal Room",
+      "Generator Backup",
+      "Sound System & DJ",
+      "Stage with LED Lighting"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 310000
+      },
+      {
+        "name": "Gold",
+        "price": 403000
+      },
+      {
+        "name": "Platinum",
+        "price": 496000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Hall ka decor bohat acha tha, mehmano ne bohat tareef ki."
+      },
+      {
+        "name": "Faizan Sheikh",
+        "rating": 4,
+        "comment": "Parking thori tight thi lekin overall experience good rahi."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 25,
+    "name": "Elite Johar Hall",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.3,
+    "starting_price": 290000,
+    "address": "Block 19, Gulistan-e-Johar, Gulistan-e-Johar, Karachi, Pakistan",
+    "phone": "+92 321 1003425",
+    "whatsapp": "+92 321 1003425",
+    "gallery": [
+      "https://picsum.photos/seed/wedream25a/900/600",
+      "https://picsum.photos/seed/wedream25b/900/600",
+      "https://picsum.photos/seed/wedream25c/900/600"
+    ],
+    "capacity": 700,
+    "parking_capacity": 130,
+    "features": [
+      "Sound System & DJ",
+      "Stage with LED Lighting",
+      "In-house Catering",
+      "Valet Parking",
+      "Separate Mehendi Lawn"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 290000
+      },
+      {
+        "name": "Gold",
+        "price": 377000
+      },
+      {
+        "name": "Platinum",
+        "price": 464000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Usman Ali",
+        "rating": 4,
+        "comment": "Staff cooperative thay aur sab kuch waqt par ho gaya."
+      },
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "Food quality average thi, baqi sab theek tha."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 26,
+    "name": "FB Area Grand Hall",
+    "area": "Federal B Area",
+    "rating": 4.4,
+    "starting_price": 270000,
+    "address": "Block 10, F.B. Area, Federal B Area, Karachi, Pakistan",
+    "phone": "+92 333 1003562",
+    "whatsapp": "+92 333 1003562",
+    "gallery": [
+      "https://picsum.photos/seed/wedream26a/900/600",
+      "https://picsum.photos/seed/wedream26b/900/600",
+      "https://picsum.photos/seed/wedream26c/900/600"
+    ],
+    "capacity": 700,
+    "parking_capacity": 130,
+    "features": [
+      "Valet Parking",
+      "Separate Mehendi Lawn",
+      "CCTV Security",
+      "Elevator Access",
+      "Family Lounge"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 270000
+      },
+      {
+        "name": "Gold",
+        "price": 351000
+      },
+      {
+        "name": "Platinum",
+        "price": 432000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Mariam Iqbal",
+        "rating": 4,
+        "comment": "Parking thori tight thi lekin overall experience good rahi."
+      },
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 4,
+        "comment": "Booking se le kar event tak management bohat smooth thi."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 27,
+    "name": "Royal FB Banquet",
+    "area": "Federal B Area",
+    "rating": 4.3,
+    "starting_price": 260000,
+    "address": "Block 15, F.B. Area, Federal B Area, Karachi, Pakistan",
+    "phone": "+92 345 1003699",
+    "whatsapp": "+92 345 1003699",
+    "gallery": [
+      "https://picsum.photos/seed/wedream27a/900/600",
+      "https://picsum.photos/seed/wedream27b/900/600",
+      "https://picsum.photos/seed/wedream27c/900/600"
+    ],
+    "capacity": 600,
+    "parking_capacity": 110,
+    "features": [
+      "Elevator Access",
+      "Family Lounge",
+      "Decor Services Available",
+      "Air Conditioned Hall",
+      "Bridal Room"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 260000
+      },
+      {
+        "name": "Gold",
+        "price": 338000
+      },
+      {
+        "name": "Platinum",
+        "price": 416000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Faizan Sheikh",
+        "rating": 4,
+        "comment": "Food quality average thi, baqi sab theek tha."
+      },
+      {
+        "name": "Ayesha Khan",
+        "rating": 4,
+        "comment": "AC system bohat acha tha, garmi mein bhi comfortable raha."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 28,
+    "name": "Diamond FB Hall",
+    "area": "Federal B Area",
+    "rating": 4.5,
+    "starting_price": 280000,
+    "address": "Block 16, F.B. Area, Federal B Area, Karachi, Pakistan",
+    "phone": "+92 300 1003836",
+    "whatsapp": "+92 300 1003836",
+    "gallery": [
+      "https://picsum.photos/seed/wedream28a/900/600",
+      "https://picsum.photos/seed/wedream28b/900/600",
+      "https://picsum.photos/seed/wedream28c/900/600"
+    ],
+    "capacity": 700,
+    "parking_capacity": 130,
+    "features": [
+      "Air Conditioned Hall",
+      "Bridal Room",
+      "Generator Backup",
+      "Sound System & DJ",
+      "Stage with LED Lighting"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 280000
+      },
+      {
+        "name": "Gold",
+        "price": 364000
+      },
+      {
+        "name": "Platinum",
+        "price": 448000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "Booking se le kar event tak management bohat smooth thi."
+      },
+      {
+        "name": "Bilal Ahmed",
+        "rating": 4,
+        "comment": "Hall ka decor bohat acha tha, mehmano ne bohat tareef ki."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 29,
+    "name": "Star FB Banquet",
+    "area": "Federal B Area",
+    "rating": 4.2,
+    "starting_price": 250000,
+    "address": "Block 19, F.B. Area, Federal B Area, Karachi, Pakistan",
+    "phone": "+92 301 1003973",
+    "whatsapp": "+92 301 1003973",
+    "gallery": [
+      "https://picsum.photos/seed/wedream29a/900/600",
+      "https://picsum.photos/seed/wedream29b/900/600",
+      "https://picsum.photos/seed/wedream29c/900/600"
+    ],
+    "capacity": 600,
+    "parking_capacity": 110,
+    "features": [
+      "Sound System & DJ",
+      "Stage with LED Lighting",
+      "In-house Catering",
+      "Valet Parking",
+      "Separate Mehendi Lawn"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 250000
+      },
+      {
+        "name": "Gold",
+        "price": 325000
+      },
+      {
+        "name": "Platinum",
+        "price": 400000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 4,
+        "comment": "AC system bohat acha tha, garmi mein bhi comfortable raha."
+      },
+      {
+        "name": "Sana Tariq",
+        "rating": 4,
+        "comment": "Staff cooperative thay aur sab kuch waqt par ho gaya."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 30,
+    "name": "Elite FB Hall",
+    "area": "Federal B Area",
+    "rating": 4.4,
+    "starting_price": 275000,
+    "address": "Block 20, F.B. Area, Federal B Area, Karachi, Pakistan",
+    "phone": "+92 302 1004110",
+    "whatsapp": "+92 302 1004110",
+    "gallery": [
+      "https://picsum.photos/seed/wedream30a/900/600",
+      "https://picsum.photos/seed/wedream30b/900/600",
+      "https://picsum.photos/seed/wedream30c/900/600"
+    ],
+    "capacity": 700,
+    "parking_capacity": 130,
+    "features": [
+      "Valet Parking",
+      "Separate Mehendi Lawn",
+      "CCTV Security",
+      "Elevator Access",
+      "Family Lounge"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 275000
+      },
+      {
+        "name": "Gold",
+        "price": 358000
+      },
+      {
+        "name": "Platinum",
+        "price": 440000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ayesha Khan",
+        "rating": 4,
+        "comment": "Hall ka decor bohat acha tha, mehmano ne bohat tareef ki."
+      },
+      {
+        "name": "Hassan Raza",
+        "rating": 4,
+        "comment": "Parking thori tight thi lekin overall experience good rahi."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 31,
+    "name": "Bahadurabad Royal Hall",
+    "area": "Bahadurabad",
+    "rating": 4.5,
+    "starting_price": 320000,
+    "address": "Main Tariq Road, Bahadurabad, Bahadurabad, Karachi, Pakistan",
+    "phone": "+92 311 1004247",
+    "whatsapp": "+92 311 1004247",
+    "gallery": [
+      "https://picsum.photos/seed/wedream31a/900/600",
+      "https://picsum.photos/seed/wedream31b/900/600",
+      "https://picsum.photos/seed/wedream31c/900/600"
+    ],
+    "capacity": 800,
+    "parking_capacity": 140,
+    "features": [
+      "Elevator Access",
+      "Family Lounge",
+      "Decor Services Available",
+      "Air Conditioned Hall",
+      "Bridal Room"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 320000
+      },
+      {
+        "name": "Gold",
+        "price": 416000
+      },
+      {
+        "name": "Platinum",
+        "price": 512000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bilal Ahmed",
+        "rating": 4,
+        "comment": "Staff cooperative thay aur sab kuch waqt par ho gaya."
+      },
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Food quality average thi, baqi sab theek tha."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 32,
+    "name": "Pearl Bahadurabad Banquet",
+    "area": "Bahadurabad",
+    "rating": 4.4,
+    "starting_price": 300000,
+    "address": "PIB Colony, Bahadurabad, Bahadurabad, Karachi, Pakistan",
+    "phone": "+92 321 1004384",
+    "whatsapp": "+92 321 1004384",
+    "gallery": [
+      "https://picsum.photos/seed/wedream32a/900/600",
+      "https://picsum.photos/seed/wedream32b/900/600",
+      "https://picsum.photos/seed/wedream32c/900/600"
+    ],
+    "capacity": 800,
+    "parking_capacity": 140,
+    "features": [
+      "Air Conditioned Hall",
+      "Bridal Room",
+      "Generator Backup",
+      "Sound System & DJ",
+      "Stage with LED Lighting"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 300000
+      },
+      {
+        "name": "Gold",
+        "price": 390000
+      },
+      {
+        "name": "Platinum",
+        "price": 480000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Sana Tariq",
+        "rating": 4,
+        "comment": "Parking thori tight thi lekin overall experience good rahi."
+      },
+      {
+        "name": "Usman Ali",
+        "rating": 4,
+        "comment": "Booking se le kar event tak management bohat smooth thi."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 33,
+    "name": "Diamond Bahadurabad Hall",
+    "area": "Bahadurabad",
+    "rating": 4.6,
+    "starting_price": 340000,
+    "address": "Hassan Square, Bahadurabad, Bahadurabad, Karachi, Pakistan",
+    "phone": "+92 333 1004521",
+    "whatsapp": "+92 333 1004521",
+    "gallery": [
+      "https://picsum.photos/seed/wedream33a/900/600",
+      "https://picsum.photos/seed/wedream33b/900/600",
+      "https://picsum.photos/seed/wedream33c/900/600"
+    ],
+    "capacity": 800,
+    "parking_capacity": 140,
+    "features": [
+      "Sound System & DJ",
+      "Stage with LED Lighting",
+      "In-house Catering",
+      "Valet Parking",
+      "Separate Mehendi Lawn"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 340000
+      },
+      {
+        "name": "Gold",
+        "price": 442000
+      },
+      {
+        "name": "Platinum",
+        "price": 544000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Hassan Raza",
+        "rating": 5,
+        "comment": "Food quality average thi, baqi sab theek tha."
+      },
+      {
+        "name": "Mariam Iqbal",
+        "rating": 4,
+        "comment": "AC system bohat acha tha, garmi mein bhi comfortable raha."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 34,
+    "name": "Star Bahadurabad Hall",
+    "area": "Bahadurabad",
+    "rating": 4.3,
+    "starting_price": 280000,
+    "address": "KDA Scheme 1, Bahadurabad, Bahadurabad, Karachi, Pakistan",
+    "phone": "+92 345 1004658",
+    "whatsapp": "+92 345 1004658",
+    "gallery": [
+      "https://picsum.photos/seed/wedream34a/900/600",
+      "https://picsum.photos/seed/wedream34b/900/600",
+      "https://picsum.photos/seed/wedream34c/900/600"
+    ],
+    "capacity": 700,
+    "parking_capacity": 130,
+    "features": [
+      "Valet Parking",
+      "Separate Mehendi Lawn",
+      "CCTV Security",
+      "Elevator Access",
+      "Family Lounge"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 280000
+      },
+      {
+        "name": "Gold",
+        "price": 364000
+      },
+      {
+        "name": "Platinum",
+        "price": 448000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Booking se le kar event tak management bohat smooth thi."
+      },
+      {
+        "name": "Faizan Sheikh",
+        "rating": 4,
+        "comment": "Hall ka decor bohat acha tha, mehmano ne bohat tareef ki."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 35,
+    "name": "Elite Bahadurabad Banquet",
+    "area": "Bahadurabad",
+    "rating": 4.5,
+    "starting_price": 330000,
+    "address": "Mehmoodabad, Bahadurabad, Bahadurabad, Karachi, Pakistan",
+    "phone": "+92 300 1004795",
+    "whatsapp": "+92 300 1004795",
+    "gallery": [
+      "https://picsum.photos/seed/wedream35a/900/600",
+      "https://picsum.photos/seed/wedream35b/900/600",
+      "https://picsum.photos/seed/wedream35c/900/600"
+    ],
+    "capacity": 800,
+    "parking_capacity": 140,
+    "features": [
+      "Elevator Access",
+      "Family Lounge",
+      "Decor Services Available",
+      "Air Conditioned Hall",
+      "Bridal Room"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 330000
+      },
+      {
+        "name": "Gold",
+        "price": 429000
+      },
+      {
+        "name": "Platinum",
+        "price": 528000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Usman Ali",
+        "rating": 4,
+        "comment": "AC system bohat acha tha, garmi mein bhi comfortable raha."
+      },
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "Staff cooperative thay aur sab kuch waqt par ho gaya."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 36,
+    "name": "Tariq Road Grand Hall",
+    "area": "Tariq Road",
+    "rating": 4.6,
+    "starting_price": 350000,
+    "address": "Main Tariq Road, Tariq Road, Karachi, Pakistan",
+    "phone": "+92 301 1004932",
+    "whatsapp": "+92 301 1004932",
+    "gallery": [
+      "https://picsum.photos/seed/wedream36a/900/600",
+      "https://picsum.photos/seed/wedream36b/900/600",
+      "https://picsum.photos/seed/wedream36c/900/600"
+    ],
+    "capacity": 900,
+    "parking_capacity": 160,
+    "features": [
+      "Air Conditioned Hall",
+      "Bridal Room",
+      "Generator Backup",
+      "Sound System & DJ",
+      "Stage with LED Lighting"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 350000
+      },
+      {
+        "name": "Gold",
+        "price": 455000
+      },
+      {
+        "name": "Platinum",
+        "price": 560000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Mariam Iqbal",
+        "rating": 5,
+        "comment": "Hall ka decor bohat acha tha, mehmano ne bohat tareef ki."
+      },
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 4,
+        "comment": "Parking thori tight thi lekin overall experience good rahi."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 37,
+    "name": "Royal Tariq Banquet",
+    "area": "Tariq Road",
+    "rating": 4.5,
+    "starting_price": 340000,
+    "address": "Bahadurabad Chowrangi, Tariq Road, Tariq Road, Karachi, Pakistan",
+    "phone": "+92 302 1005069",
+    "whatsapp": "+92 302 1005069",
+    "gallery": [
+      "https://picsum.photos/seed/wedream37a/900/600",
+      "https://picsum.photos/seed/wedream37b/900/600",
+      "https://picsum.photos/seed/wedream37c/900/600"
+    ],
+    "capacity": 800,
+    "parking_capacity": 140,
+    "features": [
+      "Sound System & DJ",
+      "Stage with LED Lighting",
+      "In-house Catering",
+      "Valet Parking",
+      "Separate Mehendi Lawn"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 340000
+      },
+      {
+        "name": "Gold",
+        "price": 442000
+      },
+      {
+        "name": "Platinum",
+        "price": 544000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Faizan Sheikh",
+        "rating": 4,
+        "comment": "Staff cooperative thay aur sab kuch waqt par ho gaya."
+      },
+      {
+        "name": "Ayesha Khan",
+        "rating": 4,
+        "comment": "Food quality average thi, baqi sab theek tha."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 38,
+    "name": "Diamond Tariq Hall",
+    "area": "Tariq Road",
+    "rating": 4.4,
+    "starting_price": 330000,
+    "address": "Hassan Square, Tariq Road, Tariq Road, Karachi, Pakistan",
+    "phone": "+92 311 1005206",
+    "whatsapp": "+92 311 1005206",
+    "gallery": [
+      "https://picsum.photos/seed/wedream38a/900/600",
+      "https://picsum.photos/seed/wedream38b/900/600",
+      "https://picsum.photos/seed/wedream38c/900/600"
+    ],
+    "capacity": 800,
+    "parking_capacity": 140,
+    "features": [
+      "Valet Parking",
+      "Separate Mehendi Lawn",
+      "CCTV Security",
+      "Elevator Access",
+      "Family Lounge"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 330000
+      },
+      {
+        "name": "Gold",
+        "price": 429000
+      },
+      {
+        "name": "Platinum",
+        "price": 528000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "Parking thori tight thi lekin overall experience good rahi."
+      },
+      {
+        "name": "Bilal Ahmed",
+        "rating": 4,
+        "comment": "Booking se le kar event tak management bohat smooth thi."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 39,
+    "name": "Pearl Tariq Banquet",
+    "area": "Tariq Road",
+    "rating": 4.6,
+    "starting_price": 360000,
+    "address": "PECHS Block 2, Tariq Road, Tariq Road, Karachi, Pakistan",
+    "phone": "+92 321 1005343",
+    "whatsapp": "+92 321 1005343",
+    "gallery": [
+      "https://picsum.photos/seed/wedream39a/900/600",
+      "https://picsum.photos/seed/wedream39b/900/600",
+      "https://picsum.photos/seed/wedream39c/900/600"
+    ],
+    "capacity": 900,
+    "parking_capacity": 160,
+    "features": [
+      "Elevator Access",
+      "Family Lounge",
+      "Decor Services Available",
+      "Air Conditioned Hall",
+      "Bridal Room"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 360000
+      },
+      {
+        "name": "Gold",
+        "price": 468000
+      },
+      {
+        "name": "Platinum",
+        "price": 576000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 5,
+        "comment": "Food quality average thi, baqi sab theek tha."
+      },
+      {
+        "name": "Sana Tariq",
+        "rating": 4,
+        "comment": "AC system bohat acha tha, garmi mein bhi comfortable raha."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 40,
+    "name": "Elite Tariq Hall",
+    "area": "Tariq Road",
+    "rating": 4.5,
+    "starting_price": 345000,
+    "address": "Dilkusha, Tariq Road, Tariq Road, Karachi, Pakistan",
+    "phone": "+92 333 1005480",
+    "whatsapp": "+92 333 1005480",
+    "gallery": [
+      "https://picsum.photos/seed/wedream40a/900/600",
+      "https://picsum.photos/seed/wedream40b/900/600",
+      "https://picsum.photos/seed/wedream40c/900/600"
+    ],
+    "capacity": 900,
+    "parking_capacity": 160,
+    "features": [
+      "Air Conditioned Hall",
+      "Bridal Room",
+      "Generator Backup",
+      "Sound System & DJ",
+      "Stage with LED Lighting"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 345000
+      },
+      {
+        "name": "Gold",
+        "price": 448000
+      },
+      {
+        "name": "Platinum",
+        "price": 552000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ayesha Khan",
+        "rating": 4,
+        "comment": "Booking se le kar event tak management bohat smooth thi."
+      },
+      {
+        "name": "Hassan Raza",
+        "rating": 4,
+        "comment": "Hall ka decor bohat acha tha, mehmano ne bohat tareef ki."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 41,
+    "name": "North Nazimabad Grand Hall",
+    "area": "North Nazimabad",
+    "rating": 4.4,
+    "starting_price": 300000,
+    "address": "Block C, North Nazimabad, North Nazimabad, Karachi, Pakistan",
+    "phone": "+92 345 1005617",
+    "whatsapp": "+92 345 1005617",
+    "gallery": [
+      "https://picsum.photos/seed/wedream41a/900/600",
+      "https://picsum.photos/seed/wedream41b/900/600",
+      "https://picsum.photos/seed/wedream41c/900/600"
+    ],
+    "capacity": 800,
+    "parking_capacity": 140,
+    "features": [
+      "Sound System & DJ",
+      "Stage with LED Lighting",
+      "In-house Catering",
+      "Valet Parking",
+      "Separate Mehendi Lawn"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 300000
+      },
+      {
+        "name": "Gold",
+        "price": 390000
+      },
+      {
+        "name": "Platinum",
+        "price": 480000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bilal Ahmed",
+        "rating": 4,
+        "comment": "AC system bohat acha tha, garmi mein bhi comfortable raha."
+      },
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Staff cooperative thay aur sab kuch waqt par ho gaya."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 42,
+    "name": "Royal NN Banquet",
+    "area": "North Nazimabad",
+    "rating": 4.3,
+    "starting_price": 290000,
+    "address": "Block D, North Nazimabad, North Nazimabad, Karachi, Pakistan",
+    "phone": "+92 300 1005754",
+    "whatsapp": "+92 300 1005754",
+    "gallery": [
+      "https://picsum.photos/seed/wedream42a/900/600",
+      "https://picsum.photos/seed/wedream42b/900/600",
+      "https://picsum.photos/seed/wedream42c/900/600"
+    ],
+    "capacity": 700,
+    "parking_capacity": 130,
+    "features": [
+      "Valet Parking",
+      "Separate Mehendi Lawn",
+      "CCTV Security",
+      "Elevator Access",
+      "Family Lounge"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 290000
+      },
+      {
+        "name": "Gold",
+        "price": 377000
+      },
+      {
+        "name": "Platinum",
+        "price": 464000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Sana Tariq",
+        "rating": 4,
+        "comment": "Hall ka decor bohat acha tha, mehmano ne bohat tareef ki."
+      },
+      {
+        "name": "Usman Ali",
+        "rating": 4,
+        "comment": "Parking thori tight thi lekin overall experience good rahi."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 43,
+    "name": "Diamond NN Hall",
+    "area": "North Nazimabad",
+    "rating": 4.5,
+    "starting_price": 310000,
+    "address": "Block H, North Nazimabad, North Nazimabad, Karachi, Pakistan",
+    "phone": "+92 301 1005891",
+    "whatsapp": "+92 301 1005891",
+    "gallery": [
+      "https://picsum.photos/seed/wedream43a/900/600",
+      "https://picsum.photos/seed/wedream43b/900/600",
+      "https://picsum.photos/seed/wedream43c/900/600"
+    ],
+    "capacity": 800,
+    "parking_capacity": 140,
+    "features": [
+      "Elevator Access",
+      "Family Lounge",
+      "Decor Services Available",
+      "Air Conditioned Hall",
+      "Bridal Room"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 310000
+      },
+      {
+        "name": "Gold",
+        "price": 403000
+      },
+      {
+        "name": "Platinum",
+        "price": 496000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Hassan Raza",
+        "rating": 4,
+        "comment": "Staff cooperative thay aur sab kuch waqt par ho gaya."
+      },
+      {
+        "name": "Mariam Iqbal",
+        "rating": 4,
+        "comment": "Food quality average thi, baqi sab theek tha."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 44,
+    "name": "Pearl NN Banquet",
+    "area": "North Nazimabad",
+    "rating": 4.4,
+    "starting_price": 305000,
+    "address": "Block L, North Nazimabad, North Nazimabad, Karachi, Pakistan",
+    "phone": "+92 302 1006028",
+    "whatsapp": "+92 302 1006028",
+    "gallery": [
+      "https://picsum.photos/seed/wedream44a/900/600",
+      "https://picsum.photos/seed/wedream44b/900/600",
+      "https://picsum.photos/seed/wedream44c/900/600"
+    ],
+    "capacity": 800,
+    "parking_capacity": 140,
+    "features": [
+      "Air Conditioned Hall",
+      "Bridal Room",
+      "Generator Backup",
+      "Sound System & DJ",
+      "Stage with LED Lighting"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 305000
+      },
+      {
+        "name": "Gold",
+        "price": 396000
+      },
+      {
+        "name": "Platinum",
+        "price": 488000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Parking thori tight thi lekin overall experience good rahi."
+      },
+      {
+        "name": "Faizan Sheikh",
+        "rating": 4,
+        "comment": "Booking se le kar event tak management bohat smooth thi."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 45,
+    "name": "Elite NN Hall",
+    "area": "North Nazimabad",
+    "rating": 4.6,
+    "starting_price": 320000,
+    "address": "Block N, North Nazimabad, North Nazimabad, Karachi, Pakistan",
+    "phone": "+92 311 1006165",
+    "whatsapp": "+92 311 1006165",
+    "gallery": [
+      "https://picsum.photos/seed/wedream45a/900/600",
+      "https://picsum.photos/seed/wedream45b/900/600",
+      "https://picsum.photos/seed/wedream45c/900/600"
+    ],
+    "capacity": 800,
+    "parking_capacity": 140,
+    "features": [
+      "Sound System & DJ",
+      "Stage with LED Lighting",
+      "In-house Catering",
+      "Valet Parking",
+      "Separate Mehendi Lawn"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 320000
+      },
+      {
+        "name": "Gold",
+        "price": 416000
+      },
+      {
+        "name": "Platinum",
+        "price": 512000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Usman Ali",
+        "rating": 5,
+        "comment": "Food quality average thi, baqi sab theek tha."
+      },
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "AC system bohat acha tha, garmi mein bhi comfortable raha."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 46,
+    "name": "North Karachi Grand Hall",
+    "area": "North Karachi",
+    "rating": 4.3,
+    "starting_price": 250000,
+    "address": "Sector 5-C, North Karachi, North Karachi, Karachi, Pakistan",
+    "phone": "+92 321 1006302",
+    "whatsapp": "+92 321 1006302",
+    "gallery": [
+      "https://picsum.photos/seed/wedream46a/900/600",
+      "https://picsum.photos/seed/wedream46b/900/600",
+      "https://picsum.photos/seed/wedream46c/900/600"
+    ],
+    "capacity": 600,
+    "parking_capacity": 110,
+    "features": [
+      "Valet Parking",
+      "Separate Mehendi Lawn",
+      "CCTV Security",
+      "Elevator Access",
+      "Family Lounge"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 250000
+      },
+      {
+        "name": "Gold",
+        "price": 325000
+      },
+      {
+        "name": "Platinum",
+        "price": 400000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Mariam Iqbal",
+        "rating": 4,
+        "comment": "Booking se le kar event tak management bohat smooth thi."
+      },
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 4,
+        "comment": "Hall ka decor bohat acha tha, mehmano ne bohat tareef ki."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 47,
+    "name": "Royal NK Banquet",
+    "area": "North Karachi",
+    "rating": 4.2,
+    "starting_price": 240000,
+    "address": "Sector 11-A, North Karachi, North Karachi, Karachi, Pakistan",
+    "phone": "+92 333 1006439",
+    "whatsapp": "+92 333 1006439",
+    "gallery": [
+      "https://picsum.photos/seed/wedream47a/900/600",
+      "https://picsum.photos/seed/wedream47b/900/600",
+      "https://picsum.photos/seed/wedream47c/900/600"
+    ],
+    "capacity": 600,
+    "parking_capacity": 110,
+    "features": [
+      "Elevator Access",
+      "Family Lounge",
+      "Decor Services Available",
+      "Air Conditioned Hall",
+      "Bridal Room"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 240000
+      },
+      {
+        "name": "Gold",
+        "price": 312000
+      },
+      {
+        "name": "Platinum",
+        "price": 384000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Faizan Sheikh",
+        "rating": 4,
+        "comment": "AC system bohat acha tha, garmi mein bhi comfortable raha."
+      },
+      {
+        "name": "Ayesha Khan",
+        "rating": 4,
+        "comment": "Staff cooperative thay aur sab kuch waqt par ho gaya."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 48,
+    "name": "Diamond NK Hall",
+    "area": "North Karachi",
+    "rating": 4.4,
+    "starting_price": 260000,
+    "address": "Sector 5-F, North Karachi, North Karachi, Karachi, Pakistan",
+    "phone": "+92 345 1006576",
+    "whatsapp": "+92 345 1006576",
+    "gallery": [
+      "https://picsum.photos/seed/wedream48a/900/600",
+      "https://picsum.photos/seed/wedream48b/900/600",
+      "https://picsum.photos/seed/wedream48c/900/600"
+    ],
+    "capacity": 600,
+    "parking_capacity": 110,
+    "features": [
+      "Air Conditioned Hall",
+      "Bridal Room",
+      "Generator Backup",
+      "Sound System & DJ",
+      "Stage with LED Lighting"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 260000
+      },
+      {
+        "name": "Gold",
+        "price": 338000
+      },
+      {
+        "name": "Platinum",
+        "price": 416000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "Hall ka decor bohat acha tha, mehmano ne bohat tareef ki."
+      },
+      {
+        "name": "Bilal Ahmed",
+        "rating": 4,
+        "comment": "Parking thori tight thi lekin overall experience good rahi."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 49,
+    "name": "Pearl NK Banquet",
+    "area": "North Karachi",
+    "rating": 4.3,
+    "starting_price": 255000,
+    "address": "Sector 7-D, North Karachi, North Karachi, Karachi, Pakistan",
+    "phone": "+92 300 1006713",
+    "whatsapp": "+92 300 1006713",
+    "gallery": [
+      "https://picsum.photos/seed/wedream49a/900/600",
+      "https://picsum.photos/seed/wedream49b/900/600",
+      "https://picsum.photos/seed/wedream49c/900/600"
+    ],
+    "capacity": 600,
+    "parking_capacity": 110,
+    "features": [
+      "Sound System & DJ",
+      "Stage with LED Lighting",
+      "In-house Catering",
+      "Valet Parking",
+      "Separate Mehendi Lawn"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 255000
+      },
+      {
+        "name": "Gold",
+        "price": 332000
+      },
+      {
+        "name": "Platinum",
+        "price": 408000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 4,
+        "comment": "Staff cooperative thay aur sab kuch waqt par ho gaya."
+      },
+      {
+        "name": "Sana Tariq",
+        "rating": 4,
+        "comment": "Food quality average thi, baqi sab theek tha."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  },
+  {
+    "id": 50,
+    "name": "Elite NK Hall",
+    "area": "North Karachi",
+    "rating": 4.5,
+    "starting_price": 270000,
+    "address": "Sector 11-C, North Karachi, North Karachi, Karachi, Pakistan",
+    "phone": "+92 301 1006850",
+    "whatsapp": "+92 301 1006850",
+    "gallery": [
+      "https://picsum.photos/seed/wedream50a/900/600",
+      "https://picsum.photos/seed/wedream50b/900/600",
+      "https://picsum.photos/seed/wedream50c/900/600"
+    ],
+    "capacity": 700,
+    "parking_capacity": 130,
+    "features": [
+      "Valet Parking",
+      "Separate Mehendi Lawn",
+      "CCTV Security",
+      "Elevator Access",
+      "Family Lounge"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price": 270000
+      },
+      {
+        "name": "Gold",
+        "price": 351000
+      },
+      {
+        "name": "Platinum",
+        "price": 432000
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ayesha Khan",
+        "rating": 4,
+        "comment": "Parking thori tight thi lekin overall experience good rahi."
+      },
+      {
+        "name": "Hassan Raza",
+        "rating": 4,
+        "comment": "Booking se le kar event tak management bohat smooth thi."
+      }
+    ],
+    "payment_methods": [
+      "Cash",
+      "Bank Transfer",
+      "JazzCash",
+      "Easypaisa"
+    ],
+    "verified": false,
+    "data_status": "sample_placeholder"
+  }
+]

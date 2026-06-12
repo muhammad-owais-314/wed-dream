@@ -1,0 +1,461 @@
+[
+  {
+    "id": 1,
+    "name": "Royal Banquet DHA",
+    "area": "DHA",
+    "rating": 4.8,
+    "starting_price": 450000,
+    "image": "wd.logo.jpeg",
+    "verified": true
+  },
+  {
+    "id": 2,
+    "name": "Al Noor Banquet DHA",
+    "area": "DHA",
+    "rating": 4.6,
+    "starting_price": 380000,
+    "image": "dha2.jpg",
+    "verified": true
+  },
+  {
+    "id": 3,
+    "name": "Pearl Marquee DHA",
+    "area": "DHA",
+    "rating": 4.7,
+    "starting_price": 500000,
+    "image": "dha3.jpg",
+    "verified": true
+  },
+  {
+    "id": 4,
+    "name": "Skyline Banquet DHA",
+    "area": "DHA",
+    "rating": 4.5,
+    "starting_price": 420000,
+    "image": "dha4.jpg",
+    "verified": true
+  },
+  {
+    "id": 5,
+    "name": "Elite Hall DHA",
+    "area": "DHA",
+    "rating": 4.6,
+    "starting_price": 390000,
+    "image": "dha5.jpg",
+    "verified": true
+  },
+
+  {
+    "id": 6,
+    "name": "Clifton Grand Hall",
+    "area": "Clifton",
+    "rating": 4.9,
+    "starting_price": 600000,
+    "image": "cl1.jpg",
+    "verified": true
+  },
+  {
+    "id": 7,
+    "name": "Sea View Banquet Clifton",
+    "area": "Clifton",
+    "rating": 4.7,
+    "starting_price": 550000,
+    "image": "cl2.jpg",
+    "verified": true
+  },
+  {
+    "id": 8,
+    "name": "Pearl Ocean Banquet",
+    "area": "Clifton",
+    "rating": 4.6,
+    "starting_price": 500000,
+    "image": "cl3.jpg",
+    "verified": true
+  },
+  {
+    "id": 9,
+    "name": "Royal Clifton Hall",
+    "area": "Clifton",
+    "rating": 4.8,
+    "starting_price": 650000,
+    "image": "cl4.jpg",
+    "verified": true
+  },
+  {
+    "id": 10,
+    "name": "Ocean Pearl Hall",
+    "area": "Clifton",
+    "rating": 4.5,
+    "starting_price": 480000,
+    "image": "cl5.jpg",
+    "verified": true
+  },
+
+  {
+    "id": 11,
+    "name": "PECHS Royal Banquet",
+    "area": "PECHS",
+    "rating": 4.6,
+    "starting_price": 350000,
+    "image": "pe1.jpg",
+    "verified": true
+  },
+  {
+    "id": 12,
+    "name": "Diamond Hall PECHS",
+    "area": "PECHS",
+    "rating": 4.5,
+    "starting_price": 320000,
+    "image": "pe2.jpg",
+    "verified": true
+  },
+  {
+    "id": 13,
+    "name": "Star Banquet PECHS",
+    "area": "PECHS",
+    "rating": 4.4,
+    "starting_price": 300000,
+    "image": "pe3.jpg",
+    "verified": true
+  },
+  {
+    "id": 14,
+    "name": "Imperial Hall PECHS",
+    "area": "PECHS",
+    "rating": 4.7,
+    "starting_price": 370000,
+    "image": "pe4.jpg",
+    "verified": true
+  },
+  {
+    "id": 15,
+    "name": "Elite PECHS Banquet",
+    "area": "PECHS",
+    "rating": 4.6,
+    "starting_price": 340000,
+    "image": "pe5.jpg",
+    "verified": true
+  },
+
+  {
+    "id": 16,
+    "name": "Gulshan Grand Hall",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.7,
+    "starting_price": 400000,
+    "image": "gul1.jpg",
+    "verified": true
+  },
+  {
+    "id": 17,
+    "name": "Royal Gulshan Banquet",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.6,
+    "starting_price": 380000,
+    "image": "gul2.jpg",
+    "verified": true
+  },
+  {
+    "id": 18,
+    "name": "Pearl Gulshan Hall",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.5,
+    "starting_price": 360000,
+    "image": "gul3.jpg",
+    "verified": true
+  },
+  {
+    "id": 19,
+    "name": "Diamond Gulshan Banquet",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.4,
+    "starting_price": 340000,
+    "image": "gul4.jpg",
+    "verified": true
+  },
+  {
+    "id": 20,
+    "name": "Star Gulshan Hall",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.6,
+    "starting_price": 390000,
+    "image": "gul5.jpg",
+    "verified": true
+  },
+
+  {
+    "id": 21,
+    "name": "Johar Mega Hall",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.5,
+    "starting_price": 300000,
+    "image": "joh1.jpg",
+    "verified": true
+  },
+  {
+    "id": 22,
+    "name": "Royal Johar Banquet",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.4,
+    "starting_price": 280000,
+    "image": "joh2.jpg",
+    "verified": true
+  },
+  {
+    "id": 23,
+    "name": "Diamond Johar Hall",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.6,
+    "starting_price": 320000,
+    "image": "joh3.jpg",
+    "verified": true
+  },
+  {
+    "id": 24,
+    "name": "Pearl Johar Banquet",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.5,
+    "starting_price": 310000,
+    "image": "joh4.jpg",
+    "verified": true
+  },
+  {
+    "id": 25,
+    "name": "Elite Johar Hall",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.3,
+    "starting_price": 290000,
+    "image": "joh5.jpg",
+    "verified": true
+  },
+
+  {
+    "id": 26,
+    "name": "FB Area Grand Hall",
+    "area": "Federal B Area",
+    "rating": 4.4,
+    "starting_price": 270000,
+    "image": "fb1.jpg",
+    "verified": true
+  },
+  {
+    "id": 27,
+    "name": "Royal FB Banquet",
+    "area": "Federal B Area",
+    "rating": 4.3,
+    "starting_price": 260000,
+    "image": "fb2.jpg",
+    "verified": true
+  },
+  {
+    "id": 28,
+    "name": "Diamond FB Hall",
+    "area": "Federal B Area",
+    "rating": 4.5,
+    "starting_price": 280000,
+    "image": "fb3.jpg",
+    "verified": true
+  },
+  {
+    "id": 29,
+    "name": "Star FB Banquet",
+    "area": "Federal B Area",
+    "rating": 4.2,
+    "starting_price": 250000,
+    "image": "fb4.jpg",
+    "verified": true
+  },
+  {
+    "id": 30,
+    "name": "Elite FB Hall",
+    "area": "Federal B Area",
+    "rating": 4.4,
+    "starting_price": 275000,
+    "image": "fb5.jpg",
+    "verified": true
+  },
+
+  {
+    "id": 31,
+    "name": "Bahadurabad Royal Hall",
+    "area": "Bahadurabad",
+    "rating": 4.5,
+    "starting_price": 320000,
+    "image": "bah1.jpg",
+    "verified": true
+  },
+  {
+    "id": 32,
+    "name": "Pearl Bahadurabad Banquet",
+    "area": "Bahadurabad",
+    "rating": 4.4,
+    "starting_price": 300000,
+    "image": "bah2.jpg",
+    "verified": true
+  },
+  {
+    "id": 33,
+    "name": "Diamond Bahadurabad Hall",
+    "area": "Bahadurabad",
+    "rating": 4.6,
+    "starting_price": 340000,
+    "image": "bah3.jpg",
+    "verified": true
+  },
+  {
+    "id": 34,
+    "name": "Star Bahadurabad Hall",
+    "area": "Bahadurabad",
+    "rating": 4.3,
+    "starting_price": 280000,
+    "image": "bah4.jpg",
+    "verified": true
+  },
+  {
+    "id": 35,
+    "name": "Elite Bahadurabad Banquet",
+    "area": "Bahadurabad",
+    "rating": 4.5,
+    "starting_price": 330000,
+    "image": "bah5.jpg",
+    "verified": true
+  },
+
+  {
+    "id": 36,
+    "name": "Tariq Road Grand Hall",
+    "area": "Tariq Road",
+    "rating": 4.6,
+    "starting_price": 350000,
+    "image": "tr1.jpg",
+    "verified": true
+  },
+  {
+    "id": 37,
+    "name": "Royal Tariq Banquet",
+    "area": "Tariq Road",
+    "rating": 4.5,
+    "starting_price": 340000,
+    "image": "tr2.jpg",
+    "verified": true
+  },
+  {
+    "id": 38,
+    "name": "Diamond Tariq Hall",
+    "area": "Tariq Road",
+    "rating": 4.4,
+    "starting_price": 330000,
+    "image": "tr3.jpg",
+    "verified": true
+  },
+  {
+    "id": 39,
+    "name": "Pearl Tariq Banquet",
+    "area": "Tariq Road",
+    "rating": 4.6,
+    "starting_price": 360000,
+    "image": "tr4.jpg",
+    "verified": true
+  },
+  {
+    "id": 40,
+    "name": "Elite Tariq Hall",
+    "area": "Tariq Road",
+    "rating": 4.5,
+    "starting_price": 345000,
+    "image": "tr5.jpg",
+    "verified": true
+  },
+
+  {
+    "id": 41,
+    "name": "North Nazimabad Grand Hall",
+    "area": "North Nazimabad",
+    "rating": 4.4,
+    "starting_price": 300000,
+    "image": "nn1.jpg",
+    "verified": true
+  },
+  {
+    "id": 42,
+    "name": "Royal NN Banquet",
+    "area": "North Nazimabad",
+    "rating": 4.3,
+    "starting_price": 290000,
+    "image": "nn2.jpg",
+    "verified": true
+  },
+  {
+    "id": 43,
+    "name": "Diamond NN Hall",
+    "area": "North Nazimabad",
+    "rating": 4.5,
+    "starting_price": 310000,
+    "image": "nn3.jpg",
+    "verified": true
+  },
+  {
+    "id": 44,
+    "name": "Pearl NN Banquet",
+    "area": "North Nazimabad",
+    "rating": 4.4,
+    "starting_price": 305000,
+    "image": "nn4.jpg",
+    "verified": true
+  },
+  {
+    "id": 45,
+    "name": "Elite NN Hall",
+    "area": "North Nazimabad",
+    "rating": 4.6,
+    "starting_price": 320000,
+    "image": "nn5.jpg",
+    "verified": true
+  },
+
+  {
+    "id": 46,
+    "name": "North Karachi Grand Hall",
+    "area": "North Karachi",
+    "rating": 4.3,
+    "starting_price": 250000,
+    "image": "nk1.jpg",
+    "verified": true
+  },
+  {
+    "id": 47,
+    "name": "Royal NK Banquet",
+    "area": "North Karachi",
+    "rating": 4.2,
+    "starting_price": 240000,
+    "image": "nk2.jpg",
+    "verified": true
+  },
+  {
+    "id": 48,
+    "name": "Diamond NK Hall",
+    "area": "North Karachi",
+    "rating": 4.4,
+    "starting_price": 260000,
+    "image": "nk3.jpg",
+    "verified": true
+  },
+  {
+    "id": 49,
+    "name": "Pearl NK Banquet",
+    "area": "North Karachi",
+    "rating": 4.3,
+    "starting_price": 255000,
+    "image": "nk4.jpg",
+    "verified": true
+  },
+  {
+    "id": 50,
+    "name": "Elite NK Hall",
+    "area": "North Karachi",
+    "rating": 4.5,
+    "starting_price": 270000,
+    "image": "nk5.jpg",
+    "verified": true
+  }
+]
