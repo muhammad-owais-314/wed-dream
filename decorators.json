@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "name": "VMP Event Management",
+    "area": "DHA",
+    "rating": 4.8,
+    "starting_price": 120000,
+    "image": "vmp_event.jpg",
+    "verified": true
+  },
+  {
+    "id": 2,
+    "name": "The Event Designer",
+    "area": "DHA",
+    "rating": 4.7,
+    "starting_price": 130000,
+    "image": "event_designer.jpg",
+    "verified": true
+  },
+  {
+    "id": 3,
+    "name": "Sparkle Events",
+    "area": "DHA",
+    "rating": 4.6,
+    "starting_price": 100000,
+    "image": "sparkle_events.jpg",
+    "verified": true
+  },
+  {
+    "id": 4,
+    "name": "Marcem Event Planner",
+    "area": "DHA",
+    "rating": 4.5,
+    "starting_price": 150000,
+    "image": "marcem_event.jpg",
+    "verified": true
+  },
+  {
+    "id": 5,
+    "name": "7th Sky Events",
+    "area": "DHA",
+    "rating": 4.4,
+    "starting_price": 110000,
+    "image": "7th_sky.jpg",
+    "verified": true
+  },
+  {
+    "id": 6,
+    "name": "DAWAT Event Management",
+    "area": "Clifton",
+    "rating": 4.9,
+    "starting_price": 180000,
+    "image": "dawat.jpg",
+    "verified": true
+  },
+  {
+    "id": 7,
+    "name": "Multi Business Linkers",
+    "area": "Clifton",
+    "rating": 4.3,
+    "starting_price": 80000,
+    "image": "multi_business.jpg",
+    "verified": true
+  },
+  {
+    "id": 8,
+    "name": "Prime Events Management Services",
+    "area": "Clifton",
+    "rating": 4.5,
+    "starting_price": 140000,
+    "image": "prime_events.jpg",
+    "verified": true
+  },
+  {
+    "id": 9,
+    "name": "The Partners Group",
+    "area": "Clifton",
+    "rating": 4.4,
+    "starting_price": 120000,
+    "image": "partners_group.jpg",
+    "verified": true
+  },
+  {
+    "id": 10,
+    "name": "S. Zia-Ul-Haq & Sons",
+    "area": "Clifton",
+    "rating": 4.3,
+    "starting_price": 100000,
+    "image": "zia_sons.jpg",
+    "verified": true
+  },
+  {
+    "id": 11,
+    "name": "Gadit l ADS",
+    "area": "PECHS",
+    "rating": 4.7,
+    "starting_price": 90000,
+    "image": "gadit.jpg",
+    "verified": true
+  },
+  {
+    "id": 12,
+    "name": "The Rope Private Limited",
+    "area": "PECHS",
+    "rating": 4.5,
+    "starting_price": 85000,
+    "image": "the_rope.jpg",
+    "verified": true
+  },
+  {
+    "id": 13,
+    "name": "Siddiqui Decor",
+    "area": "PECHS",
+    "rating": 4.4,
+    "starting_price": 70000,
+    "image": "siddiqui_decor.jpg",
+    "verified": true
+  },
+  {
+    "id": 14,
+    "name": "Floral Design",
+    "area": "PECHS",
+    "rating": 4.3,
+    "starting_price": 65000,
+    "image": "floral_design.jpg",
+    "verified": true
+  },
+  {
+    "id": 15,
+    "name": "Hanif Rajput Caterers & Decorators",
+    "area": "PECHS",
+    "rating": 4.8,
+    "starting_price": 80000,
+    "image": "hanif_rajput.jpg",
+    "verified": true
+  },
+  {
+    "id": 16,
+    "name": "Craft Master",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.6,
+    "starting_price": 80000,
+    "image": "craft_master.jpg",
+    "verified": true
+  },
+  {
+    "id": 17,
+    "name": "Aimz Event Planners & Decorators",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.4,
+    "starting_price": 75000,
+    "image": "aimz_events.jpg",
+    "verified": true
+  },
+  {
+    "id": 18,
+    "name": "Kamz & Kirz",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.3,
+    "starting_price": 70000,
+    "image": "kamz_kirz.jpg",
+    "verified": true
+  },
+  {
+    "id": 19,
+    "name": "Zia Royal Caterers",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.2,
+    "starting_price": 60000,
+    "image": "zia_royal.jpg",
+    "verified": true
+  },
+  {
+    "id": 20,
+    "name": "Nipa Decorators",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.1,
+    "starting_price": 55000,
+    "image": "nipa_decor.jpg",
+    "verified": true
+  },
+  {
+    "id": 21,
+    "name": "Atelier III",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.7,
+    "starting_price": 95000,
+    "image": "atelier3.jpg",
+    "verified": true
+  },
+  {
+    "id": 22,
+    "name": "Seven Aura Decor",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.5,
+    "starting_price": 80000,
+    "image": "seven_aura.jpg",
+    "verified": true
+  },
+  {
+    "id": 23,
+    "name": "Bella Vista Banquet & Decor",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.4,
+    "starting_price": 140000,
+    "image": "bella_vista.jpg",
+    "verified": true
+  },
+  {
+    "id": 24,
+    "name": "Johar Grand Decor",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.3,
+    "starting_price": 75000,
+    "image": "johar_grand.jpg",
+    "verified": true
+  },
+  {
+    "id": 25,
+    "name": "Pearl Johar Events",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.2,
+    "starting_price": 70000,
+    "image": "pearl_johar.jpg",
+    "verified": true
+  },
+  {
+    "id": 26,
+    "name": "Ahmed Party Decorators",
+    "area": "Federal B Area",
+    "rating": 4.3,
+    "starting_price": 50000,
+    "image": "ahmed_party.jpg",
+    "verified": true
+  },
+  {
+    "id": 27,
+    "name": "Pasha Catering Service",
+    "area": "Federal B Area",
+    "rating": 4.2,
+    "starting_price": 55000,
+    "image": "pasha_catering.jpg",
+    "verified": true
+  },
+  {
+    "id": 28,
+    "name": "The Grand Caterers & Decorators",
+    "area": "Federal B Area",
+    "rating": 4.1,
+    "starting_price": 60000,
+    "image": "grand_caterers.jpg",
+    "verified": true
+  },
+  {
+    "id": 29,
+    "name": "Umer Caterers & Party Decorators",
+    "area": "Federal B Area",
+    "rating": 4.0,
+    "starting_price": 50000,
+    "image": "umer_caterers.jpg",
+    "verified": true
+  },
+  {
+    "id": 30,
+    "name": "FB Area Decor Hub",
+    "area": "Federal B Area",
+    "rating": 4.0,
+    "starting_price": 45000,
+    "image": "fb_decor_hub.jpg",
+    "verified": true
+  },
+  {
+    "id": 31,
+    "name": "VOGUE THE INTERIOR MASTER",
+    "area": "Bahadurabad",
+    "rating": 4.8,
+    "starting_price": 100000,
+    "image": "vogue_interior.jpg",
+    "verified": true
+  },
+  {
+    "id": 32,
+    "name": "The Wedder's - Event Management",
+    "area": "Bahadurabad",
+    "rating": 4.4,
+    "starting_price": 70000,
+    "image": "wedders.jpg",
+    "verified": true
+  },
+  {
+    "id": 33,
+    "name": "Party Popper - Event Planner",
+    "area": "Bahadurabad",
+    "rating": 4.3,
+    "starting_price": 65000,
+    "image": "party_popper.jpg",
+    "verified": true
+  },
+  {
+    "id": 34,
+    "name": "Joy Planner",
+    "area": "Bahadurabad",
+    "rating": 4.2,
+    "starting_price": 60000,
+    "image": "joy_planner.jpg",
+    "verified": true
+  },
+  {
+    "id": 35,
+    "name": "Nayyer Decoration Services",
+    "area": "Bahadurabad",
+    "rating": 4.1,
+    "starting_price": 55000,
+    "image": "nayyer_decor.jpg",
+    "verified": true
+  },
+  {
+    "id": 36,
+    "name": "Siddiqui Decor",
+    "area": "Tariq Road",
+    "rating": 4.4,
+    "starting_price": 70000,
+    "image": "siddiqui_tariq.jpg",
+    "verified": true
+  },
+  {
+    "id": 37,
+    "name": "The Luxor Banquet",
+    "area": "Tariq Road",
+    "rating": 4.6,
+    "starting_price": 120000,
+    "image": "luxor_banquet.jpg",
+    "verified": true
+  },
+  {
+    "id": 38,
+    "name": "The Liberty Ballroom",
+    "area": "Tariq Road",
+    "rating": 4.5,
+    "starting_price": 100000,
+    "image": "liberty_ballroom.jpg",
+    "verified": true
+  },
+  {
+    "id": 39,
+    "name": "Tariq Road Decor Center",
+    "area": "Tariq Road",
+    "rating": 4.2,
+    "starting_price": 55000,
+    "image": "tariq_decor.jpg",
+    "verified": true
+  },
+  {
+    "id": 40,
+    "name": "Elite Tariq Events",
+    "area": "Tariq Road",
+    "rating": 4.3,
+    "starting_price": 75000,
+    "image": "elite_tariq.jpg",
+    "verified": true
+  },
+  {
+    "id": 41,
+    "name": "Kitchen Corner & Interiors",
+    "area": "North Nazimabad",
+    "rating": 4.5,
+    "starting_price": 70000,
+    "image": "kitchen_corner.jpg",
+    "verified": true
+  },
+  {
+    "id": 42,
+    "name": "Event Art",
+    "area": "North Nazimabad",
+    "rating": 4.4,
+    "starting_price": 65000,
+    "image": "event_art.jpg",
+    "verified": true
+  },
+  {
+    "id": 43,
+    "name": "Aatim international",
+    "area": "North Nazimabad",
+    "rating": 4.3,
+    "starting_price": 60000,
+    "image": "aatim_intl.jpg",
+    "verified": true
+  },
+  {
+    "id": 44,
+    "name": "AL Ghani Kitchen House",
+    "area": "North Nazimabad",
+    "rating": 4.2,
+    "starting_price": 55000,
+    "image": "al_ghani.jpg",
+    "verified": true
+  },
+  {
+    "id": 45,
+    "name": "Royal NN Events",
+    "area": "North Nazimabad",
+    "rating": 4.2,
+    "starting_price": 58000,
+    "image": "royal_nn.jpg",
+    "verified": true
+  },
+  {
+    "id": 46,
+    "name": "Wall Art Pakistan",
+    "area": "North Karachi",
+    "rating": 5.0,
+    "starting_price": 60000,
+    "image": "wall_art.jpg",
+    "verified": true
+  },
+  {
+    "id": 47,
+    "name": "Modern Decorative",
+    "area": "North Karachi",
+    "rating": 4.7,
+    "starting_price": 55000,
+    "image": "modern_decorative.jpg",
+    "verified": true
+  },
+  {
+    "id": 48,
+    "name": "Bawarchi.com",
+    "area": "North Karachi",
+    "rating": 4.2,
+    "starting_price": 50000,
+    "image": "bawarchi.jpg",
+    "verified": true
+  },
+  {
+    "id": 49,
+    "name": "Taj Tent House & Catering Service",
+    "area": "North Karachi",
+    "rating": 4.3,
+    "starting_price": 55000,
+    "image": "taj_tent.jpg",
+    "verified": true
+  },
+  {
+    "id": 50,
+    "name": "Al-Shahid Pakwan",
+    "area": "North Karachi",
+    "rating": 5.0,
+    "starting_price": 45000,
+    "image": "al_shahid.jpg",
+    "verified": true
+  }
+]

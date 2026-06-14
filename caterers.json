@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "name": "Marcem Event Solutions",
+    "area": "DHA",
+    "rating": 4.8,
+    "starting_price": 450000,
+    "image": "marcem_dha.jpg",
+    "verified": true
+  },
+  {
+    "id": 2,
+    "name": "Quality Catering Services",
+    "area": "DHA",
+    "rating": 4.4,
+    "starting_price": 350000,
+    "image": "quality_dha.jpg",
+    "verified": true
+  },
+  {
+    "id": 3,
+    "name": "Imperial Caterers",
+    "area": "DHA",
+    "rating": 4.7,
+    "starting_price": 380000,
+    "image": "imperial_dha.jpg",
+    "verified": true
+  },
+  {
+    "id": 4,
+    "name": "Kausar Catering & Decorations",
+    "area": "DHA",
+    "rating": 4.3,
+    "starting_price": 320000,
+    "image": "kausar_dha.jpg",
+    "verified": true
+  },
+  {
+    "id": 5,
+    "name": "Professional Caterers Limited",
+    "area": "DHA",
+    "rating": 4.6,
+    "starting_price": 400000,
+    "image": "professional_dha.jpg",
+    "verified": true
+  },
+  {
+    "id": 6,
+    "name": "Lals Catering",
+    "area": "Clifton",
+    "rating": 4.9,
+    "starting_price": 500000,
+    "image": "lals_clifton.jpg",
+    "verified": true
+  },
+  {
+    "id": 7,
+    "name": "Sarah Caterers & Event Planner",
+    "area": "Clifton",
+    "rating": 4.4,
+    "starting_price": 380000,
+    "image": "sarah_clifton.jpg",
+    "verified": true
+  },
+  {
+    "id": 8,
+    "name": "Oomda Catering & Event Management",
+    "area": "Clifton",
+    "rating": 4.5,
+    "starting_price": 350000,
+    "image": "oomda_clifton.jpg",
+    "verified": true
+  },
+  {
+    "id": 9,
+    "name": "Quality Catering Services",
+    "area": "Clifton",
+    "rating": 4.4,
+    "starting_price": 380000,
+    "image": "quality_clifton.jpg",
+    "verified": true
+  },
+  {
+    "id": 10,
+    "name": "Professional Caterers Limited",
+    "area": "Clifton",
+    "rating": 4.6,
+    "starting_price": 420000,
+    "image": "professional_clifton.jpg",
+    "verified": true
+  },
+  {
+    "id": 11,
+    "name": "Hanif Rajput Caterers",
+    "area": "PECHS",
+    "rating": 4.9,
+    "starting_price": 450000,
+    "image": "hanif_pechs.jpg",
+    "verified": true
+  },
+  {
+    "id": 12,
+    "name": "Oomda Catering & Event Management",
+    "area": "PECHS",
+    "rating": 4.5,
+    "starting_price": 350000,
+    "image": "oomda_pechs.jpg",
+    "verified": true
+  },
+  {
+    "id": 13,
+    "name": "Quality Catering Services",
+    "area": "PECHS",
+    "rating": 4.4,
+    "starting_price": 320000,
+    "image": "quality_pechs.jpg",
+    "verified": true
+  },
+  {
+    "id": 14,
+    "name": "Imperial Caterers",
+    "area": "PECHS",
+    "rating": 4.7,
+    "starting_price": 350000,
+    "image": "imperial_pechs.jpg",
+    "verified": true
+  },
+  {
+    "id": 15,
+    "name": "Professional Caterers Limited",
+    "area": "PECHS",
+    "rating": 4.6,
+    "starting_price": 380000,
+    "image": "professional_pechs.jpg",
+    "verified": true
+  },
+  {
+    "id": 16,
+    "name": "Abbas Catering Service",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.5,
+    "starting_price": 280000,
+    "image": "abbas_gulshan.jpg",
+    "verified": true
+  },
+  {
+    "id": 17,
+    "name": "Zia Royal Caterers",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.3,
+    "starting_price": 250000,
+    "image": "zia_gulshan.jpg",
+    "verified": true
+  },
+  {
+    "id": 18,
+    "name": "Oomda Catering & Event Management",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.5,
+    "starting_price": 320000,
+    "image": "oomda_gulshan.jpg",
+    "verified": true
+  },
+  {
+    "id": 19,
+    "name": "Quality Catering Services",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.4,
+    "starting_price": 300000,
+    "image": "quality_gulshan.jpg",
+    "verified": true
+  },
+  {
+    "id": 20,
+    "name": "Hanif Rajput Caterers",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.9,
+    "starting_price": 420000,
+    "image": "hanif_gulshan.jpg",
+    "verified": true
+  },
+  {
+    "id": 21,
+    "name": "Shaheen Shinwari Caterers",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.5,
+    "starting_price": 260000,
+    "image": "shaheen_johar.jpg",
+    "verified": true
+  },
+  {
+    "id": 22,
+    "name": "Abbas Catering Service",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.5,
+    "starting_price": 260000,
+    "image": "abbas_johar.jpg",
+    "verified": true
+  },
+  {
+    "id": 23,
+    "name": "Zia Royal Caterers",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.3,
+    "starting_price": 240000,
+    "image": "zia_johar.jpg",
+    "verified": true
+  },
+  {
+    "id": 24,
+    "name": "Oomda Catering & Event Management",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.5,
+    "starting_price": 300000,
+    "image": "oomda_johar.jpg",
+    "verified": true
+  },
+  {
+    "id": 25,
+    "name": "Quality Catering Services",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.4,
+    "starting_price": 280000,
+    "image": "quality_johar.jpg",
+    "verified": true
+  },
+  {
+    "id": 26,
+    "name": "Oomda Catering & Event Management",
+    "area": "Federal B Area",
+    "rating": 4.5,
+    "starting_price": 280000,
+    "image": "oomda_fb.jpg",
+    "verified": true
+  },
+  {
+    "id": 27,
+    "name": "Zia Royal Caterers",
+    "area": "Federal B Area",
+    "rating": 4.3,
+    "starting_price": 220000,
+    "image": "zia_fb.jpg",
+    "verified": true
+  },
+  {
+    "id": 28,
+    "name": "Quality Catering Services",
+    "area": "Federal B Area",
+    "rating": 4.4,
+    "starting_price": 260000,
+    "image": "quality_fb.jpg",
+    "verified": true
+  },
+  {
+    "id": 29,
+    "name": "Hanif Rajput Caterers",
+    "area": "Federal B Area",
+    "rating": 4.9,
+    "starting_price": 380000,
+    "image": "hanif_fb.jpg",
+    "verified": true
+  },
+  {
+    "id": 30,
+    "name": "Professional Caterers Limited",
+    "area": "Federal B Area",
+    "rating": 4.6,
+    "starting_price": 350000,
+    "image": "professional_fb.jpg",
+    "verified": true
+  },
+  {
+    "id": 31,
+    "name": "Oomda Catering & Event Management",
+    "area": "Bahadurabad",
+    "rating": 4.5,
+    "starting_price": 300000,
+    "image": "oomda_bahadurabad.jpg",
+    "verified": true
+  },
+  {
+    "id": 32,
+    "name": "Zia Royal Caterers",
+    "area": "Bahadurabad",
+    "rating": 4.3,
+    "starting_price": 240000,
+    "image": "zia_bahadurabad.jpg",
+    "verified": true
+  },
+  {
+    "id": 33,
+    "name": "Quality Catering Services",
+    "area": "Bahadurabad",
+    "rating": 4.4,
+    "starting_price": 280000,
+    "image": "quality_bahadurabad.jpg",
+    "verified": true
+  },
+  {
+    "id": 34,
+    "name": "Hanif Rajput Caterers",
+    "area": "Bahadurabad",
+    "rating": 4.9,
+    "starting_price": 400000,
+    "image": "hanif_bahadurabad.jpg",
+    "verified": true
+  },
+  {
+    "id": 35,
+    "name": "Professional Caterers Limited",
+    "area": "Bahadurabad",
+    "rating": 4.6,
+    "starting_price": 360000,
+    "image": "professional_bahadurabad.jpg",
+    "verified": true
+  },
+  {
+    "id": 36,
+    "name": "Oomda Catering & Event Management",
+    "area": "Tariq Road",
+    "rating": 4.5,
+    "starting_price": 320000,
+    "image": "oomda_tariq.jpg",
+    "verified": true
+  },
+  {
+    "id": 37,
+    "name": "Quality Catering Services",
+    "area": "Tariq Road",
+    "rating": 4.4,
+    "starting_price": 300000,
+    "image": "quality_tariq.jpg",
+    "verified": true
+  },
+  {
+    "id": 38,
+    "name": "Hanif Rajput Caterers",
+    "area": "Tariq Road",
+    "rating": 4.9,
+    "starting_price": 420000,
+    "image": "hanif_tariq.jpg",
+    "verified": true
+  },
+  {
+    "id": 39,
+    "name": "Professional Caterers Limited",
+    "area": "Tariq Road",
+    "rating": 4.6,
+    "starting_price": 380000,
+    "image": "professional_tariq.jpg",
+    "verified": true
+  },
+  {
+    "id": 40,
+    "name": "Kausar Catering & Decorations",
+    "area": "Tariq Road",
+    "rating": 4.3,
+    "starting_price": 280000,
+    "image": "kausar_tariq.jpg",
+    "verified": true
+  },
+  {
+    "id": 41,
+    "name": "Oomda Catering & Event Management",
+    "area": "North Nazimabad",
+    "rating": 4.5,
+    "starting_price": 280000,
+    "image": "oomda_nn.jpg",
+    "verified": true
+  },
+  {
+    "id": 42,
+    "name": "Zia Royal Caterers",
+    "area": "North Nazimabad",
+    "rating": 4.3,
+    "starting_price": 230000,
+    "image": "zia_nn.jpg",
+    "verified": true
+  },
+  {
+    "id": 43,
+    "name": "Quality Catering Services",
+    "area": "North Nazimabad",
+    "rating": 4.4,
+    "starting_price": 260000,
+    "image": "quality_nn.jpg",
+    "verified": true
+  },
+  {
+    "id": 44,
+    "name": "Hanif Rajput Caterers",
+    "area": "North Nazimabad",
+    "rating": 4.9,
+    "starting_price": 380000,
+    "image": "hanif_nn.jpg",
+    "verified": true
+  },
+  {
+    "id": 45,
+    "name": "Professional Caterers Limited",
+    "area": "North Nazimabad",
+    "rating": 4.6,
+    "starting_price": 350000,
+    "image": "professional_nn.jpg",
+    "verified": true
+  },
+  {
+    "id": 46,
+    "name": "Shaheen Shinwari Caterers",
+    "area": "North Karachi",
+    "rating": 4.5,
+    "starting_price": 260000,
+    "image": "shaheen_nk.jpg",
+    "verified": true
+  },
+  {
+    "id": 47,
+    "name": "Oomda Catering & Event Management",
+    "area": "North Karachi",
+    "rating": 4.5,
+    "starting_price": 260000,
+    "image": "oomda_nk.jpg",
+    "verified": true
+  },
+  {
+    "id": 48,
+    "name": "Zia Royal Caterers",
+    "area": "North Karachi",
+    "rating": 4.3,
+    "starting_price": 210000,
+    "image": "zia_nk.jpg",
+    "verified": true
+  },
+  {
+    "id": 49,
+    "name": "Quality Catering Services",
+    "area": "North Karachi",
+    "rating": 4.4,
+    "starting_price": 240000,
+    "image": "quality_nk.jpg",
+    "verified": true
+  },
+  {
+    "id": 50,
+    "name": "Hanif Rajput Caterers",
+    "area": "North Karachi",
+    "rating": 4.9,
+    "starting_price": 360000,
+    "image": "hanif_nk.jpg",
+    "verified": true
+  }
+]

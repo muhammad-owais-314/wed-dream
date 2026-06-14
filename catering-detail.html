@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caterer Detail | WeDream</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --rose: #b93b56;
+            --gold: #c89b2c;
+            --gold-light: #e8b93c;
+            --dark: #070707;
+            --dark2: #0e0b0c;
+            --glass: rgba(18,14,16,0.88);
+            --shadow: 0 25px 45px -12px rgba(0,0,0,0.8), 0 0 0 1px rgba(200,155,44,0.15);
+        }
+
+        body {
+            background: var(--dark);
+            font-family: 'Jost', sans-serif;
+            color: #f0ede8;
+            overflow-x: hidden;
+        }
+
+        #loadingScreen {
+            position: fixed;
+            inset: 0;
+            background: var(--dark);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            transition: opacity 0.4s, visibility 0.4s;
+        }
+        #loadingScreen.hidden { opacity: 0; visibility: hidden; }
+        .loader-ring {
+            width: 52px;
+            height: 52px;
+            border: 3px solid rgba(200,155,44,0.15);
+            border-top-color: var(--gold);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .loader-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.4);
+            letter-spacing: 0.08em;
+        }
+
+        #errorScreen {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: var(--dark);
+            z-index: 9998;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 16px;
+            text-align: center;
+            padding: 20px;
+        }
+        #errorScreen.show { display: flex; }
+
+        .page-hero {
+            background: radial-gradient(ellipse at 20% 0%, #1f1418 0%, #050202 100%);
+            padding: 36px 0 60px;
+            border-bottom: 1px solid rgba(200,155,44,0.2);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(200,155,44,0.4);
+            border-radius: 60px;
+            padding: 7px 20px;
+            color: var(--gold-light);
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-bottom: 28px;
+        }
+        .back-btn:hover {
+            background: var(--gold);
+            color: #070707;
+            border-color: var(--gold);
+            box-shadow: 0 4px 18px rgba(200,155,44,0.35);
+        }
+
+        .main-img-wrap {
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid rgba(200,155,44,0.35);
+            box-shadow: var(--shadow);
+            margin-bottom: 12px;
+        }
+        .main-img-wrap img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.3s;
+        }
+        .thumb-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+        .thumb-item {
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid rgba(200,155,44,0.25);
+            cursor: pointer;
+            transition: border-color 0.25s, transform 0.25s;
+        }
+        .thumb-item.active, .thumb-item:hover {
+            border-color: var(--gold);
+            transform: translateY(-2px);
+        }
+        .thumb-item img { width: 100%; height: 75px; object-fit: cover; display: block; }
+
+        .g-card {
+            background: var(--glass);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(200,155,44,0.25);
+            border-radius: 24px;
+            padding: 1.5rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .g-card:hover {
+            border-color: rgba(200,155,44,0.55);
+            box-shadow: 0 15px 35px -10px rgba(200,155,44,0.15);
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 1rem 0;
+            opacity: 0.5;
+        }
+
+        .gold-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: linear-gradient(135deg, #c89b2c, #e8b93c);
+            color: #070707;
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            padding: 4px 14px;
+            border-radius: 60px;
+            margin-bottom: 10px;
+        }
+
+        .caterer-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #fff9ef;
+            line-height: 1.15;
+        }
+
+        .caterer-address { color: rgba(255,255,255,0.5); font-size: 0.87rem; margin-top: 6px; }
+        .caterer-address i { color: var(--gold); margin-right: 5px; }
+
+        .stars { color: var(--gold); }
+        .rating-pill {
+            background: rgba(200,155,44,0.18);
+            padding: 2px 12px;
+            border-radius: 40px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--gold-light);
+        }
+
+        .price-from {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .price-big { font-size: 2.4rem; font-weight: 800; color: #fff; line-height: 1; }
+        .price-big span { font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.45); margin-left: 4px; }
+        .price-per-head-detail { font-size: 0.9rem; color: var(--gold-light); margin-top: 4px; }
+
+        .specialty-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+        .stag {
+            background: rgba(200,155,44,0.1);
+            border-left: 2px solid var(--gold);
+            border-radius: 0 30px 30px 0;
+            padding: 4px 14px;
+            font-size: 0.74rem;
+            font-weight: 500;
+            color: #e8cf9a;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .stag:hover { background: rgba(200,155,44,0.22); transform: translateX(3px); }
+
+        .cuisine-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+        .ctag {
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(200,155,44,0.3);
+            border-radius: 30px;
+            padding: 3px 12px;
+            font-size: 0.7rem;
+            color: var(--gold-light);
+        }
+
+        .cap-row { display: flex; gap: 12px; margin-top: 10px; }
+        .cap-item {
+            flex: 1;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(200,155,44,0.2);
+            border-radius: 18px;
+            padding: 12px 8px;
+            text-align: center;
+            font-size: 0.82rem;
+            transition: 0.25s;
+        }
+        .cap-item i { color: var(--gold); margin-right: 5px; }
+        .cap-item:hover {
+            border-color: var(--gold);
+            background: rgba(200,155,44,0.08);
+            transform: translateY(-2px);
+        }
+
+        .pkg-card {
+            background: rgba(0,0,0,0.45);
+            border: 1px solid rgba(200,155,44,0.2);
+            border-radius: 18px;
+            padding: 1rem 0.75rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            height: 100%;
+        }
+        .pkg-card:hover, .pkg-card.active {
+            border-color: var(--gold);
+            background: linear-gradient(145deg, rgba(200,155,44,0.18), rgba(200,155,44,0.04));
+            box-shadow: 0 0 0 2px var(--gold);
+        }
+        .pkg-name { font-weight: 800; font-size: 1.1rem; color: var(--gold-light); }
+        .pkg-price { font-size: 1rem; font-weight: 700; color: #fff; margin-top: 4px; }
+        .pkg-book {
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+            background: transparent;
+            border: 1px solid var(--gold);
+            border-radius: 40px;
+            padding: 5px 10px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .pkg-book:hover { background: var(--gold); color: #070707; }
+
+        .includes-list { margin-top: 10px; padding-left: 0; list-style: none; }
+        .includes-list li { font-size: 0.7rem; color: rgba(255,255,255,0.55); margin-bottom: 4px; }
+        .includes-list li i { color: var(--gold); margin-right: 5px; width: 14px; }
+
+        .cta-btn {
+            display: block;
+            width: 100%;
+            border: none;
+            border-radius: 50px;
+            padding: 11px 16px;
+            font-weight: 700;
+            font-size: 0.87rem;
+            text-align: center;
+            text-decoration: none;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+        .cta-call { background: var(--gold); color: #070707; margin-bottom: 10px; }
+        .cta-call:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(200,155,44,0.35); }
+        .cta-wa { background: #25D366; color: #fff; }
+        .cta-wa:hover { background: #1ebe5d; transform: translateY(-1px); color: #fff; }
+        .cta-pay {
+            background: linear-gradient(95deg, #c89b2c, #e8b93c);
+            color: #070707;
+            margin-top: 12px;
+            font-size: 0.9rem;
+        }
+        .cta-pay:hover { box-shadow: 0 8px 22px rgba(200,155,44,0.4); transform: translateY(-1px); }
+
+        .review-card {
+            background: rgba(255,255,255,0.03);
+            border-left: 3px solid var(--gold);
+            border-radius: 16px;
+            padding: 1rem;
+            margin-bottom: 12px;
+            transition: 0.25s;
+        }
+        .review-card:hover { background: rgba(200,155,44,0.07); transform: translateX(4px); }
+        .review-quote { color: rgba(255,255,255,0.55); font-size: 0.87rem; margin-top: 8px; font-style: italic; }
+
+        .pay-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(200,155,44,0.12);
+            border: 1px solid rgba(200,155,44,0.25);
+            border-radius: 40px;
+            padding: 5px 14px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: #e8cf9a;
+            margin: 4px;
+            transition: 0.2s;
+        }
+        .pay-badge:hover { background: rgba(200,155,44,0.25); transform: translateY(-2px); }
+
+        .pay-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.92);
+            backdrop-filter: blur(14px);
+            z-index: 9000;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+        .pay-overlay.open { display: flex; animation: fadeIn 0.25s ease; }
+
+        .pay-modal {
+            background: linear-gradient(145deg, #141011, #0c090a);
+            border: 1px solid var(--gold);
+            border-radius: 32px;
+            width: 100%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 2rem;
+            box-shadow: 0 40px 70px rgba(0,0,0,0.7);
+            animation: slideUp 0.3s ease;
+        }
+        .pay-modal::-webkit-scrollbar { width: 4px; }
+        .pay-modal::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
+
+        @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.6);
+            font-size: 1.6rem;
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.2s;
+            padding: 0;
+        }
+        .modal-close:hover { color: #fff; }
+        .modal-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; }
+        .modal-amount { font-size: 2rem; font-weight: 800; color: var(--gold-light); }
+
+        .method-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+        .m-tab {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(200,155,44,0.28);
+            border-radius: 50px;
+            padding: 8px 16px;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.82rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .m-tab:hover, .m-tab.active { background: var(--gold); color: #070707; border-color: var(--gold); }
+        .m-tab i { font-size: 1rem; }
+
+        .pay-form { display: none; }
+        .pay-form.show { display: block; }
+        .f-label { font-size: 0.78rem; color: rgba(255,255,255,0.55); margin-bottom: 5px; display: block; font-weight: 500; }
+        .f-input {
+            width: 100%;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(200,155,44,0.35);
+            border-radius: 50px;
+            padding: 10px 18px;
+            color: #fff;
+            font-family: 'Jost', sans-serif;
+            font-size: 0.9rem;
+            transition: 0.2s;
+            outline: none;
+        }
+        .f-input:focus { border-color: var(--gold); box-shadow: 0 0 10px rgba(200,155,44,0.3); }
+        .f-input::placeholder { color: rgba(255,255,255,0.3); }
+        .f-group { margin-bottom: 14px; }
+
+        .info-box {
+            background: rgba(200,155,44,0.08);
+            border: 1px solid rgba(200,155,44,0.25);
+            border-radius: 14px;
+            padding: 10px 14px;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 10px;
+        }
+        .info-box i { color: var(--gold); }
+
+        .btn-pay {
+            width: 100%;
+            background: linear-gradient(95deg, #c89b2c, #e8b93c);
+            border: none;
+            border-radius: 50px;
+            padding: 13px;
+            font-size: 1rem;
+            font-weight: 800;
+            color: #070707;
+            cursor: pointer;
+            margin-top: 18px;
+            transition: 0.25s;
+        }
+        .btn-pay:hover { transform: scale(1.02); box-shadow: 0 8px 24px rgba(200,155,44,0.45); }
+        .btn-pay:active { transform: scale(0.98); }
+        .btn-pay:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+        .secure-note { text-align: center; font-size: 0.72rem; color: rgba(255,255,255,0.35); margin-top: 12px; }
+        .secure-note i { color: var(--gold); }
+
+        .toast-wrap {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            pointer-events: none;
+        }
+        .toast-item {
+            background: #1a1215;
+            border-left: 4px solid var(--gold);
+            border-radius: 50px;
+            padding: 12px 20px;
+            font-size: 0.83rem;
+            font-weight: 500;
+            color: #f0ede8;
+            min-width: 260px;
+            max-width: 340px;
+            transform: translateX(120%);
+            transition: transform 0.35s cubic-bezier(.34,1.56,.64,1);
+            pointer-events: auto;
+        }
+        .toast-item.show { transform: translateX(0); }
+        .toast-item.success { border-color: #25D366; }
+        .toast-item.error { border-color: var(--rose); }
+
+        @media (max-width: 768px) {
+            .caterer-title { font-size: 1.7rem; }
+            .main-img-wrap img { height: 220px; }
+            .cap-row { flex-direction: column; }
+            .price-big { font-size: 1.8rem; }
+            .pay-modal { padding: 1.5rem; }
+            .modal-amount { font-size: 1.6rem; }
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #1a1215; }
+        ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 6px; }
+        ::selection { background: var(--gold); color: #070707; }
+        html { scroll-behavior: smooth; }
+
+        .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.5s ease, transform 0.5s ease; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+<div id="loadingScreen">
+    <div class="loader-ring"></div>
+    <p class="loader-text">Loading Caterer Details...</p>
+</div>
+
+<div id="errorScreen">
+    <i class="fas fa-exclamation-triangle" style="font-size:3rem;color:var(--gold);"></i>
+    <h3 style="font-family:'Cormorant Garamond';font-size:1.8rem;">Caterer Not Found</h3>
+    <p style="color:rgba(255,255,255,0.45);">Yeh caterer exist nahi karta ya data load nahi hua.</p>
+    <a href="catering.html" style="background:var(--gold);color:#070707;padding:10px 28px;border-radius:50px;text-decoration:none;font-weight:700;margin-top:12px;">
+        <i class="fas fa-arrow-left me-2"></i> Back to Caterers
+    </a>
+</div>
+
+<div id="nav-placeholder"></div>
+
+<div id="mainContent" style="display:none;">
+    <section class="page-hero">
+        <div class="container">
+            <a href="catering.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Caterers
+            </a>
+
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <div class="main-img-wrap fade-up">
+                        <img id="mainImg" src="" alt="Caterer Image">
+                    </div>
+                    <div class="thumb-grid mb-4 fade-up" id="thumbGrid"></div>
+
+                    <div class="g-card fade-up mb-4">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <i class="fas fa-utensils" style="color:var(--gold);font-size:1.3rem;"></i>
+                            <h5 class="mb-0" style="font-family:'Cormorant Garamond';font-size:1.3rem;">Signature Specialties</h5>
+                        </div>
+                        <div class="specialty-tags" id="specialtyTags"></div>
+                        <div class="mt-3"><strong style="font-size:0.75rem;color:rgba(255,255,255,0.5);">Cuisine Types:</strong>
+                            <div class="cuisine-tags" id="cuisineTags"></div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="cap-row" id="capRow"></div>
+                    </div>
+
+                    <div class="g-card fade-up">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <i class="fas fa-star" style="color:var(--gold);font-size:1.2rem;"></i>
+                            <h5 class="mb-0" style="font-family:'Cormorant Garamond';font-size:1.3rem;">Client Testimonials</h5>
+                        </div>
+                        <div id="reviewsContainer"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="g-card fade-up" style="position:sticky;top:90px;">
+                        <div class="gold-badge" id="verifiedBadge" style="display:none;">
+                            <i class="fas fa-gem"></i> VERIFIED PREMIUM
+                        </div>
+                        <h1 class="caterer-title" id="catererTitle"></h1>
+                        <p class="caterer-address" id="catererAddress"></p>
+
+                        <div class="d-flex align-items-center gap-2 mt-3">
+                            <div class="stars" id="starsEl"></div>
+                            <span class="rating-pill" id="ratingNum"></span>
+                            <span style="color:rgba(255,255,255,0.35);font-size:0.78rem;" id="reviewCount"></span>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div>
+                            <p class="price-from">Starting From</p>
+                            <div class="price-big" id="startingPrice"></div>
+                            <div class="price-per-head-detail" id="pricePerHead"></div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div>
+                            <h6 style="font-family:'Cormorant Garamond';font-size:1.1rem;margin-bottom:12px;">
+                                <i class="fas fa-box-open me-2" style="color:var(--gold);"></i> Catering Packages
+                            </h6>
+                            <div class="row g-2" id="pkgGrid"></div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div>
+                            <h6 style="font-family:'Cormorant Garamond';font-size:1.1rem;margin-bottom:12px;">
+                                <i class="fas fa-concierge-bell me-2" style="color:var(--gold);"></i> Service Features
+                            </h6>
+                            <div class="feature-tags" id="featureTags"></div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div>
+                            <h6 style="font-family:'Cormorant Garamond';font-size:1.1rem;margin-bottom:12px;">
+                                <i class="fas fa-headset me-2" style="color:var(--gold);"></i> Contact & Booking
+                            </h6>
+                            <a id="callBtn" href="#" class="cta-btn cta-call">
+                                <i class="fas fa-phone-alt me-2"></i> <span id="phoneText">Call Now</span>
+                            </a>
+                            <a id="waBtn" href="#" target="_blank" class="cta-btn cta-wa">
+                                <i class="fab fa-whatsapp me-2"></i> WhatsApp Inquiry
+                            </a>
+                            <small class="d-block mt-2" style="color:rgba(255,255,255,0.35);font-size:0.75rem;">
+                                <i class="far fa-clock me-1"></i> Priority response within 2 hours
+                            </small>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div>
+                            <h6 style="font-family:'Cormorant Garamond';font-size:1.1rem;margin-bottom:10px;">
+                                <i class="fas fa-wallet me-2" style="color:var(--gold);"></i> Accepted Payments
+                            </h6>
+                            <div id="paymentBadges"></div>
+                        </div>
+
+                        <button class="cta-btn cta-pay" onclick="openModal()">
+                            <i class="fas fa-credit-card me-2"></i> Book Selected Package
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<div class="pay-overlay" id="payOverlay">
+    <div class="pay-modal">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <span class="modal-title"><i class="fas fa-lock me-2" style="color:var(--gold);"></i>Secure Checkout</span>
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+        </div>
+        <div class="text-center mb-3">
+            <p style="color:rgba(255,255,255,0.5);font-size:0.82rem;margin-bottom:4px;">
+                <i class="fas fa-gem me-1" style="color:var(--gold);"></i> <span id="mPkgName">Silver Package</span>
+            </p>
+            <div class="modal-amount" id="mAmount">PKR 0</div>
+            <p style="color:rgba(255,255,255,0.3);font-size:0.72rem;" id="mCatererName"></p>
+        </div>
+
+        <div class="method-tabs">
+            <div class="m-tab active" data-method="card"><i class="fab fa-cc-visa"></i> Credit Card</div>
+            <div class="m-tab" data-method="jazzcash"><i class="fas fa-mobile-alt"></i> JazzCash</div>
+            <div class="m-tab" data-method="easypaisa"><i class="fas fa-mobile-alt"></i> Easypaisa</div>
+            <div class="m-tab" data-method="bank"><i class="fas fa-university"></i> Bank Transfer</div>
+        </div>
+
+        <div class="pay-form show" id="f-card">
+            <div class="f-group"><label class="f-label">Cardholder Name</label><input type="text" class="f-input" id="cardName" placeholder="Muhammad Ali"></div>
+            <div class="f-group"><label class="f-label">Card Number</label><input type="text" class="f-input" id="cardNumber" placeholder="4242 4242 4242 4242" maxlength="19"></div>
+            <div class="row g-2">
+                <div class="col-6 f-group"><label class="f-label">Expiry</label><input type="text" class="f-input" id="cardExpiry" placeholder="MM/YY" maxlength="5"></div>
+                <div class="col-6 f-group"><label class="f-label">CVC</label><input type="password" class="f-input" id="cardCvc" placeholder="123" maxlength="4"></div>
+            </div>
+        </div>
+
+        <div class="pay-form" id="f-jazzcash">
+            <div class="f-group"><label class="f-label">JazzCash Mobile Number</label><input type="tel" class="f-input" id="jcNum" placeholder="03XXXXXXXXX" maxlength="11"></div>
+            <div class="info-box"><i class="fas fa-info-circle me-1"></i> Payment request aapke JazzCash app pe aayega.</div>
+        </div>
+
+        <div class="pay-form" id="f-easypaisa">
+            <div class="f-group"><label class="f-label">Easypaisa Number</label><input type="tel" class="f-input" id="epNum" placeholder="03XXXXXXXXX" maxlength="11"></div>
+            <div class="info-box"><i class="fas fa-info-circle me-1"></i> Payment request aapke Easypaisa account pe jayega.</div>
+        </div>
+
+        <div class="pay-form" id="f-bank">
+            <div class="info-box mb-3"><i class="fas fa-building me-1"></i> Transfer to: <strong style="color:var(--gold-light);">Meezan Bank</strong><br>Account: <strong>01240101234567</strong><br>IBAN: <strong>PK36MEZN0001234567890</strong></div>
+            <div class="f-group"><label class="f-label">Your Bank Name</label><input type="text" class="f-input" id="bankName" placeholder="HBL / UBL / MCB"></div>
+            <div class="f-group"><label class="f-label">Your Account Number</label><input type="text" class="f-input" id="bankAcc" placeholder="Account Number"></div>
+        </div>
+
+        <button class="btn-pay" id="payBtn" onclick="processPayment()">
+            <i class="fas fa-lock me-2"></i> Confirm & Pay
+        </button>
+        <p class="secure-note"><i class="fas fa-shield-alt me-1"></i> 256-bit SSL Encrypted &bull; Instant Confirmation</p>
+    </div>
+</div>
+
+<div class="toast-wrap" id="toastWrap"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// ===== SAFE FORMAT FUNCTION (FIXED) =====
+function formatPKR(n) {
+    if (n === undefined || n === null) return '0';
+    return Number(n).toLocaleString('en-PK');
+}
+
+function buildStars(rating) {
+    if (rating === undefined || rating === null) rating = 0;
+    const full = Math.floor(rating), half = (rating - full) >= 0.5 ? 1 : 0, empty = 5 - full - half;
+    let s = '';
+    for (let i = 0; i < full; i++) s += '<i class="fas fa-star"></i>';
+    if (half) s += '<i class="fas fa-star-half-alt"></i>';
+    for (let i = 0; i < empty; i++) s += '<i class="far fa-star"></i>';
+    return s;
+}
+
+// ===== STATE =====
+let CATERER = null;
+let selected = null;
+let currentMethod = 'card';
+
+const payMethodIcons = {
+    'Cash': { icon: 'fas fa-money-bill-wave', label: 'Cash' },
+    'Bank Transfer': { icon: 'fas fa-university', label: 'Bank Transfer' },
+    'JazzCash': { icon: 'fas fa-mobile-alt', label: 'JazzCash' },
+    'Easypaisa': { icon: 'fas fa-mobile-alt', label: 'Easypaisa' },
+    'Credit Card': { icon: 'fab fa-cc-visa', label: 'Credit Card' }
+};
+
+// ===== NAVBAR & FOOTER =====
+function loadPartial(file, targetId, fallbackHtml) {
+    $.get(file).done(d => { $('#' + targetId).html(d); postNavLoad(); })
+        .fail(() => { $('#' + targetId).html(fallbackHtml); postNavLoad(); });
+}
+
+function postNavLoad() {
+    $('[data-nav]').removeClass('active');
+    $('[data-nav="vendors"]').addClass('active');
+}
+
+const navFallback = `<nav style="background:rgba(7,7,7,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(200,155,44,0.25);padding:14px 0;position:sticky;top:0;z-index:1000;">
+  <div class="container d-flex align-items-center justify-content-between">
+    <a href="index.html" style="font-family:'Cormorant Garamond';font-size:1.7rem;font-weight:700;color:#fff9ef;text-decoration:none;">
+      <i class="fas fa-crown me-2" style="color:#c89b2c;"></i> WedDream
+    </a>
+    <div class="d-none d-lg-flex gap-4">
+      <a href="index.html" data-nav="home" style="color:rgba(255,255,255,0.65);text-decoration:none;font-weight:500;">Home</a>
+      <a href="halls.html" data-nav="halls" style="color:rgba(255,255,255,0.65);text-decoration:none;font-weight:500;">Halls</a>
+      <a href="catering.html" data-nav="vendors" style="color:#c89b2c;text-decoration:none;font-weight:600;">Caterers</a>
+      <a href="about.html" data-nav="about" style="color:rgba(255,255,255,0.65);text-decoration:none;font-weight:500;">About</a>
+    </div>
+  </div>
+</nav>`;
+
+const footerFallback = `<footer style="background:#030101;border-top:1px solid rgba(200,155,44,0.18);padding:36px 0;margin-top:60px;text-align:center;">
+  <div class="container">
+    <p style="font-family:'Cormorant Garamond';font-size:1.3rem;color:#fff9ef;margin-bottom:8px;">
+      <i class="fas fa-crown me-2" style="color:#c89b2c;"></i> WedDream
+    </p>
+    <p style="color:rgba(255,255,255,0.3);font-size:0.82rem;">© 2024 WedDream. All rights reserved.</p>
+  </div>
+</footer>`;
+
+$(document).ready(() => {
+    loadPartial('navebar.html', 'nav-placeholder', navFallback);
+    loadPartial('footer.html', 'footer-placeholder', footerFallback);
+});
+
+// ===== RENDER CATERER DATA =====
+function renderCaterer(caterer) {
+    if (!caterer) return;
+    
+    CATERER = caterer;
+    
+    // SAFE: Check if packages exist
+    if (caterer.packages && caterer.packages.length > 0) {
+        selected = { ...caterer.packages[0] };
+    } else {
+        selected = { name: 'Standard', price: caterer.starting_price || 0, min_guests: caterer.min_guests || 50, includes: ['Buffet Setup', 'Waitstaff', 'Cutlery'] };
+    }
+
+    document.title = (caterer.name || 'Caterer') + ' | WedDream';
+
+    // Main Image
+    const firstImg = (caterer.gallery && caterer.gallery[0]) ? caterer.gallery[0] : 'https://picsum.photos/seed/default/900/600';
+    document.getElementById('mainImg').src = firstImg;
+
+    // Thumbnails
+    const thumbGrid = document.getElementById('thumbGrid');
+    if (caterer.gallery && caterer.gallery.length > 0) {
+        thumbGrid.innerHTML = caterer.gallery.map((img, i) => `
+            <div class="thumb-item ${i === 0 ? 'active' : ''}" data-src="${img}">
+                <img src="${img}" alt="Gallery ${i + 1}" onerror="this.src='https://picsum.photos/seed/fallback/200/150'">
+            </div>
+        `).join('');
+    } else {
+        thumbGrid.innerHTML = `<div class="thumb-item active" data-src="https://picsum.photos/seed/default/900/600">
+            <img src="https://picsum.photos/seed/default/200/150" alt="Default">
+        </div>`;
+    }
+
+    thumbGrid.querySelectorAll('.thumb-item').forEach(t => {
+        t.addEventListener('click', function () {
+            thumbGrid.querySelectorAll('.thumb-item').forEach(x => x.classList.remove('active'));
+            this.classList.add('active');
+            const mainImg = document.getElementById('mainImg');
+            mainImg.style.opacity = '0';
+            setTimeout(() => { mainImg.src = this.dataset.src; mainImg.style.opacity = '1'; }, 200);
+        });
+    });
+
+    // Specialties
+    const specialtyIcons = {
+        'Pakistani Cuisine': 'fas fa-utensils',
+        'BBQ': 'fas fa-fire',
+        'Chinese': 'fas fa-chopsticks',
+        'Continental': 'fas fa-globe',
+        'Mughlai': 'fas fa-crown',
+        'Live Stations': 'fas fa-cooking',
+        'Gourmet Catering': 'fas fa-star-of-life',
+        'International Cuisines': 'fas fa-plane',
+        'Custom Menus': 'fas fa-pen-fancy',
+        'Fusion': 'fas fa-magic'
+    };
+    const specialties = caterer.specialties || ['Pakistani', 'BBQ', 'Chinese'];
+    document.getElementById('specialtyTags').innerHTML = specialties.map(s =>
+        `<span class="stag"><i class="${specialtyIcons[s] || 'fas fa-check-circle'} me-1"></i> ${s}</span>`
+    ).join('');
+
+    // Cuisine Types
+    const cuisineTypes = caterer.cuisine_types || ['Desi', 'BBQ', 'Chinese'];
+    document.getElementById('cuisineTags').innerHTML = cuisineTypes.map(c =>
+        `<span class="ctag"><i class="fas fa-tag me-1"></i> ${c}</span>`
+    ).join('');
+
+    // Capacity
+    document.getElementById('capRow').innerHTML = `
+        <div class="cap-item"><i class="fas fa-users"></i><strong>${formatPKR(caterer.capacity)}</strong> Max Guests</div>
+        <div class="cap-item"><i class="fas fa-user-friends"></i><strong>${caterer.min_guests || 50}</strong> Min Guests</div>
+    `;
+
+    // Reviews
+    const reviews = caterer.reviews || [];
+    document.getElementById('reviewsContainer').innerHTML = reviews.map(rev => `
+        <div class="review-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <strong><i class="fas fa-user-circle me-2" style="color:var(--gold);"></i>${rev.name || 'Guest'}</strong>
+                <div class="stars small">${buildStars(rev.rating || 4)}</div>
+            </div>
+            <p class="review-quote">"${rev.comment || 'Great service!'}"</p>
+        </div>
+    `).join('');
+
+    // Verified Badge
+    if (caterer.verified) {
+        document.getElementById('verifiedBadge').style.display = 'inline-flex';
+    }
+
+    // Title + Address
+    document.getElementById('catererTitle').textContent = caterer.name || 'Caterer Name';
+    document.getElementById('catererAddress').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${caterer.address || 'Address not available'}`;
+
+    // Rating
+    document.getElementById('starsEl').innerHTML = buildStars(caterer.rating || 4);
+    document.getElementById('ratingNum').textContent = caterer.rating || 4;
+    document.getElementById('reviewCount').textContent = `(${reviews.length} reviews)`;
+
+    // Starting Price
+    document.getElementById('startingPrice').innerHTML = `${formatPKR(caterer.starting_price)} <span>PKR</span>`;
+    document.getElementById('pricePerHead').innerHTML = caterer.price_per_head ? `Starting from PKR ${formatPKR(caterer.price_per_head)} per person` : 'Contact for custom quote';
+
+    // Packages
+    const packages = caterer.packages || [];
+    if (packages.length > 0) {
+        document.getElementById('pkgGrid').innerHTML = packages.map((pkg, i) => `
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="pkg-card ${i === 0 ? 'active' : ''}" onclick="selectPkg(${i})">
+                    <div class="pkg-name">${pkg.name || 'Package'}</div>
+                    <div class="pkg-price">PKR ${formatPKR(pkg.price)}</div>
+                    <div class="mt-2"><small style="color:rgba(255,255,255,0.35);">${pkg.min_guests || 50}+ guests</small></div>
+                    <ul class="includes-list">
+                        ${(pkg.includes || ['Buffet Setup', 'Waitstaff', 'Cutlery']).map(inc => `<li><i class="fas fa-check-circle"></i> ${inc}</li>`).join('')}
+                    </ul>
+                    <button class="pkg-book" onclick="event.stopPropagation();selectPkg(${i});openModal();">
+                        <i class="fas fa-arrow-right me-1"></i> Book This
+                    </button>
+                </div>
+            </div>
+        `).join('');
+    } else {
+        document.getElementById('pkgGrid').innerHTML = `<div class="col-12"><p class="text-center text-muted">Package details coming soon</p></div>`;
+    }
+
+    // Features
+    const features = caterer.features || ['Professional Service', 'Quality Food', 'Timely Delivery'];
+    const featureIcons = {
+        'Live BBQ Stations': 'fas fa-fire',
+        'In-house Service Staff': 'fas fa-users',
+        'Decor Coordination': 'fas fa-palette',
+        'Tasting Session Included': 'fas fa-utensil-spoon',
+        'Registered with Golf Club': 'fas fa-golf-ball',
+        'Registered with Creek Club': 'fas fa-ship',
+        'Premium Venue Catering': 'fas fa-crown',
+        'Full Event Management': 'fas fa-calendar-alt',
+        'ISO Certified': 'fas fa-certificate',
+        'Brand of the Year': 'fas fa-trophy',
+        'Female Staff Available': 'fas fa-female',
+        'Food Testing Available': 'fas fa-vial'
+    };
+    document.getElementById('featureTags').innerHTML = features.map(f =>
+        `<span class="stag"><i class="${featureIcons[f] || 'fas fa-check-circle'} me-1"></i> ${f}</span>`
+    ).join('');
+
+    // Contact Buttons
+    const phone = caterer.phone || '+92 300 0000000';
+    document.getElementById('callBtn').href = `tel:${phone.replace(/\s/g, '')}`;
+    document.getElementById('phoneText').textContent = `Call ${phone}`;
+    
+    const whatsapp = caterer.whatsapp || phone;
+    document.getElementById('waBtn').href = `https://wa.me/${whatsapp.replace(/[^0-9]/g, '')}`;
+
+    // Payment Badges
+    const pm = caterer.payment_methods || ['Cash', 'Bank Transfer', 'JazzCash', 'Easypaisa'];
+    document.getElementById('paymentBadges').innerHTML = pm.map(m => {
+        const info = payMethodIcons[m] || { icon: 'fas fa-money-bill', label: m };
+        return `<span class="pay-badge"><i class="${info.icon}"></i> ${info.label}</span>`;
+    }).join('');
+
+    // Modal Caterer Name
+    document.getElementById('mCatererName').textContent = caterer.name || 'Caterer';
+
+    // Show Page
+    document.getElementById('mainContent').style.display = 'block';
+    document.getElementById('loadingScreen').classList.add('hidden');
+
+    // Scroll Animations
+    setTimeout(() => {
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach((e, idx) => {
+                if (e.isIntersecting) {
+                    setTimeout(() => e.target.classList.add('visible'), idx * 80);
+                    obs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+    }, 100);
+}
+
+// ===== LOAD CATERER FROM JSON =====
+function getCatererId() {
+    const params = new URLSearchParams(window.location.search);
+    return parseInt(params.get('id'));
+}
+
+async function loadCaterer() {
+    const id = getCatererId();
+
+    if (!id || isNaN(id)) {
+        showError();
+        return;
+    }
+
+    try {
+        const resp = await fetch('caterersDetails.json');
+        if (!resp.ok) throw new Error('JSON load failed');
+        const data = await resp.json();
+        const caterer = data.find(h => h.id === id);
+
+        if (!caterer) {
+            showError();
+            return;
+        }
+
+        renderCaterer(caterer);
+
+    } catch (err) {
+        console.error('Caterer load error:', err);
+        showError();
+    }
+}
+
+function showError() {
+    document.getElementById('loadingScreen').classList.add('hidden');
+    document.getElementById('errorScreen').classList.add('show');
+}
+
+loadCaterer();
+
+// ===== PACKAGE SELECT =====
+function selectPkg(idx) {
+    if (!CATERER || !CATERER.packages || !CATERER.packages[idx]) return;
+    selected = { ...CATERER.packages[idx] };
+    document.querySelectorAll('.pkg-card').forEach((c, i) => c.classList.toggle('active', i === idx));
+    showToast(`${selected.name} package selected`, 'default');
+}
+
+// ===== MODAL =====
+function openModal() {
+    if (!selected) return;
+    document.getElementById('mPkgName').textContent = (selected.name || 'Standard') + ' Package';
+    document.getElementById('mAmount').textContent = 'PKR ' + formatPKR(selected.price || 0);
+    switchMethod('card');
+    document.getElementById('payOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    document.getElementById('payOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+document.getElementById('payOverlay').addEventListener('click', e => {
+    if (e.target === document.getElementById('payOverlay')) closeModal();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// ===== PAYMENT TABS =====
+document.querySelectorAll('.m-tab').forEach(tab => {
+    tab.addEventListener('click', () => switchMethod(tab.dataset.method));
+});
+
+function switchMethod(method) {
+    currentMethod = method;
+    document.querySelectorAll('.m-tab').forEach(t => t.classList.toggle('active', t.dataset.method === method));
+    document.querySelectorAll('.pay-form').forEach(f => f.classList.remove('show'));
+    document.getElementById('f-' + method).classList.add('show');
+}
+
+// Card formatting
+document.getElementById('cardNumber')?.addEventListener('input', function () {
+    let v = this.value.replace(/\D/g, '').substring(0, 16);
+    this.value = v.replace(/(.{4})/g, '$1 ').trim();
+});
+document.getElementById('cardExpiry')?.addEventListener('input', function () {
+    let v = this.value.replace(/\D/g, '').substring(0, 4);
+    if (v.length >= 2) v = v.substring(0, 2) + '/' + v.substring(2);
+    this.value = v;
+});
+
+// ===== PAYMENT PROCESSING =====
+function processPayment() {
+    const btn = document.getElementById('payBtn');
+
+    if (currentMethod === 'card') {
+        const name = document.getElementById('cardName')?.value.trim();
+        const num = document.getElementById('cardNumber')?.value.replace(/\s/g, '');
+        const exp = document.getElementById('cardExpiry')?.value.trim();
+        const cvc = document.getElementById('cardCvc')?.value.trim();
+        if (!name || name.length < 3) { showToast('Cardholder name enter karein', 'error'); return; }
+        if (!/^\d{15,16}$/.test(num)) { showToast('Invalid card number', 'error'); return; }
+        if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(exp)) { showToast('Expiry format: MM/YY', 'error'); return; }
+        if (!/^\d{3,4}$/.test(cvc)) { showToast('Invalid CVC', 'error'); return; }
+    }
+    else if (currentMethod === 'jazzcash') {
+        const num = document.getElementById('jcNum')?.value.trim();
+        if (!/^03\d{9}$/.test(num)) { showToast('Valid JazzCash number enter karein', 'error'); return; }
+    }
+    else if (currentMethod === 'easypaisa') {
+        const num = document.getElementById('epNum')?.value.trim();
+        if (!/^03\d{9}$/.test(num)) { showToast('Valid Easypaisa number enter karein', 'error'); return; }
+    }
+    else if (currentMethod === 'bank') {
+        const bn = document.getElementById('bankName')?.value.trim();
+        const ba = document.getElementById('bankAcc')?.value.trim();
+        if (!bn) { showToast('Bank name enter karein', 'error'); return; }
+        if (ba.length < 5) { showToast('Valid account number enter karein', 'error'); return; }
+    }
+
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-circle-notch fa-spin me-2"></i> Processing...';
+
+    setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-lock me-2"></i> Confirm & Pay';
+        closeModal();
+        const ref = 'WDC' + Math.random().toString(36).substring(2, 8).toUpperCase();
+        showToast(`✅ Booking Confirmed! Ref: ${ref} — PKR ${formatPKR(selected?.price || 0)}`, 'success');
+
+        ['cardName', 'cardNumber', 'cardExpiry', 'cardCvc', 'jcNum', 'jcCnic', 'epNum', 'epName', 'bankName', 'bankAcc', 'bankHolder']
+            .forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
+    }, 2200);
+}
+
+// ===== TOAST =====
+function showToast(msg, type = 'default') {
+    const wrap = document.getElementById('toastWrap');
+    const el = document.createElement('div');
+    el.className = 'toast-item ' + (type === 'success' ? 'success' : type === 'error' ? 'error' : '');
+    el.innerHTML = msg;
+    wrap.appendChild(el);
+    requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('show')));
+    setTimeout(() => { el.classList.remove('show'); setTimeout(() => el.remove(), 400); }, 4000);
+}
+</script>
+</body>
+</html>

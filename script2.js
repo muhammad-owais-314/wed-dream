@@ -15,7 +15,9 @@ $(document).ready(() => {
             'photographers': 'vendors',
             'makeup'       : 'vendors',
             'catering'     : 'vendors',
-            'ai-planner'   : 'ai'
+            'ai-planner'   : 'ai',
+            'halls'        : 'halls',
+            'hall-detail'  : 'halls'
         };
 
         var activeKey = pageMap[page] || 'home';
@@ -40,12 +42,10 @@ const productContainer = document.getElementById('productContainer');
 const filterBar = document.getElementById('filterBar');
 const noResults = document.getElementById('noResults');
 
-// price formatter - shows 4,50,000 style (Pakistani format)
 function formatPKR(num) {
     return num.toLocaleString('en-PK');
 }
 
-// star rating builder based on rating number
 function buildStars(rating) {
     const full  = Math.floor(rating);
     const half  = (rating - full) >= 0.5 ? 1 : 0;
@@ -57,9 +57,7 @@ function buildStars(rating) {
     return stars;
 }
 
-// card HTML builder
 function buildCard(item) {
-    // image src - use item.image if available, otherwise empty (CSS handles fallback)
     const imgSrc = item.image ? `images/halls/${item.image}` : '';
 
     return `
@@ -68,7 +66,7 @@ function buildCard(item) {
             <div class="premium-card">
                 <div class="card-img-container position-relative">
                     <img 
-                        src="${item.image}" 
+                        src="${imgSrc}" 
                         alt="${item.name}"
                         onerror="this.src=''; this.style.background='linear-gradient(135deg,#1a1012 0%,#2a1a20 40%,#1e160d 70%,#120d0e 100%)';"
                     >
@@ -107,7 +105,6 @@ function buildCard(item) {
     </div>`;
 }
 
-// filter buttons builder
 function buildFilters(areas) {
     let btns = `<button class="filter-btn active" data-filter="all">All Areas</button>`;
     areas.forEach(area => {
@@ -115,12 +112,10 @@ function buildFilters(areas) {
     });
     filterBar.innerHTML = btns;
 
-    // filter click events
     filterBar.addEventListener('click', (e) => {
         const btn = e.target.closest('.filter-btn');
         if (!btn) return;
 
-        // active state switch
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
@@ -138,28 +133,23 @@ function buildFilters(areas) {
     });
 }
 
-// main fetch + render
 async function getProducts() {
     try {
         const response = await axios.get('halls.json');
         const data     = response.data;
 
-        // unique areas list (preserve order of first appearance)
         const areas = [...new Set(data.map(i => i.area))];
 
         buildFilters(areas);
 
         productContainer.innerHTML = data.map(buildCard).join('');
 
-        // view details click — placeholder for later
+        // ✅ FIXED: Detail page navigation
         productContainer.addEventListener('click', (e) => {
             const btn = e.target.closest('.view-details-btn');
             if (!btn) return;
-            const id   = btn.dataset.id;
-            const name = btn.dataset.hall;
-            // TODO: navigate to detail page when ready
-            // window.location.href = `hall-detail.html?id=${id}`;
-            console.log('Details clicked:', id, name);
+            const id = btn.dataset.id;
+            window.location.href = `hall-detail.html?id=${id}`;
         });
 
     } catch (error) {

@@ -1,0 +1,3162 @@
+[
+  {
+    "id": 1,
+    "name": "Marcem Event Solutions",
+    "area": "DHA",
+    "rating": 4.8,
+    "starting_price": 450000,
+    "price_per_head": 1200,
+    "address": "Khayaban-e-Shahbaz Commercial Lane 8, DHA Phase 6, Karachi, Pakistan",
+    "phone": "+92 21 35878899",
+    "whatsapp": "+92 21 35878899",
+    "gallery": [
+      "https://picsum.photos/seed/marcem1/900/600",
+      "https://picsum.photos/seed/marcem2/900/600",
+      "https://picsum.photos/seed/marcem3/900/600"
+    ],
+    "capacity": 5000,
+    "min_guests": 200,
+    "specialties": ["Pakistani", "Continental", "BBQ", "Chinese"],
+    "cuisine_types": ["Desi", "Continental", "BBQ", "Chinese"],
+    "features": [
+      "Full-service catering",
+      "Custom menu design",
+      "Professional staff",
+      "Event management"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 1200,
+        "total_price": 450000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 1800,
+        "total_price": 700000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 2500,
+        "total_price": 1000000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Bridal Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ahmed Raza",
+        "rating": 5,
+        "comment": "Excellent service and delicious food! Highly recommended."
+      },
+      {
+        "name": "Sana Mirza",
+        "rating": 4,
+        "comment": "Professional team, made our wedding day perfect."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Premium Caterer | DHA",
+    "established": 2010,
+    "website": "marcem.com.pk"
+  },
+  {
+    "id": 2,
+    "name": "Quality Catering Services",
+    "area": "DHA",
+    "rating": 4.4,
+    "starting_price": 350000,
+    "price_per_head": 450,
+    "address": "Mezzanine Floor, Anum Arcade, Plot No 33-C, 22nd Street, DHA Phase 1, Karachi, Pakistan",
+    "phone": "+92 21 35802352",
+    "whatsapp": "+92 21 35802352",
+    "gallery": [
+      "https://picsum.photos/seed/quality1/900/600",
+      "https://picsum.photos/seed/quality2/900/600",
+      "https://picsum.photos/seed/quality3/900/600"
+    ],
+    "capacity": 4000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Continental"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese", "Continental"],
+    "features": [
+      "Trusted catering since 1996",
+      "Wedding events",
+      "Corporate services",
+      "Verified+10 Years"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 450,
+        "total_price": 350000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 550,
+        "total_price": 450000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 700,
+        "total_price": 600000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bilal Ahmed",
+        "rating": 5,
+        "comment": "Excellent service and food quality! [citation:4]"
+      },
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Good value for money, timely delivery."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+10 Years | Est. 1996",
+    "established": 1996
+  },
+  {
+    "id": 3,
+    "name": "Imperial Caterers",
+    "area": "DHA",
+    "rating": 4.7,
+    "starting_price": 380000,
+    "price_per_head": 500,
+    "address": "Office No. 3, Anum Arcade, Plot No. 26-C, Sunset Lane # 5, Phase 2 Ext, DHA, Karachi, Pakistan",
+    "phone": "+92 21 35803533",
+    "whatsapp": "+92 21 35803533",
+    "gallery": [
+      "https://picsum.photos/seed/imperial1/900/600",
+      "https://picsum.photos/seed/imperial2/900/600",
+      "https://picsum.photos/seed/imperial3/900/600"
+    ],
+    "capacity": 5000,
+    "min_guests": 150,
+    "specialties": ["Gourmet Catering", "Pakistani", "BBQ", "Chinese"],
+    "cuisine_types": ["Gourmet", "Desi", "BBQ", "Chinese"],
+    "features": [
+      "Gourmet catering",
+      "Decor services",
+      "Event management",
+      "Custom menus"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 500,
+        "total_price": 380000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 650,
+        "total_price": 500000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 850,
+        "total_price": 680000,
+        "min_guests": 100,
+        "includes": ["Gourmet Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Usman Ali",
+        "rating": 5,
+        "comment": "Amazing gourmet food, beautifully presented!"
+      },
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "Professional team, highly satisfied."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+9 Years",
+    "established": 2014
+  },
+  {
+    "id": 4,
+    "name": "Kausar Catering & Decorations",
+    "area": "DHA",
+    "rating": 4.3,
+    "starting_price": 320000,
+    "price_per_head": 400,
+    "address": "50-C, Defence Commercial Market 'A', Phase-II, DHA, Karachi, Pakistan",
+    "phone": "+92 21 35381779",
+    "whatsapp": "+92 21 35381779",
+    "gallery": [
+      "https://picsum.photos/seed/kausar1/900/600",
+      "https://picsum.photos/seed/kausar2/900/600",
+      "https://picsum.photos/seed/kausar3/900/600"
+    ],
+    "capacity": 3500,
+    "min_guests": 100,
+    "specialties": ["Pakistani", "BBQ", "Chinese"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese"],
+    "features": [
+      "Catering + decor combo",
+      "Full event services",
+      "Affordable packages"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 400,
+        "total_price": 320000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Basic Decor", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 500,
+        "total_price": 420000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "BBQ Station", "7 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 650,
+        "total_price": 550000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "Live Stations", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Hassan Raza",
+        "rating": 4,
+        "comment": "Good decor and food combination."
+      },
+      {
+        "name": "Mariam Iqbal",
+        "rating": 4,
+        "comment": "Value for money package."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on BusinessList.pk"
+  },
+  {
+    "id": 5,
+    "name": "Professional Caterers Limited",
+    "area": "DHA",
+    "rating": 4.6,
+    "starting_price": 400000,
+    "price_per_head": 500,
+    "address": "6-S/A-2, Sirajudaullah Road, DHA, Karachi, Pakistan",
+    "phone": "+92 21 4933076",
+    "whatsapp": "+92 21 4933076",
+    "gallery": [
+      "https://picsum.photos/seed/professional1/900/600",
+      "https://picsum.photos/seed/professional2/900/600",
+      "https://picsum.photos/seed/professional3/900/600"
+    ],
+    "capacity": 8000,
+    "min_guests": 200,
+    "specialties": ["Pakistani", "Chinese", "Continental", "Mughlai"],
+    "cuisine_types": ["Desi", "Chinese", "Continental", "Mughlai"],
+    "features": [
+      "Registered with Golf Club",
+      "Registered with Creek Club",
+      "Registered with DHA Marina",
+      "Premium venue catering"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 500,
+        "total_price": 400000,
+        "min_guests": 200,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 650,
+        "total_price": 520000,
+        "min_guests": 200,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 850,
+        "total_price": 680000,
+        "min_guests": 200,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ahmed Raza",
+        "rating": 5,
+        "comment": "Very professional service, highly recommended!"
+      },
+      {
+        "name": "Sana Mirza",
+        "rating": 4,
+        "comment": "Food was delicious, staff was well-trained."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+12 Years | Club Registered",
+    "established": 2010
+  },
+  {
+    "id": 6,
+    "name": "Lals Catering",
+    "area": "Clifton",
+    "rating": 4.9,
+    "starting_price": 500000,
+    "price_per_head": 1500,
+    "address": "Block 5, Clifton, Karachi, Pakistan",
+    "phone": "+92 21 35823456",
+    "whatsapp": "+92 21 35823456",
+    "gallery": [
+      "https://picsum.photos/seed/lals1/900/600",
+      "https://picsum.photos/seed/lals2/900/600",
+      "https://picsum.photos/seed/lals3/900/600"
+    ],
+    "capacity": 4000,
+    "min_guests": 150,
+    "specialties": ["Gourmet Cuisine", "Custom Desserts", "Continental", "Mughlai"],
+    "cuisine_types": ["Gourmet", "Continental", "Mughlai", "Desserts"],
+    "features": [
+      "Gourmet cuisine",
+      "Custom dessert tables",
+      "Premium service",
+      "Luxury weddings"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 1500,
+        "total_price": 500000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 2200,
+        "total_price": 750000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Dessert Table", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 3000,
+        "total_price": 1000000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Custom Dessert Table", "Full Decor", "Welcome Drinks", "Bridal Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 5,
+        "comment": "Best gourmet caterers in Clifton! [citation:9]"
+      },
+      {
+        "name": "Ayesha Khan",
+        "rating": 5,
+        "comment": "Exquisite presentation and delicious food."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Premium Gourmet Caterer",
+    "website": "lalscatering.pk"
+  },
+  {
+    "id": 7,
+    "name": "Sarah Caterers & Event Planner",
+    "area": "Clifton",
+    "rating": 4.4,
+    "starting_price": 380000,
+    "price_per_head": 550,
+    "address": "Karachi, Pakistan (Serves all areas including Clifton)",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/sarah1/900/600",
+      "https://picsum.photos/seed/sarah2/900/600",
+      "https://picsum.photos/seed/sarah3/900/600"
+    ],
+    "capacity": 4000,
+    "min_guests": 100,
+    "specialties": ["Pakistani", "Chinese", "Mughlai", "BBQ"],
+    "cuisine_types": ["Desi", "Chinese", "Mughlai", "BBQ"],
+    "features": [
+      "Male & female staff",
+      "Full buffet setup",
+      "Live food stations",
+      "Decoration",
+      "Event planning",
+      "Food testing available"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 550,
+        "total_price": 380000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 700,
+        "total_price": 500000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Live Stations", "Basic Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 950,
+        "total_price": 700000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Waitstaff", "Full Decor", "Live Stations", "Event Planning", "Welcome Drinks"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Mariam Iqbal",
+        "rating": 5,
+        "comment": "Very professional female staff, highly recommend! [citation:8]"
+      },
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 4,
+        "comment": "Great service and attention to detail."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Female Staff Available | Shadiyana.pk",
+    "website": "shadiyana.pk"
+  },
+  {
+    "id": 8,
+    "name": "Oomda Catering & Event Management",
+    "area": "Clifton",
+    "rating": 4.5,
+    "starting_price": 350000,
+    "price_per_head": 500,
+    "address": "Karachi, Pakistan (Serves all Karachi including Clifton)",
+    "phone": "+92 300 5777121",
+    "whatsapp": "+92 300 5777121",
+    "gallery": [
+      "https://picsum.photos/seed/oomda1/900/600",
+      "https://picsum.photos/seed/oomda2/900/600",
+      "https://picsum.photos/seed/oomda3/900/600"
+    ],
+    "capacity": 5000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Event Management"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese"],
+    "features": [
+      "Full event management",
+      "Wedding planners",
+      "Custom menus",
+      "Shadi, Barat, Valima specialists"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 500,
+        "total_price": 350000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Basic Decor", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 650,
+        "total_price": 480000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "BBQ Station", "Event Coordination", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 850,
+        "total_price": 680000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Full Event Management", "Live Stations", "Premium Decor", "Welcome Drinks", "Bridal Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bilal Ahmed",
+        "rating": 5,
+        "comment": "They handled everything perfectly! [citation:6]"
+      },
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Great event management team."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Full Service Event Management",
+    "website": "karachipakwan.wordpress.com"
+  },
+  {
+    "id": 9,
+    "name": "Quality Catering Services",
+    "area": "Clifton",
+    "rating": 4.4,
+    "starting_price": 380000,
+    "price_per_head": 500,
+    "address": "Mezzanine Floor, Anum Arcade, Plot No 33-C, 22nd Street, DHA Phase 1 (Serves Clifton), Karachi, Pakistan",
+    "phone": "+92 21 35802352",
+    "whatsapp": "+92 21 35802352",
+    "gallery": [
+      "https://picsum.photos/seed/quality_cl1/900/600",
+      "https://picsum.photos/seed/quality_cl2/900/600",
+      "https://picsum.photos/seed/quality_cl3/900/600"
+    ],
+    "capacity": 4000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Continental"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese", "Continental"],
+    "features": [
+      "Trusted catering",
+      "Wedding events",
+      "Corporate services"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 500,
+        "total_price": 380000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 650,
+        "total_price": 500000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 850,
+        "total_price": 650000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Usman Ali",
+        "rating": 5,
+        "comment": "Great food, professional service. [citation:4]"
+      },
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "Highly recommended for Clifton events."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+10 Years"
+  },
+  {
+    "id": 10,
+    "name": "Professional Caterers Limited",
+    "area": "Clifton",
+    "rating": 4.6,
+    "starting_price": 420000,
+    "price_per_head": 550,
+    "address": "6-S/A-2, Sirajudaullah Road, DHA (Serves Clifton venues: Golf Club, Creek Club), Karachi, Pakistan",
+    "phone": "+92 21 4933076",
+    "whatsapp": "+92 21 4933076",
+    "gallery": [
+      "https://picsum.photos/seed/professional_cl1/900/600",
+      "https://picsum.photos/seed/professional_cl2/900/600",
+      "https://picsum.photos/seed/professional_cl3/900/600"
+    ],
+    "capacity": 8000,
+    "min_guests": 200,
+    "specialties": ["Pakistani", "Chinese", "Continental", "Mughlai"],
+    "cuisine_types": ["Desi", "Chinese", "Continental", "Mughlai"],
+    "features": [
+      "Registered with Golf Club",
+      "Registered with Creek Club",
+      "Premium venue catering",
+      "Professional staff"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 550,
+        "total_price": 420000,
+        "min_guests": 200,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 700,
+        "total_price": 560000,
+        "min_guests": 200,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 900,
+        "total_price": 720000,
+        "min_guests": 200,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Mariam Iqbal",
+        "rating": 5,
+        "comment": "Excellent service at our Golf Club event!"
+      },
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 4,
+        "comment": "Very professional team."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Club Registered | Verified+12 Years"
+  },
+  {
+    "id": 11,
+    "name": "Hanif Rajput Caterers",
+    "area": "PECHS",
+    "rating": 4.9,
+    "starting_price": 450000,
+    "price_per_head": 650,
+    "address": "Office # 2 & 3, Mezzanine Floor, Society Building, PECHS Kashmir Road, Karachi, Pakistan",
+    "phone": "+92 304 1111147",
+    "whatsapp": "+92 304 1111147",
+    "gallery": [
+      "https://picsum.photos/seed/hanif1/900/600",
+      "https://picsum.photos/seed/hanif2/900/600",
+      "https://picsum.photos/seed/hanif3/900/600"
+    ],
+    "capacity": 50000,
+    "min_guests": 50,
+    "specialties": ["Pakistani Cuisine", "BBQ", "Mughlai", "Chinese", "Continental", "Live Stations"],
+    "cuisine_types": ["Desi", "BBQ", "Mughlai", "Chinese", "Continental"],
+    "features": [
+      "ISO Certified",
+      "Brand of the Year",
+      "Tasting session",
+      "Decor services",
+      "50,000+ capacity"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 650,
+        "total_price": 450000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 850,
+        "total_price": 600000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 1200,
+        "total_price": 850000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ahmed Raza",
+        "rating": 5,
+        "comment": "The best caterers in Karachi! Highly professional. [citation:3]"
+      },
+      {
+        "name": "Sana Mirza",
+        "rating": 5,
+        "comment": "Amazing food and presentation. Worth every rupee."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "ISO Certified | Brand of the Year | Est. 1979",
+    "established": 1979,
+    "website": "hanifrajputcaterers.com"
+  },
+  {
+    "id": 12,
+    "name": "Oomda Catering & Event Management",
+    "area": "PECHS",
+    "rating": 4.5,
+    "starting_price": 350000,
+    "price_per_head": 500,
+    "address": "Karachi, Pakistan (Serves PECHS area)",
+    "phone": "+92 300 5777121",
+    "whatsapp": "+92 300 5777121",
+    "gallery": [
+      "https://picsum.photos/seed/oomda_pe1/900/600",
+      "https://picsum.photos/seed/oomda_pe2/900/600",
+      "https://picsum.photos/seed/oomda_pe3/900/600"
+    ],
+    "capacity": 5000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Event Management"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese"],
+    "features": [
+      "Full event management",
+      "Wedding planners",
+      "Custom menus"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 500,
+        "total_price": 350000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Basic Decor", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 650,
+        "total_price": 480000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "BBQ Station", "Event Coordination", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 850,
+        "total_price": 680000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Full Event Management", "Live Stations", "Premium Decor", "Welcome Drinks", "Bridal Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bilal Ahmed",
+        "rating": 5,
+        "comment": "They handled everything perfectly! [citation:6]"
+      },
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Great event management team."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Full Service Event Management"
+  },
+  {
+    "id": 13,
+    "name": "Quality Catering Services",
+    "area": "PECHS",
+    "rating": 4.4,
+    "starting_price": 320000,
+    "price_per_head": 420,
+    "address": "Mezzanine Floor, Anum Arcade, Plot No 33-C, 22nd Street, DHA Phase 1 (Serves PECHS), Karachi, Pakistan",
+    "phone": "+92 21 35802352",
+    "whatsapp": "+92 21 35802352",
+    "gallery": [
+      "https://picsum.photos/seed/quality_pe1/900/600",
+      "https://picsum.photos/seed/quality_pe2/900/600",
+      "https://picsum.photos/seed/quality_pe3/900/600"
+    ],
+    "capacity": 4000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Continental"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese", "Continental"],
+    "features": [
+      "Trusted catering",
+      "Wedding events",
+      "Corporate services"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 420,
+        "total_price": 320000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 550,
+        "total_price": 420000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 720,
+        "total_price": 550000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Usman Ali",
+        "rating": 5,
+        "comment": "Great service, highly recommended! [citation:4]"
+      },
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "Good food quality."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+10 Years"
+  },
+  {
+    "id": 14,
+    "name": "Imperial Caterers",
+    "area": "PECHS",
+    "rating": 4.7,
+    "starting_price": 350000,
+    "price_per_head": 460,
+    "address": "Office No. 3, Anum Arcade, Plot No. 26-C, Sunset Lane # 5, Phase 2 Ext, DHA (Serves PECHS), Karachi, Pakistan",
+    "phone": "+92 21 35803533",
+    "whatsapp": "+92 21 35803533",
+    "gallery": [
+      "https://picsum.photos/seed/imperial_pe1/900/600",
+      "https://picsum.photos/seed/imperial_pe2/900/600",
+      "https://picsum.photos/seed/imperial_pe3/900/600"
+    ],
+    "capacity": 5000,
+    "min_guests": 150,
+    "specialties": ["Gourmet Catering", "Pakistani", "BBQ", "Chinese"],
+    "cuisine_types": ["Gourmet", "Desi", "BBQ", "Chinese"],
+    "features": [
+      "Gourmet catering",
+      "Decor services",
+      "Event management"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 460,
+        "total_price": 350000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 600,
+        "total_price": 460000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 800,
+        "total_price": 620000,
+        "min_guests": 150,
+        "includes": ["Gourmet Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bilal Ahmed",
+        "rating": 5,
+        "comment": "Excellent gourmet catering service!"
+      },
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Very professional and delicious food."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+9 Years"
+  },
+  {
+    "id": 15,
+    "name": "Professional Caterers Limited",
+    "area": "PECHS",
+    "rating": 4.6,
+    "starting_price": 380000,
+    "price_per_head": 500,
+    "address": "6-S/A-2, Sirajudaullah Road, DHA (Serves PECHS), Karachi, Pakistan",
+    "phone": "+92 21 4933076",
+    "whatsapp": "+92 21 4933076",
+    "gallery": [
+      "https://picsum.photos/seed/professional_pe1/900/600",
+      "https://picsum.photos/seed/professional_pe2/900/600",
+      "https://picsum.photos/seed/professional_pe3/900/600"
+    ],
+    "capacity": 8000,
+    "min_guests": 200,
+    "specialties": ["Pakistani", "Chinese", "Continental", "Mughlai"],
+    "cuisine_types": ["Desi", "Chinese", "Continental", "Mughlai"],
+    "features": [
+      "Premium venue catering",
+      "Professional staff",
+      "Club registered"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 500,
+        "total_price": 380000,
+        "min_guests": 200,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 650,
+        "total_price": 500000,
+        "min_guests": 200,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 850,
+        "total_price": 650000,
+        "min_guests": 200,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Hassan Raza",
+        "rating": 5,
+        "comment": "Top-notch catering service!"
+      },
+      {
+        "name": "Ayesha Khan",
+        "rating": 4,
+        "comment": "Very satisfied with their service."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+12 Years"
+  },
+  {
+    "id": 16,
+    "name": "Abbas Catering Service",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.5,
+    "starting_price": 280000,
+    "price_per_head": 800,
+    "address": "B-62, Block 4A, Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/abbas1/900/600",
+      "https://picsum.photos/seed/abbas2/900/600",
+      "https://picsum.photos/seed/abbas3/900/600"
+    ],
+    "capacity": 3000,
+    "min_guests": 80,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Continental"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese", "Continental"],
+    "features": [
+      "Premium catering",
+      "Professional service",
+      "Food testing available"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 800,
+        "total_price": 280000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 1000,
+        "total_price": 350000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "7 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 1450,
+        "total_price": 500000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ahmed Raza",
+        "rating": 5,
+        "comment": "Excellent service and delicious food! [citation:7]"
+      },
+      {
+        "name": "Sana Mirza",
+        "rating": 4,
+        "comment": "Very professional team."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Shadiyana.pk",
+    "website": "shadiyana.pk"
+  },
+  {
+    "id": 17,
+    "name": "Zia Royal Caterers",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.3,
+    "starting_price": 250000,
+    "price_per_head": 350,
+    "address": "C-127, Block-9, Opposite Aziz Bhatti Park, Nipa, Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 320 8209000",
+    "whatsapp": "+92 320 8209000",
+    "gallery": [
+      "https://picsum.photos/seed/zia1/900/600",
+      "https://picsum.photos/seed/zia2/900/600",
+      "https://picsum.photos/seed/zia3/900/600"
+    ],
+    "capacity": 3500,
+    "min_guests": 100,
+    "specialties": ["Pakistani", "BBQ", "Traditional"],
+    "cuisine_types": ["Desi", "BBQ"],
+    "features": [
+      "Prompt catering",
+      "Decoration services",
+      "Traditional recipes"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 350,
+        "total_price": 250000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Basic Decor", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 450,
+        "total_price": 330000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "BBQ Station", "7 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 600,
+        "total_price": 450000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live BBQ", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bilal Ahmed",
+        "rating": 4,
+        "comment": "Good traditional food, reasonable prices. [citation:5]"
+      },
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Prompt service, good value for money."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+9 Years | Est. 1918",
+    "established": 1918
+  },
+  {
+    "id": 18,
+    "name": "Oomda Catering & Event Management",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.5,
+    "starting_price": 320000,
+    "price_per_head": 450,
+    "address": "Karachi, Pakistan (Serves Gulshan-e-Iqbal)",
+    "phone": "+92 300 5777121",
+    "whatsapp": "+92 300 5777121",
+    "gallery": [
+      "https://picsum.photos/seed/oomda_gul1/900/600",
+      "https://picsum.photos/seed/oomda_gul2/900/600",
+      "https://picsum.photos/seed/oomda_gul3/900/600"
+    ],
+    "capacity": 5000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Event Management"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese"],
+    "features": [
+      "Full event management",
+      "Wedding planners",
+      "Custom menus"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 450,
+        "total_price": 320000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Basic Decor", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 600,
+        "total_price": 420000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "BBQ Station", "Event Coordination", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 800,
+        "total_price": 600000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Full Event Management", "Live Stations", "Premium Decor", "Welcome Drinks", "Bridal Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Usman Ali",
+        "rating": 5,
+        "comment": "Excellent event management team! [citation:6]"
+      },
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "Very professional and organized."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Full Service Event Management"
+  },
+  {
+    "id": 19,
+    "name": "Quality Catering Services",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.4,
+    "starting_price": 300000,
+    "price_per_head": 400,
+    "address": "Mezzanine Floor, Anum Arcade, Plot No 33-C, 22nd Street, DHA Phase 1 (Serves Gulshan), Karachi, Pakistan",
+    "phone": "+92 21 35802352",
+    "whatsapp": "+92 21 35802352",
+    "gallery": [
+      "https://picsum.photos/seed/quality_gul1/900/600",
+      "https://picsum.photos/seed/quality_gul2/900/600",
+      "https://picsum.photos/seed/quality_gul3/900/600"
+    ],
+    "capacity": 4000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Continental"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese", "Continental"],
+    "features": [
+      "Trusted catering",
+      "Wedding events",
+      "Corporate services"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 400,
+        "total_price": 300000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 520,
+        "total_price": 390000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 680,
+        "total_price": 510000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Hassan Raza",
+        "rating": 5,
+        "comment": "Great food and service! [citation:4]"
+      },
+      {
+        "name": "Mariam Iqbal",
+        "rating": 4,
+        "comment": "Very reliable catering service."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+10 Years"
+  },
+  {
+    "id": 20,
+    "name": "Hanif Rajput Caterers",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.9,
+    "starting_price": 420000,
+    "price_per_head": 600,
+    "address": "Office # 2 & 3, Mezzanine Floor, Society Building, PECHS Kashmir Road (Serves Gulshan), Karachi, Pakistan",
+    "phone": "+92 304 1111147",
+    "whatsapp": "+92 304 1111147",
+    "gallery": [
+      "https://picsum.photos/seed/hanif_gul1/900/600",
+      "https://picsum.photos/seed/hanif_gul2/900/600",
+      "https://picsum.photos/seed/hanif_gul3/900/600"
+    ],
+    "capacity": 50000,
+    "min_guests": 50,
+    "specialties": ["Pakistani Cuisine", "BBQ", "Mughlai", "Chinese", "Continental", "Live Stations"],
+    "cuisine_types": ["Desi", "BBQ", "Mughlai", "Chinese", "Continental"],
+    "features": [
+      "ISO Certified",
+      "Brand of the Year",
+      "Tasting session",
+      "Decor services"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 600,
+        "total_price": 420000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 800,
+        "total_price": 560000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 1100,
+        "total_price": 770000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 5,
+        "comment": "Best caterers in Pakistan! [citation:3]"
+      },
+      {
+        "name": "Ayesha Khan",
+        "rating": 5,
+        "comment": "Worth every penny."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "ISO Certified | Brand of the Year"
+  },
+  {
+    "id": 21,
+    "name": "Shaheen Shinwari Caterers",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.5,
+    "starting_price": 260000,
+    "price_per_head": 580,
+    "address": "Super Highway, Gulshan-e-Maymar More, Karachi (Serves Johar area)",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/shaheen1/900/600",
+      "https://picsum.photos/seed/shaheen2/900/600",
+      "https://picsum.photos/seed/shaheen3/900/600"
+    ],
+    "capacity": 3000,
+    "min_guests": 80,
+    "specialties": ["BBQ", "Shinwari", "Traditional Pakistani"],
+    "cuisine_types": ["BBQ", "Desi", "Pakwan"],
+    "features": [
+      "Live BBQ stations",
+      "Buffet setup",
+      "Crockery included",
+      "Wait staff",
+      "Decoration available",
+      "Outdoor catering",
+      "Food testing available"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 580,
+        "total_price": 260000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 750,
+        "total_price": 340000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Live BBQ", "Decor", "7 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 980,
+        "total_price": 450000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ahmed Raza",
+        "rating": 5,
+        "comment": "Best BBQ and Shinwari cuisine! [citation:1]"
+      },
+      {
+        "name": "Sana Mirza",
+        "rating": 4,
+        "comment": "Excellent live BBQ stations."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Shadiyana.pk",
+    "website": "shadiyana.pk"
+  },
+  {
+    "id": 22,
+    "name": "Abbas Catering Service",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.5,
+    "starting_price": 260000,
+    "price_per_head": 800,
+    "address": "B-62, Block 4A, Gulshan-e-Iqbal (Serves Johar), Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/abbas_joh1/900/600",
+      "https://picsum.photos/seed/abbas_joh2/900/600",
+      "https://picsum.photos/seed/abbas_joh3/900/600"
+    ],
+    "capacity": 3000,
+    "min_guests": 80,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Continental"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese", "Continental"],
+    "features": [
+      "Premium catering",
+      "Professional service",
+      "Food testing available"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 800,
+        "total_price": 260000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 1000,
+        "total_price": 350000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "7 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 1450,
+        "total_price": 500000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ahmed Raza",
+        "rating": 5,
+        "comment": "Excellent service and delicious food! [citation:7]"
+      },
+      {
+        "name": "Sana Mirza",
+        "rating": 4,
+        "comment": "Very professional team."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Shadiyana.pk"
+  },
+  {
+    "id": 23,
+    "name": "Zia Royal Caterers",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.3,
+    "starting_price": 240000,
+    "price_per_head": 350,
+    "address": "C-127, Block-9, Opposite Aziz Bhatti Park, Nipa, Gulshan-e-Iqbal (Serves Johar), Karachi, Pakistan",
+    "phone": "+92 320 8209000",
+    "whatsapp": "+92 320 8209000",
+    "gallery": [
+      "https://picsum.photos/seed/zia_joh1/900/600",
+      "https://picsum.photos/seed/zia_joh2/900/600",
+      "https://picsum.photos/seed/zia_joh3/900/600"
+    ],
+    "capacity": 3500,
+    "min_guests": 100,
+    "specialties": ["Pakistani", "BBQ", "Traditional"],
+    "cuisine_types": ["Desi", "BBQ"],
+    "features": [
+      "Prompt catering",
+      "Decoration services"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 350,
+        "total_price": 240000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Basic Decor", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 450,
+        "total_price": 320000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "BBQ Station", "7 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 600,
+        "total_price": 420000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live BBQ", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bilal Ahmed",
+        "rating": 4,
+        "comment": "Good traditional food. [citation:5]"
+      },
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Reasonable prices."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+9 Years"
+  },
+  {
+    "id": 24,
+    "name": "Oomda Catering & Event Management",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.5,
+    "starting_price": 300000,
+    "price_per_head": 450,
+    "address": "Karachi, Pakistan (Serves Gulistan-e-Johar)",
+    "phone": "+92 300 5777121",
+    "whatsapp": "+92 300 5777121",
+    "gallery": [
+      "https://picsum.photos/seed/oomda_joh1/900/600",
+      "https://picsum.photos/seed/oomda_joh2/900/600",
+      "https://picsum.photos/seed/oomda_joh3/900/600"
+    ],
+    "capacity": 5000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Event Management"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese"],
+    "features": [
+      "Full event management",
+      "Wedding planners",
+      "Custom menus"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 450,
+        "total_price": 300000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Basic Decor", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 600,
+        "total_price": 400000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "BBQ Station", "Event Coordination", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 800,
+        "total_price": 600000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Full Event Management", "Live Stations", "Premium Decor", "Welcome Drinks", "Bridal Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Usman Ali",
+        "rating": 5,
+        "comment": "Excellent service! [citation:6]"
+      },
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "Very professional."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Full Service Event Management"
+  },
+  {
+    "id": 25,
+    "name": "Quality Catering Services",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.4,
+    "starting_price": 280000,
+    "price_per_head": 400,
+    "address": "Mezzanine Floor, Anum Arcade, Plot No 33-C, 22nd Street, DHA Phase 1 (Serves Johar), Karachi, Pakistan",
+    "phone": "+92 21 35802352",
+    "whatsapp": "+92 21 35802352",
+    "gallery": [
+      "https://picsum.photos/seed/quality_joh1/900/600",
+      "https://picsum.photos/seed/quality_joh2/900/600",
+      "https://picsum.photos/seed/quality_joh3/900/600"
+    ],
+    "capacity": 4000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Continental"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese", "Continental"],
+    "features": [
+      "Trusted catering",
+      "Wedding events"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 400,
+        "total_price": 280000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 520,
+        "total_price": 370000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 680,
+        "total_price": 480000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Hassan Raza",
+        "rating": 5,
+        "comment": "Great service! [citation:4]"
+      },
+      {
+        "name": "Mariam Iqbal",
+        "rating": 4,
+        "comment": "Reliable catering."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+10 Years"
+  },
+  {
+    "id": 26,
+    "name": "Oomda Catering & Event Management",
+    "area": "Federal B Area",
+    "rating": 4.5,
+    "starting_price": 280000,
+    "price_per_head": 450,
+    "address": "Karachi, Pakistan (Serves FB Area)",
+    "phone": "+92 300 5777121",
+    "whatsapp": "+92 300 5777121",
+    "gallery": [
+      "https://picsum.photos/seed/oomda_fb1/900/600",
+      "https://picsum.photos/seed/oomda_fb2/900/600",
+      "https://picsum.photos/seed/oomda_fb3/900/600"
+    ],
+    "capacity": 5000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Event Management"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese"],
+    "features": [
+      "Full event management",
+      "Wedding planners",
+      "Custom menus"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 450,
+        "total_price": 280000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Basic Decor", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 600,
+        "total_price": 380000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "BBQ Station", "Event Coordination", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 800,
+        "total_price": 560000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Full Event Management", "Live Stations", "Premium Decor", "Welcome Drinks", "Bridal Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bilal Ahmed",
+        "rating": 5,
+        "comment": "Excellent management! [citation:6]"
+      },
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Very professional."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Full Service Event Management"
+  },
+  {
+    "id": 27,
+    "name": "Zia Royal Caterers",
+    "area": "Federal B Area",
+    "rating": 4.3,
+    "starting_price": 220000,
+    "price_per_head": 350,
+    "address": "C-127, Block-9, Opposite Aziz Bhatti Park, Nipa, Gulshan-e-Iqbal (Serves FB Area), Karachi, Pakistan",
+    "phone": "+92 320 8209000",
+    "whatsapp": "+92 320 8209000",
+    "gallery": [
+      "https://picsum.photos/seed/zia_fb1/900/600",
+      "https://picsum.photos/seed/zia_fb2/900/600",
+      "https://picsum.photos/seed/zia_fb3/900/600"
+    ],
+    "capacity": 3500,
+    "min_guests": 100,
+    "specialties": ["Pakistani", "BBQ", "Traditional"],
+    "cuisine_types": ["Desi", "BBQ"],
+    "features": [
+      "Prompt catering",
+      "Decoration services"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 350,
+        "total_price": 220000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Basic Decor", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 450,
+        "total_price": 300000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "BBQ Station", "7 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 600,
+        "total_price": 400000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live BBQ", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Usman Ali",
+        "rating": 4,
+        "comment": "Good traditional food. [citation:5]"
+      },
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "Reasonable prices."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+9 Years"
+  },
+  {
+    "id": 28,
+    "name": "Quality Catering Services",
+    "area": "Federal B Area",
+    "rating": 4.4,
+    "starting_price": 260000,
+    "price_per_head": 400,
+    "address": "Mezzanine Floor, Anum Arcade, Plot No 33-C, 22nd Street, DHA Phase 1 (Serves FB Area), Karachi, Pakistan",
+    "phone": "+92 21 35802352",
+    "whatsapp": "+92 21 35802352",
+    "gallery": [
+      "https://picsum.photos/seed/quality_fb1/900/600",
+      "https://picsum.photos/seed/quality_fb2/900/600",
+      "https://picsum.photos/seed/quality_fb3/900/600"
+    ],
+    "capacity": 4000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Continental"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese", "Continental"],
+    "features": [
+      "Trusted catering",
+      "Wedding events"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 400,
+        "total_price": 260000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 520,
+        "total_price": 350000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 680,
+        "total_price": 450000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Hassan Raza",
+        "rating": 5,
+        "comment": "Great service! [citation:4]"
+      },
+      {
+        "name": "Mariam Iqbal",
+        "rating": 4,
+        "comment": "Reliable."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+10 Years"
+  },
+  {
+    "id": 29,
+    "name": "Hanif Rajput Caterers",
+    "area": "Federal B Area",
+    "rating": 4.9,
+    "starting_price": 380000,
+    "price_per_head": 600,
+    "address": "Office # 2 & 3, Mezzanine Floor, Society Building, PECHS Kashmir Road (Serves FB Area), Karachi, Pakistan",
+    "phone": "+92 304 1111147",
+    "whatsapp": "+92 304 1111147",
+    "gallery": [
+      "https://picsum.photos/seed/hanif_fb1/900/600",
+      "https://picsum.photos/seed/hanif_fb2/900/600",
+      "https://picsum.photos/seed/hanif_fb3/900/600"
+    ],
+    "capacity": 50000,
+    "min_guests": 50,
+    "specialties": ["Pakistani Cuisine", "BBQ", "Mughlai", "Chinese", "Continental", "Live Stations"],
+    "cuisine_types": ["Desi", "BBQ", "Mughlai", "Chinese", "Continental"],
+    "features": [
+      "ISO Certified",
+      "Brand of the Year",
+      "Tasting session"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 600,
+        "total_price": 380000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 800,
+        "total_price": 520000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 1100,
+        "total_price": 680000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ahmed Raza",
+        "rating": 5,
+        "comment": "Best caterers! [citation:3]"
+      },
+      {
+        "name": "Sana Mirza",
+        "rating": 5,
+        "comment": "Excellent!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "ISO Certified | Brand of the Year"
+  },
+  {
+    "id": 30,
+    "name": "Professional Caterers Limited",
+    "area": "Federal B Area",
+    "rating": 4.6,
+    "starting_price": 350000,
+    "price_per_head": 500,
+    "address": "6-S/A-2, Sirajudaullah Road, DHA (Serves FB Area), Karachi, Pakistan",
+    "phone": "+92 21 4933076",
+    "whatsapp": "+92 21 4933076",
+    "gallery": [
+      "https://picsum.photos/seed/professional_fb1/900/600",
+      "https://picsum.photos/seed/professional_fb2/900/600",
+      "https://picsum.photos/seed/professional_fb3/900/600"
+    ],
+    "capacity": 8000,
+    "min_guests": 200,
+    "specialties": ["Pakistani", "Chinese", "Continental", "Mughlai"],
+    "cuisine_types": ["Desi", "Chinese", "Continental", "Mughlai"],
+    "features": [
+      "Premium venue catering",
+      "Professional staff"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 500,
+        "total_price": 350000,
+        "min_guests": 200,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 650,
+        "total_price": 460000,
+        "min_guests": 200,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 850,
+        "total_price": 600000,
+        "min_guests": 200,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bilal Ahmed",
+        "rating": 5,
+        "comment": "Top-notch service!"
+      },
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Very professional."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+12 Years"
+  },
+  {
+    "id": 31,
+    "name": "Oomda Catering & Event Management",
+    "area": "Bahadurabad",
+    "rating": 4.5,
+    "starting_price": 300000,
+    "price_per_head": 450,
+    "address": "Karachi, Pakistan (Serves Bahadurabad)",
+    "phone": "+92 300 5777121",
+    "whatsapp": "+92 300 5777121",
+    "gallery": [
+      "https://picsum.photos/seed/oomda_bah1/900/600",
+      "https://picsum.photos/seed/oomda_bah2/900/600",
+      "https://picsum.photos/seed/oomda_bah3/900/600"
+    ],
+    "capacity": 5000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Event Management"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese"],
+    "features": [
+      "Full event management",
+      "Wedding planners",
+      "Custom menus"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 450,
+        "total_price": 300000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Basic Decor", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 600,
+        "total_price": 400000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "BBQ Station", "Event Coordination", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 800,
+        "total_price": 580000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Full Event Management", "Live Stations", "Premium Decor", "Welcome Drinks", "Bridal Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Usman Ali",
+        "rating": 5,
+        "comment": "Excellent management! [citation:6]"
+      },
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "Very professional."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Full Service Event Management"
+  },
+  {
+    "id": 32,
+    "name": "Zia Royal Caterers",
+    "area": "Bahadurabad",
+    "rating": 4.3,
+    "starting_price": 240000,
+    "price_per_head": 350,
+    "address": "C-127, Block-9, Opposite Aziz Bhatti Park, Nipa, Gulshan-e-Iqbal (Serves Bahadurabad), Karachi, Pakistan",
+    "phone": "+92 320 8209000",
+    "whatsapp": "+92 320 8209000",
+    "gallery": [
+      "https://picsum.photos/seed/zia_bah1/900/600",
+      "https://picsum.photos/seed/zia_bah2/900/600",
+      "https://picsum.photos/seed/zia_bah3/900/600"
+    ],
+    "capacity": 3500,
+    "min_guests": 100,
+    "specialties": ["Pakistani", "BBQ", "Traditional"],
+    "cuisine_types": ["Desi", "BBQ"],
+    "features": [
+      "Prompt catering",
+      "Decoration services"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 350,
+        "total_price": 240000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Basic Decor", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 450,
+        "total_price": 320000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "BBQ Station", "7 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 600,
+        "total_price": 420000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live BBQ", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Hassan Raza",
+        "rating": 4,
+        "comment": "Good traditional food. [citation:5]"
+      },
+      {
+        "name": "Mariam Iqbal",
+        "rating": 4,
+        "comment": "Reasonable prices."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+9 Years"
+  },
+  {
+    "id": 33,
+    "name": "Quality Catering Services",
+    "area": "Bahadurabad",
+    "rating": 4.4,
+    "starting_price": 280000,
+    "price_per_head": 400,
+    "address": "Mezzanine Floor, Anum Arcade, Plot No 33-C, 22nd Street, DHA Phase 1 (Serves Bahadurabad), Karachi, Pakistan",
+    "phone": "+92 21 35802352",
+    "whatsapp": "+92 21 35802352",
+    "gallery": [
+      "https://picsum.photos/seed/quality_bah1/900/600",
+      "https://picsum.photos/seed/quality_bah2/900/600",
+      "https://picsum.photos/seed/quality_bah3/900/600"
+    ],
+    "capacity": 4000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Continental"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese", "Continental"],
+    "features": [
+      "Trusted catering",
+      "Wedding events"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 400,
+        "total_price": 280000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 520,
+        "total_price": 370000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 680,
+        "total_price": 480000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 5,
+        "comment": "Great service! [citation:4]"
+      },
+      {
+        "name": "Ayesha Khan",
+        "rating": 4,
+        "comment": "Reliable."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+10 Years"
+  },
+  {
+    "id": 34,
+    "name": "Hanif Rajput Caterers",
+    "area": "Bahadurabad",
+    "rating": 4.9,
+    "starting_price": 400000,
+    "price_per_head": 600,
+    "address": "Office # 2 & 3, Mezzanine Floor, Society Building, PECHS Kashmir Road (Serves Bahadurabad), Karachi, Pakistan",
+    "phone": "+92 304 1111147",
+    "whatsapp": "+92 304 1111147",
+    "gallery": [
+      "https://picsum.photos/seed/hanif_bah1/900/600",
+      "https://picsum.photos/seed/hanif_bah2/900/600",
+      "https://picsum.photos/seed/hanif_bah3/900/600"
+    ],
+    "capacity": 50000,
+    "min_guests": 50,
+    "specialties": ["Pakistani Cuisine", "BBQ", "Mughlai", "Chinese", "Continental", "Live Stations"],
+    "cuisine_types": ["Desi", "BBQ", "Mughlai", "Chinese", "Continental"],
+    "features": [
+      "ISO Certified",
+      "Brand of the Year",
+      "Tasting session"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 600,
+        "total_price": 400000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 800,
+        "total_price": 540000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 1100,
+        "total_price": 700000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bilal Ahmed",
+        "rating": 5,
+        "comment": "Best caterers! [citation:3]"
+      },
+      {
+        "name": "Fatima Sheikh",
+        "rating": 5,
+        "comment": "Excellent!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "ISO Certified | Brand of the Year"
+  },
+  {
+    "id": 35,
+    "name": "Professional Caterers Limited",
+    "area": "Bahadurabad",
+    "rating": 4.6,
+    "starting_price": 360000,
+    "price_per_head": 500,
+    "address": "6-S/A-2, Sirajudaullah Road, DHA (Serves Bahadurabad), Karachi, Pakistan",
+    "phone": "+92 21 4933076",
+    "whatsapp": "+92 21 4933076",
+    "gallery": [
+      "https://picsum.photos/seed/professional_bah1/900/600",
+      "https://picsum.photos/seed/professional_bah2/900/600",
+      "https://picsum.photos/seed/professional_bah3/900/600"
+    ],
+    "capacity": 8000,
+    "min_guests": 200,
+    "specialties": ["Pakistani", "Chinese", "Continental", "Mughlai"],
+    "cuisine_types": ["Desi", "Chinese", "Continental", "Mughlai"],
+    "features": [
+      "Premium venue catering",
+      "Professional staff"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 500,
+        "total_price": 360000,
+        "min_guests": 200,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 650,
+        "total_price": 470000,
+        "min_guests": 200,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 850,
+        "total_price": 610000,
+        "min_guests": 200,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Usman Ali",
+        "rating": 5,
+        "comment": "Top-notch service!"
+      },
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "Very professional."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+12 Years"
+  },
+  {
+    "id": 36,
+    "name": "Oomda Catering & Event Management",
+    "area": "Tariq Road",
+    "rating": 4.5,
+    "starting_price": 320000,
+    "price_per_head": 450,
+    "address": "Karachi, Pakistan (Serves Tariq Road)",
+    "phone": "+92 300 5777121",
+    "whatsapp": "+92 300 5777121",
+    "gallery": [
+      "https://picsum.photos/seed/oomda_tr1/900/600",
+      "https://picsum.photos/seed/oomda_tr2/900/600",
+      "https://picsum.photos/seed/oomda_tr3/900/600"
+    ],
+    "capacity": 5000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Event Management"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese"],
+    "features": [
+      "Full event management",
+      "Wedding planners"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 450,
+        "total_price": 320000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Basic Decor", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 600,
+        "total_price": 420000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "BBQ Station", "Event Coordination", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 800,
+        "total_price": 600000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Full Event Management", "Live Stations", "Premium Decor", "Welcome Drinks", "Bridal Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Hassan Raza",
+        "rating": 5,
+        "comment": "Excellent management! [citation:6]"
+      },
+      {
+        "name": "Mariam Iqbal",
+        "rating": 4,
+        "comment": "Very professional."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Full Service Event Management"
+  },
+  {
+    "id": 37,
+    "name": "Quality Catering Services",
+    "area": "Tariq Road",
+    "rating": 4.4,
+    "starting_price": 300000,
+    "price_per_head": 400,
+    "address": "Mezzanine Floor, Anum Arcade, Plot No 33-C, 22nd Street, DHA Phase 1 (Serves Tariq Road), Karachi, Pakistan",
+    "phone": "+92 21 35802352",
+    "whatsapp": "+92 21 35802352",
+    "gallery": [
+      "https://picsum.photos/seed/quality_tr1/900/600",
+      "https://picsum.photos/seed/quality_tr2/900/600",
+      "https://picsum.photos/seed/quality_tr3/900/600"
+    ],
+    "capacity": 4000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Continental"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese", "Continental"],
+    "features": [
+      "Trusted catering",
+      "Wedding events"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 400,
+        "total_price": 300000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 520,
+        "total_price": 390000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 680,
+        "total_price": 500000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 5,
+        "comment": "Great service! [citation:4]"
+      },
+      {
+        "name": "Ayesha Khan",
+        "rating": 4,
+        "comment": "Reliable."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+10 Years"
+  },
+  {
+    "id": 38,
+    "name": "Hanif Rajput Caterers",
+    "area": "Tariq Road",
+    "rating": 4.9,
+    "starting_price": 420000,
+    "price_per_head": 600,
+    "address": "Office # 2 & 3, Mezzanine Floor, Society Building, PECHS Kashmir Road (Serves Tariq Road), Karachi, Pakistan",
+    "phone": "+92 304 1111147",
+    "whatsapp": "+92 304 1111147",
+    "gallery": [
+      "https://picsum.photos/seed/hanif_tr1/900/600",
+      "https://picsum.photos/seed/hanif_tr2/900/600",
+      "https://picsum.photos/seed/hanif_tr3/900/600"
+    ],
+    "capacity": 50000,
+    "min_guests": 50,
+    "specialties": ["Pakistani Cuisine", "BBQ", "Mughlai", "Chinese", "Continental", "Live Stations"],
+    "cuisine_types": ["Desi", "BBQ", "Mughlai", "Chinese", "Continental"],
+    "features": [
+      "ISO Certified",
+      "Brand of the Year"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 600,
+        "total_price": 420000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 800,
+        "total_price": 560000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 1100,
+        "total_price": 720000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bilal Ahmed",
+        "rating": 5,
+        "comment": "Best caterers! [citation:3]"
+      },
+      {
+        "name": "Fatima Sheikh",
+        "rating": 5,
+        "comment": "Excellent!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "ISO Certified | Brand of the Year"
+  },
+  {
+    "id": 39,
+    "name": "Professional Caterers Limited",
+    "area": "Tariq Road",
+    "rating": 4.6,
+    "starting_price": 380000,
+    "price_per_head": 500,
+    "address": "6-S/A-2, Sirajudaullah Road, DHA (Serves Tariq Road), Karachi, Pakistan",
+    "phone": "+92 21 4933076",
+    "whatsapp": "+92 21 4933076",
+    "gallery": [
+      "https://picsum.photos/seed/professional_tr1/900/600",
+      "https://picsum.photos/seed/professional_tr2/900/600",
+      "https://picsum.photos/seed/professional_tr3/900/600"
+    ],
+    "capacity": 8000,
+    "min_guests": 200,
+    "specialties": ["Pakistani", "Chinese", "Continental", "Mughlai"],
+    "cuisine_types": ["Desi", "Chinese", "Continental", "Mughlai"],
+    "features": [
+      "Premium venue catering",
+      "Professional staff"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 500,
+        "total_price": 380000,
+        "min_guests": 200,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 650,
+        "total_price": 490000,
+        "min_guests": 200,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 850,
+        "total_price": 630000,
+        "min_guests": 200,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Usman Ali",
+        "rating": 5,
+        "comment": "Top-notch service!"
+      },
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "Very professional."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+12 Years"
+  },
+  {
+    "id": 40,
+    "name": "Kausar Catering & Decorations",
+    "area": "Tariq Road",
+    "rating": 4.3,
+    "starting_price": 280000,
+    "price_per_head": 400,
+    "address": "50-C, Defence Commercial Market 'A', Phase-II, DHA (Serves Tariq Road), Karachi, Pakistan",
+    "phone": "+92 21 35381779",
+    "whatsapp": "+92 21 35381779",
+    "gallery": [
+      "https://picsum.photos/seed/kausar_tr1/900/600",
+      "https://picsum.photos/seed/kausar_tr2/900/600",
+      "https://picsum.photos/seed/kausar_tr3/900/600"
+    ],
+    "capacity": 3500,
+    "min_guests": 100,
+    "specialties": ["Pakistani", "BBQ", "Chinese"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese"],
+    "features": [
+      "Catering + decor combo",
+      "Affordable packages"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 400,
+        "total_price": 280000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Basic Decor", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 500,
+        "total_price": 360000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "BBQ Station", "7 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 650,
+        "total_price": 480000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "Live Stations", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ahmed Raza",
+        "rating": 4,
+        "comment": "Good decor and food combo."
+      },
+      {
+        "name": "Sana Mirza",
+        "rating": 4,
+        "comment": "Value for money."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on BusinessList.pk"
+  },
+  {
+    "id": 41,
+    "name": "Oomda Catering & Event Management",
+    "area": "North Nazimabad",
+    "rating": 4.5,
+    "starting_price": 280000,
+    "price_per_head": 450,
+    "address": "Karachi, Pakistan (Serves North Nazimabad)",
+    "phone": "+92 300 5777121",
+    "whatsapp": "+92 300 5777121",
+    "gallery": [
+      "https://picsum.photos/seed/oomda_nn1/900/600",
+      "https://picsum.photos/seed/oomda_nn2/900/600",
+      "https://picsum.photos/seed/oomda_nn3/900/600"
+    ],
+    "capacity": 5000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Event Management"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese"],
+    "features": [
+      "Full event management",
+      "Wedding planners"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 450,
+        "total_price": 280000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Basic Decor", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 600,
+        "total_price": 380000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "BBQ Station", "Event Coordination", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 800,
+        "total_price": 560000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Full Event Management", "Live Stations", "Premium Decor", "Welcome Drinks", "Bridal Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Hassan Raza",
+        "rating": 5,
+        "comment": "Excellent management! [citation:6]"
+      },
+      {
+        "name": "Mariam Iqbal",
+        "rating": 4,
+        "comment": "Very professional."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Full Service Event Management"
+  },
+  {
+    "id": 42,
+    "name": "Zia Royal Caterers",
+    "area": "North Nazimabad",
+    "rating": 4.3,
+    "starting_price": 230000,
+    "price_per_head": 350,
+    "address": "C-127, Block-9, Opposite Aziz Bhatti Park, Nipa, Gulshan-e-Iqbal (Serves North Nazimabad), Karachi, Pakistan",
+    "phone": "+92 320 8209000",
+    "whatsapp": "+92 320 8209000",
+    "gallery": [
+      "https://picsum.photos/seed/zia_nn1/900/600",
+      "https://picsum.photos/seed/zia_nn2/900/600",
+      "https://picsum.photos/seed/zia_nn3/900/600"
+    ],
+    "capacity": 3500,
+    "min_guests": 100,
+    "specialties": ["Pakistani", "BBQ", "Traditional"],
+    "cuisine_types": ["Desi", "BBQ"],
+    "features": [
+      "Prompt catering",
+      "Decoration services"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 350,
+        "total_price": 230000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Basic Decor", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 450,
+        "total_price": 310000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "BBQ Station", "7 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 600,
+        "total_price": 410000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live BBQ", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 4,
+        "comment": "Good traditional food. [citation:5]"
+      },
+      {
+        "name": "Ayesha Khan",
+        "rating": 4,
+        "comment": "Reasonable prices."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+9 Years"
+  },
+  {
+    "id": 43,
+    "name": "Quality Catering Services",
+    "area": "North Nazimabad",
+    "rating": 4.4,
+    "starting_price": 260000,
+    "price_per_head": 400,
+    "address": "Mezzanine Floor, Anum Arcade, Plot No 33-C, 22nd Street, DHA Phase 1 (Serves North Nazimabad), Karachi, Pakistan",
+    "phone": "+92 21 35802352",
+    "whatsapp": "+92 21 35802352",
+    "gallery": [
+      "https://picsum.photos/seed/quality_nn1/900/600",
+      "https://picsum.photos/seed/quality_nn2/900/600",
+      "https://picsum.photos/seed/quality_nn3/900/600"
+    ],
+    "capacity": 4000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Continental"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese", "Continental"],
+    "features": [
+      "Trusted catering",
+      "Wedding events"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 400,
+        "total_price": 260000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 520,
+        "total_price": 350000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 680,
+        "total_price": 450000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bilal Ahmed",
+        "rating": 5,
+        "comment": "Great service! [citation:4]"
+      },
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Reliable."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+10 Years"
+  },
+  {
+    "id": 44,
+    "name": "Hanif Rajput Caterers",
+    "area": "North Nazimabad",
+    "rating": 4.9,
+    "starting_price": 380000,
+    "price_per_head": 600,
+    "address": "Office # 2 & 3, Mezzanine Floor, Society Building, PECHS Kashmir Road (Serves North Nazimabad), Karachi, Pakistan",
+    "phone": "+92 304 1111147",
+    "whatsapp": "+92 304 1111147",
+    "gallery": [
+      "https://picsum.photos/seed/hanif_nn1/900/600",
+      "https://picsum.photos/seed/hanif_nn2/900/600",
+      "https://picsum.photos/seed/hanif_nn3/900/600"
+    ],
+    "capacity": 50000,
+    "min_guests": 50,
+    "specialties": ["Pakistani Cuisine", "BBQ", "Mughlai", "Chinese", "Continental", "Live Stations"],
+    "cuisine_types": ["Desi", "BBQ", "Mughlai", "Chinese", "Continental"],
+    "features": [
+      "ISO Certified",
+      "Brand of the Year"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 600,
+        "total_price": 380000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 800,
+        "total_price": 520000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 1100,
+        "total_price": 680000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Usman Ali",
+        "rating": 5,
+        "comment": "Best caterers! [citation:3]"
+      },
+      {
+        "name": "Zainab Malik",
+        "rating": 5,
+        "comment": "Excellent!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "ISO Certified | Brand of the Year"
+  },
+  {
+    "id": 45,
+    "name": "Professional Caterers Limited",
+    "area": "North Nazimabad",
+    "rating": 4.6,
+    "starting_price": 350000,
+    "price_per_head": 500,
+    "address": "6-S/A-2, Sirajudaullah Road, DHA (Serves North Nazimabad), Karachi, Pakistan",
+    "phone": "+92 21 4933076",
+    "whatsapp": "+92 21 4933076",
+    "gallery": [
+      "https://picsum.photos/seed/professional_nn1/900/600",
+      "https://picsum.photos/seed/professional_nn2/900/600",
+      "https://picsum.photos/seed/professional_nn3/900/600"
+    ],
+    "capacity": 8000,
+    "min_guests": 200,
+    "specialties": ["Pakistani", "Chinese", "Continental", "Mughlai"],
+    "cuisine_types": ["Desi", "Chinese", "Continental", "Mughlai"],
+    "features": [
+      "Premium venue catering",
+      "Professional staff"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 500,
+        "total_price": 350000,
+        "min_guests": 200,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 650,
+        "total_price": 460000,
+        "min_guests": 200,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 850,
+        "total_price": 600000,
+        "min_guests": 200,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Hassan Raza",
+        "rating": 5,
+        "comment": "Top-notch service!"
+      },
+      {
+        "name": "Mariam Iqbal",
+        "rating": 4,
+        "comment": "Very professional."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+12 Years"
+  },
+  {
+    "id": 46,
+    "name": "Shaheen Shinwari Caterers",
+    "area": "North Karachi",
+    "rating": 4.5,
+    "starting_price": 260000,
+    "price_per_head": 580,
+    "address": "Super Highway, Gulshan-e-Maymar More, Karachi (Serves North Karachi)",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/shaheen_nk1/900/600",
+      "https://picsum.photos/seed/shaheen_nk2/900/600",
+      "https://picsum.photos/seed/shaheen_nk3/900/600"
+    ],
+    "capacity": 3000,
+    "min_guests": 80,
+    "specialties": ["BBQ", "Shinwari", "Traditional Pakistani"],
+    "cuisine_types": ["BBQ", "Desi", "Pakwan"],
+    "features": [
+      "Live BBQ stations",
+      "Buffet setup",
+      "Crockery included",
+      "Wait staff",
+      "Decoration available"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 580,
+        "total_price": 260000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 750,
+        "total_price": 340000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Live BBQ", "Decor", "7 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 980,
+        "total_price": 450000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ahmed Raza",
+        "rating": 5,
+        "comment": "Best BBQ and Shinwari cuisine! [citation:1]"
+      },
+      {
+        "name": "Sana Mirza",
+        "rating": 4,
+        "comment": "Excellent live BBQ stations."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Shadiyana.pk"
+  },
+  {
+    "id": 47,
+    "name": "Oomda Catering & Event Management",
+    "area": "North Karachi",
+    "rating": 4.5,
+    "starting_price": 260000,
+    "price_per_head": 450,
+    "address": "Karachi, Pakistan (Serves North Karachi)",
+    "phone": "+92 300 5777121",
+    "whatsapp": "+92 300 5777121",
+    "gallery": [
+      "https://picsum.photos/seed/oomda_nk1/900/600",
+      "https://picsum.photos/seed/oomda_nk2/900/600",
+      "https://picsum.photos/seed/oomda_nk3/900/600"
+    ],
+    "capacity": 5000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Event Management"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese"],
+    "features": [
+      "Full event management",
+      "Wedding planners"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 450,
+        "total_price": 260000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Basic Decor", "Cutlery", "6 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 600,
+        "total_price": 360000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "BBQ Station", "Event Coordination", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 800,
+        "total_price": 540000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Full Event Management", "Live Stations", "Premium Decor", "Welcome Drinks", "Bridal Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Kamran Siddiqui",
+        "rating": 5,
+        "comment": "Excellent management! [citation:6]"
+      },
+      {
+        "name": "Ayesha Khan",
+        "rating": 4,
+        "comment": "Very professional."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Full Service Event Management"
+  },
+  {
+    "id": 48,
+    "name": "Zia Royal Caterers",
+    "area": "North Karachi",
+    "rating": 4.3,
+    "starting_price": 210000,
+    "price_per_head": 350,
+    "address": "C-127, Block-9, Opposite Aziz Bhatti Park, Nipa, Gulshan-e-Iqbal (Serves North Karachi), Karachi, Pakistan",
+    "phone": "+92 320 8209000",
+    "whatsapp": "+92 320 8209000",
+    "gallery": [
+      "https://picsum.photos/seed/zia_nk1/900/600",
+      "https://picsum.photos/seed/zia_nk2/900/600",
+      "https://picsum.photos/seed/zia_nk3/900/600"
+    ],
+    "capacity": 3500,
+    "min_guests": 100,
+    "specialties": ["Pakistani", "BBQ", "Traditional"],
+    "cuisine_types": ["Desi", "BBQ"],
+    "features": [
+      "Prompt catering",
+      "Decoration services"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 350,
+        "total_price": 210000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Basic Decor", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 450,
+        "total_price": 290000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Premium Decor", "BBQ Station", "7 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 600,
+        "total_price": 390000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live BBQ", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bilal Ahmed",
+        "rating": 4,
+        "comment": "Good traditional food. [citation:5]"
+      },
+      {
+        "name": "Fatima Sheikh",
+        "rating": 4,
+        "comment": "Reasonable prices."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+9 Years"
+  },
+  {
+    "id": 49,
+    "name": "Quality Catering Services",
+    "area": "North Karachi",
+    "rating": 4.4,
+    "starting_price": 240000,
+    "price_per_head": 400,
+    "address": "Mezzanine Floor, Anum Arcade, Plot No 33-C, 22nd Street, DHA Phase 1 (Serves North Karachi), Karachi, Pakistan",
+    "phone": "+92 21 35802352",
+    "whatsapp": "+92 21 35802352",
+    "gallery": [
+      "https://picsum.photos/seed/quality_nk1/900/600",
+      "https://picsum.photos/seed/quality_nk2/900/600",
+      "https://picsum.photos/seed/quality_nk3/900/600"
+    ],
+    "capacity": 4000,
+    "min_guests": 150,
+    "specialties": ["Pakistani", "BBQ", "Chinese", "Continental"],
+    "cuisine_types": ["Desi", "BBQ", "Chinese", "Continental"],
+    "features": [
+      "Trusted catering",
+      "Wedding events"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 400,
+        "total_price": 240000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 520,
+        "total_price": 330000,
+        "min_guests": 150,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 680,
+        "total_price": 430000,
+        "min_guests": 150,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Usman Ali",
+        "rating": 5,
+        "comment": "Great service! [citation:4]"
+      },
+      {
+        "name": "Zainab Malik",
+        "rating": 4,
+        "comment": "Reliable."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+10 Years"
+  },
+  {
+    "id": 50,
+    "name": "Hanif Rajput Caterers",
+    "area": "North Karachi",
+    "rating": 4.9,
+    "starting_price": 360000,
+    "price_per_head": 600,
+    "address": "Office # 2 & 3, Mezzanine Floor, Society Building, PECHS Kashmir Road (Serves North Karachi), Karachi, Pakistan",
+    "phone": "+92 304 1111147",
+    "whatsapp": "+92 304 1111147",
+    "gallery": [
+      "https://picsum.photos/seed/hanif_nk1/900/600",
+      "https://picsum.photos/seed/hanif_nk2/900/600",
+      "https://picsum.photos/seed/hanif_nk3/900/600"
+    ],
+    "capacity": 50000,
+    "min_guests": 50,
+    "specialties": ["Pakistani Cuisine", "BBQ", "Mughlai", "Chinese", "Continental", "Live Stations"],
+    "cuisine_types": ["Desi", "BBQ", "Mughlai", "Chinese", "Continental"],
+    "features": [
+      "ISO Certified",
+      "Brand of the Year"
+    ],
+    "packages": [
+      {
+        "name": "Silver",
+        "price_per_head": 600,
+        "total_price": 360000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "Cutlery", "5 Dishes"]
+      },
+      {
+        "name": "Gold",
+        "price_per_head": 800,
+        "total_price": 500000,
+        "min_guests": 100,
+        "includes": ["Buffet Setup", "Waitstaff", "BBQ Station", "Decor", "8 Dishes"]
+      },
+      {
+        "name": "Platinum",
+        "price_per_head": 1100,
+        "total_price": 660000,
+        "min_guests": 100,
+        "includes": ["Premium Buffet", "Live Stations", "Full Decor", "Welcome Drinks", "Premium Cutlery"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Hassan Raza",
+        "rating": 5,
+        "comment": "Best caterers! [citation:3]"
+      },
+      {
+        "name": "Mariam Iqbal",
+        "rating": 5,
+        "comment": "Excellent!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "ISO Certified | Brand of the Year"
+  }
+]
