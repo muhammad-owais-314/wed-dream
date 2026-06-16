@@ -1,0 +1,2465 @@
+[
+  {
+    "id": 1,
+    "name": "AJ Studio Official",
+    "area": "DHA",
+    "rating": 4.9,
+    "starting_price": 65000,
+    "price_type": "package",
+    "address": "19C, Stadium Lane 1, Phase V, DHA, Karachi, Pakistan",
+    "phone": "+92-21-35846191",
+    "whatsapp": "+92-21-35846191",
+    "gallery": [
+      "https://picsum.photos/seed/ajstudio1/900/600",
+      "https://picsum.photos/seed/ajstudio2/900/600",
+      "https://picsum.photos/seed/ajstudio3/900/600"
+    ],
+    "services": ["Wedding Photography", "Fine Art Portraits", "Cinematic Videography", "Pre-wedding Shoots"],
+    "staff_available": ["Male"],
+    "specialties": ["Fine Art Photography", "Natural Light Expert", "Internationally Trained", "Texas School of Photography Graduate"],
+    "features": [
+      "Over 19 Years Experience",
+      "Texas School of Photography Graduate",
+      "Natural Backdrops Only",
+      "Internationally Recognized",
+      "Professional Equipment"
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 65000,
+        "min_guests": 100,
+        "includes": ["6 Hours Coverage", "All Edited Photos", "Online Gallery"]
+      },
+      {
+        "name": "Premium",
+        "price": 100000,
+        "min_guests": 200,
+        "includes": ["10 Hours Coverage", "All Edited Photos", "Cinematic Video", "Album"]
+      },
+      {
+        "name": "Luxury",
+        "price": 160000,
+        "min_guests": 300,
+        "includes": ["Full Day Coverage", "Pre-wedding Shoot", "Fine Art Album", "Cinematic Film"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ahmed Raza",
+        "rating": 5,
+        "comment": "AJ's photography is truly artistic and timeless! Highly recommended"
+      },
+      {
+        "name": "Sana Mirza",
+        "rating": 5,
+        "comment": "Professional team, amazing work!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Texas School of Photography Graduate",
+    "established": 2005,
+    "website": "ajstudioofficial.com"
+  },
+  {
+    "id": 2,
+    "name": "Dossani's Studio",
+    "area": "DHA",
+    "rating": 4.7,
+    "starting_price": 60000,
+    "price_type": "package",
+    "address": "14/C, Stadium Lane 1, Khayaban-e-Shamsheer, Phase V, DHA, Karachi, Pakistan",
+    "phone": "+92-21-5848883-85",
+    "whatsapp": "+92-21-5848883",
+    "gallery": [
+      "https://picsum.photos/seed/dossani1/900/600",
+      "https://picsum.photos/seed/dossani2/900/600",
+      "https://picsum.photos/seed/dossani3/900/600"
+    ],
+    "services": ["Wedding Photography", "Video Production", "Event Coverage", "Embassy Photography", "Commercial Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Embassy Approved Photography", "Cinematic Wedding Films", "Large Network", "State-of-the-art Equipment"],
+    "features": [
+      "Established 1970s",
+      "3 Branches in Karachi",
+      "Embassy Approved",
+      "State-of-the-art Equipment",
+      "Digital Editing & Printing"
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 60000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 100000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Cinematic Video", "Album"]
+      },
+      {
+        "name": "Luxury",
+        "price": 150000,
+        "min_guests": 300,
+        "includes": ["Full Day Coverage", "Cinematic Film", "Premium Album", "Digital Printing"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "The only studio approved by Foreign Embassies in Karachi"
+      },
+      {
+        "name": "Usman Ali",
+        "rating": 4,
+        "comment": "Professional and reliable service"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Embassy Approved | Est. 1970s",
+    "established": 1975,
+    "website": "dossanis.com"
+  },
+  {
+    "id": 3,
+    "name": "K.Bridals Photography and Film",
+    "area": "DHA",
+    "rating": 4.8,
+    "starting_price": 50000,
+    "price_type": "package",
+    "address": "13-C, 1st Commercial Lane, Phase IV, DHA, Karachi, Pakistan",
+    "phone": "+92 312-5274325",
+    "whatsapp": "+92 312-5274325",
+    "gallery": [
+      "https://picsum.photos/seed/kbridals1/900/600",
+      "https://picsum.photos/seed/kbridals2/900/600",
+      "https://picsum.photos/seed/kbridals3/900/600"
+    ],
+    "services": ["Photography", "Videography", "Couple Portraits", "Bridal Event Photography", "Cinematic Videos"],
+    "staff_available": ["Male"],
+    "specialties": ["No. 1 Wedding Photography", "Cinematic Wedding Films", "Bridal Photography"],
+    "features": [
+      "Professional Team",
+      "High Quality Equipment",
+      "Timely Delivery",
+      "Edited Photos & Videos"
+    ],
+    "packages": [
+      {
+        "name": "Basic Wedding",
+        "price": 50000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Online Gallery"]
+      },
+      {
+        "name": "Premium Wedding",
+        "price": 85000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Cinematic Video", "Online Gallery"]
+      },
+      {
+        "name": "Luxury Wedding",
+        "price": 130000,
+        "min_guests": 300,
+        "includes": ["Full Day Coverage", "All Edited Photos", "Cinematic Film", "Pre-wedding Shoot", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ahmed Raza",
+        "rating": 5,
+        "comment": "Best wedding photographers in Karachi! Highly professional"
+      },
+      {
+        "name": "Sana Mirza",
+        "rating": 5,
+        "comment": "Amazing work, captured every moment beautifully."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified on B2C Pakistan",
+    "established": 2010,
+    "email": "info@kbridals.com"
+  },
+  {
+    "id": 4,
+    "name": "Shakir Rehman's Photography",
+    "area": "DHA",
+    "rating": 4.6,
+    "starting_price": 45000,
+    "price_type": "package",
+    "address": "DHA, Karachi, Pakistan",
+    "phone": "0313 2173103",
+    "whatsapp": "0313 2173103",
+    "gallery": [
+      "https://picsum.photos/seed/shakir1/900/600",
+      "https://picsum.photos/seed/shakir2/900/600",
+      "https://picsum.photos/seed/shakir3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Commercial Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Wedding Photography", "Creative Portraits", "Event Coverage", "Natural Moments"],
+    "features": [
+      "Professional Service",
+      "Quality Work",
+      "Timely Delivery",
+      "Experienced Photographer"
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 45000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 75000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      },
+      {
+        "name": "Luxury",
+        "price": 110000,
+        "min_guests": 300,
+        "includes": ["Full Day Coverage", "All Edited Photos", "Cinematic Film", "Premium Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Excellent photography service!"
+      },
+      {
+        "name": "Fatima Khan",
+        "rating": 4,
+        "comment": "Very professional and talented photographer."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Professional Photographer",
+    "established": 2012,
+    "instagram": "shakirrehmanphotography"
+  },
+  {
+    "id": 5,
+    "name": "TWC - Cinematics",
+    "area": "DHA",
+    "rating": 4.7,
+    "starting_price": 55000,
+    "price_type": "package",
+    "address": "DHA, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/twc1/900/600",
+      "https://picsum.photos/seed/twc2/900/600",
+      "https://picsum.photos/seed/twc3/900/600"
+    ],
+    "services": ["Wedding Photography", "Cinematic Videography", "Drone Coverage", "Pre-wedding Shoots"],
+    "staff_available": ["Male"],
+    "specialties": ["Cinematic Wedding Films", "Creative Storytelling", "Drone Shots", "Emotional Moments"],
+    "features": [
+      "Professional Team",
+      "Drone Coverage Available",
+      "Same Day Edit Option",
+      "High Quality Equipment",
+      "Creative Direction"
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 55000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Online Gallery"]
+      },
+      {
+        "name": "Premium",
+        "price": 90000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Cinematic Film", "Drone Shots"]
+      },
+      {
+        "name": "Luxury",
+        "price": 140000,
+        "min_guests": 300,
+        "includes": ["Full Day Coverage", "Pre-wedding Shoot", "Cinematic Film", "Drone Coverage", "Same Day Edit"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Amazing cinematic coverage! Highly recommended"
+      },
+      {
+        "name": "Zara Ahmed",
+        "rating": 5,
+        "comment": "They captured our wedding day perfectly!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Shadiyana.pk",
+    "established": 2015
+  },
+  {
+    "id": 6,
+    "name": "Dossani's Studio",
+    "area": "Clifton",
+    "rating": 4.7,
+    "starting_price": 60000,
+    "price_type": "package",
+    "address": "Hashoo Terrace, Khayaban-e-Roomi, Clifton, Karachi, Pakistan",
+    "phone": "+92-21-5835547",
+    "whatsapp": "+92-21-5835547",
+    "gallery": [
+      "https://picsum.photos/seed/dossanicl1/900/600",
+      "https://picsum.photos/seed/dossanicl2/900/600",
+      "https://picsum.photos/seed/dossanicl3/900/600"
+    ],
+    "services": ["Wedding Photography", "Video Production", "Event Coverage", "Embassy Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Embassy Approved Photography", "Cinematic Wedding Films", "Large Network"],
+    "features": [
+      "Established 1970s",
+      "3 Branches in Karachi",
+      "Embassy Approved",
+      "State-of-the-art Equipment"
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 60000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 100000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Cinematic Video", "Album"]
+      },
+      {
+        "name": "Luxury",
+        "price": 150000,
+        "min_guests": 300,
+        "includes": ["Full Day Coverage", "Cinematic Film", "Premium Album", "Digital Printing"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "The only studio approved by Foreign Embassies in Karachi"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Embassy Approved | Est. 1970s",
+    "established": 1975,
+    "website": "dossanis.com"
+  },
+  {
+    "id": 7,
+    "name": "Eastriver",
+    "area": "Clifton",
+    "rating": 4.4,
+    "starting_price": 45000,
+    "price_type": "package",
+    "address": "Clifton, Karachi, Pakistan",
+    "phone": "(021) 35305446",
+    "whatsapp": "(021) 35305446",
+    "gallery": [
+      "https://picsum.photos/seed/eastriver1/900/600",
+      "https://picsum.photos/seed/eastriver2/900/600",
+      "https://picsum.photos/seed/eastriver3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Creative Photography", "Event Coverage", "Wedding Photography"],
+    "features": [
+      "Professional Service",
+      "Quality Work",
+      "Timely Delivery"
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 45000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 70000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good photography service in Clifton"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on BusinessList.pk",
+    "established": 2010
+  },
+  {
+    "id": 8,
+    "name": "Oshoot Collective",
+    "area": "Clifton",
+    "rating": 4.6,
+    "starting_price": 52000,
+    "price_type": "package",
+    "address": "Clifton, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/oshoot1/900/600",
+      "https://picsum.photos/seed/oshoot2/900/600",
+      "https://picsum.photos/seed/oshoot3/900/600"
+    ],
+    "services": ["Wedding Photography", "Creative Direction", "Film Production", "Brand Photography"],
+    "staff_available": ["Male", "Female"],
+    "specialties": ["Creative Wedding Photography", "Art Direction", "Storytelling", "Visual Narratives"],
+    "features": [
+      "Creative Team",
+      "Modern Approach",
+      "Quality Work",
+      "Artistic Vision"
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 52000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Online Gallery"]
+      },
+      {
+        "name": "Premium",
+        "price": 85000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Cinematic Video", "Creative Direction"]
+      },
+      {
+        "name": "Luxury",
+        "price": 130000,
+        "min_guests": 300,
+        "includes": ["Full Day Coverage", "Creative Film", "Art Direction", "Premium Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Very creative and professional team!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Featured on Bloom Pakistan",
+    "established": 2017
+  },
+  {
+    "id": 9,
+    "name": "Maha Wajahat Khan",
+    "area": "Clifton",
+    "rating": 4.8,
+    "starting_price": 65000,
+    "price_type": "package",
+    "address": "Clifton, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/maha1/900/600",
+      "https://picsum.photos/seed/maha2/900/600",
+      "https://picsum.photos/seed/maha3/900/600"
+    ],
+    "services": ["Bridal Photography", "Wedding Photography", "Fine Art Portraits", "Editorial Shoots"],
+    "staff_available": ["Female"],
+    "specialties": ["Fine Art Bridal Photography", "Elegant Portraits", "Natural Light", "Editorial Style"],
+    "features": [
+      "Female Photographer",
+      "Fine Art Approach",
+      "Elegant Editing Style",
+      "Bridal Specialist"
+    ],
+    "packages": [
+      {
+        "name": "Bridal Basic",
+        "price": 65000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Online Gallery"]
+      },
+      {
+        "name": "Bridal Premium",
+        "price": 95000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Fine Art Album", "Bridal Portraits"]
+      },
+      {
+        "name": "Bridal Luxury",
+        "price": 140000,
+        "min_guests": 300,
+        "includes": ["Full Day Coverage", "Fine Art Album", "Bridal Editorial", "Pre-wedding Shoot"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Maha's photography is absolutely stunning! So elegant and timeless."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Featured on Bloom Pakistan | Female Photographer",
+    "established": 2016
+  },
+  {
+    "id": 10,
+    "name": "The Wedding Station",
+    "area": "Clifton",
+    "rating": 4.6,
+    "starting_price": 50000,
+    "price_type": "package",
+    "address": "Clifton, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/wedstation1/900/600",
+      "https://picsum.photos/seed/wedstation2/900/600",
+      "https://picsum.photos/seed/wedstation3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Pre-wedding Shoots", "Album Design"],
+    "staff_available": ["Male", "Female"],
+    "specialties": ["Wedding Photography", "Creative Storytelling", "Natural Moments", "Documentary Style"],
+    "features": [
+      "Professional Team",
+      "Quality Service",
+      "Timely Delivery",
+      "Custom Albums"
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 50000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Online Gallery"]
+      },
+      {
+        "name": "Premium",
+        "price": 80000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      },
+      {
+        "name": "Luxury",
+        "price": 120000,
+        "min_guests": 300,
+        "includes": ["Full Day Coverage", "Cinematic Film", "Premium Album", "Pre-wedding Shoot"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Excellent wedding photography service!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Shadiyana.pk",
+    "established": 2016
+  },
+  {
+    "id": 11,
+    "name": "Biyah Wedding",
+    "area": "PECHS",
+    "rating": 4.5,
+    "starting_price": 35000,
+    "price_type": "package",
+    "address": "Block, 43 H, 1, 6, PECHS, Karachi, Pakistan",
+    "phone": "0342 2142524",
+    "whatsapp": "0342 2142524",
+    "gallery": [
+      "https://picsum.photos/seed/biyah1/900/600",
+      "https://picsum.photos/seed/biyah2/900/600",
+      "https://picsum.photos/seed/biyah3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Bridal Photography", "Album Design"],
+    "staff_available": ["Male"],
+    "specialties": ["Wedding Photography", "Event Coverage", "Creative Shots"],
+    "features": [
+      "Professional Service",
+      "Quality Work",
+      "Timely Delivery",
+      "Affordable Packages"
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 35000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 55000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Good wedding photography service in PECHS"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on BusinessList.pk",
+    "established": 2015
+  },
+  {
+    "id": 12,
+    "name": "Sohail Asim Photography",
+    "area": "PECHS",
+    "rating": 4.5,
+    "starting_price": 35000,
+    "price_type": "package",
+    "address": "873/C PECHS-2, Karachi, Pakistan",
+    "phone": "0213456477",
+    "whatsapp": "0213456477",
+    "gallery": [
+      "https://picsum.photos/seed/sohail1/900/600",
+      "https://picsum.photos/seed/sohail2/900/600",
+      "https://picsum.photos/seed/sohail3/900/600"
+    ],
+    "services": ["Wedding Photography", "Videography", "Event Photography", "Portrait Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Stunning Photography", "Videography", "Professional Service"],
+    "features": [
+      "Verified+13 Years",
+      "Established 1992",
+      "Professional Photographer",
+      "Quality Service"
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 35000,
+        "min_guests": 100,
+        "includes": ["6 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 60000,
+        "min_guests": 200,
+        "includes": ["10 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Very professional and experienced photographer!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+13 Years | Est. 1992",
+    "established": 1992
+  },
+  {
+    "id": 13,
+    "name": "Zainbaba Photo Studio",
+    "area": "PECHS",
+    "rating": 4.3,
+    "starting_price": 28000,
+    "price_type": "package",
+    "address": "Gulistan-e-Johar (serves PECHS), Karachi, Pakistan",
+    "phone": "0322-2088037, 021-37830856",
+    "whatsapp": "0322-2088037",
+    "gallery": [
+      "https://picsum.photos/seed/zainbaba1/900/600",
+      "https://picsum.photos/seed/zainbaba2/900/600",
+      "https://picsum.photos/seed/zainbaba3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Album Design"],
+    "staff_available": ["Male"],
+    "specialties": ["Wedding Photography", "Event Coverage", "Creative Portraits"],
+    "features": [
+      "Professional Service",
+      "Quality Work",
+      "Affordable Packages"
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 28000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 45000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good photography service at reasonable rates"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on PakProBiz.com",
+    "established": 2010
+  },
+  {
+    "id": 14,
+    "name": "Mohammad Jobaed Khan",
+    "area": "PECHS",
+    "rating": 4.5,
+    "starting_price": 40000,
+    "price_type": "package",
+    "address": "Karachi, Pakistan (serves all areas)",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/jobaed1/900/600",
+      "https://picsum.photos/seed/jobaed2/900/600",
+      "https://picsum.photos/seed/jobaed3/900/600"
+    ],
+    "services": ["Wedding Photography", "Wedding Filmmaking", "Portrait Photography", "Event Coverage"],
+    "staff_available": ["Male"],
+    "specialties": ["Wedding Photography", "Cinematic Filmmaking", "Storytelling"],
+    "features": [
+      "Professional Service",
+      "International Recognition",
+      "Quality Work",
+      "Creative Approach"
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 40000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 70000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Cinematic Video", "Album"]
+      },
+      {
+        "name": "Luxury",
+        "price": 120000,
+        "min_guests": 300,
+        "includes": ["Full Day Coverage", "Cinematic Film", "Premium Album", "Pre-wedding Shoot"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Excellent wedding photography and filmmaking!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "PROWEDaward Winner",
+    "established": 2013
+  },
+  {
+    "id": 15,
+    "name": "ShadiGrapher.com",
+    "area": "PECHS",
+    "rating": 4.3,
+    "starting_price": 30000,
+    "price_type": "package",
+    "address": "Karachi, Pakistan (serves all areas)",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/shadigrapher1/900/600",
+      "https://picsum.photos/seed/shadigrapher2/900/600",
+      "https://picsum.photos/seed/shadigrapher3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Pre-wedding Shoots", "Album Design"],
+    "staff_available": ["Male"],
+    "specialties": ["Wedding Photography", "Affordable Packages", "Quality Work"],
+    "features": [
+      "Professional Service",
+      "Timely Delivery",
+      "Budget Friendly",
+      "Custom Packages"
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 30000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 50000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good value for money photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Shadiyana.pk",
+    "established": 2018
+  },
+  {
+    "id": 16,
+    "name": "Shahida Weds Gallery",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.6,
+    "starting_price": 40000,
+    "price_type": "package",
+    "address": "Waqas Heights, Shop No# 1, Block 13D-1, Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/shahida1/900/600",
+      "https://picsum.photos/seed/shahida2/900/600",
+      "https://picsum.photos/seed/shahida3/900/600"
+    ],
+    "services": ["Wedding Photography", "Pre-wedding Shoots", "Album Design", "Videography"],
+    "staff_available": ["Male", "Female"],
+    "specialties": ["Professional Wedding Photography", "Photo-book Albums", "Destination Weddings"],
+    "features": [
+      "Full Wedding Coverage",
+      "Custom Photo-books",
+      "Location Flexibility",
+      "Personal Touch",
+      "Album Printing"
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 40000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Online Gallery"]
+      },
+      {
+        "name": "Premium",
+        "price": 70000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Photo Album", "Highlight Video"]
+      },
+      {
+        "name": "Luxury",
+        "price": 110000,
+        "min_guests": 300,
+        "includes": ["Full Day Coverage", "Pre-wedding Shoot", "Premium Album", "Cinematic Film"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Beautiful photography and very professional team!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified on Shadiyana.pk",
+    "established": 2014,
+    "cancellation_policy": "Partially Refundable"
+  },
+  {
+    "id": 17,
+    "name": "Zainbaba Photo Studio",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.3,
+    "starting_price": 28000,
+    "price_type": "package",
+    "address": "Gulistan-e-Johar (serves Gulshan-e-Iqbal), Karachi, Pakistan",
+    "phone": "0322-2088037, 0315-2960652",
+    "whatsapp": "0322-2088037",
+    "gallery": [
+      "https://picsum.photos/seed/zainbaba_gul1/900/600",
+      "https://picsum.photos/seed/zainbaba_gul2/900/600",
+      "https://picsum.photos/seed/zainbaba_gul3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Wedding Photography", "Event Coverage", "Affordable Rates"],
+    "features": ["Professional Service", "Quality Work", "Timely Delivery"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 28000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 45000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good service at reasonable rates"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on PakProBiz.com",
+    "established": 2010
+  },
+  {
+    "id": 18,
+    "name": "Smart Aperture Photography",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.2,
+    "starting_price": 25000,
+    "price_type": "package",
+    "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/smart1/900/600",
+      "https://picsum.photos/seed/smart2/900/600",
+      "https://picsum.photos/seed/smart3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Smart Photography", "Creative Shots", "Event Coverage"],
+    "features": ["Professional Service", "Quality Work", "Affordable Packages"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 25000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 40000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on BusinessList.pk",
+    "established": 2015
+  },
+  {
+    "id": 19,
+    "name": "AkskaarPhotography",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.2,
+    "starting_price": 25000,
+    "price_type": "package",
+    "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/akskaar1/900/600",
+      "https://picsum.photos/seed/akskaar2/900/600",
+      "https://picsum.photos/seed/akskaar3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Creative Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Creative Wedding Photography", "Artistic Shots", "Event Coverage"],
+    "features": ["Professional Service", "Creative Approach", "Quality Work"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 25000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 42000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Creative photography work"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Photlo.com",
+    "established": 2016
+  },
+  {
+    "id": 20,
+    "name": "QasimKhan Films & Photography",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.3,
+    "starting_price": 30000,
+    "price_type": "package",
+    "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/qasim1/900/600",
+      "https://picsum.photos/seed/qasim2/900/600",
+      "https://picsum.photos/seed/qasim3/900/600"
+    ],
+    "services": ["Wedding Photography", "Cinematic Films", "Event Coverage", "Pre-wedding Shoots"],
+    "staff_available": ["Male"],
+    "specialties": ["Cinematic Wedding Films", "Creative Photography", "Storytelling"],
+    "features": ["Professional Team", "Quality Work", "Timely Delivery", "Creative Direction"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 30000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 50000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Cinematic Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good cinematic wedding coverage"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Shadiyana.pk",
+    "established": 2015
+  },
+  {
+    "id": 21,
+    "name": "Zainbaba Photo Studio",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.3,
+    "starting_price": 28000,
+    "price_type": "package",
+    "address": "Gulistan-e-Johar, Karachi, Pakistan",
+    "phone": "0322-2088037, 0315-2960652, 021-37830856",
+    "whatsapp": "0322-2088037",
+    "gallery": [
+      "https://picsum.photos/seed/zainbaba_j1/900/600",
+      "https://picsum.photos/seed/zainbaba_j2/900/600",
+      "https://picsum.photos/seed/zainbaba_j3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Commercial Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Wedding Photography", "Event Coverage", "Creative Portraits"],
+    "features": [
+      "Professional Service",
+      "Quality Work",
+      "Affordable Packages",
+      "Multiple Contact Options"
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 28000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 45000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      },
+      {
+        "name": "Luxury",
+        "price": 70000,
+        "min_guests": 300,
+        "includes": ["Full Day Coverage", "Cinematic Film", "Premium Album", "Pre-wedding Shoot"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Professional photography service in Johar"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified on PakProBiz.com",
+    "established": 2010
+  },
+  {
+    "id": 22,
+    "name": "HB Studio Weddings",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.4,
+    "starting_price": 35000,
+    "price_type": "package",
+    "address": "Gulistan-e-Johar, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/hbstudio1/900/600",
+      "https://picsum.photos/seed/hbstudio2/900/600",
+      "https://picsum.photos/seed/hbstudio3/900/600"
+    ],
+    "services": ["Wedding Photography", "Cinematic Films", "Event Coverage", "Pre-wedding Shoots"],
+    "staff_available": ["Male"],
+    "specialties": ["Wedding Photography", "Cinematic Films", "Creative Storytelling"],
+    "features": ["Professional Team", "Quality Work", "Creative Approach"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 35000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 55000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Cinematic Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good wedding photography studio"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Photlo.com",
+    "established": 2016
+  },
+  {
+    "id": 23,
+    "name": "Dees Creations",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.4,
+    "starting_price": 30000,
+    "price_type": "package",
+    "address": "Gulistan-e-Johar, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/dees1/900/600",
+      "https://picsum.photos/seed/dees2/900/600",
+      "https://picsum.photos/seed/dees3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Creative Photography", "Album Design"],
+    "staff_available": ["Male"],
+    "specialties": ["Creative Wedding Photography", "Artistic Shots", "Event Coverage"],
+    "features": ["Professional Service", "Creative Approach", "Quality Work"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 30000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 50000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Creative photography work"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on BusinessList.pk",
+    "established": 2015
+  },
+  {
+    "id": 24,
+    "name": "ShadiGrapher.com",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.3,
+    "starting_price": 30000,
+    "price_type": "package",
+    "address": "Gulistan-e-Johar, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/shadigrapher_j1/900/600",
+      "https://picsum.photos/seed/shadigrapher_j2/900/600",
+      "https://picsum.photos/seed/shadigrapher_j3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Pre-wedding Shoots", "Album Design"],
+    "staff_available": ["Male"],
+    "specialties": ["Wedding Photography", "Affordable Packages", "Quality Work"],
+    "features": ["Professional Service", "Timely Delivery", "Budget Friendly"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 30000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 50000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good value for money"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on BusinessList.pk",
+    "established": 2018
+  },
+  {
+    "id": 25,
+    "name": "Aatif Photography",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.2,
+    "starting_price": 28000,
+    "price_type": "package",
+    "address": "Gulistan-e-Johar, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/aatif1/900/600",
+      "https://picsum.photos/seed/aatif2/900/600",
+      "https://picsum.photos/seed/aatif3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Wedding Photography", "Event Coverage", "Creative Shots"],
+    "features": ["Professional Service", "Quality Work", "Affordable Rates"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 28000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 45000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Shadiyana.pk",
+    "established": 2015
+  },
+  {
+    "id": 26,
+    "name": "Nasir4u Events",
+    "area": "Federal B Area",
+    "rating": 4.2,
+    "starting_price": 25000,
+    "price_type": "package",
+    "address": "Federal B Area, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/nasir1/900/600",
+      "https://picsum.photos/seed/nasir2/900/600",
+      "https://picsum.photos/seed/nasir3/900/600"
+    ],
+    "services": ["Event Photography", "Wedding Coverage", "Party Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Event Photography", "Affordable Packages", "Local Expertise"],
+    "features": ["Budget Friendly", "Professional Service", "Timely Delivery"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 25000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 40000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good event photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on BusinessList.pk",
+    "established": 2015
+  },
+  {
+    "id": 27,
+    "name": "Moin Shah Film and Photography",
+    "area": "Federal B Area",
+    "rating": 4.4,
+    "starting_price": 32500,
+    "price_type": "package",
+    "address": "Federal B Area, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/moin1/900/600",
+      "https://picsum.photos/seed/moin2/900/600",
+      "https://picsum.photos/seed/moin3/900/600"
+    ],
+    "services": ["Cinematic Wedding Films", "Photography", "Drone Coverage", "Pre-wedding Shoots"],
+    "staff_available": ["Male"],
+    "specialties": ["Cinematic Visuals", "Heartfelt Storytelling", "Vibrant Editing Style"],
+    "features": [
+      "Cinematic Wedding Films",
+      "Drone Coverage",
+      "Customized Packages",
+      "Same-day Edits Available"
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 32500,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Online Gallery"]
+      },
+      {
+        "name": "Premium",
+        "price": 50000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "Cinematic Video", "Photo Album", "All Edited Photos"]
+      },
+      {
+        "name": "Luxury",
+        "price": 75000,
+        "min_guests": 300,
+        "includes": ["Full Day Coverage", "Cinematic Film", "Reels", "Same-day Edit", "Premium Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Excellent cinematic coverage of our wedding!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified on Shadiyana.pk",
+    "established": 2015,
+    "price_range": "PKR 32,500 - PKR 65,000"
+  },
+  {
+    "id": 28,
+    "name": "Sohailgphotography",
+    "area": "Federal B Area",
+    "rating": 4.3,
+    "starting_price": 28000,
+    "price_type": "package",
+    "address": "Federal B Area, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/sohailg1/900/600",
+      "https://picsum.photos/seed/sohailg2/900/600",
+      "https://picsum.photos/seed/sohailg3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Wedding Photography", "Creative Portraits", "Event Coverage"],
+    "features": ["Professional Service", "Quality Work", "Affordable Rates"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 28000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 45000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Photlo.com",
+    "established": 2015
+  },
+  {
+    "id": 29,
+    "name": "Abd Shutters",
+    "area": "Federal B Area",
+    "rating": 4.0,
+    "starting_price": 25000,
+    "price_type": "package",
+    "address": "Azizabad Block 8 House Number 826/8, Karachi, 75950, Pakistan",
+    "phone": "+92 333 3721389",
+    "whatsapp": "+92 333 3721389",
+    "gallery": [
+      "https://picsum.photos/seed/abd1/900/600",
+      "https://picsum.photos/seed/abd2/900/600",
+      "https://picsum.photos/seed/abd3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Wedding Photography", "Event Coverage"],
+    "features": ["Professional Service", "Affordable Packages", "Timely Delivery"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 25000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 40000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "We hired them for my cousins wedding and they just amazed us with their work. Highly Recommended 10/10"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Trustpilot",
+    "established": 2014
+  },
+  {
+    "id": 30,
+    "name": "FB Area Photo Hub",
+    "area": "Federal B Area",
+    "rating": 4.0,
+    "starting_price": 18000,
+    "price_type": "package",
+    "address": "Federal B Area, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/fbhub1/900/600",
+      "https://picsum.photos/seed/fbhub2/900/600",
+      "https://picsum.photos/seed/fbhub3/900/600"
+    ],
+    "services": ["Event Photography", "Wedding Coverage", "Party Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Local Event Photography", "Affordable Packages"],
+    "features": ["Budget Friendly", "Quick Service", "Local Expertise"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 18000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 30000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good for local events"
+      }
+    ],
+    "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Local Business Verified",
+    "established": 2016
+  },
+  {
+    "id": 31,
+    "name": "BnW Collections",
+    "area": "Bahadurabad",
+    "rating": 4.4,
+    "starting_price": 40000,
+    "price_type": "package",
+    "address": "Bahadurabad, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/bnw1/900/600",
+      "https://picsum.photos/seed/bnw2/900/600",
+      "https://picsum.photos/seed/bnw3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Black & White Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Artistic Photography", "Black & White Portraits", "Wedding Coverage"],
+    "features": ["Professional Service", "Artistic Approach", "Quality Work"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 40000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 65000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Beautiful black and white photography"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on BusinessList.pk",
+    "established": 2014
+  },
+  {
+    "id": 32,
+    "name": "The Wedder's Photography",
+    "area": "Bahadurabad",
+    "rating": 4.3,
+    "starting_price": 28000,
+    "price_type": "package",
+    "address": "Bahadurabad, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/wedders1/900/600",
+      "https://picsum.photos/seed/wedders2/900/600",
+      "https://picsum.photos/seed/wedders3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
+    "staff_available": ["Male", "Female"],
+    "specialties": ["Wedding Photography", "Event Coverage", "Creative Shots"],
+    "features": ["Professional Service", "Quality Work", "Affordable Rates"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 28000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 45000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good wedding photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Shadiyana.pk",
+    "established": 2015
+  },
+  {
+    "id": 33,
+    "name": "Party Popper Photo",
+    "area": "Bahadurabad",
+    "rating": 4.2,
+    "starting_price": 25000,
+    "price_type": "package",
+    "address": "Bahadurabad, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/popper1/900/600",
+      "https://picsum.photos/seed/popper2/900/600",
+      "https://picsum.photos/seed/popper3/900/600"
+    ],
+    "services": ["Event Photography", "Party Photography", "Wedding Coverage"],
+    "staff_available": ["Male"],
+    "specialties": ["Party Photography", "Event Coverage", "Candid Shots"],
+    "features": ["Budget Friendly", "Professional Service", "Quick Delivery"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 25000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 40000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good party photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on UrduPoint",
+    "established": 2016
+  },
+  {
+    "id": 34,
+    "name": "Bahadurabad Photography",
+    "area": "Bahadurabad",
+    "rating": 4.1,
+    "starting_price": 20000,
+    "price_type": "package",
+    "address": "Bahadurabad, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/bahphoto1/900/600",
+      "https://picsum.photos/seed/bahphoto2/900/600",
+      "https://picsum.photos/seed/bahphoto3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Local Event Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Local Wedding Photography", "Affordable Packages"],
+    "features": ["Budget Friendly", "Local Expertise", "Quick Service"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 20000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 35000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good service for local events"
+      }
+    ],
+    "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Local Business Verified",
+    "established": 2015
+  },
+  {
+    "id": 35,
+    "name": "Elite Bahadurabad Photos",
+    "area": "Bahadurabad",
+    "rating": 4.1,
+    "starting_price": 22000,
+    "price_type": "package",
+    "address": "Bahadurabad, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/elitebah1/900/600",
+      "https://picsum.photos/seed/elitebah2/900/600",
+      "https://picsum.photos/seed/elitebah3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Elite Wedding Photography", "Premium Service"],
+    "features": ["Professional Service", "Quality Work", "Timely Delivery"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 22000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 38000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Local Business Verified",
+    "established": 2016
+  },
+  {
+    "id": 36,
+    "name": "FotoClickStudio",
+    "area": "Tariq Road",
+    "rating": 4.3,
+    "starting_price": 25000,
+    "price_type": "package",
+    "address": "Tariq Road, Karachi, Pakistan",
+    "phone": "+92 308 2995955",
+    "whatsapp": "+92 308 2995955",
+    "gallery": [
+      "https://picsum.photos/seed/fotoclick1/900/600",
+      "https://picsum.photos/seed/fotoclick2/900/600",
+      "https://picsum.photos/seed/fotoclick3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Product Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Photography for Events", "Wedding Photography", "Creative Shots"],
+    "features": ["Professional Service", "Quality Work", "Affordable Packages"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 25000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 42000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good photography service on Tariq Road"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on BusinessList.pk",
+    "established": 2015
+  },
+  {
+    "id": 37,
+    "name": "Anas Ahmad Photography",
+    "area": "Tariq Road",
+    "rating": 4.4,
+    "starting_price": 35000,
+    "price_type": "package",
+    "address": "Tariq Road, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/anas1/900/600",
+      "https://picsum.photos/seed/anas2/900/600",
+      "https://picsum.photos/seed/anas3/900/600"
+    ],
+    "services": ["Wedding Photography", "Cinematic Films", "Event Coverage", "Pre-wedding Shoots"],
+    "staff_available": ["Male"],
+    "specialties": ["Cinematic Wedding Photography", "Creative Storytelling", "Artistic Shots"],
+    "features": ["Professional Team", "Quality Work", "Creative Direction", "Timely Delivery"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 35000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 55000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Cinematic Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good cinematic wedding photography"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Shadiyana.pk",
+    "established": 2015
+  },
+  {
+    "id": 38,
+    "name": "Tariq Road Photo Studio",
+    "area": "Tariq Road",
+    "rating": 4.1,
+    "starting_price": 19000,
+    "price_type": "package",
+    "address": "Tariq Road, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/tariqstudio1/900/600",
+      "https://picsum.photos/seed/tariqstudio2/900/600",
+      "https://picsum.photos/seed/tariqstudio3/900/600"
+    ],
+    "services": ["Wedding Photography", "Passport Photos", "Event Coverage", "Portrait Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Local Photography", "Affordable Packages", "Quick Service"],
+    "features": ["Budget Friendly", "Professional Service", "Quick Turnaround"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 19000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 32000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good local photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Local Business Verified",
+    "established": 2010
+  },
+  {
+    "id": 39,
+    "name": "Shadi Point Photography",
+    "area": "Tariq Road",
+    "rating": 4.2,
+    "starting_price": 30000,
+    "price_type": "package",
+    "address": "Tariq Road, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/shadipoint1/900/600",
+      "https://picsum.photos/seed/shadipoint2/900/600",
+      "https://picsum.photos/seed/shadipoint3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Album Design"],
+    "staff_available": ["Male"],
+    "specialties": ["Wedding Photography", "Event Coverage", "Creative Shots"],
+    "features": ["Professional Service", "Quality Work", "Affordable Packages"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 30000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 50000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good wedding photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on BusinessList.pk",
+    "established": 2015
+  },
+  {
+    "id": 40,
+    "name": "Luxury Photography Tariq",
+    "area": "Tariq Road",
+    "rating": 4.1,
+    "starting_price": 28000,
+    "price_type": "package",
+    "address": "Tariq Road, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/luxurytariq1/900/600",
+      "https://picsum.photos/seed/luxurytariq2/900/600",
+      "https://picsum.photos/seed/luxurytariq3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Luxury Shoots"],
+    "staff_available": ["Male"],
+    "specialties": ["Luxury Wedding Photography", "Premium Service", "Creative Shots"],
+    "features": ["Professional Service", "Quality Work", "Premium Packages"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 28000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 48000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good premium photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Local Business Verified",
+    "established": 2016
+  },
+  {
+    "id": 41,
+    "name": "Jugnoo Photography",
+    "area": "North Nazimabad",
+    "rating": 4.1,
+    "starting_price": 22000,
+    "price_type": "package",
+    "address": "Shop # 2, Babar Vista Apartment, Block K, North Nazimabad, Karachi, Pakistan",
+    "phone": "0311-2720797",
+    "whatsapp": "0311-2720797",
+    "gallery": [
+      "https://picsum.photos/seed/jugnoo1/900/600",
+      "https://picsum.photos/seed/jugnoo2/900/600",
+      "https://picsum.photos/seed/jugnoo3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Album Design"],
+    "staff_available": ["Male"],
+    "specialties": ["Wedding Photography", "Event Coverage", "Creative Shots"],
+    "features": ["Professional Service", "Quality Work", "Affordable Rates"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 22000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 38000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good photography service in North Nazimabad"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Photlo.com",
+    "established": 2015
+  },
+  {
+    "id": 42,
+    "name": "S.M.Waqar Wedding Photography Studio",
+    "area": "North Nazimabad",
+    "rating": 4.2,
+    "starting_price": 25000,
+    "price_type": "package",
+    "address": "North Nazimabad, Karachi, Pakistan",
+    "phone": "0344 5478314",
+    "whatsapp": "0344 5478314",
+    "gallery": [
+      "https://picsum.photos/seed/smwaqar1/900/600",
+      "https://picsum.photos/seed/smwaqar2/900/600",
+      "https://picsum.photos/seed/smwaqar3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Cinematic Films"],
+    "staff_available": ["Male"],
+    "specialties": ["Wedding Photography", "Event Coverage", "Creative Portraits"],
+    "features": ["Professional Service", "Quality Work", "Timely Delivery"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 25000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 42000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good wedding photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Cybo",
+    "established": 2014
+  },
+  {
+    "id": 43,
+    "name": "North Nazimabad Photography",
+    "area": "North Nazimabad",
+    "rating": 4.0,
+    "starting_price": 20000,
+    "price_type": "package",
+    "address": "North Nazimabad, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/nnphoto1/900/600",
+      "https://picsum.photos/seed/nnphoto2/900/600",
+      "https://picsum.photos/seed/nnphoto3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Local Event Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Local Wedding Photography", "Affordable Packages"],
+    "features": ["Budget Friendly", "Local Expertise", "Quick Service"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 20000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 35000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good local photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Local Business Verified",
+    "established": 2015
+  },
+  {
+    "id": 44,
+    "name": "Royal NN Photography",
+    "area": "North Nazimabad",
+    "rating": 4.1,
+    "starting_price": 23000,
+    "price_type": "package",
+    "address": "North Nazimabad, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/royalnn1/900/600",
+      "https://picsum.photos/seed/royalnn2/900/600",
+      "https://picsum.photos/seed/royalnn3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Royal Wedding Photography", "Premium Service"],
+    "features": ["Professional Service", "Quality Work", "Timely Delivery"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 23000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 40000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Local Business Verified",
+    "established": 2016
+  },
+  {
+    "id": 45,
+    "name": "Elite NN Photography",
+    "area": "North Nazimabad",
+    "rating": 4.1,
+    "starting_price": 28000,
+    "price_type": "package",
+    "address": "North Nazimabad, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/elitenn1/900/600",
+      "https://picsum.photos/seed/elitenn2/900/600",
+      "https://picsum.photos/seed/elitenn3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Cinematic Films"],
+    "staff_available": ["Male"],
+    "specialties": ["Elite Wedding Photography", "Cinematic Coverage"],
+    "features": ["Professional Service", "Quality Work", "Premium Packages"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 28000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 48000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Cinematic Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good premium photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Local Business Verified",
+    "established": 2016
+  },
+  {
+    "id": 46,
+    "name": "Benchmarker Studio",
+    "area": "North Karachi",
+    "rating": 4.4,
+    "starting_price": 45000,
+    "price_type": "package",
+    "address": "M-2 Mezzanine Floor, Mina Avenue, Main Shahrah-e-Faisal Airport, Karachi, Pakistan",
+    "phone": "+92 313 2343612",
+    "whatsapp": "+92 313 2343612",
+    "gallery": [
+      "https://picsum.photos/seed/benchmarker1/900/600",
+      "https://picsum.photos/seed/benchmarker2/900/600",
+      "https://picsum.photos/seed/benchmarker3/900/600"
+    ],
+    "services": ["Wedding Photography", "Cinematic Videos", "Event Coverage", "Commercial Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Creative Wedding Photography", "Cinematic Videography", "Professional Service"],
+    "features": [
+      "Verified+11 Years",
+      "Professional Team",
+      "Quality Service",
+      "Established 2010"
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 45000,
+        "min_guests": 100,
+        "includes": ["6 Hours Coverage", "All Edited Photos", "Online Gallery"]
+      },
+      {
+        "name": "Premium",
+        "price": 70000,
+        "min_guests": 200,
+        "includes": ["10 Hours Coverage", "All Edited Photos", "Cinematic Video", "Album"]
+      },
+      {
+        "name": "Luxury",
+        "price": 110000,
+        "min_guests": 300,
+        "includes": ["Full Day Coverage", "Cinematic Film", "Premium Album", "Pre-wedding Shoot"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good photography services"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Verified+11 Years | Est. 2010",
+    "established": 2010
+  },
+  {
+    "id": 47,
+    "name": "ArtX Pro",
+    "area": "North Karachi",
+    "rating": 4.3,
+    "starting_price": 40000,
+    "price_type": "package",
+    "address": "North Karachi, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/artx1/900/600",
+      "https://picsum.photos/seed/artx2/900/600",
+      "https://picsum.photos/seed/artx3/900/600"
+    ],
+    "services": ["Wedding Photography", "Art Photography", "Event Coverage", "Creative Shoots"],
+    "staff_available": ["Male"],
+    "specialties": ["Artistic Wedding Photography", "Creative Portraits", "Event Coverage"],
+    "features": ["Professional Service", "Creative Approach", "Quality Work"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 40000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 65000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Creative Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Creative photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on BusinessList.pk",
+    "established": 2015
+  },
+  {
+    "id": 48,
+    "name": "North Karachi Photo Studio",
+    "area": "North Karachi",
+    "rating": 3.9,
+    "starting_price": 15000,
+    "price_type": "package",
+    "address": "North Karachi, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/nkstudio1/900/600",
+      "https://picsum.photos/seed/nkstudio2/900/600",
+      "https://picsum.photos/seed/nkstudio3/900/600"
+    ],
+    "services": ["Wedding Photography", "Passport Photos", "Event Coverage", "Local Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Local Photography", "Affordable Packages", "Quick Service"],
+    "features": ["Budget Friendly", "Professional Service", "Quick Turnaround"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 15000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 25000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good local photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Local Business Verified",
+    "established": 2010
+  },
+  {
+    "id": 49,
+    "name": "Royal NK Photography",
+    "area": "North Karachi",
+    "rating": 4.0,
+    "starting_price": 18000,
+    "price_type": "package",
+    "address": "North Karachi, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/royalnk1/900/600",
+      "https://picsum.photos/seed/royalnk2/900/600",
+      "https://picsum.photos/seed/royalnk3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Royal Wedding Photography", "Affordable Packages"],
+    "features": ["Budget Friendly", "Professional Service", "Local Expertise"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 18000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 30000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good local photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Local Business Verified",
+    "established": 2015
+  },
+  {
+    "id": 50,
+    "name": "Star Photography NK",
+    "area": "North Karachi",
+    "rating": 3.8,
+    "starting_price": 16000,
+    "price_type": "package",
+    "address": "North Karachi, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/starnk1/900/600",
+      "https://picsum.photos/seed/starnk2/900/600",
+      "https://picsum.photos/seed/starnk3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Local Event Photography"],
+    "staff_available": ["Male"],
+    "specialties": ["Star Photography", "Affordable Packages", "Quick Service"],
+    "features": ["Budget Friendly", "Professional Service", "Timely Delivery"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 16000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 28000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good budget photography service"
+      }
+    ],
+    "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Local Business Verified",
+    "established": 2016
+  }
+]

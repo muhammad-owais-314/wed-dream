@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Halls | WeDream</title>
+<title>Premium Car Rentals | WeDream</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -29,7 +29,7 @@
         --border-glow: rgba(200, 155, 44, 0.35);
     }
 
-    .premium-halls-section {
+    .premium-carrentals-section {
         padding: 70px 24px 90px;
         background: radial-gradient(circle at 10% 20%, #110c0e 0%, #050303 100%);
         position: relative;
@@ -137,7 +137,6 @@
         object-fit: cover;
         transition: transform 0.7s ease;
         display: block;
-        background: linear-gradient(135deg, #1a1012 0%, #2a1a20 40%, #1e160d 70%, #120d0e 100%);
     }
     .premium-card:hover .card-img-container img { transform: scale(1.04); }
     .img-overlay {
@@ -223,7 +222,7 @@
         justify-content: space-between;
     }
 
-    .hall-title {
+    .carrental-title {
         font-family: 'Cormorant Garamond', serif;
         font-size: 1.5rem;
         font-weight: 700;
@@ -379,9 +378,9 @@
     .btn-clear-compare:hover { background: var(--rose); color: #fff; }
 
     @media (max-width: 576px) {
-        .premium-halls-section { padding: 44px 14px 60px; }
+        .premium-carrentals-section { padding: 44px 14px 60px; }
         .section-title-premium { font-size: 2.2rem; }
-        .hall-title { font-size: 1.25rem; }
+        .carrental-title { font-size: 1.25rem; }
         .price-amount { font-size: 1.45rem; }
     }
 
@@ -393,17 +392,17 @@
 <!-- NAVBAR -->
 <div id="nav-container"></div>
 
-<!-- Premium Halls Showcase -->
-<div class="premium-halls-section">
+<!-- Premium Car Rentals Showcase -->
+<div class="premium-carrentals-section">
     <div class="premium-section-accent"></div>
-    <h2 class="section-title-premium">The Grandeur <span>Collection</span></h2>
-    <p class="section-sub">Curated venues for royalty &amp; grand celebrations</p>
+    <h2 class="section-title-premium">Premium <span>Rides</span></h2>
+    <p class="section-sub">Luxury & comfortable vehicles for your special moments</p>
 
     <div id="filterBar" class="filter-bar"></div>
 
     <div class="container">
         <div class="row g-3" id="productContainer"></div>
-        <p id="noResults" class="no-results">Koi hall nahi mila is area mein.</p>
+        <p id="noResults" class="no-results">Koi car rental nahi mila is area mein.</p>
     </div>
 </div>
 
@@ -414,8 +413,8 @@
 <div id="wd-compare-bar">
     <div class="compare-bar-items" id="compareBarItems"></div>
     <div style="display:flex;gap:8px;align-items:center;">
-        <button class="btn-clear-compare" onclick="clearHallCompare()">Clear</button>
-        <button class="btn-go-compare" onclick="window.location.href='compare.html?cat=halls'">
+        <button class="btn-clear-compare" onclick="clearCarCompare()">Clear</button>
+        <button class="btn-go-compare" onclick="window.location.href='compare.html?cat=carrentals'">
             <i class="fas fa-scale-balanced" style="margin-right:6px;"></i>Compare Now
         </button>
     </div>
@@ -433,40 +432,40 @@
 $(document).ready(() => {
     $.get('navebar.html', (data) => {
         $('#nav-container').html(data);
-        var page = window.location.pathname.split('/').pop().replace('.html','').toLowerCase() || 'halls';
-        var pageMap = { 'halls': 'halls', 'hall-detail': 'halls' };
-        var activeKey = pageMap[page] || 'halls';
+        var page = window.location.pathname.split('/').pop().replace('.html','').toLowerCase() || 'carrentals';
+        var pageMap = { 'carrentals': 'vendors', 'carrental-detail': 'vendors' };
+        var activeKey = pageMap[page] || 'vendors';
         $('.wd-menu-link').removeClass('active');
         $('.wd-mobile-list > li > a').removeClass('active');
         $('.wd-menu-link[data-nav="' + activeKey + '"]').addClass('active');
         $('.wd-mobile-list > li > a[data-nav="' + activeKey + '"]').addClass('active');
-        updateHallCompareBadge();
+        updateCarCompareBadge();
     });
 
     $.get('footer.html', (data) => { $('#footer-container').html(data); });
 });
 
 // ===== COMPARE SYSTEM =====
-const WD_HALL_KEY = 'wd_compare_halls';
-const WD_MAX_HALL = 4;
+const WD_CAR_KEY = 'wd_compare_carrentals';
+const WD_MAX_CAR = 4;
 
-function getHallCompare() {
-    try { return JSON.parse(localStorage.getItem(WD_HALL_KEY) || '[]'); }
+function getCarCompare() {
+    try { return JSON.parse(localStorage.getItem(WD_CAR_KEY) || '[]'); }
     catch { return []; }
 }
-function saveHallCompare(arr) {
-    localStorage.setItem(WD_HALL_KEY, JSON.stringify(arr));
-    updateHallCompareBadge();
-    renderHallCompareBar();
+function saveCarCompare(arr) {
+    localStorage.setItem(WD_CAR_KEY, JSON.stringify(arr));
+    updateCarCompareBadge();
+    renderCarCompareBar();
 }
-function clearHallCompare() {
-    saveHallCompare([]);
+function clearCarCompare() {
+    saveCarCompare([]);
     document.querySelectorAll('.compare-card-btn').forEach(btn => {
         btn.classList.remove('added');
         const sp = btn.querySelector('span');
         if (sp) sp.textContent = 'Compare';
     });
-    showHallToast('Comparison cleared');
+    showCarToast('Comparison cleared');
 }
 
 // Event delegation on container
@@ -479,7 +478,7 @@ document.getElementById('productContainer').addEventListener('click', function(e
     try { item = JSON.parse(btn.dataset.compareItem); }
     catch { return; }
 
-    let list = getHallCompare();
+    let list = getCarCompare();
     const idx = list.findIndex(i => i.id == item.id);
 
     if (idx > -1) {
@@ -487,23 +486,23 @@ document.getElementById('productContainer').addEventListener('click', function(e
         btn.classList.remove('added');
         const sp = btn.querySelector('span');
         if (sp) sp.textContent = 'Compare';
-        showHallToast('Removed from comparison');
+        showCarToast('Removed from comparison');
     } else {
-        if (list.length >= WD_MAX_HALL) {
-            showHallToast('Max 4 items! Pehle koi hatao.', true);
+        if (list.length >= WD_MAX_CAR) {
+            showCarToast('Max 4 items! Pehle koi hatao.', true);
             return;
         }
         list.push(item);
         btn.classList.add('added');
         const sp = btn.querySelector('span');
         if (sp) sp.textContent = 'Added ✓';
-        showHallToast('Added to comparison!');
+        showCarToast('Added to comparison!');
     }
-    saveHallCompare(list);
+    saveCarCompare(list);
 });
 
-function syncHallCompareButtons() {
-    const ids = getHallCompare().map(i => String(i.id));
+function syncCarCompareButtons() {
+    const ids = getCarCompare().map(i => String(i.id));
     document.querySelectorAll('.compare-card-btn').forEach(btn => {
         if (ids.includes(String(btn.dataset.compareId))) {
             btn.classList.add('added');
@@ -511,11 +510,11 @@ function syncHallCompareButtons() {
             if (sp) sp.textContent = 'Added ✓';
         }
     });
-    renderHallCompareBar();
+    renderCarCompareBar();
 }
 
-function renderHallCompareBar() {
-    const list = getHallCompare();
+function renderCarCompareBar() {
+    const list = getCarCompare();
     const bar = document.getElementById('wd-compare-bar');
     const itemsEl = document.getElementById('compareBarItems');
 
@@ -528,26 +527,26 @@ function renderHallCompareBar() {
     itemsEl.innerHTML = `<span style="font-family:'Jost';font-size:0.7rem;color:rgba(255,255,255,0.4);margin-right:4px;">${list.length}/4</span>` +
         list.map(item => `
             <div class="compare-bar-chip">
-                <i class="fas fa-building" style="font-size:0.65rem;"></i>
+                <i class="fas fa-car" style="font-size:0.65rem;"></i>
                 ${item.name}
-                <button onclick="removeHallFromBar(${item.id})" title="Remove">×</button>
+                <button onclick="removeCarFromBar(${item.id})" title="Remove">×</button>
             </div>
         `).join('');
 }
 
-function removeHallFromBar(id) {
-    let list = getHallCompare().filter(i => i.id != id);
-    saveHallCompare(list);
+function removeCarFromBar(id) {
+    let list = getCarCompare().filter(i => i.id != id);
+    saveCarCompare(list);
     const btn = document.querySelector(`.compare-card-btn[data-compare-id="${id}"]`);
     if (btn) {
         btn.classList.remove('added');
         const sp = btn.querySelector('span');
         if (sp) sp.textContent = 'Compare';
     }
-    showHallToast('Removed');
+    showCarToast('Removed');
 }
 
-function updateHallCompareBadge() {
+function updateCarCompareBadge() {
     const cats = ['halls','caterers','photographers','decorators','carrentals'];
     let total = 0;
     cats.forEach(c => {
@@ -560,7 +559,7 @@ function updateHallCompareBadge() {
     badge.classList.toggle('visible', total > 0);
 }
 
-function showHallToast(msg, isError = false) {
+function showCarToast(msg, isError = false) {
     const t = document.getElementById('wd-compare-toast');
     t.textContent = msg;
     t.className = isError ? 'error-toast show' : 'show';
@@ -568,7 +567,7 @@ function showHallToast(msg, isError = false) {
     t._tid = setTimeout(() => { t.className = t.className.replace(' show','').replace('show',''); }, 2400);
 }
 
-// ===== HALLS LISTING =====
+// ===== CAR RENTALS LISTING =====
 const productContainer = document.getElementById('productContainer');
 const filterBar = document.getElementById('filterBar');
 const noResults = document.getElementById('noResults');
@@ -585,7 +584,7 @@ function buildStars(rating) {
 }
 
 function buildCard(item) {
-    const imgSrc = item.image ? `images/halls/${item.image}` : '';
+    const imgSrc = item.image ? `images/carrentals/${item.image}` : '';
 
     const compareData = JSON.stringify({
         id: item.id,
@@ -595,7 +594,7 @@ function buildCard(item) {
         area: item.area,
         rating: item.rating,
         price: item.starting_price,
-        capacity: item.capacity || 500,
+        priceType: item.price_type || 'per day',
         verified: item.verified || false
     }).replace(/'/g, '&#39;');
 
@@ -607,7 +606,7 @@ function buildCard(item) {
                     <img
                         src="${imgSrc}"
                         alt="${item.name}"
-                        onerror="this.src='https://images.unsplash.com/photo-1519167758481-83f45f2ab202?w=400&q=50';"
+                        onerror="this.src='https://images.unsplash.com/photo-1555215695-3004980ad54e?w=400&q=50';"
                     >
                     <div class="img-overlay"></div>
                     ${item.verified ? `<div class="premium-badge"><i class="fas fa-crown"></i> PREMIUM</div>` : ''}
@@ -619,7 +618,7 @@ function buildCard(item) {
                 </div>
                 <div class="card-body-custom">
                     <div>
-                        <h2 class="hall-title">${item.name}</h2>
+                        <h2 class="carrental-title">${item.name}</h2>
                         <div class="location-text">
                             <i class="fas fa-map-marker-alt"></i>
                             <span>${item.area}</span>
@@ -637,7 +636,7 @@ function buildCard(item) {
                                     <span class="price-pkr">PKR</span>
                                     <span class="price-amount">${formatPKR(item.starting_price)}</span>
                                 </div>
-                                <small class="price-type">(starting package)</small>
+                                <small class="price-type">${item.price_type ? `(${item.price_type})` : '(starting package)'}</small>
                             </div>
                             <button class="btn-view-details view-details-btn" data-id="${item.id}">
                                 <i class="fas fa-arrow-right"></i> Details
@@ -676,23 +675,23 @@ function buildFilters(areas) {
 
 async function getProducts() {
     try {
-        const response = await axios.get('halls.json');
+        const response = await axios.get('carrentals.json');
         const data = response.data;
 
         const areas = [...new Set(data.map(i => i.area))];
         buildFilters(areas);
         productContainer.innerHTML = data.map(buildCard).join('');
 
-        syncHallCompareButtons();
+        syncCarCompareButtons();
 
         productContainer.addEventListener('click', (e) => {
             const btn = e.target.closest('.view-details-btn');
             if (!btn) return;
-            window.location.href = `hall-detail.html?id=${btn.dataset.id}`;
+            window.location.href = `carrental-detail.html?id=${btn.dataset.id}`;
         });
 
     } catch (error) {
-        console.error('halls.json load error:', error);
+        console.error('carrentals.json load error:', error);
     }
 }
 

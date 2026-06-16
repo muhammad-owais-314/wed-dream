@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compare — WedDream</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ─── ROOT ─── */
+    :root {
+      --rose:        #b93b56;
+      --rose-hover:  #a22f49;
+      --gold:        #c89b2c;
+      --gold-light:  #e8b93c;
+      --white:       #ffffff;
+      --white-light: rgba(255,255,255,0.72);
+      --dark:        #070707;
+      --glass:       rgba(15,10,14,0.55);
+      --card-glass:  rgba(18,14,16,0.88);
+      --shadow:      0 25px 45px -12px rgba(0,0,0,0.8), 0 0 0 1px rgba(200,155,44,0.15);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--dark);
+      color: var(--white);
+      font-family: 'Jost', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── AMBIENT BG ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 40% at 20% 20%, rgba(185,59,86,0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 50% at 80% 80%, rgba(200,155,44,0.06) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 3.5rem 1rem 2rem;
+    }
+    .page-header .eyebrow {
+      display: inline-block;
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+    .page-header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 600;
+      background: linear-gradient(135deg, var(--white) 0%, var(--gold-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+    }
+    .page-header p {
+      margin-top: 0.8rem;
+      color: var(--white-light);
+      font-size: 1.05rem;
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    /* ── CATEGORY TABS ── */
+    .category-tabs {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      padding: 0 1rem 2rem;
+    }
+    .tab-btn {
+      padding: 0.5rem 1.4rem;
+      border: 1px solid rgba(200,155,44,0.3);
+      border-radius: 50px;
+      background: transparent;
+      color: var(--white-light);
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+    .tab-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .tab-btn.active {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      border-color: transparent;
+      color: var(--dark);
+      font-weight: 700;
+    }
+    .tab-btn .count-badge {
+      margin-left: 6px;
+      background: var(--rose);
+      color: #fff;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6rem;
+      font-weight: 600;
+    }
+
+    /* ── EMPTY STATE ── */
+    .empty-state {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 40vh;
+      gap: 1rem;
+      text-align: center;
+      padding: 2rem;
+    }
+    .empty-state i {
+      font-size: 3.5rem;
+      color: rgba(200,155,44,0.25);
+    }
+    .empty-state h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.3rem;
+      color: var(--white-light);
+    }
+    .empty-state p {
+      color: rgba(255,255,255,0.4);
+      font-style: italic;
+      max-width: 320px;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .btn-browse {
+      margin-top: 0.5rem;
+      padding: 0.7rem 2rem;
+      background: linear-gradient(135deg, var(--rose), var(--rose-hover));
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn-browse:hover { opacity: 0.85; }
+
+    /* ── COMPARE WRAPPER ── */
+    .compare-wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 1rem 4rem;
+    }
+
+    /* ── ACTION BAR ── */
+    .action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(200,155,44,0.1);
+    }
+    .action-bar .compare-info {
+      font-size: 0.85rem;
+      color: var(--white-light);
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .action-bar .compare-info strong {
+      color: var(--gold);
+    }
+    .action-buttons {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+    .btn-clear {
+      padding: 0.5rem 1.2rem;
+      border: 1px solid rgba(185,59,86,0.4);
+      border-radius: 50px;
+      background: transparent;
+      color: var(--rose);
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-clear:hover { background: var(--rose); color: #fff; }
+    .btn-share {
+      padding: 0.5rem 1.2rem;
+      border: 1px solid rgba(200,155,44,0.3);
+      border-radius: 50px;
+      background: transparent;
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-share:hover { background: var(--gold); color: var(--dark); }
+
+    /* ── SLOTS HEADER ── */
+    .slots-header {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: start;
+    }
+
+    .slot-card {
+      background: var(--card-glass);
+      border: 1px solid rgba(200,155,44,0.18);
+      border-radius: 16px;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      transition: border-color 0.3s, transform 0.3s;
+      box-shadow: var(--shadow);
+    }
+    .slot-card:hover {
+      border-color: rgba(200,155,44,0.5);
+      transform: translateY(-3px);
+    }
+
+    .slot-img-wrap {
+      position: relative;
+      height: 180px;
+      overflow: hidden;
+    }
+    .slot-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .slot-card:hover .slot-img-wrap img { transform: scale(1.05); }
+
+    .slot-remove {
+      position: absolute;
+      top: 8px; right: 8px;
+      width: 28px; height: 28px;
+      background: rgba(0,0,0,0.7);
+      border: 1px solid rgba(200,155,44,0.3);
+      border-radius: 50%;
+      color: var(--gold);
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .slot-remove:hover { background: var(--rose); color: #fff; transform: scale(1.1); }
+
+    .slot-badge {
+      position: absolute;
+      bottom: 8px; left: 8px;
+      padding: 3px 12px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      border-radius: 50px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.55rem;
+      letter-spacing: 0.1em;
+      color: var(--dark);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .slot-info {
+      padding: 1rem;
+    }
+    .slot-name {
+      font-family: 'Cinzel', serif;
+      font-size: 0.95rem;
+      color: var(--white);
+      margin-bottom: 0.2rem;
+    }
+    .slot-meta {
+      font-size: 0.8rem;
+      color: var(--white-light);
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .slot-rating {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+    }
+    .stars { color: var(--gold); letter-spacing: 1px; }
+    .rating-num { color: var(--white-light); font-weight: 500; }
+
+    /* ── EMPTY SLOT ── */
+    .slot-empty {
+      background: rgba(255,255,255,0.02);
+      border: 2px dashed rgba(200,155,44,0.2);
+      border-radius: 16px;
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      cursor: pointer;
+      transition: border-color 0.25s, background 0.25s, transform 0.25s;
+    }
+    .slot-empty:hover {
+      border-color: rgba(200,155,44,0.5);
+      background: rgba(200,155,44,0.03);
+      transform: scale(1.02);
+    }
+    .slot-empty i { font-size: 2rem; color: rgba(200,155,44,0.3); }
+    .slot-empty span {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.1em;
+    }
+
+    /* ── COMPARISON TABLE ── */
+    .compare-table-section {
+      margin-top: 2.5rem;
+    }
+    .compare-table-section .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      color: var(--gold);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .compare-table-section .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, rgba(200,155,44,0.3), transparent);
+    }
+
+    .compare-row {
+      display: grid;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+      align-items: center;
+    }
+
+    .cmp-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1rem;
+      background: rgba(200,155,44,0.05);
+      border: 1px solid rgba(200,155,44,0.1);
+      border-radius: 10px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+    .cmp-label i { width: 16px; text-align: center; }
+
+    .cmp-cell {
+      padding: 0.8rem 1rem;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px;
+      font-size: 0.9rem;
+      color: var(--white-light);
+      display: flex;
+      align-items: center;
+      transition: border-color 0.25s, background 0.25s;
+      min-height: 48px;
+      font-family: 'Jost', sans-serif;
+    }
+    .cmp-cell:hover {
+      border-color: rgba(200,155,44,0.2);
+    }
+    .cmp-cell.best {
+      border-color: rgba(200,155,44,0.5);
+      color: var(--gold-light);
+      font-weight: 500;
+      background: rgba(200,155,44,0.06);
+    }
+    .cmp-cell.best::before {
+      content: '★ ';
+      color: var(--gold);
+      margin-right: 4px;
+    }
+
+    .check-yes { color: #4ade80; }
+    .check-no  { color: rgba(255,255,255,0.25); }
+
+    /* ── WINNER BANNER ── */
+    .winner-banner {
+      margin-top: 2.5rem;
+      padding: 1.5rem 2rem;
+      background: linear-gradient(135deg, rgba(200,155,44,0.12), rgba(200,155,44,0.04));
+      border: 1px solid rgba(200,155,44,0.3);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      transition: all 0.3s;
+    }
+    .winner-banner:hover {
+      border-color: rgba(200,155,44,0.5);
+      box-shadow: 0 0 30px rgba(200,155,44,0.05);
+    }
+    .winner-banner .winner-icon {
+      font-size: 2.5rem;
+      color: var(--gold);
+      animation: pulse-gold 2s infinite;
+    }
+    @keyframes pulse-gold {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    .winner-text h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      color: var(--gold-light);
+      margin-bottom: 0.3rem;
+    }
+    .winner-text p {
+      color: var(--white-light);
+      font-size: 0.9rem;
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .winner-text p strong {
+      color: var(--gold-light);
+    }
+    .btn-winner {
+      margin-left: auto;
+      padding: 0.65rem 1.8rem;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--dark);
+      border: none;
+      border-radius: 50px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-winner:hover { opacity: 0.85; transform: translateY(-2px); }
+
+    /* ── TOAST ── */
+    #wd-toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: rgba(15,10,14,0.95);
+      border: 1px solid rgba(200,155,44,0.4);
+      backdrop-filter: blur(16px);
+      border-radius: 50px;
+      padding: 0.75rem 1.8rem;
+      color: var(--gold-light);
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      z-index: 9999;
+      transition: transform 0.35s cubic-bezier(.34,1.56,.64,1);
+      white-space: nowrap;
+    }
+    #wd-toast.show { transform: translateX(-50%) translateY(0); }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #1a1215; }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 6px; }
+    ::selection { background: var(--gold); color: var(--dark); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 1.6rem; }
+      .winner-banner { flex-direction: column; text-align: center; }
+      .btn-winner { margin-left: 0; }
+      .action-bar { flex-direction: column; align-items: stretch; text-align: center; }
+      .action-buttons { justify-content: center; }
+      .slots-header { grid-template-columns: 1fr 1fr !important; }
+    }
+    @media (max-width: 480px) {
+      .slots-header { grid-template-columns: 1fr !important; }
+      .compare-row { grid-template-columns: 1fr !important; }
+      .cmp-label { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div id="nav-container"></div>
+
+  <!-- ─── MAIN CONTENT ─── -->
+  <div style="padding-top: 20px;">
+    <!-- HEADER -->
+    <header class="page-header">
+      <span class="eyebrow"><i class="fas fa-scale-balanced" style="margin-right:6px;"></i>Side-by-Side</span>
+      <h1>Compare &amp; Choose the Best</h1>
+      <p>Select up to 4 vendors from any category and compare them instantly</p>
+    </header>
+
+    <!-- CATEGORY TABS -->
+    <div class="category-tabs" id="categoryTabs"></div>
+
+    <!-- MAIN WRAPPER -->
+    <div class="compare-wrapper" id="compareWrapper">
+      <div class="empty-state" id="emptyState">
+        <i class="fas fa-scale-balanced"></i>
+        <h3>Nothing to Compare Yet</h3>
+        <p>Browse our listings and tap the compare button on any card to add it here</p>
+        <a href="halls.html" class="btn-browse"><i class="fas fa-arrow-right" style="margin-right:8px;"></i>Browse Halls</a>
+      </div>
+    </div>
+  </div>
+
+<!-- FOOTER -->
+<div id="footer-container"></div>
+  <!-- ─── TOAST ─── -->
+  <div id="wd-toast">Item removed from comparison</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    
+// ===== NAVBAR & FOOTER =====
+$(document).ready(() => {
+    $.get('navebar.html', (data) => {
+        $('#nav-container').html(data);
+        var page = window.location.pathname.split('/').pop().replace('.html','').toLowerCase() || 'halls';
+        var pageMap = { 'halls': 'halls', 'hall-detail': 'halls' };
+        var activeKey = pageMap[page] || 'halls';
+        $('.wd-menu-link').removeClass('active');
+        $('.wd-mobile-list > li > a').removeClass('active');
+        $('.wd-menu-link[data-nav="' + activeKey + '"]').addClass('active');
+        $('.wd-mobile-list > li > a[data-nav="' + activeKey + '"]').addClass('active');
+        updateHallCompareBadge();
+    });
+
+    $.get('footer.html', (data) => { $('#footer-container').html(data); });
+});
+    // ─── CONFIG ───────────────────────────────────────────────────────────
+    const CATEGORIES = {
+      halls: {
+        label: 'Halls',
+        icon: 'fa-building',
+        key: 'wd_compare_halls',
+        browse: 'halls.html',
+        detail: 'hall-detail.html',
+        fields: [
+          { label: 'Area',       icon: 'fa-location-dot', key: 'area' },
+          { label: 'Capacity',   icon: 'fa-users',         key: 'capacity',      fmt: v => v ? `${v} guests` : '—' },
+          { label: 'Price',      icon: 'fa-tag',           key: 'price',         fmt: v => v ? `PKR ${Number(v).toLocaleString()}` : '—', bestLow: true },
+          { label: 'Rating',     icon: 'fa-star',          key: 'rating',        fmt: v => v ? `${v} / 5` : '—', bestHigh: true },
+          { label: 'Parking',    icon: 'fa-car',           key: 'parking',       bool: true },
+          { label: 'AC',         icon: 'fa-snowflake',     key: 'ac',            bool: true },
+          { label: 'Catering',   icon: 'fa-utensils',      key: 'catering',      bool: true },
+          { label: 'Outdoor',    icon: 'fa-tree',          key: 'outdoor',       bool: true },
+          { label: 'Stage',      icon: 'fa-masks-theater', key: 'stage',         bool: true },
+        ]
+      },
+      caterers: {
+        label: 'Caterers',
+        icon: 'fa-utensils',
+        key: 'wd_compare_caterers',
+        browse: 'catering.html',
+        detail: 'catering-detail.html',
+        fields: [
+          { label: 'Area',       icon: 'fa-location-dot', key: 'area' },
+          { label: 'Cuisine',    icon: 'fa-bowl-food',    key: 'cuisine' },
+          { label: 'Price/Head', icon: 'fa-tag',          key: 'pricePerHead',  fmt: v => v ? `PKR ${Number(v).toLocaleString()}` : '—', bestLow: true },
+          { label: 'Rating',     icon: 'fa-star',         key: 'rating',        fmt: v => v ? `${v} / 5` : '—', bestHigh: true },
+          { label: 'Min Guests', icon: 'fa-users',        key: 'minGuests',     fmt: v => v ?? '—' },
+          { label: 'Vegetarian', icon: 'fa-leaf',         key: 'vegetarian',    bool: true },
+          { label: 'Halal',      icon: 'fa-check-circle', key: 'halal',         bool: true },
+          { label: 'Delivery',   icon: 'fa-truck',        key: 'delivery',      bool: true },
+        ]
+      },
+      photographers: {
+        label: 'Photographers',
+        icon: 'fa-camera',
+        key: 'wd_compare_photographers',
+        browse: 'photographers.html',
+        detail: 'photographer-detail.html',
+        fields: [
+          { label: 'Area',       icon: 'fa-location-dot', key: 'area' },
+          { label: 'Style',      icon: 'fa-camera-retro', key: 'style' },
+          { label: 'Price',      icon: 'fa-tag',          key: 'price',         fmt: v => v ? `PKR ${Number(v).toLocaleString()}` : '—', bestLow: true },
+          { label: 'Rating',     icon: 'fa-star',         key: 'rating',        fmt: v => v ? `${v} / 5` : '—', bestHigh: true },
+          { label: 'Video',      icon: 'fa-video',        key: 'videography',   bool: true },
+          { label: 'Drone',      icon: 'fa-helicopter',   key: 'drone',         bool: true },
+          { label: 'Album',      icon: 'fa-book-open',    key: 'album',         bool: true },
+        ]
+      },
+      decorators: {
+        label: 'Decorators',
+        icon: 'fa-wand-magic-sparkles',
+        key: 'wd_compare_decorators',
+        browse: 'decorating.html',
+        detail: 'decorating-detail.html',
+        fields: [
+          { label: 'Area',       icon: 'fa-location-dot', key: 'area' },
+          { label: 'Specialty',  icon: 'fa-wand-sparkles',key: 'specialty' },
+          { label: 'Price',      icon: 'fa-tag',          key: 'price',         fmt: v => v ? `PKR ${Number(v).toLocaleString()}` : '—', bestLow: true },
+          { label: 'Rating',     icon: 'fa-star',         key: 'rating',        fmt: v => v ? `${v} / 5` : '—', bestHigh: true },
+          { label: 'Floral',     icon: 'fa-seedling',     key: 'floral',        bool: true },
+          { label: 'Lighting',   icon: 'fa-lightbulb',    key: 'lighting',      bool: true },
+          { label: 'Stage Decor',icon: 'fa-masks-theater',key: 'stageDecor',    bool: true },
+        ]
+      },
+      carrentals: {
+        label: 'Car Rentals',
+        icon: 'fa-car',
+        key: 'wd_compare_carrentals',
+        browse: 'carrentals.html',
+        detail: 'carrental-detail.html',
+        fields: [
+          { label: 'Area',       icon: 'fa-location-dot', key: 'area' },
+          { label: 'Fleet',      icon: 'fa-car-side',     key: 'fleet' },
+          { label: 'Price/Day',  icon: 'fa-tag',          key: 'price',         fmt: v => v ? `PKR ${Number(v).toLocaleString()}` : '—', bestLow: true },
+          { label: 'Rating',     icon: 'fa-star',         key: 'rating',        fmt: v => v ? `${v} / 5` : '—', bestHigh: true },
+          { label: 'Chauffeur',  icon: 'fa-user-tie',     key: 'chauffeur',     bool: true },
+          { label: 'Self Drive', icon: 'fa-steering-wheel',key: 'selfDrive',    bool: true },
+          { label: 'AC',         icon: 'fa-snowflake',    key: 'ac',            bool: true },
+        ]
+      }
+    };
+
+    const MAX_ITEMS = 4;
+    let activeCategory = 'halls';
+
+    // ─── UTILS ────────────────────────────────────────────────────────────
+    function getItems(cat) {
+      try { return JSON.parse(localStorage.getItem(CATEGORIES[cat].key) || '[]'); }
+      catch { return []; }
+    }
+    function saveItems(cat, arr) {
+      localStorage.setItem(CATEGORIES[cat].key, JSON.stringify(arr));
+    }
+    function removeItem(cat, id) {
+      const items = getItems(cat).filter(i => i.id != id);
+      saveItems(cat, items);
+      render();
+      showToast('Removed from comparison');
+    }
+    function clearAll(cat) {
+      saveItems(cat, []);
+      render();
+      showToast('Comparison cleared');
+    }
+
+    function stars(rating) {
+      const full = Math.round(rating);
+      return '★'.repeat(full) + '☆'.repeat(5 - full);
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('wd-toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      clearTimeout(t._timer);
+      t._timer = setTimeout(() => t.classList.remove('show'), 2500);
+    }
+
+    // ─── TABS ─────────────────────────────────────────────────────────────
+    function buildTabs() {
+      const wrap = document.getElementById('categoryTabs');
+      wrap.innerHTML = '';
+      Object.entries(CATEGORIES).forEach(([key, val]) => {
+        const count = getItems(key).length;
+        const btn = document.createElement('button');
+        btn.className = 'tab-btn' + (key === activeCategory ? ' active' : '');
+        btn.innerHTML = `<i class="fas ${val.icon}" style="margin-right:6px;"></i>${val.label}`;
+        if (count > 0) {
+          btn.innerHTML += ` <span class="count-badge">${count}</span>`;
+        }
+        btn.onclick = () => { activeCategory = key; render(); };
+        wrap.appendChild(btn);
+      });
+    }
+
+    // ─── RENDER ───────────────────────────────────────────────────────────
+    function render() {
+      buildTabs();
+      const items = getItems(activeCategory);
+      const wrapper = document.getElementById('compareWrapper');
+
+      if (!items.length) {
+        const catInfo = CATEGORIES[activeCategory];
+        wrapper.innerHTML = `
+          <div class="empty-state">
+            <i class="fas ${catInfo.icon}"></i>
+            <h3>No ${catInfo.label} Selected</h3>
+            <p>Browse listings and click the compare button on any card to add here</p>
+            <a href="${catInfo.browse}" class="btn-browse"><i class="fas fa-arrow-right" style="margin-right:8px;"></i>Browse ${catInfo.label}</a>
+          </div>`;
+        return;
+      }
+
+      const cols = items.length;
+      const gridCols = `180px ${'1fr '.repeat(cols).trim()}`;
+
+      // ── Slots Header ──
+      let slotsHTML = `<div class="slots-header" style="grid-template-columns:${gridCols}">
+        <div></div>`;
+      items.forEach(item => {
+        const imgSrc = item.image || 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400';
+        slotsHTML += `
+          <div class="slot-card">
+            <div class="slot-img-wrap">
+              <img src="${imgSrc}" alt="${item.name}" onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400'" loading="lazy"/>
+              <button class="slot-remove" onclick="removeItem('${activeCategory}', ${item.id})"><i class="fas fa-times"></i></button>
+              <span class="slot-badge">${CATEGORIES[activeCategory].label.slice(0,-1) || CATEGORIES[activeCategory].label}</span>
+            </div>
+            <div class="slot-info">
+              <div class="slot-name">${item.name}</div>
+              <div class="slot-meta">${item.area || item.city || ''}</div>
+              <div class="slot-rating">
+                <span class="stars">${stars(item.rating || 4)}</span>
+                <span class="rating-num">${item.rating || '—'}</span>
+              </div>
+            </div>
+          </div>`;
+      });
+
+      // Empty slots
+      const remaining = Math.max(0, MAX_ITEMS - cols);
+      for(let i = 0; i < remaining; i++) {
+        slotsHTML += `<div class="slot-empty" onclick="window.location='${CATEGORIES[activeCategory].browse}'">
+          <i class="fas fa-plus"></i>
+          <span>Add ${CATEGORIES[activeCategory].label.slice(0,-1)}</span>
+        </div>`;
+      }
+      slotsHTML += '</div>';
+
+      // ── Comparison Rows ──
+      const fields = CATEGORIES[activeCategory].fields || [];
+      let rowsHTML = '';
+      fields.forEach(field => {
+        let bestIdx = -1;
+        if (field.bestHigh || field.bestLow) {
+          const vals = items.map(i => parseFloat(i[field.key]) || 0);
+          const validVals = vals.filter(v => v > 0);
+          if (validVals.length > 1) {
+            const extreme = field.bestHigh ? Math.max(...validVals) : Math.min(...validVals);
+            bestIdx = vals.indexOf(extreme);
+          }
+        }
+
+        rowsHTML += `<div class="compare-row" style="grid-template-columns:${gridCols}">
+          <div class="cmp-label"><i class="fas ${field.icon}"></i>${field.label}</div>`;
+        items.forEach((item, idx) => {
+          let val = item[field.key];
+          let display = '';
+          let isBest = idx === bestIdx;
+          if (field.bool) {
+            display = val ? '<i class="fas fa-check check-yes"></i> Yes' : '<i class="fas fa-times check-no"></i> No';
+            isBest = false;
+          } else {
+            display = field.fmt ? field.fmt(val) : (val ?? '—');
+          }
+          rowsHTML += `<div class="cmp-cell${isBest ? ' best' : ''}">${display}</div>`;
+        });
+        rowsHTML += '</div>';
+      });
+
+      // ── Winner Banner ──
+      let winnerHTML = '';
+      if (items.length >= 2) {
+        let winnerIdx = 0;
+        let topRating = 0;
+        items.forEach((item, i) => {
+          if ((item.rating || 0) > topRating) { topRating = item.rating; winnerIdx = i; }
+        });
+        const winner = items[winnerIdx];
+        const detailUrl = CATEGORIES[activeCategory].detail;
+        winnerHTML = `
+          <div class="winner-banner">
+            <div class="winner-icon"><i class="fas fa-trophy"></i></div>
+            <div class="winner-text">
+              <h3>🏆 Our Recommendation: ${winner.name}</h3>
+              <p>Highest rated ${CATEGORIES[activeCategory].label.slice(0,-1).toLowerCase()} in your comparison with <strong>${winner.rating}/5</strong> stars</p>
+            </div>
+            <button class="btn-winner" onclick="window.location='${detailUrl}?id=${winner.id}'">
+              View Details <i class="fas fa-arrow-right" style="margin-left:6px;"></i>
+            </button>
+          </div>`;
+      }
+
+      // ── Action Bar ──
+      const actionHTML = `
+        <div class="action-bar">
+          <span class="compare-info"><i class="fas fa-scale-balanced" style="color:var(--gold);margin-right:6px;"></i>Comparing <strong>${items.length}</strong> of <strong>${MAX_ITEMS}</strong> ${CATEGORIES[activeCategory].label.toLowerCase()}</span>
+          <div class="action-buttons">
+            <button class="btn-share" onclick="shareCompare()"><i class="fas fa-share-alt" style="margin-right:6px;"></i>Share</button>
+            <button class="btn-clear" onclick="clearAll('${activeCategory}')"><i class="fas fa-trash" style="margin-right:6px;"></i>Clear All</button>
+          </div>
+        </div>`;
+
+      wrapper.innerHTML = `
+        ${actionHTML}
+        ${slotsHTML}
+        <div class="compare-table-section">
+          <div class="section-title"><i class="fas fa-table-list" style="margin-right:8px;"></i>Feature Comparison</div>
+          ${rowsHTML}
+        </div>
+        ${winnerHTML}
+      `;
+    }
+
+    // ─── SHARE ────────────────────────────────────────────────────────────
+    function shareCompare() {
+      const items = getItems(activeCategory);
+      if (items.length < 2) {
+        showToast('Add at least 2 items to share comparison');
+        return;
+      }
+      const names = items.map(i => i.name).join(', ');
+      const text = `Check out my comparison of ${CATEGORIES[activeCategory].label.toLowerCase()}: ${names} on WedDream!`;
+      if (navigator.share) {
+        navigator.share({ title: 'WedDream Comparison', text: text, url: window.location.href })
+          .catch(() => copyToClipboard(text));
+      } else {
+        copyToClipboard(text);
+      }
+    }
+
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Copied to clipboard!');
+      }).catch(() => {
+        showToast('Share: ' + text);
+      });
+    }
+
+    // ─── INIT ────────────────────────────────────────────────────────────
+    const urlCat = new URLSearchParams(location.search).get('cat');
+    if (urlCat && CATEGORIES[urlCat]) activeCategory = urlCat;
+
+    render();
+
+    // ─── AUTO-REFRESH ON STORAGE CHANGE ────────────────────────────────
+    window.addEventListener('storage', function(e) {
+      if (e.key && e.key.startsWith('wd_compare_')) {
+        render();
+      }
+    });
+  </script>
+</body>
+</html>

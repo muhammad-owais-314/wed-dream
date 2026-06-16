@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "name": "AJ Studio Official",
+    "area": "DHA",
+    "rating": 4.9,
+    "starting_price": 65000,
+    "price_type": "package",
+    "image": "aj_studio.jpg",
+    "verified": true
+  },
+  {
+    "id": 2,
+    "name": "Dossani's Studio",
+    "area": "DHA",
+    "rating": 4.7,
+    "starting_price": 60000,
+    "price_type": "package",
+    "image": "dossani_studio.jpg",
+    "verified": true
+  },
+  {
+    "id": 3,
+    "name": "K.Bridals Photography and Film",
+    "area": "DHA",
+    "rating": 4.8,
+    "starting_price": 50000,
+    "price_type": "package",
+    "image": "kbridals.jpg",
+    "verified": true
+  },
+  {
+    "id": 4,
+    "name": "Shakir Rehman's Photography",
+    "area": "DHA",
+    "rating": 4.6,
+    "starting_price": 45000,
+    "price_type": "package",
+    "image": "shakir_rehman.jpg",
+    "verified": true
+  },
+  {
+    "id": 5,
+    "name": "TWC - Cinematics",
+    "area": "DHA",
+    "rating": 4.7,
+    "starting_price": 55000,
+    "price_type": "package",
+    "image": "twc_cinematics.jpg",
+    "verified": true
+  },
+  {
+    "id": 6,
+    "name": "Dossani's Studio",
+    "area": "Clifton",
+    "rating": 4.7,
+    "starting_price": 60000,
+    "price_type": "package",
+    "image": "dossani_clifton.jpg",
+    "verified": true
+  },
+  {
+    "id": 7,
+    "name": "Eastriver",
+    "area": "Clifton",
+    "rating": 4.4,
+    "starting_price": 45000,
+    "price_type": "package",
+    "image": "eastriver.jpg",
+    "verified": true
+  },
+  {
+    "id": 8,
+    "name": "Oshoot Collective",
+    "area": "Clifton",
+    "rating": 4.6,
+    "starting_price": 52000,
+    "price_type": "package",
+    "image": "oshoot.jpg",
+    "verified": true
+  },
+  {
+    "id": 9,
+    "name": "Maha Wajahat Khan",
+    "area": "Clifton",
+    "rating": 4.8,
+    "starting_price": 65000,
+    "price_type": "package",
+    "image": "maha_wajahat.jpg",
+    "verified": true
+  },
+  {
+    "id": 10,
+    "name": "The Wedding Station",
+    "area": "Clifton",
+    "rating": 4.6,
+    "starting_price": 50000,
+    "price_type": "package",
+    "image": "wedding_station.jpg",
+    "verified": true
+  },
+  {
+    "id": 11,
+    "name": "Biyah Wedding",
+    "area": "PECHS",
+    "rating": 4.5,
+    "starting_price": 35000,
+    "price_type": "package",
+    "image": "biyah_wedding.jpg",
+    "verified": true
+  },
+  {
+    "id": 12,
+    "name": "Sohail Asim Photography",
+    "area": "PECHS",
+    "rating": 4.5,
+    "starting_price": 35000,
+    "price_type": "package",
+    "image": "sohail_asim.jpg",
+    "verified": true
+  },
+  {
+    "id": 13,
+    "name": "Zainbaba Photo Studio",
+    "area": "PECHS",
+    "rating": 4.3,
+    "starting_price": 28000,
+    "price_type": "package",
+    "image": "zainbaba.jpg",
+    "verified": true
+  },
+  {
+    "id": 14,
+    "name": "Mohammad Jobaed Khan",
+    "area": "PECHS",
+    "rating": 4.5,
+    "starting_price": 40000,
+    "price_type": "package",
+    "image": "jobaed_khan.jpg",
+    "verified": true
+  },
+  {
+    "id": 15,
+    "name": "ShadiGrapher.com",
+    "area": "PECHS",
+    "rating": 4.3,
+    "starting_price": 30000,
+    "price_type": "package",
+    "image": "shadigrapher.jpg",
+    "verified": true
+  },
+  {
+    "id": 16,
+    "name": "Shahida Weds Gallery",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.6,
+    "starting_price": 40000,
+    "price_type": "package",
+    "image": "shahida_weds.jpg",
+    "verified": true
+  },
+  {
+    "id": 17,
+    "name": "Zainbaba Photo Studio",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.3,
+    "starting_price": 28000,
+    "price_type": "package",
+    "image": "zainbaba_gulshan.jpg",
+    "verified": true
+  },
+  {
+    "id": 18,
+    "name": "Smart Aperture Photography",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.2,
+    "starting_price": 25000,
+    "price_type": "package",
+    "image": "smart_aperture.jpg",
+    "verified": true
+  },
+  {
+    "id": 19,
+    "name": "AkskaarPhotography",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.2,
+    "starting_price": 25000,
+    "price_type": "package",
+    "image": "akskaar.jpg",
+    "verified": true
+  },
+  {
+    "id": 20,
+    "name": "QasimKhan Films & Photography",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.3,
+    "starting_price": 30000,
+    "price_type": "package",
+    "image": "qasimkhan.jpg",
+    "verified": true
+  },
+  {
+    "id": 21,
+    "name": "Zainbaba Photo Studio",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.3,
+    "starting_price": 28000,
+    "price_type": "package",
+    "image": "zainbaba_johar.jpg",
+    "verified": true
+  },
+  {
+    "id": 22,
+    "name": "HB Studio Weddings",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.4,
+    "starting_price": 35000,
+    "price_type": "package",
+    "image": "hb_studio.jpg",
+    "verified": true
+  },
+  {
+    "id": 23,
+    "name": "Dees Creations",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.4,
+    "starting_price": 30000,
+    "price_type": "package",
+    "image": "dees_creations.jpg",
+    "verified": true
+  },
+  {
+    "id": 24,
+    "name": "ShadiGrapher.com",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.3,
+    "starting_price": 30000,
+    "price_type": "package",
+    "image": "shadigrapher_johar.jpg",
+    "verified": true
+  },
+  {
+    "id": 25,
+    "name": "Aatif Photography",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.2,
+    "starting_price": 28000,
+    "price_type": "package",
+    "image": "aatif_photo.jpg",
+    "verified": true
+  },
+  {
+    "id": 26,
+    "name": "Nasir4u Events",
+    "area": "Federal B Area",
+    "rating": 4.2,
+    "starting_price": 25000,
+    "price_type": "package",
+    "image": "nasir4u.jpg",
+    "verified": true
+  },
+  {
+    "id": 27,
+    "name": "Moin Shah Film and Photography",
+    "area": "Federal B Area",
+    "rating": 4.4,
+    "starting_price": 32500,
+    "price_type": "package",
+    "image": "moin_shah.jpg",
+    "verified": true
+  },
+  {
+    "id": 28,
+    "name": "Sohailgphotography",
+    "area": "Federal B Area",
+    "rating": 4.3,
+    "starting_price": 28000,
+    "price_type": "package",
+    "image": "sohailg.jpg",
+    "verified": true
+  },
+  {
+    "id": 29,
+    "name": "Abd Shutters",
+    "area": "Federal B Area",
+    "rating": 4.0,
+    "starting_price": 25000,
+    "price_type": "package",
+    "image": "abd_shutters.jpg",
+    "verified": true
+  },
+  {
+    "id": 30,
+    "name": "FB Area Photo Hub",
+    "area": "Federal B Area",
+    "rating": 4.0,
+    "starting_price": 18000,
+    "price_type": "package",
+    "image": "fb_photo_hub.jpg",
+    "verified": true
+  },
+  {
+    "id": 31,
+    "name": "BnW Collections",
+    "area": "Bahadurabad",
+    "rating": 4.4,
+    "starting_price": 40000,
+    "price_type": "package",
+    "image": "bnw_collections.jpg",
+    "verified": true
+  },
+  {
+    "id": 32,
+    "name": "The Wedder's Photography",
+    "area": "Bahadurabad",
+    "rating": 4.3,
+    "starting_price": 28000,
+    "price_type": "package",
+    "image": "wedders_photo.jpg",
+    "verified": true
+  },
+  {
+    "id": 33,
+    "name": "Party Popper Photo",
+    "area": "Bahadurabad",
+    "rating": 4.2,
+    "starting_price": 25000,
+    "price_type": "package",
+    "image": "party_popper_photo.jpg",
+    "verified": true
+  },
+  {
+    "id": 34,
+    "name": "Bahadurabad Photography",
+    "area": "Bahadurabad",
+    "rating": 4.1,
+    "starting_price": 20000,
+    "price_type": "package",
+    "image": "bahadurabad_photo.jpg",
+    "verified": true
+  },
+  {
+    "id": 35,
+    "name": "Elite Bahadurabad Photos",
+    "area": "Bahadurabad",
+    "rating": 4.1,
+    "starting_price": 22000,
+    "price_type": "package",
+    "image": "elite_bahadurabad.jpg",
+    "verified": true
+  },
+  {
+    "id": 36,
+    "name": "FotoClickStudio",
+    "area": "Tariq Road",
+    "rating": 4.3,
+    "starting_price": 25000,
+    "price_type": "package",
+    "image": "fotoclick.jpg",
+    "verified": true
+  },
+  {
+    "id": 37,
+    "name": "Anas Ahmad Photography",
+    "area": "Tariq Road",
+    "rating": 4.4,
+    "starting_price": 35000,
+    "price_type": "package",
+    "image": "anas_ahmad.jpg",
+    "verified": true
+  },
+  {
+    "id": 38,
+    "name": "Tariq Road Photo Studio",
+    "area": "Tariq Road",
+    "rating": 4.1,
+    "starting_price": 19000,
+    "price_type": "package",
+    "image": "tariq_road_photo.jpg",
+    "verified": true
+  },
+  {
+    "id": 39,
+    "name": "Shadi Point Photography",
+    "area": "Tariq Road",
+    "rating": 4.2,
+    "starting_price": 30000,
+    "price_type": "package",
+    "image": "shadi_point.jpg",
+    "verified": true
+  },
+  {
+    "id": 40,
+    "name": "Luxury Photography Tariq",
+    "area": "Tariq Road",
+    "rating": 4.1,
+    "starting_price": 28000,
+    "price_type": "package",
+    "image": "luxury_tariq.jpg",
+    "verified": true
+  },
+  {
+    "id": 41,
+    "name": "Jugnoo Photography",
+    "area": "North Nazimabad",
+    "rating": 4.1,
+    "starting_price": 22000,
+    "price_type": "package",
+    "image": "jugnoo.jpg",
+    "verified": true
+  },
+  {
+    "id": 42,
+    "name": "S.M.Waqar Wedding Photography Studio",
+    "area": "North Nazimabad",
+    "rating": 4.2,
+    "starting_price": 25000,
+    "price_type": "package",
+    "image": "smwaqar.jpg",
+    "verified": true
+  },
+  {
+    "id": 43,
+    "name": "North Nazimabad Photography",
+    "area": "North Nazimabad",
+    "rating": 4.0,
+    "starting_price": 20000,
+    "price_type": "package",
+    "image": "north_nazimabad_photo.jpg",
+    "verified": true
+  },
+  {
+    "id": 44,
+    "name": "Royal NN Photography",
+    "area": "North Nazimabad",
+    "rating": 4.1,
+    "starting_price": 23000,
+    "price_type": "package",
+    "image": "royal_nn_photo.jpg",
+    "verified": true
+  },
+  {
+    "id": 45,
+    "name": "Elite NN Photography",
+    "area": "North Nazimabad",
+    "rating": 4.1,
+    "starting_price": 28000,
+    "price_type": "package",
+    "image": "elite_nn_photo.jpg",
+    "verified": true
+  },
+  {
+    "id": 46,
+    "name": "Benchmarker Studio",
+    "area": "North Karachi",
+    "rating": 4.4,
+    "starting_price": 45000,
+    "price_type": "package",
+    "image": "benchmarker.jpg",
+    "verified": true
+  },
+  {
+    "id": 47,
+    "name": "ArtX Pro",
+    "area": "North Karachi",
+    "rating": 4.3,
+    "starting_price": 40000,
+    "price_type": "package",
+    "image": "artx_pro.jpg",
+    "verified": true
+  },
+  {
+    "id": 48,
+    "name": "North Karachi Photo Studio",
+    "area": "North Karachi",
+    "rating": 3.9,
+    "starting_price": 15000,
+    "price_type": "package",
+    "image": "north_karachi_photo.jpg",
+    "verified": true
+  },
+  {
+    "id": 49,
+    "name": "Royal NK Photography",
+    "area": "North Karachi",
+    "rating": 4.0,
+    "starting_price": 18000,
+    "price_type": "package",
+    "image": "royal_nk_photo.jpg",
+    "verified": true
+  },
+  {
+    "id": 50,
+    "name": "Star Photography NK",
+    "area": "North Karachi",
+    "rating": 3.8,
+    "starting_price": 16000,
+    "price_type": "package",
+    "image": "star_nk_photo.jpg",
+    "verified": true
+  }
+]

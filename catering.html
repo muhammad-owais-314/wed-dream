@@ -11,11 +11,7 @@
 
 <style>
 
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     background: #0a0708;
@@ -34,7 +30,6 @@ body {
     --border-glow: rgba(200, 155, 44, 0.35);
 }
 
-/* ===== SECTION ===== */
 .premium-caterers-section {
     padding: 70px 24px 90px;
     background: radial-gradient(circle at 10% 20%, #110c0e 0%, #050303 100%);
@@ -57,10 +52,7 @@ body {
     color: #fff;
     margin-bottom: 10px;
 }
-.section-title-premium span {
-    color: var(--gold);
-    font-style: italic;
-}
+.section-title-premium span { color: var(--gold); font-style: italic; }
 .section-sub {
     text-align: center;
     color: rgba(255,255,255,0.6);
@@ -70,7 +62,6 @@ body {
     margin-bottom: 36px;
 }
 
-/* ===== FILTER BAR ===== */
 .filter-bar {
     display: flex;
     flex-wrap: wrap;
@@ -78,7 +69,6 @@ body {
     gap: 10px;
     margin-bottom: 48px;
 }
-
 .filter-btn {
     background: transparent;
     border: 1.2px solid rgba(200, 155, 44, 0.4);
@@ -93,11 +83,7 @@ body {
     cursor: pointer;
     transition: all 0.28s ease;
 }
-.filter-btn:hover {
-    border-color: var(--gold);
-    color: var(--gold-light);
-    background: rgba(200,155,44,0.08);
-}
+.filter-btn:hover { border-color: var(--gold); color: var(--gold-light); background: rgba(200,155,44,0.08); }
 .filter-btn.active {
     background: var(--gold);
     border-color: var(--gold);
@@ -116,15 +102,12 @@ body {
     width: 100%;
 }
 
-/* ===== CARD ===== */
 .premium-card-wrapper {
     margin-bottom: 28px;
     transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
     height: 100%;
 }
-.premium-card-wrapper:hover {
-    transform: translateY(-7px);
-}
+.premium-card-wrapper:hover { transform: translateY(-7px); }
 .premium-card {
     background: rgba(20, 16, 18, 0.85);
     backdrop-filter: blur(2px);
@@ -143,7 +126,6 @@ body {
     background: rgba(24, 19, 21, 0.9);
 }
 
-/* ===== IMAGE ===== */
 .card-img-container {
     position: relative;
     overflow: hidden;
@@ -155,11 +137,8 @@ body {
     object-fit: cover;
     transition: transform 0.7s ease;
     display: block;
-    background: linear-gradient(135deg, #1a1012 0%, #2a1a20 40%, #1e160d 70%, #120d0e 100%);
 }
-.premium-card:hover .card-img-container img {
-    transform: scale(1.04);
-}
+.premium-card:hover .card-img-container img { transform: scale(1.04); }
 .img-overlay {
     position: absolute;
     inset: 0;
@@ -167,7 +146,6 @@ body {
     pointer-events: none;
 }
 
-/* VERIFIED BADGE */
 .premium-badge {
     position: absolute;
     top: 14px;
@@ -179,7 +157,7 @@ body {
     letter-spacing: 1.2px;
     padding: 5px 12px;
     border-radius: 30px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,215,120,0.5);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
     font-family: 'Jost', sans-serif;
     z-index: 3;
     text-transform: uppercase;
@@ -187,9 +165,57 @@ body {
     align-items: center;
     gap: 5px;
 }
-.premium-badge i { font-size: 0.65rem; color: #231f1a; }
+.premium-badge i { font-size: 0.65rem; }
 
-/* ===== CARD BODY ===== */
+/* ── COMPARE BUTTON ── */
+.compare-card-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 11px;
+    background: rgba(7,7,7,0.82);
+    border: 1px solid rgba(200,155,44,0.4);
+    border-radius: 40px;
+    color: var(--gold);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.22s;
+    z-index: 4;
+    backdrop-filter: blur(8px);
+}
+.compare-card-btn:hover { background: var(--gold); color: #0e0b0c; border-color: transparent; }
+.compare-card-btn.added { background: var(--rose); color: #fff; border-color: transparent; }
+
+/* ── TOAST ── */
+#wd-compare-toast {
+    position: fixed;
+    bottom: 1.8rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: rgba(14,11,12,0.97);
+    border: 1px solid rgba(200,155,44,0.45);
+    backdrop-filter: blur(14px);
+    border-radius: 50px;
+    padding: 0.65rem 1.6rem;
+    color: #e8b93c;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    z-index: 9999;
+    transition: transform 0.35s cubic-bezier(.34,1.56,.64,1);
+    white-space: nowrap;
+    pointer-events: none;
+}
+#wd-compare-toast.show { transform: translateX(-50%) translateY(0); }
+#wd-compare-toast.error-toast { border-color: rgba(185,59,86,0.5); color: #f87171; }
+
 .card-body-custom {
     padding: 1.1rem 1.2rem 1.3rem;
     flex: 1;
@@ -197,7 +223,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-
 .caterer-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
@@ -207,7 +232,6 @@ body {
     letter-spacing: -0.3px;
     line-height: 1.2;
 }
-
 .location-text {
     display: flex;
     align-items: center;
@@ -217,13 +241,7 @@ body {
     margin-bottom: 10px;
 }
 .location-text i { color: var(--gold); font-size: 0.72rem; }
-
-.rating-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    margin-bottom: 10px;
-}
+.rating-wrapper { display: flex; align-items: center; gap: 7px; margin-bottom: 10px; }
 .stars { color: var(--gold); font-size: 0.75rem; letter-spacing: 1px; }
 .stars i { margin-right: 1px; }
 .rating-number {
@@ -234,15 +252,12 @@ body {
     padding: 2px 8px;
     border-radius: 40px;
 }
-
 .gold-divider {
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), transparent);
     margin: 8px 0 12px 0;
     opacity: 0.65;
 }
-
-/* ===== PRICE + BUTTON ===== */
 .price-section {
     display: flex;
     align-items: center;
@@ -250,35 +265,16 @@ body {
     flex-wrap: wrap;
     gap: 10px;
 }
-.d-flex-price {
-    display: flex;
-    align-items: baseline;
-    gap: 3px;
-}
-.price-pkr {
-    font-size: 0.68rem;
-    font-weight: 500;
-    color: var(--gold-light);
-    letter-spacing: 1px;
-}
+.d-flex-price { display: flex; align-items: baseline; gap: 3px; }
+.price-pkr { font-size: 0.68rem; font-weight: 500; color: var(--gold-light); letter-spacing: 1px; }
 .price-amount {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.7rem;
     font-weight: 800;
     color: #f5e2b0;
     line-height: 1;
-    letter-spacing: 0.5px;
 }
-.price-per-head {
-    font-size: 0.68rem;
-    color: rgba(255,255,255,0.45);
-    margin-left: 2px;
-}
-.text-muted {
-    color: rgba(255,255,255,0.4) !important;
-    font-size: 0.68rem;
-}
-
+.price-per-head { font-size: 0.68rem; color: rgba(255,255,255,0.45); margin-left: 2px; }
 .btn-view-details {
     background: transparent;
     border: 1.2px solid rgba(200,155,44,0.65);
@@ -305,19 +301,79 @@ body {
 }
 .btn-view-details:hover i { transform: translateX(4px); color: #0e0b0c; }
 
-/* ===== RESPONSIVE ===== */
+/* ── FLOATING COMPARE BAR ── */
+#wd-compare-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(14,11,12,0.97);
+    border-top: 1px solid rgba(200,155,44,0.35);
+    backdrop-filter: blur(16px);
+    padding: 10px 20px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    z-index: 9998;
+    flex-wrap: wrap;
+}
+#wd-compare-bar.visible { display: flex; }
+.compare-bar-items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.compare-bar-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(200,155,44,0.1);
+    border: 1px solid rgba(200,155,44,0.3);
+    border-radius: 40px;
+    padding: 4px 12px 4px 8px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.72rem;
+    color: #e8b93c;
+}
+.compare-bar-chip button {
+    background: none; border: none;
+    color: rgba(255,255,255,0.4);
+    cursor: pointer; padding: 0; font-size: 0.8rem; line-height: 1;
+}
+.compare-bar-chip button:hover { color: var(--rose); }
+.btn-go-compare {
+    padding: 8px 22px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: #0e0b0c;
+    border: none;
+    border-radius: 40px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+    white-space: nowrap;
+}
+.btn-go-compare:hover { opacity: 0.88; transform: translateY(-1px); }
+.btn-clear-compare {
+    padding: 7px 16px;
+    background: transparent;
+    border: 1px solid rgba(185,59,86,0.4);
+    border-radius: 40px;
+    color: var(--rose);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.72rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.btn-clear-compare:hover { background: var(--rose); color: #fff; }
+
 @media (max-width: 576px) {
     .premium-caterers-section { padding: 44px 14px 60px; }
     .section-title-premium { font-size: 2.2rem; }
     .caterer-title { font-size: 1.25rem; }
     .price-amount { font-size: 1.45rem; }
-    .card-body-custom { padding: 0.9rem 1rem 1rem; }
-    .card-img-container img { height: 175px; }
-    .btn-view-details { padding: 6px 13px; font-size: 0.62rem; }
-    .filter-btn { font-size: 0.65rem; padding: 7px 14px; }
-}
-@media (min-width: 1200px) {
-    .card-img-container img { height: 215px; }
 }
 
 ::selection { background: var(--gold); color: #0e0b0c; }
@@ -335,13 +391,10 @@ body {
     <h2 class="section-title-premium">Master <span>Chefs</span></h2>
     <p class="section-sub">Award-winning catering services for unforgettable feasts</p>
 
-    <!-- FILTER BAR -->
     <div id="filterBar" class="filter-bar"></div>
 
     <div class="container">
-        <div class="row g-3" id="productContainer">
-            <!-- cards JS inject karega -->
-        </div>
+        <div class="row g-3" id="productContainer"></div>
         <p id="noResults" class="no-results">Koi caterer nahi mila is area mein.</p>
     </div>
 </div>
@@ -349,68 +402,225 @@ body {
 <!-- FOOTER -->
 <div id="footer-container"></div>
 
+<!-- FLOATING COMPARE BAR -->
+<div id="wd-compare-bar">
+    <div class="compare-bar-items" id="compareBarItems"></div>
+    <div style="display:flex;gap:8px;align-items:center;">
+        <button class="btn-clear-compare" onclick="clearCatCompare()">Clear</button>
+        <button class="btn-go-compare" onclick="window.location.href='compare.html?cat=caterers'">
+            <i class="fas fa-scale-balanced" style="margin-right:6px;"></i>Compare Now
+        </button>
+    </div>
+</div>
+
+<!-- TOAST -->
+<div id="wd-compare-toast"></div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
 
-
-    // ===== NAVBAR & FOOTER LOAD =====
+// ===== NAVBAR & FOOTER =====
 $(document).ready(() => {
     $.get('navebar.html', (data) => {
         $('#nav-container').html(data);
         var page = window.location.pathname.split('/').pop().replace('.html','').toLowerCase() || 'catering';
-        var pageMap = {
-            'catering': 'vendors',
-            'catering-detail': 'vendors'
-        };
+        var pageMap = { 'catering': 'vendors', 'catering-detail': 'vendors' };
         var activeKey = pageMap[page] || 'vendors';
         $('.wd-menu-link').removeClass('active');
         $('.wd-mobile-list > li > a').removeClass('active');
         $('.wd-menu-link[data-nav="' + activeKey + '"]').addClass('active');
         $('.wd-mobile-list > li > a[data-nav="' + activeKey + '"]').addClass('active');
+
+        // Badge update after navbar loads
+        updateCompareBadge();
     });
-    
-    $.get('footer.html', (data) => {
-        $('#footer-container').html(data);
-    });
+
+    $.get('footer.html', (data) => { $('#footer-container').html(data); });
 });
 
-// ===== CATERERS PAGE LOGIC =====
+// ===== COMPARE SYSTEM =====
+const WD_CAT_KEY = 'wd_compare_caterers';
+const WD_MAX = 4;
+
+function getCatCompare() {
+    try { return JSON.parse(localStorage.getItem(WD_CAT_KEY) || '[]'); }
+    catch { return []; }
+}
+function saveCatCompare(arr) {
+    localStorage.setItem(WD_CAT_KEY, JSON.stringify(arr));
+    updateCompareBadge();
+    renderCompareBar();
+}
+function clearCatCompare() {
+    saveCatCompare([]);
+    // reset all buttons
+    document.querySelectorAll('.compare-card-btn').forEach(btn => {
+        btn.classList.remove('added');
+        const sp = btn.querySelector('span');
+        if (sp) sp.textContent = 'Compare';
+    });
+    showWDToast('Comparison cleared');
+}
+
+// Event delegation on container
+document.getElementById('productContainer').addEventListener('click', function(e) {
+    const btn = e.target.closest('.compare-card-btn');
+    if (!btn) return;
+    e.stopPropagation();
+
+    let item;
+    try { item = JSON.parse(btn.dataset.compareItem); }
+    catch { return; }
+
+    let list = getCatCompare();
+    const idx = list.findIndex(i => i.id == item.id);
+
+    if (idx > -1) {
+        list.splice(idx, 1);
+        btn.classList.remove('added');
+        const sp = btn.querySelector('span');
+        if (sp) sp.textContent = 'Compare';
+        showWDToast('Removed from comparison');
+    } else {
+        if (list.length >= WD_MAX) {
+            showWDToast('Max 4 items! Pehle koi hatao.', true);
+            return;
+        }
+        list.push(item);
+        btn.classList.add('added');
+        const sp = btn.querySelector('span');
+        if (sp) sp.textContent = 'Added ✓';
+        showWDToast('Added to comparison!');
+    }
+    saveCatCompare(list);
+});
+
+// Sync buttons after cards render
+function syncCatCompareButtons() {
+    const ids = getCatCompare().map(i => String(i.id));
+    document.querySelectorAll('.compare-card-btn').forEach(btn => {
+        if (ids.includes(String(btn.dataset.compareId))) {
+            btn.classList.add('added');
+            const sp = btn.querySelector('span');
+            if (sp) sp.textContent = 'Added ✓';
+        }
+    });
+    renderCompareBar();
+}
+
+// Floating compare bar
+function renderCompareBar() {
+    const list = getCatCompare();
+    const bar = document.getElementById('wd-compare-bar');
+    const itemsEl = document.getElementById('compareBarItems');
+
+    if (list.length === 0) {
+        bar.classList.remove('visible');
+        return;
+    }
+
+    bar.classList.add('visible');
+    itemsEl.innerHTML = `<span style="font-family:'Jost';font-size:0.7rem;color:rgba(255,255,255,0.4);margin-right:4px;">${list.length}/4</span>` +
+        list.map(item => `
+            <div class="compare-bar-chip">
+                <i class="fas fa-utensils" style="font-size:0.65rem;"></i>
+                ${item.name}
+                <button onclick="removeFromBar(${item.id})" title="Remove">×</button>
+            </div>
+        `).join('');
+}
+
+function removeFromBar(id) {
+    let list = getCatCompare().filter(i => i.id != id);
+    saveCatCompare(list);
+    // reset that button
+    const btn = document.querySelector(`.compare-card-btn[data-compare-id="${id}"]`);
+    if (btn) {
+        btn.classList.remove('added');
+        const sp = btn.querySelector('span');
+        if (sp) sp.textContent = 'Compare';
+    }
+    showWDToast('Removed');
+}
+
+// Navbar badge
+function updateCompareBadge() {
+    const cats = ['halls','caterers','photographers','decorators'];
+    let total = 0;
+    cats.forEach(c => {
+        try { total += JSON.parse(localStorage.getItem('wd_compare_' + c) || '[]').length; }
+        catch {}
+    });
+    const badge = document.getElementById('compareNavBadge');
+    if (!badge) return;
+    badge.textContent = total;
+    badge.classList.toggle('visible', total > 0);
+}
+
+// Toast
+function showWDToast(msg, isError = false) {
+    const t = document.getElementById('wd-compare-toast');
+    t.textContent = msg;
+    t.className = isError ? 'error-toast show' : 'show';
+    clearTimeout(t._tid);
+    t._tid = setTimeout(() => { t.className = t.className.replace(' show','').replace('show',''); }, 2400);
+}
+
+// ===== CATERERS LISTING =====
 const productContainer = document.getElementById('productContainer');
 const filterBar = document.getElementById('filterBar');
 const noResults = document.getElementById('noResults');
 
-function formatPKR(num) {
-    return num.toLocaleString('en-PK');
-}
+function formatPKR(num) { return num.toLocaleString('en-PK'); }
 
 function buildStars(rating) {
-    const full = Math.floor(rating);
-    const half = (rating - full) >= 0.5 ? 1 : 0;
-    const empty = 5 - full - half;
-    let stars = '';
-    for (let i = 0; i < full; i++) stars += '<i class="fas fa-star"></i>';
-    if (half) stars += '<i class="fas fa-star-half-alt"></i>';
-    for (let i = 0; i < empty; i++) stars += '<i class="far fa-star"></i>';
-    return stars;
+    const full = Math.floor(rating), half = (rating - full) >= 0.5 ? 1 : 0, empty = 5 - full - half;
+    let s = '';
+    for (let i = 0; i < full; i++) s += '<i class="fas fa-star"></i>';
+    if (half) s += '<i class="fas fa-star-half-alt"></i>';
+    for (let i = 0; i < empty; i++) s += '<i class="far fa-star"></i>';
+    return s;
 }
 
 function buildCard(item) {
     const imgSrc = item.image ? `images/caterers/${item.image}` : '';
-    
+
+    // Compact item data for compare (single quotes safe)
+    const compareData = JSON.stringify({
+        id: item.id,
+        name: item.name,
+        image: imgSrc,
+        city: item.area,
+        area: item.area,
+        rating: item.rating,
+        price: item.starting_price,
+        pricePerHead: item.price_per_head,
+        cuisine: (item.cuisine_types || []).join(', '),
+        minGuests: item.min_guests || 50,
+        halal: item.halal !== false,
+        vegetarian: item.vegetarian || false,
+        delivery: item.delivery || false
+    }).replace(/'/g, '&#39;');
+
     return `
     <div class="col-12 col-md-6 col-lg-4 col-xl-3 card-item" data-area="${item.area}">
         <div class="premium-card-wrapper">
             <div class="premium-card">
                 <div class="card-img-container position-relative">
-                    <img 
-                        src="${imgSrc}" 
+                    <img
+                        src="${imgSrc}"
                         alt="${item.name}"
                         onerror="this.src='https://images.unsplash.com/photo-1555244162-803834f70033?w=400&q=50';"
                     >
                     <div class="img-overlay"></div>
                     ${item.verified ? `<div class="premium-badge"><i class="fas fa-crown"></i> PREMIUM</div>` : ''}
+                    <button class="compare-card-btn"
+                        data-compare-id="${item.id}"
+                        data-compare-item='${compareData}'>
+                        <i class="fas fa-scale-balanced"></i> <span>Compare</span>
+                    </button>
                 </div>
                 <div class="card-body-custom">
                     <div>
@@ -434,7 +644,7 @@ function buildCard(item) {
                                 </div>
                                 <small class="price-per-head">${item.price_per_head ? `(PKR ${item.price_per_head.toLocaleString()}/head)` : '(starting package)'}</small>
                             </div>
-                            <button class="btn-view-details view-details-btn" data-id="${item.id}" data-caterer="${item.name}">
+                            <button class="btn-view-details view-details-btn" data-id="${item.id}">
                                 <i class="fas fa-arrow-right"></i> Details
                             </button>
                         </div>
@@ -455,20 +665,16 @@ function buildFilters(areas) {
     filterBar.addEventListener('click', (e) => {
         const btn = e.target.closest('.filter-btn');
         if (!btn) return;
-
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-
         const filter = btn.dataset.filter;
         const cards = document.querySelectorAll('.card-item');
         let visible = 0;
-
         cards.forEach(card => {
             const match = filter === 'all' || card.dataset.area === filter;
             card.style.display = match ? '' : 'none';
             if (match) visible++;
         });
-
         noResults.style.display = visible === 0 ? 'block' : 'none';
     });
 }
@@ -482,11 +688,14 @@ async function getProducts() {
         buildFilters(areas);
         productContainer.innerHTML = data.map(buildCard).join('');
 
+        // Sync compare button states
+        syncCatCompareButtons();
+
+        // View Details click
         productContainer.addEventListener('click', (e) => {
             const btn = e.target.closest('.view-details-btn');
             if (!btn) return;
-            const id = btn.dataset.id;
-            window.location.href = `catering-detail.html?id=${id}`;
+            window.location.href = `catering-detail.html?id=${btn.dataset.id}`;
         });
 
     } catch (error) {

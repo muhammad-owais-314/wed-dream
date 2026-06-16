@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hall Detail | WedDream</title>
+    <title>Photographer Detail | WeDream</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -163,7 +163,7 @@
             margin-bottom: 10px;
         }
 
-        .hall-title {
+        .photographer-title {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.4rem;
             font-weight: 700;
@@ -171,8 +171,8 @@
             line-height: 1.15;
         }
 
-        .hall-address { color: rgba(255,255,255,0.5); font-size: 0.87rem; margin-top: 6px; }
-        .hall-address i { color: var(--gold); margin-right: 5px; }
+        .photographer-address { color: rgba(255,255,255,0.5); font-size: 0.87rem; margin-top: 6px; }
+        .photographer-address i { color: var(--gold); margin-right: 5px; }
 
         .stars { color: var(--gold); }
         .rating-pill {
@@ -192,45 +192,11 @@
         }
         .price-big { font-size: 2.4rem; font-weight: 800; color: #fff; line-height: 1; }
         .price-big span { font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.45); margin-left: 4px; }
+        .price-type-detail { font-size: 0.9rem; color: var(--gold-light); margin-top: 4px; }
 
-        /* ===== AMENITIES GRID (New) ===== */
-        .amenities-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 8px 16px;
-            margin-top: 8px;
-        }
-        .amenity-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 10px;
-            padding: 6px 12px;
-            font-size: 0.78rem;
-            color: rgba(255,255,255,0.7);
-            transition: all 0.25s;
-            border: 1px solid rgba(200,155,44,0.08);
-        }
-        .amenity-item:hover {
-            background: rgba(200,155,44,0.08);
-            border-color: rgba(200,155,44,0.2);
-            transform: translateX(3px);
-        }
-        .amenity-item i {
-            color: var(--gold-light);
-            font-size: 0.85rem;
-            width: 18px;
-            text-align: center;
-        }
-        .amenity-item .amenity-label {
-            color: rgba(255,255,255,0.5);
-            font-size: 0.65rem;
-        }
-
-        /* ===== FEATURE TAGS (Darker) ===== */
-        .feature-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-        .ftag {
+        /* Darker styles for tags */
+        .service-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+        .stag {
             background: rgba(120, 90, 30, 0.08);
             border-left: 2px solid #7a5c1a;
             border-radius: 0 30px 30px 0;
@@ -240,9 +206,29 @@
             color: #b8a05c;
             transition: background 0.2s, transform 0.2s;
         }
-        .ftag i { color: #7a5c1a; }
-        .ftag:hover { background: rgba(120, 90, 30, 0.15); transform: translateX(3px); }
-        .ftag:hover i { color: var(--gold); }
+        .stag i { color: #7a5c1a; }
+        .stag:hover { background: rgba(120, 90, 30, 0.15); transform: translateX(3px); }
+        .stag:hover i { color: var(--gold); }
+
+        .specialty-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+        .stag2 {
+            background: rgba(0,0,0,0.55);
+            border: 1px solid rgba(200,155,44,0.2);
+            border-radius: 30px;
+            padding: 3px 12px;
+            font-size: 0.7rem;
+            color: #a08a50;
+        }
+        .stag2:hover { border-color: rgba(200,155,44,0.4); color: var(--gold-light); }
+
+        .staff-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+        .staff-tag {
+            background: rgba(200,155,44,0.1);
+            border-radius: 30px;
+            padding: 3px 12px;
+            font-size: 0.7rem;
+            color: var(--gold-light);
+        }
 
         .cap-row { display: flex; gap: 12px; margin-top: 10px; }
         .cap-item {
@@ -492,17 +478,12 @@
         .toast-item.error { border-color: var(--rose); }
 
         @media (max-width: 768px) {
-            .hall-title { font-size: 1.7rem; }
+            .photographer-title { font-size: 1.7rem; }
             .main-img-wrap img { height: 220px; }
             .cap-row { flex-direction: column; }
             .price-big { font-size: 1.8rem; }
             .pay-modal { padding: 1.5rem; }
             .modal-amount { font-size: 1.6rem; }
-            .amenities-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
-            .amenity-item { font-size: 0.7rem; padding: 5px 10px; }
-        }
-        @media (max-width: 480px) {
-            .amenities-grid { grid-template-columns: 1fr; }
         }
 
         ::-webkit-scrollbar { width: 6px; }
@@ -513,23 +494,21 @@
 
         .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.5s ease, transform 0.5s ease; }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
-
-        .amenities-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; }
     </style>
 </head>
 <body>
 
 <div id="loadingScreen">
     <div class="loader-ring"></div>
-    <p class="loader-text">Loading Hall Details...</p>
+    <p class="loader-text">Loading Photographer Details...</p>
 </div>
 
 <div id="errorScreen">
     <i class="fas fa-exclamation-triangle" style="font-size:3rem;color:var(--gold);"></i>
-    <h3 style="font-family:'Cormorant Garamond';font-size:1.8rem;">Hall Not Found</h3>
-    <p style="color:rgba(255,255,255,0.45);">Yeh hall exist nahi karta ya data load nahi hua.</p>
-    <a href="halls.html" style="background:var(--gold);color:#070707;padding:10px 28px;border-radius:50px;text-decoration:none;font-weight:700;margin-top:12px;">
-        <i class="fas fa-arrow-left me-2"></i> Back to Halls
+    <h3 style="font-family:'Cormorant Garamond';font-size:1.8rem;">Photographer Not Found</h3>
+    <p style="color:rgba(255,255,255,0.45);">Yeh photographer exist nahi karta ya data load nahi hua.</p>
+    <a href="photographers.html" style="background:var(--gold);color:#070707;padding:10px 28px;border-radius:50px;text-decoration:none;font-weight:700;margin-top:12px;">
+        <i class="fas fa-arrow-left me-2"></i> Back to Photographers
     </a>
 </div>
 
@@ -538,33 +517,37 @@
 <div id="mainContent" style="display:none;">
     <section class="page-hero">
         <div class="container">
-            <a href="halls.html" class="back-btn">
-                <i class="fas fa-arrow-left"></i> Back to Halls
+            <a href="photographers.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Photographers
             </a>
 
             <div class="row g-4">
                 <div class="col-lg-7">
                     <div class="main-img-wrap fade-up">
-                        <img id="mainImg" src="" alt="Hall Image">
+                        <img id="mainImg" src="" alt="Photographer Image">
                     </div>
                     <div class="thumb-grid mb-4 fade-up" id="thumbGrid"></div>
 
-                    <!-- ===== AMENITIES CARD ===== -->
                     <div class="g-card fade-up mb-4">
                         <div class="d-flex align-items-center gap-2 mb-3">
-                            <i class="fas fa-crown" style="color:var(--gold);font-size:1.3rem;"></i>
-                            <h5 class="mb-0 amenities-title">Regal Amenities</h5>
+                            <i class="fas fa-camera" style="color:var(--gold);font-size:1.3rem;"></i>
+                            <h5 class="mb-0" style="font-family:'Cormorant Garamond';font-size:1.3rem;">Services & Specialties</h5>
                         </div>
-                        <div id="amenitiesGrid" class="amenities-grid"></div>
+                        <div class="service-tags" id="serviceTags"></div>
+                        <div class="mt-3"><strong style="font-size:0.75rem;color:rgba(255,255,255,0.5);">Specialties:</strong>
+                            <div class="specialty-tags" id="specialtyTags"></div>
+                        </div>
+                        <div class="mt-2"><strong style="font-size:0.75rem;color:rgba(255,255,255,0.5);">Staff Available:</strong>
+                            <div class="staff-tags" id="staffTags"></div>
+                        </div>
                         <div class="divider"></div>
                         <div class="cap-row" id="capRow"></div>
                     </div>
 
-                    <!-- ===== REVIEWS ===== -->
                     <div class="g-card fade-up">
                         <div class="d-flex align-items-center gap-2 mb-3">
                             <i class="fas fa-star" style="color:var(--gold);font-size:1.2rem;"></i>
-                            <h5 class="mb-0 amenities-title">Client Testimonials</h5>
+                            <h5 class="mb-0" style="font-family:'Cormorant Garamond';font-size:1.3rem;">Client Testimonials</h5>
                         </div>
                         <div id="reviewsContainer"></div>
                     </div>
@@ -575,8 +558,8 @@
                         <div class="gold-badge" id="verifiedBadge" style="display:none;">
                             <i class="fas fa-gem"></i> VERIFIED PREMIUM
                         </div>
-                        <h1 class="hall-title" id="hallTitle"></h1>
-                        <p class="hall-address" id="hallAddress"></p>
+                        <h1 class="photographer-title" id="photographerTitle"></h1>
+                        <p class="photographer-address" id="photographerAddress"></p>
 
                         <div class="d-flex align-items-center gap-2 mt-3">
                             <div class="stars" id="starsEl"></div>
@@ -589,24 +572,32 @@
                         <div>
                             <p class="price-from">Starting From</p>
                             <div class="price-big" id="startingPrice"></div>
+                            <div class="price-type-detail" id="priceType"></div>
                         </div>
 
                         <div class="divider"></div>
 
-                        <!-- PACKAGES -->
                         <div>
                             <h6 style="font-family:'Cormorant Garamond';font-size:1.1rem;margin-bottom:12px;">
-                                <i class="fas fa-box-open me-2" style="color:var(--gold);"></i> Exclusive Packages
+                                <i class="fas fa-box-open me-2" style="color:var(--gold);"></i> Photography Packages
                             </h6>
                             <div class="row g-2" id="pkgGrid"></div>
                         </div>
 
                         <div class="divider"></div>
 
-                        <!-- CONTACT -->
                         <div>
                             <h6 style="font-family:'Cormorant Garamond';font-size:1.1rem;margin-bottom:12px;">
-                                <i class="fas fa-headset me-2" style="color:var(--gold);"></i> Concierge & Booking
+                                <i class="fas fa-concierge-bell me-2" style="color:var(--gold);"></i> Features
+                            </h6>
+                            <div class="feature-tags" id="featureTags"></div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div>
+                            <h6 style="font-family:'Cormorant Garamond';font-size:1.1rem;margin-bottom:12px;">
+                                <i class="fas fa-headset me-2" style="color:var(--gold);"></i> Contact & Booking
                             </h6>
                             <a id="callBtn" href="#" class="cta-btn cta-call">
                                 <i class="fas fa-phone-alt me-2"></i> <span id="phoneText">Call Now</span>
@@ -621,15 +612,11 @@
 
                         <div class="divider"></div>
 
-                        <!-- PAYMENT METHODS -->
                         <div>
                             <h6 style="font-family:'Cormorant Garamond';font-size:1.1rem;margin-bottom:10px;">
                                 <i class="fas fa-wallet me-2" style="color:var(--gold);"></i> Accepted Payments
                             </h6>
                             <div id="paymentBadges"></div>
-                            <small class="d-block mt-2" style="color:rgba(255,255,255,0.35);font-size:0.75rem;">
-                                <i class="fas fa-shield-alt me-1" style="color:var(--gold);"></i> 100% secure & transparent pricing
-                            </small>
                         </div>
 
                         <button class="cta-btn cta-pay" onclick="openModal()">
@@ -644,7 +631,6 @@
 
 <div id="footer-placeholder"></div>
 
-<!-- PAYMENT MODAL -->
 <div class="pay-overlay" id="payOverlay">
     <div class="pay-modal">
         <div class="d-flex justify-content-between align-items-center mb-4">
@@ -653,10 +639,10 @@
         </div>
         <div class="text-center mb-3">
             <p style="color:rgba(255,255,255,0.5);font-size:0.82rem;margin-bottom:4px;">
-                <i class="fas fa-gem me-1" style="color:var(--gold);"></i> <span id="mPkgName">Silver Package</span>
+                <i class="fas fa-gem me-1" style="color:var(--gold);"></i> <span id="mPkgName">Basic Package</span>
             </p>
             <div class="modal-amount" id="mAmount">PKR 0</div>
-            <p style="color:rgba(255,255,255,0.3);font-size:0.72rem;" id="mHallName"></p>
+            <p style="color:rgba(255,255,255,0.3);font-size:0.72rem;" id="mPhotographerName"></p>
         </div>
 
         <div class="method-tabs">
@@ -677,13 +663,11 @@
 
         <div class="pay-form" id="f-jazzcash">
             <div class="f-group"><label class="f-label">JazzCash Mobile Number</label><input type="tel" class="f-input" id="jcNum" placeholder="03XXXXXXXXX" maxlength="11"></div>
-            <div class="f-group"><label class="f-label">CNIC (Optional)</label><input type="text" class="f-input" id="jcCnic" placeholder="XXXXX-XXXXXXX-X"></div>
             <div class="info-box"><i class="fas fa-info-circle me-1"></i> Payment request aapke JazzCash app pe aayega.</div>
         </div>
 
         <div class="pay-form" id="f-easypaisa">
             <div class="f-group"><label class="f-label">Easypaisa Number</label><input type="tel" class="f-input" id="epNum" placeholder="03XXXXXXXXX" maxlength="11"></div>
-            <div class="f-group"><label class="f-label">Account Holder Name</label><input type="text" class="f-input" id="epName" placeholder="Full Name"></div>
             <div class="info-box"><i class="fas fa-info-circle me-1"></i> Payment request aapke Easypaisa account pe jayega.</div>
         </div>
 
@@ -691,7 +675,6 @@
             <div class="info-box mb-3"><i class="fas fa-building me-1"></i> Transfer to: <strong style="color:var(--gold-light);">Meezan Bank</strong><br>Account: <strong>01240101234567</strong><br>IBAN: <strong>PK36MEZN0001234567890</strong></div>
             <div class="f-group"><label class="f-label">Your Bank Name</label><input type="text" class="f-input" id="bankName" placeholder="HBL / UBL / MCB"></div>
             <div class="f-group"><label class="f-label">Your Account Number</label><input type="text" class="f-input" id="bankAcc" placeholder="Account Number"></div>
-            <div class="f-group"><label class="f-label">Account Holder Name</label><input type="text" class="f-input" id="bankHolder" placeholder="As per CNIC"></div>
         </div>
 
         <button class="btn-pay" id="payBtn" onclick="processPayment()">
@@ -701,7 +684,6 @@
     </div>
 </div>
 
-<!-- TOAST -->
 <div class="toast-wrap" id="toastWrap"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -724,7 +706,7 @@ function buildStars(rating) {
 }
 
 // ===== STATE =====
-let HALL = null;
+let PHOTOGRAPHER = null;
 let selected = null;
 let currentMethod = 'card';
 
@@ -736,30 +718,6 @@ const payMethodIcons = {
     'Credit Card': { icon: 'fab fa-cc-visa', label: 'Credit Card' }
 };
 
-// ===== AMENITIES ICON MAP =====
-const amenityIcons = {
-    'Air Conditioned Hall': 'fas fa-snowflake',
-    'Sound System & DJ': 'fas fa-music',
-    'Stage with LED Lighting': 'fas fa-lightbulb',
-    'Valet Parking': 'fas fa-car',
-    'Separate Mehendi Lawn': 'fas fa-leaf',
-    'CCTV Security': 'fas fa-video',
-    'Elevator Access': 'fas fa-elevator',
-    'Family Lounge': 'fas fa-couch',
-    'Decor Services Available': 'fas fa-magic',
-    'Bridal Room': 'fas fa-ring',
-    'Generator Backup': 'fas fa-bolt',
-    'In-house Catering': 'fas fa-utensils',
-    'Wheelchair Access': 'fas fa-wheelchair',
-    'Free WiFi': 'fas fa-wifi',
-    'Parking': 'fas fa-parking',
-    'Central Heating': 'fas fa-fire',
-    'Room Service': 'fas fa-concierge-bell',
-    'Security': 'fas fa-shield-alt',
-    'Smoking Area': 'fas fa-smoking',
-    'Event Planning': 'fas fa-clipboard-list'
-};
-
 // ===== NAVBAR & FOOTER =====
 function loadPartial(file, targetId, fallbackHtml) {
     $.get(file).done(d => { $('#' + targetId).html(d); postNavLoad(); })
@@ -768,7 +726,7 @@ function loadPartial(file, targetId, fallbackHtml) {
 
 function postNavLoad() {
     $('[data-nav]').removeClass('active');
-    $('[data-nav="halls"]').addClass('active');
+    $('[data-nav="vendors"]').addClass('active');
 }
 
 const navFallback = `<nav style="background:rgba(7,7,7,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(200,155,44,0.25);padding:14px 0;position:sticky;top:0;z-index:1000;">
@@ -778,11 +736,9 @@ const navFallback = `<nav style="background:rgba(7,7,7,0.97);backdrop-filter:blu
     </a>
     <div class="d-none d-lg-flex gap-4">
       <a href="index.html" data-nav="home" style="color:rgba(255,255,255,0.65);text-decoration:none;font-weight:500;">Home</a>
-      <a href="halls.html" data-nav="halls" style="color:#c89b2c;text-decoration:none;font-weight:600;">Halls</a>
+      <a href="halls.html" data-nav="halls" style="color:rgba(255,255,255,0.65);text-decoration:none;font-weight:500;">Halls</a>
       <a href="catering.html" data-nav="vendors" style="color:rgba(255,255,255,0.65);text-decoration:none;font-weight:500;">Caterers</a>
-      <a href="photographers.html" data-nav="vendors" style="color:rgba(255,255,255,0.65);text-decoration:none;font-weight:500;">Photographers</a>
-      <a href="decorating.html" data-nav="vendors" style="color:rgba(255,255,255,0.65);text-decoration:none;font-weight:500;">Decorators</a>
-      <a href="carrentals.html" data-nav="vendors" style="color:rgba(255,255,255,0.65);text-decoration:none;font-weight:500;">Car Rentals</a>
+      <a href="photographers.html" data-nav="vendors" style="color:#c89b2c;text-decoration:none;font-weight:600;">Photographers</a>
       <a href="about.html" data-nav="about" style="color:rgba(255,255,255,0.65);text-decoration:none;font-weight:500;">About</a>
     </div>
   </div>
@@ -802,28 +758,28 @@ $(document).ready(() => {
     loadPartial('footer.html', 'footer-placeholder', footerFallback);
 });
 
-// ===== RENDER HALL DATA =====
-function renderHall(hall) {
-    if (!hall) return;
+// ===== RENDER PHOTOGRAPHER DATA =====
+function renderPhotographer(photographer) {
+    if (!photographer) return;
 
-    HALL = hall;
+    PHOTOGRAPHER = photographer;
 
-    if (hall.packages && hall.packages.length > 0) {
-        selected = { ...hall.packages[0] };
+    if (photographer.packages && photographer.packages.length > 0) {
+        selected = { ...photographer.packages[0] };
     } else {
-        selected = { name: 'Standard', price: hall.starting_price || 0, includes: ['Hall Rent', 'Basic Setup', 'Chairs & Tables'] };
+        selected = { name: 'Standard', price: photographer.starting_price || 0, min_guests: 50, includes: ['Photography Coverage', 'Edited Photos', 'Digital Copy'] };
     }
 
-    document.title = (hall.name || 'Hall') + ' | WedDream';
+    document.title = (photographer.name || 'Photographer') + ' | WedDream';
 
-    // ===== MAIN IMAGE =====
-    const firstImg = (hall.gallery && hall.gallery[0]) ? hall.gallery[0] : 'https://picsum.photos/seed/default/900/600';
+    // Main Image
+    const firstImg = (photographer.gallery && photographer.gallery[0]) ? photographer.gallery[0] : 'https://picsum.photos/seed/default/900/600';
     document.getElementById('mainImg').src = firstImg;
 
-    // ===== THUMBNAILS =====
+    // Thumbnails
     const thumbGrid = document.getElementById('thumbGrid');
-    if (hall.gallery && hall.gallery.length > 0) {
-        thumbGrid.innerHTML = hall.gallery.map((img, i) => `
+    if (photographer.gallery && photographer.gallery.length > 0) {
+        thumbGrid.innerHTML = photographer.gallery.map((img, i) => `
             <div class="thumb-item ${i === 0 ? 'active' : ''}" data-src="${img}">
                 <img src="${img}" alt="Gallery ${i + 1}" onerror="this.src='https://picsum.photos/seed/fallback/200/150'">
             </div>
@@ -844,85 +800,87 @@ function renderHall(hall) {
         });
     });
 
-    // ===== AMENITIES GRID (NEW) =====
-    const amenitiesContainer = document.getElementById('amenitiesGrid');
-    const features = hall.features || ['Sound System & DJ', 'Stage with LED Lighting', 'Valet Parking', 'Separate Mehendi Lawn'];
-    
-    // Add common amenities if not present
-    const allAmenities = [
-        'Air Conditioned Hall',
-        'Valet Parking',
-        'Sound System & DJ',
-        'Stage with LED Lighting',
-        'Separate Mehendi Lawn',
-        'CCTV Security',
-        'Elevator Access',
-        'Family Lounge',
-        'Decor Services Available',
-        'Bridal Room',
-        'Generator Backup',
-        'In-house Catering'
-    ];
-    
-    // Merge and deduplicate
-    const mergedAmenities = [...new Set([...allAmenities, ...features])];
-    
-    amenitiesContainer.innerHTML = mergedAmenities.map(amenity => {
-        const icon = amenityIcons[amenity] || 'fas fa-check-circle';
-        return `
-            <div class="amenity-item">
-                <i class="${icon}"></i>
-                <span>${amenity}</span>
-            </div>
-        `;
-    }).join('');
+    // Services
+    const serviceIcons = {
+        'Wedding Photography': 'fas fa-ring',
+        'Bridal Photography': 'fas fa-venus',
+        'Cinematic Videography': 'fas fa-film',
+        'Drone Coverage': 'fas fa-drone',
+        'Event Coverage': 'fas fa-calendar-check',
+        'Portrait Photography': 'fas fa-user',
+        'Pre-wedding Shoots': 'fas fa-heart',
+        'Album Design': 'fas fa-book',
+        'Corporate Events': 'fas fa-building',
+        'Commercial Photography': 'fas fa-store'
+    };
+    const services = photographer.services || ['Wedding Photography', 'Event Coverage'];
+    document.getElementById('serviceTags').innerHTML = services.map(s =>
+        `<span class="stag"><i class="${serviceIcons[s] || 'fas fa-camera'} me-1"></i> ${s}</span>`
+    ).join('');
 
-    // ===== CAPACITY =====
+    // Specialties
+    const specialties = photographer.specialties || ['Creative Photography', 'Professional Service'];
+    document.getElementById('specialtyTags').innerHTML = specialties.map(s =>
+        `<span class="stag2"><i class="fas fa-star me-1"></i> ${s}</span>`
+    ).join('');
+
+    // Staff
+    const staff = photographer.staff_available || ['Male', 'Female'];
+    document.getElementById('staffTags').innerHTML = staff.map(s =>
+        `<span class="staff-tag"><i class="fas fa-user me-1"></i> ${s} Staff</span>`
+    ).join('');
+
+    // Capacity
+    let maxGuests = 300;
+    if (photographer.packages && photographer.packages.length > 0) {
+        maxGuests = photographer.packages[photographer.packages.length - 1]?.min_guests || 300;
+    }
     document.getElementById('capRow').innerHTML = `
-        <div class="cap-item"><i class="fas fa-users"></i><strong>${formatPKR(hall.capacity)}</strong> Guests</div>
-        <div class="cap-item"><i class="fas fa-car"></i><strong>${hall.parking_capacity || 100}</strong> Vehicles</div>
+        <div class="cap-item"><i class="fas fa-users"></i><strong>${maxGuests}+</strong> Max Guests</div>
+        <div class="cap-item"><i class="fas fa-clock"></i><strong>Quick</strong> Delivery</div>
     `;
 
-    // ===== REVIEWS =====
-    const reviews = hall.reviews || [];
+    // Reviews
+    const reviews = photographer.reviews || [];
     document.getElementById('reviewsContainer').innerHTML = reviews.map(rev => `
         <div class="review-card">
             <div class="d-flex justify-content-between align-items-start">
                 <strong><i class="fas fa-user-circle me-2" style="color:var(--gold);"></i>${rev.name || 'Guest'}</strong>
                 <div class="stars small">${buildStars(rev.rating || 4)}</div>
             </div>
-            <p class="review-quote">"${rev.comment || 'Great venue!'}"</p>
+            <p class="review-quote">"${rev.comment || 'Great service!'}"</p>
         </div>
     `).join('');
 
-    // ===== VERIFIED BADGE =====
-    if (hall.verified) {
+    // Verified Badge
+    if (photographer.verified) {
         document.getElementById('verifiedBadge').style.display = 'inline-flex';
     }
 
-    // ===== TITLE + ADDRESS =====
-    document.getElementById('hallTitle').textContent = hall.name || 'Hall Name';
-    document.getElementById('hallAddress').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${hall.address || 'Address not available'}`;
+    // Title + Address
+    document.getElementById('photographerTitle').textContent = photographer.name || 'Photographer Name';
+    document.getElementById('photographerAddress').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${photographer.address || 'Address not available'}`;
 
-    // ===== RATING =====
-    document.getElementById('starsEl').innerHTML = buildStars(hall.rating || 4);
-    document.getElementById('ratingNum').textContent = hall.rating || 4;
+    // Rating
+    document.getElementById('starsEl').innerHTML = buildStars(photographer.rating || 4);
+    document.getElementById('ratingNum').textContent = photographer.rating || 4;
     document.getElementById('reviewCount').textContent = `(${reviews.length} reviews)`;
 
-    // ===== STARTING PRICE =====
-    document.getElementById('startingPrice').innerHTML = `${formatPKR(hall.starting_price)} <span>PKR / event</span>`;
+    // Starting Price
+    document.getElementById('startingPrice').innerHTML = `${formatPKR(photographer.starting_price)} <span>PKR</span>`;
+    document.getElementById('priceType').innerHTML = photographer.price_type ? `(${photographer.price_type} based)` : '(package based)';
 
-    // ===== PACKAGES =====
-    const packages = hall.packages || [];
+    // Packages
+    const packages = photographer.packages || [];
     if (packages.length > 0) {
         document.getElementById('pkgGrid').innerHTML = packages.map((pkg, i) => `
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="pkg-card ${i === 0 ? 'active' : ''}" onclick="selectPkg(${i})">
                     <div class="pkg-name">${pkg.name || 'Package'}</div>
                     <div class="pkg-price">PKR ${formatPKR(pkg.price)}</div>
-                    <div class="mt-2"><small style="color:rgba(255,255,255,0.35);">/ event</small></div>
+                    <div class="mt-2"><small style="color:rgba(255,255,255,0.35);">${pkg.min_guests || 50}+ guests</small></div>
                     <ul class="includes-list">
-                        ${(pkg.includes || ['Hall Rent', 'Basic Setup', 'Chairs & Tables']).map(inc => `<li><i class="fas fa-check-circle"></i> ${inc}</li>`).join('')}
+                        ${(pkg.includes || ['Photography Coverage', 'Edited Photos', 'Digital Copy']).map(inc => `<li><i class="fas fa-check-circle"></i> ${inc}</li>`).join('')}
                     </ul>
                     <button class="pkg-book" onclick="event.stopPropagation();selectPkg(${i});openModal();">
                         <i class="fas fa-arrow-right me-1"></i> Book This
@@ -934,29 +892,50 @@ function renderHall(hall) {
         document.getElementById('pkgGrid').innerHTML = `<div class="col-12"><p class="text-center text-muted">Package details coming soon</p></div>`;
     }
 
-    // ===== CONTACT BUTTONS =====
-    const phone = hall.phone || '+92 300 0000000';
+    // Features
+    const features = photographer.features || ['Professional Service', 'Quality Work', 'Timely Delivery'];
+    const featureIcons = {
+        '24/7 Assistance': 'fas fa-clock',
+        'Professional Chauffeurs': 'fas fa-users',
+        'Well Maintained Cars': 'fas fa-car',
+        'Flexible Pricing': 'fas fa-tag',
+        'No Hidden Charges': 'fas fa-check-circle',
+        'Insurance Included': 'fas fa-shield-alt',
+        'Free Cancellation': 'fas fa-undo',
+        'ISO Certified': 'fas fa-certificate',
+        'Brand of the Year': 'fas fa-trophy',
+        'Female Staff Available': 'fas fa-female',
+        'Drone Coverage Available': 'fas fa-drone',
+        'Same Day Edit Option': 'fas fa-clock',
+        'Professional Equipment': 'fas fa-camera-retro'
+    };
+    document.getElementById('featureTags').innerHTML = features.map(f =>
+        `<span class="stag"><i class="${featureIcons[f] || 'fas fa-check-circle'} me-1"></i> ${f}</span>`
+    ).join('');
+
+    // Contact Buttons
+    const phone = photographer.phone || '+92 300 0000000';
     document.getElementById('callBtn').href = `tel:${phone.replace(/\s/g, '')}`;
     document.getElementById('phoneText').textContent = `Call ${phone}`;
 
-    const whatsapp = hall.whatsapp || phone;
+    const whatsapp = photographer.whatsapp || phone;
     document.getElementById('waBtn').href = `https://wa.me/${whatsapp.replace(/[^0-9]/g, '')}`;
 
-    // ===== PAYMENT BADGES =====
-    const pm = hall.payment_methods || ['Cash', 'Bank Transfer', 'JazzCash', 'Easypaisa'];
+    // Payment Badges
+    const pm = photographer.payment_methods || ['Cash', 'Bank Transfer', 'JazzCash', 'Easypaisa'];
     document.getElementById('paymentBadges').innerHTML = pm.map(m => {
         const info = payMethodIcons[m] || { icon: 'fas fa-money-bill', label: m };
         return `<span class="pay-badge"><i class="${info.icon}"></i> ${info.label}</span>`;
     }).join('');
 
-    // ===== MODAL HALL NAME =====
-    document.getElementById('mHallName').textContent = hall.name || 'Hall';
+    // Modal Photographer Name
+    document.getElementById('mPhotographerName').textContent = photographer.name || 'Photographer';
 
-    // ===== SHOW PAGE =====
+    // Show Page
     document.getElementById('mainContent').style.display = 'block';
     document.getElementById('loadingScreen').classList.add('hidden');
 
-    // ===== SCROLL ANIMATIONS =====
+    // Scroll Animations
     setTimeout(() => {
         const obs = new IntersectionObserver((entries) => {
             entries.forEach((e, idx) => {
@@ -970,14 +949,14 @@ function renderHall(hall) {
     }, 100);
 }
 
-// ===== LOAD HALL FROM JSON =====
-function getHallId() {
+// ===== LOAD PHOTOGRAPHER FROM JSON =====
+function getPhotographerId() {
     const params = new URLSearchParams(window.location.search);
     return parseInt(params.get('id'));
 }
 
-async function loadHall() {
-    const id = getHallId();
+async function loadPhotographer() {
+    const id = getPhotographerId();
 
     if (!id || isNaN(id)) {
         showError();
@@ -985,20 +964,20 @@ async function loadHall() {
     }
 
     try {
-        const resp = await fetch('hallsDetails.json');
+        const resp = await fetch('photographersDetails.json');
         if (!resp.ok) throw new Error('JSON load failed');
         const data = await resp.json();
-        const hall = data.find(h => h.id === id);
+        const photographer = data.find(h => h.id === id);
 
-        if (!hall) {
+        if (!photographer) {
             showError();
             return;
         }
 
-        renderHall(hall);
+        renderPhotographer(photographer);
 
     } catch (err) {
-        console.error('Hall load error:', err);
+        console.error('Photographer load error:', err);
         showError();
     }
 }
@@ -1008,12 +987,12 @@ function showError() {
     document.getElementById('errorScreen').classList.add('show');
 }
 
-loadHall();
+loadPhotographer();
 
 // ===== PACKAGE SELECT =====
 function selectPkg(idx) {
-    if (!HALL || !HALL.packages || !HALL.packages[idx]) return;
-    selected = { ...HALL.packages[idx] };
+    if (!PHOTOGRAPHER || !PHOTOGRAPHER.packages || !PHOTOGRAPHER.packages[idx]) return;
+    selected = { ...PHOTOGRAPHER.packages[idx] };
     document.querySelectorAll('.pkg-card').forEach((c, i) => c.classList.toggle('active', i === idx));
     showToast(`${selected.name} package selected`, 'default');
 }
@@ -1050,7 +1029,7 @@ function switchMethod(method) {
     document.getElementById('f-' + method).classList.add('show');
 }
 
-// ===== CARD FORMATTING =====
+// Card formatting
 document.getElementById('cardNumber')?.addEventListener('input', function () {
     let v = this.value.replace(/\D/g, '').substring(0, 16);
     this.value = v.replace(/(.{4})/g, '$1 ').trim();
@@ -1081,17 +1060,13 @@ function processPayment() {
     }
     else if (currentMethod === 'easypaisa') {
         const num = document.getElementById('epNum')?.value.trim();
-        const name = document.getElementById('epName')?.value.trim();
         if (!/^03\d{9}$/.test(num)) { showToast('Valid Easypaisa number enter karein', 'error'); return; }
-        if (!name || name.length < 3) { showToast('Account holder name enter karein', 'error'); return; }
     }
     else if (currentMethod === 'bank') {
         const bn = document.getElementById('bankName')?.value.trim();
         const ba = document.getElementById('bankAcc')?.value.trim();
-        const bh = document.getElementById('bankHolder')?.value.trim();
         if (!bn) { showToast('Bank name enter karein', 'error'); return; }
         if (ba.length < 5) { showToast('Valid account number enter karein', 'error'); return; }
-        if (bh.length < 3) { showToast('Account holder name enter karein', 'error'); return; }
     }
 
     btn.disabled = true;
@@ -1101,7 +1076,7 @@ function processPayment() {
         btn.disabled = false;
         btn.innerHTML = '<i class="fas fa-lock me-2"></i> Confirm & Pay';
         closeModal();
-        const ref = 'WDH' + Math.random().toString(36).substring(2, 8).toUpperCase();
+        const ref = 'WDP' + Math.random().toString(36).substring(2, 8).toUpperCase();
         showToast(`✅ Booking Confirmed! Ref: ${ref} — PKR ${formatPKR(selected?.price || 0)}`, 'success');
 
         ['cardName', 'cardNumber', 'cardExpiry', 'cardCvc', 'jcNum', 'jcCnic', 'epNum', 'epName', 'bankName', 'bankAcc', 'bankHolder']

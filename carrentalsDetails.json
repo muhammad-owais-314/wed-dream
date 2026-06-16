@@ -1,0 +1,2935 @@
+[
+  {
+    "id": 1,
+    "name": "Dreamz Carz",
+    "area": "DHA",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "address": "DHA, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/dreamz1/900/600",
+      "https://picsum.photos/seed/dreamz2/900/600",
+      "https://picsum.photos/seed/dreamz3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes E-Class", "BMW 5 Series", "Kia Sportage", "Hyundai Sonata"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "City Tour", "New Year Celebrations"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip"],
+    "features": [
+      "24/7 Assistance",
+      "Professional Chauffeurs",
+      "Clean & Well Maintained Cars",
+      "Flexible Pricing Packages",
+      "No Hidden Charges",
+      "Insurance Included",
+      "Replacement Car on Breakdown",
+      "Free Cancellation up to 24 hours"
+    ],
+    "packages": [
+      {
+        "name": "Economy",
+        "price": 8000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Sedan", "Decorated Car for Wedding"]
+      },
+      {
+        "name": "Luxury",
+        "price": 30000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Professional Chauffeur", "Fuel", "Wedding Decoration", "VIP Service", "Free Refreshments"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ahmed Raza",
+        "rating": 5,
+        "comment": "Excellent service! The car was clean and the driver was very professional. Highly recommended for weddings! "
+      },
+      {
+        "name": "Sana Mirza",
+        "rating": 5,
+        "comment": "Best car rental service in Karachi. On-time delivery and great condition cars."
+      },
+      {
+        "name": "Usman Ali",
+        "rating": 4,
+        "comment": "Good experience, will use again."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Most Rated & Recommended | ISO Certified",
+    "established": 2015,
+    "website": "cars.dreamzcarz.pk"
+  },
+  {
+    "id": 2,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "DHA",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "address": "DHA, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/vigo1/900/600",
+      "https://picsum.photos/seed/vigo2/900/600",
+      "https://picsum.photos/seed/vigo3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Swift", "Toyota Fortuner", "Honda City"],
+    "services": ["Wedding Car Rental", "Corporate Events", "Airport Transfer", "Guest Transport", "Self Drive", "Chauffeur Drive", "Party & Event Transport"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip", "Wedding Package"],
+    "features": [
+      "Professional Chauffeurs",
+      "Well Maintained Fleet",
+      "Affordable Rates",
+      "24/7 Customer Support",
+      "Free Cancellation",
+      "Special Wedding Packages"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 7000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Wedding Special",
+        "price": 12000,
+        "duration": "10 hours / 100 km",
+        "includes": ["Driver", "Fuel", "Sedan Car", "Wedding Decoration", "Bouquet for Bride"]
+      },
+      {
+        "name": "Premium Wedding",
+        "price": 20000,
+        "duration": "Full Day",
+        "includes": ["Luxury Car", "Chauffeur", "Fuel", "Premium Decoration", "Photographer Coordination"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Fatima Khan",
+        "rating": 5,
+        "comment": "Very professional service for our wedding. The car decoration was beautiful! "
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Professional Chauffeur Service",
+    "established": 2016
+  },
+  {
+    "id": 3,
+    "name": "BRV Rent a Car",
+    "area": "DHA",
+    "rating": 4.6,
+    "starting_price": 9000,
+    "price_type": "per day",
+    "address": "DHA, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/brv1/900/600",
+      "https://picsum.photos/seed/brv2/900/600",
+      "https://picsum.photos/seed/brv3/900/600"
+    ],
+    "fleet": ["Toyota Corolla Grande", "Honda Civic Rebirth", "Toyota Fortuner", "Land Cruiser", "Mercedes E-Class", "BMW", "Audi"],
+    "services": ["Corporate Transportation", "Wedding Car Rental", "Executive Chauffeur Service", "Airport Transfer", "VIP Transport"],
+    "booking_types": ["Corporate Events", "Weddings", "Executive Travel", "Outstation"],
+    "features": [
+      "Specializes in Corporate Transportation",
+      "Professional Chauffeurs",
+      "Luxury Fleet",
+      "Punctual Service",
+      "Corporate Discounts Available",
+      "GPS Enabled Vehicles"
+    ],
+    "packages": [
+      {
+        "name": "Corporate",
+        "price": 9000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Professional Chauffeur", "Fuel", "Corporate Sedan"]
+      },
+      {
+        "name": "Executive",
+        "price": 18000,
+        "duration": "10 hours / 100 km",
+        "includes": ["Executive Chauffeur", "Fuel", "Luxury Sedan", "Mineral Water"]
+      },
+      {
+        "name": "VIP",
+        "price": 35000,
+        "duration": "Full Day",
+        "includes": ["Luxury Vehicle", "VIP Chauffeur", "Fuel", "Premium Service", "Refreshments"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Corporate Client",
+        "rating": 5,
+        "comment": "Best corporate car rental service in Karachi. Very professional and punctual."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa", "Corporate Invoice"],
+    "verified": true,
+    "verified_badge": "Corporate Transportation Specialist",
+    "established": 2012,
+    "website": "brvrentacar.com"
+  },
+  {
+    "id": 4,
+    "name": "The Wedding and Event",
+    "area": "DHA",
+    "rating": 4.5,
+    "starting_price": 10000,
+    "price_type": "per day",
+    "address": "DHA Phase 8, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/wedding1/900/600",
+      "https://picsum.photos/seed/wedding2/900/600",
+      "https://picsum.photos/seed/wedding3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes S-Class", "BMW 7 Series", "Range Rover"],
+    "services": ["Wedding Car Rental", "Wedding Venue Booking", "Wedding Decor", "Full Wedding Planning", "Corporate Events"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Complete Wedding Package"],
+    "features": [
+      "One-Window Platform",
+      "Venue + Decor + Car Rental Combo",
+      "Professional Wedding Planners",
+      "Custom Packages",
+      "Discount on Combo Deals"
+    ],
+    "packages": [
+      {
+        "name": "Car Only",
+        "price": 10000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Car", "Basic Decoration"]
+      },
+      {
+        "name": "Venue + Car",
+        "price": 25000,
+        "duration": "Full Day",
+        "includes": ["Venue Booking", "Car Rental", "Driver", "Basic Decor"]
+      },
+      {
+        "name": "Complete Wedding",
+        "price": 100000,
+        "duration": "2 Days",
+        "includes": ["Venue", "Decor", "Catering", "Car Rental", "Photography", "Full Planning"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bride",
+        "rating": 5,
+        "comment": "They handled everything for our wedding. One platform made it so easy!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "One-Window Wedding Platform",
+    "established": 2018,
+    "website": "theweddingandevent.com"
+  },
+  {
+    "id": 5,
+    "name": "Capital Car Rental Pvt",
+    "area": "DHA",
+    "rating": 4.4,
+    "starting_price": 8500,
+    "price_type": "per day",
+    "address": "Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/capital1/900/600",
+      "https://picsum.photos/seed/capital2/900/600",
+      "https://picsum.photos/seed/capital3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Kia Carnival", "Hyundai Tucson"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Employee Transport", "Self Drive", "Chauffeur Drive"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Corporate Contract"],
+    "features": [
+      "Top Car Rental Company",
+      "Revenue: $98.5M",
+      "Large Fleet",
+      "Corporate Accounts Available",
+      "Professional Service"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 8500,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Car", "Water Bottles"]
+      },
+      {
+        "name": "Luxury",
+        "price": 28000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Chauffeur", "Fuel", "VIP Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Corporate Client",
+        "rating": 4,
+        "comment": "Reliable service for corporate transport."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa", "Corporate Invoice"],
+    "verified": true,
+    "verified_badge": "Top Car Rental Company",
+    "established": 2005
+  },
+  {
+    "id": 6,
+    "name": "BRV Rent a Car",
+    "area": "Clifton",
+    "rating": 4.6,
+    "starting_price": 9000,
+    "price_type": "per day",
+    "address": "Clifton, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/brvcl1/900/600",
+      "https://picsum.photos/seed/brvcl2/900/600",
+      "https://picsum.photos/seed/brvcl3/900/600"
+    ],
+    "fleet": ["Toyota Corolla Grande", "Honda Civic Rebirth", "Toyota Fortuner", "Land Cruiser", "Mercedes E-Class", "BMW", "Audi"],
+    "services": ["Corporate Transportation", "Wedding Car Rental", "Executive Chauffeur Service", "Airport Transfer", "VIP Transport"],
+    "booking_types": ["Corporate Events", "Weddings", "Executive Travel", "Outstation"],
+    "features": [
+      "Specializes in Corporate Transportation",
+      "Professional Chauffeurs",
+      "Luxury Fleet",
+      "Punctual Service",
+      "Corporate Discounts Available",
+      "GPS Enabled Vehicles"
+    ],
+    "packages": [
+      {
+        "name": "Corporate",
+        "price": 9000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Professional Chauffeur", "Fuel", "Corporate Sedan"]
+      },
+      {
+        "name": "Executive",
+        "price": 18000,
+        "duration": "10 hours / 100 km",
+        "includes": ["Executive Chauffeur", "Fuel", "Luxury Sedan", "Mineral Water"]
+      },
+      {
+        "name": "VIP",
+        "price": 35000,
+        "duration": "Full Day",
+        "includes": ["Luxury Vehicle", "VIP Chauffeur", "Fuel", "Premium Service", "Refreshments"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Corporate Client",
+        "rating": 5,
+        "comment": "Best corporate car rental service in Clifton. Highly professional!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa", "Corporate Invoice"],
+    "verified": true,
+    "verified_badge": "Corporate Transportation Specialist",
+    "established": 2012,
+    "website": "brvrentacar.com"
+  },
+  {
+    "id": 7,
+    "name": "Dreamz Carz",
+    "area": "Clifton",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "address": "Clifton, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/dreamzcl1/900/600",
+      "https://picsum.photos/seed/dreamzcl2/900/600",
+      "https://picsum.photos/seed/dreamzcl3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes E-Class", "BMW 5 Series", "Kia Sportage", "Hyundai Sonata"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "City Tour", "New Year Celebrations"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip"],
+    "features": [
+      "24/7 Assistance",
+      "Professional Chauffeurs",
+      "Clean & Well Maintained Cars",
+      "Flexible Pricing Packages",
+      "No Hidden Charges",
+      "Insurance Included",
+      "Replacement Car on Breakdown",
+      "Free Cancellation up to 24 hours"
+    ],
+    "packages": [
+      {
+        "name": "Economy",
+        "price": 8000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Sedan", "Decorated Car for Wedding"]
+      },
+      {
+        "name": "Luxury",
+        "price": 30000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Professional Chauffeur", "Fuel", "Wedding Decoration", "VIP Service", "Free Refreshments"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ahmed Raza",
+        "rating": 5,
+        "comment": "Best car rental service in Clifton! Highly recommended for weddings."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Most Rated & Recommended",
+    "established": 2015,
+    "website": "cars.dreamzcarz.pk"
+  },
+  {
+    "id": 8,
+    "name": "Nafees Rent a Car Pakistan",
+    "area": "Clifton",
+    "rating": 4.5,
+    "starting_price": 7500,
+    "price_type": "per day",
+    "address": "Clifton, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/nafees1/900/600",
+      "https://picsum.photos/seed/nafees2/900/600",
+      "https://picsum.photos/seed/nafees3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Kia Carnival", "Hyundai Tucson"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Employee Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "Cargo Service"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Corporate Contract"],
+    "features": [
+      "Nationwide Service",
+      "Employee Transport Specialists",
+      "Well Maintained Fleet",
+      "Professional Drivers",
+      "Competitive Rates",
+      "24/7 Support"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 7500,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 12000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Sedan"]
+      },
+      {
+        "name": "Luxury",
+        "price": 25000,
+        "duration": "Full Day",
+        "includes": ["Luxury Vehicle", "Chauffeur", "Fuel", "VIP Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Corporate Client",
+        "rating": 4,
+        "comment": "Good service for employee transport."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Employee Transport Specialists",
+    "established": 2008,
+    "website": "nafeesrentacar.com"
+  },
+  {
+    "id": 9,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "Clifton",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "address": "Clifton, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/vigocl1/900/600",
+      "https://picsum.photos/seed/vigocl2/900/600",
+      "https://picsum.photos/seed/vigocl3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Swift", "Toyota Fortuner", "Honda City"],
+    "services": ["Wedding Car Rental", "Corporate Events", "Airport Transfer", "Guest Transport", "Self Drive", "Chauffeur Drive", "Party & Event Transport"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip", "Wedding Package"],
+    "features": [
+      "Professional Chauffeurs",
+      "Well Maintained Fleet",
+      "Affordable Rates",
+      "24/7 Customer Support",
+      "Free Cancellation",
+      "Special Wedding Packages"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 7000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Wedding Special",
+        "price": 12000,
+        "duration": "10 hours / 100 km",
+        "includes": ["Driver", "Fuel", "Sedan Car", "Wedding Decoration", "Bouquet for Bride"]
+      },
+      {
+        "name": "Premium Wedding",
+        "price": 20000,
+        "duration": "Full Day",
+        "includes": ["Luxury Car", "Chauffeur", "Fuel", "Premium Decoration", "Photographer Coordination"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Fatima Khan",
+        "rating": 5,
+        "comment": "Very professional service for our wedding. The car decoration was beautiful! "
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Professional Chauffeur Service",
+    "established": 2016
+  },
+  {
+    "id": 10,
+    "name": "Capital Car Rental Pvt",
+    "area": "Clifton",
+    "rating": 4.4,
+    "starting_price": 8500,
+    "price_type": "per day",
+    "address": "Clifton, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/capitalcl1/900/600",
+      "https://picsum.photos/seed/capitalcl2/900/600",
+      "https://picsum.photos/seed/capitalcl3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Kia Carnival", "Hyundai Tucson"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Employee Transport", "Self Drive", "Chauffeur Drive"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Corporate Contract"],
+    "features": [
+      "Top Car Rental Company",
+      "Revenue: $98.5M",
+      "Large Fleet",
+      "Corporate Accounts Available",
+      "Professional Service"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 8500,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Car", "Water Bottles"]
+      },
+      {
+        "name": "Luxury",
+        "price": 28000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Chauffeur", "Fuel", "VIP Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Corporate Client",
+        "rating": 4,
+        "comment": "Reliable service for corporate transport."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa", "Corporate Invoice"],
+    "verified": true,
+    "verified_badge": "Top Car Rental Company",
+    "established": 2005
+  },
+  {
+    "id": 11,
+    "name": "Dreamz Carz",
+    "area": "PECHS",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "address": "PECHS, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/dreamzpe1/900/600",
+      "https://picsum.photos/seed/dreamzpe2/900/600",
+      "https://picsum.photos/seed/dreamzpe3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes E-Class", "BMW 5 Series", "Kia Sportage", "Hyundai Sonata"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "City Tour", "Business Travel"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip"],
+    "features": [
+      "24/7 Assistance",
+      "Professional Chauffeurs",
+      "Clean & Well Maintained Cars",
+      "Flexible Pricing Packages",
+      "No Hidden Charges",
+      "Insurance Included",
+      "Replacement Car on Breakdown",
+      "Free Cancellation up to 24 hours"
+    ],
+    "packages": [
+      {
+        "name": "Economy",
+        "price": 8000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Sedan", "Decorated Car for Wedding"]
+      },
+      {
+        "name": "Luxury",
+        "price": 30000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Professional Chauffeur", "Fuel", "Wedding Decoration", "VIP Service", "Free Refreshments"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ahmed Raza",
+        "rating": 5,
+        "comment": "Excellent service in PECHS area! The car was clean and on time."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Most Rated & Recommended",
+    "established": 2015,
+    "website": "cars.dreamzcarz.pk"
+  },
+  {
+    "id": 12,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "PECHS",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "address": "PECHS, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/vigope1/900/600",
+      "https://picsum.photos/seed/vigope2/900/600",
+      "https://picsum.photos/seed/vigope3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Swift", "Toyota Fortuner", "Honda City"],
+    "services": ["Wedding Car Rental", "Corporate Events", "Airport Transfer", "Guest Transport", "Self Drive", "Chauffeur Drive", "Party & Event Transport"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip", "Wedding Package"],
+    "features": [
+      "Professional Chauffeurs",
+      "Well Maintained Fleet",
+      "Affordable Rates",
+      "24/7 Customer Support",
+      "Free Cancellation",
+      "Special Wedding Packages"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 7000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Wedding Special",
+        "price": 12000,
+        "duration": "10 hours / 100 km",
+        "includes": ["Driver", "Fuel", "Sedan Car", "Wedding Decoration", "Bouquet for Bride"]
+      },
+      {
+        "name": "Premium Wedding",
+        "price": 20000,
+        "duration": "Full Day",
+        "includes": ["Luxury Car", "Chauffeur", "Fuel", "Premium Decoration", "Photographer Coordination"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Great service for our wedding. Highly recommended!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Professional Chauffeur Service",
+    "established": 2016
+  },
+  {
+    "id": 13,
+    "name": "ZJ Rent A Car",
+    "area": "PECHS",
+    "rating": 4.5,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "address": "PECHS, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/zj1/900/600",
+      "https://picsum.photos/seed/zj2/900/600",
+      "https://picsum.photos/seed/zj3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Alto", "Honda City", "Toyota Fortuner", "Kia Sportage"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "Outstation Trips", "Monthly Rentals"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Monthly Contract", "Outstation Trip"],
+    "features": [
+      "Specializes in New Karachi",
+      "Affordable Rates",
+      "Clean & Maintained Cars",
+      "Professional Drivers",
+      "24/7 Customer Support",
+      "Free Cancellation",
+      "Monthly Rental Options"
+    ],
+    "packages": [
+      {
+        "name": "Daily Economy",
+        "price": 6000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Daily Standard",
+        "price": 10000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Standard Car", "Basic Decoration"]
+      },
+      {
+        "name": "Monthly",
+        "price": 90000,
+        "duration": "30 Days",
+        "includes": ["Self Drive", "Limited km", "Basic Insurance"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Affordable rates and good service."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Affordable Car Rentals",
+    "established": 2014,
+    "website": "zjrentacar.com"
+  },
+  {
+    "id": 14,
+    "name": "The Wedding and Event",
+    "area": "PECHS",
+    "rating": 4.5,
+    "starting_price": 10000,
+    "price_type": "per day",
+    "address": "DHA Phase 8 (Serves PECHS), Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/weddingpe1/900/600",
+      "https://picsum.photos/seed/weddingpe2/900/600",
+      "https://picsum.photos/seed/weddingpe3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes S-Class", "BMW 7 Series", "Range Rover"],
+    "services": ["Wedding Car Rental", "Wedding Venue Booking", "Wedding Decor", "Full Wedding Planning", "Corporate Events"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Complete Wedding Package"],
+    "features": [
+      "One-Window Platform",
+      "Venue + Decor + Car Rental Combo",
+      "Professional Wedding Planners",
+      "Custom Packages",
+      "Discount on Combo Deals"
+    ],
+    "packages": [
+      {
+        "name": "Car Only",
+        "price": 10000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Car", "Basic Decoration"]
+      },
+      {
+        "name": "Venue + Car",
+        "price": 25000,
+        "duration": "Full Day",
+        "includes": ["Venue Booking", "Car Rental", "Driver", "Basic Decor"]
+      },
+      {
+        "name": "Complete Wedding",
+        "price": 100000,
+        "duration": "2 Days",
+        "includes": ["Venue", "Decor", "Catering", "Car Rental", "Photography", "Full Planning"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bride",
+        "rating": 5,
+        "comment": "They handled everything for our wedding. One platform made it so easy!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "One-Window Wedding Platform",
+    "established": 2018,
+    "website": "theweddingandevent.com"
+  },
+  {
+    "id": 15,
+    "name": "LOKAL Rooms x Shahrah-e-Faisal",
+    "area": "PECHS",
+    "rating": 4.3,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "address": "LOKAL Rooms x Shahrah-e-Faisal, PECHS Block 6, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/lokal1/900/600",
+      "https://picsum.photos/seed/lokal2/900/600",
+      "https://picsum.photos/seed/lokal3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Alto"],
+    "services": ["Hotel Accommodation", "Car Rental Service", "Guest Transport", "Airport Transfer"],
+    "booking_types": ["Hotel + Car Package", "Day Trip", "Airport Transfer"],
+    "features": [
+      "Hotel with Car Rental Service",
+      "Convenient Location",
+      "Guest Transport Available",
+      "Affordable Rates"
+    ],
+    "packages": [
+      {
+        "name": "Car Only",
+        "price": 6000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Car"]
+      },
+      {
+        "name": "Hotel + Car",
+        "price": 15000,
+        "duration": "24 Hours",
+        "includes": ["Hotel Room", "Car Rental", "Driver", "Breakfast"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Guest",
+        "rating": 4,
+        "comment": "Convenient hotel with car rental service."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa", "Credit Card"],
+    "verified": true,
+    "verified_badge": "Hotel with Car Rental",
+    "established": 2019
+  },
+  {
+    "id": 16,
+    "name": "Supreme Villa",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.6,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "address": "Block 6, Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/supreme1/900/600",
+      "https://picsum.photos/seed/supreme2/900/600",
+      "https://picsum.photos/seed/supreme3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner"],
+    "services": ["Vacation Villa", "Car Rental Service", "Guest Transport", "Airport Pickup"],
+    "booking_types": ["Villa + Car Package", "Day Trip", "Weekly Rental"],
+    "features": [
+      "Vacation Villa with Car Rental",
+      "Comfortable Accommodation",
+      "Professional Service",
+      "Affordable Packages"
+    ],
+    "packages": [
+      {
+        "name": "Car Only",
+        "price": 7000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Car"]
+      },
+      {
+        "name": "Villa + Car",
+        "price": 20000,
+        "duration": "24 Hours",
+        "includes": ["Villa Accommodation", "Car Rental", "Driver"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Guest",
+        "rating": 4,
+        "comment": "Nice villa with car rental facility."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Villa with Car Service",
+    "established": 2018
+  },
+  {
+    "id": 17,
+    "name": "Dreamz Carz",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/dreamzgu1/900/600",
+      "https://picsum.photos/seed/dreamzgu2/900/600",
+      "https://picsum.photos/seed/dreamzgu3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes E-Class", "BMW 5 Series", "Kia Sportage", "Hyundai Sonata"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "City Tour"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip"],
+    "features": [
+      "24/7 Assistance",
+      "Professional Chauffeurs",
+      "Clean & Well Maintained Cars",
+      "Flexible Pricing Packages",
+      "No Hidden Charges",
+      "Insurance Included",
+      "Replacement Car on Breakdown",
+      "Free Cancellation up to 24 hours"
+    ],
+    "packages": [
+      {
+        "name": "Economy",
+        "price": 8000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Sedan", "Decorated Car for Wedding"]
+      },
+      {
+        "name": "Luxury",
+        "price": 30000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Professional Chauffeur", "Fuel", "Wedding Decoration", "VIP Service", "Free Refreshments"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Excellent service in Gulshan area!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Most Rated & Recommended",
+    "established": 2015,
+    "website": "cars.dreamzcarz.pk"
+  },
+  {
+    "id": 18,
+    "name": "Nafees Rent a Car Pakistan",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.5,
+    "starting_price": 7500,
+    "price_type": "per day",
+    "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/nafeesgu1/900/600",
+      "https://picsum.photos/seed/nafeesgu2/900/600",
+      "https://picsum.photos/seed/nafeesgu3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Kia Carnival", "Hyundai Tucson"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Employee Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "Cargo Service"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Corporate Contract"],
+    "features": [
+      "Nationwide Service",
+      "Employee Transport Specialists",
+      "Well Maintained Fleet",
+      "Professional Drivers",
+      "Competitive Rates",
+      "24/7 Support"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 7500,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 12000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Sedan"]
+      },
+      {
+        "name": "Luxury",
+        "price": 25000,
+        "duration": "Full Day",
+        "includes": ["Luxury Vehicle", "Chauffeur", "Fuel", "VIP Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Corporate Client",
+        "rating": 4,
+        "comment": "Good service for employee transport."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Employee Transport Specialists",
+    "established": 2008,
+    "website": "nafeesrentacar.com"
+  },
+  {
+    "id": 19,
+    "name": "ZJ Rent A Car",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.5,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/zjgu1/900/600",
+      "https://picsum.photos/seed/zjgu2/900/600",
+      "https://picsum.photos/seed/zjgu3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Alto", "Honda City", "Toyota Fortuner", "Kia Sportage"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "Outstation Trips", "Monthly Rentals"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Monthly Contract", "Outstation Trip"],
+    "features": [
+      "Affordable Rates",
+      "Clean & Maintained Cars",
+      "Professional Drivers",
+      "24/7 Customer Support",
+      "Free Cancellation",
+      "Monthly Rental Options"
+    ],
+    "packages": [
+      {
+        "name": "Daily Economy",
+        "price": 6000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Daily Standard",
+        "price": 10000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Standard Car", "Basic Decoration"]
+      },
+      {
+        "name": "Monthly",
+        "price": 90000,
+        "duration": "30 Days",
+        "includes": ["Self Drive", "Limited km", "Basic Insurance"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Affordable rates and good service."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Affordable Car Rentals",
+    "established": 2014,
+    "website": "zjrentacar.com"
+  },
+  {
+    "id": 20,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/vigogu1/900/600",
+      "https://picsum.photos/seed/vigogu2/900/600",
+      "https://picsum.photos/seed/vigogu3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Swift", "Toyota Fortuner", "Honda City"],
+    "services": ["Wedding Car Rental", "Corporate Events", "Airport Transfer", "Guest Transport", "Self Drive", "Chauffeur Drive", "Party & Event Transport"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip", "Wedding Package"],
+    "features": [
+      "Professional Chauffeurs",
+      "Well Maintained Fleet",
+      "Affordable Rates",
+      "24/7 Customer Support",
+      "Free Cancellation",
+      "Special Wedding Packages"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 7000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Wedding Special",
+        "price": 12000,
+        "duration": "10 hours / 100 km",
+        "includes": ["Driver", "Fuel", "Sedan Car", "Wedding Decoration", "Bouquet for Bride"]
+      },
+      {
+        "name": "Premium Wedding",
+        "price": 20000,
+        "duration": "Full Day",
+        "includes": ["Luxury Car", "Chauffeur", "Fuel", "Premium Decoration", "Photographer Coordination"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Great service for our event!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Professional Chauffeur Service",
+    "established": 2016
+  },
+  {
+    "id": 21,
+    "name": "Nafees Rent a Car Pakistan",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.5,
+    "starting_price": 7500,
+    "price_type": "per day",
+    "address": "Gulistan-e-Johar, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/nafeesjo1/900/600",
+      "https://picsum.photos/seed/nafeesjo2/900/600",
+      "https://picsum.photos/seed/nafeesjo3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Kia Carnival", "Hyundai Tucson"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Employee Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "Cargo Service"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Corporate Contract"],
+    "features": [
+      "Specifically mentions serving Gulistan-e-Johar for employee transport",
+      "Nationwide Service",
+      "Well Maintained Fleet",
+      "Professional Drivers",
+      "Competitive Rates",
+      "24/7 Support"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 7500,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 12000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Sedan"]
+      },
+      {
+        "name": "Luxury",
+        "price": 25000,
+        "duration": "Full Day",
+        "includes": ["Luxury Vehicle", "Chauffeur", "Fuel", "VIP Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Corporate Client",
+        "rating": 4,
+        "comment": "Good service for employee transport in Johar."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Employee Transport Specialists",
+    "established": 2008,
+    "website": "nafeesrentacar.com"
+  },
+  {
+    "id": 22,
+    "name": "Dreamz Carz",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "address": "Gulistan-e-Johar, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/dreamzjo1/900/600",
+      "https://picsum.photos/seed/dreamzjo2/900/600",
+      "https://picsum.photos/seed/dreamzjo3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes E-Class", "BMW 5 Series", "Kia Sportage", "Hyundai Sonata"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "City Tour"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip"],
+    "features": [
+      "24/7 Assistance",
+      "Professional Chauffeurs",
+      "Clean & Well Maintained Cars",
+      "Flexible Pricing Packages",
+      "No Hidden Charges",
+      "Insurance Included",
+      "Replacement Car on Breakdown",
+      "Free Cancellation up to 24 hours"
+    ],
+    "packages": [
+      {
+        "name": "Economy",
+        "price": 8000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Sedan", "Decorated Car for Wedding"]
+      },
+      {
+        "name": "Luxury",
+        "price": 30000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Professional Chauffeur", "Fuel", "Wedding Decoration", "VIP Service", "Free Refreshments"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Excellent service in Johar area!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Most Rated & Recommended",
+    "established": 2015,
+    "website": "cars.dreamzcarz.pk"
+  },
+  {
+    "id": 23,
+    "name": "ZJ Rent A Car",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.5,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "address": "Gulistan-e-Johar, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/zjjo1/900/600",
+      "https://picsum.photos/seed/zjjo2/900/600",
+      "https://picsum.photos/seed/zjjo3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Alto", "Honda City", "Toyota Fortuner", "Kia Sportage"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "Outstation Trips", "Monthly Rentals"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Monthly Contract", "Outstation Trip"],
+    "features": [
+      "Affordable Rates",
+      "Clean & Maintained Cars",
+      "Professional Drivers",
+      "24/7 Customer Support",
+      "Free Cancellation",
+      "Monthly Rental Options"
+    ],
+    "packages": [
+      {
+        "name": "Daily Economy",
+        "price": 6000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Daily Standard",
+        "price": 10000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Standard Car", "Basic Decoration"]
+      },
+      {
+        "name": "Monthly",
+        "price": 90000,
+        "duration": "30 Days",
+        "includes": ["Self Drive", "Limited km", "Basic Insurance"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Affordable rates and good service."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Affordable Car Rentals",
+    "established": 2014,
+    "website": "zjrentacar.com"
+  },
+  {
+    "id": 24,
+    "name": "The Wedding and Event",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.5,
+    "starting_price": 10000,
+    "price_type": "per day",
+    "address": "DHA Phase 8 (Serves Johar), Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/weddingjo1/900/600",
+      "https://picsum.photos/seed/weddingjo2/900/600",
+      "https://picsum.photos/seed/weddingjo3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes S-Class", "BMW 7 Series", "Range Rover"],
+    "services": ["Wedding Car Rental", "Wedding Venue Booking", "Wedding Decor", "Full Wedding Planning", "Corporate Events"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Complete Wedding Package"],
+    "features": [
+      "One-Window Platform",
+      "Venue + Decor + Car Rental Combo",
+      "Professional Wedding Planners",
+      "Custom Packages",
+      "Discount on Combo Deals"
+    ],
+    "packages": [
+      {
+        "name": "Car Only",
+        "price": 10000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Car", "Basic Decoration"]
+      },
+      {
+        "name": "Venue + Car",
+        "price": 25000,
+        "duration": "Full Day",
+        "includes": ["Venue Booking", "Car Rental", "Driver", "Basic Decor"]
+      },
+      {
+        "name": "Complete Wedding",
+        "price": 100000,
+        "duration": "2 Days",
+        "includes": ["Venue", "Decor", "Catering", "Car Rental", "Photography", "Full Planning"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bride",
+        "rating": 5,
+        "comment": "They handled everything for our wedding. One platform made it so easy!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "One-Window Wedding Platform",
+    "established": 2018,
+    "website": "theweddingandevent.com"
+  },
+  {
+    "id": 25,
+    "name": "Capital Car Rental Pvt",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.4,
+    "starting_price": 8500,
+    "price_type": "per day",
+    "address": "Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/capitaljo1/900/600",
+      "https://picsum.photos/seed/capitaljo2/900/600",
+      "https://picsum.photos/seed/capitaljo3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Kia Carnival", "Hyundai Tucson"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Employee Transport", "Self Drive", "Chauffeur Drive"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Corporate Contract"],
+    "features": [
+      "Top Car Rental Company",
+      "Revenue: $98.5M",
+      "Large Fleet",
+      "Corporate Accounts Available",
+      "Professional Service"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 8500,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Car", "Water Bottles"]
+      },
+      {
+        "name": "Luxury",
+        "price": 28000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Chauffeur", "Fuel", "VIP Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Corporate Client",
+        "rating": 4,
+        "comment": "Reliable service for corporate transport."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa", "Corporate Invoice"],
+    "verified": true,
+    "verified_badge": "Top Car Rental Company",
+    "established": 2005
+  },
+  {
+    "id": 26,
+    "name": "Dreamz Carz",
+    "area": "Federal B Area",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "address": "Federal B Area, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/dreamzfb1/900/600",
+      "https://picsum.photos/seed/dreamzfb2/900/600",
+      "https://picsum.photos/seed/dreamzfb3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes E-Class", "BMW 5 Series", "Kia Sportage", "Hyundai Sonata"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "City Tour"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip"],
+    "features": [
+      "24/7 Assistance",
+      "Professional Chauffeurs",
+      "Clean & Well Maintained Cars",
+      "Flexible Pricing Packages",
+      "No Hidden Charges",
+      "Insurance Included",
+      "Replacement Car on Breakdown",
+      "Free Cancellation up to 24 hours"
+    ],
+    "packages": [
+      {
+        "name": "Economy",
+        "price": 8000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Sedan", "Decorated Car for Wedding"]
+      },
+      {
+        "name": "Luxury",
+        "price": 30000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Professional Chauffeur", "Fuel", "Wedding Decoration", "VIP Service", "Free Refreshments"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Excellent service in FB Area!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Most Rated & Recommended",
+    "established": 2015,
+    "website": "cars.dreamzcarz.pk"
+  },
+  {
+    "id": 27,
+    "name": "ZJ Rent A Car",
+    "area": "Federal B Area",
+    "rating": 4.5,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "address": "Federal B Area, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/zjfb1/900/600",
+      "https://picsum.photos/seed/zjfb2/900/600",
+      "https://picsum.photos/seed/zjfb3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Alto", "Honda City", "Toyota Fortuner", "Kia Sportage"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "Outstation Trips", "Monthly Rentals"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Monthly Contract", "Outstation Trip"],
+    "features": [
+      "Affordable Rates",
+      "Clean & Maintained Cars",
+      "Professional Drivers",
+      "24/7 Customer Support",
+      "Free Cancellation",
+      "Monthly Rental Options"
+    ],
+    "packages": [
+      {
+        "name": "Daily Economy",
+        "price": 6000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Daily Standard",
+        "price": 10000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Standard Car", "Basic Decoration"]
+      },
+      {
+        "name": "Monthly",
+        "price": 90000,
+        "duration": "30 Days",
+        "includes": ["Self Drive", "Limited km", "Basic Insurance"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Affordable rates and good service."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Affordable Car Rentals",
+    "established": 2014,
+    "website": "zjrentacar.com"
+  },
+  {
+    "id": 28,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "Federal B Area",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "address": "Federal B Area, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/vigofb1/900/600",
+      "https://picsum.photos/seed/vigofb2/900/600",
+      "https://picsum.photos/seed/vigofb3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Swift", "Toyota Fortuner", "Honda City"],
+    "services": ["Wedding Car Rental", "Corporate Events", "Airport Transfer", "Guest Transport", "Self Drive", "Chauffeur Drive", "Party & Event Transport"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip", "Wedding Package"],
+    "features": [
+      "Professional Chauffeurs",
+      "Well Maintained Fleet",
+      "Affordable Rates",
+      "24/7 Customer Support",
+      "Free Cancellation",
+      "Special Wedding Packages"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 7000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Wedding Special",
+        "price": 12000,
+        "duration": "10 hours / 100 km",
+        "includes": ["Driver", "Fuel", "Sedan Car", "Wedding Decoration", "Bouquet for Bride"]
+      },
+      {
+        "name": "Premium Wedding",
+        "price": 20000,
+        "duration": "Full Day",
+        "includes": ["Luxury Car", "Chauffeur", "Fuel", "Premium Decoration", "Photographer Coordination"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Great service for our event!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Professional Chauffeur Service",
+    "established": 2016
+  },
+  {
+    "id": 29,
+    "name": "Capital Car Rental Pvt",
+    "area": "Federal B Area",
+    "rating": 4.4,
+    "starting_price": 8500,
+    "price_type": "per day",
+    "address": "Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/capitalfb1/900/600",
+      "https://picsum.photos/seed/capitalfb2/900/600",
+      "https://picsum.photos/seed/capitalfb3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Kia Carnival", "Hyundai Tucson"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Employee Transport", "Self Drive", "Chauffeur Drive"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Corporate Contract"],
+    "features": [
+      "Top Car Rental Company",
+      "Revenue: $98.5M",
+      "Large Fleet",
+      "Corporate Accounts Available",
+      "Professional Service"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 8500,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Car", "Water Bottles"]
+      },
+      {
+        "name": "Luxury",
+        "price": 28000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Chauffeur", "Fuel", "VIP Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Corporate Client",
+        "rating": 4,
+        "comment": "Reliable service for corporate transport."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa", "Corporate Invoice"],
+    "verified": true,
+    "verified_badge": "Top Car Rental Company",
+    "established": 2005
+  },
+  {
+    "id": 30,
+    "name": "The Wedding and Event",
+    "area": "Federal B Area",
+    "rating": 4.5,
+    "starting_price": 10000,
+    "price_type": "per day",
+    "address": "DHA Phase 8 (Serves FB Area), Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/weddingfb1/900/600",
+      "https://picsum.photos/seed/weddingfb2/900/600",
+      "https://picsum.photos/seed/weddingfb3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes S-Class", "BMW 7 Series", "Range Rover"],
+    "services": ["Wedding Car Rental", "Wedding Venue Booking", "Wedding Decor", "Full Wedding Planning", "Corporate Events"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Complete Wedding Package"],
+    "features": [
+      "One-Window Platform",
+      "Venue + Decor + Car Rental Combo",
+      "Professional Wedding Planners",
+      "Custom Packages",
+      "Discount on Combo Deals"
+    ],
+    "packages": [
+      {
+        "name": "Car Only",
+        "price": 10000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Car", "Basic Decoration"]
+      },
+      {
+        "name": "Venue + Car",
+        "price": 25000,
+        "duration": "Full Day",
+        "includes": ["Venue Booking", "Car Rental", "Driver", "Basic Decor"]
+      },
+      {
+        "name": "Complete Wedding",
+        "price": 100000,
+        "duration": "2 Days",
+        "includes": ["Venue", "Decor", "Catering", "Car Rental", "Photography", "Full Planning"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bride",
+        "rating": 5,
+        "comment": "They handled everything for our wedding. One platform made it so easy!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "One-Window Wedding Platform",
+    "established": 2018,
+    "website": "theweddingandevent.com"
+  },
+  {
+    "id": 31,
+    "name": "Dreamz Carz",
+    "area": "Bahadurabad",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "address": "Bahadurabad, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/dreamzba1/900/600",
+      "https://picsum.photos/seed/dreamzba2/900/600",
+      "https://picsum.photos/seed/dreamzba3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes E-Class", "BMW 5 Series", "Kia Sportage", "Hyundai Sonata"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "City Tour"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip"],
+    "features": [
+      "24/7 Assistance",
+      "Professional Chauffeurs",
+      "Clean & Well Maintained Cars",
+      "Flexible Pricing Packages",
+      "No Hidden Charges",
+      "Insurance Included",
+      "Replacement Car on Breakdown",
+      "Free Cancellation up to 24 hours"
+    ],
+    "packages": [
+      {
+        "name": "Economy",
+        "price": 8000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Sedan", "Decorated Car for Wedding"]
+      },
+      {
+        "name": "Luxury",
+        "price": 30000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Professional Chauffeur", "Fuel", "Wedding Decoration", "VIP Service", "Free Refreshments"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Excellent service in Bahadurabad!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Most Rated & Recommended",
+    "established": 2015,
+    "website": "cars.dreamzcarz.pk"
+  },
+  {
+    "id": 32,
+    "name": "ZJ Rent A Car",
+    "area": "Bahadurabad",
+    "rating": 4.5,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "address": "Bahadurabad, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/zjba1/900/600",
+      "https://picsum.photos/seed/zjba2/900/600",
+      "https://picsum.photos/seed/zjba3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Alto", "Honda City", "Toyota Fortuner", "Kia Sportage"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "Outstation Trips", "Monthly Rentals"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Monthly Contract", "Outstation Trip"],
+    "features": [
+      "Affordable Rates",
+      "Clean & Maintained Cars",
+      "Professional Drivers",
+      "24/7 Customer Support",
+      "Free Cancellation",
+      "Monthly Rental Options"
+    ],
+    "packages": [
+      {
+        "name": "Daily Economy",
+        "price": 6000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Daily Standard",
+        "price": 10000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Standard Car", "Basic Decoration"]
+      },
+      {
+        "name": "Monthly",
+        "price": 90000,
+        "duration": "30 Days",
+        "includes": ["Self Drive", "Limited km", "Basic Insurance"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Affordable rates and good service."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Affordable Car Rentals",
+    "established": 2014,
+    "website": "zjrentacar.com"
+  },
+  {
+    "id": 33,
+    "name": "Nafees Rent a Car Pakistan",
+    "area": "Bahadurabad",
+    "rating": 4.5,
+    "starting_price": 7500,
+    "price_type": "per day",
+    "address": "Bahadurabad, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/nafeesba1/900/600",
+      "https://picsum.photos/seed/nafeesba2/900/600",
+      "https://picsum.photos/seed/nafeesba3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Kia Carnival", "Hyundai Tucson"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Employee Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "Cargo Service"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Corporate Contract"],
+    "features": [
+      "Nationwide Service",
+      "Employee Transport Specialists",
+      "Well Maintained Fleet",
+      "Professional Drivers",
+      "Competitive Rates",
+      "24/7 Support"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 7500,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 12000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Sedan"]
+      },
+      {
+        "name": "Luxury",
+        "price": 25000,
+        "duration": "Full Day",
+        "includes": ["Luxury Vehicle", "Chauffeur", "Fuel", "VIP Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Corporate Client",
+        "rating": 4,
+        "comment": "Good service for employee transport."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Employee Transport Specialists",
+    "established": 2008,
+    "website": "nafeesrentacar.com"
+  },
+  {
+    "id": 34,
+    "name": "Capital Car Rental Pvt",
+    "area": "Bahadurabad",
+    "rating": 4.4,
+    "starting_price": 8500,
+    "price_type": "per day",
+    "address": "Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/capitalba1/900/600",
+      "https://picsum.photos/seed/capitalba2/900/600",
+      "https://picsum.photos/seed/capitalba3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Kia Carnival", "Hyundai Tucson"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Employee Transport", "Self Drive", "Chauffeur Drive"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Corporate Contract"],
+    "features": [
+      "Top Car Rental Company",
+      "Revenue: $98.5M",
+      "Large Fleet",
+      "Corporate Accounts Available",
+      "Professional Service"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 8500,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Car", "Water Bottles"]
+      },
+      {
+        "name": "Luxury",
+        "price": 28000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Chauffeur", "Fuel", "VIP Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Corporate Client",
+        "rating": 4,
+        "comment": "Reliable service for corporate transport."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa", "Corporate Invoice"],
+    "verified": true,
+    "verified_badge": "Top Car Rental Company",
+    "established": 2005
+  },
+  {
+    "id": 35,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "Bahadurabad",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "address": "Bahadurabad, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/vigoba1/900/600",
+      "https://picsum.photos/seed/vigoba2/900/600",
+      "https://picsum.photos/seed/vigoba3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Swift", "Toyota Fortuner", "Honda City"],
+    "services": ["Wedding Car Rental", "Corporate Events", "Airport Transfer", "Guest Transport", "Self Drive", "Chauffeur Drive", "Party & Event Transport"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip", "Wedding Package"],
+    "features": [
+      "Professional Chauffeurs",
+      "Well Maintained Fleet",
+      "Affordable Rates",
+      "24/7 Customer Support",
+      "Free Cancellation",
+      "Special Wedding Packages"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 7000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Wedding Special",
+        "price": 12000,
+        "duration": "10 hours / 100 km",
+        "includes": ["Driver", "Fuel", "Sedan Car", "Wedding Decoration", "Bouquet for Bride"]
+      },
+      {
+        "name": "Premium Wedding",
+        "price": 20000,
+        "duration": "Full Day",
+        "includes": ["Luxury Car", "Chauffeur", "Fuel", "Premium Decoration", "Photographer Coordination"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Great service for our event!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Professional Chauffeur Service",
+    "established": 2016
+  },
+  {
+    "id": 36,
+    "name": "Dreamz Carz",
+    "area": "Tariq Road",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "address": "Tariq Road, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/dreamztr1/900/600",
+      "https://picsum.photos/seed/dreamztr2/900/600",
+      "https://picsum.photos/seed/dreamztr3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes E-Class", "BMW 5 Series", "Kia Sportage", "Hyundai Sonata"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "City Tour"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip"],
+    "features": [
+      "24/7 Assistance",
+      "Professional Chauffeurs",
+      "Clean & Well Maintained Cars",
+      "Flexible Pricing Packages",
+      "No Hidden Charges",
+      "Insurance Included",
+      "Replacement Car on Breakdown",
+      "Free Cancellation up to 24 hours"
+    ],
+    "packages": [
+      {
+        "name": "Economy",
+        "price": 8000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Sedan", "Decorated Car for Wedding"]
+      },
+      {
+        "name": "Luxury",
+        "price": 30000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Professional Chauffeur", "Fuel", "Wedding Decoration", "VIP Service", "Free Refreshments"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Excellent service in Tariq Road!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Most Rated & Recommended",
+    "established": 2015,
+    "website": "cars.dreamzcarz.pk"
+  },
+  {
+    "id": 37,
+    "name": "ZJ Rent A Car",
+    "area": "Tariq Road",
+    "rating": 4.5,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "address": "Tariq Road, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/zjtr1/900/600",
+      "https://picsum.photos/seed/zjtr2/900/600",
+      "https://picsum.photos/seed/zjtr3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Alto", "Honda City", "Toyota Fortuner", "Kia Sportage"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "Outstation Trips", "Monthly Rentals"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Monthly Contract", "Outstation Trip"],
+    "features": [
+      "Affordable Rates",
+      "Clean & Maintained Cars",
+      "Professional Drivers",
+      "24/7 Customer Support",
+      "Free Cancellation",
+      "Monthly Rental Options"
+    ],
+    "packages": [
+      {
+        "name": "Daily Economy",
+        "price": 6000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Daily Standard",
+        "price": 10000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Standard Car", "Basic Decoration"]
+      },
+      {
+        "name": "Monthly",
+        "price": 90000,
+        "duration": "30 Days",
+        "includes": ["Self Drive", "Limited km", "Basic Insurance"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Affordable rates and good service."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Affordable Car Rentals",
+    "established": 2014,
+    "website": "zjrentacar.com"
+  },
+  {
+    "id": 38,
+    "name": "Capital Car Rental Pvt",
+    "area": "Tariq Road",
+    "rating": 4.4,
+    "starting_price": 8500,
+    "price_type": "per day",
+    "address": "Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/capitaltr1/900/600",
+      "https://picsum.photos/seed/capitaltr2/900/600",
+      "https://picsum.photos/seed/capitaltr3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Kia Carnival", "Hyundai Tucson"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Employee Transport", "Self Drive", "Chauffeur Drive"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Corporate Contract"],
+    "features": [
+      "Top Car Rental Company",
+      "Revenue: $98.5M",
+      "Large Fleet",
+      "Corporate Accounts Available",
+      "Professional Service"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 8500,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Car", "Water Bottles"]
+      },
+      {
+        "name": "Luxury",
+        "price": 28000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Chauffeur", "Fuel", "VIP Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Corporate Client",
+        "rating": 4,
+        "comment": "Reliable service for corporate transport."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa", "Corporate Invoice"],
+    "verified": true,
+    "verified_badge": "Top Car Rental Company",
+    "established": 2005
+  },
+  {
+    "id": 39,
+    "name": "The Wedding and Event",
+    "area": "Tariq Road",
+    "rating": 4.5,
+    "starting_price": 10000,
+    "price_type": "per day",
+    "address": "DHA Phase 8 (Serves Tariq Road), Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/weddingtr1/900/600",
+      "https://picsum.photos/seed/weddingtr2/900/600",
+      "https://picsum.photos/seed/weddingtr3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes S-Class", "BMW 7 Series", "Range Rover"],
+    "services": ["Wedding Car Rental", "Wedding Venue Booking", "Wedding Decor", "Full Wedding Planning", "Corporate Events"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Complete Wedding Package"],
+    "features": [
+      "One-Window Platform",
+      "Venue + Decor + Car Rental Combo",
+      "Professional Wedding Planners",
+      "Custom Packages",
+      "Discount on Combo Deals"
+    ],
+    "packages": [
+      {
+        "name": "Car Only",
+        "price": 10000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Car", "Basic Decoration"]
+      },
+      {
+        "name": "Venue + Car",
+        "price": 25000,
+        "duration": "Full Day",
+        "includes": ["Venue Booking", "Car Rental", "Driver", "Basic Decor"]
+      },
+      {
+        "name": "Complete Wedding",
+        "price": 100000,
+        "duration": "2 Days",
+        "includes": ["Venue", "Decor", "Catering", "Car Rental", "Photography", "Full Planning"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Bride",
+        "rating": 5,
+        "comment": "They handled everything for our wedding. One platform made it so easy!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "One-Window Wedding Platform",
+    "established": 2018,
+    "website": "theweddingandevent.com"
+  },
+  {
+    "id": 40,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "Tariq Road",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "address": "Tariq Road, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/vigotr1/900/600",
+      "https://picsum.photos/seed/vigotr2/900/600",
+      "https://picsum.photos/seed/vigotr3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Swift", "Toyota Fortuner", "Honda City"],
+    "services": ["Wedding Car Rental", "Corporate Events", "Airport Transfer", "Guest Transport", "Self Drive", "Chauffeur Drive", "Party & Event Transport"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip", "Wedding Package"],
+    "features": [
+      "Professional Chauffeurs",
+      "Well Maintained Fleet",
+      "Affordable Rates",
+      "24/7 Customer Support",
+      "Free Cancellation",
+      "Special Wedding Packages"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 7000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Wedding Special",
+        "price": 12000,
+        "duration": "10 hours / 100 km",
+        "includes": ["Driver", "Fuel", "Sedan Car", "Wedding Decoration", "Bouquet for Bride"]
+      },
+      {
+        "name": "Premium Wedding",
+        "price": 20000,
+        "duration": "Full Day",
+        "includes": ["Luxury Car", "Chauffeur", "Fuel", "Premium Decoration", "Photographer Coordination"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Great service for our event!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Professional Chauffeur Service",
+    "established": 2016
+  },
+  {
+    "id": 41,
+    "name": "Ittehad Transport Service",
+    "area": "North Nazimabad",
+    "rating": 4.5,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "address": "F 89 Kiran Rd, Block F North Nazimabad Town, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/ittehad1/900/600",
+      "https://picsum.photos/seed/ittehad2/900/600",
+      "https://picsum.photos/seed/ittehad3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Hiace", "Coaster Bus", "Toyota Fortuner"],
+    "services": ["Transport Service", "Car Rental", "Wedding Transport", "Corporate Transport", "School Transport"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Monthly Contract"],
+    "features": [
+      "Physical Address in North Nazimabad",
+      "Transport Service Specialist",
+      "Professional Drivers",
+      "Well Maintained Fleet",
+      "Affordable Rates"
+    ],
+    "packages": [
+      {
+        "name": "Car",
+        "price": 6000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Car"]
+      },
+      {
+        "name": "Wedding Special",
+        "price": 12000,
+        "duration": "10 hours / 100 km",
+        "includes": ["Driver", "Fuel", "Car", "Decoration"]
+      },
+      {
+        "name": "Bus/Coaster",
+        "price": 15000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Bus/Coaster"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Local Client",
+        "rating": 4,
+        "comment": "Good transport service in North Nazimabad."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Physical Address Verified",
+    "established": 2010
+  },
+  {
+    "id": 42,
+    "name": "Dreamz Carz",
+    "area": "North Nazimabad",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "address": "North Nazimabad, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/dreamznn1/900/600",
+      "https://picsum.photos/seed/dreamznn2/900/600",
+      "https://picsum.photos/seed/dreamznn3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes E-Class", "BMW 5 Series", "Kia Sportage", "Hyundai Sonata"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "City Tour"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip"],
+    "features": [
+      "24/7 Assistance",
+      "Professional Chauffeurs",
+      "Clean & Well Maintained Cars",
+      "Flexible Pricing Packages",
+      "No Hidden Charges",
+      "Insurance Included",
+      "Replacement Car on Breakdown",
+      "Free Cancellation up to 24 hours"
+    ],
+    "packages": [
+      {
+        "name": "Economy",
+        "price": 8000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Sedan", "Decorated Car for Wedding"]
+      },
+      {
+        "name": "Luxury",
+        "price": 30000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Professional Chauffeur", "Fuel", "Wedding Decoration", "VIP Service", "Free Refreshments"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Excellent service in North Nazimabad!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Most Rated & Recommended",
+    "established": 2015,
+    "website": "cars.dreamzcarz.pk"
+  },
+  {
+    "id": 43,
+    "name": "ZJ Rent A Car",
+    "area": "North Nazimabad",
+    "rating": 4.5,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "address": "North Nazimabad, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/zjnn1/900/600",
+      "https://picsum.photos/seed/zjnn2/900/600",
+      "https://picsum.photos/seed/zjnn3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Alto", "Honda City", "Toyota Fortuner", "Kia Sportage"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "Outstation Trips", "Monthly Rentals"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Monthly Contract", "Outstation Trip"],
+    "features": [
+      "Affordable Rates",
+      "Clean & Maintained Cars",
+      "Professional Drivers",
+      "24/7 Customer Support",
+      "Free Cancellation",
+      "Monthly Rental Options"
+    ],
+    "packages": [
+      {
+        "name": "Daily Economy",
+        "price": 6000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Daily Standard",
+        "price": 10000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Standard Car", "Basic Decoration"]
+      },
+      {
+        "name": "Monthly",
+        "price": 90000,
+        "duration": "30 Days",
+        "includes": ["Self Drive", "Limited km", "Basic Insurance"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Affordable rates and good service."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Affordable Car Rentals",
+    "established": 2014,
+    "website": "zjrentacar.com"
+  },
+  {
+    "id": 44,
+    "name": "Capital Car Rental Pvt",
+    "area": "North Nazimabad",
+    "rating": 4.4,
+    "starting_price": 8500,
+    "price_type": "per day",
+    "address": "Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/capitalnn1/900/600",
+      "https://picsum.photos/seed/capitalnn2/900/600",
+      "https://picsum.photos/seed/capitalnn3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Kia Carnival", "Hyundai Tucson"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Employee Transport", "Self Drive", "Chauffeur Drive"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Corporate Contract"],
+    "features": [
+      "Top Car Rental Company",
+      "Revenue: $98.5M",
+      "Large Fleet",
+      "Corporate Accounts Available",
+      "Professional Service"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 8500,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Car", "Water Bottles"]
+      },
+      {
+        "name": "Luxury",
+        "price": 28000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Chauffeur", "Fuel", "VIP Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Corporate Client",
+        "rating": 4,
+        "comment": "Reliable service for corporate transport."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa", "Corporate Invoice"],
+    "verified": true,
+    "verified_badge": "Top Car Rental Company",
+    "established": 2005
+  },
+  {
+    "id": 45,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "North Nazimabad",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "address": "North Nazimabad, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/vigonn1/900/600",
+      "https://picsum.photos/seed/vigonn2/900/600",
+      "https://picsum.photos/seed/vigonn3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Swift", "Toyota Fortuner", "Honda City"],
+    "services": ["Wedding Car Rental", "Corporate Events", "Airport Transfer", "Guest Transport", "Self Drive", "Chauffeur Drive", "Party & Event Transport"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip", "Wedding Package"],
+    "features": [
+      "Professional Chauffeurs",
+      "Well Maintained Fleet",
+      "Affordable Rates",
+      "24/7 Customer Support",
+      "Free Cancellation",
+      "Special Wedding Packages"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 7000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Wedding Special",
+        "price": 12000,
+        "duration": "10 hours / 100 km",
+        "includes": ["Driver", "Fuel", "Sedan Car", "Wedding Decoration", "Bouquet for Bride"]
+      },
+      {
+        "name": "Premium Wedding",
+        "price": 20000,
+        "duration": "Full Day",
+        "includes": ["Luxury Car", "Chauffeur", "Fuel", "Premium Decoration", "Photographer Coordination"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Great service for our event!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Professional Chauffeur Service",
+    "established": 2016
+  },
+  {
+    "id": 46,
+    "name": "ZJ Rent A Car",
+    "area": "North Karachi",
+    "rating": 4.5,
+    "starting_price": 3500,
+    "price_type": "per day",
+    "address": "New Karachi (North Karachi), Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/zjnk1/900/600",
+      "https://picsum.photos/seed/zjnk2/900/600",
+      "https://picsum.photos/seed/zjnk3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Alto", "Honda City", "Toyota Fortuner", "Kia Sportage"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "Outstation Trips", "Monthly Rentals"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Monthly Contract", "Outstation Trip"],
+    "features": [
+      "Specializes in New Karachi",
+      "PKR 3,500/day Special Rate",
+      "Affordable Rates",
+      "Clean & Maintained Cars",
+      "Professional Drivers",
+      "24/7 Customer Support",
+      "Free Cancellation",
+      "Monthly Rental Options"
+    ],
+    "packages": [
+      {
+        "name": "Daily Economy",
+        "price": 3500,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Daily Standard",
+        "price": 8000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Standard Car", "Basic Decoration"]
+      },
+      {
+        "name": "Monthly",
+        "price": 80000,
+        "duration": "30 Days",
+        "includes": ["Self Drive", "Limited km", "Basic Insurance"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Local Client",
+        "rating": 5,
+        "comment": "Best rates in North Karachi! Highly recommended."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Special Rate PKR 3,500/day",
+    "established": 2014,
+    "website": "zjrentacar.com"
+  },
+  {
+    "id": 47,
+    "name": "Dreamz Carz",
+    "area": "North Karachi",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "address": "North Karachi, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/dreamznk1/900/600",
+      "https://picsum.photos/seed/dreamznk2/900/600",
+      "https://picsum.photos/seed/dreamznk3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes E-Class", "BMW 5 Series", "Kia Sportage", "Hyundai Sonata"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "City Tour"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip"],
+    "features": [
+      "24/7 Assistance",
+      "Professional Chauffeurs",
+      "Clean & Well Maintained Cars",
+      "Flexible Pricing Packages",
+      "No Hidden Charges",
+      "Insurance Included",
+      "Replacement Car on Breakdown",
+      "Free Cancellation up to 24 hours"
+    ],
+    "packages": [
+      {
+        "name": "Economy",
+        "price": 8000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Economy Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Sedan", "Decorated Car for Wedding"]
+      },
+      {
+        "name": "Luxury",
+        "price": 30000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Professional Chauffeur", "Fuel", "Wedding Decoration", "VIP Service", "Free Refreshments"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Excellent service in North Karachi!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Most Rated & Recommended",
+    "established": 2015,
+    "website": "cars.dreamzcarz.pk"
+  },
+  {
+    "id": 48,
+    "name": "Nafees Rent a Car Pakistan",
+    "area": "North Karachi",
+    "rating": 4.5,
+    "starting_price": 7500,
+    "price_type": "per day",
+    "address": "North Karachi, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/nafeesnk1/900/600",
+      "https://picsum.photos/seed/nafeesnk2/900/600",
+      "https://picsum.photos/seed/nafeesnk3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Kia Carnival", "Hyundai Tucson"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Employee Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive", "Cargo Service"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Corporate Contract"],
+    "features": [
+      "Nationwide Service",
+      "Employee Transport Specialists",
+      "Well Maintained Fleet",
+      "Professional Drivers",
+      "Competitive Rates",
+      "24/7 Support"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 7500,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 12000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Sedan"]
+      },
+      {
+        "name": "Luxury",
+        "price": 25000,
+        "duration": "Full Day",
+        "includes": ["Luxury Vehicle", "Chauffeur", "Fuel", "VIP Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Corporate Client",
+        "rating": 4,
+        "comment": "Good service for employee transport."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Employee Transport Specialists",
+    "established": 2008,
+    "website": "nafeesrentacar.com"
+  },
+  {
+    "id": 49,
+    "name": "Capital Car Rental Pvt",
+    "area": "North Karachi",
+    "rating": 4.4,
+    "starting_price": 8500,
+    "price_type": "per day",
+    "address": "Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/capitalnk1/900/600",
+      "https://picsum.photos/seed/capitalnk2/900/600",
+      "https://picsum.photos/seed/capitalnk3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Kia Carnival", "Hyundai Tucson"],
+    "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Employee Transport", "Self Drive", "Chauffeur Drive"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Corporate Contract"],
+    "features": [
+      "Top Car Rental Company",
+      "Revenue: $98.5M",
+      "Large Fleet",
+      "Corporate Accounts Available",
+      "Professional Service"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 8500,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Premium",
+        "price": 15000,
+        "duration": "12 hours / 120 km",
+        "includes": ["Driver", "Fuel", "Premium Car", "Water Bottles"]
+      },
+      {
+        "name": "Luxury",
+        "price": 28000,
+        "duration": "Full Day Unlimited",
+        "includes": ["Luxury Car", "Chauffeur", "Fuel", "VIP Service"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Corporate Client",
+        "rating": 4,
+        "comment": "Reliable service for corporate transport."
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa", "Corporate Invoice"],
+    "verified": true,
+    "verified_badge": "Top Car Rental Company",
+    "established": 2005
+  },
+  {
+    "id": 50,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "North Karachi",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "address": "North Karachi, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/vigonk1/900/600",
+      "https://picsum.photos/seed/vigonk2/900/600",
+      "https://picsum.photos/seed/vigonk3/900/600"
+    ],
+    "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Swift", "Toyota Fortuner", "Honda City"],
+    "services": ["Wedding Car Rental", "Corporate Events", "Airport Transfer", "Guest Transport", "Self Drive", "Chauffeur Drive", "Party & Event Transport"],
+    "booking_types": ["One-Day Event", "Multiple-Day Event", "Outstation Trip", "Wedding Package"],
+    "features": [
+      "Professional Chauffeurs",
+      "Well Maintained Fleet",
+      "Affordable Rates",
+      "24/7 Customer Support",
+      "Free Cancellation",
+      "Special Wedding Packages"
+    ],
+    "packages": [
+      {
+        "name": "Standard",
+        "price": 7000,
+        "duration": "8 hours / 80 km",
+        "includes": ["Driver", "Fuel", "Standard Car"]
+      },
+      {
+        "name": "Wedding Special",
+        "price": 12000,
+        "duration": "10 hours / 100 km",
+        "includes": ["Driver", "Fuel", "Sedan Car", "Wedding Decoration", "Bouquet for Bride"]
+      },
+      {
+        "name": "Premium Wedding",
+        "price": 20000,
+        "duration": "Full Day",
+        "includes": ["Luxury Car", "Chauffeur", "Fuel", "Premium Decoration", "Photographer Coordination"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Great service for our event!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Professional Chauffeur Service",
+    "established": 2016
+  }
+]

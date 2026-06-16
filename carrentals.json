@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "name": "Dreamz Carz",
+    "area": "DHA",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "image": "dreamz_carz.jpg",
+    "verified": true
+  },
+  {
+    "id": 2,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "DHA",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "image": "vigo_rentacar.jpg",
+    "verified": true
+  },
+  {
+    "id": 3,
+    "name": "BRV Rent a Car",
+    "area": "DHA",
+    "rating": 4.6,
+    "starting_price": 9000,
+    "price_type": "per day",
+    "image": "brv_rentacar.jpg",
+    "verified": true
+  },
+  {
+    "id": 4,
+    "name": "The Wedding and Event",
+    "area": "DHA",
+    "rating": 4.5,
+    "starting_price": 10000,
+    "price_type": "per day",
+    "image": "wedding_event.jpg",
+    "verified": true
+  },
+  {
+    "id": 5,
+    "name": "Capital Car Rental Pvt",
+    "area": "DHA",
+    "rating": 4.4,
+    "starting_price": 8500,
+    "price_type": "per day",
+    "image": "capital_carrental.jpg",
+    "verified": true
+  },
+  {
+    "id": 6,
+    "name": "BRV Rent a Car",
+    "area": "Clifton",
+    "rating": 4.6,
+    "starting_price": 9000,
+    "price_type": "per day",
+    "image": "brv_clifton.jpg",
+    "verified": true
+  },
+  {
+    "id": 7,
+    "name": "Dreamz Carz",
+    "area": "Clifton",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "image": "dreamz_clifton.jpg",
+    "verified": true
+  },
+  {
+    "id": 8,
+    "name": "Nafees Rent a Car Pakistan",
+    "area": "Clifton",
+    "rating": 4.5,
+    "starting_price": 7500,
+    "price_type": "per day",
+    "image": "nafees_rentacar.jpg",
+    "verified": true
+  },
+  {
+    "id": 9,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "Clifton",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "image": "vigo_clifton.jpg",
+    "verified": true
+  },
+  {
+    "id": 10,
+    "name": "Capital Car Rental Pvt",
+    "area": "Clifton",
+    "rating": 4.4,
+    "starting_price": 8500,
+    "price_type": "per day",
+    "image": "capital_clifton.jpg",
+    "verified": true
+  },
+  {
+    "id": 11,
+    "name": "Dreamz Carz",
+    "area": "PECHS",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "image": "dreamz_pechs.jpg",
+    "verified": true
+  },
+  {
+    "id": 12,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "PECHS",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "image": "vigo_pechs.jpg",
+    "verified": true
+  },
+  {
+    "id": 13,
+    "name": "ZJ Rent A Car",
+    "area": "PECHS",
+    "rating": 4.5,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "image": "zj_rentacar.jpg",
+    "verified": true
+  },
+  {
+    "id": 14,
+    "name": "The Wedding and Event",
+    "area": "PECHS",
+    "rating": 4.5,
+    "starting_price": 10000,
+    "price_type": "per day",
+    "image": "wedding_pechs.jpg",
+    "verified": true
+  },
+  {
+    "id": 15,
+    "name": "LOKAL Rooms x Shahrah-e-Faisal",
+    "area": "PECHS",
+    "rating": 4.3,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "image": "lokal_rooms.jpg",
+    "verified": true
+  },
+  {
+    "id": 16,
+    "name": "Supreme Villa",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.6,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "image": "supreme_villa.jpg",
+    "verified": true
+  },
+  {
+    "id": 17,
+    "name": "Dreamz Carz",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "image": "dreamz_gulshan.jpg",
+    "verified": true
+  },
+  {
+    "id": 18,
+    "name": "Nafees Rent a Car Pakistan",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.5,
+    "starting_price": 7500,
+    "price_type": "per day",
+    "image": "nafees_gulshan.jpg",
+    "verified": true
+  },
+  {
+    "id": 19,
+    "name": "ZJ Rent A Car",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.5,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "image": "zj_gulshan.jpg",
+    "verified": true
+  },
+  {
+    "id": 20,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "image": "vigo_gulshan.jpg",
+    "verified": true
+  },
+  {
+    "id": 21,
+    "name": "Nafees Rent a Car Pakistan",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.5,
+    "starting_price": 7500,
+    "price_type": "per day",
+    "image": "nafees_johar.jpg",
+    "verified": true
+  },
+  {
+    "id": 22,
+    "name": "Dreamz Carz",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "image": "dreamz_johar.jpg",
+    "verified": true
+  },
+  {
+    "id": 23,
+    "name": "ZJ Rent A Car",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.5,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "image": "zj_johar.jpg",
+    "verified": true
+  },
+  {
+    "id": 24,
+    "name": "The Wedding and Event",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.5,
+    "starting_price": 10000,
+    "price_type": "per day",
+    "image": "wedding_johar.jpg",
+    "verified": true
+  },
+  {
+    "id": 25,
+    "name": "Capital Car Rental Pvt",
+    "area": "Gulistan-e-Johar",
+    "rating": 4.4,
+    "starting_price": 8500,
+    "price_type": "per day",
+    "image": "capital_johar.jpg",
+    "verified": true
+  },
+  {
+    "id": 26,
+    "name": "Dreamz Carz",
+    "area": "Federal B Area",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "image": "dreamz_fb.jpg",
+    "verified": true
+  },
+  {
+    "id": 27,
+    "name": "ZJ Rent A Car",
+    "area": "Federal B Area",
+    "rating": 4.5,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "image": "zj_fb.jpg",
+    "verified": true
+  },
+  {
+    "id": 28,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "Federal B Area",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "image": "vigo_fb.jpg",
+    "verified": true
+  },
+  {
+    "id": 29,
+    "name": "Capital Car Rental Pvt",
+    "area": "Federal B Area",
+    "rating": 4.4,
+    "starting_price": 8500,
+    "price_type": "per day",
+    "image": "capital_fb.jpg",
+    "verified": true
+  },
+  {
+    "id": 30,
+    "name": "The Wedding and Event",
+    "area": "Federal B Area",
+    "rating": 4.5,
+    "starting_price": 10000,
+    "price_type": "per day",
+    "image": "wedding_fb.jpg",
+    "verified": true
+  },
+  {
+    "id": 31,
+    "name": "Dreamz Carz",
+    "area": "Bahadurabad",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "image": "dreamz_bahadurabad.jpg",
+    "verified": true
+  },
+  {
+    "id": 32,
+    "name": "ZJ Rent A Car",
+    "area": "Bahadurabad",
+    "rating": 4.5,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "image": "zj_bahadurabad.jpg",
+    "verified": true
+  },
+  {
+    "id": 33,
+    "name": "Nafees Rent a Car Pakistan",
+    "area": "Bahadurabad",
+    "rating": 4.5,
+    "starting_price": 7500,
+    "price_type": "per day",
+    "image": "nafees_bahadurabad.jpg",
+    "verified": true
+  },
+  {
+    "id": 34,
+    "name": "Capital Car Rental Pvt",
+    "area": "Bahadurabad",
+    "rating": 4.4,
+    "starting_price": 8500,
+    "price_type": "per day",
+    "image": "capital_bahadurabad.jpg",
+    "verified": true
+  },
+  {
+    "id": 35,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "Bahadurabad",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "image": "vigo_bahadurabad.jpg",
+    "verified": true
+  },
+  {
+    "id": 36,
+    "name": "Dreamz Carz",
+    "area": "Tariq Road",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "image": "dreamz_tariq.jpg",
+    "verified": true
+  },
+  {
+    "id": 37,
+    "name": "ZJ Rent A Car",
+    "area": "Tariq Road",
+    "rating": 4.5,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "image": "zj_tariq.jpg",
+    "verified": true
+  },
+  {
+    "id": 38,
+    "name": "Capital Car Rental Pvt",
+    "area": "Tariq Road",
+    "rating": 4.4,
+    "starting_price": 8500,
+    "price_type": "per day",
+    "image": "capital_tariq.jpg",
+    "verified": true
+  },
+  {
+    "id": 39,
+    "name": "The Wedding and Event",
+    "area": "Tariq Road",
+    "rating": 4.5,
+    "starting_price": 10000,
+    "price_type": "per day",
+    "image": "wedding_tariq.jpg",
+    "verified": true
+  },
+  {
+    "id": 40,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "Tariq Road",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "image": "vigo_tariq.jpg",
+    "verified": true
+  },
+  {
+    "id": 41,
+    "name": "Ittehad Transport Service",
+    "area": "North Nazimabad",
+    "rating": 4.5,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "image": "ittehad_transport.jpg",
+    "verified": true
+  },
+  {
+    "id": 42,
+    "name": "Dreamz Carz",
+    "area": "North Nazimabad",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "image": "dreamz_nn.jpg",
+    "verified": true
+  },
+  {
+    "id": 43,
+    "name": "ZJ Rent A Car",
+    "area": "North Nazimabad",
+    "rating": 4.5,
+    "starting_price": 6000,
+    "price_type": "per day",
+    "image": "zj_nn.jpg",
+    "verified": true
+  },
+  {
+    "id": 44,
+    "name": "Capital Car Rental Pvt",
+    "area": "North Nazimabad",
+    "rating": 4.4,
+    "starting_price": 8500,
+    "price_type": "per day",
+    "image": "capital_nn.jpg",
+    "verified": true
+  },
+  {
+    "id": 45,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "North Nazimabad",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "image": "vigo_nn.jpg",
+    "verified": true
+  },
+  {
+    "id": 46,
+    "name": "ZJ Rent A Car",
+    "area": "North Karachi",
+    "rating": 4.5,
+    "starting_price": 3500,
+    "price_type": "per day",
+    "image": "zj_nk.jpg",
+    "verified": true
+  },
+  {
+    "id": 47,
+    "name": "Dreamz Carz",
+    "area": "North Karachi",
+    "rating": 4.8,
+    "starting_price": 8000,
+    "price_type": "per day",
+    "image": "dreamz_nk.jpg",
+    "verified": true
+  },
+  {
+    "id": 48,
+    "name": "Nafees Rent a Car Pakistan",
+    "area": "North Karachi",
+    "rating": 4.5,
+    "starting_price": 7500,
+    "price_type": "per day",
+    "image": "nafees_nk.jpg",
+    "verified": true
+  },
+  {
+    "id": 49,
+    "name": "Capital Car Rental Pvt",
+    "area": "North Karachi",
+    "rating": 4.4,
+    "starting_price": 8500,
+    "price_type": "per day",
+    "image": "capital_nk.jpg",
+    "verified": true
+  },
+  {
+    "id": 50,
+    "name": "Vigo Rent a Car Karachi",
+    "area": "North Karachi",
+    "rating": 4.7,
+    "starting_price": 7000,
+    "price_type": "per day",
+    "image": "vigo_nk.jpg",
+    "verified": true
+  }
+]
