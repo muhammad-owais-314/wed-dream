@@ -209,43 +209,37 @@
       <div class="cat-track" id="catTrack">
 
         <div class="cat-card" onclick="window.location='halls.html'">
-          <span class="cat-card-count">24 Vendors</span>
+          <span class="cat-card-count">50 Vendors</span>
           <div class="cat-icon-wrap"><i class="bi bi-building cat-card-icon"></i></div>
           <span class="cat-card-label">Wedding Halls</span>
         </div>
 
         <div class="cat-card" onclick="window.location='catering.html'">
-          <span class="cat-card-count">18 Vendors</span>
+          <span class="cat-card-count">50 Vendors</span>
           <div class="cat-icon-wrap"><i class="bi bi-egg-fried cat-card-icon"></i></div>
           <span class="cat-card-label">Caterers</span>
         </div>
 
-        <div class="cat-card" onclick="window.location='#'">
-          <span class="cat-card-count">32 Vendors</span>
+        <div class="cat-card" onclick="window.location='carrentals.html'">
+          <span class="cat-card-count">50 Vendors</span>
           <div class="cat-icon-wrap"><i class="bi bi-car-front cat-card-icon"></i></div>
           <span class="cat-card-label">Bridal Cars</span>
         </div>
 
-        <div class="cat-card" onclick="window.location='decoration.html'">
-          <span class="cat-card-count">40 Vendors</span>
+        <div class="cat-card" onclick="window.location='decorating.html'">
+          <span class="cat-card-count">50 Vendors</span>
           <div class="cat-icon-wrap"><i class="bi bi-flower1 cat-card-icon"></i></div>
           <span class="cat-card-label">Decorators</span>
         </div>
 
         <div class="cat-card" onclick="window.location='photographers.html'">
-          <span class="cat-card-count">55 Vendors</span>
+          <span class="cat-card-count">50 Vendors</span>
           <div class="cat-icon-wrap"><i class="bi bi-camera cat-card-icon"></i></div>
           <span class="cat-card-label">Photographers</span>
         </div>
 
-        <div class="cat-card" onclick="window.location='makeup.html'">
-          <span class="cat-card-count">28 Vendors</span>
-          <div class="cat-icon-wrap"><i class="bi bi-stars cat-card-icon"></i></div>
-          <span class="cat-card-label">Makeup Artists</span>
-        </div>
-
         <div class="cat-card" onclick="window.location='#'">
-          <span class="cat-card-count">15 Vendors</span>
+          <span class="cat-card-count">AI Generated</span>
           <div class="cat-icon-wrap"><i class="bi bi-envelope-heart cat-card-icon"></i></div>
           <span class="cat-card-label">Invitations</span>
         </div>
@@ -272,6 +266,54 @@
   </div>
 
 </section>
+
+
+<!-- ========== TOP VENDORS WORKS ========== -->
+
+
+
+<!-- ========== TOP RATED VENDORS SECTION ========== -->
+<section class="trv-section" id="topVendors">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-0">
+      <div class="trv-badge"><i class="fa-solid fa-crown"></i> Wed Dream Picks</div>
+      <h2 class="trv-title">Top Rated <span>Vendors</span></h2>
+      <p class="trv-sub">Karachi's most trusted wedding professionals</p>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="trv-tabs" id="trvTabs">
+      <button class="trv-tab active" data-cat="all"><i class="fa-solid fa-layer-group"></i> All</button>
+      <button class="trv-tab" data-cat="hall"><i class="fa-solid fa-building-columns"></i> Halls</button>
+      <button class="trv-tab" data-cat="catering"><i class="fa-solid fa-utensils"></i> Catering</button>
+      <button class="trv-tab" data-cat="decorators"><i class="fa-solid fa-palette"></i> Decorators</button>
+      <button class="trv-tab" data-cat="photography"><i class="fa-solid fa-camera"></i> Photography</button>
+      <button class="trv-tab" data-cat="carental"><i class="fa-solid fa-car"></i> Car Rental</button>
+    </div>
+
+    <!-- Slider -->
+    <div class="trv-slider-outer">
+      <button class="trv-nav prev" id="trvPrev" onclick="trvSlide(-1)">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="trv-slider-track">
+        <div class="trv-slider" id="trvSlider"></div>
+      </div>
+      <button class="trv-nav next" id="trvNext" onclick="trvSlide(1)">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- Dots -->
+    <div class="trv-dots" id="trvDots"></div>
+
+  </div>
+</section>
+
+
+
 
 
 <!-- ========== HOW IT WORKS ========== -->

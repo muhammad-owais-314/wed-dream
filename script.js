@@ -196,3 +196,317 @@ const statsObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 
 document.querySelectorAll('#statsGrid').forEach(el => statsObserver.observe(el));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== TOP RATED VENDORS JS ========== */
+// ============================================================
+// TOP VENDORS — Real Data (No Fake/Placeholder Entries)
+// ============================================================
+
+const TRV_VENDORS = [
+  // ===== HALLS =====
+  {
+    id: 1, cat: "hall", catLabel: "Hall / Banquet", catIcon: "fa-building-columns",
+    name: "Royal Banquet DHA", area: "DHA", rating: 4.8, starting_price: 450000,
+    price_suffix: "/ event", image: "https://picsum.photos/seed/hall1/900/600",
+    verified: true, verifiedLabel: "Premium Verified",
+    detailPage: "hall-detail.html", sectionPage: "halls.html", sectionLabel: "Browse All Halls"
+  },
+  {
+    id: 2, cat: "hall", catLabel: "Hall / Banquet", catIcon: "fa-building-columns",
+    name: "Al Noor Banquet DHA", area: "DHA", rating: 4.6, starting_price: 380000,
+    price_suffix: "/ event", image: "https://picsum.photos/seed/hall2/900/600",
+    verified: true, verifiedLabel: "Premium Verified",
+    detailPage: "hall-detail.html", sectionPage: "halls.html", sectionLabel: "Browse All Halls"
+  },
+  {
+    id: 3, cat: "hall", catLabel: "Hall / Banquet", catIcon: "fa-building-columns",
+    name: "Pearl Marquee DHA", area: "DHA", rating: 4.7, starting_price: 500000,
+    price_suffix: "/ event", image: "https://picsum.photos/seed/hall3/900/600",
+    verified: true, verifiedLabel: "Premium Verified",
+    detailPage: "hall-detail.html", sectionPage: "halls.html", sectionLabel: "Browse All Halls"
+  },
+  {
+    id: 6, cat: "hall", catLabel: "Hall / Banquet", catIcon: "fa-building-columns",
+    name: "Clifton Grand Hall", area: "Clifton", rating: 4.9, starting_price: 600000,
+    price_suffix: "/ event", image: "https://picsum.photos/seed/hall6/900/600",
+    verified: true, verifiedLabel: "Premium Verified",
+    detailPage: "hall-detail.html", sectionPage: "halls.html", sectionLabel: "Browse All Halls"
+  },
+
+  // ===== CATERING =====
+  {
+    id: 1, cat: "catering", catLabel: "Catering", catIcon: "fa-utensils",
+    name: "Marcem Event Solutions", area: "DHA", rating: 4.8, starting_price: 450000,
+    price_suffix: "/ event", image: "https://picsum.photos/seed/cater1/900/600",
+    verified: true, verifiedLabel: "Premium Caterer",
+    detailPage: "catering-detail.html", sectionPage: "catering.html", sectionLabel: "Browse All Caterers"
+  },
+  {
+    id: 11, cat: "catering", catLabel: "Catering", catIcon: "fa-utensils",
+    name: "Hanif Rajput Caterers", area: "PECHS", rating: 4.9, starting_price: 450000,
+    price_suffix: "/ event", image: "https://picsum.photos/seed/cater11/900/600",
+    verified: true, verifiedLabel: "ISO Certified | Brand of the Year",
+    detailPage: "catering-detail.html", sectionPage: "catering.html", sectionLabel: "Browse All Caterers"
+  },
+  {
+    id: 6, cat: "catering", catLabel: "Catering", catIcon: "fa-utensils",
+    name: "Lals Catering", area: "Clifton", rating: 4.9, starting_price: 500000,
+    price_suffix: "/ event", image: "https://picsum.photos/seed/cater6/900/600",
+    verified: true, verifiedLabel: "Premium Gourmet Caterer",
+    detailPage: "catering-detail.html", sectionPage: "catering.html", sectionLabel: "Browse All Caterers"
+  },
+  {
+    id: 2, cat: "catering", catLabel: "Catering", catIcon: "fa-utensils",
+    name: "Quality Catering Services", area: "DHA", rating: 4.4, starting_price: 350000,
+    price_suffix: "/ event", image: "https://picsum.photos/seed/cater2/900/600",
+    verified: true, verifiedLabel: "Verified+10 Years | Est. 1996",
+    detailPage: "catering-detail.html", sectionPage: "catering.html", sectionLabel: "Browse All Caterers"
+  },
+
+  // ===== DECORATORS =====
+  {
+    id: 1, cat: "decorators", catLabel: "Decorators", catIcon: "fa-palette",
+    name: "VMP Event Management", area: "DHA", rating: 4.8, starting_price: 120000,
+    price_suffix: "/ package", image: "https://picsum.photos/seed/decor1/900/600",
+    verified: true, verifiedLabel: "Verified on Shadiyana.pk",
+    detailPage: "decorating-detail.html", sectionPage: "decorating.html", sectionLabel: "Browse All Decorators"
+  },
+  {
+    id: 6, cat: "decorators", catLabel: "Decorators", catIcon: "fa-palette",
+    name: "DAWAT Event Management", area: "Clifton", rating: 4.9, starting_price: 180000,
+    price_suffix: "/ package", image: "https://picsum.photos/seed/decor6/900/600",
+    verified: true, verifiedLabel: "Premium Event Management",
+    detailPage: "decorating-detail.html", sectionPage: "decorating.html", sectionLabel: "Browse All Decorators"
+  },
+  {
+    id: 21, cat: "decorators", catLabel: "Decorators", catIcon: "fa-palette",
+    name: "Atelier III", area: "Gulistan-e-Johar", rating: 4.7, starting_price: 95000,
+    price_suffix: "/ project", image: "https://picsum.photos/seed/decor21/900/600",
+    verified: true, verifiedLabel: "Verified on Banjaiga",
+    detailPage: "decorating-detail.html", sectionPage: "decorating.html", sectionLabel: "Browse All Decorators"
+  },
+  {
+    id: 11, cat: "decorators", catLabel: "Decorators", catIcon: "fa-palette",
+    name: "Gadit l ADS", area: "PECHS", rating: 4.7, starting_price: 90000,
+    price_suffix: "/ project", image: "https://picsum.photos/seed/decor11/900/600",
+    verified: true, verifiedLabel: "9 Reviews on Houzz",
+    detailPage: "decorating-detail.html", sectionPage: "decorating.html", sectionLabel: "Browse All Decorators"
+  },
+
+  // ===== PHOTOGRAPHERS =====
+  {
+    id: 1, cat: "photography", catLabel: "Photography", catIcon: "fa-camera",
+    name: "AJ Studio Official", area: "DHA", rating: 4.9, starting_price: 65000,
+    price_suffix: "/ package", image: "https://picsum.photos/seed/photo1/900/600",
+    verified: true, verifiedLabel: "Texas School of Photography",
+    detailPage: "photographer-detail.html", sectionPage: "photographers.html", sectionLabel: "Browse All Photographers"
+  },
+  {
+    id: 3, cat: "photography", catLabel: "Photography", catIcon: "fa-camera",
+    name: "K.Bridals Photography", area: "DHA", rating: 4.8, starting_price: 50000,
+    price_suffix: "/ package", image: "https://picsum.photos/seed/photo3/900/600",
+    verified: true, verifiedLabel: "Verified on B2C Pakistan",
+    detailPage: "photographer-detail.html", sectionPage: "photographers.html", sectionLabel: "Browse All Photographers"
+  },
+  {
+    id: 6, cat: "photography", catLabel: "Photography", catIcon: "fa-camera",
+    name: "Dossani's Studio", area: "Clifton", rating: 4.7, starting_price: 60000,
+    price_suffix: "/ package", image: "https://picsum.photos/seed/photo6/900/600",
+    verified: true, verifiedLabel: "Embassy Approved | Est. 1970s",
+    detailPage: "photographer-detail.html", sectionPage: "photographers.html", sectionLabel: "Browse All Photographers"
+  },
+  {
+    id: 9, cat: "photography", catLabel: "Photography", catIcon: "fa-camera",
+    name: "Maha Wajahat Khan", area: "Clifton", rating: 4.8, starting_price: 65000,
+    price_suffix: "/ package", image: "https://picsum.photos/seed/photo9/900/600",
+    verified: true, verifiedLabel: "Featured on Bloom Pakistan",
+    detailPage: "photographer-detail.html", sectionPage: "photographers.html", sectionLabel: "Browse All Photographers"
+  },
+
+  // ===== CAR RENTALS =====
+  {
+    id: 1, cat: "carental", catLabel: "Car Rental", catIcon: "fa-car",
+    name: "Dreamz Carz", area: "DHA", rating: 4.8, starting_price: 8000,
+    price_suffix: "/ day", image: "https://picsum.photos/seed/car1/900/600",
+    verified: true, verifiedLabel: "Most Rated & Recommended",
+    detailPage: "carrental-detail.html", sectionPage: "carrentals.html", sectionLabel: "Browse All Car Rentals"
+  },
+  {
+    id: 2, cat: "carental", catLabel: "Car Rental", catIcon: "fa-car",
+    name: "Vigo Rent a Car", area: "DHA", rating: 4.7, starting_price: 7000,
+    price_suffix: "/ day", image: "https://picsum.photos/seed/car2/900/600",
+    verified: true, verifiedLabel: "Professional Chauffeur",
+    detailPage: "carrental-detail.html", sectionPage: "carrentals.html", sectionLabel: "Browse All Car Rentals"
+  },
+  {
+    id: 6, cat: "carental", catLabel: "Car Rental", catIcon: "fa-car",
+    name: "BRV Rent a Car", area: "Clifton", rating: 4.6, starting_price: 9000,
+    price_suffix: "/ day", image: "https://picsum.photos/seed/car6/900/600",
+    verified: true, verifiedLabel: "Corporate Transportation",
+    detailPage: "carrental-detail.html", sectionPage: "carrentals.html", sectionLabel: "Browse All Car Rentals"
+  },
+  {
+    id: 46, cat: "carental", catLabel: "Car Rental", catIcon: "fa-car",
+    name: "ZJ Rent A Car", area: "North Karachi", rating: 4.5, starting_price: 3500,
+    price_suffix: "/ day", image: "https://picsum.photos/seed/car46/900/600",
+    verified: true, verifiedLabel: "Special Rate PKR 3,500/day",
+    detailPage: "carrental-detail.html", sectionPage: "carrentals.html", sectionLabel: "Browse All Car Rentals"
+  }
+];
+
+// ─── SLIDER LOGIC ──────────────────────────────────────────────
+let trvCurrentIdx = 0;
+let trvFiltered   = [...TRV_VENDORS];
+let trvAutoTimer;
+
+function trvBuildStars(r) {
+  const full = Math.floor(r), half = (r - full) >= 0.5 ? 1 : 0, empty = 5 - full - half;
+  let s = '';
+  for (let i = 0; i < full; i++)  s += '<i class="fas fa-star"></i>';
+  if (half) s += '<i class="fas fa-star-half-alt"></i>';
+  for (let i = 0; i < empty; i++) s += '<i class="far fa-star"></i>';
+  return s;
+}
+
+function trvFormatPKR(n) { return Number(n).toLocaleString('en-PK'); }
+
+function trvPerView() {
+  const w = window.innerWidth;
+  if (w >= 1200) return 4;
+  if (w >= 900)  return 3;
+  if (w >= 580)  return 2;
+  return 1;
+}
+
+function trvRenderCards() {
+  document.getElementById('trvSlider').innerHTML = trvFiltered.map(v => `
+    <div class="trv-card" onclick="window.location.href='${v.detailPage}?id=${v.id}&cat=${v.cat}'">
+      <div class="trv-card-img">
+        <img src="${v.image}" alt="${v.name}" onerror="this.src='https://picsum.photos/seed/fallback/900/600'"/>
+        <div class="trv-card-img-overlay"></div>
+        <div class="trv-category-badge"><i class="fa-solid ${v.catIcon}"></i> ${v.catLabel}</div>
+        ${v.verified ? `<div class="trv-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</div>` : ''}
+      </div>
+      <div class="trv-card-body">
+        <div>
+          <div class="trv-card-name">${v.name}</div>
+          <div class="trv-card-area"><i class="fa-solid fa-location-dot"></i> ${v.area}</div>
+          <div class="trv-rating-row">
+            <div class="trv-stars">${trvBuildStars(v.rating)}</div>
+            <span class="trv-rating-pill">${v.rating}</span>
+          </div>
+          ${v.verified ? `<div class="trv-verified-label"><i class="fa-solid fa-badge-check"></i> ${v.verifiedLabel}</div>` : ''}
+        </div>
+        <div>
+          <div class="trv-divider"></div>
+          <div class="trv-price-label">Starting From</div>
+          <div class="trv-price-val">PKR ${trvFormatPKR(v.starting_price)}<span>${v.price_suffix}</span></div>
+          <div class="trv-card-bottom">
+            <a href="${v.detailPage}?id=${v.id}&cat=${v.cat}" class="trv-view-btn" onclick="event.stopPropagation()">
+              <i class="fa-solid fa-arrow-right"></i> Details
+            </a>
+            <a href="${v.sectionPage}" class="trv-section-link" onclick="event.stopPropagation()">
+              ${v.sectionLabel} →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  trvCurrentIdx = 0;
+  trvUpdateSlider();
+}
+
+function trvUpdateSlider() {
+  const slider  = document.getElementById('trvSlider');
+  const perView = trvPerView();
+  const maxIdx  = Math.max(0, trvFiltered.length - perView);
+  trvCurrentIdx = Math.min(trvCurrentIdx, maxIdx);
+
+  const cardW = slider.children[0] ? slider.children[0].offsetWidth + 24 : 0;
+  slider.style.transform = `translateX(-${trvCurrentIdx * cardW}px)`;
+
+  const prevBtn = document.getElementById('trvPrev');
+  const nextBtn = document.getElementById('trvNext');
+  if (prevBtn) prevBtn.disabled = trvCurrentIdx === 0;
+  if (nextBtn) nextBtn.disabled = trvCurrentIdx >= maxIdx;
+
+  const totalDots = Math.max(1, Math.ceil(trvFiltered.length / perView));
+  const activeDot = Math.floor(trvCurrentIdx / perView);
+  document.getElementById('trvDots').innerHTML = Array.from({length: totalDots}, (_, i) =>
+    `<div class="trv-dot ${i === activeDot ? 'active' : ''}" onclick="trvGoTo(${i * perView})"></div>`
+  ).join('');
+}
+
+function trvSlide(dir) {
+  const perView = trvPerView();
+  const maxIdx  = Math.max(0, trvFiltered.length - perView);
+  trvCurrentIdx = Math.max(0, Math.min(trvCurrentIdx + dir, maxIdx));
+  trvUpdateSlider();
+}
+
+function trvGoTo(idx) {
+  trvCurrentIdx = idx;
+  trvUpdateSlider();
+}
+
+function trvStartAuto() {
+  if (trvAutoTimer) clearInterval(trvAutoTimer);
+  trvAutoTimer = setInterval(() => {
+    const perView = trvPerView();
+    const maxIdx  = Math.max(0, trvFiltered.length - perView);
+    if (trvFiltered.length <= perView) return;
+    trvCurrentIdx = trvCurrentIdx >= maxIdx ? 0 : trvCurrentIdx + 1;
+    trvUpdateSlider();
+  }, 4500);
+}
+
+// ─── TAB FILTER ─────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', function() {
+  const tabs = document.getElementById('trvTabs');
+  if (!tabs) return;
+
+  tabs.addEventListener('click', function(e) {
+    const tab = e.target.closest('.trv-tab');
+    if (!tab) return;
+    document.querySelectorAll('.trv-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    
+    const cat = tab.dataset.cat;
+    trvFiltered = cat === 'all' ? [...TRV_VENDORS] : TRV_VENDORS.filter(v => v.cat === cat);
+    trvRenderCards();
+    
+    clearInterval(trvAutoTimer);
+    trvStartAuto();
+  });
+
+  // ─── HOVER PAUSE ──────────────────────────────────────────────
+  const sliderEl = document.getElementById('trvSlider');
+  if (sliderEl) {
+    sliderEl.addEventListener('mouseenter', () => {
+      if (trvAutoTimer) clearInterval(trvAutoTimer);
+    });
+    sliderEl.addEventListener('mouseleave', trvStartAuto);
+  }
+
+  window.addEventListener('resize', trvUpdateSlider);
+
+  // ─── INIT ─────────────────────────────────────────────────────
+  trvRenderCards();
+  trvStartAuto();
+});

@@ -125,17 +125,63 @@ body{ font-family:"Poppins",sans-serif; background:#000000; }
 }
 .footer-social a:hover{
   background:linear-gradient(135deg,var(--rose),var(--rose-hover));
-  transform:translateY(-6px); box-shadow:0 0 20px rgba(185,59,86,0.4); border-color:transparent;
+  transform:translateY(-6px); box-shadow:0 0 20px rgba(185,59,86,0.4); border-color:transparent; 
+}
+.btn-live{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin-top:15px;
+  padding:13px 28px;
+  border:none;
+  border-radius:50px;
+  text-decoration:none;
+  background:linear-gradient(135deg,#25D366,#128C7E);
+  color:#fff;
+  font-size:15px;
+  font-weight:600;
+  letter-spacing:.4px;
+  transition:all .35s ease;
+  box-shadow:0 10px 25px rgba(37,211,102,.30);
+  position:relative;
+  overflow:hidden;
 }
 
-.btn-live{
-  margin-top:15px; border:none; outline:none; padding:12px 24px; border-radius:40px;
-  background:linear-gradient(135deg,var(--rose),var(--rose-hover));
-  color:#fff; font-size:14px; font-weight:500; transition:0.4s ease;
-  box-shadow:0 10px 25px rgba(185,59,86,0.25);
+.btn-live i{
+  font-size:18px;
+  transition:transform .35s ease;
 }
-.btn-live i{ margin-right:8px; }
-.btn-live:hover{ transform:translateY(-3px) scale(1.04); box-shadow:0 12px 30px rgba(185,59,86,0.4); }
+
+.btn-live::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.25),
+    transparent
+  );
+  transition:.6s;
+}
+
+.btn-live:hover{
+  color:#fff;
+  transform:translateY(-5px) scale(1.08);
+  box-shadow:0 18px 40px rgba(37,211,102,.45);
+}
+
+.btn-live:hover::before{
+  left:120%;
+}
+
+.btn-live:hover i{
+  transform:rotate(-10deg) scale(1.2);
+}
 
 .footer-subscribe{
   margin:50px auto 25px; max-width:750px;
@@ -232,12 +278,12 @@ body{ font-family:"Poppins",sans-serif; background:#000000; }
       <div class="col-lg-2 col-md-6">
         <h5 class="footer-title">Services</h5>
         <ul class="footer-links">
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Wedding Halls</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Catering</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Luxury Cars</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Decorations</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Photography</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Invitations</a></li>
+          <li><a href="halls.html"><i class="fa-solid fa-angle-right"></i> Wedding Halls</a></li>
+          <li><a href="catering.html"><i class="fa-solid fa-angle-right"></i> Catering</a></li>
+          <li><a href="carrentals.html"><i class="fa-solid fa-angle-right"></i> Luxury Cars</a></li>
+          <li><a href="decorating.html"><i class="fa-solid fa-angle-right"></i> Decorations</a></li>
+          <li><a href="photographers.html"><i class="fa-solid fa-angle-right"></i> Photography</a></li>
+          <li><a href="Invitations.html"><i class="fa-solid fa-angle-right"></i> Invitations</a></li>
         </ul>
       </div>
 
@@ -247,23 +293,36 @@ body{ font-family:"Poppins",sans-serif; background:#000000; }
         <ul class="footer-links">
           <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home</a></li>
           <li><a href="aboutme.html"><i class="fa-solid fa-angle-right"></i> About</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Guest List</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> AI Planner</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Blog</a></li>
+          <li><a href="compare.html"><i class="fa-solid fa-angle-right"></i> compare</a></li>
+          <li><a href="AIplaner.html"><i class="fa-solid fa-angle-right"></i> AI Planner</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Add Vendors</a></li>
         </ul>
       </div>
 
-      <!-- CONTACT -->
-      <div class="col-lg-4 col-md-6">
-        <h5 class="footer-title">Contact Info</h5>
-        <div class="footer-contact"><i class="fa-solid fa-location-dot"></i><span>Karachi, Pakistan</span></div>
-        <div class="footer-contact"><i class="fa-solid fa-phone"></i><span>+92 300 1234567</span></div>
-        <div class="footer-contact"><i class="fa-solid fa-envelope"></i><span>hello@wedream.pk</span></div>
-        <button class="btn-live"><i class="fa-solid fa-comments"></i> Live Chat</button>
-      </div>
+     <!-- CONTACT -->
+<div class="col-lg-4 col-md-6">
+    <h5 class="footer-title">Contact Info</h5>
 
+    <div class="footer-contact">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Karachi, Pakistan</span>
     </div>
+
+    <div class="footer-contact">
+        <i class="fa-solid fa-phone"></i>
+        <span>03112795023</span>
+    </div>
+
+    <div class="footer-contact">
+        <i class="fa-solid fa-envelope"></i>
+        <span>its.owaisansari314@gmail.com</span>
+    </div>
+
+    <a href="https://wa.me/923112795023" target="_blank" class="btn-live">
+        <i class="fab fa-whatsapp"></i> WhatsApp Chat
+    </a>
+</div>
 
     <hr class="footer-line">
 

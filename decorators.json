@@ -5,6 +5,7 @@
     "area": "DHA",
     "rating": 4.8,
     "starting_price": 120000,
+    "price_type": "package",
     "image": "vmp_event.jpg",
     "verified": true
   },
@@ -14,6 +15,7 @@
     "area": "DHA",
     "rating": 4.7,
     "starting_price": 130000,
+    "price_type": "package",
     "image": "event_designer.jpg",
     "verified": true
   },
@@ -23,6 +25,7 @@
     "area": "DHA",
     "rating": 4.6,
     "starting_price": 100000,
+    "price_type": "package",
     "image": "sparkle_events.jpg",
     "verified": true
   },
@@ -32,6 +35,7 @@
     "area": "DHA",
     "rating": 4.5,
     "starting_price": 150000,
+    "price_type": "package",
     "image": "marcem_event.jpg",
     "verified": true
   },
@@ -41,6 +45,7 @@
     "area": "DHA",
     "rating": 4.4,
     "starting_price": 110000,
+    "price_type": "package",
     "image": "7th_sky.jpg",
     "verified": true
   },
@@ -50,6 +55,7 @@
     "area": "Clifton",
     "rating": 4.9,
     "starting_price": 180000,
+    "price_type": "package",
     "image": "dawat.jpg",
     "verified": true
   },
@@ -59,6 +65,7 @@
     "area": "Clifton",
     "rating": 4.3,
     "starting_price": 80000,
+    "price_type": "package",
     "image": "multi_business.jpg",
     "verified": true
   },
@@ -68,6 +75,7 @@
     "area": "Clifton",
     "rating": 4.5,
     "starting_price": 140000,
+    "price_type": "package",
     "image": "prime_events.jpg",
     "verified": true
   },
@@ -77,6 +85,7 @@
     "area": "Clifton",
     "rating": 4.4,
     "starting_price": 120000,
+    "price_type": "package",
     "image": "partners_group.jpg",
     "verified": true
   },
@@ -86,6 +95,7 @@
     "area": "Clifton",
     "rating": 4.3,
     "starting_price": 100000,
+    "price_type": "package",
     "image": "zia_sons.jpg",
     "verified": true
   },
@@ -95,6 +105,7 @@
     "area": "PECHS",
     "rating": 4.7,
     "starting_price": 90000,
+    "price_type": "project",
     "image": "gadit.jpg",
     "verified": true
   },
@@ -104,6 +115,7 @@
     "area": "PECHS",
     "rating": 4.5,
     "starting_price": 85000,
+    "price_type": "package",
     "image": "the_rope.jpg",
     "verified": true
   },
@@ -113,6 +125,7 @@
     "area": "PECHS",
     "rating": 4.4,
     "starting_price": 70000,
+    "price_type": "package",
     "image": "siddiqui_decor.jpg",
     "verified": true
   },
@@ -122,16 +135,18 @@
     "area": "PECHS",
     "rating": 4.3,
     "starting_price": 65000,
+    "price_type": "package",
     "image": "floral_design.jpg",
     "verified": true
   },
   {
     "id": 15,
-    "name": "Hanif Rajput Caterers & Decorators",
+    "name": "The Decor Studio",
     "area": "PECHS",
-    "rating": 4.8,
-    "starting_price": 80000,
-    "image": "hanif_rajput.jpg",
+    "rating": 4.2,
+    "starting_price": 75000,
+    "price_type": "package",
+    "image": "decor_studio.jpg",
     "verified": true
   },
   {
@@ -140,6 +155,7 @@
     "area": "Gulshan-e-Iqbal",
     "rating": 4.6,
     "starting_price": 80000,
+    "price_type": "project",
     "image": "craft_master.jpg",
     "verified": true
   },
@@ -149,6 +165,7 @@
     "area": "Gulshan-e-Iqbal",
     "rating": 4.4,
     "starting_price": 75000,
+    "price_type": "package",
     "image": "aimz_events.jpg",
     "verified": true
   },
@@ -158,16 +175,18 @@
     "area": "Gulshan-e-Iqbal",
     "rating": 4.3,
     "starting_price": 70000,
+    "price_type": "package",
     "image": "kamz_kirz.jpg",
     "verified": true
   },
   {
     "id": 19,
-    "name": "Zia Royal Caterers",
+    "name": "Gulshan Decor Studio",
     "area": "Gulshan-e-Iqbal",
     "rating": 4.2,
-    "starting_price": 60000,
-    "image": "zia_royal.jpg",
+    "starting_price": 65000,
+    "price_type": "package",
+    "image": "gulshan_decor.jpg",
     "verified": true
   },
   {
@@ -176,6 +195,7 @@
     "area": "Gulshan-e-Iqbal",
     "rating": 4.1,
     "starting_price": 55000,
+    "price_type": "package",
     "image": "nipa_decor.jpg",
     "verified": true
   },
@@ -185,6 +205,7 @@
     "area": "Gulistan-e-Johar",
     "rating": 4.7,
     "starting_price": 95000,
+    "price_type": "project",
     "image": "atelier3.jpg",
     "verified": true
   },
@@ -194,6 +215,7 @@
     "area": "Gulistan-e-Johar",
     "rating": 4.5,
     "starting_price": 80000,
+    "price_type": "package",
     "image": "seven_aura.jpg",
     "verified": true
   },
@@ -203,6 +225,7 @@
     "area": "Gulistan-e-Johar",
     "rating": 4.4,
     "starting_price": 140000,
+    "price_type": "package",
     "image": "bella_vista.jpg",
     "verified": true
   },
@@ -212,6 +235,7 @@
     "area": "Gulistan-e-Johar",
     "rating": 4.3,
     "starting_price": 75000,
+    "price_type": "package",
     "image": "johar_grand.jpg",
     "verified": true
   },
@@ -221,6 +245,7 @@
     "area": "Gulistan-e-Johar",
     "rating": 4.2,
     "starting_price": 70000,
+    "price_type": "package",
     "image": "pearl_johar.jpg",
     "verified": true
   },
@@ -230,34 +255,38 @@
     "area": "Federal B Area",
     "rating": 4.3,
     "starting_price": 50000,
+    "price_type": "package",
     "image": "ahmed_party.jpg",
     "verified": true
   },
   {
     "id": 27,
-    "name": "Pasha Catering Service",
+    "name": "FB Event Decor",
     "area": "Federal B Area",
     "rating": 4.2,
-    "starting_price": 55000,
-    "image": "pasha_catering.jpg",
+    "starting_price": 48000,
+    "price_type": "package",
+    "image": "fb_event_decor.jpg",
     "verified": true
   },
   {
     "id": 28,
-    "name": "The Grand Caterers & Decorators",
+    "name": "The Grand Decorators",
     "area": "Federal B Area",
     "rating": 4.1,
-    "starting_price": 60000,
-    "image": "grand_caterers.jpg",
+    "starting_price": 55000,
+    "price_type": "package",
+    "image": "grand_decorators.jpg",
     "verified": true
   },
   {
     "id": 29,
-    "name": "Umer Caterers & Party Decorators",
+    "name": "Star Party Decor",
     "area": "Federal B Area",
     "rating": 4.0,
-    "starting_price": 50000,
-    "image": "umer_caterers.jpg",
+    "starting_price": 45000,
+    "price_type": "package",
+    "image": "star_party_decor.jpg",
     "verified": true
   },
   {
@@ -265,7 +294,8 @@
     "name": "FB Area Decor Hub",
     "area": "Federal B Area",
     "rating": 4.0,
-    "starting_price": 45000,
+    "starting_price": 42000,
+    "price_type": "package",
     "image": "fb_decor_hub.jpg",
     "verified": true
   },
@@ -275,6 +305,7 @@
     "area": "Bahadurabad",
     "rating": 4.8,
     "starting_price": 100000,
+    "price_type": "project",
     "image": "vogue_interior.jpg",
     "verified": true
   },
@@ -284,6 +315,7 @@
     "area": "Bahadurabad",
     "rating": 4.4,
     "starting_price": 70000,
+    "price_type": "package",
     "image": "wedders.jpg",
     "verified": true
   },
@@ -293,6 +325,7 @@
     "area": "Bahadurabad",
     "rating": 4.3,
     "starting_price": 65000,
+    "price_type": "package",
     "image": "party_popper.jpg",
     "verified": true
   },
@@ -302,6 +335,7 @@
     "area": "Bahadurabad",
     "rating": 4.2,
     "starting_price": 60000,
+    "price_type": "package",
     "image": "joy_planner.jpg",
     "verified": true
   },
@@ -311,6 +345,7 @@
     "area": "Bahadurabad",
     "rating": 4.1,
     "starting_price": 55000,
+    "price_type": "package",
     "image": "nayyer_decor.jpg",
     "verified": true
   },
@@ -320,6 +355,7 @@
     "area": "Tariq Road",
     "rating": 4.4,
     "starting_price": 70000,
+    "price_type": "package",
     "image": "siddiqui_tariq.jpg",
     "verified": true
   },
@@ -329,6 +365,7 @@
     "area": "Tariq Road",
     "rating": 4.6,
     "starting_price": 120000,
+    "price_type": "package",
     "image": "luxor_banquet.jpg",
     "verified": true
   },
@@ -338,6 +375,7 @@
     "area": "Tariq Road",
     "rating": 4.5,
     "starting_price": 100000,
+    "price_type": "package",
     "image": "liberty_ballroom.jpg",
     "verified": true
   },
@@ -347,6 +385,7 @@
     "area": "Tariq Road",
     "rating": 4.2,
     "starting_price": 55000,
+    "price_type": "package",
     "image": "tariq_decor.jpg",
     "verified": true
   },
@@ -356,6 +395,7 @@
     "area": "Tariq Road",
     "rating": 4.3,
     "starting_price": 75000,
+    "price_type": "package",
     "image": "elite_tariq.jpg",
     "verified": true
   },
@@ -365,6 +405,7 @@
     "area": "North Nazimabad",
     "rating": 4.5,
     "starting_price": 70000,
+    "price_type": "project",
     "image": "kitchen_corner.jpg",
     "verified": true
   },
@@ -374,6 +415,7 @@
     "area": "North Nazimabad",
     "rating": 4.4,
     "starting_price": 65000,
+    "price_type": "package",
     "image": "event_art.jpg",
     "verified": true
   },
@@ -383,6 +425,7 @@
     "area": "North Nazimabad",
     "rating": 4.3,
     "starting_price": 60000,
+    "price_type": "package",
     "image": "aatim_intl.jpg",
     "verified": true
   },
@@ -392,6 +435,7 @@
     "area": "North Nazimabad",
     "rating": 4.2,
     "starting_price": 55000,
+    "price_type": "project",
     "image": "al_ghani.jpg",
     "verified": true
   },
@@ -401,16 +445,18 @@
     "area": "North Nazimabad",
     "rating": 4.2,
     "starting_price": 58000,
+    "price_type": "package",
     "image": "royal_nn.jpg",
     "verified": true
   },
   {
     "id": 46,
-    "name": "Wall Art Pakistan",
+    "name": "Elite North Karachi Decor",
     "area": "North Karachi",
-    "rating": 5.0,
-    "starting_price": 60000,
-    "image": "wall_art.jpg",
+    "rating": 4.0,
+    "starting_price": 48000,
+    "price_type": "package",
+    "image": "elite_nk_decor.jpg",
     "verified": true
   },
   {
@@ -419,34 +465,38 @@
     "area": "North Karachi",
     "rating": 4.7,
     "starting_price": 55000,
+    "price_type": "package",
     "image": "modern_decorative.jpg",
     "verified": true
   },
   {
     "id": 48,
-    "name": "Bawarchi.com",
+    "name": "Royal NK Events",
     "area": "North Karachi",
     "rating": 4.2,
     "starting_price": 50000,
-    "image": "bawarchi.jpg",
+    "price_type": "package",
+    "image": "royal_nk.jpg",
     "verified": true
   },
   {
     "id": 49,
-    "name": "Taj Tent House & Catering Service",
+    "name": "Star Decor NK",
     "area": "North Karachi",
-    "rating": 4.3,
-    "starting_price": 55000,
-    "image": "taj_tent.jpg",
+    "rating": 3.9,
+    "starting_price": 42000,
+    "price_type": "package",
+    "image": "star_nk.jpg",
     "verified": true
   },
   {
     "id": 50,
-    "name": "Al-Shahid Pakwan",
+    "name": "Taj Decor Services",
     "area": "North Karachi",
-    "rating": 5.0,
+    "rating": 4.1,
     "starting_price": 45000,
-    "image": "al_shahid.jpg",
+    "price_type": "package",
+    "image": "taj_decor.jpg",
     "verified": true
   }
 ]

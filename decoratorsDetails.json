@@ -822,66 +822,48 @@
   },
   {
     "id": 15,
-    "name": "Hanif Rajput Caterers & Decorators",
+    "name": "The Decor Studio",
     "area": "PECHS",
-    "rating": 4.8,
-    "starting_price": 80000,
+    "rating": 4.2,
+    "starting_price": 75000,
     "price_type": "package",
-    "address": "Office # 2 & 3, Mezzanine Floor, Society Building, PECHS Kashmir Road, Karachi, Pakistan",
-    "phone": "+92 304 1111147",
-    "whatsapp": "+92 304 1111147",
+    "address": "PECHS, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/hanif1/900/600",
-      "https://picsum.photos/seed/hanif2/900/600",
-      "https://picsum.photos/seed/hanif3/900/600"
+      "https://picsum.photos/seed/decorstudio1/900/600",
+      "https://picsum.photos/seed/decorstudio2/900/600",
+      "https://picsum.photos/seed/decorstudio3/900/600"
     ],
-    "events_types": ["Wedding", "Valima", "Mehndi", "Corporate Events", "Destination Events"],
-    "staff_available": ["Male"],
-    "specialties": ["Catering + Decor Combo", "Full Event Management", "Live Stations"],
-    "features": [
-      "ISO Certified",
-      "Brand of the Year",
-      "Tasting Session",
-      "Decor Services",
-      "50,000+ Capacity"
-    ],
+    "events_types": ["Wedding", "Event Decor", "Party Decoration"],
+    "staff_available": ["Male", "Female"],
+    "specialties": ["Event Decor", "Theme Design", "Wedding Styling"],
+    "features": ["Professional Service", "Creative Designs", "Quality Work"],
     "packages": [
       {
-        "name": "Basic Decor + Catering",
-        "price": 80000,
+        "name": "Basic",
+        "price": 75000,
         "min_guests": 100,
-        "includes": ["Basic Decor", "Basic Catering", "Setup"]
+        "includes": ["Stage Decor", "Chair Covers", "Basic Lighting"]
       },
       {
-        "name": "Premium Decor + Catering",
-        "price": 150000,
+        "name": "Premium",
+        "price": 125000,
         "min_guests": 200,
-        "includes": ["Premium Decor", "Premium Catering", "BBQ Station"]
-      },
-      {
-        "name": "Luxury Decor + Catering",
-        "price": 250000,
-        "min_guests": 300,
-        "includes": ["Luxury Decor", "Luxury Catering", "Live Stations", "Full Setup"]
+        "includes": ["Themed Decor", "Fresh Flowers", "Premium Lighting"]
       }
     ],
     "reviews": [
       {
-        "name": "Ahmed Raza",
-        "rating": 5,
-        "comment": "The best caterers and decorators in Karachi! Highly professional."
-      },
-      {
-        "name": "Sana Mirza",
-        "rating": 5,
-        "comment": "Amazing food and beautiful decor. Worth every rupee."
+        "name": "Client",
+        "rating": 4,
+        "comment": "Beautiful decor and professional service."
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
     "verified": true,
-    "verified_badge": "ISO Certified | Brand of the Year | Est. 1979",
-    "established": 1979,
-    "website": "hanifrajputcaterers.com"
+    "verified_badge": "Local Verified",
+    "established": 2016
   },
   {
     "id": 16,
@@ -1025,48 +1007,48 @@
   },
   {
     "id": 19,
-    "name": "Zia Royal Caterers",
+    "name": "Gulshan Decor Studio",
     "area": "Gulshan-e-Iqbal",
     "rating": 4.2,
-    "starting_price": 60000,
+    "starting_price": 65000,
     "price_type": "package",
-    "address": "C-127, Block-9, Opposite Aziz Bhatti Park, Nipa, Gulshan-e-Iqbal, Karachi, Pakistan",
-    "phone": "+92 320 8209000",
-    "whatsapp": "+92 320 8209000",
+    "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/zia1/900/600",
-      "https://picsum.photos/seed/zia2/900/600",
-      "https://picsum.photos/seed/zia3/900/600"
+      "https://picsum.photos/seed/gulshandecor1/900/600",
+      "https://picsum.photos/seed/gulshandecor2/900/600",
+      "https://picsum.photos/seed/gulshandecor3/900/600"
     ],
-    "events_types": ["Wedding", "Valima", "Mehndi", "Mayun", "Birthday Parties"],
+    "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
-    "specialties": ["Catering + Decor Combo", "Traditional Setup"],
-    "features": ["Prompt Service", "Decoration Available", "Traditional Recipes"],
+    "specialties": ["Wedding Decor", "Event Styling", "Theme Design"],
+    "features": ["Affordable Packages", "Professional Service"],
     "packages": [
       {
-        "name": "Basic Decor + Catering",
-        "price": 60000,
+        "name": "Basic",
+        "price": 65000,
         "min_guests": 100,
-        "includes": ["Basic Decor", "Basic Catering"]
+        "includes": ["Stage Decor", "Chair Covers", "Basic Lighting"]
       },
       {
-        "name": "Premium Decor + Catering",
-        "price": 100000,
+        "name": "Premium",
+        "price": 110000,
         "min_guests": 200,
-        "includes": ["Premium Decor", "Premium Catering"]
+        "includes": ["Themed Decor", "Fresh Flowers", "Premium Lighting"]
       }
     ],
     "reviews": [
       {
-        "name": "Bilal Ahmed",
+        "name": "Local Client",
         "rating": 4,
-        "comment": "Good traditional food and decor."
+        "comment": "Good decor service in Gulshan."
       }
     ],
-    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
     "verified": true,
-    "verified_badge": "Verified+9 Years | Est. 1918",
-    "established": 1918
+    "verified_badge": "Local Verified",
+    "established": 2014
   },
   {
     "id": 20,
@@ -1392,133 +1374,139 @@
   },
   {
     "id": 27,
-    "name": "Pasha Catering Service",
+    "name": "FB Event Decor",
     "area": "Federal B Area",
     "rating": 4.2,
-    "starting_price": 55000,
+    "starting_price": 48000,
     "price_type": "package",
-    "address": "ST-11, Block-17, Federal B Area, Samanabad, Karachi, Sindh, Pakistan",
-    "phone": "+92 334 3612021",
-    "whatsapp": "+92 334 3612021",
+    "address": "Federal B Area, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/pasha1/900/600",
-      "https://picsum.photos/seed/pasha2/900/600",
-      "https://picsum.photos/seed/pasha3/900/600"
+      "https://picsum.photos/seed/fbevent1/900/600",
+      "https://picsum.photos/seed/fbevent2/900/600",
+      "https://picsum.photos/seed/fbevent3/900/600"
     ],
-    "events_types": ["Wedding", "Valima", "Mehndi", "Mayun", "Birthday Parties"],
+    "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
-    "specialties": ["Catering + Decor combo", "Event management"],
-    "features": ["Decoration & catering combo", "Affordable packages"],
+    "specialties": ["Local Event Decor", "Affordable Packages"],
+    "features": ["Budget Friendly", "Quick Setup", "Local Expertise"],
     "packages": [
       {
-        "name": "Basic Decor + Catering",
-        "price": 55000,
+        "name": "Basic",
+        "price": 48000,
         "min_guests": 100,
-        "includes": ["Basic Decor", "Basic Catering", "Setup"]
+        "includes": ["Stage Decor", "Chair Covers", "Basic Lighting"]
+      },
+      {
+        "name": "Premium",
+        "price": 80000,
+        "min_guests": 200,
+        "includes": ["Themed Decor", "Fresh Flowers", "Premium Lighting"]
       }
     ],
     "reviews": [
       {
         "name": "Local Client",
         "rating": 4,
-        "comment": "Good value for money in FB Area."
+        "comment": "Good event decor in FB Area."
       }
     ],
-    "payment_methods": ["Cash", "Bank Transfer"],
+    "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
     "verified": true,
-    "verified_badge": "Verified+ on BusinessList.pk | Est. 1958",
-    "established": 1958
+    "verified_badge": "Local Verified",
+    "established": 2015
   },
   {
     "id": 28,
-    "name": "The Grand Caterers & Decorators",
+    "name": "The Grand Decorators",
     "area": "Federal B Area",
     "rating": 4.1,
-    "starting_price": 60000,
+    "starting_price": 55000,
     "price_type": "package",
     "address": "FB Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/grand1/900/600",
-      "https://picsum.photos/seed/grand2/900/600",
-      "https://picsum.photos/seed/grand3/900/600"
+      "https://picsum.photos/seed/granddec1/900/600",
+      "https://picsum.photos/seed/granddec2/900/600",
+      "https://picsum.photos/seed/granddec3/900/600"
     ],
     "events_types": ["Wedding", "Valima", "Mehndi", "Corporate Events"],
     "staff_available": ["Male"],
-    "specialties": ["Catering + Decor", "Event Management"],
-    "features": ["Professional Service", "Affordable Packages"],
+    "specialties": ["Event Decor", "Theme Design", "Wedding Setup"],
+    "features": ["Professional Service", "Affordable Packages", "Quality Work"],
     "packages": [
       {
         "name": "Basic",
-        "price": 60000,
+        "price": 55000,
         "min_guests": 100,
-        "includes": ["Basic Decor", "Basic Catering"]
+        "includes": ["Stage Decor", "Chair Covers", "Basic Lighting"]
       },
       {
         "name": "Premium",
-        "price": 100000,
+        "price": 95000,
         "min_guests": 200,
-        "includes": ["Premium Decor", "Premium Catering"]
+        "includes": ["Themed Decor", "Fresh Flowers", "Premium Lighting"]
       }
     ],
     "reviews": [
       {
         "name": "Usman Ali",
         "rating": 4,
-        "comment": "Good service for FB Area events."
+        "comment": "Good decor service for FB Area events."
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
     "verified": true,
-    "verified_badge": "Listed on UrduPoint",
+    "verified_badge": "Local Verified",
     "established": 2010
   },
   {
     "id": 29,
-    "name": "Umer Caterers & Party Decorators",
+    "name": "Star Party Decor",
     "area": "Federal B Area",
     "rating": 4.0,
-    "starting_price": 50000,
+    "starting_price": 45000,
     "price_type": "package",
     "address": "FB Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/umer1/900/600",
-      "https://picsum.photos/seed/umer2/900/600",
-      "https://picsum.photos/seed/umer3/900/600"
+      "https://picsum.photos/seed/stardec1/900/600",
+      "https://picsum.photos/seed/stardec2/900/600",
+      "https://picsum.photos/seed/stardec3/900/600"
     ],
-    "events_types": ["Wedding", "Party Decoration", "Event Catering"],
+    "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
-    "specialties": ["Catering + Decor", "Budget Packages"],
-    "features": ["Affordable Rates", "Local Expertise"],
+    "specialties": ["Party Decoration", "Event Setup", "Affordable Packages"],
+    "features": ["Budget Friendly", "Quick Service", "Local Expertise"],
     "packages": [
       {
         "name": "Basic",
-        "price": 50000,
+        "price": 45000,
         "min_guests": 100,
-        "includes": ["Basic Decor", "Basic Catering"]
+        "includes": ["Stage Decor", "Chair Covers", "Basic Lighting"]
       }
     ],
     "reviews": [
       {
         "name": "Local Client",
         "rating": 4,
-        "comment": "Good budget-friendly service."
+        "comment": "Good budget-friendly decor service."
       }
     ],
     "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
     "verified": true,
-    "verified_badge": "Listed on UrduPoint",
-    "established": 2012
+    "verified_badge": "Local Verified",
+    "established": 2014
   },
   {
     "id": 30,
     "name": "FB Area Decor Hub",
     "area": "Federal B Area",
     "rating": 4.0,
-    "starting_price": 45000,
+    "starting_price": 42000,
     "price_type": "package",
     "address": "Near KDA Market, FB Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
@@ -1535,7 +1523,7 @@
     "packages": [
       {
         "name": "Basic",
-        "price": 45000,
+        "price": 42000,
         "min_guests": 100,
         "includes": ["Stage Decor", "Chair Covers", "Basic Lighting"]
       }
@@ -2178,58 +2166,48 @@
   },
   {
     "id": 46,
-    "name": "Wall Art Pakistan",
+    "name": "Elite North Karachi Decor",
     "area": "North Karachi",
-    "rating": 5.0,
-    "starting_price": 60000,
-    "price_type": "project",
-    "address": "B-09, Bab-e-Ghazi, Anarkali Complex, Sector-11-E, North Karachi, Karachi, Pakistan",
+    "rating": 4.0,
+    "starting_price": 48000,
+    "price_type": "package",
+    "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/wallart1/900/600",
-      "https://picsum.photos/seed/wallart2/900/600",
-      "https://picsum.photos/seed/wallart3/900/600"
+      "https://picsum.photos/seed/elitenk1/900/600",
+      "https://picsum.photos/seed/elitenk2/900/600",
+      "https://picsum.photos/seed/elitenk3/900/600"
     ],
-    "services": ["Wall Art", "Home Decor", "Custom Paintings"],
-    "specialties": ["Custom Wall Art", "Home Decoration", "Event Decor"],
-    "features": ["Premium Quality", "Custom Designs", "Professional Service"],
-    "reviews": [
+    "events_types": ["Wedding", "Party Decoration", "Event Decor"],
+    "staff_available": ["Male"],
+    "specialties": ["Local Event Decor", "Affordable Packages"],
+    "features": ["Budget Friendly", "Quick Setup", "Professional Service"],
+    "packages": [
       {
-        "name": "Client 1",
-        "rating": 5,
-        "comment": "Excellent wall art and decoration!"
+        "name": "Basic",
+        "price": 48000,
+        "min_guests": 100,
+        "includes": ["Stage Decor", "Chair Covers", "Basic Lighting"]
       },
       {
-        "name": "Client 2",
-        "rating": 5,
-        "comment": "Beautiful work, highly recommended!"
-      },
-      {
-        "name": "Client 3",
-        "rating": 5,
-        "comment": "Professional team, amazing results!"
-      },
-      {
-        "name": "Client 4",
-        "rating": 5,
-        "comment": "Best wall art in North Karachi!"
-      },
-      {
-        "name": "Client 5",
-        "rating": 5,
-        "comment": "Great service and quality work!"
-      },
-      {
-        "name": "Client 6",
-        "rating": 5,
-        "comment": "Highly satisfied with their work!"
+        "name": "Premium",
+        "price": 80000,
+        "min_guests": 200,
+        "includes": ["Themed Decor", "Fresh Flowers", "Premium Lighting"]
       }
     ],
-    "payment_methods": ["Cash", "Bank Transfer"],
+    "reviews": [
+      {
+        "name": "Local Client",
+        "rating": 4,
+        "comment": "Good decor service in North Karachi."
+      }
+    ],
+    "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
     "verified": true,
-    "verified_badge": "5.0 Rating (6 Reviews) on Top-Rated.Online",
-    "established": 2018
+    "verified_badge": "Local Verified",
+    "established": 2016
   },
   {
     "id": 47,
@@ -2264,131 +2242,131 @@
   },
   {
     "id": 48,
-    "name": "Bawarchi.com",
+    "name": "Royal NK Events",
     "area": "North Karachi",
     "rating": 4.2,
     "starting_price": 50000,
     "price_type": "package",
-    "address": "R-10 Sector 15 B Bufferzone, North Karachi, Karachi, Pakistan",
-    "phone": "+92 334 3256754",
-    "whatsapp": "+92 334 3256754",
+    "address": "North Karachi, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/bawarchi1/900/600",
-      "https://picsum.photos/seed/bawarchi2/900/600",
-      "https://picsum.photos/seed/bawarchi3/900/600"
+      "https://picsum.photos/seed/royalnk1/900/600",
+      "https://picsum.photos/seed/royalnk2/900/600",
+      "https://picsum.photos/seed/royalnk3/900/600"
     ],
-    "events_types": ["Wedding", "Catering", "Party Decoration"],
-    "staff_available": ["Male"],
-    "specialties": ["Catering + Decor", "Event Management"],
-    "features": ["Affordable Packages", "Quality Service"],
-    "packages": [
-      {
-        "name": "Basic Decor + Catering",
-        "price": 50000,
-        "min_guests": 100,
-        "includes": ["Basic Decor", "Basic Catering"]
-      }
-    ],
-    "reviews": [
-      {
-        "name": "Local Client",
-        "rating": 4,
-        "comment": "Good service for North Karachi."
-      }
-    ],
-    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
-    "verified_badge": "Listed on BusinessList.pk",
-    "established": 2010
-  },
-  {
-    "id": 49,
-    "name": "Taj Tent House & Catering Service",
-    "area": "North Karachi",
-    "rating": 4.3,
-    "starting_price": 55000,
-    "price_type": "package",
-    "address": "Shop No.5,A-992,Irfan Centre,Near U.P. More,Sector #11-B, North Karachi, Karachi, Pakistan",
-    "phone": "+92 21 36999970",
-    "whatsapp": "+92 21 36999970",
-    "gallery": [
-      "https://picsum.photos/seed/taj1/900/600",
-      "https://picsum.photos/seed/taj2/900/600",
-      "https://picsum.photos/seed/taj3/900/600"
-    ],
-    "events_types": ["Wedding", "Catering", "Tent Service", "Party Decoration"],
-    "staff_available": ["Male"],
-    "specialties": ["Tent Service", "Catering", "Event Decor"],
-    "features": ["Professional Service", "Affordable Rates"],
+    "events_types": ["Wedding", "Engagement", "Birthday Parties"],
+    "staff_available": ["Male", "Female"],
+    "specialties": ["Event Planning", "Decor Setup", "Theme Design"],
+    "features": ["Professional Service", "Affordable Packages"],
     "packages": [
       {
         "name": "Basic",
-        "price": 55000,
+        "price": 50000,
         "min_guests": 100,
-        "includes": ["Tent Setup", "Basic Decor", "Basic Catering"]
+        "includes": ["Stage Decor", "Chair Covers", "Basic Lighting"]
+      },
+      {
+        "name": "Premium",
+        "price": 85000,
+        "min_guests": 200,
+        "includes": ["Themed Decor", "Fresh Flowers", "Premium Lighting"]
       }
     ],
     "reviews": [
       {
         "name": "Local Client",
         "rating": 4,
-        "comment": "Good tent and catering service."
+        "comment": "Good event service in North Karachi."
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
     "verified": true,
-    "verified_badge": "Listed on BusinessList.pk",
-    "established": 2005
+    "verified_badge": "Local Verified",
+    "established": 2014
+  },
+  {
+    "id": 49,
+    "name": "Star Decor NK",
+    "area": "North Karachi",
+    "rating": 3.9,
+    "starting_price": 42000,
+    "price_type": "package",
+    "address": "North Karachi, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/starnk1/900/600",
+      "https://picsum.photos/seed/starnk2/900/600",
+      "https://picsum.photos/seed/starnk3/900/600"
+    ],
+    "events_types": ["Wedding", "Party Decoration", "Event Decor"],
+    "staff_available": ["Male"],
+    "specialties": ["Local Event Decor", "Affordable Packages"],
+    "features": ["Budget Friendly", "Quick Setup"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 42000,
+        "min_guests": 100,
+        "includes": ["Stage Decor", "Chair Covers", "Basic Lighting"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Local Client",
+        "rating": 4,
+        "comment": "Good budget-friendly decor."
+      }
+    ],
+    "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Local Verified",
+    "established": 2015
   },
   {
     "id": 50,
-    "name": "Al-Shahid Pakwan",
+    "name": "Taj Decor Services",
     "area": "North Karachi",
-    "rating": 5.0,
+    "rating": 4.1,
     "starting_price": 45000,
     "price_type": "package",
-    "address": "Shop No. A-23-24, Sector 11-C/1, Iqbal Plaza, Main Nagan Chowrangi, North Karachi, Karachi, Pakistan",
-    "phone": "+92 21 6947422",
-    "whatsapp": "+92 21 6947422",
+    "address": "North Karachi, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/alshahid1/900/600",
-      "https://picsum.photos/seed/alshahid2/900/600",
-      "https://picsum.photos/seed/alshahid3/900/600"
+      "https://picsum.photos/seed/tajdec1/900/600",
+      "https://picsum.photos/seed/tajdec2/900/600",
+      "https://picsum.photos/seed/tajdec3/900/600"
     ],
-    "events_types": ["Wedding", "Catering", "Party Decoration", "Event Setup"],
+    "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
-    "specialties": ["Pakwan Catering", "Event Decor", "Party Setup"],
-    "features": ["High Quality", "Professional Service", "Established 1995"],
-    "reviews": [
+    "specialties": ["Decoration Services", "Event Setup", "Wedding Decor"],
+    "features": ["Professional Service", "Affordable Rates", "Local Expertise"],
+    "packages": [
       {
-        "name": "Client 1",
-        "rating": 5,
-        "comment": "Excellent pakwan and decor service!"
+        "name": "Basic",
+        "price": 45000,
+        "min_guests": 100,
+        "includes": ["Stage Decor", "Chair Covers", "Basic Lighting"]
       },
       {
-        "name": "Client 2",
-        "rating": 5,
-        "comment": "Best catering in North Karachi!"
-      },
-      {
-        "name": "Client 3",
-        "rating": 5,
-        "comment": "Highly recommended for weddings!"
-      },
-      {
-        "name": "Client 4",
-        "rating": 5,
-        "comment": "Great service and delicious food!"
-      },
-      {
-        "name": "Client 5",
-        "rating": 5,
-        "comment": "Professional team, excellent quality!"
+        "name": "Premium",
+        "price": 75000,
+        "min_guests": 200,
+        "includes": ["Themed Decor", "Fresh Flowers", "Premium Lighting"]
       }
     ],
-    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "reviews": [
+      {
+        "name": "Local Client",
+        "rating": 4,
+        "comment": "Good decoration service."
+      }
+    ],
+    "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
     "verified": true,
-    "verified_badge": "5.0 Rating on BusinessList.pk | Est. 1995",
-    "established": 1995
+    "verified_badge": "Local Verified",
+    "established": 2012
   }
 ]

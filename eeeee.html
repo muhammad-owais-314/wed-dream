@@ -1,968 +1,553 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Browse Vendors | WedDream</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top Rated Vendors – Wed Dream</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700;800&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 
-<style>
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  <style>
+    :root {
+      --rose:       #b93b56;
+      --rose-hover: #a22f49;
+      --gold:       #c89b2c;
+      --gold-light: #e8b93c;
+      --dark:       #070707;
+    }
 
-:root {
-    --rose:        #b93b56;
-    --rose-hover:  #a22f49;
-    --gold:        #c89b2c;
-    --gold-light:  #e8b93c;
-    --gold-dim:    rgba(200,155,44,0.35);
-    --dark:        #070707;
-    --dark2:       #0e0b0c;
-    --glass:       rgba(18,14,16,0.88);
-}
+    /* ── SECTION WRAPPER ── */
+    .trv-section {
+      position: relative;
+      padding: 90px 0 100px;
+      background:
+        radial-gradient(ellipse 70% 50% at 50% 0%, rgba(200,155,44,0.06) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 40% at 0% 100%, rgba(185,59,86,0.05) 0%, transparent 60%),
+        #070707;
+      overflow: hidden;
+    }
 
-body {
-    background: var(--dark);
-    font-family: 'Jost', sans-serif;
-    overflow-x: hidden;
-    color: #f0ede8;
-}
+    /* Decorative lines */
+    .trv-section::before {
+      content:'';
+      position:absolute; top:0; left:0; right:0; height:1px;
+      background: linear-gradient(90deg, transparent, rgba(200,155,44,0.4) 30%, rgba(185,59,86,0.35) 50%, rgba(200,155,44,0.4) 70%, transparent);
+    }
+    .trv-section::after {
+      content:'';
+      position:absolute; bottom:0; left:0; right:0; height:1px;
+      background: linear-gradient(90deg, transparent, rgba(200,155,44,0.3) 50%, transparent);
+    }
 
-/* ── AMBIENT BG ── */
-body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background:
-        radial-gradient(ellipse 55% 40% at 15% 10%, rgba(185,59,86,0.07) 0%, transparent 70%),
-        radial-gradient(ellipse 50% 50% at 85% 85%, rgba(200,155,44,0.05) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 0;
-}
+    /* ── HEADING ── */
+    .trv-badge {
+      display:inline-flex; align-items:center; gap:9px;
+      border:1px solid rgba(200,155,44,0.4); border-radius:50px;
+      padding:7px 20px; font-size:9px; font-weight:700;
+      letter-spacing:3.5px; text-transform:uppercase;
+      color:var(--gold); background:rgba(200,155,44,0.06);
+      margin-bottom:18px;
+    }
+    .trv-badge i { color:var(--rose); font-size:10px; }
 
-/* ── SECTION ── */
-.vendors-section {
-    padding: 56px 0 100px;
-    position: relative;
-    z-index: 1;
-}
+    .trv-title {
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(36px,5.5vw,64px);
+      font-weight:700; letter-spacing:3px; text-transform:uppercase;
+      color:#fff; line-height:.95; margin-bottom:0;
+    }
+    .trv-title span {
+      font-style:italic; color:var(--gold);
+      text-shadow:0 0 30px rgba(200,155,44,0.3);
+    }
+    .trv-sub {
+      color:rgba(255,255,255,0.4); font-size:12px;
+      letter-spacing:2px; text-transform:uppercase; margin-top:14px;
+    }
 
-/* ── HEADER ── */
-.section-eyebrow {
-    display: block;
-    text-align: center;
-    font-family: 'Cinzel', serif;
-    font-size: 0.62rem;
-    letter-spacing: 0.35em;
-    color: var(--gold);
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-.section-accent {
-    height: 1px;
-    width: 80px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    margin: 0 auto 18px;
-}
-.section-title {
-    text-align: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.2rem, 5vw, 3.4rem);
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.1;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-    transition: all 0.4s ease;
-}
-.section-title span { color: var(--gold); font-style: italic; }
-.section-sub {
-    text-align: center;
-    color: rgba(255,255,255,0.45);
-    font-size: 0.78rem;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    margin-bottom: 44px;
-    min-height: 18px;
-    transition: all 0.4s ease;
-}
+    /* ── CATEGORY TABS ── */
+    .trv-tabs {
+      display:flex; flex-wrap:wrap; justify-content:center; gap:10px;
+      margin:36px 0 48px;
+    }
+    .trv-tab {
+      display:inline-flex; align-items:center; gap:8px;
+      background:transparent;
+      border:1px solid rgba(200,155,44,0.25);
+      border-radius:50px; padding:9px 22px;
+      font-size:11px; font-weight:600; letter-spacing:2px;
+      text-transform:uppercase; color:rgba(255,255,255,0.5);
+      cursor:pointer; transition:all .28s; font-family:'Jost',sans-serif;
+    }
+    .trv-tab i { font-size:12px; }
+    .trv-tab:hover {
+      border-color:rgba(200,155,44,0.5);
+      color:var(--gold-light);
+      background:rgba(200,155,44,0.06);
+    }
+    .trv-tab.active {
+      background:var(--gold);
+      border-color:var(--gold);
+      color:#070707;
+      font-weight:800;
+      box-shadow:0 4px 20px rgba(200,155,44,0.3);
+    }
 
-/* ── CATEGORY SWITCHER ── */
-.category-switcher {
-    display: flex;
-    justify-content: center;
-    gap: 0;
-    margin-bottom: 36px;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(200,155,44,0.18);
-    border-radius: 60px;
-    padding: 5px;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-}
-.cat-btn {
-    background: transparent;
-    border: none;
-    color: rgba(255,255,255,0.45);
-    font-family: 'Cinzel', serif;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    padding: 9px 22px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.28s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    white-space: nowrap;
-}
-.cat-btn i { font-size: 0.78rem; }
-.cat-btn:hover { color: var(--gold-light); }
-.cat-btn.active {
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    color: #0e0b0c;
-    font-weight: 700;
-    box-shadow: 0 4px 18px rgba(200,155,44,0.3);
-}
+    /* ── SLIDER WRAPPER ── */
+    .trv-slider-outer {
+      position:relative;
+    }
+    .trv-slider-track {
+      overflow:hidden;
+    }
+    .trv-slider {
+      display:flex;
+      gap:24px;
+      transition:transform .55s cubic-bezier(.4,0,.2,1);
+    }
 
-/* ── AREA FILTER BAR ── */
-.filter-bar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 44px;
-    transition: opacity 0.3s;
-}
-.filter-btn {
-    background: transparent;
-    border: 1px solid rgba(200,155,44,0.3);
-    color: rgba(255,255,255,0.55);
-    font-family: 'Jost', sans-serif;
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 1.1px;
-    text-transform: uppercase;
-    padding: 7px 18px;
-    border-radius: 40px;
-    cursor: pointer;
-    transition: all 0.25s ease;
-}
-.filter-btn:hover { border-color: var(--gold); color: var(--gold-light); background: rgba(200,155,44,0.06); }
-.filter-btn.active {
-    background: rgba(200,155,44,0.15);
-    border-color: var(--gold);
-    color: var(--gold-light);
-    font-weight: 700;
-}
+    /* ── CARD ── */
+    .trv-card {
+      flex:0 0 calc(25% - 18px);
+      min-width:0;
+      position:relative;
+      border-radius:20px;
+      overflow:hidden;
+      cursor:pointer;
+      border:1px solid rgba(200,155,44,0.18);
+      background:#0e0b0c;
+      transition:transform .35s, border-color .35s, box-shadow .35s;
+      display:flex; flex-direction:column;
+    }
+    .trv-card:hover {
+      transform:translateY(-8px);
+      border-color:rgba(200,155,44,0.55);
+      box-shadow:0 24px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(200,155,44,0.15);
+    }
 
-/* ── NO RESULTS ── */
-.no-results {
-    text-align: center;
-    color: rgba(255,255,255,0.25);
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    padding: 60px 0;
-    display: none;
-    width: 100%;
-}
+    /* Card image */
+    .trv-card-img {
+      position:relative; height:210px; overflow:hidden;
+      background: linear-gradient(135deg, #1a1012, #2a1a20);
+    }
+    .trv-card-img img {
+      width:100%; height:100%; object-fit:cover;
+      transition:transform .7s ease;
+    }
+    .trv-card:hover .trv-card-img img { transform:scale(1.07); }
+    .trv-card-img-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 55%);
+    }
 
-/* ── CARD ── */
-.vendor-col {
-    margin-bottom: 24px;
-}
-.vendor-card {
-    background: rgba(16,12,14,0.9);
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid rgba(200,155,44,0.22);
-    box-shadow: 0 20px 40px -12px rgba(0,0,0,0.65);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.4s cubic-bezier(0.2,0.9,0.4,1.05);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-.vendor-card:hover {
-    border-color: rgba(200,155,44,0.65);
-    box-shadow: 0 28px 55px -16px rgba(0,0,0,0.85), 0 0 0 1px rgba(200,155,44,0.18) inset;
-    transform: translateY(-8px);
-}
+    /* Verified badge on image */
+    .trv-verified {
+      position:absolute; top:12px; left:12px;
+      background:linear-gradient(125deg, #c89b2c, #e8b93c);
+      color:#070707; font-size:8.5px; font-weight:800;
+      letter-spacing:1.5px; text-transform:uppercase;
+      padding:4px 12px; border-radius:30px;
+      display:inline-flex; align-items:center; gap:5px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.4);
+    }
 
-/* ── IMAGE ── */
-.card-img-wrap {
-    position: relative;
-    overflow: hidden;
-    border-bottom: 1px solid rgba(200,155,44,0.3);
-}
-.card-img-wrap img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.65s cubic-bezier(0.25,0.46,0.45,0.94);
-    background: linear-gradient(135deg, #1a1012, #2a1a20, #1e160d);
-}
-.vendor-card:hover .card-img-wrap img { transform: scale(1.06); }
+    /* Category chip on image */
+    .trv-cat-chip {
+      position:absolute; bottom:14px; left:14px;
+      background:rgba(7,7,7,0.75); backdrop-filter:blur(8px);
+      border:1px solid rgba(200,155,44,0.3);
+      color:var(--gold-light); font-size:9px; font-weight:600;
+      letter-spacing:2px; text-transform:uppercase;
+      padding:5px 12px; border-radius:30px;
+      display:inline-flex; align-items:center; gap:6px;
+    }
 
-.img-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.05) 55%);
-    pointer-events: none;
-    z-index: 1;
-}
+    /* Card body */
+    .trv-card-body {
+      padding:20px 18px 18px;
+      flex:1; display:flex; flex-direction:column; justify-content:space-between;
+    }
 
-/* PREMIUM BADGE */
-.premium-badge {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    background: linear-gradient(125deg, #c89b2c, #e8b93c);
-    color: #0c0a06;
-    font-size: 0.6rem;
-    font-weight: 800;
-    letter-spacing: 1.3px;
-    padding: 4px 11px;
-    border-radius: 30px;
-    font-family: 'Jost', sans-serif;
-    z-index: 3;
-    text-transform: uppercase;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
-}
+    .trv-card-name {
+      font-family:'Cormorant Garamond',serif;
+      font-size:20px; font-weight:700; color:#fff9ef;
+      line-height:1.15; margin-bottom:4px;
+    }
+    .trv-card-area {
+      font-size:11.5px; color:rgba(255,255,255,0.45);
+      display:flex; align-items:center; gap:5px; margin-bottom:10px;
+    }
+    .trv-card-area i { color:var(--gold); font-size:10px; }
 
-/* COMPARE BUTTON — appears on hover */
-.compare-btn {
-    position: absolute;
-    top: 11px;
-    right: 11px;
-    padding: 5px 13px 5px 10px;
-    background: rgba(7,7,7,0.82);
-    border: 1px solid rgba(200,155,44,0.45);
-    border-radius: 40px;
-    color: var(--gold-light);
-    font-family: 'Jost', sans-serif;
-    font-size: 0.6rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    transition: all 0.22s ease;
-    z-index: 4;
-    backdrop-filter: blur(10px);
-    opacity: 0;
-    transform: translateY(-6px);
-}
-.vendor-card:hover .compare-btn { opacity: 1; transform: translateY(0); }
-.compare-btn:hover { background: var(--gold); color: #0c0a06; border-color: transparent; }
-.compare-btn.added { background: var(--rose); color: #fff; border-color: transparent; opacity: 1 !important; transform: translateY(0) !important; }
+    /* Stars */
+    .trv-stars { color:var(--gold); font-size:11px; letter-spacing:1px; }
+    .trv-rating-row {
+      display:flex; align-items:center; gap:8px; margin-bottom:12px;
+    }
+    .trv-rating-pill {
+      background:rgba(200,155,44,0.15);
+      padding:2px 10px; border-radius:30px;
+      font-size:11.5px; font-weight:700; color:var(--gold-light);
+    }
 
-/* ── CARD BODY ── */
-.card-body-inner {
-    padding: 1.1rem 1.15rem 1.25rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+    .trv-divider {
+      height:1px; margin:12px 0;
+      background:linear-gradient(90deg, transparent, rgba(200,155,44,0.25) 50%, transparent);
+    }
 
-.card-vendor-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.45rem;
-    font-weight: 700;
-    color: #f5efdf;
-    margin-bottom: 4px;
-    line-height: 1.2;
-    letter-spacing: -0.2px;
-}
-.card-location {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: rgba(255,255,255,0.52);
-    font-size: 0.75rem;
-    margin-bottom: 9px;
-}
-.card-location i { color: var(--gold); font-size: 0.68rem; }
+    /* Price */
+    .trv-price-label { font-size:9px; color:rgba(255,255,255,0.3); letter-spacing:2px; text-transform:uppercase; }
+    .trv-price-val {
+      font-family:'Cormorant Garamond',serif;
+      font-size:24px; font-weight:700; color:#f5e2b0; line-height:1;
+    }
+    .trv-price-val span { font-size:11px; font-weight:500; color:rgba(255,255,255,0.35); margin-left:4px; }
 
-/* Category tag */
-.card-cat-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    background: rgba(200,155,44,0.09);
-    border: 1px solid rgba(200,155,44,0.2);
-    border-radius: 30px;
-    padding: 2px 10px;
-    font-size: 0.6rem;
-    font-weight: 600;
-    letter-spacing: 0.9px;
-    color: rgba(200,155,44,0.75);
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
+    /* Bottom area */
+    .trv-card-bottom {
+      margin-top:14px;
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+    }
+    .trv-view-btn {
+      display:inline-flex; align-items:center; gap:7px;
+      background:transparent;
+      border:1px solid rgba(200,155,44,0.5);
+      border-radius:40px; padding:7px 16px;
+      font-size:10px; font-weight:700; letter-spacing:1.5px;
+      text-transform:uppercase; color:var(--gold-light);
+      text-decoration:none; transition:all .25s; font-family:'Jost',sans-serif;
+    }
+    .trv-view-btn:hover {
+      background:var(--gold); border-color:var(--gold);
+      color:#070707; transform:translateX(2px);
+    }
+    .trv-view-btn i { font-size:9px; }
 
-.rating-row {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 10px;
-}
-.stars { color: var(--gold); font-size: 0.7rem; letter-spacing: 1.5px; }
-.stars i { margin-right: 1px; }
-.rating-pill {
-    font-weight: 700;
-    color: #fff;
-    font-size: 0.78rem;
-    background: rgba(200,155,44,0.16);
-    padding: 1px 8px;
-    border-radius: 30px;
-}
+    .trv-section-link {
+      font-size:10px; color:rgba(255,255,255,0.25);
+      text-decoration:none; letter-spacing:1.5px;
+      text-transform:uppercase; transition:color .25s;
+    }
+    .trv-section-link:hover { color:var(--gold); }
 
-.gold-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(200,155,44,0.5), transparent);
-    margin: 8px 0 12px;
-}
+    /* ── SLIDER NAV ARROWS ── */
+    .trv-nav {
+      position:absolute; top:50%; transform:translateY(-50%);
+      width:44px; height:44px; border-radius:50%;
+      background:rgba(7,7,7,0.85); backdrop-filter:blur(10px);
+      border:1px solid rgba(200,155,44,0.35);
+      color:var(--gold); font-size:14px;
+      display:flex; align-items:center; justify-content:center;
+      cursor:pointer; z-index:10;
+      transition:all .25s;
+    }
+    .trv-nav:hover { background:var(--gold); color:#070707; border-color:var(--gold); }
+    .trv-nav.prev { left:-22px; }
+    .trv-nav.next { right:-22px; }
+    .trv-nav:disabled { opacity:.25; cursor:default; }
+    .trv-nav:disabled:hover { background:rgba(7,7,7,0.85); color:var(--gold); border-color:rgba(200,155,44,0.35); }
 
-/* PRICE + BUTTON */
-.card-footer-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-.price-block { display: flex; align-items: baseline; gap: 3px; }
-.price-label { font-size: 0.62rem; font-weight: 600; color: var(--gold-light); letter-spacing: 0.8px; }
-.price-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.65rem;
-    font-weight: 800;
-    color: #f5e2b0;
-    line-height: 1;
-}
-.price-unit { font-size: 0.62rem; color: rgba(255,255,255,0.35); margin-left: 2px; }
+    /* ── DOTS ── */
+    .trv-dots {
+      display:flex; justify-content:center; gap:8px; margin-top:32px;
+    }
+    .trv-dot {
+      width:6px; height:6px; border-radius:50%;
+      background:rgba(255,255,255,0.2);
+      border:1px solid rgba(200,155,44,0.2);
+      cursor:pointer; transition:all .35s;
+    }
+    .trv-dot.active {
+      background:var(--gold); width:22px; border-radius:4px; border-color:var(--gold);
+    }
 
-.btn-details {
-    background: transparent;
-    border: 1px solid rgba(200,155,44,0.55);
-    padding: 6px 15px;
-    border-radius: 40px;
-    color: var(--gold-light);
-    font-size: 0.64rem;
-    font-weight: 600;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    transition: all 0.28s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    cursor: pointer;
-}
-.btn-details i { font-size: 0.6rem; transition: transform 0.2s; }
-.btn-details:hover {
-    background: var(--gold);
-    border-color: var(--gold);
-    color: #0c0a06;
-    box-shadow: 0 4px 14px rgba(200,155,44,0.28);
-    transform: translateY(-2px);
-}
-.btn-details:hover i { transform: translateX(3px); color: #0c0a06; }
-
-/* ── LOADING SKELETON ── */
-.skeleton-card {
-    background: rgba(255,255,255,0.03);
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid rgba(200,155,44,0.1);
-    height: 380px;
-    animation: skeletonPulse 1.5s ease-in-out infinite;
-}
-@keyframes skeletonPulse {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
-}
-
-/* ── COMPARE BAR ── */
-#compareBar {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    background: rgba(10,7,8,0.97);
-    border-top: 1px solid rgba(200,155,44,0.3);
-    backdrop-filter: blur(18px);
-    padding: 10px 20px;
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    z-index: 9000;
-    flex-wrap: wrap;
-}
-#compareBar.visible { display: flex; }
-.compare-chips {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-.compare-count {
-    font-family: 'Jost', sans-serif;
-    font-size: 0.68rem;
-    color: rgba(255,255,255,0.35);
-    margin-right: 4px;
-}
-.chip {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    background: rgba(200,155,44,0.1);
-    border: 1px solid rgba(200,155,44,0.25);
-    border-radius: 30px;
-    padding: 4px 10px 4px 8px;
-    font-family: 'Jost', sans-serif;
-    font-size: 0.68rem;
-    color: var(--gold-light);
-}
-.chip button {
-    background: none; border: none;
-    color: rgba(255,255,255,0.35);
-    cursor: pointer; padding: 0;
-    font-size: 0.85rem; line-height: 1;
-    transition: color 0.15s;
-}
-.chip button:hover { color: var(--rose); }
-.compare-actions { display: flex; gap: 8px; align-items: center; }
-.btn-clear-compare {
-    padding: 7px 16px;
-    background: transparent;
-    border: 1px solid rgba(185,59,86,0.4);
-    border-radius: 40px;
-    color: var(--rose);
-    font-family: 'Jost', sans-serif;
-    font-size: 0.68rem;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-.btn-clear-compare:hover { background: var(--rose); color: #fff; }
-.btn-go-compare {
-    padding: 8px 20px;
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    color: #0c0a06;
-    border: none;
-    border-radius: 40px;
-    font-family: 'Jost', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.8px;
-    cursor: pointer;
-    transition: opacity 0.2s, transform 0.2s;
-    white-space: nowrap;
-}
-.btn-go-compare:hover { opacity: 0.88; transform: translateY(-1px); }
-
-/* ── TOAST ── */
-#toast {
-    position: fixed;
-    bottom: 72px;
-    left: 50%;
-    transform: translateX(-50%) translateY(20px);
-    background: rgba(12,9,10,0.97);
-    border: 1px solid rgba(200,155,44,0.4);
-    backdrop-filter: blur(16px);
-    border-radius: 50px;
-    padding: 9px 22px;
-    color: var(--gold-light);
-    font-family: 'Jost', sans-serif;
-    font-size: 0.76rem;
-    font-weight: 500;
-    z-index: 9999;
-    opacity: 0;
-    transition: opacity 0.3s, transform 0.3s;
-    pointer-events: none;
-    white-space: nowrap;
-}
-#toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-#toast.error { border-color: rgba(185,59,86,0.5); color: #f87171; }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 576px) {
-    .vendors-section { padding: 40px 0 80px; }
-    .card-img-wrap img { height: 195px; }
-    .card-vendor-name { font-size: 1.25rem; }
-    .price-num { font-size: 1.4rem; }
-    .card-body-inner { padding: 0.9rem 1rem 1rem; }
-    .cat-btn { font-size: 0.62rem; padding: 8px 14px; gap: 5px; }
-    .category-switcher { flex-wrap: wrap; border-radius: 16px; }
-}
-@media (min-width: 1200px) {
-    .card-img-wrap img { height: 245px; }
-}
-
-::selection { background: var(--gold); color: #0c0a06; }
-
-/* Card fade-in animation */
-@keyframes cardIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
-.vendor-col { animation: cardIn 0.45s ease both; }
-</style>
+    /* ── RESPONSIVE ── */
+    @media(max-width:1200px) {
+      .trv-card { flex:0 0 calc(33.33% - 16px); }
+    }
+    @media(max-width:900px) {
+      .trv-card { flex:0 0 calc(50% - 12px); }
+      .trv-nav.prev { left:-10px; }
+      .trv-nav.next { right:-10px; }
+    }
+    @media(max-width:580px) {
+      .trv-card { flex:0 0 calc(85vw); }
+    }
+  </style>
 </head>
-<body>
+<body style="background:#070707; padding:0;">
 
-<!-- NAVBAR -->
-<div id="nav-container"></div>
+<!-- ══════════════════════════════════════
+     TOP RATED VENDORS SECTION
+     Paste this entire section into your
+     homepage HTML where needed.
+════════════════════════════════════════ -->
+<section class="trv-section" id="topVendors">
+  <div class="container">
 
-<!-- VENDORS SECTION -->
-<section class="vendors-section">
-    <div class="container">
-
-        <!-- HEADER -->
-        <span class="section-eyebrow" id="eyebrow">Wedding Venues</span>
-        <div class="section-accent"></div>
-        <h2 class="section-title" id="sectionTitle">The Grandeur <span id="titleSpan">Collection</span></h2>
-        <p class="section-sub" id="sectionSub">Curated venues for royalty &amp; grand celebrations</p>
-
-        <!-- CATEGORY SWITCHER -->
-        <div class="category-switcher">
-            <button class="cat-btn active" data-cat="halls">
-                <i class="fas fa-building"></i> Wedding Halls
-            </button>
-            <button class="cat-btn" data-cat="caterers">
-                <i class="fas fa-utensils"></i> Caterers
-            </button>
-            <button class="cat-btn" data-cat="decorators">
-                <i class="fas fa-wand-magic-sparkles"></i> Decorators
-            </button>
-        </div>
-
-        <!-- AREA FILTER BAR -->
-        <div id="filterBar" class="filter-bar"></div>
-
-        <!-- CARDS GRID -->
-        <div class="row g-3" id="productContainer"></div>
-
-        <!-- NO RESULTS -->
-        <p id="noResults" class="no-results">
-            <i class="fas fa-search" style="display:block;font-size:2rem;color:rgba(200,155,44,0.2);margin-bottom:12px;"></i>
-            Koi vendor nahi mila is area mein.
-        </p>
-
+    <!-- Heading -->
+    <div class="text-center mb-0">
+      <div class="trv-badge"><i class="fa-solid fa-crown"></i> Wed Dream Picks</div>
+      <h2 class="trv-title">Top Rated <span>Vendors</span></h2>
+      <p class="trv-sub">Karachi's most trusted wedding professionals</p>
     </div>
+
+    <!-- Category Tabs -->
+    <div class="trv-tabs" id="trvTabs">
+      <button class="trv-tab active" data-cat="all"><i class="fa-solid fa-layer-group"></i> All</button>
+      <button class="trv-tab" data-cat="hall"><i class="fa-solid fa-building-columns"></i> Halls</button>
+      <button class="trv-tab" data-cat="catering"><i class="fa-solid fa-utensils"></i> Catering</button>
+      <button class="trv-tab" data-cat="photography"><i class="fa-solid fa-camera"></i> Photography</button>
+      <button class="trv-tab" data-cat="carental"><i class="fa-solid fa-car"></i> Car Rental</button>
+    </div>
+
+    <!-- Slider -->
+    <div class="trv-slider-outer">
+      <button class="trv-nav prev" id="trvPrev" onclick="trvSlide(-1)">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="trv-slider-track">
+        <div class="trv-slider" id="trvSlider"></div>
+      </div>
+      <button class="trv-nav next" id="trvNext" onclick="trvSlide(1)">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- Dots -->
+    <div class="trv-dots" id="trvDots"></div>
+
+  </div>
 </section>
 
-<!-- FOOTER -->
-<div id="footer-container"></div>
-
-<!-- COMPARE BAR -->
-<div id="compareBar">
-    <div class="compare-chips" id="compareChips">
-        <span class="compare-count" id="compareCount">0/4</span>
-    </div>
-    <div class="compare-actions">
-        <button class="btn-clear-compare" onclick="clearCompare()">
-            <i class="fas fa-trash me-1"></i> Clear
-        </button>
-        <button class="btn-go-compare" onclick="goCompare()">
-            <i class="fas fa-scale-balanced me-1"></i> Compare Now
-        </button>
-    </div>
-</div>
-
-<!-- TOAST -->
-<div id="toast"></div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+// ══════════════════════════════════════
+// TOP RATED VENDORS DATA
+// ══════════════════════════════════════
+const TRV_VENDORS = [
+  {
+    id: 2,
+    cat: "hall",
+    catLabel: "Hall / Banquet",
+    catIcon: "fa-building-columns",
+    name: "Al Noor Banquet DHA",
+    area: "DHA",
+    rating: 4.6,
+    starting_price: 380000,
+    price_suffix: "/ event",
+    image: "https://picsum.photos/seed/wedream2a/900/600",
+    verified: false,
+    detailPage: "hall-detail.html",
+    sectionPage: "halls.html",
+    sectionLabel: "Browse All Halls"
+  },
+  {
+    id: 50,
+    cat: "catering",
+    catLabel: "Catering",
+    catIcon: "fa-utensils",
+    name: "Al-Shahid Pakwan",
+    area: "North Karachi",
+    rating: 5.0,
+    starting_price: 45000,
+    price_suffix: "/ package",
+    image: "https://picsum.photos/seed/alshahid1/900/600",
+    verified: true,
+    verifiedLabel: "5.0 Rating | Est. 1995",
+    detailPage: "catering-detail.html",
+    sectionPage: "catering.html",
+    sectionLabel: "Browse All Caterers"
+  },
+  {
+    id: 51,
+    cat: "catering",
+    catLabel: "Catering",
+    catIcon: "fa-utensils",
+    name: "Hanif Rajput Caterers",
+    area: "PECHS / North Karachi",
+    rating: 4.9,
+    starting_price: 360000,
+    price_suffix: "/ event",
+    image: "https://picsum.photos/seed/hanif_nk1/900/600",
+    verified: true,
+    verifiedLabel: "ISO Certified",
+    detailPage: "catering-detail.html",
+    sectionPage: "catering.html",
+    sectionLabel: "Browse All Caterers"
+  },
+  {
+    id: 50,
+    cat: "photography",
+    catLabel: "Photography",
+    catIcon: "fa-camera",
+    name: "Star Photography NK",
+    area: "North Karachi",
+    rating: 3.8,
+    starting_price: 16000,
+    price_suffix: "/ package",
+    image: "https://picsum.photos/seed/starnk1/900/600",
+    verified: true,
+    verifiedLabel: "Local Business Verified",
+    detailPage: "photographers-detail.html",
+    sectionPage: "photographers.html",
+    sectionLabel: "Browse All Photographers"
+  },
+  {
+    id: 50,
+    cat: "carental",
+    catLabel: "Car Rental",
+    catIcon: "fa-car",
+    name: "Vigo Rent a Car",
+    area: "North Karachi",
+    rating: 4.7,
+    starting_price: 7000,
+    price_suffix: "/ day",
+    image: "https://picsum.photos/seed/vigonk1/900/600",
+    verified: true,
+    verifiedLabel: "Professional Chauffeur",
+    detailPage: "carrentals-detail.html",
+    sectionPage: "carrentals.html",
+    sectionLabel: "Browse All Car Rentals"
+  }
+];
 
-// ── CONFIG ────────────────────────────────────────────────────────────────
-const CATS = {
-    halls: {
-        label:      'Wedding Halls',
-        icon:       'fa-building',
-        jsonFile:   'halls.json',
-        detailPage: 'hall-detail.html',
-        storeKey:   'wd_compare_halls',
-        eyebrow:    'Wedding Venues',
-        title:      'The Grandeur <span id="titleSpan">Collection</span>',
-        sub:        'Curated venues for royalty &amp; grand celebrations',
-        priceLabel: '/ event',
-        catLabel:   'Hall',
-        catIcon:    'fa-building',
-        getImg:     item => item.image ? `images/halls/${item.image}` : '',
-        getArea:    item => item.area,
-        getPrice:   item => item.starting_price,
-        getCompare: item => ({
-            id: item.id, name: item.name,
-            image: item.image ? `images/halls/${item.image}` : '',
-            area: item.area, rating: item.rating,
-            price: item.starting_price, capacity: item.capacity,
-            parking: item.parking || false, ac: item.ac || false,
-            catering: item.catering || false, outdoor: item.outdoor || false,
-            stage: item.stage || false
-        })
-    },
-    caterers: {
-        label:      'Caterers',
-        icon:       'fa-utensils',
-        jsonFile:   'caterers.json',
-        detailPage: 'catering-detail.html',
-        storeKey:   'wd_compare_caterers',
-        eyebrow:    'Master Chefs',
-        title:      'Award-Winning <span id="titleSpan">Cuisine</span>',
-        sub:        'Premium catering services for unforgettable feasts',
-        priceLabel: '/ event',
-        catLabel:   'Caterer',
-        catIcon:    'fa-utensils',
-        getImg:     item => item.image ? `images/caterers/${item.image}` : '',
-        getArea:    item => item.area,
-        getPrice:   item => item.starting_price,
-        getCompare: item => ({
-            id: item.id, name: item.name,
-            image: item.image ? `images/caterers/${item.image}` : '',
-            city: item.area, area: item.area, rating: item.rating,
-            price: item.starting_price, pricePerHead: item.price_per_head,
-            cuisine: (item.cuisine_types || []).join(', '),
-            minGuests: item.min_guests || 50,
-            halal: item.halal !== false,
-            vegetarian: item.vegetarian || false,
-            delivery: item.delivery || false
-        })
-    },
-    decorators: {
-        label:      'Decorators',
-        icon:       'fa-wand-magic-sparkles',
-        jsonFile:   'decorators.json',
-        detailPage: 'decorating-detail.html',
-        storeKey:   'wd_compare_decorators',
-        eyebrow:    'Design Maestros',
-        title:      'Master <span id="titleSpan">Designers</span>',
-        sub:        'Exquisite decor &amp; event styling for royal celebrations',
-        priceLabel: '(starting)',
-        catLabel:   'Decorator',
-        catIcon:    'fa-wand-magic-sparkles',
-        getImg:     item => item.image ? `images/decorators/${item.image}` : '',
-        getArea:    item => item.area,
-        getPrice:   item => item.starting_price,
-        getCompare: item => ({
-            id: item.id, name: item.name,
-            image: item.image ? `images/decorators/${item.image}` : '',
-            city: item.area, area: item.area, rating: item.rating,
-            price: item.starting_price,
-            specialty: (item.specialties || []).join(', '),
-            floral: item.floral || false, lighting: item.lighting || false,
-            stageDecor: item.stage_decor || false
-        })
-    }
-};
-
-const MAX_COMPARE = 4;
-let activeCat  = 'halls';
-let allData    = [];
-let activeArea = 'all';
-
-// ── UTILS ──────────────────────────────────────────────────────────────────
-function fmtPKR(n) { return Number(n || 0).toLocaleString('en-PK'); }
+// ══════════════════════════════════════
+// SLIDER STATE
+// ══════════════════════════════════════
+let trvCurrentIdx = 0;
+let trvActiveFilter = "all";
+let trvFiltered = [...TRV_VENDORS];
 
 function buildStars(r) {
-    r = r || 0;
-    const f = Math.floor(r), h = (r - f) >= 0.5 ? 1 : 0, e = 5 - f - h;
-    let s = '';
-    for (let i = 0; i < f; i++) s += '<i class="fas fa-star"></i>';
-    if (h) s += '<i class="fas fa-star-half-alt"></i>';
-    for (let i = 0; i < e; i++) s += '<i class="far fa-star"></i>';
-    return s;
+  const full = Math.floor(r), half = (r - full) >= 0.5 ? 1 : 0, empty = 5 - full - half;
+  let s = '';
+  for(let i=0;i<full;i++) s += '<i class="fas fa-star"></i>';
+  if(half) s += '<i class="fas fa-star-half-alt"></i>';
+  for(let i=0;i<empty;i++) s += '<i class="far fa-star"></i>';
+  return s;
 }
 
-// ── COMPARE STORAGE ────────────────────────────────────────────────────────
-function getCompareList() {
-    try { return JSON.parse(localStorage.getItem(CATS[activeCat].storeKey) || '[]'); }
-    catch { return []; }
-}
-function saveCompareList(arr) {
-    localStorage.setItem(CATS[activeCat].storeKey, JSON.stringify(arr));
-}
-function isInCompare(id) { return getCompareList().some(i => String(i.id) === String(id)); }
+function formatPKR(n) { return Number(n).toLocaleString('en-PK'); }
 
-// ── COMPARE ACTIONS ────────────────────────────────────────────────────────
-function toggleCompare(e, id, compareData) {
-    e.stopPropagation();
-    let list = getCompareList();
-    const btn = document.querySelector(`.compare-btn[data-id="${id}"]`);
-    const idx = list.findIndex(i => String(i.id) === String(id));
-
-    if (idx > -1) {
-        list.splice(idx, 1);
-        saveCompareList(list);
-        if (btn) { btn.classList.remove('added'); btn.innerHTML = '<i class="fas fa-scale-balanced"></i> Compare'; }
-        showToast('Comparison se hataya gaya');
-    } else {
-        if (list.length >= MAX_COMPARE) { showToast('Max 4 items! Pehle koi hatao.', true); return; }
-        list.push(compareData);
-        saveCompareList(list);
-        if (btn) { btn.classList.add('added'); btn.innerHTML = '<i class="fas fa-check"></i> Added'; }
-        showToast('Comparison mein add ho gaya!');
-    }
-    renderCompareBar();
-    updateNavBadge();
+function getCardsPerView() {
+  const w = window.innerWidth;
+  if(w >= 1200) return 4;
+  if(w >= 900)  return 3;
+  if(w >= 580)  return 2;
+  return 1;
 }
 
-function clearCompare() {
-    saveCompareList([]);
-    document.querySelectorAll('.compare-btn.added').forEach(b => {
-        b.classList.remove('added');
-        b.innerHTML = '<i class="fas fa-scale-balanced"></i> Compare';
-    });
-    renderCompareBar();
-    updateNavBadge();
-    showToast('Comparison clear ho gaya');
-}
-
-function goCompare() {
-    window.location.href = `compare.html?cat=${activeCat}`;
-}
-
-function syncCompareButtons() {
-    const list = getCompareList();
-    const ids  = list.map(i => String(i.id));
-    document.querySelectorAll('.compare-btn').forEach(btn => {
-        if (ids.includes(String(btn.dataset.id))) {
-            btn.classList.add('added');
-            btn.innerHTML = '<i class="fas fa-check"></i> Added';
-        }
-    });
-}
-
-function renderCompareBar() {
-    const list  = getCompareList();
-    const bar   = document.getElementById('compareBar');
-    const chips = document.getElementById('compareChips');
-    const count = document.getElementById('compareCount');
-
-    if (!list.length) { bar.classList.remove('visible'); return; }
-    bar.classList.add('visible');
-
-    count.textContent = `${list.length}/4`;
-    const chipHTML = list.map(item => `
-        <div class="chip">
-            <i class="fas ${CATS[activeCat].catIcon}" style="font-size:0.6rem;"></i>
-            ${item.name}
-            <button onclick="removeFromBar('${item.id}')" title="Remove">×</button>
-        </div>`).join('');
-    chips.innerHTML = `<span class="compare-count">${list.length}/4</span>` + chipHTML;
-}
-
-function removeFromBar(id) {
-    let list = getCompareList().filter(i => String(i.id) !== String(id));
-    saveCompareList(list);
-    const btn = document.querySelector(`.compare-btn[data-id="${id}"]`);
-    if (btn) { btn.classList.remove('added'); btn.innerHTML = '<i class="fas fa-scale-balanced"></i> Compare'; }
-    renderCompareBar();
-    updateNavBadge();
-    showToast('Hataya gaya');
-}
-
-function updateNavBadge() {
-    const cats = ['halls','caterers','decorators','photographers'];
-    let total = 0;
-    cats.forEach(c => {
-        try { total += JSON.parse(localStorage.getItem('wd_compare_' + c) || '[]').length; } catch {}
-    });
-    const badge = document.getElementById('compareNavBadge');
-    if (!badge) return;
-    badge.textContent = total;
-    badge.classList.toggle('visible', total > 0);
-}
-
-// ── TOAST ──────────────────────────────────────────────────────────────────
-let toastTimer;
-function showToast(msg, isErr = false) {
-    const t = document.getElementById('toast');
-    t.textContent = msg;
-    t.className   = 'show' + (isErr ? ' error' : '');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => { t.className = ''; }, 2500);
-}
-
-// ── CARD BUILDER ───────────────────────────────────────────────────────────
-function buildCard(item, catCfg, delay) {
-    const imgSrc     = catCfg.getImg(item);
-    const area       = catCfg.getArea(item);
-    const price      = catCfg.getPrice(item);
-    const compareData = catCfg.getCompare(item);
-    const inCompare  = isInCompare(item.id);
-    const onerror    = `this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=60';`;
-
-    return `
-    <div class="col-12 col-md-6 col-lg-4 col-xl-3 vendor-col card-item" data-area="${area}" style="animation-delay:${delay}ms">
-        <div class="vendor-card" onclick="openDetail(${item.id})">
-            <div class="card-img-wrap">
-                <img src="${imgSrc || 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=60'}"
-                     alt="${item.name}" onerror="${onerror}">
-                <div class="img-overlay"></div>
-                ${item.verified ? `<div class="premium-badge"><i class="fas fa-crown"></i> Premium</div>` : ''}
-                <button class="compare-btn ${inCompare ? 'added' : ''}"
-                    data-id="${item.id}"
-                    onclick='toggleCompare(event, ${item.id}, ${JSON.stringify(compareData)})'>
-                    <i class="fas ${inCompare ? 'fa-check' : 'fa-scale-balanced'}"></i>
-                    ${inCompare ? 'Added' : 'Compare'}
-                </button>
-            </div>
-            <div class="card-body-inner">
-                <div>
-                    <div class="card-cat-tag">
-                        <i class="fas ${catCfg.catIcon}"></i> ${catCfg.catLabel}
-                    </div>
-                    <h3 class="card-vendor-name">${item.name}</h3>
-                    <div class="card-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>${area}</span>
-                    </div>
-                    <div class="rating-row">
-                        <div class="stars">${buildStars(item.rating)}</div>
-                        <span class="rating-pill">${item.rating}</span>
-                    </div>
-                </div>
-                <div>
-                    <div class="gold-divider"></div>
-                    <div class="card-footer-row">
-                        <div class="price-block">
-                            <span class="price-label">PKR</span>
-                            <span class="price-num">${fmtPKR(price)}</span>
-                            <span class="price-unit">${catCfg.priceLabel}</span>
-                        </div>
-                        <button class="btn-details" onclick="event.stopPropagation(); openDetail(${item.id})">
-                            <i class="fas fa-arrow-right"></i> Details
-                        </button>
-                    </div>
-                </div>
-            </div>
+function renderCards() {
+  const slider = document.getElementById('trvSlider');
+  slider.innerHTML = trvFiltered.map(v => `
+    <div class="trv-card" onclick="window.location.href='${v.detailPage}?id=${v.id}'">
+      <div class="trv-card-img">
+        <img src="${v.image}" alt="${v.name}" onerror="this.src='https://picsum.photos/seed/fallback/900/600'"/>
+        <div class="trv-card-img-overlay"></div>
+        ${v.verified ? `<div class="trv-verified"><i class="fa-solid fa-gem"></i> ${v.verifiedLabel || 'Verified'}</div>` : ''}
+        <div class="trv-cat-chip"><i class="fa-solid ${v.catIcon}"></i> ${v.catLabel}</div>
+      </div>
+      <div class="trv-card-body">
+        <div>
+          <div class="trv-card-name">${v.name}</div>
+          <div class="trv-card-area"><i class="fa-solid fa-location-dot"></i> ${v.area}</div>
+          <div class="trv-rating-row">
+            <div class="trv-stars">${buildStars(v.rating)}</div>
+            <span class="trv-rating-pill">${v.rating}</span>
+          </div>
         </div>
-    </div>`;
+        <div>
+          <div class="trv-divider"></div>
+          <div class="trv-price-label">Starting From</div>
+          <div class="trv-price-val">PKR ${formatPKR(v.starting_price)}<span>${v.price_suffix}</span></div>
+          <div class="trv-card-bottom">
+            <a href="${v.detailPage}?id=${v.id}" class="trv-view-btn" onclick="event.stopPropagation()">
+              <i class="fa-solid fa-arrow-right"></i> Details
+            </a>
+            <a href="${v.sectionPage}" class="trv-section-link" onclick="event.stopPropagation()">
+              ${v.sectionLabel} →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  trvCurrentIdx = 0;
+  updateSlider();
 }
 
-// ── OPEN DETAIL ────────────────────────────────────────────────────────────
-function openDetail(id) {
-    window.location.href = `${CATS[activeCat].detailPage}?id=${id}`;
+function updateSlider() {
+  const slider  = document.getElementById('trvSlider');
+  const perView = getCardsPerView();
+  const maxIdx  = Math.max(0, trvFiltered.length - perView);
+  trvCurrentIdx = Math.min(trvCurrentIdx, maxIdx);
+
+  const cardW = slider.children[0] ? slider.children[0].offsetWidth + 24 : 0;
+  slider.style.transform = `translateX(-${trvCurrentIdx * cardW}px)`;
+
+  // Arrows
+  document.getElementById('trvPrev').disabled = trvCurrentIdx === 0;
+  document.getElementById('trvNext').disabled = trvCurrentIdx >= maxIdx;
+
+  // Dots
+  const totalDots = Math.ceil(trvFiltered.length / perView);
+  const activeDot = Math.floor(trvCurrentIdx / perView);
+  const dotsEl    = document.getElementById('trvDots');
+  dotsEl.innerHTML = Array.from({length: totalDots}, (_,i) =>
+    `<div class="trv-dot ${i===activeDot?'active':''}" onclick="trvGoTo(${i*perView})"></div>`
+  ).join('');
 }
 
-// ── FILTER BAR ─────────────────────────────────────────────────────────────
-function buildFilterBar(areas) {
-    const bar = document.getElementById('filterBar');
-    bar.innerHTML = `<button class="filter-btn active" data-filter="all">All Areas</button>` +
-        areas.map(a => `<button class="filter-btn" data-filter="${a}">${a}</button>`).join('');
-
-    bar.addEventListener('click', e => {
-        const btn = e.target.closest('.filter-btn');
-        if (!btn) return;
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        activeArea = btn.dataset.filter;
-        applyFilter(activeArea);
-    });
+function trvSlide(dir) {
+  const perView = getCardsPerView();
+  const maxIdx  = Math.max(0, trvFiltered.length - perView);
+  trvCurrentIdx = Math.max(0, Math.min(trvCurrentIdx + dir, maxIdx));
+  updateSlider();
 }
 
-function applyFilter(filter) {
-    const cards = document.querySelectorAll('.card-item');
-    let vis = 0;
-    cards.forEach(c => {
-        const show = filter === 'all' || c.dataset.area === filter;
-        c.style.display = show ? '' : 'none';
-        if (show) vis++;
-    });
-    document.getElementById('noResults').style.display = vis === 0 ? 'block' : 'none';
+function trvGoTo(idx) {
+  trvCurrentIdx = idx;
+  updateSlider();
 }
 
-// ── LOAD CATEGORY ──────────────────────────────────────────────────────────
-async function loadCategory(cat) {
-    activeCat  = cat;
-    activeArea = 'all';
-    const cfg  = CATS[cat];
-
-    // Update header text
-    document.getElementById('eyebrow').textContent       = cfg.eyebrow;
-    document.getElementById('sectionTitle').innerHTML    = cfg.title;
-    document.getElementById('sectionSub').innerHTML      = cfg.sub;
-
-    // Skeleton
-    const grid = document.getElementById('productContainer');
-    grid.innerHTML = Array(8).fill(`
-        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-            <div class="skeleton-card"></div>
-        </div>`).join('');
-    document.getElementById('filterBar').innerHTML = '';
-    document.getElementById('noResults').style.display = 'none';
-
-    try {
-        const res = await axios.get(cfg.jsonFile);
-        allData = res.data;
-        const areas = [...new Set(allData.map(cfg.getArea))];
-        buildFilterBar(areas);
-        grid.innerHTML = allData.map((item, i) => buildCard(item, cfg, i * 30)).join('');
-        syncCompareButtons();
-        renderCompareBar();
-    } catch (err) {
-        console.error(cfg.jsonFile, 'load error:', err);
-        grid.innerHTML = `<div class="col-12 text-center" style="padding:60px 0;color:rgba(255,255,255,0.3);">
-            <i class="fas fa-exclamation-triangle" style="font-size:2rem;color:rgba(200,155,44,0.25);margin-bottom:12px;display:block;"></i>
-            Data load nahi ho saka. JSON file check karein.
-        </div>`;
-    }
-}
-
-// ── CATEGORY TABS ──────────────────────────────────────────────────────────
-document.querySelectorAll('.cat-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        loadCategory(btn.dataset.cat);
-    });
+// ── Category Filter ──
+document.getElementById('trvTabs').addEventListener('click', function(e) {
+  const tab = e.target.closest('.trv-tab');
+  if(!tab) return;
+  document.querySelectorAll('.trv-tab').forEach(t => t.classList.remove('active'));
+  tab.classList.add('active');
+  trvActiveFilter = tab.dataset.cat;
+  trvFiltered = trvActiveFilter === 'all' ? [...TRV_VENDORS] : TRV_VENDORS.filter(v => v.cat === trvActiveFilter);
+  renderCards();
 });
 
-// ── NAVBAR & FOOTER ────────────────────────────────────────────────────────
-$(document).ready(() => {
-    $.get('navebar.html', data => {
-        $('#nav-container').html(data);
-        const page = window.location.pathname.split('/').pop().replace('.html','').toLowerCase();
-        const pageMap = {
-            'vendors': 'halls',
-            'halls': 'halls',
-            'catering': 'vendors',
-            'decorating': 'vendors'
-        };
-        const key = pageMap[page] || 'halls';
-        $('.wd-menu-link').removeClass('active');
-        $(`.wd-menu-link[data-nav="${key}"]`).addClass('active');
-        updateNavBadge();
-    });
-    $.get('footer.html', data => { $('#footer-container').html(data); });
+// ── Init ──
+renderCards();
+window.addEventListener('resize', updateSlider);
+
+// ── Auto-play ──
+let trvAuto = setInterval(() => {
+  const perView = getCardsPerView();
+  const maxIdx  = Math.max(0, trvFiltered.length - perView);
+  if(trvCurrentIdx >= maxIdx) trvCurrentIdx = 0;
+  else trvCurrentIdx++;
+  updateSlider();
+}, 4500);
+
+document.getElementById('trvSlider').addEventListener('mouseenter', () => clearInterval(trvAuto));
+document.getElementById('trvSlider').addEventListener('mouseleave', () => {
+  trvAuto = setInterval(() => {
+    const perView = getCardsPerView();
+    const maxIdx  = Math.max(0, trvFiltered.length - perView);
+    if(trvCurrentIdx >= maxIdx) trvCurrentIdx = 0;
+    else trvCurrentIdx++;
+    updateSlider();
+  }, 4500);
 });
-
-// ── CHECK URL PARAM ────────────────────────────────────────────────────────
-const urlCat = new URLSearchParams(location.search).get('cat');
-if (urlCat && CATS[urlCat]) {
-    activeCat = urlCat;
-    document.querySelectorAll('.cat-btn').forEach(b => {
-        b.classList.toggle('active', b.dataset.cat === urlCat);
-    });
-}
-
-// ── INIT ───────────────────────────────────────────────────────────────────
-loadCategory(activeCat);
-
 </script>
 </body>
 </html>
