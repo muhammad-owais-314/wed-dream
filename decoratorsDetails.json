@@ -6,6 +6,8 @@
     "rating": 4.8,
     "starting_price": 120000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/vmpevent/600/400",
+    "verified": true,
     "address": "31/D Stadium Lane 4, Khayaban-e-Shamsher, Phase 5, DHA, Karachi, Pakistan",
     "phone": "+92 21 35878899",
     "whatsapp": "+92 21 35878899",
@@ -58,7 +60,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Verified on Shadiyana.pk",
     "website": "shadiyana.pk",
     "established": 2015
@@ -70,6 +71,8 @@
     "rating": 4.7,
     "starting_price": 130000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/eventdesigner/600/400",
+    "verified": true,
     "address": "DHA, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -120,7 +123,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Premium Event Designer",
     "established": 2012
   },
@@ -131,6 +133,8 @@
     "rating": 4.6,
     "starting_price": 100000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/sparkleevents/600/400",
+    "verified": true,
     "address": "DHA, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -181,7 +185,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Verified Event Planner",
     "website": "sparkleeventspakistan.blogspot.com",
     "established": 2016
@@ -193,6 +196,8 @@
     "rating": 4.5,
     "starting_price": 150000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/marcemevent/600/400",
+    "verified": true,
     "address": "Khayaban-e-Shahbaz Commercial Lane 8, DHA Phase 6, Karachi, Pakistan",
     "phone": "+92 21 35878899",
     "whatsapp": "+92 21 35878899",
@@ -243,7 +248,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Premium Event Planner",
     "website": "marcem.com.pk",
     "established": 2010
@@ -255,6 +259,8 @@
     "rating": 4.4,
     "starting_price": 110000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/7thsky/600/400",
+    "verified": true,
     "address": "DHA, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -304,7 +310,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on UrduPoint",
     "established": 2013
   },
@@ -315,6 +320,8 @@
     "rating": 4.9,
     "starting_price": 180000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/dawatevent/600/400",
+    "verified": true,
     "address": "Ocean Mall G-22, Clifton, Karachi, Pakistan",
     "phone": "+92 321 7888061",
     "whatsapp": "+92 321 7888061",
@@ -369,11 +376,9 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Premium Event Management",
     "website": "www.dawatpk.com",
-    "established": 2014,
-    "employees": 199
+    "established": 2014
   },
   {
     "id": 7,
@@ -382,6 +387,8 @@
     "rating": 4.3,
     "starting_price": 80000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/multibusiness/600/400",
+    "verified": true,
     "address": "303, 3rd floor, street 4th, near aqsa masjid street, punjab churangi, Clifton, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -434,17 +441,18 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on BusinessList.pk",
     "established": 2010
   },
   {
     "id": 8,
-    "name": "Prime Events Management Services",
+    "name": "Prime Events Management",
     "area": "Clifton",
     "rating": 4.5,
     "starting_price": 140000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/primeevents/600/400",
+    "verified": true,
     "address": "#501, 5th Floor, Sky Mark Tower, Karachi, Pakistan",
     "phone": "+92 21 1234567",
     "whatsapp": "+92 21 1234567",
@@ -490,7 +498,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on BusinessList.pk",
     "established": 2012
   },
@@ -501,6 +508,8 @@
     "rating": 4.4,
     "starting_price": 120000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/partnersgroup/600/400",
+    "verified": true,
     "address": "422, Mashrique Center, Block-14, Gulshan (Serves Clifton), Karachi, Pakistan",
     "phone": "+92 21 34947006",
     "whatsapp": "+92 21 34947006",
@@ -546,7 +555,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on BusinessList.pk",
     "established": 2008
   },
@@ -557,6 +565,8 @@
     "rating": 4.3,
     "starting_price": 100000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/ziaulhaq/600/400",
+    "verified": true,
     "address": "D-51, Block-9, Clifton, Karachi, Pakistan",
     "phone": "+92 21 5866841",
     "whatsapp": "+92 21 5866841",
@@ -602,17 +612,18 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on BusinessList.pk",
     "established": 1985
   },
   {
     "id": 11,
-    "name": "Gadit l ADS",
+    "name": "Gadit ADS",
     "area": "PECHS",
     "rating": 4.7,
     "starting_price": 90000,
     "price_type": "project",
+    "image": "https://picsum.photos/seed/gaditads/600/400",
+    "verified": true,
     "address": "2nd Floor, D-141, Block II, PECHS, Karachi 75400, Pakistan",
     "phone": "+92 345 2893292",
     "whatsapp": "+92 345 2893292",
@@ -639,18 +650,11 @@
         "name": "Client",
         "rating": 5,
         "comment": "Great architecture services but most importantly very well organize company when it comes to services. I was really impressed the way they handle their projects."
-      },
-      {
-        "name": "Client",
-        "rating": 5,
-        "comment": "My house plannings were initially prepared by one firm but latter on we hired services of mr. Saad. He spent a lot of time to correct the same. He provided me time to listen my requirements."
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer"],
-    "verified": true,
     "verified_badge": "9 Reviews on Houzz",
-    "established": 2010,
-    "architect": "Saad Gadit"
+    "established": 2010
   },
   {
     "id": 12,
@@ -659,6 +663,8 @@
     "rating": 4.5,
     "starting_price": 85000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/therope/600/400",
+    "verified": true,
     "address": "Suite #118, P.E.C.H.S. Shahrah-e-Faisal, Karachi, Pakistan",
     "phone": "+92 21 4542925",
     "whatsapp": "+92 21 4542925",
@@ -704,7 +710,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on BusinessList.pk",
     "established": 2011
   },
@@ -715,6 +720,8 @@
     "rating": 4.4,
     "starting_price": 70000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/siddiquidecor/600/400",
+    "verified": true,
     "address": "A-6, 1st Floor, Block-2 Main Tariq Road, PECHS, Karachi, Pakistan",
     "phone": "+92 21 4537279",
     "whatsapp": "+92 21 4537279",
@@ -760,17 +767,18 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on BusinessList.pk",
     "established": 2005
   },
   {
     "id": 14,
-    "name": "Floral Design",
+    "name": "Floral Design Studio",
     "area": "PECHS",
     "rating": 4.3,
     "starting_price": 65000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/floraldesign/600/400",
+    "verified": true,
     "address": "6-B, P.E.C.H.S. Shahrah-e-Faisal, Karachi, Pakistan",
     "phone": "+92 21 4537126",
     "whatsapp": "+92 21 4537126",
@@ -816,7 +824,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on BusinessList.pk",
     "established": 2000
   },
@@ -827,6 +834,8 @@
     "rating": 4.2,
     "starting_price": 75000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/decorstudio/600/400",
+    "verified": true,
     "address": "PECHS, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -861,17 +870,18 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Local Verified",
     "established": 2016
   },
   {
     "id": 16,
-    "name": "Craft Master",
+    "name": "Craft Master Events",
     "area": "Gulshan-e-Iqbal",
     "rating": 4.6,
     "starting_price": 80000,
     "price_type": "project",
+    "image": "https://picsum.photos/seed/craftmaster/600/400",
+    "verified": true,
     "address": "Suite 512, 5th Floor, Al-Fiza Glass Tower, Near Lasania Restaurant, Rashid Minhas Road, Gulshan e Iqbal Block 10A, Karachi 75300, Pakistan",
     "phone": "+92 332 7395822",
     "whatsapp": "+92 332 7395822",
@@ -900,17 +910,18 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer"],
-    "verified": true,
     "verified_badge": "Verified on Houzz",
     "established": 2015
   },
   {
     "id": 17,
-    "name": "Aimz Event Planners & Decorators",
+    "name": "Aimz Event Planners",
     "area": "Gulshan-e-Iqbal",
     "rating": 4.4,
     "starting_price": 75000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/aimzevents/600/400",
+    "verified": true,
     "address": "M-9, Mez.floor, Room #2, Mashriq Centre, Block-14, Gulshan-e-iqbal, Karachi, Pakistan",
     "phone": "+92 21 35470555",
     "whatsapp": "+92 21 35470555",
@@ -956,17 +967,18 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on BusinessList.pk",
     "established": 2010
   },
   {
     "id": 18,
-    "name": "Kamz & Kirz",
+    "name": "Kamz & Kirz Events",
     "area": "Gulshan-e-Iqbal",
     "rating": 4.3,
     "starting_price": 70000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/kamzkirz/600/400",
+    "verified": true,
     "address": "Lsb Row #1, Street #3, Block-3, Gulshan-e-iqbal, Karachi, Pakistan",
     "phone": "+92 21 34973993",
     "whatsapp": "+92 21 34973993",
@@ -1001,7 +1013,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on BusinessList.pk",
     "established": 2012
   },
@@ -1012,6 +1023,8 @@
     "rating": 4.2,
     "starting_price": 65000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/gulshandecor/600/400",
+    "verified": true,
     "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1046,7 +1059,6 @@
       }
     ],
     "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Local Verified",
     "established": 2014
   },
@@ -1057,6 +1069,8 @@
     "rating": 4.1,
     "starting_price": 55000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/nipadecor/600/400",
+    "verified": true,
     "address": "Near Nipa Chowrangi, Gulshan-e-Iqbal, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1091,7 +1105,6 @@
       }
     ],
     "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Local Verified",
     "established": 2010
   },
@@ -1102,6 +1115,8 @@
     "rating": 4.7,
     "starting_price": 95000,
     "price_type": "project",
+    "image": "https://picsum.photos/seed/atelier3/600/400",
+    "verified": true,
     "address": "A-72/1 Sadabad Society, Gulistan-e-Jauhar Block 4, Karachi, Sindh 75230, Pakistan",
     "phone": "+92 343 0000000",
     "whatsapp": "+92 343 0000000",
@@ -1118,7 +1133,6 @@
       "Client-focused design",
       "Innovation and creativity balanced"
     ],
-    "philosophy": "Designing a small space is a big challenge and everybody deserves access to a good design. Innovation and creativity are a derivative of balancing the design.",
     "reviews": [
       {
         "name": "Client",
@@ -1127,10 +1141,8 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer"],
-    "verified": true,
     "verified_badge": "Verified on Banjaiga",
-    "established": 2016,
-    "email": "smannas39@yahoo.com"
+    "established": 2016
   },
   {
     "id": 22,
@@ -1139,6 +1151,8 @@
     "rating": 4.5,
     "starting_price": 80000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/sevenaura/600/400",
+    "verified": true,
     "address": "Suite G-5, B5 Street 1, Block 12, Gulistan-e-Johar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1190,7 +1204,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Verified on Shadiyana.pk",
     "established": 2018
   },
@@ -1201,6 +1214,8 @@
     "rating": 4.4,
     "starting_price": 140000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/bellavista/600/400",
+    "verified": true,
     "address": "Plot No-C-79, 80 Block, Gulistan-e-Jouhar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1246,7 +1261,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Local Verified",
     "established": 2012
   },
@@ -1257,6 +1271,8 @@
     "rating": 4.3,
     "starting_price": 75000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/johargrand/600/400",
+    "verified": true,
     "address": "Block 17, Gulistan-e-Johar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1291,7 +1307,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Local Verified",
     "established": 2015
   },
@@ -1302,6 +1317,8 @@
     "rating": 4.2,
     "starting_price": 70000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/pearljohar/600/400",
+    "verified": true,
     "address": "Block 19, Gulistan-e-Johar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1336,7 +1353,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Local Verified",
     "established": 2016
   },
@@ -1347,6 +1363,8 @@
     "rating": 4.3,
     "starting_price": 50000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/ahmedparty/600/400",
+    "verified": true,
     "address": "Shop no. 6, near Masjid O Imam Bargah Hussaini, Federal B Area FC Area, Karachi, Pakistan",
     "phone": "+92 300 0000000",
     "whatsapp": "+92 300 0000000",
@@ -1359,7 +1377,6 @@
     "staff_available": ["Male"],
     "specialties": ["Party decoration", "Event decor setup"],
     "features": ["Budget-friendly packages", "Local area expertise"],
-    "location": "Near Masjid O Imam Bargah Hussaini, Gole Market - FC Area nearby",
     "reviews": [
       {
         "name": "Local Client",
@@ -1368,7 +1385,6 @@
       }
     ],
     "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on Mapcarta",
     "established": 2010
   },
@@ -1379,6 +1395,8 @@
     "rating": 4.2,
     "starting_price": 48000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/fbeventdecor/600/400",
+    "verified": true,
     "address": "Federal B Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1413,7 +1431,6 @@
       }
     ],
     "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Local Verified",
     "established": 2015
   },
@@ -1424,6 +1441,8 @@
     "rating": 4.1,
     "starting_price": 55000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/granddecor/600/400",
+    "verified": true,
     "address": "FB Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1458,7 +1477,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Local Verified",
     "established": 2010
   },
@@ -1469,6 +1487,8 @@
     "rating": 4.0,
     "starting_price": 45000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/starpartydecor/600/400",
+    "verified": true,
     "address": "FB Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1497,7 +1517,6 @@
       }
     ],
     "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Local Verified",
     "established": 2014
   },
@@ -1508,6 +1527,8 @@
     "rating": 4.0,
     "starting_price": 42000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/fbdecorhub/600/400",
+    "verified": true,
     "address": "Near KDA Market, FB Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1536,17 +1557,18 @@
       }
     ],
     "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Local Verified",
     "established": 2015
   },
   {
     "id": 31,
-    "name": "VOGUE THE INTERIOR MASTER",
+    "name": "Vogue The Interior Master",
     "area": "Bahadurabad",
     "rating": 4.8,
     "starting_price": 100000,
     "price_type": "project",
+    "image": "https://picsum.photos/seed/vogueinterior/600/400",
+    "verified": true,
     "address": "9, Bahadurabad, Block-3, Shaheed-e-Millat Road, Karachi, Pakistan",
     "phone": "+92 21 34924766",
     "whatsapp": "+92 21 34924766",
@@ -1566,17 +1588,18 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer"],
-    "verified": true,
     "verified_badge": "Listed on BusinessList.pk",
     "established": 2010
   },
   {
     "id": 32,
-    "name": "The Wedder's - Event Management",
+    "name": "The Wedder's Event Management",
     "area": "Bahadurabad",
     "rating": 4.4,
     "starting_price": 70000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/weddersevent/600/400",
+    "verified": true,
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1611,17 +1634,18 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on UrduPoint",
     "established": 2013
   },
   {
     "id": 33,
-    "name": "Party Popper - Event Planner",
+    "name": "Party Popper Event Planner",
     "area": "Bahadurabad",
     "rating": 4.3,
     "starting_price": 65000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/partypopper/600/400",
+    "verified": true,
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1656,7 +1680,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on UrduPoint",
     "established": 2014
   },
@@ -1667,6 +1690,8 @@
     "rating": 4.2,
     "starting_price": 60000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/joyplanner/600/400",
+    "verified": true,
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1701,7 +1726,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on UrduPoint",
     "established": 2015
   },
@@ -1712,6 +1736,8 @@
     "rating": 4.1,
     "starting_price": 55000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/nayyerdecor/600/400",
+    "verified": true,
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1740,62 +1766,18 @@
       }
     ],
     "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on UrduPoint",
     "established": 2010
   },
   {
     "id": 36,
-    "name": "Siddiqui Decor",
-    "area": "Tariq Road",
-    "rating": 4.4,
-    "starting_price": 70000,
-    "price_type": "package",
-    "address": "A-6, 1st Floor, Block-2 Main Tariq Road, Karachi, Pakistan",
-    "phone": "+92 21 4537279",
-    "whatsapp": "+92 21 4537279",
-    "gallery": [
-      "https://picsum.photos/seed/siddtariq1/900/600",
-      "https://picsum.photos/seed/siddtariq2/900/600",
-      "https://picsum.photos/seed/siddtariq3/900/600"
-    ],
-    "events_types": ["Wedding", "Party Decoration", "Event Decor"],
-    "staff_available": ["Male"],
-    "specialties": ["Wedding Decor", "Party Decoration", "Event Setup"],
-    "features": ["Affordable Packages", "Quality Work"],
-    "packages": [
-      {
-        "name": "Basic",
-        "price": 70000,
-        "min_guests": 100,
-        "includes": ["Stage Decor", "Chair Covers", "Basic Lighting"]
-      },
-      {
-        "name": "Premium",
-        "price": 120000,
-        "min_guests": 200,
-        "includes": ["Themed Decor", "Fresh Flowers", "Premium Lighting"]
-      }
-    ],
-    "reviews": [
-      {
-        "name": "Usman Ali",
-        "rating": 4,
-        "comment": "Good service on Tariq Road."
-      }
-    ],
-    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
-    "verified_badge": "Listed on BusinessList.pk",
-    "established": 2005
-  },
-  {
-    "id": 37,
     "name": "The Luxor Banquet",
     "area": "Tariq Road",
     "rating": 4.6,
     "starting_price": 120000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/luxorbanquet/600/400",
+    "verified": true,
     "address": "Main Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1836,17 +1818,18 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on Shadiyana.pk",
     "established": 2012
   },
   {
-    "id": 38,
+    "id": 37,
     "name": "The Liberty Ballroom",
     "area": "Tariq Road",
     "rating": 4.5,
     "starting_price": 100000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/libertyballroom/600/400",
+    "verified": true,
     "address": "C-551, P.E.C.H.S Block 2, Near Liberty Signal, Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1881,56 +1864,64 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on ShaadiHall.pk",
     "established": 2013
   },
   {
-    "id": 39,
-    "name": "Tariq Road Decor Center",
+    "id": 38,
+    "name": "Siddiqui Decor Tariq",
     "area": "Tariq Road",
-    "rating": 4.2,
-    "starting_price": 55000,
+    "rating": 4.4,
+    "starting_price": 70000,
     "price_type": "package",
-    "address": "Main Tariq Road, Karachi, Pakistan",
-    "phone": "+92 300 1234567",
-    "whatsapp": "+92 300 1234567",
+    "image": "https://picsum.photos/seed/siddiquitariq/600/400",
+    "verified": true,
+    "address": "A-6, 1st Floor, Block-2 Main Tariq Road, Karachi, Pakistan",
+    "phone": "+92 21 4537279",
+    "whatsapp": "+92 21 4537279",
     "gallery": [
-      "https://picsum.photos/seed/tcenter1/900/600",
-      "https://picsum.photos/seed/tcenter2/900/600",
-      "https://picsum.photos/seed/tcenter3/900/600"
+      "https://picsum.photos/seed/siddtariq1/900/600",
+      "https://picsum.photos/seed/siddtariq2/900/600",
+      "https://picsum.photos/seed/siddtariq3/900/600"
     ],
     "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
-    "specialties": ["Local Event Decor", "Affordable Packages"],
-    "features": ["Budget Friendly", "Quick Setup"],
+    "specialties": ["Wedding Decor", "Party Decoration", "Event Setup"],
+    "features": ["Affordable Packages", "Quality Work"],
     "packages": [
       {
         "name": "Basic",
-        "price": 55000,
+        "price": 70000,
         "min_guests": 100,
         "includes": ["Stage Decor", "Chair Covers", "Basic Lighting"]
+      },
+      {
+        "name": "Premium",
+        "price": 120000,
+        "min_guests": 200,
+        "includes": ["Themed Decor", "Fresh Flowers", "Premium Lighting"]
       }
     ],
     "reviews": [
       {
-        "name": "Local Client",
+        "name": "Usman Ali",
         "rating": 4,
-        "comment": "Good for small events."
+        "comment": "Good service on Tariq Road."
       }
     ],
-    "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
-    "verified": true,
-    "verified_badge": "Local Verified",
-    "established": 2010
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified_badge": "Listed on BusinessList.pk",
+    "established": 2005
   },
   {
-    "id": 40,
+    "id": 39,
     "name": "Elite Tariq Events",
     "area": "Tariq Road",
     "rating": 4.3,
     "starting_price": 75000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/elitetariq/600/400",
+    "verified": true,
     "address": "Dilkusha, Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1965,9 +1956,48 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Local Verified",
     "established": 2014
+  },
+  {
+    "id": 40,
+    "name": "Tariq Road Decor Center",
+    "area": "Tariq Road",
+    "rating": 4.2,
+    "starting_price": 55000,
+    "price_type": "package",
+    "image": "https://picsum.photos/seed/tariqdecor/600/400",
+    "verified": true,
+    "address": "Main Tariq Road, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/tcenter1/900/600",
+      "https://picsum.photos/seed/tcenter2/900/600",
+      "https://picsum.photos/seed/tcenter3/900/600"
+    ],
+    "events_types": ["Wedding", "Party Decoration", "Event Decor"],
+    "staff_available": ["Male"],
+    "specialties": ["Local Event Decor", "Affordable Packages"],
+    "features": ["Budget Friendly", "Quick Setup"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 55000,
+        "min_guests": 100,
+        "includes": ["Stage Decor", "Chair Covers", "Basic Lighting"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Local Client",
+        "rating": 4,
+        "comment": "Good for small events."
+      }
+    ],
+    "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
+    "verified_badge": "Local Verified",
+    "established": 2010
   },
   {
     "id": 41,
@@ -1976,6 +2006,8 @@
     "rating": 4.5,
     "starting_price": 70000,
     "price_type": "project",
+    "image": "https://picsum.photos/seed/kitchencorner/600/400",
+    "verified": true,
     "address": "Showroom: Al-Fazal Plaza, Block-B, North Nazimabad, Karachi | Office: Suit-16, Al-Zahra Centre, Block-G, Karachi, Sindh, Pakistan",
     "phone": "+92 21 6646850",
     "whatsapp": "+92 21 6646850",
@@ -1995,7 +2027,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer"],
-    "verified": true,
     "verified_badge": "Verified+ on BusinessList.pk | Est. 1987",
     "established": 1987
   },
@@ -2006,6 +2037,8 @@
     "rating": 4.4,
     "starting_price": 65000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/eventart/600/400",
+    "verified": true,
     "address": "Suit #A-6, Shah Faisal Plaza, Block-B, Opp: McDonald, North Nazimabad, Karachi, Pakistan",
     "phone": "+92 21 36720201",
     "whatsapp": "+92 21 36720201",
@@ -2040,17 +2073,18 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on BusinessList.pk",
     "established": 2012
   },
   {
     "id": 43,
-    "name": "Aatim international",
+    "name": "Aatim International",
     "area": "North Nazimabad",
     "rating": 4.3,
     "starting_price": 60000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/aatimintl/600/400",
+    "verified": true,
     "address": "R-15, block H, North Nazimabad, Karachi, Pakistan",
     "phone": "+92 300 8379355",
     "whatsapp": "+92 300 8379355",
@@ -2085,7 +2119,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Listed on BusinessList.pk",
     "established": 2010
   },
@@ -2096,6 +2129,8 @@
     "rating": 4.2,
     "starting_price": 55000,
     "price_type": "project",
+    "image": "https://picsum.photos/seed/alghani/600/400",
+    "verified": true,
     "address": "SB-1, Block-F, North Nazimabad, Shahra-e-Humayoon, Karachi, Pakistan",
     "phone": "+92 21 36678893",
     "whatsapp": "+92 21 36678893",
@@ -2115,7 +2150,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer"],
-    "verified": true,
     "verified_badge": "Listed on BusinessList.pk",
     "established": 2008
   },
@@ -2126,6 +2160,8 @@
     "rating": 4.2,
     "starting_price": 58000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/royalnnevents/600/400",
+    "verified": true,
     "address": "Block N, North Nazimabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -2160,17 +2196,50 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Local Verified",
     "established": 2013
   },
   {
     "id": 46,
+    "name": "Modern Decorative",
+    "area": "North Karachi",
+    "rating": 4.7,
+    "starting_price": 55000,
+    "price_type": "package",
+    "image": "https://picsum.photos/seed/moderndecorative/600/400",
+    "verified": true,
+    "address": "office no 510 near karachi medical and dental college north karachi, Karachi, Pakistan",
+    "phone": "+92 311 2261377",
+    "whatsapp": "+92 311 2261377",
+    "gallery": [
+      "https://picsum.photos/seed/modern1/900/600",
+      "https://picsum.photos/seed/modern2/900/600",
+      "https://picsum.photos/seed/modern3/900/600"
+    ],
+    "events_types": ["Wedding", "Event Decor", "Home Decor"],
+    "staff_available": ["Male"],
+    "specialties": ["Decorative Services", "Event Setup", "Home Styling"],
+    "features": ["Verified+11 Years", "Established 2013", "Professional Service"],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Excellent decorative services!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer"],
+    "verified_badge": "Verified+11 Years | Est. 2013",
+    "established": 2013
+  },
+  {
+    "id": 47,
     "name": "Elite North Karachi Decor",
     "area": "North Karachi",
     "rating": 4.0,
     "starting_price": 48000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/elitenkdecor/600/400",
+    "verified": true,
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -2205,40 +2274,8 @@
       }
     ],
     "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Local Verified",
     "established": 2016
-  },
-  {
-    "id": 47,
-    "name": "Modern Decorative",
-    "area": "North Karachi",
-    "rating": 4.7,
-    "starting_price": 55000,
-    "price_type": "package",
-    "address": "office no 510 near karachi medical and dental college north karachi, Karachi, Pakistan",
-    "phone": "+92 311 2261377",
-    "whatsapp": "+92 311 2261377",
-    "gallery": [
-      "https://picsum.photos/seed/modern1/900/600",
-      "https://picsum.photos/seed/modern2/900/600",
-      "https://picsum.photos/seed/modern3/900/600"
-    ],
-    "events_types": ["Wedding", "Event Decor", "Home Decor"],
-    "staff_available": ["Male"],
-    "specialties": ["Decorative Services", "Event Setup", "Home Styling"],
-    "features": ["Verified+11 Years", "Established 2013", "Professional Service"],
-    "reviews": [
-      {
-        "name": "Client",
-        "rating": 5,
-        "comment": "Excellent decorative services!"
-      }
-    ],
-    "payment_methods": ["Cash", "Bank Transfer"],
-    "verified": true,
-    "verified_badge": "Verified+11 Years | Est. 2013",
-    "established": 2013
   },
   {
     "id": 48,
@@ -2247,6 +2284,8 @@
     "rating": 4.2,
     "starting_price": 50000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/royalnkevents/600/400",
+    "verified": true,
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -2281,7 +2320,6 @@
       }
     ],
     "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Local Verified",
     "established": 2014
   },
@@ -2292,6 +2330,8 @@
     "rating": 3.9,
     "starting_price": 42000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/stardecornk/600/400",
+    "verified": true,
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -2320,7 +2360,6 @@
       }
     ],
     "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Local Verified",
     "established": 2015
   },
@@ -2331,6 +2370,8 @@
     "rating": 4.1,
     "starting_price": 45000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/tajdecor/600/400",
+    "verified": true,
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -2365,7 +2406,6 @@
       }
     ],
     "payment_methods": ["Cash", "JazzCash", "Easypaisa"],
-    "verified": true,
     "verified_badge": "Local Verified",
     "established": 2012
   }

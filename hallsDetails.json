@@ -9,9 +9,9 @@
     "phone": "+92 301 1000137",
     "whatsapp": "+92 301 1000137",
     "gallery": [
-      "https://picsum.photos/seed/wedream1a/900/600",
-      "https://picsum.photos/seed/wedream1b/900/600",
-      "https://picsum.photos/seed/wedream1c/900/600"
+      "https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014857/pexels-photo-3014857.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014858/pexels-photo-3014858.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 1100,
     "parking_capacity": 200,
@@ -55,7 +55,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": true,
+    "outdoor": true,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/1043902/pexels-photo-1043902.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 2,
@@ -67,9 +73,9 @@
     "phone": "+92 302 1000274",
     "whatsapp": "+92 302 1000274",
     "gallery": [
-      "https://picsum.photos/seed/wedream2a/900/600",
-      "https://picsum.photos/seed/wedream2b/900/600",
-      "https://picsum.photos/seed/wedream2c/900/600"
+      "https://images.pexels.com/photos/3014859/pexels-photo-3014859.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014860/pexels-photo-3014860.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014861/pexels-photo-3014861.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 1000,
     "parking_capacity": 180,
@@ -113,7 +119,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": false,
+    "catering": false,
+    "outdoor": true,
+    "stage": false,
+    "image": "https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 3,
@@ -125,9 +137,9 @@
     "phone": "+92 311 1000411",
     "whatsapp": "+92 311 1000411",
     "gallery": [
-      "https://picsum.photos/seed/wedream3a/900/600",
-      "https://picsum.photos/seed/wedream3b/900/600",
-      "https://picsum.photos/seed/wedream3c/900/600"
+      "https://images.pexels.com/photos/3014862/pexels-photo-3014862.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014863/pexels-photo-3014863.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014864/pexels-photo-3014864.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 1200,
     "parking_capacity": 220,
@@ -171,7 +183,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/2306281/pexels-photo-2306281.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 4,
@@ -183,9 +201,9 @@
     "phone": "+92 321 1000548",
     "whatsapp": "+92 321 1000548",
     "gallery": [
-      "https://picsum.photos/seed/wedream4a/900/600",
-      "https://picsum.photos/seed/wedream4b/900/600",
-      "https://picsum.photos/seed/wedream4c/900/600"
+      "https://images.pexels.com/photos/3014865/pexels-photo-3014865.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014866/pexels-photo-3014866.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014867/pexels-photo-3014867.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 1000,
     "parking_capacity": 180,
@@ -229,7 +247,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": false,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/2306277/pexels-photo-2306277.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 5,
@@ -241,9 +265,9 @@
     "phone": "+92 333 1000685",
     "whatsapp": "+92 333 1000685",
     "gallery": [
-      "https://picsum.photos/seed/wedream5a/900/600",
-      "https://picsum.photos/seed/wedream5b/900/600",
-      "https://picsum.photos/seed/wedream5c/900/600"
+      "https://images.pexels.com/photos/3014868/pexels-photo-3014868.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014869/pexels-photo-3014869.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014870/pexels-photo-3014870.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 1000,
     "parking_capacity": 180,
@@ -287,7 +311,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": true,
+    "outdoor": true,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/1779415/pexels-photo-1779415.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 6,
@@ -299,9 +329,9 @@
     "phone": "+92 345 1000822",
     "whatsapp": "+92 345 1000822",
     "gallery": [
-      "https://picsum.photos/seed/wedream6a/900/600",
-      "https://picsum.photos/seed/wedream6b/900/600",
-      "https://picsum.photos/seed/wedream6c/900/600"
+      "https://images.pexels.com/photos/3014871/pexels-photo-3014871.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014872/pexels-photo-3014872.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014873/pexels-photo-3014873.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 1500,
     "parking_capacity": 270,
@@ -345,7 +375,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": false,
+    "catering": false,
+    "outdoor": true,
+    "stage": false,
+    "image": "https://images.pexels.com/photos/1456613/pexels-photo-1456613.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 7,
@@ -357,9 +393,9 @@
     "phone": "+92 300 1000959",
     "whatsapp": "+92 300 1000959",
     "gallery": [
-      "https://picsum.photos/seed/wedream7a/900/600",
-      "https://picsum.photos/seed/wedream7b/900/600",
-      "https://picsum.photos/seed/wedream7c/900/600"
+      "https://images.pexels.com/photos/3014874/pexels-photo-3014874.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014875/pexels-photo-3014875.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306251/pexels-photo-2306251.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 1400,
     "parking_capacity": 250,
@@ -403,7 +439,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/931796/pexels-photo-931796.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 8,
@@ -415,9 +457,9 @@
     "phone": "+92 301 1001096",
     "whatsapp": "+92 301 1001096",
     "gallery": [
-      "https://picsum.photos/seed/wedream8a/900/600",
-      "https://picsum.photos/seed/wedream8b/900/600",
-      "https://picsum.photos/seed/wedream8c/900/600"
+      "https://images.pexels.com/photos/2306252/pexels-photo-2306252.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306253/pexels-photo-2306253.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306254/pexels-photo-2306254.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 1200,
     "parking_capacity": 220,
@@ -461,7 +503,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": false,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 9,
@@ -473,9 +521,9 @@
     "phone": "+92 302 1001233",
     "whatsapp": "+92 302 1001233",
     "gallery": [
-      "https://picsum.photos/seed/wedream9a/900/600",
-      "https://picsum.photos/seed/wedream9b/900/600",
-      "https://picsum.photos/seed/wedream9c/900/600"
+      "https://images.pexels.com/photos/2306255/pexels-photo-2306255.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306256/pexels-photo-2306256.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306257/pexels-photo-2306257.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 1500,
     "parking_capacity": 270,
@@ -519,7 +567,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": true,
+    "outdoor": true,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/265947/pexels-photo-265947.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 10,
@@ -531,9 +585,9 @@
     "phone": "+92 311 1001370",
     "whatsapp": "+92 311 1001370",
     "gallery": [
-      "https://picsum.photos/seed/wedream10a/900/600",
-      "https://picsum.photos/seed/wedream10b/900/600",
-      "https://picsum.photos/seed/wedream10c/900/600"
+      "https://images.pexels.com/photos/2306258/pexels-photo-2306258.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306259/pexels-photo-2306259.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306260/pexels-photo-2306260.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 1200,
     "parking_capacity": 220,
@@ -577,7 +631,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": false,
+    "catering": false,
+    "outdoor": true,
+    "stage": false,
+    "image": "https://images.pexels.com/photos/587740/pexels-photo-587740.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 11,
@@ -589,9 +649,9 @@
     "phone": "+92 321 1001507",
     "whatsapp": "+92 321 1001507",
     "gallery": [
-      "https://picsum.photos/seed/wedream11a/900/600",
-      "https://picsum.photos/seed/wedream11b/900/600",
-      "https://picsum.photos/seed/wedream11c/900/600"
+      "https://images.pexels.com/photos/2306261/pexels-photo-2306261.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306262/pexels-photo-2306262.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306263/pexels-photo-2306263.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 900,
     "parking_capacity": 160,
@@ -635,7 +695,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 12,
@@ -647,9 +713,9 @@
     "phone": "+92 333 1001644",
     "whatsapp": "+92 333 1001644",
     "gallery": [
-      "https://picsum.photos/seed/wedream12a/900/600",
-      "https://picsum.photos/seed/wedream12b/900/600",
-      "https://picsum.photos/seed/wedream12c/900/600"
+      "https://images.pexels.com/photos/2306264/pexels-photo-2306264.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306265/pexels-photo-2306265.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306266/pexels-photo-2306266.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -693,7 +759,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": false,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/3074123/pexels-photo-3074123.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 13,
@@ -705,9 +777,9 @@
     "phone": "+92 345 1001781",
     "whatsapp": "+92 345 1001781",
     "gallery": [
-      "https://picsum.photos/seed/wedream13a/900/600",
-      "https://picsum.photos/seed/wedream13b/900/600",
-      "https://picsum.photos/seed/wedream13c/900/600"
+      "https://images.pexels.com/photos/2306267/pexels-photo-2306267.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306268/pexels-photo-2306268.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306269/pexels-photo-2306269.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -751,7 +823,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": true,
+    "outdoor": true,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 14,
@@ -763,9 +841,9 @@
     "phone": "+92 300 1001918",
     "whatsapp": "+92 300 1001918",
     "gallery": [
-      "https://picsum.photos/seed/wedream14a/900/600",
-      "https://picsum.photos/seed/wedream14b/900/600",
-      "https://picsum.photos/seed/wedream14c/900/600"
+      "https://images.pexels.com/photos/2306270/pexels-photo-2306270.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1779416/pexels-photo-1779416.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1779417/pexels-photo-1779417.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 900,
     "parking_capacity": 160,
@@ -809,7 +887,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": false,
+    "catering": false,
+    "outdoor": true,
+    "stage": false,
+    "image": "https://images.pexels.com/photos/2306275/pexels-photo-2306275.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 15,
@@ -821,9 +905,9 @@
     "phone": "+92 301 1002055",
     "whatsapp": "+92 301 1002055",
     "gallery": [
-      "https://picsum.photos/seed/wedream15a/900/600",
-      "https://picsum.photos/seed/wedream15b/900/600",
-      "https://picsum.photos/seed/wedream15c/900/600"
+      "https://images.pexels.com/photos/1779418/pexels-photo-1779418.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1779419/pexels-photo-1779419.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1779420/pexels-photo-1779420.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -867,7 +951,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/1395964/pexels-photo-1395964.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 16,
@@ -879,9 +969,9 @@
     "phone": "+92 302 1002192",
     "whatsapp": "+92 302 1002192",
     "gallery": [
-      "https://picsum.photos/seed/wedream16a/900/600",
-      "https://picsum.photos/seed/wedream16b/900/600",
-      "https://picsum.photos/seed/wedream16c/900/600"
+      "https://images.pexels.com/photos/1779421/pexels-photo-1779421.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1779422/pexels-photo-1779422.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1779423/pexels-photo-1779423.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 1000,
     "parking_capacity": 180,
@@ -925,7 +1015,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": false,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/2253879/pexels-photo-2253879.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 17,
@@ -937,9 +1033,9 @@
     "phone": "+92 311 1002329",
     "whatsapp": "+92 311 1002329",
     "gallery": [
-      "https://picsum.photos/seed/wedream17a/900/600",
-      "https://picsum.photos/seed/wedream17b/900/600",
-      "https://picsum.photos/seed/wedream17c/900/600"
+      "https://images.pexels.com/photos/1779424/pexels-photo-1779424.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1024991/pexels-photo-1024991.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1024992/pexels-photo-1024992.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 1000,
     "parking_capacity": 180,
@@ -983,7 +1079,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": true,
+    "outdoor": true,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/1024989/pexels-photo-1024989.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 18,
@@ -995,9 +1097,9 @@
     "phone": "+92 321 1002466",
     "whatsapp": "+92 321 1002466",
     "gallery": [
-      "https://picsum.photos/seed/wedream18a/900/600",
-      "https://picsum.photos/seed/wedream18b/900/600",
-      "https://picsum.photos/seed/wedream18c/900/600"
+      "https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1024994/pexels-photo-1024994.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1024995/pexels-photo-1024995.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 900,
     "parking_capacity": 160,
@@ -1041,7 +1143,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": false,
+    "catering": false,
+    "outdoor": true,
+    "stage": false,
+    "image": "https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 19,
@@ -1053,9 +1161,9 @@
     "phone": "+92 333 1002603",
     "whatsapp": "+92 333 1002603",
     "gallery": [
-      "https://picsum.photos/seed/wedream19a/900/600",
-      "https://picsum.photos/seed/wedream19b/900/600",
-      "https://picsum.photos/seed/wedream19c/900/600"
+      "https://images.pexels.com/photos/1024996/pexels-photo-1024996.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1024997/pexels-photo-1024997.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1024998/pexels-photo-1024998.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -1099,7 +1207,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/1024978/pexels-photo-1024978.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 20,
@@ -1111,9 +1225,9 @@
     "phone": "+92 345 1002740",
     "whatsapp": "+92 345 1002740",
     "gallery": [
-      "https://picsum.photos/seed/wedream20a/900/600",
-      "https://picsum.photos/seed/wedream20b/900/600",
-      "https://picsum.photos/seed/wedream20c/900/600"
+      "https://images.pexels.com/photos/1024999/pexels-photo-1024999.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1025000/pexels-photo-1025000.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1444443/pexels-photo-1444443.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 1000,
     "parking_capacity": 180,
@@ -1157,7 +1271,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": false,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/1024976/pexels-photo-1024976.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 21,
@@ -1169,9 +1289,9 @@
     "phone": "+92 300 1002877",
     "whatsapp": "+92 300 1002877",
     "gallery": [
-      "https://picsum.photos/seed/wedream21a/900/600",
-      "https://picsum.photos/seed/wedream21b/900/600",
-      "https://picsum.photos/seed/wedream21c/900/600"
+      "https://images.pexels.com/photos/1444444/pexels-photo-1444444.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1444445/pexels-photo-1444445.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1444446/pexels-photo-1444446.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -1215,7 +1335,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": true,
+    "outdoor": true,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/3038369/pexels-photo-3038369.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 22,
@@ -1227,9 +1353,9 @@
     "phone": "+92 301 1003014",
     "whatsapp": "+92 301 1003014",
     "gallery": [
-      "https://picsum.photos/seed/wedream22a/900/600",
-      "https://picsum.photos/seed/wedream22b/900/600",
-      "https://picsum.photos/seed/wedream22c/900/600"
+      "https://images.pexels.com/photos/1444447/pexels-photo-1444447.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1444448/pexels-photo-1444448.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1444449/pexels-photo-1444449.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 700,
     "parking_capacity": 130,
@@ -1273,7 +1399,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": false,
+    "catering": false,
+    "outdoor": true,
+    "stage": false,
+    "image": "https://images.pexels.com/photos/3038366/pexels-photo-3038366.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 23,
@@ -1285,9 +1417,9 @@
     "phone": "+92 302 1003151",
     "whatsapp": "+92 302 1003151",
     "gallery": [
-      "https://picsum.photos/seed/wedream23a/900/600",
-      "https://picsum.photos/seed/wedream23b/900/600",
-      "https://picsum.photos/seed/wedream23c/900/600"
+      "https://images.pexels.com/photos/1444450/pexels-photo-1444450.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1444451/pexels-photo-1444451.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1444452/pexels-photo-1444452.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -1331,7 +1463,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/3038368/pexels-photo-3038368.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 24,
@@ -1343,9 +1481,9 @@
     "phone": "+92 311 1003288",
     "whatsapp": "+92 311 1003288",
     "gallery": [
-      "https://picsum.photos/seed/wedream24a/900/600",
-      "https://picsum.photos/seed/wedream24b/900/600",
-      "https://picsum.photos/seed/wedream24c/900/600"
+      "https://images.pexels.com/photos/2306284/pexels-photo-2306284.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306285/pexels-photo-2306285.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306286/pexels-photo-2306286.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -1389,7 +1527,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": false,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/2253880/pexels-photo-2253880.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 25,
@@ -1401,9 +1545,9 @@
     "phone": "+92 321 1003425",
     "whatsapp": "+92 321 1003425",
     "gallery": [
-      "https://picsum.photos/seed/wedream25a/900/600",
-      "https://picsum.photos/seed/wedream25b/900/600",
-      "https://picsum.photos/seed/wedream25c/900/600"
+      "https://images.pexels.com/photos/2306287/pexels-photo-2306287.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306288/pexels-photo-2306288.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306289/pexels-photo-2306289.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 700,
     "parking_capacity": 130,
@@ -1447,7 +1591,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": true,
+    "outdoor": true,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/2253881/pexels-photo-2253881.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 26,
@@ -1459,9 +1609,9 @@
     "phone": "+92 333 1003562",
     "whatsapp": "+92 333 1003562",
     "gallery": [
-      "https://picsum.photos/seed/wedream26a/900/600",
-      "https://picsum.photos/seed/wedream26b/900/600",
-      "https://picsum.photos/seed/wedream26c/900/600"
+      "https://images.pexels.com/photos/2306290/pexels-photo-2306290.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306291/pexels-photo-2306291.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2306292/pexels-photo-2306292.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 700,
     "parking_capacity": 130,
@@ -1505,7 +1655,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": false,
+    "catering": false,
+    "outdoor": true,
+    "stage": false,
+    "image": "https://images.pexels.com/photos/1779414/pexels-photo-1779414.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 27,
@@ -1517,9 +1673,9 @@
     "phone": "+92 345 1003699",
     "whatsapp": "+92 345 1003699",
     "gallery": [
-      "https://picsum.photos/seed/wedream27a/900/600",
-      "https://picsum.photos/seed/wedream27b/900/600",
-      "https://picsum.photos/seed/wedream27c/900/600"
+      "https://images.pexels.com/photos/2306293/pexels-photo-2306293.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3038370/pexels-photo-3038370.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3038371/pexels-photo-3038371.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 600,
     "parking_capacity": 110,
@@ -1563,7 +1719,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/1779413/pexels-photo-1779413.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 28,
@@ -1575,9 +1737,9 @@
     "phone": "+92 300 1003836",
     "whatsapp": "+92 300 1003836",
     "gallery": [
-      "https://picsum.photos/seed/wedream28a/900/600",
-      "https://picsum.photos/seed/wedream28b/900/600",
-      "https://picsum.photos/seed/wedream28c/900/600"
+      "https://images.pexels.com/photos/3038372/pexels-photo-3038372.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3038373/pexels-photo-3038373.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3038374/pexels-photo-3038374.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 700,
     "parking_capacity": 130,
@@ -1621,7 +1783,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": false,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/1779412/pexels-photo-1779412.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 29,
@@ -1633,9 +1801,9 @@
     "phone": "+92 301 1003973",
     "whatsapp": "+92 301 1003973",
     "gallery": [
-      "https://picsum.photos/seed/wedream29a/900/600",
-      "https://picsum.photos/seed/wedream29b/900/600",
-      "https://picsum.photos/seed/wedream29c/900/600"
+      "https://images.pexels.com/photos/3038375/pexels-photo-3038375.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3038376/pexels-photo-3038376.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3038377/pexels-photo-3038377.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 600,
     "parking_capacity": 110,
@@ -1679,7 +1847,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": true,
+    "outdoor": true,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/1779411/pexels-photo-1779411.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 30,
@@ -1691,9 +1865,9 @@
     "phone": "+92 302 1004110",
     "whatsapp": "+92 302 1004110",
     "gallery": [
-      "https://picsum.photos/seed/wedream30a/900/600",
-      "https://picsum.photos/seed/wedream30b/900/600",
-      "https://picsum.photos/seed/wedream30c/900/600"
+      "https://images.pexels.com/photos/3038378/pexels-photo-3038378.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3038379/pexels-photo-3038379.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1456614/pexels-photo-1456614.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 700,
     "parking_capacity": 130,
@@ -1737,7 +1911,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": false,
+    "catering": false,
+    "outdoor": true,
+    "stage": false,
+    "image": "https://images.pexels.com/photos/1779410/pexels-photo-1779410.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 31,
@@ -1749,9 +1929,9 @@
     "phone": "+92 311 1004247",
     "whatsapp": "+92 311 1004247",
     "gallery": [
-      "https://picsum.photos/seed/wedream31a/900/600",
-      "https://picsum.photos/seed/wedream31b/900/600",
-      "https://picsum.photos/seed/wedream31c/900/600"
+      "https://images.pexels.com/photos/1456615/pexels-photo-1456615.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1456616/pexels-photo-1456616.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1456617/pexels-photo-1456617.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -1795,7 +1975,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/1730877/pexels-photo-1730877.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 32,
@@ -1807,9 +1993,9 @@
     "phone": "+92 321 1004384",
     "whatsapp": "+92 321 1004384",
     "gallery": [
-      "https://picsum.photos/seed/wedream32a/900/600",
-      "https://picsum.photos/seed/wedream32b/900/600",
-      "https://picsum.photos/seed/wedream32c/900/600"
+      "https://images.pexels.com/photos/1456618/pexels-photo-1456618.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1456619/pexels-photo-1456619.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1456620/pexels-photo-1456620.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -1853,7 +2039,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": false,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/1730878/pexels-photo-1730878.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 33,
@@ -1865,9 +2057,9 @@
     "phone": "+92 333 1004521",
     "whatsapp": "+92 333 1004521",
     "gallery": [
-      "https://picsum.photos/seed/wedream33a/900/600",
-      "https://picsum.photos/seed/wedream33b/900/600",
-      "https://picsum.photos/seed/wedream33c/900/600"
+      "https://images.pexels.com/photos/1456621/pexels-photo-1456621.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1456622/pexels-photo-1456622.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/1456623/pexels-photo-1456623.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -1911,7 +2103,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": true,
+    "outdoor": true,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/2253900/pexels-photo-2253900.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 34,
@@ -1923,9 +2121,9 @@
     "phone": "+92 345 1004658",
     "whatsapp": "+92 345 1004658",
     "gallery": [
-      "https://picsum.photos/seed/wedream34a/900/600",
-      "https://picsum.photos/seed/wedream34b/900/600",
-      "https://picsum.photos/seed/wedream34c/900/600"
+      "https://images.pexels.com/photos/931797/pexels-photo-931797.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/931798/pexels-photo-931798.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/931799/pexels-photo-931799.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 700,
     "parking_capacity": 130,
@@ -1969,7 +2167,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": false,
+    "catering": false,
+    "outdoor": true,
+    "stage": false,
+    "image": "https://images.pexels.com/photos/2253901/pexels-photo-2253901.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 35,
@@ -1981,9 +2185,9 @@
     "phone": "+92 300 1004795",
     "whatsapp": "+92 300 1004795",
     "gallery": [
-      "https://picsum.photos/seed/wedream35a/900/600",
-      "https://picsum.photos/seed/wedream35b/900/600",
-      "https://picsum.photos/seed/wedream35c/900/600"
+      "https://images.pexels.com/photos/931800/pexels-photo-931800.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/931801/pexels-photo-931801.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/931802/pexels-photo-931802.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -2027,7 +2231,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/2253902/pexels-photo-2253902.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 36,
@@ -2039,9 +2249,9 @@
     "phone": "+92 301 1004932",
     "whatsapp": "+92 301 1004932",
     "gallery": [
-      "https://picsum.photos/seed/wedream36a/900/600",
-      "https://picsum.photos/seed/wedream36b/900/600",
-      "https://picsum.photos/seed/wedream36c/900/600"
+      "https://images.pexels.com/photos/931803/pexels-photo-931803.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/931804/pexels-photo-931804.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/931805/pexels-photo-931805.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 900,
     "parking_capacity": 160,
@@ -2085,7 +2295,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": false,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/2253903/pexels-photo-2253903.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 37,
@@ -2097,9 +2313,9 @@
     "phone": "+92 302 1005069",
     "whatsapp": "+92 302 1005069",
     "gallery": [
-      "https://picsum.photos/seed/wedream37a/900/600",
-      "https://picsum.photos/seed/wedream37b/900/600",
-      "https://picsum.photos/seed/wedream37c/900/600"
+      "https://images.pexels.com/photos/931806/pexels-photo-931806.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/587742/pexels-photo-587742.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/587743/pexels-photo-587743.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -2143,7 +2359,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": true,
+    "outdoor": true,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/2253904/pexels-photo-2253904.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 38,
@@ -2155,9 +2377,9 @@
     "phone": "+92 311 1005206",
     "whatsapp": "+92 311 1005206",
     "gallery": [
-      "https://picsum.photos/seed/wedream38a/900/600",
-      "https://picsum.photos/seed/wedream38b/900/600",
-      "https://picsum.photos/seed/wedream38c/900/600"
+      "https://images.pexels.com/photos/587744/pexels-photo-587744.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/587745/pexels-photo-587745.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/587746/pexels-photo-587746.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -2201,7 +2423,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": false,
+    "catering": false,
+    "outdoor": true,
+    "stage": false,
+    "image": "https://images.pexels.com/photos/2253905/pexels-photo-2253905.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 39,
@@ -2213,9 +2441,9 @@
     "phone": "+92 321 1005343",
     "whatsapp": "+92 321 1005343",
     "gallery": [
-      "https://picsum.photos/seed/wedream39a/900/600",
-      "https://picsum.photos/seed/wedream39b/900/600",
-      "https://picsum.photos/seed/wedream39c/900/600"
+      "https://images.pexels.com/photos/587747/pexels-photo-587747.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/587748/pexels-photo-587748.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/587749/pexels-photo-587749.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 900,
     "parking_capacity": 160,
@@ -2259,7 +2487,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/3038367/pexels-photo-3038367.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 40,
@@ -2271,9 +2505,9 @@
     "phone": "+92 333 1005480",
     "whatsapp": "+92 333 1005480",
     "gallery": [
-      "https://picsum.photos/seed/wedream40a/900/600",
-      "https://picsum.photos/seed/wedream40b/900/600",
-      "https://picsum.photos/seed/wedream40c/900/600"
+      "https://images.pexels.com/photos/587750/pexels-photo-587750.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/587751/pexels-photo-587751.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2253906/pexels-photo-2253906.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 900,
     "parking_capacity": 160,
@@ -2317,7 +2551,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": false,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/3038365/pexels-photo-3038365.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 41,
@@ -2329,9 +2569,9 @@
     "phone": "+92 345 1005617",
     "whatsapp": "+92 345 1005617",
     "gallery": [
-      "https://picsum.photos/seed/wedream41a/900/600",
-      "https://picsum.photos/seed/wedream41b/900/600",
-      "https://picsum.photos/seed/wedream41c/900/600"
+      "https://images.pexels.com/photos/2253907/pexels-photo-2253907.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2253908/pexels-photo-2253908.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2253909/pexels-photo-2253909.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -2375,7 +2615,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": true,
+    "outdoor": true,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/3038364/pexels-photo-3038364.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 42,
@@ -2387,9 +2633,9 @@
     "phone": "+92 300 1005754",
     "whatsapp": "+92 300 1005754",
     "gallery": [
-      "https://picsum.photos/seed/wedream42a/900/600",
-      "https://picsum.photos/seed/wedream42b/900/600",
-      "https://picsum.photos/seed/wedream42c/900/600"
+      "https://images.pexels.com/photos/2253910/pexels-photo-2253910.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2253911/pexels-photo-2253911.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2253912/pexels-photo-2253912.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 700,
     "parking_capacity": 130,
@@ -2433,7 +2679,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": false,
+    "catering": false,
+    "outdoor": true,
+    "stage": false,
+    "image": "https://images.pexels.com/photos/3038363/pexels-photo-3038363.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 43,
@@ -2445,9 +2697,9 @@
     "phone": "+92 301 1005891",
     "whatsapp": "+92 301 1005891",
     "gallery": [
-      "https://picsum.photos/seed/wedream43a/900/600",
-      "https://picsum.photos/seed/wedream43b/900/600",
-      "https://picsum.photos/seed/wedream43c/900/600"
+      "https://images.pexels.com/photos/2253913/pexels-photo-2253913.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2253914/pexels-photo-2253914.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/2253915/pexels-photo-2253915.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -2491,7 +2743,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/3038362/pexels-photo-3038362.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 44,
@@ -2503,9 +2761,9 @@
     "phone": "+92 302 1006028",
     "whatsapp": "+92 302 1006028",
     "gallery": [
-      "https://picsum.photos/seed/wedream44a/900/600",
-      "https://picsum.photos/seed/wedream44b/900/600",
-      "https://picsum.photos/seed/wedream44c/900/600"
+      "https://images.pexels.com/photos/3014876/pexels-photo-3014876.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014877/pexels-photo-3014877.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014878/pexels-photo-3014878.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -2549,7 +2807,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": false,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/3038361/pexels-photo-3038361.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 45,
@@ -2561,9 +2825,9 @@
     "phone": "+92 311 1006165",
     "whatsapp": "+92 311 1006165",
     "gallery": [
-      "https://picsum.photos/seed/wedream45a/900/600",
-      "https://picsum.photos/seed/wedream45b/900/600",
-      "https://picsum.photos/seed/wedream45c/900/600"
+      "https://images.pexels.com/photos/3014879/pexels-photo-3014879.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014880/pexels-photo-3014880.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014881/pexels-photo-3014881.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -2607,7 +2871,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": true,
+    "outdoor": true,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/2306276/pexels-photo-2306276.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 46,
@@ -2619,9 +2889,9 @@
     "phone": "+92 321 1006302",
     "whatsapp": "+92 321 1006302",
     "gallery": [
-      "https://picsum.photos/seed/wedream46a/900/600",
-      "https://picsum.photos/seed/wedream46b/900/600",
-      "https://picsum.photos/seed/wedream46c/900/600"
+      "https://images.pexels.com/photos/3014882/pexels-photo-3014882.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014883/pexels-photo-3014883.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/3014884/pexels-photo-3014884.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 600,
     "parking_capacity": 110,
@@ -2665,7 +2935,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": false,
+    "catering": false,
+    "outdoor": true,
+    "stage": false,
+    "image": "https://images.pexels.com/photos/2306278/pexels-photo-2306278.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 47,
@@ -2677,9 +2953,9 @@
     "phone": "+92 333 1006439",
     "whatsapp": "+92 333 1006439",
     "gallery": [
-      "https://picsum.photos/seed/wedream47a/900/600",
-      "https://picsum.photos/seed/wedream47b/900/600",
-      "https://picsum.photos/seed/wedream47c/900/600"
+      "https://images.pexels.com/photos/3014885/pexels-photo-3014885.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/169199/pexels-photo-169199.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/169200/pexels-photo-169200.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 600,
     "parking_capacity": 110,
@@ -2723,7 +2999,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/2306279/pexels-photo-2306279.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 48,
@@ -2735,9 +3017,9 @@
     "phone": "+92 345 1006576",
     "whatsapp": "+92 345 1006576",
     "gallery": [
-      "https://picsum.photos/seed/wedream48a/900/600",
-      "https://picsum.photos/seed/wedream48b/900/600",
-      "https://picsum.photos/seed/wedream48c/900/600"
+      "https://images.pexels.com/photos/169201/pexels-photo-169201.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/169202/pexels-photo-169202.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/169203/pexels-photo-169203.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 600,
     "parking_capacity": 110,
@@ -2781,7 +3063,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": false,
+    "ac": true,
+    "catering": false,
+    "outdoor": false,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/2306280/pexels-photo-2306280.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 49,
@@ -2793,9 +3081,9 @@
     "phone": "+92 300 1006713",
     "whatsapp": "+92 300 1006713",
     "gallery": [
-      "https://picsum.photos/seed/wedream49a/900/600",
-      "https://picsum.photos/seed/wedream49b/900/600",
-      "https://picsum.photos/seed/wedream49c/900/600"
+      "https://images.pexels.com/photos/169204/pexels-photo-169204.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/169205/pexels-photo-169205.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/169206/pexels-photo-169206.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 600,
     "parking_capacity": 110,
@@ -2839,7 +3127,13 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": true,
+    "catering": true,
+    "outdoor": true,
+    "stage": true,
+    "image": "https://images.pexels.com/photos/2306282/pexels-photo-2306282.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   },
   {
     "id": 50,
@@ -2851,9 +3145,9 @@
     "phone": "+92 301 1006850",
     "whatsapp": "+92 301 1006850",
     "gallery": [
-      "https://picsum.photos/seed/wedream50a/900/600",
-      "https://picsum.photos/seed/wedream50b/900/600",
-      "https://picsum.photos/seed/wedream50c/900/600"
+      "https://images.pexels.com/photos/169207/pexels-photo-169207.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/169208/pexels-photo-169208.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+      "https://images.pexels.com/photos/10000/pexels-photo-10000.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
     ],
     "capacity": 700,
     "parking_capacity": 130,
@@ -2897,6 +3191,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder"
+    "data_status": "sample_placeholder",
+    "parking": true,
+    "ac": false,
+    "catering": false,
+    "outdoor": true,
+    "stage": false,
+    "image": "https://images.pexels.com/photos/2306283/pexels-photo-2306283.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   }
 ]

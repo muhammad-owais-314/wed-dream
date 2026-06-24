@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Confirmed | WedDream</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--rose:#b93b56;--gold:#c89b2c;--gold-l:#e8b93c;--gold-d:#8a691a;--dark:#070707;--dark2:#0e0b0c;--glass:rgba(16,12,14,0.92)}
+body{background:var(--dark);font-family:'Jost',sans-serif;color:#f0ede8;overflow-x:hidden;min-height:100vh}
+html{scroll-behavior:smooth}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#100b0d}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:5px}
+::selection{background:var(--gold);color:#070707}
+#loadingScreen{position:fixed;inset:0;background:var(--dark);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;transition:opacity .4s,visibility .4s}
+#loadingScreen.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.loader-ring{width:52px;height:52px;border:3px solid rgba(200,155,44,0.15);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loader-text{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:rgba(255,255,255,0.4);letter-spacing:.08em}
+#errorScreen{display:none;position:fixed;inset:0;background:var(--dark);z-index:9998;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:24px}
+#errorScreen.show{display:flex}
+.confirm-page{padding:60px 0 90px;background:radial-gradient(ellipse at 50% 0%,#1a1015 0%,#050202 100%);min-height:calc(100vh - 140px)}
+.success-wrap{text-align:center;padding:40px 20px 30px}
+.ring-outer{width:110px;height:110px;border-radius:50%;border:2px solid rgba(200,155,44,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;animation:ringPulse 2s ease-in-out infinite}
+@keyframes ringPulse{0%,100%{box-shadow:0 0 0 0 rgba(200,155,44,0.15),0 0 0 8px rgba(200,155,44,0.06)}50%{box-shadow:0 0 0 12px rgba(200,155,44,0.08),0 0 0 24px rgba(200,155,44,0.03)}}
+.ring-inner{width:82px;height:82px;border-radius:50%;background:linear-gradient(135deg,rgba(200,155,44,0.2),rgba(200,155,44,0.08));border:1.5px solid rgba(200,155,44,0.5);display:flex;align-items:center;justify-content:center;font-size:1.9rem;color:var(--gold-l)}
+.confirm-title{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:#fff9ef;margin-bottom:8px;line-height:1.2}
+.confirm-subtitle{color:rgba(255,255,255,0.4);font-size:.9rem;margin-bottom:20px}
+.cat-banner{display:inline-flex;align-items:center;gap:10px;background:rgba(200,155,44,0.1);border:1px solid rgba(200,155,44,0.3);border-radius:50px;padding:7px 20px;margin-bottom:18px;font-size:.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-l)}
+.cat-banner i{font-size:.8rem}
+.ref-block{display:inline-flex;align-items:center;gap:12px;background:rgba(200,155,44,0.08);border:1px solid rgba(200,155,44,0.35);border-radius:16px;padding:12px 24px;margin-bottom:30px}
+.ref-label{font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.35);display:block;margin-bottom:2px}
+.ref-code{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--gold-l);letter-spacing:.06em}
+.ref-copy{background:none;border:1px solid rgba(200,155,44,0.35);border-radius:8px;padding:6px 10px;color:var(--gold);cursor:pointer;transition:.2s;font-size:.8rem}
+.ref-copy:hover{background:var(--gold);color:#070707}
+.gold-divider{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.2rem 0;opacity:.35}
+.g-card{background:var(--glass);backdrop-filter:blur(8px);border:1px solid rgba(200,155,44,.22);border-radius:22px;padding:1.6rem;margin-bottom:20px}
+.g-card:hover{border-color:rgba(200,155,44,.45)}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:#fff9ef;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.sec-title i{color:var(--gold);font-size:1rem}
+.detail-row{display:flex;justify-content:space-between;align-items:flex-start;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:.85rem;gap:12px}
+.detail-row:last-child{border-bottom:none}
+.detail-label{color:rgba(255,255,255,0.4);font-weight:500;display:flex;align-items:center;gap:7px;min-width:110px;flex-shrink:0}
+.detail-label i{color:var(--gold);font-size:.8rem;width:14px;text-align:center}
+.detail-value{color:#f0ede8;font-weight:600;text-align:right}
+.detail-value.gold{color:var(--gold-l)}
+.user-avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,rgba(200,155,44,0.25),rgba(200,155,44,0.08));border:1.5px solid rgba(200,155,44,0.4);display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--gold-l);flex-shrink:0}
+.pay-summary-row{display:flex;justify-content:space-between;font-size:.84rem;padding:8px 0;color:rgba(255,255,255,.55)}
+.pay-summary-row.total{font-weight:700;font-size:.95rem;color:#fff;border-top:1px solid rgba(200,155,44,.2);margin-top:6px;padding-top:12px}
+.pay-summary-row.total span:last-child{color:var(--gold-l)}
+.pay-method-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(200,155,44,.1);border:1px solid rgba(200,155,44,.25);border-radius:40px;padding:5px 14px;font-size:.73rem;color:#e8cf9a;margin-top:10px}
+.reminder-status{display:flex;align-items:flex-start;gap:14px;background:rgba(37,211,102,0.06);border:1px solid rgba(37,211,102,0.25);border-radius:16px;padding:14px 18px}
+.reminder-icon{width:40px;height:40px;border-radius:50%;background:rgba(37,211,102,0.12);display:flex;align-items:center;justify-content:center;color:#25d366;font-size:.95rem;flex-shrink:0}
+.reminder-icon.pending{background:rgba(200,155,44,0.12)!important;color:var(--gold-l)!important}
+.reminder-text-title{font-size:.84rem;font-weight:700;color:#fff;margin-bottom:3px}
+.reminder-text-sub{font-size:.75rem;color:rgba(255,255,255,.4);line-height:1.6}
+/* ALL BOOKINGS */
+.bookings-panel{max-height:320px;overflow-y:auto;padding-right:2px}
+.bookings-panel::-webkit-scrollbar{width:3px}
+.bookings-panel::-webkit-scrollbar-thumb{background:rgba(200,155,44,0.3);border-radius:3px}
+.bk-item{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.03);border:1px solid rgba(200,155,44,0.1);border-radius:14px;padding:10px 14px;margin-bottom:8px;cursor:pointer;transition:.22s}
+.bk-item:last-child{margin-bottom:0}
+.bk-item:hover{border-color:rgba(200,155,44,0.4);background:rgba(200,155,44,0.06)}
+.bk-item.active-booking{border-color:rgba(200,155,44,0.6);background:rgba(200,155,44,0.1)}
+.bk-item-icon{width:36px;height:36px;border-radius:10px;background:rgba(200,155,44,0.1);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.85rem;flex-shrink:0}
+.bk-item-body{flex:1;min-width:0}
+.bk-item-name{font-size:.84rem;font-weight:700;color:#f0ede8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bk-item-meta{font-size:.7rem;color:rgba(255,255,255,.35);margin-top:2px}
+.bk-item-ref{font-size:.64rem;color:var(--gold-l);font-weight:600;margin-top:2px;letter-spacing:.5px}
+.bk-item-status{font-size:.58rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:rgba(74,222,128,0.1);color:#4ade80;border:1px solid rgba(74,222,128,0.22);border-radius:20px;padding:2px 8px;flex-shrink:0}
+.bk-empty{font-size:.82rem;color:rgba(255,255,255,.3);text-align:center;padding:16px 0}
+/* STEPS */
+.steps-done{display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:32px}
+.step-done-item{display:flex;align-items:center;gap:0}
+.step-done-circle{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#c89b2c,#e8b93c);display:flex;align-items:center;justify-content:center;color:#070707;font-size:.75rem;font-weight:800;flex-shrink:0}
+.step-done-label{font-size:.65rem;letter-spacing:1px;color:rgba(255,255,255,.5);text-transform:uppercase;margin-left:8px}
+.step-connector{width:40px;height:2px;background:linear-gradient(90deg,#c89b2c,#e8b93c);margin:0 8px;flex-shrink:0}
+/* ACTIONS */
+.action-btn{display:flex;align-items:center;justify-content:center;gap:8px;border-radius:50px;padding:11px 20px;font-weight:700;font-size:.85rem;text-decoration:none;transition:.25s;cursor:pointer;border:none;font-family:'Jost',sans-serif;width:100%}
+.btn-gold{background:linear-gradient(95deg,#c89b2c,#e8b93c);color:#070707}
+.btn-gold:hover{box-shadow:0 8px 22px rgba(200,155,44,.4);transform:translateY(-1px);color:#070707}
+.btn-outline{background:transparent;border:1px solid rgba(200,155,44,.45);color:var(--gold-l)}
+.btn-outline:hover{background:rgba(200,155,44,.1);transform:translateY(-1px)}
+.btn-wa{background:#25D366;color:#fff}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-1px);color:#fff}
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+#confettiCanvas{position:fixed;inset:0;pointer-events:none;z-index:99;opacity:0;transition:opacity .5s}
+#confettiCanvas.show{opacity:1}
+.toast-wrap{position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;flex-direction:column;gap:8px;pointer-events:none}
+.toast-notif{background:rgba(14,11,12,.97);border:1px solid var(--gold);border-radius:16px;padding:12px 16px;min-width:240px;max-width:320px;transform:translateX(130%);transition:transform .4s cubic-bezier(.34,1.56,.64,1);pointer-events:auto}
+.toast-notif.show{transform:translateX(0)}
+.toast-notif.sms-toast{border-color:#25d366}
+@media(max-width:768px){.confirm-title{font-size:1.9rem}.steps-done .step-done-label{display:none}.step-connector{width:24px}.ref-code{font-size:1.4rem}.confirm-page{padding:40px 0 70px}}
+</style>
+</head>
+<body>
+
+<div id="loadingScreen"><div class="loader-ring"></div><p class="loader-text">Loading Confirmation...</p></div>
+
+<div id="errorScreen">
+  <i class="fas fa-exclamation-triangle" style="font-size:2.8rem;color:var(--gold)"></i>
+  <h3 style="font-family:'Cormorant Garamond';font-size:1.7rem;margin-top:8px">Booking Not Found</h3>
+  <p style="color:rgba(255,255,255,.4);font-size:.88rem">Yeh booking exist nahi karti ya data clear ho gaya.</p>
+  <a href="index.html" style="background:var(--gold);color:#070707;padding:10px 26px;border-radius:50px;text-decoration:none;font-weight:700;margin-top:12px;display:inline-block"><i class="fas fa-home me-2"></i>Go to Home</a>
+</div>
+
+<canvas id="confettiCanvas"></canvas>
+<div id="nav-placeholder"></div>
+
+<div id="mainContent" style="display:none">
+<section class="confirm-page">
+<div class="container" style="max-width:820px">
+
+  <div class="success-wrap fade-up">
+    <div class="ring-outer"><div class="ring-inner"><i class="fas fa-check"></i></div></div>
+    <div class="cat-banner"><i id="catIcon" class="fas fa-building"></i><span id="catLabel">Hall Booking</span></div>
+    <h1 class="confirm-title">Booking Confirmed!</h1>
+    <p class="confirm-subtitle">Your reservation has been secured. All details are saved below.</p>
+    <div class="steps-done">
+      <div class="step-done-item"><div class="step-done-circle"><i class="fas fa-check"></i></div><span class="step-done-label">Date Selected</span></div>
+      <div class="step-connector"></div>
+      <div class="step-done-item"><div class="step-done-circle"><i class="fas fa-check"></i></div><span class="step-done-label">Details Entered</span></div>
+      <div class="step-connector"></div>
+      <div class="step-done-item"><div class="step-done-circle"><i class="fas fa-check"></i></div><span class="step-done-label">Payment Done</span></div>
+    </div>
+    <div class="ref-block">
+      <div><span class="ref-label">Reference Number</span><div class="ref-code" id="refCode">WD-000000</div></div>
+      <button class="ref-copy" onclick="copyRef()" title="Copy"><i class="fas fa-copy"></i></button>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-lg-7">
+      <div class="g-card fade-up"><p class="sec-title"><i class="fas fa-calendar-check"></i> Booking Details</p><div id="bookingDetails"></div></div>
+      <div class="g-card fade-up">
+        <p class="sec-title"><i class="fas fa-user-circle"></i> Guest Information</p>
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <div class="user-avatar"><i class="fas fa-user"></i></div>
+          <div><div style="font-size:1rem;font-weight:700;color:#fff9ef" id="guestNameDisplay">—</div><div style="font-size:.78rem;color:rgba(255,255,255,.4)" id="guestEmailDisplay">—</div></div>
+        </div>
+        <div id="guestDetails"></div>
+      </div>
+      <div class="g-card fade-up">
+        <p class="sec-title"><i class="fas fa-bell"></i> SMS Reminder</p>
+        <div class="reminder-status" id="reminderStatus">
+          <div class="reminder-icon pending" id="reminderIcon"><i class="fas fa-clock"></i></div>
+          <div><div class="reminder-text-title" id="reminderTitle">Checking...</div><div class="reminder-text-sub" id="reminderText">Please wait...</div></div>
+        </div>
+        <div class="gold-divider"></div>
+        <p style="font-size:.74rem;color:rgba(255,255,255,.28);line-height:1.7"><i class="fas fa-info-circle me-1" style="color:var(--gold)"></i>Reminder tab fire hoga jab aap site open karein event se 1 din pehle. Real SMS ke liye backend required hai.</p>
+      </div>
+    </div>
+    <div class="col-lg-5">
+      <div class="g-card fade-up"><p class="sec-title"><i class="fas fa-receipt"></i> Payment Summary</p><div id="paymentSummary"></div></div>
+      <div class="g-card fade-up">
+        <p class="sec-title"><i class="fas fa-layer-group"></i> My Bookings <span id="bookingsCount" style="font-size:.75rem;font-weight:400;color:rgba(255,255,255,.35);font-family:'Jost'"></span></p>
+        <div class="bookings-panel" id="allBookingsPanel"></div>
+      </div>
+      <div class="g-card fade-up">
+        <p class="sec-title"><i class="fas fa-share-nodes"></i> Next Steps</p>
+        <div class="d-flex flex-column gap-2">
+          <button class="action-btn btn-gold" onclick="downloadConfirmation()"><i class="fas fa-download"></i> Download Confirmation</button>
+          <button class="action-btn btn-wa" id="waShareBtn"><i class="fab fa-whatsapp"></i> Share on WhatsApp</button>
+          <a id="browseCatBtn" href="halls.html" class="action-btn btn-outline"><i class="fas fa-arrow-left"></i><span id="browseCatText">Browse More</span></a>
+          <a href="index.html" class="action-btn btn-outline" style="border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.45)"><i class="fas fa-home"></i> Back to Home</a>
+        </div>
+        <div class="gold-divider"></div>
+        <p style="font-size:.72rem;color:rgba(255,255,255,.28);text-align:center"><i class="fas fa-shield-alt me-1" style="color:var(--gold)"></i>Booking ID save karo — cancellation ke liye required hai</p>
+      </div>
+    </div>
+  </div>
+
+</div></section>
+</div>
+
+<div id="footer-placeholder"></div>
+<div class="toast-wrap" id="toastWrap"></div>
+
+<script>
+// ============================================================
+// CATEGORY CONFIG
+// ============================================================
+const CAT_CONFIG = {
+  halls:         { label:'Hall Booking',        icon:'fas fa-building',            page:'halls.html',         venueLabel:'Hall' },
+  catering:      { label:'Catering Booking',    icon:'fas fa-utensils',            page:'caterers.html',      venueLabel:'Caterer' },
+  photographers: { label:'Photography Booking', icon:'fas fa-camera',              page:'photographers.html', venueLabel:'Photographer' },
+  carrentals:    { label:'Car Rental Booking',  icon:'fas fa-car',                 page:'carrentals.html',    venueLabel:'Car Service' },
+  decorators:    { label:'Decoration Booking',  icon:'fas fa-wand-magic-sparkles', page:'decorators.html',    venueLabel:'Decorator' }
+};
+const DEFAULT_CAT = { label:'Booking', icon:'fas fa-calendar-check', page:'index.html', venueLabel:'Vendor' };
+
+const MONTHS_FULL  = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const MONTHS_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const DAYS_FULL    = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+const PAY_ICONS  = { card:'fab fa-cc-visa', jazzcash:'fas fa-mobile-alt', easypaisa:'fas fa-mobile-alt', bank:'fas fa-university' };
+const PAY_LABELS = { card:'Credit/Debit Card', jazzcash:'JazzCash', easypaisa:'Easypaisa', bank:'Bank Transfer' };
+
+// ============================================================
+// NAVBAR & FOOTER
+// ============================================================
+$(document).ready(function(){
+  $.get('navebar.html', d => { $('#nav-placeholder').html(d); $('.wd-menu-link').removeClass('active'); });
+  $.get('footer.html',  d => { $('#footer-placeholder').html(d); });
+  checkAllReminders();
+  loadConfirmation();
+});
+
+// ============================================================
+// BOOKINGS HELPERS
+// ============================================================
+function getAllBookings(){
+  try { return JSON.parse(localStorage.getItem('wd_all_bookings') || '[]'); } catch { return []; }
+}
+
+// ============================================================
+// LOAD CONFIRMATION
+// ============================================================
+function loadConfirmation(){
+  const params = new URLSearchParams(window.location.search);
+  const ref = params.get('ref');
+  const all = getAllBookings();
+
+  let booking = ref
+    ? all.find(b => b.ref === ref) || null
+    : (all.length ? all[all.length - 1] : null);   // no ref = latest
+
+  if(!booking){
+    document.getElementById('loadingScreen').classList.add('hidden');
+    document.getElementById('errorScreen').classList.add('show');
+    return;
+  }
+  renderConfirmation(booking);
+}
+
+// ============================================================
+// RENDER
+// ============================================================
+function renderConfirmation(b){
+  document.title = 'Booking ' + b.ref + ' | WedDream';
+
+  const cat = CAT_CONFIG[b.category] || DEFAULT_CAT;
+
+  // Category banner
+  document.getElementById('catIcon').className = cat.icon;
+  document.getElementById('catLabel').textContent = cat.label;
+
+  // Browse button
+  document.getElementById('browseCatBtn').href = cat.page;
+  document.getElementById('browseCatText').textContent = 'Browse More ' + cat.venueLabel + 's';
+
+  // Ref
+  document.getElementById('refCode').textContent = b.ref;
+
+  // Date parse
+  const [y, m, d] = b.date.split('-');
+  const dt = new Date(parseInt(y), parseInt(m)-1, parseInt(d));
+  const dateFormatted = DAYS_FULL[dt.getDay()] + ', ' + parseInt(d) + ' ' + MONTHS_FULL[parseInt(m)-1] + ' ' + y;
+  const dateShort     = parseInt(d) + ' ' + MONTHS_SHORT[parseInt(m)-1] + ' ' + y;
+
+  // Venue name - support all category field names
+  const venueName = b.venueName || b.hallName || b.vendorName || '—';
+  const venueArea = b.venueArea || b.hallArea  || b.area       || 'Karachi';
+
+  // Booking details
+  document.getElementById('bookingDetails').innerHTML =
+    '<div class="detail-row"><span class="detail-label"><i class="' + cat.icon + '"></i> ' + cat.venueLabel + '</span><span class="detail-value">' + venueName + '</span></div>' +
+    '<div class="detail-row"><span class="detail-label"><i class="fas fa-map-marker-alt"></i> Location</span><span class="detail-value">' + venueArea + '</span></div>' +
+    '<div class="detail-row"><span class="detail-label"><i class="fas fa-calendar"></i> Event Date</span><span class="detail-value gold">' + dateFormatted + '</span></div>' +
+    '<div class="detail-row"><span class="detail-label"><i class="fas fa-clock"></i> Time Slot</span><span class="detail-value">' + (b.time||'—') + '</span></div>' +
+    '<div class="detail-row"><span class="detail-label"><i class="fas fa-star"></i> Package</span><span class="detail-value gold">' + (b.packageName||'Standard') + '</span></div>' +
+    '<div class="detail-row"><span class="detail-label"><i class="fas fa-glass-cheers"></i> Event Type</span><span class="detail-value">' + (b.eventType||'—') + '</span></div>' +
+    (b.guests ? '<div class="detail-row"><span class="detail-label"><i class="fas fa-users"></i> Guests</span><span class="detail-value">' + parseInt(b.guests).toLocaleString('en-PK') + ' expected</span></div>' : '') +
+    (b.notes  ? '<div class="detail-row"><span class="detail-label"><i class="fas fa-sticky-note"></i> Notes</span><span class="detail-value" style="font-size:.8rem;color:rgba(255,255,255,.5)">' + b.notes + '</span></div>' : '') +
+    '<div class="detail-row"><span class="detail-label"><i class="fas fa-clock-rotate-left"></i> Booked On</span><span class="detail-value" style="font-size:.8rem;color:rgba(255,255,255,.42)">' + (b.bookedAt||'Just now') + '</span></div>';
+
+  // Guest info
+  document.getElementById('guestNameDisplay').textContent = b.guestName || '—';
+  document.getElementById('guestEmailDisplay').textContent = b.guestEmail || '—';
+  document.getElementById('guestDetails').innerHTML =
+    '<div class="detail-row"><span class="detail-label"><i class="fas fa-user"></i> Name</span><span class="detail-value">' + (b.guestName||'—') + '</span></div>' +
+    '<div class="detail-row"><span class="detail-label"><i class="fas fa-phone"></i> Phone</span><span class="detail-value">' + (b.guestPhone||'—') + '</span></div>' +
+    '<div class="detail-row"><span class="detail-label"><i class="fas fa-envelope"></i> Email</span><span class="detail-value" style="font-size:.82rem">' + (b.guestEmail||'—') + '</span></div>';
+
+  // Payment
+  const total = b.totalPrice || 0;
+  const adv   = Math.round(total * 0.3);
+  const bal   = total - adv;
+  document.getElementById('paymentSummary').innerHTML =
+    '<div class="pay-summary-row"><span>Package Price</span><span>PKR ' + fmtNum(total) + '</span></div>' +
+    '<div class="pay-summary-row"><span>Tax &amp; Service Fee</span><span>Included</span></div>' +
+    '<div class="pay-summary-row total"><span>Total Amount</span><span>PKR ' + fmtNum(total) + '</span></div>' +
+    '<div class="pay-summary-row" style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,.06)"><span style="color:rgba(255,255,255,.6)">Advance Paid (30%)</span><span style="color:#4ade80;font-weight:700">PKR ' + fmtNum(adv) + ' \u2713</span></div>' +
+    '<div class="pay-summary-row"><span style="color:rgba(255,255,255,.4)">Balance on Event Day</span><span style="color:var(--gold-l)">PKR ' + fmtNum(bal) + '</span></div>' +
+    '<div style="margin-top:12px"><span class="pay-method-badge"><i class="' + (PAY_ICONS[b.payMethod]||'fas fa-money-bill') + '"></i> Paid via ' + (PAY_LABELS[b.payMethod]||b.payMethod||'Unknown') + '</span></div>';
+
+  // All bookings panel
+  renderAllBookings(b.ref);
+
+  // Reminder
+  setupReminder(b, dt, dateShort);
+
+  // WhatsApp
+  const waMsg = encodeURIComponent(
+    '\uD83C\uDF8A *WedDream Booking Confirmed!*\n\n' +
+    '\uD83D\uDCCB Ref: ' + b.ref + '\n' +
+    '\uD83C\uDFF7 Category: ' + cat.label + '\n' +
+    '\uD83C\uDFDB Venue: ' + venueName + '\n' +
+    '\uD83D\uDCC5 Date: ' + dateFormatted + '\n' +
+    '\uD83D\uDD50 Time: ' + b.time + '\n' +
+    '\uD83D\uDCE6 Package: ' + (b.packageName||'Standard') + '\n' +
+    '\uD83D\uDCB0 Total: PKR ' + fmtNum(total) + '\n\n' +
+    'Booked via WedDream \uD83D\uDC8D'
+  );
+  document.getElementById('waShareBtn').onclick = function(){ window.open('https://wa.me/?text=' + waMsg, '_blank'); };
+
+  // Show page
+  document.getElementById('mainContent').style.display = 'block';
+  document.getElementById('loadingScreen').classList.add('hidden');
+
+  setTimeout(function(){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e, idx){
+        if(e.isIntersecting){ setTimeout(function(){ e.target.classList.add('visible'); }, idx*100); obs.unobserve(e.target); }
+      });
+    }, {threshold:0.05});
+    document.querySelectorAll('.fade-up').forEach(function(el){ obs.observe(el); });
+  }, 100);
+
+  startConfetti();
+}
+
+// ============================================================
+// ALL BOOKINGS PANEL — sari bookings list, click to switch
+// ============================================================
+function renderAllBookings(activeRef){
+  const all    = getAllBookings();
+  const panel  = document.getElementById('allBookingsPanel');
+  const cntEl  = document.getElementById('bookingsCount');
+  cntEl.textContent = '(' + all.length + ')';
+
+  if(!all.length){ panel.innerHTML = '<p class="bk-empty">Koi booking nahi mili.</p>'; return; }
+
+  // Reverse: latest first
+  var html = '';
+  for(var i = all.length-1; i >= 0; i--){
+    var bk = all[i];
+    var c  = CAT_CONFIG[bk.category] || DEFAULT_CAT;
+    var vn = bk.venueName || bk.hallName || bk.vendorName || '—';
+    var parts = (bk.date || '2025-01-01').split('-');
+    var ds = parseInt(parts[2]) + ' ' + MONTHS_SHORT[parseInt(parts[1])-1] + ' ' + parts[0];
+    var active = bk.ref === activeRef ? 'active-booking' : '';
+    html += '<div class="bk-item ' + active + '" onclick="switchBooking(\'' + bk.ref + '\')">' +
+      '<div class="bk-item-icon"><i class="' + c.icon + '"></i></div>' +
+      '<div class="bk-item-body">' +
+        '<div class="bk-item-name">' + vn + '</div>' +
+        '<div class="bk-item-meta">' + c.label.replace(' Booking','') + ' \u00B7 ' + ds + ' \u00B7 ' + (bk.time||'') + '</div>' +
+        '<div class="bk-item-ref">' + bk.ref + '</div>' +
+      '</div>' +
+      '<span class="bk-item-status">Confirmed</span>' +
+    '</div>';
+  }
+  panel.innerHTML = html;
+}
+
+function switchBooking(ref){
+  var all     = getAllBookings();
+  var booking = null;
+  for(var i=0;i<all.length;i++){ if(all[i].ref===ref){ booking=all[i]; break; } }
+  if(!booking) return;
+  history.replaceState(null, '', 'booking-confirmed.html?ref=' + ref);
+  renderConfirmation(booking);
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+// ============================================================
+// REMINDER SYSTEM
+// ============================================================
+function fmtDateKey(date){ return date.getFullYear()+'-'+String(date.getMonth()+1).padStart(2,'0')+'-'+String(date.getDate()).padStart(2,'0'); }
+function fmtDateDisp(date){ return parseInt(date.getDate())+' '+MONTHS_SHORT[date.getMonth()]+' '+date.getFullYear(); }
+function getQueue(){ try{ return JSON.parse(localStorage.getItem('wd_reminder_queue')||'[]'); }catch{ return []; } }
+
+function setupReminder(b, dt, dateShort){
+  var reminderKey = 'wd_reminder_' + b.ref;
+  var stored = {};
+  try { stored = JSON.parse(localStorage.getItem(reminderKey)||'{}'); } catch{}
+
+  var today = new Date(); today.setHours(0,0,0,0);
+  var eventDate = new Date(dt); eventDate.setHours(0,0,0,0);
+  var oneDayBefore = new Date(eventDate); oneDayBefore.setDate(oneDayBefore.getDate()-1); oneDayBefore.setHours(0,0,0,0);
+
+  var daysUntilEvent    = Math.ceil((eventDate - today) / 86400000);
+  var daysUntilReminder = Math.ceil((oneDayBefore - today) / 86400000);
+
+  if(!stored.scheduled){
+    var venueName = b.venueName || b.hallName || b.vendorName || '—';
+    stored = { ref:b.ref, venueName:venueName, guestName:b.guestName, guestPhone:b.guestPhone, eventDate:b.date, eventDateFormatted:dateShort, time:b.time, reminderDate:fmtDateKey(oneDayBefore), fired:false, scheduled:true };
+    localStorage.setItem(reminderKey, JSON.stringify(stored));
+    var q = getQueue(); q.push(reminderKey);
+    localStorage.setItem('wd_reminder_queue', JSON.stringify(q.filter(function(v,i,a){ return a.indexOf(v)===i; })));
+  }
+
+  var iconEl  = document.getElementById('reminderIcon');
+  var titleEl = document.getElementById('reminderTitle');
+  var textEl  = document.getElementById('reminderText');
+
+  if(stored.fired){
+    iconEl.className = 'reminder-icon';
+    iconEl.style.cssText = 'background:rgba(37,211,102,0.12);color:#25d366';
+    iconEl.innerHTML = '<i class="fas fa-check-circle"></i>';
+    titleEl.textContent = 'Reminder Sent \u2713';
+    textEl.innerHTML = b.guestName + ', aapka event <strong style="color:var(--gold-l)">' + dateShort + '</strong> ko <strong>' + b.time + '</strong> par tha.<br><span style="font-size:.68rem;color:rgba(255,255,255,.25)">Sent: ' + stored.firedAt + '</span>';
+  }
+  else if(daysUntilEvent < 0){
+    iconEl.className = 'reminder-icon';
+    iconEl.style.cssText = 'background:rgba(255,255,255,0.05);color:rgba(255,255,255,.3)';
+    iconEl.innerHTML = '<i class="fas fa-calendar-xmark"></i>';
+    titleEl.textContent = 'Event Guzar Gaya';
+    textEl.innerHTML = 'Event ' + dateShort + ' complete ho gaya.';
+  }
+  else if(daysUntilReminder <= 0 && !stored.fired){
+    stored.fired   = true;
+    stored.firedAt = new Date().toLocaleString('en-PK');
+    localStorage.setItem(reminderKey, JSON.stringify(stored));
+    iconEl.className = 'reminder-icon';
+    iconEl.style.cssText = 'background:rgba(37,211,102,0.15);color:#25d366';
+    iconEl.innerHTML = '<i class="fas fa-paper-plane"></i>';
+    titleEl.textContent = '\uD83D\uDD14 Reminder Sent!';
+    textEl.innerHTML = '<strong style="color:#4ade80">' + b.guestName + '</strong>, kal aapka event hai!<br><strong style="color:var(--gold-l)">' + (stored.venueName) + '</strong> \u2014 ' + dateShort + ' at ' + b.time + '.<br><span style="font-size:.68rem;color:rgba(255,255,255,.28)">2 ghante pehle pahunchen.</span>';
+    showSmsToast(stored, dateShort);
+  }
+  else {
+    iconEl.className = 'reminder-icon pending';
+    iconEl.style.cssText = '';
+    iconEl.innerHTML = '<i class="fas fa-clock"></i>';
+    titleEl.textContent = 'Reminder Scheduled';
+    textEl.innerHTML = 'SMS reminder <strong style="color:var(--gold-l)">' + fmtDateDisp(oneDayBefore) + '</strong> ko bheja jayega.<br><span style="font-size:.68rem;color:rgba(255,255,255,.28)">Event: ' + dateShort + ' at ' + b.time + '</span>';
+  }
+}
+
+function checkAllReminders(){
+  var today = fmtDateKey(new Date());
+  getQueue().forEach(function(key){
+    try {
+      var data = JSON.parse(localStorage.getItem(key)||'{}');
+      if(!data.fired && data.reminderDate === today){
+        data.fired   = true;
+        data.firedAt = new Date().toLocaleString('en-PK');
+        localStorage.setItem(key, JSON.stringify(data));
+        showSmsToast(data, data.eventDateFormatted);
+      }
+    } catch{}
+  });
+}
+
+// ============================================================
+// SMS TOAST
+// ============================================================
+function showSmsToast(b, dateShort){
+  var wrap = document.getElementById('toastWrap');
+  var el   = document.createElement('div');
+  el.className = 'toast-notif sms-toast';
+  var vn = b.venueName || b.hallName || '—';
+  el.innerHTML = '<div style="display:flex;align-items:flex-start;gap:10px"><div style="width:34px;height:34px;border-radius:50%;background:rgba(37,211,102,.15);color:#25d366;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0"><i class="fas fa-bell"></i></div><div style="flex:1"><div style="font-size:.82rem;font-weight:700;color:#fff;margin-bottom:4px">\uD83D\uDCF1 Event Reminder!</div><div style="font-size:.74rem;color:rgba(255,255,255,.5);line-height:1.5"><strong>' + b.guestName + '</strong>, kal ka event yaad hai?<br><strong style="color:var(--gold-l)">' + vn + '</strong> \u2014 ' + dateShort + ' at ' + b.time + '</div><div style="font-size:.65rem;color:rgba(255,255,255,.22);margin-top:4px">Ref: ' + b.ref + '</div></div><button onclick="this.closest(\'.toast-notif\').classList.remove(\'show\')" style="background:none;border:none;color:rgba(255,255,255,.3);cursor:pointer;font-size:.9rem;padding:0">\u00D7</button></div>';
+  wrap.appendChild(el);
+  requestAnimationFrame(function(){ requestAnimationFrame(function(){ el.classList.add('show'); }); });
+  setTimeout(function(){ el.classList.remove('show'); setTimeout(function(){ el.remove(); }, 400); }, 12000);
+}
+
+// ============================================================
+// COPY REF
+// ============================================================
+function copyRef(){
+  navigator.clipboard.writeText(document.getElementById('refCode').textContent)
+    .then(function(){ showToast('Reference number copied!', 'fas fa-copy'); });
+}
+
+function downloadConfirmation(){ window.print(); }
+
+// ============================================================
+// CONFETTI
+// ============================================================
+function startConfetti(){
+  var canvas = document.getElementById('confettiCanvas');
+  var ctx    = canvas.getContext('2d');
+  canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+  canvas.classList.add('show');
+  var colors = ['#c89b2c','#e8b93c','#b93b56','#f0ede8','#8a691a'];
+  var particles = Array.from({length:90}, function(){
+    return { x:Math.random()*canvas.width, y:Math.random()*canvas.height-canvas.height, r:Math.random()*5+2, d:Math.random()*80+20, color:colors[Math.floor(Math.random()*colors.length)], tilt:Math.random()*10-10, tiltAngle:0, tiltAngleInc:Math.random()*.07+.05 };
+  });
+  var frame=0, maxFrames=180;
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(function(p){ ctx.beginPath(); ctx.lineWidth=p.r/2; ctx.strokeStyle=p.color; ctx.moveTo(p.x+p.tilt+p.r/4,p.y); ctx.lineTo(p.x+p.tilt,p.y+p.tilt+p.r/4); ctx.stroke(); p.tiltAngle+=p.tiltAngleInc; p.y+=(Math.cos(p.d)+2)*1.2; p.x+=Math.sin(frame/8)*1.5; p.tilt=Math.sin(p.tiltAngle-frame/3)*12; });
+    frame++;
+    if(frame<maxFrames) requestAnimationFrame(draw); else canvas.classList.remove('show');
+  }
+  setTimeout(draw,300);
+}
+
+// ============================================================
+// TOAST
+// ============================================================
+function showToast(msg, icon){
+  icon = icon||'fas fa-check';
+  var wrap=document.getElementById('toastWrap'), el=document.createElement('div');
+  el.className='toast-notif';
+  el.innerHTML='<div style="display:flex;align-items:center;gap:8px"><i class="'+icon+'" style="color:var(--gold)"></i><span style="font-size:.82rem;color:#fff">'+msg+'</span></div>';
+  wrap.appendChild(el);
+  requestAnimationFrame(function(){ requestAnimationFrame(function(){ el.classList.add('show'); }); });
+  setTimeout(function(){ el.classList.remove('show'); setTimeout(function(){ el.remove(); }, 400); }, 3000);
+}
+
+function fmtNum(n){ return Number(n||0).toLocaleString('en-PK'); }
+</script>
+</body>
+</html>

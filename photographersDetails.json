@@ -6,6 +6,7 @@
     "rating": 4.9,
     "starting_price": 65000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/ajstudio/600/400",
     "address": "19C, Stadium Lane 1, Phase V, DHA, Karachi, Pakistan",
     "phone": "+92-21-35846191",
     "whatsapp": "+92-21-35846191",
@@ -69,6 +70,7 @@
     "rating": 4.7,
     "starting_price": 60000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/dossani/600/400",
     "address": "14/C, Stadium Lane 1, Khayaban-e-Shamsheer, Phase V, DHA, Karachi, Pakistan",
     "phone": "+92-21-5848883-85",
     "whatsapp": "+92-21-5848883",
@@ -132,6 +134,7 @@
     "rating": 4.8,
     "starting_price": 50000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/kbridals/600/400",
     "address": "13-C, 1st Commercial Lane, Phase IV, DHA, Karachi, Pakistan",
     "phone": "+92 312-5274325",
     "whatsapp": "+92 312-5274325",
@@ -194,6 +197,7 @@
     "rating": 4.6,
     "starting_price": 45000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/shakirrehman/600/400",
     "address": "DHA, Karachi, Pakistan",
     "phone": "0313 2173103",
     "whatsapp": "0313 2173103",
@@ -251,11 +255,12 @@
   },
   {
     "id": 5,
-    "name": "TWC - Cinematics",
+    "name": "TWC Cinematics",
     "area": "DHA",
     "rating": 4.7,
     "starting_price": 55000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/twccinematics/600/400",
     "address": "DHA, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -313,68 +318,12 @@
   },
   {
     "id": 6,
-    "name": "Dossani's Studio",
-    "area": "Clifton",
-    "rating": 4.7,
-    "starting_price": 60000,
-    "price_type": "package",
-    "address": "Hashoo Terrace, Khayaban-e-Roomi, Clifton, Karachi, Pakistan",
-    "phone": "+92-21-5835547",
-    "whatsapp": "+92-21-5835547",
-    "gallery": [
-      "https://picsum.photos/seed/dossanicl1/900/600",
-      "https://picsum.photos/seed/dossanicl2/900/600",
-      "https://picsum.photos/seed/dossanicl3/900/600"
-    ],
-    "services": ["Wedding Photography", "Video Production", "Event Coverage", "Embassy Photography"],
-    "staff_available": ["Male"],
-    "specialties": ["Embassy Approved Photography", "Cinematic Wedding Films", "Large Network"],
-    "features": [
-      "Established 1970s",
-      "3 Branches in Karachi",
-      "Embassy Approved",
-      "State-of-the-art Equipment"
-    ],
-    "packages": [
-      {
-        "name": "Basic",
-        "price": 60000,
-        "min_guests": 100,
-        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
-      },
-      {
-        "name": "Premium",
-        "price": 100000,
-        "min_guests": 200,
-        "includes": ["8 Hours Coverage", "All Edited Photos", "Cinematic Video", "Album"]
-      },
-      {
-        "name": "Luxury",
-        "price": 150000,
-        "min_guests": 300,
-        "includes": ["Full Day Coverage", "Cinematic Film", "Premium Album", "Digital Printing"]
-      }
-    ],
-    "reviews": [
-      {
-        "name": "Client",
-        "rating": 5,
-        "comment": "The only studio approved by Foreign Embassies in Karachi"
-      }
-    ],
-    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
-    "verified_badge": "Embassy Approved | Est. 1970s",
-    "established": 1975,
-    "website": "dossanis.com"
-  },
-  {
-    "id": 7,
-    "name": "Eastriver",
+    "name": "Eastriver Productions",
     "area": "Clifton",
     "rating": 4.4,
     "starting_price": 45000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/eastriver/600/400",
     "address": "Clifton, Karachi, Pakistan",
     "phone": "(021) 35305446",
     "whatsapp": "(021) 35305446",
@@ -418,12 +367,13 @@
     "established": 2010
   },
   {
-    "id": 8,
+    "id": 7,
     "name": "Oshoot Collective",
     "area": "Clifton",
     "rating": 4.6,
     "starting_price": 52000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/oshoot/600/400",
     "address": "Clifton, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -474,12 +424,13 @@
     "established": 2017
   },
   {
-    "id": 9,
+    "id": 8,
     "name": "Maha Wajahat Khan",
     "area": "Clifton",
     "rating": 4.8,
     "starting_price": 65000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/mahawajahat/600/400",
     "address": "Clifton, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -530,12 +481,13 @@
     "established": 2016
   },
   {
-    "id": 10,
+    "id": 9,
     "name": "The Wedding Station",
     "area": "Clifton",
     "rating": 4.6,
     "starting_price": 50000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/weddingstation/600/400",
     "address": "Clifton, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -586,12 +538,13 @@
     "established": 2016
   },
   {
-    "id": 11,
-    "name": "Biyah Wedding",
+    "id": 10,
+    "name": "Biyah Wedding Photography",
     "area": "PECHS",
     "rating": 4.5,
     "starting_price": 35000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/biyah/600/400",
     "address": "Block, 43 H, 1, 6, PECHS, Karachi, Pakistan",
     "phone": "0342 2142524",
     "whatsapp": "0342 2142524",
@@ -636,12 +589,13 @@
     "established": 2015
   },
   {
-    "id": 12,
+    "id": 11,
     "name": "Sohail Asim Photography",
     "area": "PECHS",
     "rating": 4.5,
     "starting_price": 35000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/sohilasim/600/400",
     "address": "873/C PECHS-2, Karachi, Pakistan",
     "phone": "0213456477",
     "whatsapp": "0213456477",
@@ -686,12 +640,13 @@
     "established": 1992
   },
   {
-    "id": 13,
+    "id": 12,
     "name": "Zainbaba Photo Studio",
     "area": "PECHS",
     "rating": 4.3,
     "starting_price": 28000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/zainbaba/600/400",
     "address": "Gulistan-e-Johar (serves PECHS), Karachi, Pakistan",
     "phone": "0322-2088037, 021-37830856",
     "whatsapp": "0322-2088037",
@@ -735,12 +690,13 @@
     "established": 2010
   },
   {
-    "id": 14,
+    "id": 13,
     "name": "Mohammad Jobaed Khan",
     "area": "PECHS",
     "rating": 4.5,
     "starting_price": 40000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/jobaed/600/400",
     "address": "Karachi, Pakistan (serves all areas)",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -791,12 +747,13 @@
     "established": 2013
   },
   {
-    "id": 15,
+    "id": 14,
     "name": "ShadiGrapher.com",
     "area": "PECHS",
     "rating": 4.3,
     "starting_price": 30000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/shadigrapher/600/400",
     "address": "Karachi, Pakistan (serves all areas)",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -841,12 +798,13 @@
     "established": 2018
   },
   {
-    "id": 16,
+    "id": 15,
     "name": "Shahida Weds Gallery",
     "area": "Gulshan-e-Iqbal",
     "rating": 4.6,
     "starting_price": 40000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/shahidaweds/600/400",
     "address": "Waqas Heights, Shop No# 1, Block 13D-1, Gulshan-e-Iqbal, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -899,57 +857,13 @@
     "cancellation_policy": "Partially Refundable"
   },
   {
-    "id": 17,
-    "name": "Zainbaba Photo Studio",
-    "area": "Gulshan-e-Iqbal",
-    "rating": 4.3,
-    "starting_price": 28000,
-    "price_type": "package",
-    "address": "Gulistan-e-Johar (serves Gulshan-e-Iqbal), Karachi, Pakistan",
-    "phone": "0322-2088037, 0315-2960652",
-    "whatsapp": "0322-2088037",
-    "gallery": [
-      "https://picsum.photos/seed/zainbaba_gul1/900/600",
-      "https://picsum.photos/seed/zainbaba_gul2/900/600",
-      "https://picsum.photos/seed/zainbaba_gul3/900/600"
-    ],
-    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
-    "staff_available": ["Male"],
-    "specialties": ["Wedding Photography", "Event Coverage", "Affordable Rates"],
-    "features": ["Professional Service", "Quality Work", "Timely Delivery"],
-    "packages": [
-      {
-        "name": "Basic",
-        "price": 28000,
-        "min_guests": 100,
-        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
-      },
-      {
-        "name": "Premium",
-        "price": 45000,
-        "min_guests": 200,
-        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
-      }
-    ],
-    "reviews": [
-      {
-        "name": "Client",
-        "rating": 4,
-        "comment": "Good service at reasonable rates"
-      }
-    ],
-    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
-    "verified_badge": "Listed on PakProBiz.com",
-    "established": 2010
-  },
-  {
-    "id": 18,
+    "id": 16,
     "name": "Smart Aperture Photography",
     "area": "Gulshan-e-Iqbal",
     "rating": 4.2,
     "starting_price": 25000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/smartaperture/600/400",
     "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -989,12 +903,13 @@
     "established": 2015
   },
   {
-    "id": 19,
-    "name": "AkskaarPhotography",
+    "id": 17,
+    "name": "Akskaar Photography",
     "area": "Gulshan-e-Iqbal",
     "rating": 4.2,
     "starting_price": 25000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/akskaar/600/400",
     "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1034,12 +949,13 @@
     "established": 2016
   },
   {
-    "id": 20,
-    "name": "QasimKhan Films & Photography",
+    "id": 18,
+    "name": "Qasim Khan Films & Photography",
     "area": "Gulshan-e-Iqbal",
     "rating": 4.3,
     "starting_price": 30000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/qasimkhan/600/400",
     "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1079,68 +995,13 @@
     "established": 2015
   },
   {
-    "id": 21,
-    "name": "Zainbaba Photo Studio",
-    "area": "Gulistan-e-Johar",
-    "rating": 4.3,
-    "starting_price": 28000,
-    "price_type": "package",
-    "address": "Gulistan-e-Johar, Karachi, Pakistan",
-    "phone": "0322-2088037, 0315-2960652, 021-37830856",
-    "whatsapp": "0322-2088037",
-    "gallery": [
-      "https://picsum.photos/seed/zainbaba_j1/900/600",
-      "https://picsum.photos/seed/zainbaba_j2/900/600",
-      "https://picsum.photos/seed/zainbaba_j3/900/600"
-    ],
-    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Commercial Photography"],
-    "staff_available": ["Male"],
-    "specialties": ["Wedding Photography", "Event Coverage", "Creative Portraits"],
-    "features": [
-      "Professional Service",
-      "Quality Work",
-      "Affordable Packages",
-      "Multiple Contact Options"
-    ],
-    "packages": [
-      {
-        "name": "Basic",
-        "price": 28000,
-        "min_guests": 100,
-        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
-      },
-      {
-        "name": "Premium",
-        "price": 45000,
-        "min_guests": 200,
-        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
-      },
-      {
-        "name": "Luxury",
-        "price": 70000,
-        "min_guests": 300,
-        "includes": ["Full Day Coverage", "Cinematic Film", "Premium Album", "Pre-wedding Shoot"]
-      }
-    ],
-    "reviews": [
-      {
-        "name": "Client",
-        "rating": 4,
-        "comment": "Professional photography service in Johar"
-      }
-    ],
-    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
-    "verified_badge": "Verified on PakProBiz.com",
-    "established": 2010
-  },
-  {
-    "id": 22,
+    "id": 19,
     "name": "HB Studio Weddings",
     "area": "Gulistan-e-Johar",
     "rating": 4.4,
     "starting_price": 35000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/hbstudio/600/400",
     "address": "Gulistan-e-Johar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1180,12 +1041,13 @@
     "established": 2016
   },
   {
-    "id": 23,
+    "id": 20,
     "name": "Dees Creations",
     "area": "Gulistan-e-Johar",
     "rating": 4.4,
     "starting_price": 30000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/dees/600/400",
     "address": "Gulistan-e-Johar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1225,57 +1087,13 @@
     "established": 2015
   },
   {
-    "id": 24,
-    "name": "ShadiGrapher.com",
-    "area": "Gulistan-e-Johar",
-    "rating": 4.3,
-    "starting_price": 30000,
-    "price_type": "package",
-    "address": "Gulistan-e-Johar, Karachi, Pakistan",
-    "phone": "+92 300 1234567",
-    "whatsapp": "+92 300 1234567",
-    "gallery": [
-      "https://picsum.photos/seed/shadigrapher_j1/900/600",
-      "https://picsum.photos/seed/shadigrapher_j2/900/600",
-      "https://picsum.photos/seed/shadigrapher_j3/900/600"
-    ],
-    "services": ["Wedding Photography", "Event Coverage", "Pre-wedding Shoots", "Album Design"],
-    "staff_available": ["Male"],
-    "specialties": ["Wedding Photography", "Affordable Packages", "Quality Work"],
-    "features": ["Professional Service", "Timely Delivery", "Budget Friendly"],
-    "packages": [
-      {
-        "name": "Basic",
-        "price": 30000,
-        "min_guests": 100,
-        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
-      },
-      {
-        "name": "Premium",
-        "price": 50000,
-        "min_guests": 200,
-        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
-      }
-    ],
-    "reviews": [
-      {
-        "name": "Client",
-        "rating": 4,
-        "comment": "Good value for money"
-      }
-    ],
-    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
-    "verified": true,
-    "verified_badge": "Listed on BusinessList.pk",
-    "established": 2018
-  },
-  {
-    "id": 25,
+    "id": 21,
     "name": "Aatif Photography",
     "area": "Gulistan-e-Johar",
     "rating": 4.2,
     "starting_price": 28000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/aatif/600/400",
     "address": "Gulistan-e-Johar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1315,12 +1133,13 @@
     "established": 2015
   },
   {
-    "id": 26,
+    "id": 22,
     "name": "Nasir4u Events",
     "area": "Federal B Area",
     "rating": 4.2,
     "starting_price": 25000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/nasir4u/600/400",
     "address": "Federal B Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1360,12 +1179,13 @@
     "established": 2015
   },
   {
-    "id": 27,
+    "id": 23,
     "name": "Moin Shah Film and Photography",
     "area": "Federal B Area",
     "rating": 4.4,
     "starting_price": 32500,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/moinshah/600/400",
     "address": "Federal B Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1417,12 +1237,13 @@
     "price_range": "PKR 32,500 - PKR 65,000"
   },
   {
-    "id": 28,
-    "name": "Sohailgphotography",
+    "id": 24,
+    "name": "Sohail G Photography",
     "area": "Federal B Area",
     "rating": 4.3,
     "starting_price": 28000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/sohailg/600/400",
     "address": "Federal B Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1462,12 +1283,13 @@
     "established": 2015
   },
   {
-    "id": 29,
+    "id": 25,
     "name": "Abd Shutters",
     "area": "Federal B Area",
     "rating": 4.0,
     "starting_price": 25000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/abdshutters/600/400",
     "address": "Azizabad Block 8 House Number 826/8, Karachi, 75950, Pakistan",
     "phone": "+92 333 3721389",
     "whatsapp": "+92 333 3721389",
@@ -1507,12 +1329,13 @@
     "established": 2014
   },
   {
-    "id": 30,
+    "id": 26,
     "name": "FB Area Photo Hub",
     "area": "Federal B Area",
     "rating": 4.0,
     "starting_price": 18000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/fbphotohub/600/400",
     "address": "Federal B Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1552,12 +1375,13 @@
     "established": 2016
   },
   {
-    "id": 31,
+    "id": 27,
     "name": "BnW Collections",
     "area": "Bahadurabad",
     "rating": 4.4,
     "starting_price": 40000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/bnw/600/400",
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1597,12 +1421,13 @@
     "established": 2014
   },
   {
-    "id": 32,
+    "id": 28,
     "name": "The Wedder's Photography",
     "area": "Bahadurabad",
     "rating": 4.3,
     "starting_price": 28000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/wedders/600/400",
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1642,12 +1467,13 @@
     "established": 2015
   },
   {
-    "id": 33,
+    "id": 29,
     "name": "Party Popper Photo",
     "area": "Bahadurabad",
     "rating": 4.2,
     "starting_price": 25000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/partypopper/600/400",
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1687,12 +1513,13 @@
     "established": 2016
   },
   {
-    "id": 34,
+    "id": 30,
     "name": "Bahadurabad Photography",
     "area": "Bahadurabad",
     "rating": 4.1,
     "starting_price": 20000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/bahadurabad/600/400",
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1732,12 +1559,13 @@
     "established": 2015
   },
   {
-    "id": 35,
+    "id": 31,
     "name": "Elite Bahadurabad Photos",
     "area": "Bahadurabad",
     "rating": 4.1,
     "starting_price": 22000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/elitebahadurabad/600/400",
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1777,12 +1605,13 @@
     "established": 2016
   },
   {
-    "id": 36,
-    "name": "FotoClickStudio",
+    "id": 32,
+    "name": "FotoClick Studio",
     "area": "Tariq Road",
     "rating": 4.3,
     "starting_price": 25000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/fotoclick/600/400",
     "address": "Tariq Road, Karachi, Pakistan",
     "phone": "+92 308 2995955",
     "whatsapp": "+92 308 2995955",
@@ -1822,12 +1651,13 @@
     "established": 2015
   },
   {
-    "id": 37,
+    "id": 33,
     "name": "Anas Ahmad Photography",
     "area": "Tariq Road",
     "rating": 4.4,
     "starting_price": 35000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/anasahmad/600/400",
     "address": "Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1867,12 +1697,13 @@
     "established": 2015
   },
   {
-    "id": 38,
+    "id": 34,
     "name": "Tariq Road Photo Studio",
     "area": "Tariq Road",
     "rating": 4.1,
     "starting_price": 19000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/tariqroad/600/400",
     "address": "Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1912,12 +1743,13 @@
     "established": 2010
   },
   {
-    "id": 39,
+    "id": 35,
     "name": "Shadi Point Photography",
     "area": "Tariq Road",
     "rating": 4.2,
     "starting_price": 30000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/shadipoint/600/400",
     "address": "Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -1957,12 +1789,13 @@
     "established": 2015
   },
   {
-    "id": 40,
+    "id": 36,
     "name": "Luxury Photography Tariq",
     "area": "Tariq Road",
     "rating": 4.1,
     "starting_price": 28000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/luxurytariq/600/400",
     "address": "Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -2002,12 +1835,13 @@
     "established": 2016
   },
   {
-    "id": 41,
+    "id": 37,
     "name": "Jugnoo Photography",
     "area": "North Nazimabad",
     "rating": 4.1,
     "starting_price": 22000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/jugnoo/600/400",
     "address": "Shop # 2, Babar Vista Apartment, Block K, North Nazimabad, Karachi, Pakistan",
     "phone": "0311-2720797",
     "whatsapp": "0311-2720797",
@@ -2047,12 +1881,13 @@
     "established": 2015
   },
   {
-    "id": 42,
-    "name": "S.M.Waqar Wedding Photography Studio",
+    "id": 38,
+    "name": "S.M.Waqar Wedding Photography",
     "area": "North Nazimabad",
     "rating": 4.2,
     "starting_price": 25000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/smwaqar/600/400",
     "address": "North Nazimabad, Karachi, Pakistan",
     "phone": "0344 5478314",
     "whatsapp": "0344 5478314",
@@ -2092,12 +1927,13 @@
     "established": 2014
   },
   {
-    "id": 43,
+    "id": 39,
     "name": "North Nazimabad Photography",
     "area": "North Nazimabad",
     "rating": 4.0,
     "starting_price": 20000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/northnazimabad/600/400",
     "address": "North Nazimabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -2137,12 +1973,13 @@
     "established": 2015
   },
   {
-    "id": 44,
+    "id": 40,
     "name": "Royal NN Photography",
     "area": "North Nazimabad",
     "rating": 4.1,
     "starting_price": 23000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/royalnn/600/400",
     "address": "North Nazimabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -2182,12 +2019,13 @@
     "established": 2016
   },
   {
-    "id": 45,
+    "id": 41,
     "name": "Elite NN Photography",
     "area": "North Nazimabad",
     "rating": 4.1,
     "starting_price": 28000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/elitenn/600/400",
     "address": "North Nazimabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -2227,12 +2065,13 @@
     "established": 2016
   },
   {
-    "id": 46,
+    "id": 42,
     "name": "Benchmarker Studio",
     "area": "North Karachi",
     "rating": 4.4,
     "starting_price": 45000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/benchmarker/600/400",
     "address": "M-2 Mezzanine Floor, Mina Avenue, Main Shahrah-e-Faisal Airport, Karachi, Pakistan",
     "phone": "+92 313 2343612",
     "whatsapp": "+92 313 2343612",
@@ -2283,12 +2122,13 @@
     "established": 2010
   },
   {
-    "id": 47,
+    "id": 43,
     "name": "ArtX Pro",
     "area": "North Karachi",
     "rating": 4.3,
     "starting_price": 40000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/artxpro/600/400",
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -2328,12 +2168,13 @@
     "established": 2015
   },
   {
-    "id": 48,
+    "id": 44,
     "name": "North Karachi Photo Studio",
     "area": "North Karachi",
     "rating": 3.9,
     "starting_price": 15000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/nkstudio/600/400",
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -2373,12 +2214,13 @@
     "established": 2010
   },
   {
-    "id": 49,
+    "id": 45,
     "name": "Royal NK Photography",
     "area": "North Karachi",
     "rating": 4.0,
     "starting_price": 18000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/royalnk/600/400",
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -2418,12 +2260,13 @@
     "established": 2015
   },
   {
-    "id": 50,
+    "id": 46,
     "name": "Star Photography NK",
     "area": "North Karachi",
     "rating": 3.8,
     "starting_price": 16000,
     "price_type": "package",
+    "image": "https://picsum.photos/seed/starnk/600/400",
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
@@ -2461,5 +2304,217 @@
     "verified": true,
     "verified_badge": "Local Business Verified",
     "established": 2016
+  },
+  {
+    "id": 47,
+    "name": "LensCraft Studios",
+    "area": "DHA",
+    "rating": 4.5,
+    "starting_price": 48000,
+    "price_type": "package",
+    "image": "https://picsum.photos/seed/lenscraft/600/400",
+    "address": "DHA, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/lenscraft1/900/600",
+      "https://picsum.photos/seed/lenscraft2/900/600",
+      "https://picsum.photos/seed/lenscraft3/900/600"
+    ],
+    "services": ["Wedding Photography", "Cinematic Films", "Drone Coverage", "Pre-wedding Shoots"],
+    "staff_available": ["Male"],
+    "specialties": ["Creative Wedding Photography", "Cinematic Storytelling", "Drone Shots"],
+    "features": ["Professional Team", "Quality Work", "Creative Direction", "Timely Delivery"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 48000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Online Gallery"]
+      },
+      {
+        "name": "Premium",
+        "price": 75000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Cinematic Video", "Drone Shots"]
+      },
+      {
+        "name": "Luxury",
+        "price": 120000,
+        "min_guests": 300,
+        "includes": ["Full Day Coverage", "Cinematic Film", "Drone Coverage", "Premium Album", "Pre-wedding Shoot"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Absolutely stunning photography! LensCraft team is amazing."
+      },
+      {
+        "name": "Fatima Ali",
+        "rating": 4,
+        "comment": "Professional and creative. Highly recommended!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Featured on Shadiyana.pk",
+    "established": 2017
+  },
+  {
+    "id": 48,
+    "name": "Golden Frame Productions",
+    "area": "Clifton",
+    "rating": 4.3,
+    "starting_price": 42000,
+    "price_type": "package",
+    "image": "https://picsum.photos/seed/goldenframe/600/400",
+    "address": "Clifton, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/goldenframe1/900/600",
+      "https://picsum.photos/seed/goldenframe2/900/600",
+      "https://picsum.photos/seed/goldenframe3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Video Production"],
+    "staff_available": ["Male", "Female"],
+    "specialties": ["Golden Hour Photography", "Cinematic Shots", "Creative Storytelling"],
+    "features": ["Professional Team", "Quality Work", "Timely Delivery", "Creative Vision"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 42000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 68000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      },
+      {
+        "name": "Luxury",
+        "price": 100000,
+        "min_guests": 300,
+        "includes": ["Full Day Coverage", "Cinematic Film", "Premium Album", "Pre-wedding Shoot"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Golden Frame captured our wedding beautifully!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on BusinessList.pk",
+    "established": 2016
+  },
+  {
+    "id": 49,
+    "name": "DreamCatcher Photography",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.0,
+    "starting_price": 22000,
+    "price_type": "package",
+    "image": "https://picsum.photos/seed/dreamcatcher/600/400",
+    "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/dreamcatcher1/900/600",
+      "https://picsum.photos/seed/dreamcatcher2/900/600",
+      "https://picsum.photos/seed/dreamcatcher3/900/600"
+    ],
+    "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Album Design"],
+    "staff_available": ["Male"],
+    "specialties": ["Dreamy Wedding Photography", "Creative Portraits", "Event Coverage"],
+    "features": ["Professional Service", "Affordable Packages", "Quality Work", "Timely Delivery"],
+    "packages": [
+      {
+        "name": "Basic",
+        "price": 22000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Digital Copy"]
+      },
+      {
+        "name": "Premium",
+        "price": 38000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Highlight Video", "Album"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 4,
+        "comment": "Good photography service at reasonable rates"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Listed on Photlo.com",
+    "established": 2015
+  },
+  {
+    "id": 50,
+    "name": "Wedding Tales by Hira",
+    "area": "PECHS",
+    "rating": 4.4,
+    "starting_price": 38000,
+    "price_type": "package",
+    "image": "https://picsum.photos/seed/weddingtales/600/400",
+    "address": "PECHS, Karachi, Pakistan",
+    "phone": "+92 300 1234567",
+    "whatsapp": "+92 300 1234567",
+    "gallery": [
+      "https://picsum.photos/seed/weddingtales1/900/600",
+      "https://picsum.photos/seed/weddingtales2/900/600",
+      "https://picsum.photos/seed/weddingtales3/900/600"
+    ],
+    "services": ["Wedding Photography", "Bridal Photography", "Fine Art Portraits", "Pre-wedding Shoots"],
+    "staff_available": ["Female"],
+    "specialties": ["Bridal Photography", "Fine Art Style", "Elegant Portraits", "Natural Light"],
+    "features": ["Female Photographer", "Fine Art Approach", "Elegant Style", "Bridal Specialist"],
+    "packages": [
+      {
+        "name": "Bridal Basic",
+        "price": 38000,
+        "min_guests": 100,
+        "includes": ["4 Hours Coverage", "All Edited Photos", "Online Gallery"]
+      },
+      {
+        "name": "Bridal Premium",
+        "price": 60000,
+        "min_guests": 200,
+        "includes": ["8 Hours Coverage", "All Edited Photos", "Fine Art Album", "Bridal Portraits"]
+      },
+      {
+        "name": "Bridal Luxury",
+        "price": 95000,
+        "min_guests": 300,
+        "includes": ["Full Day Coverage", "Fine Art Album", "Bridal Editorial", "Pre-wedding Shoot"]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Client",
+        "rating": 5,
+        "comment": "Hira's photography is stunning! She captured my bridal portraits beautifully."
+      },
+      {
+        "name": "Ayesha Khan",
+        "rating": 4,
+        "comment": "Very professional and artistic work. Loved the results!"
+      }
+    ],
+    "payment_methods": ["Cash", "Bank Transfer", "JazzCash", "Easypaisa"],
+    "verified": true,
+    "verified_badge": "Featured Female Photographer | Bridal Specialist",
+    "established": 2018
   }
 ]

@@ -10,381 +10,506 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body {
-        background: #0a0708;
-        font-family: 'Jost', sans-serif;
-        overflow-x: hidden;
-    }
+:root {
+  --rose: #b93b56;
+  --rose-hover: #a22f49;
+  --gold: #c89b2c;
+  --gold-light: #e8b93c;
+  --gold-dark: #8a691a;
+  --dark: #0a0708;
+  --dark2: #0e0b0c;
+}
 
-    :root {
-        --rose: #b93b56;
-        --rose-hover: #a22f49;
-        --gold: #c89b2c;
-        --gold-light: #e8b93c;
-        --white: #ffffff;
-        --dark-bg: #0e0b0c;
-        --card-glass: rgba(18, 14, 16, 0.75);
-        --border-glow: rgba(200, 155, 44, 0.35);
-    }
+body {
+  background: var(--dark);
+  font-family: 'Jost', sans-serif;
+  color: #f0ede8;
+  overflow-x: hidden;
+}
 
-    .premium-photographers-section {
-        padding: 70px 24px 90px;
-        background: radial-gradient(circle at 10% 20%, #110c0e 0%, #050303 100%);
-        position: relative;
-    }
+.premium-photographers-section {
+  padding: 20px 24px 90px;
+  background: radial-gradient(circle at 10% 20%, #110c0e 0%, #050303 100%);
+  position: relative;
+  min-height: 100vh;
+}
 
-    .premium-section-accent {
-        height: 2px;
-        width: 120px;
-        background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), transparent);
-        margin: 0 auto 16px auto;
-    }
+.premium-section-accent {
+  height: 2px;
+  width: 120px;
+  background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), transparent);
+  margin: 0 auto 16px;
+}
 
-    .section-title-premium {
-        text-align: center;
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 3rem;
-        font-weight: 700;
-        letter-spacing: 2px;
-        color: #fff;
-        margin-bottom: 10px;
-    }
-    .section-title-premium span { color: var(--gold); font-style: italic; }
+.section-title-premium {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.section-title-premium span { color: var(--gold); font-style: italic; }
 
-    .section-sub {
-        text-align: center;
-        color: rgba(255,255,255,0.6);
-        font-size: 0.85rem;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        margin-bottom: 36px;
-    }
+.section-sub {
+  text-align: center;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
 
-    .filter-bar {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 48px;
-    }
-    .filter-btn {
-        background: transparent;
-        border: 1.2px solid rgba(200, 155, 44, 0.4);
-        color: rgba(255,255,255,0.65);
-        font-family: 'Jost', sans-serif;
-        font-size: 0.72rem;
-        font-weight: 600;
-        letter-spacing: 1.2px;
-        text-transform: uppercase;
-        padding: 8px 20px;
-        border-radius: 40px;
-        cursor: pointer;
-        transition: all 0.28s ease;
-    }
-    .filter-btn:hover { border-color: var(--gold); color: var(--gold-light); background: rgba(200,155,44,0.08); }
-    .filter-btn.active {
-        background: var(--gold);
-        border-color: var(--gold);
-        color: #0e0b0c;
-        font-weight: 800;
-        box-shadow: 0 4px 16px rgba(200,155,44,0.3);
-    }
+/* ----- AREA RAIL (chips) ----- */
+.area-rail-wrap {
+  max-width: 1200px;
+  margin: 0 auto 18px;
+}
+.area-rail {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 6px 4px 14px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) transparent;
+}
+.area-rail::-webkit-scrollbar { height: 4px; }
+.area-rail::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
+.area-chip {
+  flex: 0 0 auto;
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.55);
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  transition: color 0.25s;
+}
+.area-chip:hover { color: #fff; }
+.area-chip.active { color: var(--gold); }
+.area-chip.active::after {
+  content: '';
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  border-radius: 2px;
+}
 
-    .no-results {
-        text-align: center;
-        color: rgba(255,255,255,0.35);
-        font-size: 1rem;
-        letter-spacing: 1px;
-        padding: 60px 0;
-        display: none;
-        width: 100%;
-    }
+/* ----- TOOL ROW (search + sort + category) ----- */
+.tool-row {
+  max-width: 1200px;
+  margin: 0 auto 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+.tool-left {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 1;
+}
+.search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 240px;
+  max-width: 380px;
+}
+.search-wrap i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold);
+  font-size: 0.85rem;
+}
+.search-wrap input {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(200,155,44,0.2);
+  color: #fff;
+  padding: 11px 14px 11px 38px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.25s;
+}
+.search-wrap input:focus { border-color: var(--gold); }
 
-    .premium-card-wrapper {
-        margin-bottom: 28px;
-        transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-        height: 100%;
-    }
-    .premium-card-wrapper:hover { transform: translateY(-7px); }
-    .premium-card {
-        background: rgba(20, 16, 18, 0.85);
-        backdrop-filter: blur(2px);
-        border-radius: 22px;
-        overflow: hidden;
-        border: 1px solid rgba(200, 155, 44, 0.3);
-        box-shadow: 0 25px 40px -12px rgba(0,0,0,0.7), 0 0 0 0.5px rgba(200,155,44,0.15) inset;
-        transition: all 0.3s ease;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    .premium-card:hover {
-        border-color: rgba(200, 155, 44, 0.7);
-        box-shadow: 0 30px 50px -18px black, 0 0 0 2px rgba(200,155,44,0.2) inset;
-        background: rgba(24, 19, 21, 0.9);
-    }
+.sort-wrap select {
+  background: rgba(20,15,17,0.95);
+  border: 1px solid rgba(200,155,44,0.2);
+  color: #fff;
+  padding: 11px 14px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  outline: none;
+  cursor: pointer;
+}
+.sort-wrap select option {
+  background: #15101a;
+  color: #fff;
+  padding: 10px;
+}
 
-    .card-img-container {
-        position: relative;
-        overflow: hidden;
-        border-bottom: 1px solid rgba(200,155,44,0.4);
-    }
-    .card-img-container img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        transition: transform 0.7s ease;
-        display: block;
-    }
-    .premium-card:hover .card-img-container img { transform: scale(1.04); }
-    .img-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.08) 60%);
-        pointer-events: none;
-    }
+/* ----- CATEGORY DROPDOWN ----- */
+.cat-trig-wrap { position: relative; }
+.cat-trig {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, rgba(200,155,44,0.15), rgba(185,59,86,0.12));
+  border: 1px solid rgba(200,155,44,0.45);
+  color: var(--gold-light);
+  padding: 11px 18px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  transition: all 0.3s;
+}
+.cat-trig:hover {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: #0b0708;
+  border-color: transparent;
+  box-shadow: 0 8px 22px rgba(200,155,44,0.35);
+}
+.cat-trig i.fa-chevron-down { transition: transform 0.3s; font-size: 0.65rem; }
+.cat-trig.open i.fa-chevron-down { transform: rotate(180deg); }
 
-    .premium-badge {
-        position: absolute;
-        top: 14px;
-        left: 14px;
-        background: linear-gradient(125deg, #c89b2c 0%, #d9aa3a 100%);
-        color: #0e0b0c;
-        font-size: 0.65rem;
-        font-weight: 800;
-        letter-spacing: 1.2px;
-        padding: 5px 12px;
-        border-radius: 30px;
-        box-shadow: 0 6px 14px rgba(0,0,0,0.3);
-        font-family: 'Jost', sans-serif;
-        z-index: 3;
-        text-transform: uppercase;
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-    }
-    .premium-badge i { font-size: 0.65rem; }
+.cat-dd {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: rgba(14,11,12,0.98);
+  border: 1px solid var(--gold);
+  border-radius: 14px;
+  padding: 10px;
+  min-width: 240px;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.7);
+  backdrop-filter: blur(16px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: all 0.3s;
+  z-index: 85;
+}
+.cat-dd.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.cat-dd-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: rgba(255,255,255,0.78);
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: all 0.25s;
+}
+.cat-dd-item i { width: 18px; text-align: center; color: var(--gold); font-size: 0.9rem; }
+.cat-dd-item:hover { background: rgba(200,155,44,0.12); color: #fff; padding-left: 16px; }
+.cat-dd-item.active { background: linear-gradient(135deg, rgba(200,155,44,0.2), rgba(185,59,86,0.08)); color: var(--gold-light); }
 
-    .compare-card-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        padding: 4px 11px;
-        background: rgba(7,7,7,0.82);
-        border: 1px solid rgba(200,155,44,0.4);
-        border-radius: 40px;
-        color: var(--gold);
-        font-family: 'Jost', sans-serif;
-        font-size: 0.6rem;
-        font-weight: 600;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        transition: all 0.22s;
-        z-index: 4;
-        backdrop-filter: blur(8px);
-    }
-    .compare-card-btn:hover { background: var(--gold); color: #0e0b0c; border-color: transparent; }
-    .compare-card-btn.added { background: var(--rose); color: #fff; border-color: transparent; }
+/* ----- CARDS ----- */
+.halls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 28px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
 
-    #wd-compare-toast {
-        position: fixed;
-        bottom: 1.8rem;
-        left: 50%;
-        transform: translateX(-50%) translateY(80px);
-        background: rgba(14,11,12,0.97);
-        border: 1px solid rgba(200,155,44,0.45);
-        backdrop-filter: blur(14px);
-        border-radius: 50px;
-        padding: 0.65rem 1.6rem;
-        color: #e8b93c;
-        font-family: 'Jost', sans-serif;
-        font-size: 0.78rem;
-        font-weight: 500;
-        z-index: 9999;
-        transition: transform 0.35s cubic-bezier(.34,1.56,.64,1);
-        white-space: nowrap;
-        pointer-events: none;
-    }
-    #wd-compare-toast.show { transform: translateX(-50%) translateY(0); }
-    #wd-compare-toast.error-toast { border-color: rgba(185,59,86,0.5); color: #f87171; }
+.hall-card {
+  position: relative;
+  background: linear-gradient(160deg, #15101200 0%, #15101290 100%), #100b0d;
+  border: 1px solid rgba(200,155,44,0.12);
+  border-radius: 22px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.5s cubic-bezier(0.2,0.8,0.2,1), box-shadow 0.5s, border-color 0.35s;
+  box-shadow: 0 12px 30px -18px rgba(0,0,0,0.9);
+}
+.hall-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(200,155,44,0.6), transparent 40%, transparent 60%, rgba(185,59,86,0.4));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+  z-index: 2;
+}
+.hall-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -22px rgba(0,0,0,0.95), 0 0 0 1px rgba(200,155,44,0.25);
+}
+.hall-card:hover::before { opacity: 1; }
 
-    .card-body-custom {
-        padding: 1.1rem 1.2rem 1.3rem;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+.hall-media {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.hall-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s ease;
+}
+.hall-card:hover .hall-media img { transform: scale(1.1); }
+.hall-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7,5,6,0.95) 0%, rgba(7,5,6,0.2) 45%, transparent 70%);
+  pointer-events: none;
+}
 
-    .photographer-title {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #f5efdf;
-        margin-bottom: 4px;
-        letter-spacing: -0.3px;
-        line-height: 1.2;
-    }
+.premium-icon {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px 5px 8px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(11,7,8,0.85), rgba(11,7,8,0.65));
+  border: 1px solid rgba(200,155,44,0.55);
+  backdrop-filter: blur(8px);
+  color: var(--gold-light);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+.premium-icon i { font-size: 0.7rem; color: var(--gold-light); text-shadow: 0 0 8px rgba(200,155,44,0.6); }
 
-    .location-text {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        color: rgba(255,255,255,0.6);
-        font-size: 0.78rem;
-        margin-bottom: 10px;
-    }
-    .location-text i { color: var(--gold); font-size: 0.72rem; }
+.compare-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+  background: rgba(11,7,8,0.85);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transform: translateY(-6px) scale(0.85);
+  transition: all 0.35s;
+}
+.hall-card:hover .compare-btn { opacity: 1; transform: translateY(0) scale(1); }
+.compare-btn:hover { background: var(--gold); color: #0b0708; transform: scale(1.1); }
+.compare-btn.added { background: var(--gold); color: #0b0708; opacity: 1; transform: translateY(0) scale(1); }
 
-    .rating-wrapper { display: flex; align-items: center; gap: 7px; margin-bottom: 10px; }
-    .stars { color: var(--gold); font-size: 0.75rem; letter-spacing: 1px; }
-    .stars i { margin-right: 1px; }
+.float-rating {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(11,7,8,0.78);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,208,90,0.35);
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #ffd05a;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
 
-    .rating-number {
-        font-weight: 700;
-        color: #fff;
-        font-size: 0.82rem;
-        background: rgba(200,155,44,0.18);
-        padding: 2px 8px;
-        border-radius: 40px;
-    }
+.hall-body {
+  padding: 20px 20px 22px;
+  position: relative;
+  z-index: 1;
+}
+.hall-area {
+  font-size: 0.65rem;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.9;
+}
+.hall-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+.hall-meta-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+.price-block {
+  display: flex;
+  flex-direction: column;
+}
+.price-label {
+  font-size: 0.6rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 2px;
+}
+.price-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  color: var(--gold-light);
+  font-weight: 700;
+  line-height: 1;
+}
+.price-val small {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.65rem;
+  font-weight: 400;
+  font-family: 'Jost';
+}
 
-    .gold-divider {
-        height: 1px;
-        background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), transparent);
-        margin: 8px 0 12px 0;
-        opacity: 0.65;
-    }
+.details-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  padding: 13px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1a1214, #100b0d);
+  color: var(--gold-light);
+  border: 1px solid rgba(200,155,44,0.35);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.35s;
+  position: relative;
+  overflow: hidden;
+}
+.details-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  transform: translateY(101%);
+  transition: transform 0.4s cubic-bezier(0.2,0.8,0.2,1);
+  z-index: 0;
+}
+.details-btn span, .details-btn i { position: relative; z-index: 1; transition: color 0.3s; }
+.details-btn:hover { border-color: transparent; color: #0b0708; }
+.details-btn:hover::before { transform: translateY(0); }
+.details-btn:hover i { transform: translateX(4px); }
 
-    .price-section {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+/* ----- Compare Tray ----- */
+.compare-tray {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  background: rgba(11,7,8,0.95);
+  border: 1px solid var(--gold);
+  border-radius: 16px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 50;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+  backdrop-filter: blur(12px);
+  transition: transform 0.4s cubic-bezier(0.2,0.8,0.2,1);
+}
+.compare-tray.show { transform: translateX(-50%) translateY(0); }
+.compare-tray .ctitle { font-size: 0.78rem; letter-spacing: 1.4px; text-transform: uppercase; color: var(--gold); }
+.compare-tray .cbtn {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: #0b0708;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.compare-tray .cclear {
+  background: transparent;
+  color: rgba(255,255,255,0.6);
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
 
-    .d-flex-price { display: flex; align-items: baseline; gap: 3px; }
-    .price-pkr { font-size: 0.68rem; font-weight: 500; color: var(--gold-light); letter-spacing: 1px; }
+.empty-state {
+  text-align: center;
+  color: rgba(255,255,255,0.5);
+  padding: 60px 0;
+  grid-column: 1/-1;
+}
+.loader-ring {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(200,155,44,0.15);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 60px auto;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
 
-    .price-amount {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 1.7rem;
-        font-weight: 800;
-        color: #f5e2b0;
-        line-height: 1;
-    }
-
-    .price-type { font-size: 0.68rem; color: rgba(255,255,255,0.45); margin-left: 2px; }
-
-    .btn-view-details {
-        background: transparent;
-        border: 1.2px solid rgba(200,155,44,0.65);
-        padding: 7px 16px;
-        border-radius: 40px;
-        color: var(--gold-light);
-        font-size: 0.68rem;
-        font-weight: 600;
-        letter-spacing: 1.2px;
-        text-transform: uppercase;
-        transition: all 0.3s ease;
-        display: inline-flex;
-        align-items: center;
-        gap: 7px;
-        cursor: pointer;
-    }
-    .btn-view-details i { font-size: 0.68rem; transition: transform 0.2s; }
-    .btn-view-details:hover {
-        background: var(--gold);
-        border-color: var(--gold);
-        color: #0e0b0c;
-        box-shadow: 0 5px 14px rgba(200,155,44,0.3);
-        transform: translateY(-2px);
-    }
-    .btn-view-details:hover i { transform: translateX(4px); color: #0e0b0c; }
-
-    /* Floating Compare Bar */
-    #wd-compare-bar {
-        position: fixed;
-        bottom: 0; left: 0; right: 0;
-        background: rgba(14,11,12,0.97);
-        border-top: 1px solid rgba(200,155,44,0.35);
-        backdrop-filter: blur(16px);
-        padding: 10px 20px;
-        display: none;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        z-index: 9998;
-        flex-wrap: wrap;
-    }
-    #wd-compare-bar.visible { display: flex; }
-    .compare-bar-items {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-    .compare-bar-chip {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        background: rgba(200,155,44,0.1);
-        border: 1px solid rgba(200,155,44,0.3);
-        border-radius: 40px;
-        padding: 4px 12px 4px 8px;
-        font-family: 'Jost', sans-serif;
-        font-size: 0.72rem;
-        color: #e8b93c;
-    }
-    .compare-bar-chip button {
-        background: none; border: none;
-        color: rgba(255,255,255,0.4);
-        cursor: pointer; padding: 0; font-size: 0.8rem; line-height: 1;
-    }
-    .compare-bar-chip button:hover { color: var(--rose); }
-    .btn-go-compare {
-        padding: 8px 22px;
-        background: linear-gradient(135deg, var(--gold), var(--gold-light));
-        color: #0e0b0c;
-        border: none;
-        border-radius: 40px;
-        font-family: 'Jost', sans-serif;
-        font-size: 0.75rem;
-        font-weight: 800;
-        letter-spacing: 1px;
-        cursor: pointer;
-        transition: opacity 0.2s, transform 0.2s;
-        white-space: nowrap;
-    }
-    .btn-go-compare:hover { opacity: 0.88; transform: translateY(-1px); }
-    .btn-clear-compare {
-        padding: 7px 16px;
-        background: transparent;
-        border: 1px solid rgba(185,59,86,0.4);
-        border-radius: 40px;
-        color: var(--rose);
-        font-family: 'Jost', sans-serif;
-        font-size: 0.72rem;
-        cursor: pointer;
-        transition: all 0.2s;
-    }
-    .btn-clear-compare:hover { background: var(--rose); color: #fff; }
-
-    @media (max-width: 576px) {
-        .premium-photographers-section { padding: 44px 14px 60px; }
-        .section-title-premium { font-size: 2.2rem; }
-        .photographer-title { font-size: 1.25rem; }
-        .price-amount { font-size: 1.45rem; }
-    }
-
-    ::selection { background: var(--gold); color: #0e0b0c; }
+@media (max-width: 768px) {
+  .section-title-premium { font-size: 2.1rem; }
+}
 </style>
 </head>
 <body>
@@ -392,312 +517,244 @@
 <!-- NAVBAR -->
 <div id="nav-container"></div>
 
-<!-- Premium Photographers Showcase -->
-<div class="premium-photographers-section">
-    <div class="premium-section-accent"></div>
-    <h2 class="section-title-premium">Master <span>Lensmen</span></h2>
-    <p class="section-sub">Capturing your most precious moments with artistry & elegance</p>
+<!-- PHOTOGRAPHERS SECTION -->
+<section class="premium-photographers-section">
+  <div class="premium-section-accent"></div>
+  <h1 class="section-title-premium">Professional <span>Photographer</span></h1>
+  <p class="section-sub">Capturing your most precious moments with artistry & elegance</p>
 
-    <div id="filterBar" class="filter-bar"></div>
+  <!-- AREA RAIL -->
+  <div class="area-rail-wrap">
+    <div class="area-rail" id="areaRail"></div>
+  </div>
 
-    <div class="container">
-        <div class="row g-3" id="productContainer"></div>
-        <p id="noResults" class="no-results">Koi photographer nahi mila is area mein.</p>
+  <!-- TOOL ROW -->
+  <div class="tool-row">
+    <div class="tool-left">
+      <div class="search-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input id="searchInput" type="text" placeholder="Search by name…" />
+      </div>
+      <div class="sort-wrap">
+        <select id="sortSel">
+          <option value="rating">Top Rated</option>
+          <option value="price_low">Price: Low to High</option>
+          <option value="price_high">Price: High to Low</option>
+          <option value="name">Name (A–Z)</option>
+        </select>
+      </div>
     </div>
+    <div class="cat-trig-wrap">
+      <button class="cat-trig" id="catTrig">
+        <i class="fa-solid fa-layer-group"></i> Categories
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="cat-dd" id="catDd">
+        <a href="halls.html" class="cat-dd-item"><i class="fa-solid fa-building-columns"></i> Halls</a>
+        <a href="catering.html" class="cat-dd-item"><i class="fa-solid fa-utensils"></i> Catering</a>
+        <a href="photographers.html" class="cat-dd-item active"><i class="fa-solid fa-camera-retro"></i> Photographers</a>
+        <a href="carrentals.html" class="cat-dd-item"><i class="fa-solid fa-car"></i> Car Rentals</a>
+        <a href="decorating.html" class="cat-dd-item"><i class="fa-solid fa-wand-magic-sparkles"></i> Decorators</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRID -->
+  <div class="halls-grid" id="hallsGrid">
+    <div class="loader-ring"></div>
+  </div>
+</section>
+
+<!-- COMPARE TRAY -->
+<div class="compare-tray" id="cmpTray">
+  <span class="ctitle">Compare <b id="cmpCount">0</b>/4</span>
+  <a class="cbtn" href="compare.html?cat=photographers">Compare Now</a>
+  <button class="cclear" id="cmpClear">Clear</button>
 </div>
 
 <!-- FOOTER -->
 <div id="footer-container"></div>
 
-<!-- FLOATING COMPARE BAR -->
-<div id="wd-compare-bar">
-    <div class="compare-bar-items" id="compareBarItems"></div>
-    <div style="display:flex;gap:8px;align-items:center;">
-        <button class="btn-clear-compare" onclick="clearPhotoCompare()">Clear</button>
-        <button class="btn-go-compare" onclick="window.location.href='compare.html?cat=photographers'">
-            <i class="fas fa-scale-balanced" style="margin-right:6px;"></i>Compare Now
-        </button>
-    </div>
-</div>
-
-<!-- TOAST -->
-<div id="wd-compare-toast"></div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
 
-// ===== NAVBAR & FOOTER =====
-$(document).ready(() => {
-    $.get('navebar.html', (data) => {
-        $('#nav-container').html(data);
-        var page = window.location.pathname.split('/').pop().replace('.html','').toLowerCase() || 'photographers';
-        var pageMap = { 'photographers': 'vendors', 'photographer-detail': 'vendors' };
-        var activeKey = pageMap[page] || 'vendors';
-        $('.wd-menu-link').removeClass('active');
-        $('.wd-mobile-list > li > a').removeClass('active');
-        $('.wd-menu-link[data-nav="' + activeKey + '"]').addClass('active');
-        $('.wd-mobile-list > li > a[data-nav="' + activeKey + '"]').addClass('active');
-        updatePhotoCompareBadge();
-    });
-
-    $.get('footer.html', (data) => { $('#footer-container').html(data); });
+// ===== NAVBAR / FOOTER =====
+$(document).ready(function() {
+  $.get("navebar.html", function(d) {
+    $("#nav-container").html(d);
+    var page = window.location.pathname.split('/').pop().replace('.html','').toLowerCase() || 'photographers';
+    var map = { 'photographers': 'vendors', 'photographer-detail': 'vendors' };
+    var key = map[page] || 'vendors';
+    $(".wd-menu-link").removeClass("active");
+    $(".wd-mobile-list > li > a").removeClass("active");
+    $('.wd-menu-link[data-nav="' + key + '"]').addClass("active");
+    $('.wd-mobile-list > li > a[data-nav="' + key + '"]').addClass("active");
+    updateCompareBadge();
+  });
+  $.get("footer.html", function(d) {
+    $("#footer-container").html(d);
+  });
 });
 
 // ===== COMPARE SYSTEM =====
-const WD_PHOTO_KEY = 'wd_compare_photographers';
-const WD_MAX_PHOTO = 4;
+let compareIds = JSON.parse(localStorage.getItem("cmp_photographers") || "[]");
+const grid = document.getElementById("hallsGrid");
+const fallback = "https://images.pexels.com/photos/265947/pexels-photo-265947.jpeg?auto=compress&cs=tinysrgb&w=800&h=520&fit=crop";
 
-function getPhotoCompare() {
-    try { return JSON.parse(localStorage.getItem(WD_PHOTO_KEY) || '[]'); }
-    catch { return []; }
-}
-function savePhotoCompare(arr) {
-    localStorage.setItem(WD_PHOTO_KEY, JSON.stringify(arr));
-    updatePhotoCompareBadge();
-    renderPhotoCompareBar();
-}
-function clearPhotoCompare() {
-    savePhotoCompare([]);
-    document.querySelectorAll('.compare-card-btn').forEach(btn => {
-        btn.classList.remove('added');
-        const sp = btn.querySelector('span');
-        if (sp) sp.textContent = 'Compare';
-    });
-    showPhotoToast('Comparison cleared');
-}
+let PHOTOGRAPHERS = [];
+let currentArea = "All";
 
-// Event delegation on container
-document.getElementById('productContainer').addEventListener('click', function(e) {
-    const btn = e.target.closest('.compare-card-btn');
-    if (!btn) return;
-    e.stopPropagation();
+// Load photographers.json
+fetch("photographers.json")
+  .then(r => r.json())
+  .then(data => {
+    PHOTOGRAPHERS = data;
+    buildAreas();
+    render();
+    updateTray();
+  })
+  .catch(e => {
+    grid.innerHTML = '<div class="empty-state">Failed to load photographers.</div>';
+    console.error(e);
+  });
 
-    let item;
-    try { item = JSON.parse(btn.dataset.compareItem); }
-    catch { return; }
-
-    let list = getPhotoCompare();
-    const idx = list.findIndex(i => i.id == item.id);
-
-    if (idx > -1) {
-        list.splice(idx, 1);
-        btn.classList.remove('added');
-        const sp = btn.querySelector('span');
-        if (sp) sp.textContent = 'Compare';
-        showPhotoToast('Removed from comparison');
-    } else {
-        if (list.length >= WD_MAX_PHOTO) {
-            showPhotoToast('Max 4 items! Pehle koi hatao.', true);
-            return;
-        }
-        list.push(item);
-        btn.classList.add('added');
-        const sp = btn.querySelector('span');
-        if (sp) sp.textContent = 'Added ✓';
-        showPhotoToast('Added to comparison!');
+function buildAreas() {
+  const areas = ["All", ...new Set(PHOTOGRAPHERS.map(c => c.area))];
+  const rail = document.getElementById("areaRail");
+  rail.innerHTML = areas.map(a =>
+    `<button class="area-chip ${a === currentArea ? 'active' : ''}" data-area="${a}">${a}</button>`
+  ).join("");
+  rail.querySelectorAll(".area-chip").forEach(b =>
+    b.onclick = () => {
+      currentArea = b.dataset.area;
+      buildAreas();
+      render();
     }
-    savePhotoCompare(list);
+  );
+}
+
+function render() {
+  const q = document.getElementById("searchInput").value.toLowerCase().trim();
+  const sort = document.getElementById("sortSel").value;
+
+  let list = PHOTOGRAPHERS.filter(c =>
+    (currentArea === "All" || c.area === currentArea) &&
+    c.name.toLowerCase().includes(q)
+  );
+
+  list.sort((a, b) => {
+    if (sort === "price_low") return a.starting_price - b.starting_price;
+    if (sort === "price_high") return b.starting_price - a.starting_price;
+    if (sort === "name") return a.name.localeCompare(b.name);
+    return b.rating - a.rating;
+  });
+
+  if (!list.length) {
+    grid.innerHTML = '<div class="empty-state">No photographers match your filters.</div>';
+    return;
+  }
+
+  grid.innerHTML = list.map(c => `
+    <div class="hall-card" data-id="${c.id}">
+      <div class="hall-media">
+        <img src="${c.image || fallback}" alt="${c.name}" onerror="this.src='${fallback}'">
+        <div class="premium-icon"><i class="fa-solid fa-crown"></i> Premium</div>
+        <button class="compare-btn ${compareIds.includes(c.id) ? 'added' : ''}" data-cmp="${c.id}" title="Add to compare"><i class="fa-solid fa-${compareIds.includes(c.id) ? 'check' : 'scale-balanced'}"></i></button>
+        <div class="float-rating"><i class="fa-solid fa-star"></i>${c.rating}</div>
+      </div>
+      <div class="hall-body">
+        <div class="hall-area"><i class="fa-solid fa-location-dot"></i>${c.area}</div>
+        <div class="hall-name">${c.name}</div>
+        <div class="hall-meta-row">
+          <div class="price-block">
+            <span class="price-label">Starting from</span>
+            <span class="price-val">PKR ${c.starting_price.toLocaleString()} <small>onwards</small></span>
+          </div>
+        </div>
+        <button class="details-btn" data-details="${c.id}"><span>View Details</span> <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  `).join("");
+
+  // Card click -> detail
+  grid.querySelectorAll(".hall-card").forEach(card => {
+    card.addEventListener("click", e => {
+      if (e.target.closest(".compare-btn")) return;
+      window.location.href = "photographer-detail.html?id=" + card.dataset.id;
+    });
+  });
+
+  // Compare button
+  grid.querySelectorAll(".compare-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.stopPropagation();
+      const id = parseInt(btn.dataset.cmp);
+      toggleCompare(id);
+    });
+  });
+}
+
+function toggleCompare(id) {
+  const i = compareIds.indexOf(id);
+  if (i > -1) {
+    compareIds.splice(i, 1);
+  } else {
+    if (compareIds.length >= 4) {
+      alert("Max 4 photographers compare kar sakte hain");
+      return;
+    }
+    compareIds.push(id);
+  }
+  localStorage.setItem("cmp_photographers", JSON.stringify(compareIds));
+  render();
+  updateTray();
+  updateCompareBadge();
+}
+
+function updateTray() {
+  document.getElementById("cmpCount").textContent = compareIds.length;
+  document.getElementById("cmpTray").classList.toggle("show", compareIds.length > 0);
+}
+
+document.getElementById("cmpClear").onclick = () => {
+  compareIds = [];
+  localStorage.setItem("cmp_photographers", "[]");
+  render();
+  updateTray();
+  updateCompareBadge();
+};
+
+document.getElementById("searchInput").addEventListener("input", render);
+document.getElementById("sortSel").addEventListener("change", render);
+
+// Navbar badge
+function updateCompareBadge() {
+  const keys = ['cmp_halls', 'cmp_caterers', 'cmp_photographers', 'cmp_decorators', 'cmp_car-rentals'];
+  let total = 0;
+  keys.forEach(k => {
+    try { total += JSON.parse(localStorage.getItem(k) || '[]').length; } catch {}
+  });
+  const badge = document.getElementById('compareNavBadge');
+  if (!badge) return;
+  badge.textContent = total;
+  badge.classList.toggle('visible', total > 0);
+}
+
+// ===== CATEGORY DROPDOWN =====
+const ctrig = document.getElementById("catTrig"), cdd = document.getElementById("catDd");
+ctrig.addEventListener("click", e => {
+  e.stopPropagation();
+  ctrig.classList.toggle("open");
+  cdd.classList.toggle("open");
+});
+document.addEventListener("click", e => {
+  if (!cdd.contains(e.target) && !ctrig.contains(e.target)) {
+    cdd.classList.remove("open");
+    ctrig.classList.remove("open");
+  }
 });
 
-function syncPhotoCompareButtons() {
-    const ids = getPhotoCompare().map(i => String(i.id));
-    document.querySelectorAll('.compare-card-btn').forEach(btn => {
-        if (ids.includes(String(btn.dataset.compareId))) {
-            btn.classList.add('added');
-            const sp = btn.querySelector('span');
-            if (sp) sp.textContent = 'Added ✓';
-        }
-    });
-    renderPhotoCompareBar();
-}
-
-function renderPhotoCompareBar() {
-    const list = getPhotoCompare();
-    const bar = document.getElementById('wd-compare-bar');
-    const itemsEl = document.getElementById('compareBarItems');
-
-    if (list.length === 0) {
-        bar.classList.remove('visible');
-        return;
-    }
-
-    bar.classList.add('visible');
-    itemsEl.innerHTML = `<span style="font-family:'Jost';font-size:0.7rem;color:rgba(255,255,255,0.4);margin-right:4px;">${list.length}/4</span>` +
-        list.map(item => `
-            <div class="compare-bar-chip">
-                <i class="fas fa-camera" style="font-size:0.65rem;"></i>
-                ${item.name}
-                <button onclick="removePhotoFromBar(${item.id})" title="Remove">×</button>
-            </div>
-        `).join('');
-}
-
-function removePhotoFromBar(id) {
-    let list = getPhotoCompare().filter(i => i.id != id);
-    savePhotoCompare(list);
-    const btn = document.querySelector(`.compare-card-btn[data-compare-id="${id}"]`);
-    if (btn) {
-        btn.classList.remove('added');
-        const sp = btn.querySelector('span');
-        if (sp) sp.textContent = 'Compare';
-    }
-    showPhotoToast('Removed');
-}
-
-function updatePhotoCompareBadge() {
-    const cats = ['halls','caterers','photographers','decorators'];
-    let total = 0;
-    cats.forEach(c => {
-        try { total += JSON.parse(localStorage.getItem('wd_compare_' + c) || '[]').length; }
-        catch {}
-    });
-    const badge = document.getElementById('compareNavBadge');
-    if (!badge) return;
-    badge.textContent = total;
-    badge.classList.toggle('visible', total > 0);
-}
-
-function showPhotoToast(msg, isError = false) {
-    const t = document.getElementById('wd-compare-toast');
-    t.textContent = msg;
-    t.className = isError ? 'error-toast show' : 'show';
-    clearTimeout(t._tid);
-    t._tid = setTimeout(() => { t.className = t.className.replace(' show','').replace('show',''); }, 2400);
-}
-
-// ===== PHOTOGRAPHERS LISTING =====
-const productContainer = document.getElementById('productContainer');
-const filterBar = document.getElementById('filterBar');
-const noResults = document.getElementById('noResults');
-
-function formatPKR(num) { return num.toLocaleString('en-PK'); }
-
-function buildStars(rating) {
-    const full = Math.floor(rating), half = (rating - full) >= 0.5 ? 1 : 0, empty = 5 - full - half;
-    let s = '';
-    for (let i = 0; i < full; i++) s += '<i class="fas fa-star"></i>';
-    if (half) s += '<i class="fas fa-star-half-alt"></i>';
-    for (let i = 0; i < empty; i++) s += '<i class="far fa-star"></i>';
-    return s;
-}
-
-function buildCard(item) {
-    const imgSrc = item.image ? `images/photographers/${item.image}` : '';
-
-    const compareData = JSON.stringify({
-        id: item.id,
-        name: item.name,
-        image: imgSrc,
-        city: item.area,
-        area: item.area,
-        rating: item.rating,
-        price: item.starting_price,
-        priceType: item.price_type || 'package',
-        services: (item.services || []).join(', '),
-        verified: item.verified || false
-    }).replace(/'/g, '&#39;');
-
-    return `
-    <div class="col-12 col-md-6 col-lg-4 col-xl-3 card-item" data-area="${item.area}">
-        <div class="premium-card-wrapper">
-            <div class="premium-card">
-                <div class="card-img-container position-relative">
-                    <img
-                        src="${imgSrc}"
-                        alt="${item.name}"
-                        onerror="this.src='https://images.unsplash.com/photo-1555244162-803834f70033?w=400&q=50';"
-                    >
-                    <div class="img-overlay"></div>
-                    ${item.verified ? `<div class="premium-badge"><i class="fas fa-crown"></i> PREMIUM</div>` : ''}
-                    <button class="compare-card-btn"
-                        data-compare-id="${item.id}"
-                        data-compare-item='${compareData}'>
-                        <i class="fas fa-scale-balanced"></i> <span>Compare</span>
-                    </button>
-                </div>
-                <div class="card-body-custom">
-                    <div>
-                        <h2 class="photographer-title">${item.name}</h2>
-                        <div class="location-text">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>${item.area}</span>
-                        </div>
-                        <div class="rating-wrapper">
-                            <div class="stars">${buildStars(item.rating)}</div>
-                            <span class="rating-number">${item.rating}</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="gold-divider"></div>
-                        <div class="price-section">
-                            <div>
-                                <div class="d-flex-price">
-                                    <span class="price-pkr">PKR</span>
-                                    <span class="price-amount">${formatPKR(item.starting_price)}</span>
-                                </div>
-                                <small class="price-type">${item.price_type ? `(${item.price_type})` : '(starting package)'}</small>
-                            </div>
-                            <button class="btn-view-details view-details-btn" data-id="${item.id}">
-                                <i class="fas fa-arrow-right"></i> Details
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>`;
-}
-
-function buildFilters(areas) {
-    let btns = `<button class="filter-btn active" data-filter="all">All Areas</button>`;
-    areas.forEach(area => {
-        btns += `<button class="filter-btn" data-filter="${area}">${area}</button>`;
-    });
-    filterBar.innerHTML = btns;
-
-    filterBar.addEventListener('click', (e) => {
-        const btn = e.target.closest('.filter-btn');
-        if (!btn) return;
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        const cards = document.querySelectorAll('.card-item');
-        let visible = 0;
-        cards.forEach(card => {
-            const match = filter === 'all' || card.dataset.area === filter;
-            card.style.display = match ? '' : 'none';
-            if (match) visible++;
-        });
-        noResults.style.display = visible === 0 ? 'block' : 'none';
-    });
-}
-
-async function getProducts() {
-    try {
-        const response = await axios.get('photographers.json');
-        const data = response.data;
-
-        const areas = [...new Set(data.map(i => i.area))];
-        buildFilters(areas);
-        productContainer.innerHTML = data.map(buildCard).join('');
-
-        syncPhotoCompareButtons();
-
-        productContainer.addEventListener('click', (e) => {
-            const btn = e.target.closest('.view-details-btn');
-            if (!btn) return;
-            window.location.href = `photographer-detail.html?id=${btn.dataset.id}`;
-        });
-
-    } catch (error) {
-        console.error('photographers.json load error:', error);
-    }
-}
-
-getProducts();
 </script>
-
 </body>
 </html>

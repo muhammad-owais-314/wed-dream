@@ -51,17 +51,7 @@
   },
   {
     "id": 6,
-    "name": "Dossani's Studio",
-    "area": "Clifton",
-    "rating": 4.7,
-    "starting_price": 60000,
-    "price_type": "package",
-    "image": "dossani_clifton.jpg",
-    "verified": true
-  },
-  {
-    "id": 7,
-    "name": "Eastriver",
+    "name": "Eastriver Productions",
     "area": "Clifton",
     "rating": 4.4,
     "starting_price": 45000,
@@ -70,7 +60,7 @@
     "verified": true
   },
   {
-    "id": 8,
+    "id": 7,
     "name": "Oshoot Collective",
     "area": "Clifton",
     "rating": 4.6,
@@ -80,7 +70,7 @@
     "verified": true
   },
   {
-    "id": 9,
+    "id": 8,
     "name": "Maha Wajahat Khan",
     "area": "Clifton",
     "rating": 4.8,
@@ -90,7 +80,7 @@
     "verified": true
   },
   {
-    "id": 10,
+    "id": 9,
     "name": "The Wedding Station",
     "area": "Clifton",
     "rating": 4.6,
@@ -100,8 +90,8 @@
     "verified": true
   },
   {
-    "id": 11,
-    "name": "Biyah Wedding",
+    "id": 10,
+    "name": "Biyah Wedding Photography",
     "area": "PECHS",
     "rating": 4.5,
     "starting_price": 35000,
@@ -110,7 +100,7 @@
     "verified": true
   },
   {
-    "id": 12,
+    "id": 11,
     "name": "Sohail Asim Photography",
     "area": "PECHS",
     "rating": 4.5,
@@ -120,7 +110,7 @@
     "verified": true
   },
   {
-    "id": 13,
+    "id": 12,
     "name": "Zainbaba Photo Studio",
     "area": "PECHS",
     "rating": 4.3,
@@ -130,7 +120,7 @@
     "verified": true
   },
   {
-    "id": 14,
+    "id": 13,
     "name": "Mohammad Jobaed Khan",
     "area": "PECHS",
     "rating": 4.5,
@@ -140,7 +130,7 @@
     "verified": true
   },
   {
-    "id": 15,
+    "id": 14,
     "name": "ShadiGrapher.com",
     "area": "PECHS",
     "rating": 4.3,
@@ -150,7 +140,7 @@
     "verified": true
   },
   {
-    "id": 16,
+    "id": 15,
     "name": "Shahida Weds Gallery",
     "area": "Gulshan-e-Iqbal",
     "rating": 4.6,
@@ -160,17 +150,7 @@
     "verified": true
   },
   {
-    "id": 17,
-    "name": "Zainbaba Photo Studio",
-    "area": "Gulshan-e-Iqbal",
-    "rating": 4.3,
-    "starting_price": 28000,
-    "price_type": "package",
-    "image": "zainbaba_gulshan.jpg",
-    "verified": true
-  },
-  {
-    "id": 18,
+    "id": 16,
     "name": "Smart Aperture Photography",
     "area": "Gulshan-e-Iqbal",
     "rating": 4.2,
@@ -180,8 +160,8 @@
     "verified": true
   },
   {
-    "id": 19,
-    "name": "AkskaarPhotography",
+    "id": 17,
+    "name": "Akskaar Photography",
     "area": "Gulshan-e-Iqbal",
     "rating": 4.2,
     "starting_price": 25000,
@@ -190,8 +170,8 @@
     "verified": true
   },
   {
-    "id": 20,
-    "name": "QasimKhan Films & Photography",
+    "id": 18,
+    "name": "Qasim Khan Films & Photography",
     "area": "Gulshan-e-Iqbal",
     "rating": 4.3,
     "starting_price": 30000,
@@ -200,17 +180,7 @@
     "verified": true
   },
   {
-    "id": 21,
-    "name": "Zainbaba Photo Studio",
-    "area": "Gulistan-e-Johar",
-    "rating": 4.3,
-    "starting_price": 28000,
-    "price_type": "package",
-    "image": "zainbaba_johar.jpg",
-    "verified": true
-  },
-  {
-    "id": 22,
+    "id": 19,
     "name": "HB Studio Weddings",
     "area": "Gulistan-e-Johar",
     "rating": 4.4,
@@ -220,7 +190,7 @@
     "verified": true
   },
   {
-    "id": 23,
+    "id": 20,
     "name": "Dees Creations",
     "area": "Gulistan-e-Johar",
     "rating": 4.4,
@@ -230,17 +200,7 @@
     "verified": true
   },
   {
-    "id": 24,
-    "name": "ShadiGrapher.com",
-    "area": "Gulistan-e-Johar",
-    "rating": 4.3,
-    "starting_price": 30000,
-    "price_type": "package",
-    "image": "shadigrapher_johar.jpg",
-    "verified": true
-  },
-  {
-    "id": 25,
+    "id": 21,
     "name": "Aatif Photography",
     "area": "Gulistan-e-Johar",
     "rating": 4.2,
@@ -250,7 +210,7 @@
     "verified": true
   },
   {
-    "id": 26,
+    "id": 22,
     "name": "Nasir4u Events",
     "area": "Federal B Area",
     "rating": 4.2,
@@ -260,7 +220,7 @@
     "verified": true
   },
   {
-    "id": 27,
+    "id": 23,
     "name": "Moin Shah Film and Photography",
     "area": "Federal B Area",
     "rating": 4.4,
@@ -270,8 +230,8 @@
     "verified": true
   },
   {
-    "id": 28,
-    "name": "Sohailgphotography",
+    "id": 24,
+    "name": "Sohail G Photography",
     "area": "Federal B Area",
     "rating": 4.3,
     "starting_price": 28000,
@@ -280,7 +240,7 @@
     "verified": true
   },
   {
-    "id": 29,
+    "id": 25,
     "name": "Abd Shutters",
     "area": "Federal B Area",
     "rating": 4.0,
@@ -290,7 +250,7 @@
     "verified": true
   },
   {
-    "id": 30,
+    "id": 26,
     "name": "FB Area Photo Hub",
     "area": "Federal B Area",
     "rating": 4.0,
@@ -300,7 +260,7 @@
     "verified": true
   },
   {
-    "id": 31,
+    "id": 27,
     "name": "BnW Collections",
     "area": "Bahadurabad",
     "rating": 4.4,
@@ -310,7 +270,7 @@
     "verified": true
   },
   {
-    "id": 32,
+    "id": 28,
     "name": "The Wedder's Photography",
     "area": "Bahadurabad",
     "rating": 4.3,
@@ -320,7 +280,7 @@
     "verified": true
   },
   {
-    "id": 33,
+    "id": 29,
     "name": "Party Popper Photo",
     "area": "Bahadurabad",
     "rating": 4.2,
@@ -330,7 +290,7 @@
     "verified": true
   },
   {
-    "id": 34,
+    "id": 30,
     "name": "Bahadurabad Photography",
     "area": "Bahadurabad",
     "rating": 4.1,
@@ -340,7 +300,7 @@
     "verified": true
   },
   {
-    "id": 35,
+    "id": 31,
     "name": "Elite Bahadurabad Photos",
     "area": "Bahadurabad",
     "rating": 4.1,
@@ -350,8 +310,8 @@
     "verified": true
   },
   {
-    "id": 36,
-    "name": "FotoClickStudio",
+    "id": 32,
+    "name": "FotoClick Studio",
     "area": "Tariq Road",
     "rating": 4.3,
     "starting_price": 25000,
@@ -360,7 +320,7 @@
     "verified": true
   },
   {
-    "id": 37,
+    "id": 33,
     "name": "Anas Ahmad Photography",
     "area": "Tariq Road",
     "rating": 4.4,
@@ -370,7 +330,7 @@
     "verified": true
   },
   {
-    "id": 38,
+    "id": 34,
     "name": "Tariq Road Photo Studio",
     "area": "Tariq Road",
     "rating": 4.1,
@@ -380,7 +340,7 @@
     "verified": true
   },
   {
-    "id": 39,
+    "id": 35,
     "name": "Shadi Point Photography",
     "area": "Tariq Road",
     "rating": 4.2,
@@ -390,7 +350,7 @@
     "verified": true
   },
   {
-    "id": 40,
+    "id": 36,
     "name": "Luxury Photography Tariq",
     "area": "Tariq Road",
     "rating": 4.1,
@@ -400,7 +360,7 @@
     "verified": true
   },
   {
-    "id": 41,
+    "id": 37,
     "name": "Jugnoo Photography",
     "area": "North Nazimabad",
     "rating": 4.1,
@@ -410,7 +370,7 @@
     "verified": true
   },
   {
-    "id": 42,
+    "id": 38,
     "name": "S.M.Waqar Wedding Photography Studio",
     "area": "North Nazimabad",
     "rating": 4.2,
@@ -420,7 +380,7 @@
     "verified": true
   },
   {
-    "id": 43,
+    "id": 39,
     "name": "North Nazimabad Photography",
     "area": "North Nazimabad",
     "rating": 4.0,
@@ -430,7 +390,7 @@
     "verified": true
   },
   {
-    "id": 44,
+    "id": 40,
     "name": "Royal NN Photography",
     "area": "North Nazimabad",
     "rating": 4.1,
@@ -440,7 +400,7 @@
     "verified": true
   },
   {
-    "id": 45,
+    "id": 41,
     "name": "Elite NN Photography",
     "area": "North Nazimabad",
     "rating": 4.1,
@@ -450,7 +410,7 @@
     "verified": true
   },
   {
-    "id": 46,
+    "id": 42,
     "name": "Benchmarker Studio",
     "area": "North Karachi",
     "rating": 4.4,
@@ -460,7 +420,7 @@
     "verified": true
   },
   {
-    "id": 47,
+    "id": 43,
     "name": "ArtX Pro",
     "area": "North Karachi",
     "rating": 4.3,
@@ -470,7 +430,7 @@
     "verified": true
   },
   {
-    "id": 48,
+    "id": 44,
     "name": "North Karachi Photo Studio",
     "area": "North Karachi",
     "rating": 3.9,
@@ -480,7 +440,7 @@
     "verified": true
   },
   {
-    "id": 49,
+    "id": 45,
     "name": "Royal NK Photography",
     "area": "North Karachi",
     "rating": 4.0,
@@ -490,13 +450,53 @@
     "verified": true
   },
   {
-    "id": 50,
+    "id": 46,
     "name": "Star Photography NK",
     "area": "North Karachi",
     "rating": 3.8,
     "starting_price": 16000,
     "price_type": "package",
     "image": "star_nk_photo.jpg",
+    "verified": true
+  },
+  {
+    "id": 47,
+    "name": "LensCraft Studios",
+    "area": "DHA",
+    "rating": 4.5,
+    "starting_price": 48000,
+    "price_type": "package",
+    "image": "lenscraft.jpg",
+    "verified": true
+  },
+  {
+    "id": 48,
+    "name": "Golden Frame Productions",
+    "area": "Clifton",
+    "rating": 4.3,
+    "starting_price": 42000,
+    "price_type": "package",
+    "image": "golden_frame.jpg",
+    "verified": true
+  },
+  {
+    "id": 49,
+    "name": "DreamCatcher Photography",
+    "area": "Gulshan-e-Iqbal",
+    "rating": 4.0,
+    "starting_price": 22000,
+    "price_type": "package",
+    "image": "dreamcatcher.jpg",
+    "verified": true
+  },
+  {
+    "id": 50,
+    "name": "Wedding Tales by Hira",
+    "area": "PECHS",
+    "rating": 4.4,
+    "starting_price": 38000,
+    "price_type": "package",
+    "image": "wedding_tales_hira.jpg",
     "verified": true
   }
 ]

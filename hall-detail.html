@@ -1,1123 +1,1379 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hall Detail | WedDream</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hall Detail | WedDream</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --rose:#b93b56;--gold:#c89b2c;--gold-l:#e8b93c;--gold-d:#8a691a;
+  --dark:#070707;--dark2:#0e0b0c;--glass:rgba(16,12,14,0.92);
+  --shadow:0 24px 48px -12px rgba(0,0,0,0.85),0 0 0 1px rgba(200,155,44,0.12);
+  --radius:22px;
+}
+body{background:var(--dark);font-family:'Jost',sans-serif;color:#f0ede8;overflow-x:hidden}
+html{scroll-behavior:smooth}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:#100b0d}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:5px}
+::selection{background:var(--gold);color:#070707}
 
-        :root {
-            --rose: #b93b56;
-            --gold: #c89b2c;
-            --gold-light: #e8b93c;
-            --gold-dark: #8a691a;
-            --dark: #070707;
-            --dark2: #0e0b0c;
-            --glass: rgba(18,14,16,0.88);
-            --shadow: 0 25px 45px -12px rgba(0,0,0,0.8), 0 0 0 1px rgba(200,155,44,0.15);
-        }
+#loadingScreen{
+  position:fixed;inset:0;background:var(--dark);z-index:9999;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
+  transition:opacity .4s,visibility .4s;
+}
+#loadingScreen.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.loader-ring{
+  width:52px;height:52px;border:3px solid rgba(200,155,44,0.15);
+  border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loader-text{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:rgba(255,255,255,0.4);letter-spacing:.08em}
 
-        body {
-            background: var(--dark);
-            font-family: 'Jost', sans-serif;
-            color: #f0ede8;
-            overflow-x: hidden;
-        }
+#errorScreen{
+  display:none;position:fixed;inset:0;background:var(--dark);z-index:9998;
+  align-items:center;justify-content:center;flex-direction:column;gap:16px;text-align:center;padding:20px;
+}
+#errorScreen.show{display:flex}
 
-        #loadingScreen {
-            position: fixed;
-            inset: 0;
-            background: var(--dark);
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            transition: opacity 0.4s, visibility 0.4s;
-        }
-        #loadingScreen.hidden { opacity: 0; visibility: hidden; }
-        .loader-ring {
-            width: 52px;
-            height: 52px;
-            border: 3px solid rgba(200,155,44,0.15);
-            border-top-color: var(--gold);
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        .loader-text {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.1rem;
-            color: rgba(255,255,255,0.4);
-            letter-spacing: 0.08em;
-        }
+#nav-placeholder nav,#nav-placeholder>nav{position:sticky;top:0;z-index:500}
 
-        #errorScreen {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: var(--dark);
-            z-index: 9998;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 16px;
-            text-align: center;
-            padding: 20px;
-        }
-        #errorScreen.show { display: flex; }
+.page-hero{
+  background:radial-gradient(ellipse at 20% 0%,#1f1418 0%,#050202 100%);
+  padding:32px 0 60px;border-bottom:1px solid rgba(200,155,44,0.2);
+}
 
-        .page-hero {
-            background: radial-gradient(ellipse at 20% 0%, #1f1418 0%, #050202 100%);
-            padding: 36px 0 60px;
-            border-bottom: 1px solid rgba(200,155,44,0.2);
-        }
+.back-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(0,0,0,0.5);backdrop-filter:blur(10px);
+  border:1px solid rgba(200,155,44,0.4);border-radius:60px;
+  padding:7px 20px;color:var(--gold-l);font-size:.82rem;font-weight:500;
+  text-decoration:none;transition:.3s;margin-bottom:26px;
+}
+.back-btn:hover{background:var(--gold);color:#070707;border-color:var(--gold);box-shadow:0 4px 18px rgba(200,155,44,.35)}
 
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(0,0,0,0.5);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(200,155,44,0.4);
-            border-radius: 60px;
-            padding: 7px 20px;
-            color: var(--gold-light);
-            font-size: 0.82rem;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.3s;
-            margin-bottom: 28px;
-        }
-        .back-btn:hover {
-            background: var(--gold);
-            color: #070707;
-            border-color: var(--gold);
-            box-shadow: 0 4px 18px rgba(200,155,44,0.35);
-        }
+.main-img-wrap{
+  border-radius:var(--radius);overflow:hidden;
+  border:1px solid rgba(200,155,44,.35);box-shadow:var(--shadow);margin-bottom:10px;
+}
+.main-img-wrap img{width:100%;height:380px;object-fit:cover;display:block;transition:opacity .3s}
+.thumb-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:20px}
+.thumb-item{
+  border-radius:14px;overflow:hidden;
+  border:1.5px solid rgba(200,155,44,.22);cursor:pointer;transition:.25s;
+}
+.thumb-item.active,.thumb-item:hover{border-color:var(--gold);transform:translateY(-2px)}
+.thumb-item img{width:100%;height:75px;object-fit:cover;display:block}
 
-        .main-img-wrap {
-            border-radius: 24px;
-            overflow: hidden;
-            border: 1px solid rgba(200,155,44,0.35);
-            box-shadow: var(--shadow);
-            margin-bottom: 12px;
-        }
-        .main-img-wrap img {
-            width: 100%;
-            height: 380px;
-            object-fit: cover;
-            display: block;
-            transition: opacity 0.3s;
-        }
-        .thumb-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-        .thumb-item {
-            border-radius: 14px;
-            overflow: hidden;
-            border: 1px solid rgba(200,155,44,0.25);
-            cursor: pointer;
-            transition: border-color 0.25s, transform 0.25s;
-        }
-        .thumb-item.active, .thumb-item:hover {
-            border-color: var(--gold);
-            transform: translateY(-2px);
-        }
-        .thumb-item img { width: 100%; height: 75px; object-fit: cover; display: block; }
+.g-card{
+  background:var(--glass);backdrop-filter:blur(8px);
+  border:1px solid rgba(200,155,44,.22);border-radius:var(--radius);
+  padding:1.5rem;transition:.3s;margin-bottom:20px;
+}
+.g-card:hover{border-color:rgba(200,155,44,.5);box-shadow:0 15px 35px -10px rgba(200,155,44,.12)}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1rem 0;opacity:.45}
 
-        .g-card {
-            background: var(--glass);
-            backdrop-filter: blur(6px);
-            border: 1px solid rgba(200,155,44,0.25);
-            border-radius: 24px;
-            padding: 1.5rem;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-        .g-card:hover {
-            border-color: rgba(200,155,44,0.55);
-            box-shadow: 0 15px 35px -10px rgba(200,155,44,0.15);
-        }
+.sidebar-sticky{position:sticky;top:90px}
 
-        .divider {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--gold), transparent);
-            margin: 1rem 0;
-            opacity: 0.5;
-        }
+.gold-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:linear-gradient(135deg,#c89b2c,#e8b93c);color:#070707;
+  font-size:.63rem;font-weight:800;letter-spacing:.08em;
+  padding:4px 14px;border-radius:60px;margin-bottom:10px;
+}
+.hall-title{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:#fff9ef;line-height:1.15}
+.hall-address{color:rgba(255,255,255,.5);font-size:.87rem;margin-top:6px}
+.hall-address i{color:var(--gold);margin-right:5px}
 
-        .gold-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-            background: linear-gradient(135deg, #c89b2c, #e8b93c);
-            color: #070707;
-            font-size: 0.65rem;
-            font-weight: 800;
-            letter-spacing: 0.08em;
-            padding: 4px 14px;
-            border-radius: 60px;
-            margin-bottom: 10px;
-        }
+.stars{color:var(--gold)}
+.rating-pill{
+  background:rgba(200,155,44,.18);padding:2px 12px;border-radius:40px;
+  font-size:.82rem;font-weight:700;color:var(--gold-l);
+}
 
-        .hall-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.4rem;
-            font-weight: 700;
-            color: #fff9ef;
-            line-height: 1.15;
-        }
+.price-from{font-size:.74rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.06em}
+.price-big{font-size:2.4rem;font-weight:800;color:#fff;line-height:1}
+.price-big span{font-size:1rem;font-weight:500;color:rgba(255,255,255,.45);margin-left:4px}
 
-        .hall-address { color: rgba(255,255,255,0.5); font-size: 0.87rem; margin-top: 6px; }
-        .hall-address i { color: var(--gold); margin-right: 5px; }
+.amenities-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 14px;margin-top:8px}
+.amenity-item{
+  display:flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,.025);border:1px solid rgba(200,155,44,.07);
+  border-radius:10px;padding:6px 12px;font-size:.78rem;color:rgba(255,255,255,.7);transition:.25s;
+}
+.amenity-item:hover{background:rgba(200,155,44,.08);border-color:rgba(200,155,44,.2);transform:translateX(3px)}
+.amenity-item i{color:var(--gold-l);font-size:.83rem;width:18px;text-align:center}
 
-        .stars { color: var(--gold); }
-        .rating-pill {
-            background: rgba(200,155,44,0.18);
-            padding: 2px 12px;
-            border-radius: 40px;
-            font-size: 0.82rem;
-            font-weight: 700;
-            color: var(--gold-light);
-        }
+.cap-row{display:flex;gap:10px;margin-top:14px}
+.cap-item{
+  flex:1;background:rgba(0,0,0,.3);border:1px solid rgba(200,155,44,.18);
+  border-radius:16px;padding:12px 8px;text-align:center;font-size:.82rem;transition:.25s;
+}
+.cap-item i{color:var(--gold);margin-right:4px}
+.cap-item:hover{border-color:var(--gold);background:rgba(200,155,44,.07);transform:translateY(-2px)}
 
-        .price-from {
-            font-size: 0.75rem;
-            color: rgba(255,255,255,0.4);
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-        }
-        .price-big { font-size: 2.4rem; font-weight: 800; color: #fff; line-height: 1; }
-        .price-big span { font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.45); margin-left: 4px; }
+.ftags{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.ftag{
+  background:rgba(120,90,30,.08);border-left:2px solid #6a4e18;
+  border-radius:0 28px 28px 0;padding:4px 13px;
+  font-size:.73rem;font-weight:500;color:#a89050;transition:.2s;
+}
+.ftag:hover{background:rgba(120,90,30,.16);transform:translateX(3px)}
 
-        /* ===== AMENITIES GRID (New) ===== */
-        .amenities-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 8px 16px;
-            margin-top: 8px;
-        }
-        .amenity-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 10px;
-            padding: 6px 12px;
-            font-size: 0.78rem;
-            color: rgba(255,255,255,0.7);
-            transition: all 0.25s;
-            border: 1px solid rgba(200,155,44,0.08);
-        }
-        .amenity-item:hover {
-            background: rgba(200,155,44,0.08);
-            border-color: rgba(200,155,44,0.2);
-            transform: translateX(3px);
-        }
-        .amenity-item i {
-            color: var(--gold-light);
-            font-size: 0.85rem;
-            width: 18px;
-            text-align: center;
-        }
-        .amenity-item .amenity-label {
-            color: rgba(255,255,255,0.5);
-            font-size: 0.65rem;
-        }
+.rating-summary{display:flex;gap:20px;align-items:center;margin-bottom:16px}
+.big-rating{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:700;color:var(--gold-l);line-height:1}
+.rbar-row{display:flex;align-items:center;gap:8px;margin-bottom:5px;font-size:.74rem;color:rgba(255,255,255,.5)}
+.rbar-bg{flex:1;height:5px;background:rgba(255,255,255,.07);border-radius:5px;overflow:hidden}
+.rbar-fill{height:100%;background:var(--gold);border-radius:5px;transition:width .8s ease}
+.rbar-count{width:20px;text-align:right;font-size:.7rem;color:rgba(255,255,255,.4)}
 
-        /* ===== FEATURE TAGS (Darker) ===== */
-        .feature-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-        .ftag {
-            background: rgba(120, 90, 30, 0.08);
-            border-left: 2px solid #7a5c1a;
-            border-radius: 0 30px 30px 0;
-            padding: 4px 14px;
-            font-size: 0.74rem;
-            font-weight: 500;
-            color: #b8a05c;
-            transition: background 0.2s, transform 0.2s;
-        }
-        .ftag i { color: #7a5c1a; }
-        .ftag:hover { background: rgba(120, 90, 30, 0.15); transform: translateX(3px); }
-        .ftag:hover i { color: var(--gold); }
+.star-input{display:flex;gap:5px;flex-direction:row-reverse;justify-content:flex-end;margin-bottom:10px}
+.star-input input{display:none}
+.star-input label{font-size:1.4rem;color:rgba(255,255,255,.15);cursor:pointer;transition:color .15s}
+.star-input label:hover,
+.star-input label:hover~label,
+.star-input input:checked~label{color:var(--gold)}
 
-        .cap-row { display: flex; gap: 12px; margin-top: 10px; }
-        .cap-item {
-            flex: 1;
-            background: rgba(0,0,0,0.3);
-            border: 1px solid rgba(200,155,44,0.2);
-            border-radius: 18px;
-            padding: 12px 8px;
-            text-align: center;
-            font-size: 0.82rem;
-            transition: 0.25s;
-        }
-        .cap-item i { color: var(--gold); margin-right: 5px; }
-        .cap-item:hover {
-            border-color: var(--gold);
-            background: rgba(200,155,44,0.08);
-            transform: translateY(-2px);
-        }
+.review-card{
+  background:rgba(255,255,255,.025);border-left:3px solid var(--gold);
+  border-radius:16px;padding:1rem;margin-bottom:10px;transition:.25s;
+}
+.review-card:hover{background:rgba(200,155,44,.06);transform:translateX(4px)}
+.review-quote{color:rgba(255,255,255,.5);font-size:.86rem;margin-top:6px;font-style:italic}
 
-        .pkg-card {
-            background: rgba(0,0,0,0.45);
-            border: 1px solid rgba(200,155,44,0.2);
-            border-radius: 18px;
-            padding: 1rem 0.75rem;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            height: 100%;
-        }
-        .pkg-card:hover, .pkg-card.active {
-            border-color: var(--gold);
-            background: linear-gradient(145deg, rgba(200,155,44,0.18), rgba(200,155,44,0.04));
-            box-shadow: 0 0 0 2px var(--gold);
-        }
-        .pkg-name { font-weight: 800; font-size: 1.1rem; color: var(--gold-light); }
-        .pkg-price { font-size: 1rem; font-weight: 700; color: #fff; margin-top: 4px; }
-        .pkg-book {
-            display: block;
-            width: 100%;
-            margin-top: 10px;
-            background: transparent;
-            border: 1px solid var(--gold);
-            border-radius: 40px;
-            padding: 5px 10px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: var(--gold-light);
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .pkg-book:hover { background: var(--gold); color: #070707; }
+.pkg-card{
+  background:rgba(0,0,0,.45);border:1px solid rgba(200,155,44,.2);
+  border-radius:18px;padding:1rem .75rem;text-align:center;cursor:pointer;transition:.3s;height:100%;
+}
+.pkg-card:hover,.pkg-card.active{
+  border-color:var(--gold);
+  background:linear-gradient(145deg,rgba(200,155,44,.18),rgba(200,155,44,.04));
+  box-shadow:0 0 0 2px rgba(200,155,44,.35);
+}
+.pkg-name{font-weight:800;font-size:1.05rem;color:var(--gold-l)}
+.pkg-price{font-size:.95rem;font-weight:700;color:#fff;margin-top:4px}
+.includes-list{margin-top:8px;padding-left:0;list-style:none}
+.includes-list li{font-size:.68rem;color:rgba(255,255,255,.5);margin-bottom:3px;text-align:left}
+.includes-list li i{color:var(--gold-d);margin-right:4px}
+.pkg-book{
+  display:block;width:100%;margin-top:10px;
+  background:transparent;border:1px solid var(--gold);border-radius:40px;
+  padding:5px 10px;font-size:.7rem;font-weight:600;color:var(--gold-l);
+  cursor:pointer;transition:.2s;font-family:'Jost',sans-serif;
+}
+.pkg-book:hover{background:var(--gold);color:#070707}
 
-        .includes-list { margin-top: 10px; padding-left: 0; list-style: none; }
-        .includes-list li { font-size: 0.7rem; color: rgba(255,255,255,0.55); margin-bottom: 4px; }
-        .includes-list li i { color: var(--gold-dark); margin-right: 5px; width: 14px; }
+.cta-btn{
+  display:block;width:100%;border:none;border-radius:50px;
+  padding:11px 16px;font-weight:700;font-size:.87rem;
+  text-align:center;text-decoration:none;transition:.25s;cursor:pointer;font-family:'Jost',sans-serif;
+}
+.cta-call{background:var(--gold);color:#070707;margin-bottom:9px}
+.cta-call:hover{background:var(--gold-l);transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,155,44,.35)}
+.cta-wa{background:#25D366;color:#fff}
+.cta-wa:hover{background:#1ebe5d;transform:translateY(-1px);color:#fff}
+.cta-book{background:linear-gradient(95deg,#c89b2c,#e8b93c);color:#070707;margin-top:12px;font-size:.9rem}
+.cta-book:hover{box-shadow:0 8px 24px rgba(200,155,44,.4);transform:translateY(-1px)}
 
-        .cta-btn {
-            display: block;
-            width: 100%;
-            border: none;
-            border-radius: 50px;
-            padding: 11px 16px;
-            font-weight: 700;
-            font-size: 0.87rem;
-            text-align: center;
-            text-decoration: none;
-            transition: 0.25s;
-            cursor: pointer;
-        }
-        .cta-call { background: var(--gold); color: #070707; margin-bottom: 10px; }
-        .cta-call:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(200,155,44,0.35); }
-        .cta-wa { background: #25D366; color: #fff; }
-        .cta-wa:hover { background: #1ebe5d; transform: translateY(-1px); color: #fff; }
-        .cta-pay {
-            background: linear-gradient(95deg, #c89b2c, #e8b93c);
-            color: #070707;
-            margin-top: 12px;
-            font-size: 0.9rem;
-        }
-        .cta-pay:hover { box-shadow: 0 8px 22px rgba(200,155,44,0.4); transform: translateY(-1px); }
+.pay-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(200,155,44,.1);border:1px solid rgba(200,155,44,.22);
+  border-radius:40px;padding:5px 13px;font-size:.7rem;font-weight:600;color:#e8cf9a;
+  margin:3px;transition:.2s;
+}
+.pay-badge:hover{background:rgba(200,155,44,.22);transform:translateY(-2px)}
 
-        .review-card {
-            background: rgba(255,255,255,0.03);
-            border-left: 3px solid var(--gold);
-            border-radius: 16px;
-            padding: 1rem;
-            margin-bottom: 12px;
-            transition: 0.25s;
-        }
-        .review-card:hover { background: rgba(200,155,44,0.07); transform: translateX(4px); }
-        .review-quote { color: rgba(255,255,255,0.55); font-size: 0.87rem; margin-top: 8px; font-style: italic; }
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#fff9ef;margin-bottom:14px}
+.sec-title i{color:var(--gold);margin-right:8px}
 
-        .pay-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(200,155,44,0.12);
-            border: 1px solid rgba(200,155,44,0.25);
-            border-radius: 40px;
-            padding: 5px 14px;
-            font-size: 0.72rem;
-            font-weight: 600;
-            color: #e8cf9a;
-            margin: 4px;
-            transition: 0.2s;
-        }
-        .pay-badge:hover { background: rgba(200,155,44,0.25); transform: translateY(-2px); }
+.f-label{font-size:.77rem;color:rgba(255,255,255,.5);margin-bottom:5px;display:block;font-weight:500}
+.f-input{
+  width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(200,155,44,.3);
+  border-radius:50px;padding:10px 18px;color:#fff;font-family:'Jost',sans-serif;
+  font-size:.88rem;outline:none;transition:.2s;
+}
+.f-input:focus{border-color:var(--gold);box-shadow:0 0 10px rgba(200,155,44,.2)}
+.f-input::placeholder{color:rgba(255,255,255,.28)}
+textarea.f-input{border-radius:14px;resize:vertical;min-height:80px}
+.f-group{margin-bottom:13px}
+.info-box{
+  background:rgba(200,155,44,.07);border:1px solid rgba(200,155,44,.22);
+  border-radius:12px;padding:10px 14px;font-size:.77rem;color:rgba(255,255,255,.55);margin-top:8px;
+}
+.info-box i{color:var(--gold)}
 
-        .pay-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.92);
-            backdrop-filter: blur(14px);
-            z-index: 9000;
-            align-items: center;
-            justify-content: center;
-            padding: 16px;
-        }
-        .pay-overlay.open { display: flex; animation: fadeIn 0.25s ease; }
+.bk-overlay{
+  display:none;position:fixed;inset:0;
+  background:rgba(0,0,0,.93);backdrop-filter:blur(14px);
+  z-index:800;align-items:center;justify-content:center;padding:16px;
+}
+.bk-overlay.open{display:flex;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
 
-        .pay-modal {
-            background: linear-gradient(145deg, #141011, #0c090a);
-            border: 1px solid var(--gold);
-            border-radius: 32px;
-            width: 100%;
-            max-width: 500px;
-            max-height: 90vh;
-            overflow-y: auto;
-            padding: 2rem;
-            box-shadow: 0 40px 70px rgba(0,0,0,0.7);
-            animation: slideUp 0.3s ease;
-        }
-        .pay-modal::-webkit-scrollbar { width: 4px; }
-        .pay-modal::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
+.bk-modal{
+  background:linear-gradient(145deg,#140f11,#0c0809);
+  border:1px solid var(--gold);border-radius:28px;
+  width:100%;max-width:580px;max-height:90vh;overflow-y:auto;
+  padding:2rem;box-shadow:0 40px 70px rgba(0,0,0,.75);animation:slideUp .3s ease;
+}
+.bk-modal::-webkit-scrollbar{width:3px}
+.bk-modal::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+@keyframes slideUp{from{transform:translateY(28px);opacity:0}to{transform:translateY(0);opacity:1}}
 
-        @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.modal-close-btn{
+  background:none;border:none;color:rgba(255,255,255,.5);
+  font-size:1.5rem;cursor:pointer;line-height:1;transition:.2s;padding:0;
+}
+.modal-close-btn:hover{color:#fff}
+.modal-ttl{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:700}
 
-        .modal-close {
-            background: none;
-            border: none;
-            color: rgba(255,255,255,0.6);
-            font-size: 1.6rem;
-            cursor: pointer;
-            line-height: 1;
-            transition: color 0.2s;
-            padding: 0;
-        }
-        .modal-close:hover { color: #fff; }
-        .modal-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; }
-        .modal-amount { font-size: 2rem; font-weight: 800; color: var(--gold-light); }
+.step-bar{display:flex;gap:6px;margin-bottom:6px}
+.step-seg{flex:1;height:3px;background:rgba(255,255,255,.08);border-radius:3px;transition:.4s}
+.step-seg.done{background:var(--gold)}
+.step-lbls{display:flex;margin-bottom:20px}
+.step-lbl{flex:1;text-align:center;font-size:.72rem;color:rgba(255,255,255,.3);transition:.3s}
+.step-lbl.active{color:var(--gold-l);font-weight:600}
 
-        .method-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
-        .m-tab {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(200,155,44,0.28);
-            border-radius: 50px;
-            padding: 8px 16px;
-            color: rgba(255,255,255,0.8);
-            font-size: 0.82rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .m-tab:hover, .m-tab.active { background: var(--gold); color: #070707; border-color: var(--gold); }
-        .m-tab i { font-size: 1rem; }
+.cal-wrap{background:rgba(0,0,0,.3);border:1px solid rgba(200,155,44,.18);border-radius:18px;padding:16px;margin-bottom:14px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.cal-nav-btn{
+  background:none;border:1px solid rgba(200,155,44,.35);border-radius:50%;
+  width:32px;height:32px;color:var(--gold-l);cursor:pointer;font-size:.9rem;
+  display:flex;align-items:center;justify-content:center;transition:.2s;
+}
+.cal-nav-btn:hover{background:var(--gold);color:#070707}
+.cal-month-lbl{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#fff9ef}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.cal-dname{text-align:center;font-size:.67rem;color:rgba(255,255,255,.32);padding:4px 0;font-weight:600}
+.cal-day{
+  text-align:center;padding:7px 2px;border-radius:8px;
+  font-size:.82rem;cursor:pointer;transition:.2s;position:relative;
+  border:1px solid transparent;
+}
+.cal-day:hover:not(.booked):not(.past){background:rgba(200,155,44,.14);border-color:rgba(200,155,44,.3)}
+.cal-day.today{background:rgba(200,155,44,.08);border-color:rgba(200,155,44,.28);color:var(--gold-l);font-weight:700}
+.cal-day.selected{background:var(--gold);color:#070707;font-weight:800;border-color:var(--gold)}
+.cal-day.booked{background:rgba(185,59,86,.18);color:rgba(255,255,255,.3);cursor:not-allowed;border-color:rgba(185,59,86,.3)}
+.cal-day.booked::after{content:'✕';position:absolute;top:1px;right:3px;font-size:7px;color:var(--rose)}
+.cal-day.past{opacity:.22;cursor:not-allowed}
+.cal-day.empty{cursor:default}
+.cal-legend{display:flex;gap:14px;margin-top:10px;flex-wrap:wrap}
+.leg-item{display:flex;align-items:center;gap:5px;font-size:.7rem;color:rgba(255,255,255,.42)}
+.leg-dot{width:10px;height:10px;border-radius:3px}
+.ld-av{background:rgba(200,155,44,.4)}.ld-bk{background:rgba(185,59,86,.5)}.ld-sl{background:var(--gold)}
 
-        .pay-form { display: none; }
-        .pay-form.show { display: block; }
-        .f-label { font-size: 0.78rem; color: rgba(255,255,255,0.55); margin-bottom: 5px; display: block; font-weight: 500; }
-        .f-input {
-            width: 100%;
-            background: rgba(255,255,255,0.07);
-            border: 1px solid rgba(200,155,44,0.35);
-            border-radius: 50px;
-            padding: 10px 18px;
-            color: #fff;
-            font-family: 'Jost', sans-serif;
-            font-size: 0.9rem;
-            transition: 0.2s;
-            outline: none;
-        }
-        .f-input:focus { border-color: var(--gold); box-shadow: 0 0 10px rgba(200,155,44,0.3); }
-        .f-input::placeholder { color: rgba(255,255,255,0.3); }
-        .f-group { margin-bottom: 14px; }
+.time-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.time-slot{
+  background:rgba(0,0,0,.4);border:1px solid rgba(200,155,44,.18);
+  border-radius:10px;padding:9px 6px;text-align:center;
+  cursor:pointer;transition:.25s;font-size:.79rem;font-family:'Jost',sans-serif;color:#f0ede8;
+}
+.time-slot:hover:not(.slot-bk){border-color:var(--gold);background:rgba(200,155,44,.1)}
+.time-slot.slot-sel{border-color:var(--gold);background:rgba(200,155,44,.2);color:var(--gold-l);font-weight:700}
+.time-slot.slot-bk{opacity:.35;cursor:not-allowed;text-decoration:line-through}
 
-        .info-box {
-            background: rgba(200,155,44,0.08);
-            border: 1px solid rgba(200,155,44,0.25);
-            border-radius: 14px;
-            padding: 10px 14px;
-            font-size: 0.78rem;
-            color: rgba(255,255,255,0.6);
-            margin-top: 10px;
-        }
-        .info-box i { color: var(--gold); }
+.sum-box{background:rgba(200,155,44,.07);border:1px solid rgba(200,155,44,.2);border-radius:16px;padding:14px 18px;margin-bottom:16px}
+.sum-row{display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:7px;color:rgba(255,255,255,.6)}
+.sum-row:last-child{margin-bottom:0;font-weight:700;font-size:.9rem;color:#fff;border-top:1px solid rgba(200,155,44,.18);padding-top:8px}
+.sum-row span:last-child{color:var(--gold-l)}
 
-        .btn-pay {
-            width: 100%;
-            background: linear-gradient(95deg, #c89b2c, #e8b93c);
-            border: none;
-            border-radius: 50px;
-            padding: 13px;
-            font-size: 1rem;
-            font-weight: 800;
-            color: #070707;
-            cursor: pointer;
-            margin-top: 18px;
-            transition: 0.25s;
-        }
-        .btn-pay:hover { transform: scale(1.02); box-shadow: 0 8px 24px rgba(200,155,44,0.45); }
-        .btn-pay:active { transform: scale(0.98); }
-        .btn-pay:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
-        .secure-note { text-align: center; font-size: 0.72rem; color: rgba(255,255,255,0.35); margin-top: 12px; }
-        .secure-note i { color: var(--gold); }
+.pay-tabs{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0}
+.p-tab{
+  display:flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.04);border:1px solid rgba(200,155,44,.25);
+  border-radius:50px;padding:7px 14px;color:rgba(255,255,255,.75);
+  font-size:.8rem;font-weight:500;cursor:pointer;transition:.2s;font-family:'Jost',sans-serif;
+}
+.p-tab:hover,.p-tab.active{background:var(--gold);color:#070707;border-color:var(--gold)}
+.pay-form{display:none}
+.pay-form.show{display:block}
 
-        .toast-wrap {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            pointer-events: none;
-        }
-        .toast-item {
-            background: #1a1215;
-            border-left: 4px solid var(--gold);
-            border-radius: 50px;
-            padding: 12px 20px;
-            font-size: 0.83rem;
-            font-weight: 500;
-            color: #f0ede8;
-            min-width: 260px;
-            max-width: 340px;
-            transform: translateX(120%);
-            transition: transform 0.35s cubic-bezier(.34,1.56,.64,1);
-            pointer-events: auto;
-        }
-        .toast-item.show { transform: translateX(0); }
-        .toast-item.success { border-color: #25D366; }
-        .toast-item.error { border-color: var(--rose); }
+.btn-next{
+  background:linear-gradient(95deg,#c89b2c,#e8b93c);border:none;border-radius:50px;
+  padding:10px 26px;font-size:.88rem;font-weight:800;color:#070707;
+  cursor:pointer;transition:.25s;font-family:'Jost',sans-serif;
+}
+.btn-next:hover{transform:scale(1.02);box-shadow:0 8px 22px rgba(200,155,44,.4)}
+.btn-next:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.btn-back{
+  background:none;border:1px solid rgba(255,255,255,.15);border-radius:50px;
+  padding:9px 20px;color:rgba(255,255,255,.5);font-size:.78rem;
+  cursor:pointer;transition:.2s;font-family:'Jost',sans-serif;
+}
+.btn-back:hover{border-color:rgba(255,255,255,.4);color:rgba(255,255,255,.8)}
 
-        @media (max-width: 768px) {
-            .hall-title { font-size: 1.7rem; }
-            .main-img-wrap img { height: 220px; }
-            .cap-row { flex-direction: column; }
-            .price-big { font-size: 1.8rem; }
-            .pay-modal { padding: 1.5rem; }
-            .modal-amount { font-size: 1.6rem; }
-            .amenities-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
-            .amenity-item { font-size: 0.7rem; padding: 5px 10px; }
-        }
-        @media (max-width: 480px) {
-            .amenities-grid { grid-template-columns: 1fr; }
-        }
+.btn-review{
+  background:transparent;border:1px solid var(--gold);border-radius:50px;
+  padding:8px 22px;color:var(--gold-l);font-size:.82rem;font-weight:600;
+  cursor:pointer;transition:.2s;font-family:'Jost',sans-serif;
+}
+.btn-review:hover{background:var(--gold);color:#070707}
 
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #1a1215; }
-        ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 6px; }
-        ::selection { background: var(--gold); color: #070707; }
-        html { scroll-behavior: smooth; }
+.success-ring{
+  width:72px;height:72px;border-radius:50%;
+  background:rgba(37,211,102,.15);border:2px solid #25d366;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 16px;font-size:1.8rem;color:#25d366;
+}
+.ref-code{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--gold-l);letter-spacing:.05em;margin:6px 0}
 
-        .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.5s ease, transform 0.5s ease; }
-        .fade-up.visible { opacity: 1; transform: translateY(0); }
+.notif-wrap{position:fixed;bottom:26px;right:26px;z-index:900;display:flex;flex-direction:column;gap:10px;pointer-events:none}
+.notif{
+  background:linear-gradient(135deg,#141011,#0c090a);
+  border:1px solid var(--gold);border-radius:20px;
+  padding:14px 18px;min-width:280px;max-width:360px;
+  transform:translateX(130%);transition:transform .4s cubic-bezier(.34,1.56,.64,1);
+  pointer-events:auto;box-shadow:0 20px 40px rgba(0,0,0,.6);
+}
+.notif.show{transform:translateX(0)}
+.notif.notif-green{border-color:#25d366}
+.notif.notif-red{border-color:var(--rose)}
+.notif-head{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.notif-icon{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.notif-icon.c-gold{background:rgba(200,155,44,.18);color:var(--gold-l)}
+.notif-icon.c-green{background:rgba(37,211,102,.18);color:#25d366}
+.notif-icon.c-red{background:rgba(185,59,86,.18);color:var(--rose)}
+.notif-title{font-size:.83rem;font-weight:700;color:#fff;flex:1}
+.notif-body{font-size:.75rem;color:rgba(255,255,255,.5);line-height:1.5}
+.notif-x{background:none;border:none;color:rgba(255,255,255,.35);cursor:pointer;font-size:.9rem;padding:0;flex-shrink:0;align-self:flex-start}
 
-        .amenities-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; }
-    </style>
+.fade-up{opacity:0;transform:translateY(22px);transition:opacity .5s ease,transform .5s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+.secure-note{text-align:center;font-size:.7rem;color:rgba(255,255,255,.3);margin-top:10px}
+.secure-note i{color:var(--gold)}
+
+@media(max-width:992px){
+  .sidebar-sticky{position:relative;top:0}
+}
+@media(max-width:768px){
+  .hall-title{font-size:1.75rem}
+  .main-img-wrap img{height:230px}
+  .cap-row{flex-direction:column}
+  .price-big{font-size:1.9rem}
+  .bk-modal{padding:1.4rem}
+  .amenities-grid{grid-template-columns:1fr 1fr;gap:6px}
+  .amenity-item{font-size:.72rem;padding:5px 10px}
+  .time-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .amenities-grid{grid-template-columns:1fr}
+  .thumb-grid{grid-template-columns:repeat(3,1fr)}
+}
+</style>
 </head>
 <body>
 
 <div id="loadingScreen">
-    <div class="loader-ring"></div>
-    <p class="loader-text">Loading Hall Details...</p>
+  <div class="loader-ring"></div>
+  <p class="loader-text">Loading Hall Details...</p>
 </div>
 
 <div id="errorScreen">
-    <i class="fas fa-exclamation-triangle" style="font-size:3rem;color:var(--gold);"></i>
-    <h3 style="font-family:'Cormorant Garamond';font-size:1.8rem;">Hall Not Found</h3>
-    <p style="color:rgba(255,255,255,0.45);">Yeh hall exist nahi karta ya data load nahi hua.</p>
-    <a href="halls.html" style="background:var(--gold);color:#070707;padding:10px 28px;border-radius:50px;text-decoration:none;font-weight:700;margin-top:12px;">
-        <i class="fas fa-arrow-left me-2"></i> Back to Halls
-    </a>
+  <i class="fas fa-exclamation-triangle" style="font-size:3rem;color:var(--gold)"></i>
+  <h3 style="font-family:'Cormorant Garamond';font-size:1.8rem;margin-top:10px">Hall Not Found</h3>
+  <p style="color:rgba(255,255,255,.45);margin-top:6px">Yeh hall exist nahi karta ya data load nahi hua.</p>
+  <a href="halls.html" style="background:var(--gold);color:#070707;padding:10px 28px;border-radius:50px;text-decoration:none;font-weight:700;margin-top:16px;display:inline-block">
+    <i class="fas fa-arrow-left me-2"></i> Back to Halls
+  </a>
 </div>
 
 <div id="nav-placeholder"></div>
 
-<div id="mainContent" style="display:none;">
-    <section class="page-hero">
-        <div class="container">
-            <a href="halls.html" class="back-btn">
-                <i class="fas fa-arrow-left"></i> Back to Halls
-            </a>
+<div id="mainContent" style="display:none">
+<section class="page-hero">
+<div class="container">
+  <a href="halls.html" class="back-btn">
+    <i class="fas fa-arrow-left"></i> Back to Halls
+  </a>
 
-            <div class="row g-4">
-                <div class="col-lg-7">
-                    <div class="main-img-wrap fade-up">
-                        <img id="mainImg" src="" alt="Hall Image">
-                    </div>
-                    <div class="thumb-grid mb-4 fade-up" id="thumbGrid"></div>
+  <div class="row g-4">
+    <div class="col-lg-7">
 
-                    <!-- ===== AMENITIES CARD ===== -->
-                    <div class="g-card fade-up mb-4">
-                        <div class="d-flex align-items-center gap-2 mb-3">
-                            <i class="fas fa-crown" style="color:var(--gold);font-size:1.3rem;"></i>
-                            <h5 class="mb-0 amenities-title">Regal Amenities</h5>
-                        </div>
-                        <div id="amenitiesGrid" class="amenities-grid"></div>
-                        <div class="divider"></div>
-                        <div class="cap-row" id="capRow"></div>
-                    </div>
+      <div class="main-img-wrap fade-up">
+        <img id="mainImg" src="" alt="Hall Image" onerror="this.src='https://images.pexels.com/photos/265947/pexels-photo-265947.jpeg?auto=compress&w=900'">
+      </div>
+      <div class="thumb-grid" id="thumbGrid"></div>
 
-                    <!-- ===== REVIEWS ===== -->
-                    <div class="g-card fade-up">
-                        <div class="d-flex align-items-center gap-2 mb-3">
-                            <i class="fas fa-star" style="color:var(--gold);font-size:1.2rem;"></i>
-                            <h5 class="mb-0 amenities-title">Client Testimonials</h5>
-                        </div>
-                        <div id="reviewsContainer"></div>
-                    </div>
-                </div>
+      <div class="g-card fade-up">
+        <p class="sec-title"><i class="fas fa-crown"></i> Regal Amenities</p>
+        <div class="amenities-grid" id="amenGrid"></div>
+        <div class="divider"></div>
+        <div class="cap-row" id="capRow"></div>
+        <div class="ftags" id="ftagsEl"></div>
+      </div>
 
-                <div class="col-lg-5">
-                    <div class="g-card fade-up" style="position:sticky;top:90px;">
-                        <div class="gold-badge" id="verifiedBadge" style="display:none;">
-                            <i class="fas fa-gem"></i> VERIFIED PREMIUM
-                        </div>
-                        <h1 class="hall-title" id="hallTitle"></h1>
-                        <p class="hall-address" id="hallAddress"></p>
-
-                        <div class="d-flex align-items-center gap-2 mt-3">
-                            <div class="stars" id="starsEl"></div>
-                            <span class="rating-pill" id="ratingNum"></span>
-                            <span style="color:rgba(255,255,255,0.35);font-size:0.78rem;" id="reviewCount"></span>
-                        </div>
-
-                        <div class="divider"></div>
-
-                        <div>
-                            <p class="price-from">Starting From</p>
-                            <div class="price-big" id="startingPrice"></div>
-                        </div>
-
-                        <div class="divider"></div>
-
-                        <!-- PACKAGES -->
-                        <div>
-                            <h6 style="font-family:'Cormorant Garamond';font-size:1.1rem;margin-bottom:12px;">
-                                <i class="fas fa-box-open me-2" style="color:var(--gold);"></i> Exclusive Packages
-                            </h6>
-                            <div class="row g-2" id="pkgGrid"></div>
-                        </div>
-
-                        <div class="divider"></div>
-
-                        <!-- CONTACT -->
-                        <div>
-                            <h6 style="font-family:'Cormorant Garamond';font-size:1.1rem;margin-bottom:12px;">
-                                <i class="fas fa-headset me-2" style="color:var(--gold);"></i> Concierge & Booking
-                            </h6>
-                            <a id="callBtn" href="#" class="cta-btn cta-call">
-                                <i class="fas fa-phone-alt me-2"></i> <span id="phoneText">Call Now</span>
-                            </a>
-                            <a id="waBtn" href="#" target="_blank" class="cta-btn cta-wa">
-                                <i class="fab fa-whatsapp me-2"></i> WhatsApp Inquiry
-                            </a>
-                            <small class="d-block mt-2" style="color:rgba(255,255,255,0.35);font-size:0.75rem;">
-                                <i class="far fa-clock me-1"></i> Priority response within 2 hours
-                            </small>
-                        </div>
-
-                        <div class="divider"></div>
-
-                        <!-- PAYMENT METHODS -->
-                        <div>
-                            <h6 style="font-family:'Cormorant Garamond';font-size:1.1rem;margin-bottom:10px;">
-                                <i class="fas fa-wallet me-2" style="color:var(--gold);"></i> Accepted Payments
-                            </h6>
-                            <div id="paymentBadges"></div>
-                            <small class="d-block mt-2" style="color:rgba(255,255,255,0.35);font-size:0.75rem;">
-                                <i class="fas fa-shield-alt me-1" style="color:var(--gold);"></i> 100% secure & transparent pricing
-                            </small>
-                        </div>
-
-                        <button class="cta-btn cta-pay" onclick="openModal()">
-                            <i class="fas fa-credit-card me-2"></i> Book Selected Package
-                        </button>
-                    </div>
-                </div>
-            </div>
+      <div class="g-card fade-up">
+        <p class="sec-title"><i class="fas fa-star"></i> Ratings &amp; Reviews</p>
+        <div class="rating-summary">
+          <div>
+            <div class="big-rating" id="bigRating">4.5</div>
+            <div class="stars" id="sumStars" style="font-size:1rem"></div>
+            <div style="font-size:.74rem;color:rgba(255,255,255,.36);margin-top:3px" id="totalRevsTxt">Based on 0 reviews</div>
+          </div>
+          <div style="flex:1" id="ratingBars"></div>
         </div>
-    </section>
+        <div class="divider"></div>
+        <div id="reviewList"></div>
+        <div style="margin-top:14px;padding-top:14px;border-top:1px solid rgba(200,155,44,.12)">
+          <p style="font-size:.84rem;font-weight:600;margin-bottom:12px;color:rgba(255,255,255,.65)">
+            <i class="fas fa-pen-nib me-2" style="color:var(--gold)"></i>Write a Review
+          </p>
+          <div class="star-input" id="starInput">
+            <input type="radio" name="ustar" id="us5" value="5"><label for="us5">★</label>
+            <input type="radio" name="ustar" id="us4" value="4"><label for="us4">★</label>
+            <input type="radio" name="ustar" id="us3" value="3"><label for="us3">★</label>
+            <input type="radio" name="ustar" id="us2" value="2"><label for="us2">★</label>
+            <input type="radio" name="ustar" id="us1" value="1"><label for="us1">★</label>
+          </div>
+          <div class="f-group"><input type="text" class="f-input" id="revName" placeholder="Your name (e.g. Aisha Malik)"></div>
+          <div class="f-group"><textarea class="f-input" id="revComment" placeholder="Share your experience..."></textarea></div>
+          <button class="btn-review" onclick="submitReview()"><i class="fas fa-paper-plane me-2"></i>Post Review</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-lg-5">
+    <div class="sidebar-sticky">
+    <div class="g-card">
+      <span class="gold-badge" id="verifiedBadge" style="display:none"><i class="fas fa-gem me-1"></i>VERIFIED PREMIUM</span>
+      <h1 class="hall-title" id="hallTitle"></h1>
+      <p class="hall-address" id="hallAddress"></p>
+
+      <div class="d-flex align-items-center gap-2 mt-3">
+        <div class="stars" id="sideStars" style="font-size:.95rem"></div>
+        <span class="rating-pill" id="sideRatingNum"></span>
+        <span style="color:rgba(255,255,255,.3);font-size:.77rem" id="sideRevCount"></span>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="price-from">Starting From</p>
+      <div class="price-big" id="startingPrice"></div>
+
+      <div class="divider"></div>
+
+      <p class="sec-title" style="margin-bottom:10px"><i class="fas fa-box-open"></i> Exclusive Packages</p>
+      <div class="row g-2" id="pkgGrid"></div>
+
+      <div class="divider"></div>
+
+      <p class="sec-title" style="margin-bottom:10px"><i class="fas fa-headset"></i> Concierge &amp; Booking</p>
+      <a id="callBtn" href="#" class="cta-btn cta-call">
+        <i class="fas fa-phone-alt me-2"></i><span id="phoneText">Call Now</span>
+      </a>
+      <a id="waBtn" href="#" target="_blank" class="cta-btn cta-wa">
+        <i class="fab fa-whatsapp me-2"></i> WhatsApp Inquiry
+      </a>
+      <small class="d-block mt-2" style="color:rgba(255,255,255,.3);font-size:.73rem">
+        <i class="far fa-clock me-1"></i> Priority response within 2 hours
+      </small>
+
+      <div class="divider"></div>
+
+      <p class="sec-title" style="margin-bottom:9px"><i class="fas fa-wallet"></i> Accepted Payments</p>
+      <div id="payBadges"></div>
+      <small class="d-block mt-2" style="color:rgba(255,255,255,.3);font-size:.73rem">
+        <i class="fas fa-shield-alt me-1" style="color:var(--gold)"></i> 100% secure &amp; transparent pricing
+      </small>
+
+      <button class="cta-btn cta-book" onclick="openBooking()">
+        <i class="fas fa-calendar-check me-2"></i> Book Selected Package
+      </button>
+    </div>
+    </div>
+    </div>
+
+  </div>
+</div>
+</section>
 </div>
 
 <div id="footer-placeholder"></div>
 
-<!-- PAYMENT MODAL -->
-<div class="pay-overlay" id="payOverlay">
-    <div class="pay-modal">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <span class="modal-title"><i class="fas fa-lock me-2" style="color:var(--gold);"></i>Secure Checkout</span>
-            <button class="modal-close" onclick="closeModal()">&times;</button>
-        </div>
-        <div class="text-center mb-3">
-            <p style="color:rgba(255,255,255,0.5);font-size:0.82rem;margin-bottom:4px;">
-                <i class="fas fa-gem me-1" style="color:var(--gold);"></i> <span id="mPkgName">Silver Package</span>
-            </p>
-            <div class="modal-amount" id="mAmount">PKR 0</div>
-            <p style="color:rgba(255,255,255,0.3);font-size:0.72rem;" id="mHallName"></p>
-        </div>
+<div class="bk-overlay" id="bkOverlay">
+<div class="bk-modal" id="bkModal">
 
-        <div class="method-tabs">
-            <div class="m-tab active" data-method="card"><i class="fab fa-cc-visa"></i> Credit Card</div>
-            <div class="m-tab" data-method="jazzcash"><i class="fas fa-mobile-alt"></i> JazzCash</div>
-            <div class="m-tab" data-method="easypaisa"><i class="fas fa-mobile-alt"></i> Easypaisa</div>
-            <div class="m-tab" data-method="bank"><i class="fas fa-university"></i> Bank Transfer</div>
-        </div>
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <span class="modal-ttl"><i class="fas fa-calendar-star me-2" style="color:var(--gold)"></i>Book Your Date</span>
+    <button class="modal-close-btn" onclick="closeBooking()">×</button>
+  </div>
 
-        <div class="pay-form show" id="f-card">
-            <div class="f-group"><label class="f-label">Cardholder Name</label><input type="text" class="f-input" id="cardName" placeholder="Muhammad Ali"></div>
-            <div class="f-group"><label class="f-label">Card Number</label><input type="text" class="f-input" id="cardNumber" placeholder="4242 4242 4242 4242" maxlength="19"></div>
-            <div class="row g-2">
-                <div class="col-6 f-group"><label class="f-label">Expiry</label><input type="text" class="f-input" id="cardExpiry" placeholder="MM/YY" maxlength="5"></div>
-                <div class="col-6 f-group"><label class="f-label">CVC</label><input type="password" class="f-input" id="cardCvc" placeholder="123" maxlength="4"></div>
-            </div>
-        </div>
+  <div class="step-bar">
+    <div class="step-seg done" id="seg1"></div>
+    <div class="step-seg" id="seg2"></div>
+    <div class="step-seg" id="seg3"></div>
+  </div>
+  <div class="step-lbls">
+    <span class="step-lbl active" id="sl1">Select Date</span>
+    <span class="step-lbl" id="sl2">Your Details</span>
+    <span class="step-lbl" id="sl3">Payment</span>
+  </div>
 
-        <div class="pay-form" id="f-jazzcash">
-            <div class="f-group"><label class="f-label">JazzCash Mobile Number</label><input type="tel" class="f-input" id="jcNum" placeholder="03XXXXXXXXX" maxlength="11"></div>
-            <div class="f-group"><label class="f-label">CNIC (Optional)</label><input type="text" class="f-input" id="jcCnic" placeholder="XXXXX-XXXXXXX-X"></div>
-            <div class="info-box"><i class="fas fa-info-circle me-1"></i> Payment request aapke JazzCash app pe aayega.</div>
-        </div>
-
-        <div class="pay-form" id="f-easypaisa">
-            <div class="f-group"><label class="f-label">Easypaisa Number</label><input type="tel" class="f-input" id="epNum" placeholder="03XXXXXXXXX" maxlength="11"></div>
-            <div class="f-group"><label class="f-label">Account Holder Name</label><input type="text" class="f-input" id="epName" placeholder="Full Name"></div>
-            <div class="info-box"><i class="fas fa-info-circle me-1"></i> Payment request aapke Easypaisa account pe jayega.</div>
-        </div>
-
-        <div class="pay-form" id="f-bank">
-            <div class="info-box mb-3"><i class="fas fa-building me-1"></i> Transfer to: <strong style="color:var(--gold-light);">Meezan Bank</strong><br>Account: <strong>01240101234567</strong><br>IBAN: <strong>PK36MEZN0001234567890</strong></div>
-            <div class="f-group"><label class="f-label">Your Bank Name</label><input type="text" class="f-input" id="bankName" placeholder="HBL / UBL / MCB"></div>
-            <div class="f-group"><label class="f-label">Your Account Number</label><input type="text" class="f-input" id="bankAcc" placeholder="Account Number"></div>
-            <div class="f-group"><label class="f-label">Account Holder Name</label><input type="text" class="f-input" id="bankHolder" placeholder="As per CNIC"></div>
-        </div>
-
-        <button class="btn-pay" id="payBtn" onclick="processPayment()">
-            <i class="fas fa-lock me-2"></i> Confirm & Pay
-        </button>
-        <p class="secure-note"><i class="fas fa-shield-alt me-1"></i> 256-bit SSL Encrypted &bull; Instant Confirmation</p>
+  <div id="step1">
+    <p style="font-size:.83rem;color:rgba(255,255,255,.42);margin-bottom:14px">
+      <i class="fas fa-info-circle me-1" style="color:var(--gold)"></i>
+      Red dates are already booked — choose an available date
+    </p>
+    <div class="cal-wrap">
+      <div class="cal-head">
+        <button class="cal-nav-btn" id="calPrev"><i class="fas fa-chevron-left"></i></button>
+        <span class="cal-month-lbl" id="calLbl"></span>
+        <button class="cal-nav-btn" id="calNext"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="cal-grid" id="calGrid"></div>
+      <div class="cal-legend">
+        <div class="leg-item"><div class="leg-dot ld-av"></div>Available</div>
+        <div class="leg-item"><div class="leg-dot ld-bk"></div>Booked</div>
+        <div class="leg-item"><div class="leg-dot ld-sl"></div>Your Selection</div>
+      </div>
     </div>
+
+    <div id="dateInfo" style="display:none;background:rgba(200,155,44,.08);border:1px solid rgba(200,155,44,.22);border-radius:13px;padding:11px 16px;margin-bottom:14px">
+      <p style="font-size:.82rem;color:var(--gold-l);font-weight:700" id="dateTxt"></p>
+    </div>
+
+    <div id="timeSection" style="display:none">
+      <p style="font-size:.83rem;font-weight:600;margin-bottom:8px;color:rgba(255,255,255,.62)">
+        <i class="fas fa-clock me-2" style="color:var(--gold)"></i>Select Event Time
+      </p>
+      <div class="time-grid" id="timeGrid"></div>
+    </div>
+
+    <div class="d-flex justify-content-end mt-3">
+      <button class="btn-next" id="btnStep1Next" onclick="goStep2()" disabled>
+        Next: Your Details <i class="fas fa-arrow-right ms-2"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="step2" style="display:none">
+    <div id="sum2" class="sum-box"></div>
+    <div class="f-group"><label class="f-label">Full Name (as per CNIC)</label><input type="text" class="f-input" id="bkName" placeholder="Muhammad Usman Khan"></div>
+    <div class="f-group"><label class="f-label">Contact Number</label><input type="text" class="f-input" id="bkPhone" placeholder="03XXXXXXXXX" maxlength="11"></div>
+    <div class="f-group"><label class="f-label">Email Address</label><input type="email" class="f-input" id="bkEmail" placeholder="you@example.com"></div>
+    <div class="f-group"><label class="f-label">Event Type</label>
+      <select class="f-input" id="bkEvent" style="border-radius:50px;cursor:pointer">
+        <option value="" style="background:#141011">Select event type</option>
+        <option style="background:#141011">Walima</option>
+        <option style="background:#141011">Baraat</option>
+        <option style="background:#141011">Mehndi / Sangeet</option>
+        <option style="background:#141011">Reception</option>
+        <option style="background:#141011">Corporate Event</option>
+        <option style="background:#141011">Birthday Celebration</option>
+        <option style="background:#141011">Other</option>
+      </select>
+    </div>
+    <div class="f-group"><label class="f-label">Expected Guests</label><input type="number" class="f-input" id="bkGuests" placeholder="e.g. 500" min="1"></div>
+    <div class="f-group"><label class="f-label">Special Requests (Optional)</label>
+      <textarea class="f-input" id="bkNotes" placeholder="Floral stage, halal catering, extra parking..."></textarea>
+    </div>
+    <div class="d-flex justify-content-between align-items-center mt-2">
+      <button class="btn-back" onclick="goStep(1)"><i class="fas fa-arrow-left me-1"></i>Back</button>
+      <button class="btn-next" onclick="goStep3()">Next: Payment <i class="fas fa-arrow-right ms-2"></i></button>
+    </div>
+  </div>
+
+  <div id="step3" style="display:none">
+    <div id="sum3" class="sum-box"></div>
+    <div class="pay-tabs" id="payTabsEl">
+      <div class="p-tab active" data-m="card"><i class="fab fa-cc-visa"></i> Card</div>
+      <div class="p-tab" data-m="jazzcash"><i class="fas fa-mobile-alt"></i> JazzCash</div>
+      <div class="p-tab" data-m="easypaisa"><i class="fas fa-mobile-alt"></i> Easypaisa</div>
+      <div class="p-tab" data-m="bank"><i class="fas fa-university"></i> Bank</div>
+    </div>
+
+    <div class="pay-form show" id="pf-card">
+      <div class="f-group"><label class="f-label">Cardholder Name</label><input type="text" class="f-input" id="cardName" placeholder="As on card"></div>
+      <div class="f-group"><label class="f-label">Card Number</label><input type="text" class="f-input" id="cardNum" placeholder="4242 4242 4242 4242" maxlength="19"></div>
+      <div class="row g-2">
+        <div class="col-6 f-group"><label class="f-label">Expiry</label><input type="text" class="f-input" id="cardExp" placeholder="MM/YY" maxlength="5"></div>
+        <div class="col-6 f-group"><label class="f-label">CVC</label><input type="password" class="f-input" id="cardCvc" placeholder="123" maxlength="4"></div>
+      </div>
+    </div>
+    <div class="pay-form" id="pf-jazzcash">
+      <div class="f-group"><label class="f-label">JazzCash Number</label><input type="tel" class="f-input" id="jcNum" placeholder="03XXXXXXXXX" maxlength="11"></div>
+      <div class="f-group"><label class="f-label">CNIC Last 6 Digits</label><input type="text" class="f-input" id="jcPin" placeholder="123456" maxlength="6"></div>
+      <div class="info-box"><i class="fas fa-info-circle me-1"></i> Payment request JazzCash app pe aayegi. 60 seconds mein approve karein.</div>
+    </div>
+    <div class="pay-form" id="pf-easypaisa">
+      <div class="f-group"><label class="f-label">Easypaisa Number</label><input type="tel" class="f-input" id="epNum" placeholder="03XXXXXXXXX" maxlength="11"></div>
+      <div class="f-group"><label class="f-label">Account Holder Name</label><input type="text" class="f-input" id="epName" placeholder="Full name"></div>
+      <div class="info-box"><i class="fas fa-info-circle me-1"></i> Easypaisa account pe request jayegi. PIN enter karke approve karein.</div>
+    </div>
+    <div class="pay-form" id="pf-bank">
+      <div class="info-box mb-3">
+        <i class="fas fa-building me-1"></i> Transfer to: <strong style="color:var(--gold-l)">Meezan Bank Ltd</strong><br>
+        Account: <strong>01240101234567</strong><br>
+        IBAN: <strong>PK36MEZN0001234567890</strong>
+      </div>
+      <div class="f-group"><label class="f-label">Your Bank Name</label><input type="text" class="f-input" id="bnkName" placeholder="HBL / UBL / MCB"></div>
+      <div class="f-group"><label class="f-label">Account Number</label><input type="text" class="f-input" id="bnkAcc" placeholder="Your account number"></div>
+      <div class="f-group"><label class="f-label">Account Holder Name</label><input type="text" class="f-input" id="bnkHolder" placeholder="As per CNIC"></div>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mt-2">
+      <button class="btn-back" onclick="goStep(2)"><i class="fas fa-arrow-left me-1"></i>Back</button>
+      <button class="btn-next" id="payBtn" onclick="processPayment()">
+        <i class="fas fa-lock me-2"></i>Confirm &amp; Pay
+      </button>
+    </div>
+    <p class="secure-note"><i class="fas fa-shield-alt me-1"></i> 256-bit SSL Encrypted · Instant Confirmation</p>
+  </div>
+
+  <div id="stepSuccess" style="display:none;text-align:center;padding:20px 0">
+    <div class="success-ring"><i class="fas fa-check"></i></div>
+    <h3 style="font-family:'Cormorant Garamond';font-size:1.65rem;margin-bottom:6px">Booking Confirmed!</h3>
+    <p style="color:rgba(255,255,255,.42);font-size:.84rem">Your reference number</p>
+    <div class="ref-code" id="refCode">WD-XXXXXX</div>
+    <div id="successDetails" class="sum-box" style="text-align:left;margin-top:16px;font-size:.8rem;color:rgba(255,255,255,.6);line-height:2"></div>
+    <p style="font-size:.76rem;color:rgba(255,255,255,.3);margin-top:12px">
+      <i class="fas fa-bell me-1" style="color:var(--gold)"></i>
+      A reminder notification will be sent 24 hours before your event
+    </p>
+    <button class="btn-next" onclick="closeBooking()" style="margin-top:16px">
+      <i class="fas fa-times me-2"></i>Close
+    </button>
+  </div>
+
+</div>
 </div>
 
-<!-- TOAST -->
-<div class="toast-wrap" id="toastWrap"></div>
+<div class="notif-wrap" id="notifWrap"></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-// ===== SAFE FORMAT FUNCTION =====
-function formatPKR(n) {
-    if (n === undefined || n === null) return '0';
-    return Number(n).toLocaleString('en-PK');
-}
+// =========================================
+// CONSTANTS & STATE
+// =========================================
+const FALLBACK_IMG = 'https://images.pexels.com/photos/265947/pexels-photo-265947.jpeg?auto=compress&cs=tinysrgb&w=900&h=520&fit=crop';
 
-function buildStars(rating) {
-    if (rating === undefined || rating === null) rating = 0;
-    const full = Math.floor(rating), half = (rating - full) >= 0.5 ? 1 : 0, empty = 5 - full - half;
-    let s = '';
-    for (let i = 0; i < full; i++) s += '<i class="fas fa-star"></i>';
-    if (half) s += '<i class="fas fa-star-half-alt"></i>';
-    for (let i = 0; i < empty; i++) s += '<i class="far fa-star"></i>';
-    return s;
-}
+const PAY_ICONS = {
+  'Cash':'fas fa-money-bill-wave',
+  'Bank Transfer':'fas fa-university',
+  'JazzCash':'fas fa-mobile-alt',
+  'Easypaisa':'fas fa-mobile-alt',
+  'Credit Card':'fab fa-cc-visa'
+};
 
-// ===== STATE =====
+const AMENITY_ICONS = {
+  'Air Conditioned Hall':'fas fa-snowflake',
+  'Sound System & DJ':'fas fa-music',
+  'Stage with LED Lighting':'fas fa-lightbulb',
+  'Valet Parking':'fas fa-car',
+  'Separate Mehendi Lawn':'fas fa-leaf',
+  'CCTV Security':'fas fa-video',
+  'Elevator Access':'fas fa-elevator',
+  'Family Lounge':'fas fa-couch',
+  'Decor Services Available':'fas fa-magic',
+  'Bridal Room':'fas fa-ring',
+  'Generator Backup':'fas fa-bolt',
+  'In-house Catering':'fas fa-utensils',
+  'Wheelchair Access':'fas fa-wheelchair',
+  'Free WiFi':'fas fa-wifi',
+  'Parking':'fas fa-parking',
+  'Central Heating':'fas fa-fire',
+  'Room Service':'fas fa-concierge-bell',
+  'Security':'fas fa-shield-alt',
+  'Smoking Area':'fas fa-smoking',
+  'Event Planning':'fas fa-clipboard-list',
+  'Air Conditioned':'fas fa-snowflake',
+  'Sound System':'fas fa-music',
+  'LED Lighting':'fas fa-lightbulb',
+  'Halal Catering':'fas fa-utensils',
+  'Photography':'fas fa-camera',
+  'DJ':'fas fa-headphones',
+  'Stage Decor':'fas fa-magic',
+  'Bridal Suite':'fas fa-ring',
+  'Open Lawn':'fas fa-leaf',
+  'Event Coordinator':'fas fa-clipboard-list'
+};
+
+const TIME_SLOTS = ['09:00 AM','11:00 AM','01:00 PM','03:00 PM','05:00 PM','07:00 PM'];
+
 let HALL = null;
-let selected = null;
-let currentMethod = 'card';
+let liveReviews = [];
+let selectedPkg = 0;
+let selectedDate = null;
+let selectedTime = null;
+let calYear, calMonth;
+let currentStep = 1;
+let currentPayMethod = 'card';
 
-const payMethodIcons = {
-    'Cash': { icon: 'fas fa-money-bill-wave', label: 'Cash' },
-    'Bank Transfer': { icon: 'fas fa-university', label: 'Bank Transfer' },
-    'JazzCash': { icon: 'fas fa-mobile-alt', label: 'JazzCash' },
-    'Easypaisa': { icon: 'fas fa-mobile-alt', label: 'Easypaisa' },
-    'Credit Card': { icon: 'fab fa-cc-visa', label: 'Credit Card' }
-};
-
-// ===== AMENITIES ICON MAP =====
-const amenityIcons = {
-    'Air Conditioned Hall': 'fas fa-snowflake',
-    'Sound System & DJ': 'fas fa-music',
-    'Stage with LED Lighting': 'fas fa-lightbulb',
-    'Valet Parking': 'fas fa-car',
-    'Separate Mehendi Lawn': 'fas fa-leaf',
-    'CCTV Security': 'fas fa-video',
-    'Elevator Access': 'fas fa-elevator',
-    'Family Lounge': 'fas fa-couch',
-    'Decor Services Available': 'fas fa-magic',
-    'Bridal Room': 'fas fa-ring',
-    'Generator Backup': 'fas fa-bolt',
-    'In-house Catering': 'fas fa-utensils',
-    'Wheelchair Access': 'fas fa-wheelchair',
-    'Free WiFi': 'fas fa-wifi',
-    'Parking': 'fas fa-parking',
-    'Central Heating': 'fas fa-fire',
-    'Room Service': 'fas fa-concierge-bell',
-    'Security': 'fas fa-shield-alt',
-    'Smoking Area': 'fas fa-smoking',
-    'Event Planning': 'fas fa-clipboard-list'
-};
-
-// ===== NAVBAR & FOOTER =====
-function loadPartial(file, targetId, fallbackHtml) {
-    $.get(file).done(d => { $('#' + targetId).html(d); postNavLoad(); })
-        .fail(() => { $('#' + targetId).html(fallbackHtml); postNavLoad(); });
+// =========================================
+// LOCALSTORAGE HELPERS
+// =========================================
+function getBookedDates(hallId) {
+  try { return JSON.parse(localStorage.getItem('bk_dates_' + hallId) || '[]'); } catch(e){ return []; }
+}
+function addBookedDate(hallId, dateKey) {
+  const arr = getBookedDates(hallId);
+  if(!arr.includes(dateKey)) arr.push(dateKey);
+  localStorage.setItem('bk_dates_' + hallId, JSON.stringify(arr));
+}
+function getBookedSlots(hallId) {
+  try { return JSON.parse(localStorage.getItem('bk_slots_' + hallId) || '{}'); } catch(e){ return {}; }
+}
+function addBookedSlot(hallId, dateKey, slot) {
+  const obj = getBookedSlots(hallId);
+  if(!obj[dateKey]) obj[dateKey] = [];
+  if(!obj[dateKey].includes(slot)) obj[dateKey].push(slot);
+  localStorage.setItem('bk_slots_' + hallId, JSON.stringify(obj));
 }
 
-function postNavLoad() {
-    $('[data-nav]').removeClass('active');
-    $('[data-nav="halls"]').addClass('active');
+// =========================================
+// GET LOGGED-IN USER (safe fallback)
+// =========================================
+function getLoggedInUser() {
+  try {
+    return JSON.parse(localStorage.getItem('wd_logged_user') || 'null');
+  } catch(e) {
+    return null;
+  }
 }
 
-const navFallback = `<nav style="background:rgba(7,7,7,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(200,155,44,0.25);padding:14px 0;position:sticky;top:0;z-index:1000;">
-  <div class="container d-flex align-items-center justify-content-between">
-    <a href="index.html" style="font-family:'Cormorant Garamond';font-size:1.7rem;font-weight:700;color:#fff9ef;text-decoration:none;">
-      <i class="fas fa-crown me-2" style="color:#c89b2c;"></i> WedDream
-    </a>
-    <div class="d-none d-lg-flex gap-4">
-      <a href="index.html" data-nav="home" style="color:rgba(255,255,255,0.65);text-decoration:none;font-weight:500;">Home</a>
-      <a href="halls.html" data-nav="halls" style="color:#c89b2c;text-decoration:none;font-weight:600;">Halls</a>
-      <a href="catering.html" data-nav="vendors" style="color:rgba(255,255,255,0.65);text-decoration:none;font-weight:500;">Caterers</a>
-      <a href="photographers.html" data-nav="vendors" style="color:rgba(255,255,255,0.65);text-decoration:none;font-weight:500;">Photographers</a>
-      <a href="decorating.html" data-nav="vendors" style="color:rgba(255,255,255,0.65);text-decoration:none;font-weight:500;">Decorators</a>
-      <a href="carrentals.html" data-nav="vendors" style="color:rgba(255,255,255,0.65);text-decoration:none;font-weight:500;">Car Rentals</a>
-      <a href="about.html" data-nav="about" style="color:rgba(255,255,255,0.65);text-decoration:none;font-weight:500;">About</a>
-    </div>
-  </div>
-</nav>`;
+// =========================================
+// ✅ saveBookingData() — HALLS VERSION
+//    category: 'halls' — confirmation page
+//    is ready to read venueName, venueArea etc.
+// =========================================
+function saveBookingData(ref, pkg) {
+  const bookingData = {
+    ref           : ref,
+    category      : 'halls',                              // ← confirmation page filter key
+    venueId       : HALL.id,
+    venueName     : HALL.name,
+    venueArea     : HALL.area || HALL.city || 'Karachi',
+    date          : selectedDate,
+    time          : selectedTime,
+    packageName   : pkg.name,
+    packageIndex  : selectedPkg,
+    totalPrice    : pkg.price,
+    advance       : Math.round(pkg.price * 0.3),
+    payMethod     : currentPayMethod,
+    eventType     : document.getElementById('bkEvent').value,
+    guests        : document.getElementById('bkGuests').value,
+    notes         : document.getElementById('bkNotes').value.trim(),
+    guestName     : document.getElementById('bkName').value.trim(),
+    guestPhone    : document.getElementById('bkPhone').value.trim(),
+    guestEmail    : document.getElementById('bkEmail').value.trim(),
+    bookedAt      : new Date().toLocaleString('en-PK', {
+                      day:'2-digit', month:'short', year:'numeric',
+                      hour:'2-digit', minute:'2-digit'
+                    }),
+    status        : 'confirmed'
+  };
 
-const footerFallback = `<footer style="background:#030101;border-top:1px solid rgba(200,155,44,0.18);padding:36px 0;margin-top:60px;text-align:center;">
-  <div class="container">
-    <p style="font-family:'Cormorant Garamond';font-size:1.3rem;color:#fff9ef;margin-bottom:8px;">
-      <i class="fas fa-crown me-2" style="color:#c89b2c;"></i> WedDream
-    </p>
-    <p style="color:rgba(255,255,255,0.3);font-size:0.82rem;">© 2024 WedDream. All rights reserved.</p>
-  </div>
-</footer>`;
+  // 1) latest booking (confirmation page reads this)
+  localStorage.setItem('wd_latest_booking', JSON.stringify(bookingData));
 
-$(document).ready(() => {
-    loadPartial('navebar.html', 'nav-placeholder', navFallback);
-    loadPartial('footer.html', 'footer-placeholder', footerFallback);
+  // 2) all bookings list
+  const all = JSON.parse(localStorage.getItem('wd_all_bookings') || '[]');
+  all.push(bookingData);
+  localStorage.setItem('wd_all_bookings', JSON.stringify(all));
+
+  // 3) save inside logged-in user's record (if logged in)
+  const user = getLoggedInUser();
+  if (user) {
+    const users = JSON.parse(localStorage.getItem('wd_users') || '[]');
+    const idx = users.findIndex(u => u.email === user.email);
+    if (idx > -1) {
+      if (!users[idx].bookings) users[idx].bookings = [];
+      users[idx].bookings.push(bookingData);
+      localStorage.setItem('wd_users', JSON.stringify(users));
+    }
+  }
+
+  return bookingData;
+}
+
+// =========================================
+// REMINDER HELPERS
+// =========================================
+function saveReminderData(ref, pkg, dt) {
+  const [y, m, d] = selectedDate.split('-');
+  const oneDayBefore = new Date(dt);
+  oneDayBefore.setDate(oneDayBefore.getDate() - 1);
+  const reminderDateStr = formatDateKey(oneDayBefore);
+  const reminderKey = `wd_reminder_${ref}`;
+
+  const reminderData = {
+    ref              : ref,
+    hallName         : HALL.name,
+    guestName        : document.getElementById('bkName').value.trim(),
+    guestPhone       : document.getElementById('bkPhone').value.trim(),
+    eventDate        : selectedDate,
+    eventDateFormatted: `${parseInt(d)} ${MONTHS_SHORT[dt.getMonth()]} ${y}`,
+    time             : selectedTime,
+    eventType        : document.getElementById('bkEvent').value,
+    packageName      : pkg.name,
+    reminderDate     : reminderDateStr,
+    fired            : false,
+    totalPrice       : pkg.price,
+    advance          : Math.round(pkg.price * 0.3),
+    hallId           : HALL.id
+  };
+
+  localStorage.setItem(reminderKey, JSON.stringify(reminderData));
+  const queue = JSON.parse(localStorage.getItem('wd_reminder_queue') || '[]');
+  if (!queue.includes(reminderKey)) {
+    queue.push(reminderKey);
+    localStorage.setItem('wd_reminder_queue', JSON.stringify(queue));
+  }
+  return { reminderKey, reminderDateStr };
+}
+
+$(document).ready(function(){
+  $.get('navebar.html', function(d){
+    $('#nav-placeholder').html(d);
+    $('.wd-menu-link').removeClass('active');
+    $('.wd-menu-link[data-nav="services"]').addClass('active');
+  });
+  $.get('footer.html', function(d){
+    $('#footer-placeholder').html(d);
+  });
+  loadHall();
 });
 
-// ===== RENDER HALL DATA =====
-function renderHall(hall) {
-    if (!hall) return;
+function getHallId(){
+  return parseInt(new URLSearchParams(window.location.search).get('id'));
+}
 
-    HALL = hall;
+async function loadHall(){
+  const id = getHallId();
+  if(!id || isNaN(id)){ showError(); return; }
+  try {
+    const r = await fetch('hallsDetails.json');
+    if(!r.ok) throw new Error('fetch failed');
+    const data = await r.json();
+    const hall = data.find(h => h.id === id);
+    if(!hall){ showError(); return; }
+    renderHall(hall);
+  } catch(err){
+    console.error('Hall load error:', err);
+    showError();
+  }
+}
 
-    if (hall.packages && hall.packages.length > 0) {
-        selected = { ...hall.packages[0] };
-    } else {
-        selected = { name: 'Standard', price: hall.starting_price || 0, includes: ['Hall Rent', 'Basic Setup', 'Chairs & Tables'] };
-    }
+function showError(){
+  document.getElementById('loadingScreen').classList.add('hidden');
+  document.getElementById('errorScreen').classList.add('show');
+}
 
-    document.title = (hall.name || 'Hall') + ' | WedDream';
+function renderHall(hall){
+  HALL = hall;
+  liveReviews = [...(hall.reviews || [])];
 
-    // ===== MAIN IMAGE =====
-    const firstImg = (hall.gallery && hall.gallery[0]) ? hall.gallery[0] : 'https://picsum.photos/seed/default/900/600';
-    document.getElementById('mainImg').src = firstImg;
+  if(hall.packages && hall.packages.length > 0){
+    selectedPkg = 0;
+  }
 
-    // ===== THUMBNAILS =====
-    const thumbGrid = document.getElementById('thumbGrid');
-    if (hall.gallery && hall.gallery.length > 0) {
-        thumbGrid.innerHTML = hall.gallery.map((img, i) => `
-            <div class="thumb-item ${i === 0 ? 'active' : ''}" data-src="${img}">
-                <img src="${img}" alt="Gallery ${i + 1}" onerror="this.src='https://picsum.photos/seed/fallback/200/150'">
-            </div>
-        `).join('');
-    } else {
-        thumbGrid.innerHTML = `<div class="thumb-item active" data-src="https://picsum.photos/seed/default/900/600">
-            <img src="https://picsum.photos/seed/default/200/150" alt="Default">
-        </div>`;
-    }
+  document.title = (hall.name || 'Hall') + ' | WedDream';
 
-    thumbGrid.querySelectorAll('.thumb-item').forEach(t => {
-        t.addEventListener('click', function () {
-            thumbGrid.querySelectorAll('.thumb-item').forEach(x => x.classList.remove('active'));
-            this.classList.add('active');
-            const mainImg = document.getElementById('mainImg');
-            mainImg.style.opacity = '0';
-            setTimeout(() => { mainImg.src = this.dataset.src; mainImg.style.opacity = '1'; }, 200);
-        });
+  const imgs = (hall.gallery && hall.gallery.length) ? hall.gallery : [FALLBACK_IMG];
+  document.getElementById('mainImg').src = imgs[0];
+
+  const tg = document.getElementById('thumbGrid');
+  tg.innerHTML = imgs.map((src,i) => `
+    <div class="thumb-item ${i===0?'active':''}" data-src="${src}">
+      <img src="${src}" alt="Gallery ${i+1}" onerror="this.src='${FALLBACK_IMG}'">
+    </div>
+  `).join('');
+  tg.querySelectorAll('.thumb-item').forEach(t => {
+    t.addEventListener('click', function(){
+      tg.querySelectorAll('.thumb-item').forEach(x=>x.classList.remove('active'));
+      this.classList.add('active');
+      const mi = document.getElementById('mainImg');
+      mi.style.opacity='0';
+      setTimeout(()=>{ mi.src=this.dataset.src; mi.style.opacity='1'; }, 200);
     });
+  });
 
-    // ===== AMENITIES GRID (NEW) =====
-    const amenitiesContainer = document.getElementById('amenitiesGrid');
-    const features = hall.features || ['Sound System & DJ', 'Stage with LED Lighting', 'Valet Parking', 'Separate Mehendi Lawn'];
-    
-    // Add common amenities if not present
-    const allAmenities = [
-        'Air Conditioned Hall',
-        'Valet Parking',
-        'Sound System & DJ',
-        'Stage with LED Lighting',
-        'Separate Mehendi Lawn',
-        'CCTV Security',
-        'Elevator Access',
-        'Family Lounge',
-        'Decor Services Available',
-        'Bridal Room',
-        'Generator Backup',
-        'In-house Catering'
-    ];
-    
-    // Merge and deduplicate
-    const mergedAmenities = [...new Set([...allAmenities, ...features])];
-    
-    amenitiesContainer.innerHTML = mergedAmenities.map(amenity => {
-        const icon = amenityIcons[amenity] || 'fas fa-check-circle';
-        return `
-            <div class="amenity-item">
-                <i class="${icon}"></i>
-                <span>${amenity}</span>
-            </div>
-        `;
-    }).join('');
+  const features = hall.features || [];
+  const baseAmenities = [
+    'Air Conditioned Hall','Valet Parking','Sound System & DJ',
+    'Stage with LED Lighting','Separate Mehendi Lawn','CCTV Security',
+    'Elevator Access','Family Lounge','Decor Services Available',
+    'Bridal Room','Generator Backup','In-house Catering'
+  ];
+  const merged = [...new Set([...baseAmenities, ...features])];
+  document.getElementById('amenGrid').innerHTML = merged.map(a => {
+    const icon = AMENITY_ICONS[a] || 'fas fa-check-circle';
+    return `<div class="amenity-item"><i class="${icon}"></i><span>${a}</span></div>`;
+  }).join('');
 
-    // ===== CAPACITY =====
-    document.getElementById('capRow').innerHTML = `
-        <div class="cap-item"><i class="fas fa-users"></i><strong>${formatPKR(hall.capacity)}</strong> Guests</div>
-        <div class="cap-item"><i class="fas fa-car"></i><strong>${hall.parking_capacity || 100}</strong> Vehicles</div>
+  const cap = hall.capacity ? fmtNum(hall.capacity) : '500+';
+  const parking = hall.parking_capacity || hall.parking || 100;
+  document.getElementById('capRow').innerHTML = `
+    <div class="cap-item"><i class="fas fa-users"></i><strong>${cap}</strong> Guests</div>
+    <div class="cap-item"><i class="fas fa-car"></i><strong>${parking}</strong> Vehicles</div>
+    <div class="cap-item"><i class="fas fa-layer-group"></i><strong>${hall.halls || 1}</strong> Hall(s)</div>
+  `;
+
+  if(features.length){
+    document.getElementById('ftagsEl').innerHTML = features.map(f =>
+      `<span class="ftag"><i class="fas fa-check me-1"></i>${f}</span>`
+    ).join('');
+  }
+
+  if(hall.verified) document.getElementById('verifiedBadge').style.display = 'inline-flex';
+
+  document.getElementById('hallTitle').textContent = hall.name || 'Hall';
+  document.getElementById('hallAddress').innerHTML =
+    `<i class="fas fa-map-marker-alt"></i> ${hall.address || (hall.area ? hall.area + ', Karachi' : 'Karachi')}`;
+
+  buildReviewUI();
+
+  document.getElementById('startingPrice').innerHTML =
+    `${fmtNum(hall.starting_price)} <span>PKR / event</span>`;
+
+  const pkgs = hall.packages || [];
+  if(pkgs.length){
+    document.getElementById('pkgGrid').innerHTML = pkgs.map((pkg,i) => `
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="pkg-card ${i===0?'active':''}" onclick="selectPkg(${i})">
+          <div class="pkg-name">${pkg.name || 'Package'}</div>
+          <div class="pkg-price">PKR ${fmtNum(pkg.price)}</div>
+          <small style="color:rgba(255,255,255,.32);font-size:.65rem">/ event</small>
+          <ul class="includes-list mt-2">
+            ${(pkg.includes||['Hall Rent','Basic Setup','Chairs & Tables']).map(inc =>
+              `<li><i class="fas fa-check-circle"></i> ${inc}</li>`
+            ).join('')}
+          </ul>
+          <button class="pkg-book" onclick="event.stopPropagation();selectPkg(${i});openBooking()">
+            <i class="fas fa-arrow-right me-1"></i> Book This
+          </button>
+        </div>
+      </div>
+    `).join('');
+  } else {
+    document.getElementById('pkgGrid').innerHTML =
+      `<div class="col-12"><p style="color:rgba(255,255,255,.4);font-size:.84rem;text-align:center">Package details coming soon</p></div>`;
+  }
+
+  const phone = hall.phone || '+92 300 0000000';
+  document.getElementById('callBtn').href = 'tel:' + phone.replace(/\s/g,'');
+  document.getElementById('phoneText').textContent = 'Call ' + phone;
+  const wa = hall.whatsapp || phone;
+  document.getElementById('waBtn').href = 'https://wa.me/' + wa.replace(/[^0-9]/g,'');
+
+  const pm = hall.payment_methods || ['Cash','Bank Transfer','JazzCash','Easypaisa'];
+  document.getElementById('payBadges').innerHTML = pm.map(m =>
+    `<span class="pay-badge"><i class="${PAY_ICONS[m]||'fas fa-money-bill'} me-1"></i>${m}</span>`
+  ).join('');
+
+  document.getElementById('mainContent').style.display = 'block';
+  document.getElementById('loadingScreen').classList.add('hidden');
+
+  setTimeout(()=>{
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach((e,idx)=>{
+        if(e.isIntersecting){
+          setTimeout(()=>e.target.classList.add('visible'), idx*80);
+          obs.unobserve(e.target);
+        }
+      });
+    },{threshold:0.1});
+    document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+  },100);
+
+  const now = new Date();
+  calYear = now.getFullYear(); calMonth = now.getMonth();
+  buildCalendar();
+
+  document.querySelectorAll('#payTabsEl .p-tab').forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      currentPayMethod = tab.dataset.m;
+      document.querySelectorAll('#payTabsEl .p-tab').forEach(t=>t.classList.toggle('active',t===tab));
+      document.querySelectorAll('.pay-form').forEach(f=>f.classList.remove('show'));
+      document.getElementById('pf-'+currentPayMethod).classList.add('show');
+    });
+  });
+
+  document.getElementById('cardNum').addEventListener('input',function(){
+    let v=this.value.replace(/\D/g,'').substring(0,16);
+    this.value=v.replace(/(.{4})/g,'$1 ').trim();
+  });
+  document.getElementById('cardExp').addEventListener('input',function(){
+    let v=this.value.replace(/\D/g,'').substring(0,4);
+    if(v.length>=2) v=v.substring(0,2)+'/'+v.substring(2);
+    this.value=v;
+  });
+}
+
+function selectPkg(i){
+  selectedPkg = i;
+  document.querySelectorAll('.pkg-card').forEach((c,idx)=>c.classList.toggle('active',idx===i));
+  if(HALL && HALL.packages && HALL.packages[i]){
+    showNotif('gold','fa-box-open',`${HALL.packages[i].name} Package Selected`,`PKR ${fmtNum(HALL.packages[i].price)} / event`);
+  }
+}
+
+function buildReviewUI(){
+  const avg = liveReviews.length
+    ? parseFloat((liveReviews.reduce((s,r)=>s+r.rating,0)/liveReviews.length).toFixed(1))
+    : (HALL.rating || 4.0);
+
+  document.getElementById('bigRating').textContent = avg.toFixed(1);
+  document.getElementById('sideRatingNum').textContent = avg.toFixed(1);
+  document.getElementById('sideStars').innerHTML = buildStars(avg);
+  document.getElementById('sumStars').innerHTML = buildStars(avg);
+  document.getElementById('totalRevsTxt').textContent = `Based on ${liveReviews.length} review${liveReviews.length===1?'':'s'}`;
+  document.getElementById('sideRevCount').textContent = `(${liveReviews.length} review${liveReviews.length===1?'':'s'})`;
+
+  const counts=[0,0,0,0,0];
+  liveReviews.forEach(r=>{ if(r.rating>=1&&r.rating<=5) counts[r.rating-1]++; });
+  document.getElementById('ratingBars').innerHTML = [5,4,3,2,1].map(n=>`
+    <div class="rbar-row">
+      <span>${n}★</span>
+      <div class="rbar-bg">
+        <div class="rbar-fill" style="width:${liveReviews.length?Math.round(counts[n-1]/liveReviews.length*100):0}%"></div>
+      </div>
+      <span class="rbar-count">${counts[n-1]}</span>
+    </div>
+  `).join('');
+
+  document.getElementById('reviewList').innerHTML = [...liveReviews].reverse().slice(0,5).map(rev=>`
+    <div class="review-card">
+      <div class="d-flex justify-content-between align-items-start">
+        <strong style="font-size:.86rem"><i class="fas fa-user-circle me-1" style="color:var(--gold)"></i>${rev.name||'Guest'}</strong>
+        <div class="stars" style="font-size:.8rem">${buildStars(rev.rating||4)}</div>
+      </div>
+      ${rev.date?`<span style="font-size:.7rem;color:rgba(255,255,255,.3)">${rev.date}</span>`:''}
+      <p class="review-quote">"${rev.comment||'Great venue!'}"</p>
+    </div>
+  `).join('') || '<p style="color:rgba(255,255,255,.35);font-size:.83rem">No reviews yet. Be the first!</p>';
+}
+
+function submitReview(){
+  const starEl = document.querySelector('#starInput input:checked');
+  const name = document.getElementById('revName').value.trim();
+  const comment = document.getElementById('revComment').value.trim();
+  if(!starEl){ showNotif('red','fa-exclamation','Missing Rating','Please select a star rating.'); return; }
+  if(!name||name.length<2){ showNotif('red','fa-exclamation','Missing Name','Please enter your name.'); return; }
+  if(!comment||comment.length<10){ showNotif('red','fa-exclamation','Too Short','Write at least 10 characters.'); return; }
+
+  liveReviews.push({ name, rating:parseInt(starEl.value), comment, date:'Just now' });
+  buildReviewUI();
+  document.getElementById('revName').value='';
+  document.getElementById('revComment').value='';
+  document.querySelector('#starInput input:checked').checked=false;
+  showNotif('green','fa-check-circle','Review Posted!','Thank you! Your review is now live.');
+}
+
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const DAYS_SHORT = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const DAYS_FULL = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const MONTHS_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+function dKey(y,m,d){ return `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`; }
+function formatDateKey(date){
+  return `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
+}
+
+function buildCalendar(){
+  const now = new Date();
+  const hallId = HALL ? HALL.id : 0;
+  const bookedArr = getBookedDates(hallId);
+
+  document.getElementById('calLbl').textContent = `${MONTHS[calMonth]} ${calYear}`;
+
+  let html = DAYS_SHORT.map(d=>`<div class="cal-dname">${d}</div>`).join('');
+  const firstDay = new Date(calYear,calMonth,1).getDay();
+  const daysInMo = new Date(calYear,calMonth+1,0).getDate();
+
+  for(let i=0;i<firstDay;i++) html+=`<div class="cal-day empty"></div>`;
+
+  for(let d=1;d<=daysInMo;d++){
+    const key = dKey(calYear,calMonth,d);
+    const cellDate = new Date(calYear,calMonth,d);
+    const today = new Date(now.getFullYear(),now.getMonth(),now.getDate());
+    const isPast = cellDate < today;
+    const isBooked = bookedArr.includes(key);
+    const isSel = selectedDate === key;
+    const isToday = key === dKey(now.getFullYear(),now.getMonth(),now.getDate());
+
+    let cls='cal-day';
+    if(isPast) cls+=' past';
+    else if(isBooked) cls+=' booked';
+    else if(isSel) cls+=' selected';
+    else if(isToday) cls+=' today';
+
+    const onclick = (!isPast&&!isBooked) ? `onclick="selectDate('${key}')"` : '';
+    html += `<div class="${cls}" ${onclick}>${d}</div>`;
+  }
+
+  document.getElementById('calGrid').innerHTML = html;
+
+  document.getElementById('calPrev').onclick = ()=>{
+    calMonth--; if(calMonth<0){calMonth=11;calYear--;} buildCalendar();
+  };
+  document.getElementById('calNext').onclick = ()=>{
+    calMonth++; if(calMonth>11){calMonth=0;calYear++;} buildCalendar();
+  };
+}
+
+function selectDate(key){
+  selectedDate = key;
+  selectedTime = null;
+  buildCalendar();
+
+  const [y,m,d] = key.split('-');
+  const dt = new Date(parseInt(y),parseInt(m)-1,parseInt(d));
+  document.getElementById('dateTxt').innerHTML =
+    `<i class="fas fa-calendar-check me-2"></i><strong>${DAYS_FULL[dt.getDay()]}, ${parseInt(d)} ${MONTHS_SHORT[dt.getMonth()]} ${y}</strong> selected`;
+  document.getElementById('dateInfo').style.display='block';
+  document.getElementById('timeSection').style.display='block';
+  document.getElementById('btnStep1Next').disabled = true;
+  buildTimeSlots();
+}
+
+function buildTimeSlots(){
+  const hallId = HALL ? HALL.id : 0;
+  const bookedSlots = getBookedSlots(hallId);
+  const takenSlots = bookedSlots[selectedDate] || [];
+
+  document.getElementById('timeGrid').innerHTML = TIME_SLOTS.map(t=>{
+    const isBk = takenSlots.includes(t);
+    const isSel = selectedTime===t;
+    return `<div class="time-slot ${isBk?'slot-bk':''} ${isSel?'slot-sel':''}"
+      ${isBk?'':`onclick="selectTime('${t}')"`}>${t}</div>`;
+  }).join('');
+}
+
+function selectTime(t){
+  selectedTime = t;
+  buildTimeSlots();
+  document.getElementById('btnStep1Next').disabled = false;
+}
+
+function openBooking(){
+  document.getElementById('bkOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  goStep(1);
+}
+function closeBooking(){
+  document.getElementById('bkOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+document.getElementById('bkOverlay').addEventListener('click',e=>{
+  if(e.target===document.getElementById('bkOverlay')) closeBooking();
+});
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeBooking(); });
+
+function goStep(n){
+  currentStep=n;
+  ['step1','step2','step3','stepSuccess'].forEach((id,i)=>{
+    document.getElementById(id).style.display=(i===n-1)?'block':'none';
+  });
+  ['seg1','seg2','seg3'].forEach((id,i)=>{
+    document.getElementById(id).classList.toggle('done',i<n);
+  });
+  ['sl1','sl2','sl3'].forEach((id,i)=>{
+    document.getElementById(id).classList.toggle('active',i===n-1);
+  });
+}
+
+function goStep2(){
+  if(!selectedDate||!selectedTime){ showNotif('red','fa-exclamation','Incomplete','Please select a date and time slot.'); return; }
+  const [y,m,d] = selectedDate.split('-');
+  const dt = new Date(parseInt(y),parseInt(m)-1,parseInt(d));
+  const pkg = (HALL.packages && HALL.packages[selectedPkg]) || {name:'Standard',price:HALL.starting_price||0};
+  document.getElementById('sum2').innerHTML = `
+    <div style="font-size:.8rem;color:rgba(255,255,255,.45);margin-bottom:8px"><i class="fas fa-info-circle me-1" style="color:var(--gold)"></i>Booking Summary</div>
+    <div class="sum-row"><span>Hall</span><span>${HALL.name}</span></div>
+    <div class="sum-row"><span>Date</span><span style="color:var(--gold-l)">${DAYS_FULL[dt.getDay()]}, ${parseInt(d)} ${MONTHS_SHORT[dt.getMonth()]} ${y}</span></div>
+    <div class="sum-row"><span>Time</span><span>${selectedTime}</span></div>
+    <div class="sum-row"><span>Package</span><span style="color:var(--gold-l)">${pkg.name} — PKR ${fmtNum(pkg.price)}</span></div>
+  `;
+  goStep(2);
+}
+
+function goStep3(){
+  const name=document.getElementById('bkName').value.trim();
+  const phone=document.getElementById('bkPhone').value.trim();
+  const email=document.getElementById('bkEmail').value.trim();
+  const event=document.getElementById('bkEvent').value;
+  if(name.length<3){ showNotif('red','fa-exclamation','Missing Info','Enter your full name.'); return; }
+  if(!/^03\d{9}$/.test(phone)){ showNotif('red','fa-exclamation','Invalid Phone','Enter valid Pakistani number (03XXXXXXXXX).'); return; }
+  if(!email.includes('@')){ showNotif('red','fa-exclamation','Invalid Email','Enter valid email address.'); return; }
+  if(!event){ showNotif('red','fa-exclamation','Missing Info','Select your event type.'); return; }
+
+  const [y,m,d] = selectedDate.split('-');
+  const dt = new Date(parseInt(y),parseInt(m)-1,parseInt(d));
+  const pkg = (HALL.packages && HALL.packages[selectedPkg]) || {name:'Standard',price:HALL.starting_price||0};
+  const adv = Math.round(pkg.price*0.3);
+  document.getElementById('sum3').innerHTML = `
+    <div class="sum-row"><span>Package</span><span>${pkg.name}</span></div>
+    <div class="sum-row"><span>Date</span><span>${DAYS_FULL[dt.getDay()]}, ${parseInt(d)} ${MONTHS_SHORT[dt.getMonth()]} ${y}</span></div>
+    <div class="sum-row"><span>Time</span><span>${selectedTime}</span></div>
+    <div class="sum-row"><span>Total Amount</span><span>PKR ${fmtNum(pkg.price)}</span></div>
+    <div class="sum-row"><span>Advance (30%)</span><span style="color:var(--gold-l)">PKR ${fmtNum(adv)}</span></div>
+    <div class="sum-row"><span>Balance on Event Day</span><span>PKR ${fmtNum(pkg.price-adv)}</span></div>
+  `;
+  goStep(3);
+}
+
+// =========================================
+// PROCESS PAYMENT — USES saveBookingData()
+// =========================================
+function processPayment(){
+  const btn = document.getElementById('payBtn');
+
+  // --- Payment validation ---
+  if(currentPayMethod==='card'){
+    const n=document.getElementById('cardName').value.trim();
+    const num=document.getElementById('cardNum').value.replace(/\s/g,'');
+    const exp=document.getElementById('cardExp').value;
+    const cvc=document.getElementById('cardCvc').value;
+    if(!n||n.length<3){ showNotif('red','fa-exclamation','Error','Enter cardholder name.'); return; }
+    if(!/^\d{15,16}$/.test(num)){ showNotif('red','fa-exclamation','Error','Invalid card number.'); return; }
+    if(!/^(0[1-9]|1[0-2])\/\d{2}$/.test(exp)){ showNotif('red','fa-exclamation','Error','Expiry format: MM/YY'); return; }
+    if(!/^\d{3,4}$/.test(cvc)){ showNotif('red','fa-exclamation','Error','Invalid CVC.'); return; }
+  } else if(currentPayMethod==='jazzcash'){
+    if(!/^03\d{9}$/.test(document.getElementById('jcNum').value.trim())){ showNotif('red','fa-exclamation','Error','Enter valid JazzCash number.'); return; }
+  } else if(currentPayMethod==='easypaisa'){
+    if(!/^03\d{9}$/.test(document.getElementById('epNum').value.trim())){ showNotif('red','fa-exclamation','Error','Enter valid Easypaisa number.'); return; }
+    if(document.getElementById('epName').value.trim().length<3){ showNotif('red','fa-exclamation','Error','Enter account holder name.'); return; }
+  } else if(currentPayMethod==='bank'){
+    if(!document.getElementById('bnkName').value.trim()){ showNotif('red','fa-exclamation','Error','Enter bank name.'); return; }
+    if(document.getElementById('bnkAcc').value.trim().length<5){ showNotif('red','fa-exclamation','Error','Enter valid account number.'); return; }
+    if(document.getElementById('bnkHolder').value.trim().length<3){ showNotif('red','fa-exclamation','Error','Enter account holder name.'); return; }
+  }
+
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-circle-notch fa-spin me-2"></i>Processing...';
+
+  setTimeout(()=>{
+    btn.disabled = false;
+    btn.innerHTML = '<i class="fas fa-lock me-2"></i>Confirm & Pay';
+
+    // Mark date/slot as booked
+    addBookedDate(HALL.id, selectedDate);
+    addBookedSlot(HALL.id, selectedDate, selectedTime);
+    buildCalendar();
+
+    // Prepare data
+    const ref = 'WD-' + Math.random().toString(36).substring(2,8).toUpperCase();
+    const pkg = (HALL.packages && HALL.packages[selectedPkg]) || {name:'Standard', price:HALL.starting_price||0};
+    const [y, m, d] = selectedDate.split('-');
+    const dt = new Date(parseInt(y), parseInt(m)-1, parseInt(d));
+    const adv = Math.round(pkg.price * 0.3);
+
+    // ✅ Save booking with category + generic venue fields
+    const bookingData = saveBookingData(ref, pkg);
+
+    // ✅ Save reminder
+    const { reminderKey, reminderDateStr } = saveReminderData(ref, pkg, dt);
+
+    // Show success screen
+    document.getElementById('refCode').textContent = ref;
+    document.getElementById('successDetails').innerHTML = `
+      <strong style="color:rgba(255,255,255,.75)">Guest:</strong> ${bookingData.guestName}<br>
+      <strong style="color:rgba(255,255,255,.75)">Event:</strong> ${bookingData.eventType}<br>
+      <strong style="color:rgba(255,255,255,.75)">Hall:</strong> ${bookingData.venueName}<br>
+      <strong style="color:rgba(255,255,255,.75)">Date:</strong> ${DAYS_FULL[dt.getDay()]}, ${parseInt(d)} ${MONTHS_SHORT[dt.getMonth()]} ${y}<br>
+      <strong style="color:rgba(255,255,255,.75)">Time:</strong> ${bookingData.time}<br>
+      <strong style="color:rgba(255,255,255,.75)">Package:</strong> ${bookingData.packageName} — PKR ${fmtNum(bookingData.totalPrice)}<br>
+      <strong style="color:rgba(255,255,255,.75)">Advance Paid:</strong> <span style="color:var(--gold-l)">PKR ${fmtNum(adv)}</span><br>
+      <strong style="color:rgba(255,255,255,.75)">Balance Due:</strong> PKR ${fmtNum(bookingData.totalPrice - adv)} (on event day)<br>
+      <strong style="color:rgba(255,255,255,.75)">Reminder:</strong> <span style="color:#4ade80">${reminderDateStr} ko SMS bheja jayega</span>
     `;
 
-    // ===== REVIEWS =====
-    const reviews = hall.reviews || [];
-    document.getElementById('reviewsContainer').innerHTML = reviews.map(rev => `
-        <div class="review-card">
-            <div class="d-flex justify-content-between align-items-start">
-                <strong><i class="fas fa-user-circle me-2" style="color:var(--gold);"></i>${rev.name || 'Guest'}</strong>
-                <div class="stars small">${buildStars(rev.rating || 4)}</div>
-            </div>
-            <p class="review-quote">"${rev.comment || 'Great venue!'}"</p>
-        </div>
-    `).join('');
+    document.getElementById('stepSuccess').style.display = 'block';
+    ['step1','step2','step3'].forEach(id => document.getElementById(id).style.display = 'none');
+    ['seg1','seg2','seg3'].forEach(id => document.getElementById(id).classList.add('done'));
 
-    // ===== VERIFIED BADGE =====
-    if (hall.verified) {
-        document.getElementById('verifiedBadge').style.display = 'inline-flex';
-    }
+    showNotif('green','fa-check-circle','Booking Confirmed! 🎉',
+      `${bookingData.packageName} — ${parseInt(d)} ${MONTHS_SHORT[dt.getMonth()]} ${y} — Ref: ${ref}`, 7000);
 
-    // ===== TITLE + ADDRESS =====
-    document.getElementById('hallTitle').textContent = hall.name || 'Hall Name';
-    document.getElementById('hallAddress').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${hall.address || 'Address not available'}`;
-
-    // ===== RATING =====
-    document.getElementById('starsEl').innerHTML = buildStars(hall.rating || 4);
-    document.getElementById('ratingNum').textContent = hall.rating || 4;
-    document.getElementById('reviewCount').textContent = `(${reviews.length} reviews)`;
-
-    // ===== STARTING PRICE =====
-    document.getElementById('startingPrice').innerHTML = `${formatPKR(hall.starting_price)} <span>PKR / event</span>`;
-
-    // ===== PACKAGES =====
-    const packages = hall.packages || [];
-    if (packages.length > 0) {
-        document.getElementById('pkgGrid').innerHTML = packages.map((pkg, i) => `
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="pkg-card ${i === 0 ? 'active' : ''}" onclick="selectPkg(${i})">
-                    <div class="pkg-name">${pkg.name || 'Package'}</div>
-                    <div class="pkg-price">PKR ${formatPKR(pkg.price)}</div>
-                    <div class="mt-2"><small style="color:rgba(255,255,255,0.35);">/ event</small></div>
-                    <ul class="includes-list">
-                        ${(pkg.includes || ['Hall Rent', 'Basic Setup', 'Chairs & Tables']).map(inc => `<li><i class="fas fa-check-circle"></i> ${inc}</li>`).join('')}
-                    </ul>
-                    <button class="pkg-book" onclick="event.stopPropagation();selectPkg(${i});openModal();">
-                        <i class="fas fa-arrow-right me-1"></i> Book This
-                    </button>
-                </div>
-            </div>
-        `).join('');
+    // Fire reminder if due today (testing)
+    const todayKey = formatDateKey(new Date());
+    if(todayKey === reminderDateStr){
+      setTimeout(() => fireReminderNow(reminderKey), 2000);
     } else {
-        document.getElementById('pkgGrid').innerHTML = `<div class="col-12"><p class="text-center text-muted">Package details coming soon</p></div>`;
+      setTimeout(() => {
+        showNotif('gold','fa-clock','Reminder Scheduled',
+          `${bookingData.guestName}, aapko ${reminderDateStr} ko reminder bheja jayega.`, 5000);
+      }, 5000);
     }
 
-    // ===== CONTACT BUTTONS =====
-    const phone = hall.phone || '+92 300 0000000';
-    document.getElementById('callBtn').href = `tel:${phone.replace(/\s/g, '')}`;
-    document.getElementById('phoneText').textContent = `Call ${phone}`;
+    // Clear payment fields
+    ['cardName','cardNum','cardExp','cardCvc','jcNum','jcPin','epNum','epName','bnkName','bnkAcc','bnkHolder'].forEach(id=>{
+      const el = document.getElementById(id); if(el) el.value = '';
+    });
 
-    const whatsapp = hall.whatsapp || phone;
-    document.getElementById('waBtn').href = `https://wa.me/${whatsapp.replace(/[^0-9]/g, '')}`;
-
-    // ===== PAYMENT BADGES =====
-    const pm = hall.payment_methods || ['Cash', 'Bank Transfer', 'JazzCash', 'Easypaisa'];
-    document.getElementById('paymentBadges').innerHTML = pm.map(m => {
-        const info = payMethodIcons[m] || { icon: 'fas fa-money-bill', label: m };
-        return `<span class="pay-badge"><i class="${info.icon}"></i> ${info.label}</span>`;
-    }).join('');
-
-    // ===== MODAL HALL NAME =====
-    document.getElementById('mHallName').textContent = hall.name || 'Hall';
-
-    // ===== SHOW PAGE =====
-    document.getElementById('mainContent').style.display = 'block';
-    document.getElementById('loadingScreen').classList.add('hidden');
-
-    // ===== SCROLL ANIMATIONS =====
+    // Redirect to confirmation page
     setTimeout(() => {
-        const obs = new IntersectionObserver((entries) => {
-            entries.forEach((e, idx) => {
-                if (e.isIntersecting) {
-                    setTimeout(() => e.target.classList.add('visible'), idx * 80);
-                    obs.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
-    }, 100);
+      window.location.href = `confirmation.html?ref=${ref}`;
+    }, 2000);
+
+  }, 2500);
 }
 
-// ===== LOAD HALL FROM JSON =====
-function getHallId() {
-    const params = new URLSearchParams(window.location.search);
-    return parseInt(params.get('id'));
+// =========================================
+// FIRE REMINDER
+// =========================================
+function fireReminderNow(key){
+  const data = JSON.parse(localStorage.getItem(key) || '{}');
+  if(data.fired) return;
+  data.fired = true;
+  data.firedAt = new Date().toLocaleString('en-PK');
+  localStorage.setItem(key, JSON.stringify(data));
+
+  const wrap = document.getElementById('notifWrap');
+  const el = document.createElement('div');
+  el.className = 'notif notif-green';
+  el.innerHTML = `
+    <div class="notif-head">
+      <div class="notif-icon c-green"><i class="fas fa-bell"></i></div>
+      <span class="notif-title">📱 SMS Reminder Sent!</span>
+      <button class="notif-x" onclick="this.closest('.notif').classList.remove('show');setTimeout(()=>this.closest('.notif').remove(),400)">×</button>
+    </div>
+    <div class="notif-body">
+      <strong>${data.guestName}</strong>, aapka event <strong style="color:var(--gold-l)">${data.eventDateFormatted}</strong> ko <strong>${data.time}</strong> par hai "<strong>${data.hallName}</strong>" mein.<br>
+      <span style="font-size:.7rem;color:rgba(255,255,255,.3)">Ref: ${data.ref} · Arrive 2 hours early</span>
+    </div>
+  `;
+  wrap.appendChild(el);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>el.classList.add('show')));
+  setTimeout(()=>{ el.classList.remove('show'); setTimeout(()=>el.remove(),400); }, 12000);
 }
 
-async function loadHall() {
-    const id = getHallId();
-
-    if (!id || isNaN(id)) {
-        showError();
-        return;
-    }
-
-    try {
-        const resp = await fetch('hallsDetails.json');
-        if (!resp.ok) throw new Error('JSON load failed');
-        const data = await resp.json();
-        const hall = data.find(h => h.id === id);
-
-        if (!hall) {
-            showError();
-            return;
-        }
-
-        renderHall(hall);
-
-    } catch (err) {
-        console.error('Hall load error:', err);
-        showError();
-    }
+// =========================================
+// NOTIFICATION HELPER
+// =========================================
+function showNotif(type, icon, title, body, duration=5000){
+  const wrap = document.getElementById('notifWrap');
+  const el = document.createElement('div');
+  el.className = `notif ${type==='green'?'notif-green':type==='red'?'notif-red':''}`;
+  el.innerHTML = `
+    <div class="notif-head">
+      <div class="notif-icon c-${type==='green'?'green':type==='red'?'red':'gold'}"><i class="fas ${icon}"></i></div>
+      <span class="notif-title">${title}</span>
+      <button class="notif-x" onclick="this.closest('.notif').classList.remove('show');setTimeout(()=>this.closest('.notif').remove(),400)">×</button>
+    </div>
+    <div class="notif-body">${body}</div>
+  `;
+  wrap.appendChild(el);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>el.classList.add('show')));
+  setTimeout(()=>{ el.classList.remove('show'); setTimeout(()=>el.remove(),400); }, duration);
 }
 
-function showError() {
-    document.getElementById('loadingScreen').classList.add('hidden');
-    document.getElementById('errorScreen').classList.add('show');
-}
-
-loadHall();
-
-// ===== PACKAGE SELECT =====
-function selectPkg(idx) {
-    if (!HALL || !HALL.packages || !HALL.packages[idx]) return;
-    selected = { ...HALL.packages[idx] };
-    document.querySelectorAll('.pkg-card').forEach((c, i) => c.classList.toggle('active', i === idx));
-    showToast(`${selected.name} package selected`, 'default');
-}
-
-// ===== MODAL =====
-function openModal() {
-    if (!selected) return;
-    document.getElementById('mPkgName').textContent = (selected.name || 'Standard') + ' Package';
-    document.getElementById('mAmount').textContent = 'PKR ' + formatPKR(selected.price || 0);
-    switchMethod('card');
-    document.getElementById('payOverlay').classList.add('open');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-    document.getElementById('payOverlay').classList.remove('open');
-    document.body.style.overflow = '';
-}
-
-document.getElementById('payOverlay').addEventListener('click', e => {
-    if (e.target === document.getElementById('payOverlay')) closeModal();
-});
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-// ===== PAYMENT TABS =====
-document.querySelectorAll('.m-tab').forEach(tab => {
-    tab.addEventListener('click', () => switchMethod(tab.dataset.method));
-});
-
-function switchMethod(method) {
-    currentMethod = method;
-    document.querySelectorAll('.m-tab').forEach(t => t.classList.toggle('active', t.dataset.method === method));
-    document.querySelectorAll('.pay-form').forEach(f => f.classList.remove('show'));
-    document.getElementById('f-' + method).classList.add('show');
-}
-
-// ===== CARD FORMATTING =====
-document.getElementById('cardNumber')?.addEventListener('input', function () {
-    let v = this.value.replace(/\D/g, '').substring(0, 16);
-    this.value = v.replace(/(.{4})/g, '$1 ').trim();
-});
-document.getElementById('cardExpiry')?.addEventListener('input', function () {
-    let v = this.value.replace(/\D/g, '').substring(0, 4);
-    if (v.length >= 2) v = v.substring(0, 2) + '/' + v.substring(2);
-    this.value = v;
-});
-
-// ===== PAYMENT PROCESSING =====
-function processPayment() {
-    const btn = document.getElementById('payBtn');
-
-    if (currentMethod === 'card') {
-        const name = document.getElementById('cardName')?.value.trim();
-        const num = document.getElementById('cardNumber')?.value.replace(/\s/g, '');
-        const exp = document.getElementById('cardExpiry')?.value.trim();
-        const cvc = document.getElementById('cardCvc')?.value.trim();
-        if (!name || name.length < 3) { showToast('Cardholder name enter karein', 'error'); return; }
-        if (!/^\d{15,16}$/.test(num)) { showToast('Invalid card number', 'error'); return; }
-        if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(exp)) { showToast('Expiry format: MM/YY', 'error'); return; }
-        if (!/^\d{3,4}$/.test(cvc)) { showToast('Invalid CVC', 'error'); return; }
-    }
-    else if (currentMethod === 'jazzcash') {
-        const num = document.getElementById('jcNum')?.value.trim();
-        if (!/^03\d{9}$/.test(num)) { showToast('Valid JazzCash number enter karein', 'error'); return; }
-    }
-    else if (currentMethod === 'easypaisa') {
-        const num = document.getElementById('epNum')?.value.trim();
-        const name = document.getElementById('epName')?.value.trim();
-        if (!/^03\d{9}$/.test(num)) { showToast('Valid Easypaisa number enter karein', 'error'); return; }
-        if (!name || name.length < 3) { showToast('Account holder name enter karein', 'error'); return; }
-    }
-    else if (currentMethod === 'bank') {
-        const bn = document.getElementById('bankName')?.value.trim();
-        const ba = document.getElementById('bankAcc')?.value.trim();
-        const bh = document.getElementById('bankHolder')?.value.trim();
-        if (!bn) { showToast('Bank name enter karein', 'error'); return; }
-        if (ba.length < 5) { showToast('Valid account number enter karein', 'error'); return; }
-        if (bh.length < 3) { showToast('Account holder name enter karein', 'error'); return; }
-    }
-
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-circle-notch fa-spin me-2"></i> Processing...';
-
-    setTimeout(() => {
-        btn.disabled = false;
-        btn.innerHTML = '<i class="fas fa-lock me-2"></i> Confirm & Pay';
-        closeModal();
-        const ref = 'WDH' + Math.random().toString(36).substring(2, 8).toUpperCase();
-        showToast(`✅ Booking Confirmed! Ref: ${ref} — PKR ${formatPKR(selected?.price || 0)}`, 'success');
-
-        ['cardName', 'cardNumber', 'cardExpiry', 'cardCvc', 'jcNum', 'jcCnic', 'epNum', 'epName', 'bankName', 'bankAcc', 'bankHolder']
-            .forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
-    }, 2200);
-}
-
-// ===== TOAST =====
-function showToast(msg, type = 'default') {
-    const wrap = document.getElementById('toastWrap');
-    const el = document.createElement('div');
-    el.className = 'toast-item ' + (type === 'success' ? 'success' : type === 'error' ? 'error' : '');
-    el.innerHTML = msg;
-    wrap.appendChild(el);
-    requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('show')));
-    setTimeout(() => { el.classList.remove('show'); setTimeout(() => el.remove(), 400); }, 4000);
+function fmtNum(n){ return Number(n||0).toLocaleString('en-PK'); }
+function buildStars(r){
+  const full=Math.floor(r),half=(r-full)>=0.5?1:0,empty=5-full-half;
+  return '<i class="fas fa-star"></i>'.repeat(full)
+    +(half?'<i class="fas fa-star-half-alt"></i>':'')
+    +'<i class="far fa-star"></i>'.repeat(empty);
 }
 </script>
 </body>

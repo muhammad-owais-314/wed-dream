@@ -510,3 +510,74 @@ document.addEventListener('DOMContentLoaded', function() {
   trvRenderCards();
   trvStartAuto();
 });
+
+
+
+
+
+
+
+// ===================================================================
+
+/* =========================================================
+   PREMIUM 3D HERO — Hearts + Mouse Parallax (add-on)
+========================================================= */
+(function () {
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+
+  // Heart layer
+  const layer = document.createElement('div');
+  layer.className = 'heart-layer';
+  hero.appendChild(layer);
+
+  // Heartbeat pulse (center)
+  const pulse = document.createElement('div');
+  pulse.className = 'heart-pulse';
+  hero.appendChild(pulse);
+
+  // 3D Heart SVG factory
+  const heartSVG = `<svg viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#e8b93c"/>
+        <stop offset="55%" stop-color="#b93b56"/>
+        <stop offset="100%" stop-color="#7a1f33"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#hg)" d="M23.6,0c-2.9,0-5.5,1.5-7.6,4C13.9,1.5,11.3,0,8.4,0C3.8,0,0,3.8,0,8.4
+      c0,9.4,16,21.2,16,21.2s16-11.8,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+  </svg>`;
+
+  const TOTAL = 18;
+  for (let i = 0; i < TOTAL; i++) {
+    const h = document.createElement('div');
+    h.className = 'heart-3d';
+    h.innerHTML = heartSVG;
+    const size = 14 + Math.random() * 28;
+    h.style.width = size + 'px';
+    h.style.height = size + 'px';
+    h.style.left = Math.random() * 100 + '%';
+    h.style.animationDuration = (8 + Math.random() * 9) + 's';
+    h.style.animationDelay = (-Math.random() * 12) + 's';
+    h.style.opacity = (0.55 + Math.random() * 0.45).toFixed(2);
+    layer.appendChild(h);
+  }
+
+  // Mouse parallax 3D tilt
+  let raf;
+  hero.addEventListener('mousemove', (e) => {
+    const r = hero.getBoundingClientRect();
+    const mx = (e.clientX - r.left) / r.width  - 0.5;
+    const my = (e.clientY - r.top)  / r.height - 0.5;
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => {
+      hero.style.setProperty('--mx', mx.toFixed(3));
+      hero.style.setProperty('--my', my.toFixed(3));
+    });
+  });
+  hero.addEventListener('mouseleave', () => {
+    hero.style.setProperty('--mx', 0);
+    hero.style.setProperty('--my', 0);
+  });
+})();
