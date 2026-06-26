@@ -41,59 +41,225 @@ $(document).ready(() => {
 /* =========================
    HERO ANIMATION
 ========================= */
+/* ============================================================
+   WEDDREAM — HERO SECTION JS
+   hero-section.js
+   Load this at the end of <body>:
+   <script src="hero-section.js"></script>
+============================================================ */
 
-// ── IMAGE SLIDESHOW ──────────────────────────────────
-(function(){
-  const slides = document.querySelectorAll('.hero-slide');
-  const dots   = document.querySelectorAll('.slide-dot');
-  let current  = 0;
-  let timer;
+(function () {
+  'use strict';
 
-  window.goToSlide = function(index){
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = index;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
-    clearInterval(timer);
-    timer = setInterval(nextSlide, 5500);
+  /* ══════════════════════════════════════
+     VENDOR DATA  (real WedDream vendors)
+  ══════════════════════════════════════ */
+  var VENDORS = [
+    /* Halls */
+    { name:'Pearl Continental Banquets', cat:'halls',        area:'Karachi',   price:'PKR 5,00,000+',  tag:'Hall',   tc:'dt-hall', icon:'fa-building-columns', url:'vendor-detail.html?cat=halls&id=hall-1' },
+    { name:'Mövenpick Grand Hall',       cat:'halls',        area:'Karachi',   price:'PKR 3,50,000+',  tag:'Hall',   tc:'dt-hall', icon:'fa-building-columns', url:'vendor-detail.html?cat=halls&id=hall-2' },
+    { name:"Faletti's Palace Lawn",      cat:'halls',        area:'Lahore',    price:'PKR 2,80,000+',  tag:'Hall',   tc:'dt-hall', icon:'fa-building-columns', url:'vendor-detail.html?cat=halls&id=hall-3' },
+    { name:'Crown Garden Banquets',      cat:'halls',        area:'Islamabad', price:'PKR 1,80,000+',  tag:'Hall',   tc:'dt-hall', icon:'fa-building-columns', url:'vendor-detail.html?cat=halls&id=hall-4' },
+    { name:'Serena Hotel Lawns',         cat:'halls',        area:'Lahore',    price:'PKR 4,20,000+',  tag:'Hall',   tc:'dt-hall', icon:'fa-building-columns', url:'vendor-detail.html?cat=halls&id=hall-5' },
+    /* Caterers */
+    { name:'Royal Dastarkhwan Catering', cat:'caterers',     area:'Karachi',   price:'PKR 1,200/head', tag:'Catering',tc:'dt-cat', icon:'fa-utensils',         url:'vendor-detail.html?cat=caterers&id=cat-1' },
+    { name:'Butt Saab Catering Service', cat:'caterers',     area:'Lahore',    price:'PKR 950/head',   tag:'Catering',tc:'dt-cat', icon:'fa-utensils',         url:'vendor-detail.html?cat=caterers&id=cat-2' },
+    { name:'Shan-e-Karachi Caterers',    cat:'caterers',     area:'Karachi',   price:'PKR 1,100/head', tag:'Catering',tc:'dt-cat', icon:'fa-utensils',         url:'vendor-detail.html?cat=caterers&id=cat-3' },
+    { name:'Paradise Biryani Catering',  cat:'caterers',     area:'Islamabad', price:'PKR 800/head',   tag:'Catering',tc:'dt-cat', icon:'fa-utensils',         url:'vendor-detail.html?cat=caterers&id=cat-4' },
+    /* Decorators */
+    { name:'Zaroon Events & Decor',      cat:'decorators',   area:'Karachi',   price:'PKR 80,000+',    tag:'Decor',  tc:'dt-dec', icon:'fa-wand-magic-sparkles',url:'vendor-detail.html?cat=decorators&id=dec-1' },
+    { name:'Floral Dreams by Maha',      cat:'decorators',   area:'Lahore',    price:'PKR 65,000+',    tag:'Decor',  tc:'dt-dec', icon:'fa-wand-magic-sparkles',url:'vendor-detail.html?cat=decorators&id=dec-2' },
+    { name:'Royal Touch Decorators',     cat:'decorators',   area:'Islamabad', price:'PKR 70,000+',    tag:'Decor',  tc:'dt-dec', icon:'fa-wand-magic-sparkles',url:'vendor-detail.html?cat=decorators&id=dec-3' },
+    { name:'Elegance Events Decor',      cat:'decorators',   area:'Karachi',   price:'PKR 90,000+',    tag:'Decor',  tc:'dt-dec', icon:'fa-wand-magic-sparkles',url:'vendor-detail.html?cat=decorators&id=dec-4' },
+    /* Photographers */
+    { name:'Walima Photography Studio',  cat:'photographers',area:'Karachi',   price:'PKR 1,20,000+',  tag:'Photo',  tc:'dt-ph',  icon:'fa-camera',           url:'vendor-detail.html?cat=photographers&id=ph-1' },
+    { name:'Lenscraft Wedding Films',    cat:'photographers',area:'Lahore',    price:'PKR 1,50,000+',  tag:'Photo',  tc:'dt-ph',  icon:'fa-camera',           url:'vendor-detail.html?cat=photographers&id=ph-2' },
+    { name:'Noor Cinematic Studios',     cat:'photographers',area:'Karachi',   price:'PKR 95,000+',    tag:'Photo',  tc:'dt-ph',  icon:'fa-camera',           url:'vendor-detail.html?cat=photographers&id=ph-3' },
+    { name:'Pixels & Pearls Photography',cat:'photographers',area:'Islamabad', price:'PKR 1,00,000+',  tag:'Photo',  tc:'dt-ph',  icon:'fa-camera',           url:'vendor-detail.html?cat=photographers&id=ph-4' },
+    /* Car Rentals */
+    { name:'Classic Bridal Cars Karachi',cat:'cars',         area:'Karachi',   price:'PKR 15,000/day', tag:'Cars',   tc:'dt-car', icon:'fa-car',              url:'vendor-detail.html?cat=cars&id=car-1' },
+    { name:'Rolls Royce Rentals PK',     cat:'cars',         area:'Lahore',    price:'PKR 40,000/day', tag:'Cars',   tc:'dt-car', icon:'fa-car',              url:'vendor-detail.html?cat=cars&id=car-2' },
+    { name:'Vintage Wedding Wheels',     cat:'cars',         area:'Karachi',   price:'PKR 18,000/day', tag:'Cars',   tc:'dt-car', icon:'fa-car',              url:'vendor-detail.html?cat=cars&id=car-3' },
+    { name:'Premium Drive Islamabad',    cat:'cars',         area:'Islamabad', price:'PKR 12,000/day', tag:'Cars',   tc:'dt-car', icon:'fa-car',              url:'vendor-detail.html?cat=cars&id=car-4' },
+  ];
+
+  var CAT_LABELS = {
+    halls:'Wedding Halls', caterers:'Catering',
+    decorators:'Decoration', photographers:'Photography', cars:'Car Rentals'
   };
 
-  function nextSlide(){
-    goToSlide((current + 1) % slides.length);
+  /* ══════════════════════════════════════
+     SEARCH
+  ══════════════════════════════════════ */
+  var inp  = document.getElementById('wdSrchInput');
+  var drop = document.getElementById('wdDrop');
+  var sbtn = document.getElementById('wdSbtn');
+
+  if (!inp || !drop || !sbtn) return; /* guard if section not present */
+
+  function esc(s) {
+    return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
-  timer = setInterval(nextSlide, 5500);
-})();
-
-// ── FLOATING PARTICLES ───────────────────────────────
-(function(){
-  const hero   = document.querySelector('.hero');
-  if(!hero) return;
-  const colors = [
-    'rgba(200,155,44,0.22)',
-    'rgba(185,59,86,0.16)',
-    'rgba(200,155,44,0.14)',
-    'rgba(255,255,255,0.07)'
-  ];
-  for(let i = 0; i < 20; i++){
-    const p    = document.createElement('div');
-    p.className = 'hero-particle';
-    const size  = Math.random() * 5 + 1.5;
-    p.style.cssText = `
-      width:${size}px; height:${size}px;
-      background:${colors[Math.floor(Math.random()*colors.length)]};
-      left:${Math.random()*100}%;
-      bottom:-10px;
-      animation-duration:${Math.random()*14+9}s;
-      animation-delay:${Math.random()*-20}s;
-    `;
-    hero.appendChild(p);
+  function highlight(text, q) {
+    if (!q) return text;
+    return text.replace(
+      new RegExp('(' + esc(q) + ')', 'gi'),
+      '<mark style="background:rgba(200,155,44,0.22);color:#c89b2c;border-radius:2px;padding:0 1px">$1</mark>'
+    );
   }
+
+  function itemHTML(v, q) {
+    return '<div class="wd-drop-item" onclick="location.href=\'' + v.url + '\'">' +
+      '<div class="wd-drop-ico"><i class="fa-solid ' + v.icon + '"></i></div>' +
+      '<div>' +
+        '<div class="wd-drop-name">' + highlight(v.name, q) + '</div>' +
+        '<div class="wd-drop-meta"><i class="fa-solid fa-location-dot" style="opacity:0.45;margin-right:4px"></i>' + v.area + ' &nbsp;·&nbsp; ' + v.price + '</div>' +
+      '</div>' +
+      '<span class="wd-drop-tag ' + v.tc + '">' + v.tag + '</span>' +
+    '</div>';
+  }
+
+  function renderDrop(results, q) {
+    if (!q || !q.trim()) {
+      /* show popular on focus */
+      var html = '<div class="wd-drop-hd">✦ &nbsp; Popular Vendors</div>';
+      html += VENDORS.slice(0, 5).map(function(v){ return itemHTML(v, ''); }).join('');
+      drop.innerHTML = html;
+      drop.classList.add('open');
+      return;
+    }
+
+    if (!results.length) {
+      drop.innerHTML = '<div class="wd-drop-empty">No vendors found for &ldquo;' + q + '&rdquo;</div>';
+      drop.classList.add('open');
+      return;
+    }
+
+    /* group by category */
+    var groups = {};
+    results.forEach(function(v) {
+      if (!groups[v.cat]) groups[v.cat] = [];
+      groups[v.cat].push(v);
+    });
+
+    var html = '';
+    Object.keys(groups).forEach(function(cat) {
+      html += '<div class="wd-drop-hd">' + (CAT_LABELS[cat] || cat) + '</div>';
+      html += groups[cat].map(function(v){ return itemHTML(v, q); }).join('');
+    });
+    drop.innerHTML = html;
+    drop.classList.add('open');
+  }
+
+  function doSearch() {
+    var q = inp.value.trim();
+    if (!q) { renderDrop([], ''); return; }
+    var ql = q.toLowerCase();
+    var results = VENDORS.filter(function(v) {
+      return v.name.toLowerCase().indexOf(ql) > -1 ||
+             v.area.toLowerCase().indexOf(ql) > -1 ||
+             v.cat.indexOf(ql) > -1;
+    }).slice(0, 8);
+    renderDrop(results, q);
+  }
+
+  function goSearch() {
+    var q = inp.value.trim();
+    if (q) window.location.href = 'vendors.html?search=' + encodeURIComponent(q);
+  }
+
+  inp.addEventListener('input',  doSearch);
+  inp.addEventListener('focus',  function() { if (!inp.value.trim()) renderDrop([], ''); });
+  inp.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter')  goSearch();
+    if (e.key === 'Escape') drop.classList.remove('open');
+  });
+  sbtn.addEventListener('click', function() {
+    var q = inp.value.trim();
+    if (q) goSearch(); else drop.classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    var bar = document.getElementById('wdSbar');
+    if (bar && !bar.contains(e.target) && !drop.contains(e.target)) {
+      drop.classList.remove('open');
+    }
+  });
+
+  /* ══════════════════════════════════════
+     SLIDESHOW
+  ══════════════════════════════════════ */
+  var slides   = document.querySelectorAll('.wd-slide');
+  var dotNavs  = document.querySelectorAll('.wd-dotnav');
+  var curSlide = 0;
+  var slideTimer;
+
+  window.wdGoSlide = function (i) {
+    slides[curSlide].classList.remove('act');
+    dotNavs[curSlide].classList.remove('act');
+    curSlide = i;
+    slides[curSlide].classList.add('act');
+    dotNavs[curSlide].classList.add('act');
+    clearInterval(slideTimer);
+    slideTimer = setInterval(function () { wdGoSlide((curSlide + 1) % slides.length); }, 5500);
+  };
+  slideTimer = setInterval(function () { wdGoSlide((curSlide + 1) % slides.length); }, 5500);
+
+  /* ══════════════════════════════════════
+     FLOATING PARTICLES
+  ══════════════════════════════════════ */
+  var hero = document.getElementById('hero');
+  if (hero) {
+    var pc = [
+      'rgba(200,155,44,0.22)', 'rgba(185,59,86,0.16)',
+      'rgba(200,155,44,0.14)', 'rgba(255,255,255,0.06)'
+    ];
+    for (var i = 0; i < 22; i++) {
+      var p = document.createElement('div');
+      p.className = 'wd-particle';
+      var s = Math.random() * 5 + 1.5;
+      p.style.cssText =
+        'width:'  + s + 'px;' +
+        'height:' + s + 'px;' +
+        'background:' + pc[Math.floor(Math.random() * 4)] + ';' +
+        'left:'   + (Math.random() * 100) + '%;' +
+        'bottom:-8px;' +
+        'animation-duration:'  + (Math.random() * 14 + 9) + 's;' +
+        'animation-delay:'     + (Math.random() * -22) + 's;';
+      hero.appendChild(p);
+    }
+  }
+
+  /* ══════════════════════════════════════
+     3D TILT ON ORBIT ORB  (mouse move)
+  ══════════════════════════════════════ */
+  var orbCore  = document.getElementById('wdOrbCore');
+  var heroEl   = document.getElementById('hero');
+
+  if (orbCore && heroEl) {
+    heroEl.addEventListener('mousemove', function (e) {
+      var r = heroEl.getBoundingClientRect();
+      var x = (e.clientX - r.left)  / r.width  - 0.5;
+      var y = (e.clientY - r.top)   / r.height - 0.5;
+      orbCore.style.transform =
+        'translate(-50%,-50%) translateY(0) ' +
+        'rotateY(' + (x * 22) + 'deg) ' +
+        'rotateX(' + (-y * 14) + 'deg)';
+    });
+    heroEl.addEventListener('mouseleave', function () {
+      orbCore.style.transform = '';
+    });
+  }
+
 })();
 
 
-
+document.getElementById("exploreBtn").addEventListener("click", function(e){
+    e.preventDefault();
+    document.querySelector(".cat-section").scrollIntoView({
+        behavior: "smooth"
+    });
+});
 // <!-- ========== POPULAR CATEGORIES SECTION ========== -->
 
 (function(){

@@ -22,149 +22,202 @@
  <div id="nav-container"></div>
 
 <!-- ================= HERO ================= -->
+<!-- ============================================================
+     WEDDREAM — HERO SECTION  (paste inside your index.html body)
+     Requires: hero-section.css + hero-section.js
+     Font Awesome 6 + Google Fonts already in your <head>
+============================================================ -->
 
-<section id="hero" class="hero">
+<section id="hero" class="wd-hero">
 
-  <!-- 3 Image Slides -->
-  <div class="hero-slide hero-slide-1 active"></div>
-  <div class="hero-slide hero-slide-2"></div>
-  <div class="hero-slide hero-slide-3"></div>
+  <!-- ── SLIDES ── -->
+  <div class="wd-slide wd-slide-1 act"></div>
+  <div class="wd-slide wd-slide-2"></div>
+  <div class="wd-slide wd-slide-3"></div>
 
-  <!-- Glow Layers -->
-  <div class="hero-glow"></div>
-  <div class="hero-glow-rose"></div>
+  <!-- ── BG LAYERS ── -->
+  <div class="wd-grid"></div>
+  <div class="wd-shimmer"></div>
+  <div class="wd-glow-gold"></div>
+  <div class="wd-glow-rose"></div>
 
-  <!-- Lines -->
-  <div class="hero-line-left"></div>
-  <div class="hero-line-right"></div>
+  <!-- ── CORNERS ── -->
+  <div class="wd-c tl"><svg width="48" height="48" viewBox="0 0 56 56" fill="none"><path d="M2 54V2H54" stroke="#c89b2c" stroke-width="1.2"/><path d="M2 2L13 2M2 2L2 13" stroke="#c89b2c" stroke-width="2.5" stroke-linecap="round"/><circle cx="2" cy="2" r="2" fill="#c89b2c"/></svg></div>
+  <div class="wd-c tr"><svg width="48" height="48" viewBox="0 0 56 56" fill="none"><path d="M2 54V2H54" stroke="#c89b2c" stroke-width="1.2"/><path d="M2 2L13 2M2 2L2 13" stroke="#c89b2c" stroke-width="2.5" stroke-linecap="round"/><circle cx="2" cy="2" r="2" fill="#c89b2c"/></svg></div>
+  <div class="wd-c bl"><svg width="48" height="48" viewBox="0 0 56 56" fill="none"><path d="M2 54V2H54" stroke="#c89b2c" stroke-width="1.2"/><path d="M2 2L13 2M2 2L2 13" stroke="#c89b2c" stroke-width="2.5" stroke-linecap="round"/><circle cx="2" cy="2" r="2" fill="#c89b2c"/></svg></div>
+  <div class="wd-c br"><svg width="48" height="48" viewBox="0 0 56 56" fill="none"><path d="M2 54V2H54" stroke="#c89b2c" stroke-width="1.2"/><path d="M2 2L13 2M2 2L2 13" stroke="#c89b2c" stroke-width="2.5" stroke-linecap="round"/><circle cx="2" cy="2" r="2" fill="#c89b2c"/></svg></div>
 
-  <!-- Shimmer border -->
-  <div class="hero-shimmer"></div>
+  <!-- ── SPARKLES ── -->
+  <em class="wd-sp" style="top:18%;left:6%;font-size:12px;animation-delay:0s">✦</em>
+  <em class="wd-sp" style="top:26%;right:7%;font-size:9px;color:#b93b56;animation-delay:1.2s">✦</em>
+  <em class="wd-sp" style="bottom:30%;left:10%;font-size:10px;animation-delay:2s">✦</em>
+  <em class="wd-sp" style="bottom:22%;right:9%;font-size:8px;animation-delay:0.6s">✦</em>
+  <em class="wd-sp" style="top:50%;left:3.5%;font-size:7px;color:#b93b56;animation-delay:3s">✦</em>
+  <em class="wd-sp" style="top:14%;right:19%;font-size:7px;animation-delay:1.8s">✦</em>
 
-  <!-- Corner SVG Ornaments -->
-  <div class="corner tl">
-    <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-      <path d="M2 54V2H54" stroke="#c89b2c" stroke-width="1.2" fill="none"/>
-      <path d="M2 2L13 2M2 2L2 13" stroke="#c89b2c" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-      <circle cx="2" cy="2" r="2" fill="#c89b2c"/>
-      <path d="M18 2L22 2M2 18L2 22" stroke="#c89b2c" stroke-width="0.8" opacity="0.4" fill="none"/>
-    </svg>
+  <!-- ══════════════════════════════════════
+       LEFT — ORBIT SYSTEM
+  ══════════════════════════════════════ -->
+  <div class="wd-orbit-wrap" id="wdOrbitWrap">
+    <!-- pulse rings -->
+    <div class="wd-ring wd-ring-1"></div>
+    <div class="wd-ring wd-ring-2"></div>
+    <div class="wd-ring wd-ring-3"></div>
+
+    <!-- inner orbit (gold dot) -->
+    <div class="wd-orb-path wd-orb-path-inner">
+      <div class="wd-dot wd-dot-gold"></div>
+    </div>
+    <!-- outer orbit (rose dot) -->
+    <div class="wd-orb-path wd-orb-path-outer">
+      <div class="wd-dot wd-dot-rose"></div>
+    </div>
+
+    <!-- center orb -->
+    <div class="wd-orb-core" id="wdOrbCore">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <!-- star / wedding ring motif -->
+        <path d="M18 4 L22 13 L32 14 L25 21 L27 31 L18 26 L9 31 L11 21 L4 14 L14 13 Z"
+              fill="none" stroke="#c89b2c" stroke-width="1.3" stroke-linejoin="round"/>
+        <path d="M18 8 L21 15 L28 16 L23 21 L24 28 L18 24 L12 28 L13 21 L8 16 L15 15 Z"
+              fill="rgba(200,155,44,0.14)"/>
+        <circle cx="18" cy="18" r="3.5" fill="#c89b2c" opacity="0.75">
+          <animate attributeName="r" values="3.5;5.5;3.5" dur="2.2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+
+    <p class="wd-orbit-lbl">Wedding Platform</p>
   </div>
-  <div class="corner tr">
-    <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-      <path d="M2 54V2H54" stroke="#c89b2c" stroke-width="1.2" fill="none"/>
-      <path d="M2 2L13 2M2 2L2 13" stroke="#c89b2c" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-      <circle cx="2" cy="2" r="2" fill="#c89b2c"/>
-      <path d="M18 2L22 2M2 18L2 22" stroke="#c89b2c" stroke-width="0.8" opacity="0.4" fill="none"/>
-    </svg>
-  </div>
-  <div class="corner bl">
-    <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-      <path d="M2 54V2H54" stroke="#c89b2c" stroke-width="1.2" fill="none"/>
-      <path d="M2 2L13 2M2 2L2 13" stroke="#c89b2c" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-      <circle cx="2" cy="2" r="2" fill="#c89b2c"/>
-    </svg>
-  </div>
-  <div class="corner br">
-    <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-      <path d="M2 54V2H54" stroke="#c89b2c" stroke-width="1.2" fill="none"/>
-      <path d="M2 2L13 2M2 2L2 13" stroke="#c89b2c" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-      <circle cx="2" cy="2" r="2" fill="#c89b2c"/>
-    </svg>
+
+  <!-- ══════════════════════════════════════
+       RIGHT — 3D FLOATING DIAMOND
+  ══════════════════════════════════════ -->
+  <div class="wd-gem-wrap">
+    <div class="wd-gem-float">
+      <svg width="88" height="108" viewBox="0 0 88 108" fill="none">
+        <!-- facets -->
+        <polygon points="44,6 78,36 44,102 10,36"     fill="none" stroke="rgba(200,155,44,0.65)" stroke-width="1.2"/>
+        <polygon points="44,6  78,36 44,42"            fill="rgba(200,155,44,0.13)"/>
+        <polygon points="10,36 44,42 44,102"           fill="rgba(200,155,44,0.06)"/>
+        <polygon points="78,36 44,42 44,102"           fill="rgba(200,155,44,0.10)"/>
+        <polygon points="44,6  10,36 44,42"            fill="rgba(200,155,44,0.08)"/>
+        <!-- inner lines -->
+        <line x1="44" y1="6"  x2="44" y2="42"  stroke="rgba(200,155,44,0.32)" stroke-width="0.8"/>
+        <line x1="10" y1="36" x2="78" y2="36"  stroke="rgba(200,155,44,0.28)" stroke-width="0.8"/>
+        <!-- highlight -->
+        <polygon points="44,8 54,28 44,33 34,28" fill="rgba(255,255,255,0.10)"/>
+        <circle cx="44" cy="26" r="3" fill="rgba(255,255,255,0.45)">
+          <animate attributeName="opacity" values="0.45;1;0.45" dur="2.8s" repeatCount="indefinite"/>
+        </circle>
+        <!-- orbit ring -->
+        <ellipse cx="44" cy="54" rx="37" ry="13"
+                 stroke="rgba(200,155,44,0.22)" stroke-width="1" fill="none" stroke-dasharray="4 6"/>
+        <!-- orbiting gold dot -->
+        <circle r="4" fill="#c89b2c" opacity="0.85">
+          <animateMotion dur="5s" repeatCount="indefinite">
+            <mpath><path d="M7 54 A37 13 0 1 1 81 54 A37 13 0 1 1 7 54" fill="none"/></mpath>
+          </animateMotion>
+        </circle>
+        <!-- orbiting rose dot -->
+        <circle r="3" fill="#b93b56" opacity="0.75">
+          <animateMotion dur="5s" begin="2.5s" repeatCount="indefinite">
+            <mpath><path d="M7 54 A37 13 0 1 1 81 54 A37 13 0 1 1 7 54" fill="none"/></mpath>
+          </animateMotion>
+        </circle>
+      </svg>
+    </div>
+    <p class="wd-gem-lbl">Premium<br>Vendors</p>
   </div>
 
-  <!-- Sparkles -->
-  <em class="hero-sparkle" style="top:20%;left:7%;font-size:13px;animation-delay:0s;">✦</em>
-  <em class="hero-sparkle" style="top:28%;right:8%;font-size:10px;color:#b93b56;animation-delay:1.4s;">✦</em>
-  <em class="hero-sparkle" style="bottom:32%;left:11%;font-size:11px;animation-delay:2.2s;">✦</em>
-  <em class="hero-sparkle" style="bottom:24%;right:10%;font-size:9px;animation-delay:0.8s;">✦</em>
-  <em class="hero-sparkle" style="top:52%;left:4%;font-size:8px;color:#b93b56;animation-delay:3.1s;">✦</em>
-  <em class="hero-sparkle" style="top:16%;right:20%;font-size:7px;animation-delay:1.9s;">✦</em>
+  <!-- ══════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════ -->
+  <div class="wd-content">
 
-  <!-- ── CONTENT ── -->
-  <div class="hero-content">
-
-    <div class="hero-badge">
+    <!-- badge -->
+    <div class="wd-badge">
       <i class="fa-solid fa-heart"></i>
       Pakistan's Premier Wedding Platform
     </div>
 
-    <p class="hero-eyebrow">We Plan Your</p>
+    <p class="wd-eyebrow">We Plan Your</p>
 
-    <h1 class="hero-title">Dream</h1>
-    <span class="hero-title-gold">Wedding</span>
+    <h1 class="wd-title">Dream</h1>
+    <span class="wd-title-gold">Wedding</span>
 
-    <div class="hero-divider">
-      <div class="hero-divider-line"></div>
-      <span class="hero-divider-icon">❧ ✦ ❧</span>
-      <div class="hero-divider-line right"></div>
+    <div class="wd-divider">
+      <div class="wd-div-line"></div>
+      <span class="wd-div-ico">❧ ✦ ❧</span>
+      <div class="wd-div-line r"></div>
     </div>
 
-    <p class="hero-subtitle">
+    <p class="wd-sub">
       From intimate ceremonies to grand celebrations —<br>
-      we create unforgettable moments filled with elegance,<br>
-      emotion and timeless memories.
+      curated vendors, seamless planning, timeless memories.
     </p>
 
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-num">500+</span>
-        <span class="hero-stat-lbl">Vendors</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">1000+</span>
-        <span class="hero-stat-lbl">Weddings</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">50+</span>
-        <span class="hero-stat-lbl">Cities</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">4.9★</span>
-        <span class="hero-stat-lbl">Rating</span>
-      </div>
+    <!-- stats -->
+    <div class="wd-stats">
+      <div class="wd-stat"><span class="wd-snum">500+</span><span class="wd-slbl">Vendors</span></div>
+      <div class="wd-stat"><span class="wd-snum">1000+</span><span class="wd-slbl">Weddings</span></div>
+      <div class="wd-stat"><span class="wd-snum">50+</span><span class="wd-slbl">Cities</span></div>
+      <div class="wd-stat"><span class="wd-snum">4.9★</span><span class="wd-slbl">Rating</span></div>
     </div>
 
-    <div class="hero-buttons">
-      <button class="btn-rose" onclick="document.querySelector('a[href=\'services.html\']') && (window.location='services.html')">
+    <!-- buttons -->
+    <div class="wd-btns">
+      <a class="wd-btn-rose" href="#exploreBtn">
         <i class="fa-solid fa-heart"></i>
-        Plan Your Wedding
-      </button>
-      <button class="btn-gold-outline" onclick="window.location='ai-planner.html'">
+        Explore Vendors
+      </a>
+      <a class="wd-btn-gold" href="AiPlaner.html">
         <i class="fa-solid fa-wand-magic-sparkles"></i>
         AI Planner
-      </button>
+      </a>
     </div>
 
-    <!-- Search — opens navbar search popup -->
-    <div class="hero-search-wrap">
-      <div class="search-bar" onclick="if(typeof toggleSearch==='function') toggleSearch()">
-        <span class="search-icon-wrap"><i class="fa-solid fa-magnifying-glass"></i></span>
+    <!-- ── SEARCH BAR ── -->
+    <div class="wd-search-wrap">
+      <div class="wd-sbar" id="wdSbar">
+        <span class="wd-sico"><i class="fa-solid fa-magnifying-glass"></i></span>
         <input
           type="text"
+          id="wdSrchInput"
           placeholder="Search venues, photographers, caterers..."
-          readonly
-          onclick="if(typeof toggleSearch==='function'){ event.stopPropagation(); toggleSearch(); }"
+          autocomplete="off"
         />
-        <button class="search-bar-btn" onclick="event.stopPropagation(); if(typeof toggleSearch==='function') toggleSearch();">
+        <button class="wd-sbtn" id="wdSbtn">
           <i class="fa-solid fa-magnifying-glass"></i>
           Search
         </button>
       </div>
+      <!-- results dropdown -->
+      <div class="wd-drop" id="wdDrop"></div>
     </div>
 
+    <!-- vendor chips -->
+    <div class="wd-chips">
+      <a href="halls.html"         class="wd-chip"><i class="fa-solid fa-building-columns"></i> Halls</a>
+      <a href="catering.html"      class="wd-chip"><i class="fa-solid fa-utensils"></i> Catering</a>
+      <a href="decorating.html"    class="wd-chip"><i class="fa-solid fa-wand-magic-sparkles"></i> Decoration</a>
+      <a href="photographers.html" class="wd-chip"><i class="fa-solid fa-camera"></i> Photography</a>
+      <a href="carrentals.html"          class="wd-chip"><i class="fa-solid fa-car"></i> Car Rentals</a>
+    </div>
+
+  </div><!-- /wd-content -->
+
+  <!-- slide dots -->
+  <div class="wd-dots">
+    <div class="wd-dotnav act" onclick="wdGoSlide(0)"></div>
+    <div class="wd-dotnav"     onclick="wdGoSlide(1)"></div>
+    <div class="wd-dotnav"     onclick="wdGoSlide(2)"></div>
   </div>
 
-  <!-- Slide dots -->
-  <div class="slide-dots" id="heroSlideDots">
-    <div class="slide-dot active" onclick="goToSlide(0)"></div>
-    <div class="slide-dot" onclick="goToSlide(1)"></div>
-    <div class="slide-dot" onclick="goToSlide(2)"></div>
-  </div>
-
-  <!-- Scroll hint -->
-  <div class="scroll-hint">
-    <div class="scroll-line"></div>
+  <!-- scroll hint -->
+  <div class="wd-scroll">
+    <div class="wd-scroll-line"></div>
     <span>Scroll</span>
   </div>
 
@@ -176,7 +229,7 @@
 
      <!-- HTML
 ======================================================  -->
-<section class="cat-section">
+<section id="exploreBtn" class="cat-section">
 
   <!-- Sparkle dots -->
   <em class="cat-sparkle" style="top:12%;left:6%;font-size:13px;animation-delay:0s;">✦</em>
@@ -265,6 +318,16 @@
     <span>Swipe to explore</span>
   </div>
 
+
+   <!-- Floating Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-5"></div>
+ 
+
+  
 </section>
 
 
