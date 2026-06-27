@@ -254,12 +254,7 @@ $(document).ready(() => {
 })();
 
 
-document.getElementById("exploreBtn").addEventListener("click", function(e){
-    e.preventDefault();
-    document.querySelector(".cat-section").scrollIntoView({
-        behavior: "smooth"
-    });
-});
+
 // <!-- ========== POPULAR CATEGORIES SECTION ========== -->
 
 (function(){
