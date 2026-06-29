@@ -857,6 +857,19 @@ body { overflow-x:hidden; font-family:'Jost',sans-serif; background:#000; }
   .wd-sbtn { height: 40px; padding: 0 14px; font-size: 9px; }
 }
 
+/* ============================================================
+   LIGHT BURST REVEAL  —  paste at END of hero-section.css
+============================================================ */
+
+#wdBurstCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
 /* <!-- ========== POPULAR CATEGORIES SECTION ========== --> */
 
 /* ── SECTION ── */

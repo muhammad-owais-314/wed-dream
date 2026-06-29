@@ -253,7 +253,164 @@ $(document).ready(() => {
 
 })();
 
+/* ============================================================
+   LIGHT BURST REVEAL  —  paste at END of hero-section.js
+============================================================ */
 
+(function () {
+
+  var heroEl = document.getElementById('hero');
+  if (!heroEl) return;
+
+  /* ── Canvas ── */
+  var canvas = document.createElement('canvas');
+  canvas.id  = 'wdBurstCanvas';
+  heroEl.appendChild(canvas);
+  var ctx = canvas.getContext('2d');
+  var W, H, cx, cy;
+
+  function resize() {
+    W  = canvas.width  = heroEl.offsetWidth;
+    H  = canvas.height = heroEl.offsetHeight;
+    cx = W / 2;
+    cy = H / 2;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  /* ── Hide all text first ── */
+  var textSelectors = [
+    '.wd-badge', '.wd-eyebrow', '.wd-title', '.wd-title-gold',
+    '.wd-divider', '.wd-sub', '.wd-stats', '.wd-btns',
+    '.wd-search-wrap', '.wd-chips'
+  ];
+  textSelectors.forEach(function (sel) {
+    var el = heroEl.querySelector(sel);
+    if (!el) return;
+    el.style.cssText += ';opacity:0!important;transform:translateY(28px)!important;filter:blur(10px)!important;transition:none!important;animation:none!important;';
+  });
+
+  /* ── Draw burst ── */
+  var animId;
+  var startTime = null;
+  var TOTAL = 2200; /* total burst duration ms */
+
+  function draw(ts) {
+    if (!startTime) startTime = ts;
+    var elapsed = ts - startTime;
+    var t = Math.min(elapsed / TOTAL, 1);
+
+    ctx.clearRect(0, 0, W, H);
+
+    /* Phase 1 — 0 to 0.35 : burst expands */
+    /* Phase 2 — 0.35 to 0.65 : hold glow */
+    /* Phase 3 — 0.65 to 1.0 : fade out */
+
+    var radius, alpha;
+
+    if (t < 0.35) {
+      var p = t / 0.35;
+      var ease = 1 - Math.pow(1 - p, 2.5);
+      radius = ease * Math.max(W, H) * 0.82;
+      alpha  = ease;
+    } else if (t < 0.65) {
+      radius = Math.max(W, H) * 0.82;
+      alpha  = 1;
+    } else {
+      var p = (t - 0.65) / 0.35;
+      var ease = Math.pow(p, 1.8);
+      radius = Math.max(W, H) * 0.82;
+      alpha  = 1 - ease;
+    }
+
+    /* Core white flash */
+    var coreR = radius * 0.12;
+    var core  = ctx.createRadialGradient(cx, cy, 0, cx, cy, coreR);
+    core.addColorStop(0,   'rgba(255,252,235,' + (0.92 * alpha) + ')');
+    core.addColorStop(0.4, 'rgba(240,220,140,' + (0.55 * alpha) + ')');
+    core.addColorStop(1,   'rgba(200,155,44,0)');
+    ctx.beginPath();
+    ctx.arc(cx, cy, coreR, 0, Math.PI * 2);
+    ctx.fillStyle = core;
+    ctx.fill();
+
+    /* Mid gold glow */
+    var mid = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius * 0.48);
+    mid.addColorStop(0,    'rgba(200,155,44,' + (0.38 * alpha) + ')');
+    mid.addColorStop(0.45, 'rgba(200,155,44,' + (0.14 * alpha) + ')');
+    mid.addColorStop(0.75, 'rgba(185,59,86,'  + (0.06 * alpha) + ')');
+    mid.addColorStop(1,    'rgba(185,59,86,0)');
+    ctx.beginPath();
+    ctx.arc(cx, cy, radius * 0.48, 0, Math.PI * 2);
+    ctx.fillStyle = mid;
+    ctx.fill();
+
+    /* Outer rose bloom */
+    var outer = ctx.createRadialGradient(cx, cy, radius * 0.3, cx, cy, radius);
+    outer.addColorStop(0,   'rgba(185,59,86,' + (0.09 * alpha) + ')');
+    outer.addColorStop(0.5, 'rgba(185,59,86,' + (0.04 * alpha) + ')');
+    outer.addColorStop(1,   'rgba(185,59,86,0)');
+    ctx.beginPath();
+    ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+    ctx.fillStyle = outer;
+    ctx.fill();
+
+    /* Sweep rays */
+    var rayCount = 8;
+    for (var i = 0; i < rayCount; i++) {
+      var angle   = (i / rayCount) * Math.PI * 2;
+      var rayLen  = radius * 0.9;
+      var rayAlpha= 0.28 * alpha;
+      var rg = ctx.createLinearGradient(
+        cx, cy,
+        cx + Math.cos(angle) * rayLen,
+        cy + Math.sin(angle) * rayLen
+      );
+      rg.addColorStop(0,    'rgba(255,240,160,' + rayAlpha + ')');
+      rg.addColorStop(0.35, 'rgba(200,155,44,'  + (rayAlpha * 0.5) + ')');
+      rg.addColorStop(1,    'rgba(200,155,44,0)');
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(
+        cx + Math.cos(angle) * rayLen,
+        cy + Math.sin(angle) * rayLen
+      );
+      ctx.lineWidth   = 1.2;
+      ctx.strokeStyle = rg;
+      ctx.stroke();
+    }
+
+    if (t < 1) {
+      animId = requestAnimationFrame(draw);
+    } else {
+      ctx.clearRect(0, 0, W, H);
+      cancelAnimationFrame(animId);
+    }
+  }
+
+  /* ── Reveal text lines one by one ── */
+  var revealDelays = [0.9, 1.08, 1.22, 1.36, 1.50, 1.62, 1.74, 1.88, 2.02, 2.16];
+  textSelectors.forEach(function (sel, i) {
+    setTimeout(function () {
+      var el = heroEl.querySelector(sel);
+      if (!el) return;
+      el.style.cssText = el.style.cssText
+        .replace(/opacity:[^;]+!important;/g, '')
+        .replace(/transform:[^;]+!important;/g, '')
+        .replace(/filter:[^;]+!important;/g, '')
+        .replace(/transition:[^;]+!important;/g, '')
+        .replace(/animation:[^;]+!important;/g, '');
+      el.style.transition = 'opacity 0.88s cubic-bezier(.19,1,.22,1), transform 0.88s cubic-bezier(.19,1,.22,1), filter 0.88s cubic-bezier(.19,1,.22,1)';
+      el.style.opacity    = '1';
+      el.style.transform  = 'translateY(0)';
+      el.style.filter     = 'blur(0)';
+    }, revealDelays[i] * 1000);
+  });
+
+  /* ── Start ── */
+  animId = requestAnimationFrame(draw);
+
+})();
 
 // <!-- ========== POPULAR CATEGORIES SECTION ========== -->
 
