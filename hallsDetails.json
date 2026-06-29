@@ -9,9 +9,9 @@
     "phone": "+92 301 1000137",
     "whatsapp": "+92 301 1000137",
     "gallery": [
-      "https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014857/pexels-photo-3014857.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014858/pexels-photo-3014858.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img1.jpg",
+      "hall imges/hall img2.jpg",
+      "hall imges/hall img3.jpg"
     ],
     "capacity": 1100,
     "parking_capacity": 200,
@@ -25,15 +25,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 450000
+        "price": 450000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Basic Sound System",
+          "Valet Parking"
+        ]
       },
       {
         "name": "Gold",
-        "price": 585000
+        "price": 585000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Professional Sound System",
+          "Valet Parking",
+          "LED Stage Lighting",
+          "Bridal Room"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 720000
+        "price": 720000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Professional Sound System",
+          "Valet Parking",
+          "LED Stage Lighting",
+          "Bridal Room",
+          "In-house Catering",
+          "Event Coordinator",
+          "Photography Services"
+        ]
       }
     ],
     "reviews": [
@@ -55,13 +83,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": true,
     "outdoor": true,
     "stage": true,
-    "image": "https://images.pexels.com/photos/1043902/pexels-photo-1043902.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img1.jpg"
   },
   {
     "id": 2,
@@ -73,9 +100,9 @@
     "phone": "+92 302 1000274",
     "whatsapp": "+92 302 1000274",
     "gallery": [
-      "https://images.pexels.com/photos/3014859/pexels-photo-3014859.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014860/pexels-photo-3014860.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014861/pexels-photo-3014861.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img4.jpg",
+      "hall imges/hall img5.jpg",
+      "hall imges/hall img6.jpg"
     ],
     "capacity": 1000,
     "parking_capacity": 180,
@@ -89,15 +116,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 380000
+        "price": 380000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security"
+        ]
       },
       {
         "name": "Gold",
-        "price": 494000
+        "price": 494000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 608000
+        "price": 608000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge",
+          "Separate Mehendi Lawn",
+          "In-house Catering",
+          "DJ Services"
+        ]
       }
     ],
     "reviews": [
@@ -119,13 +174,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": false,
     "catering": false,
     "outdoor": true,
     "stage": false,
-    "image": "https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img4.jpg"
   },
   {
     "id": 3,
@@ -137,9 +191,9 @@
     "phone": "+92 311 1000411",
     "whatsapp": "+92 311 1000411",
     "gallery": [
-      "https://images.pexels.com/photos/3014862/pexels-photo-3014862.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014863/pexels-photo-3014863.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014864/pexels-photo-3014864.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img7.jpg",
+      "hall imges/hall img8.jpg",
+      "hall imges/hall img9.jpg"
     ],
     "capacity": 1200,
     "parking_capacity": 220,
@@ -153,15 +207,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 500000
+        "price": 500000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall"
+        ]
       },
       {
         "name": "Gold",
-        "price": 650000
+        "price": 650000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 800000
+        "price": 800000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "Event Coordinator"
+        ]
       }
     ],
     "reviews": [
@@ -183,13 +265,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/2306281/pexels-photo-2306281.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img7.jpg"
   },
   {
     "id": 4,
@@ -201,9 +282,9 @@
     "phone": "+92 321 1000548",
     "whatsapp": "+92 321 1000548",
     "gallery": [
-      "https://images.pexels.com/photos/3014865/pexels-photo-3014865.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014866/pexels-photo-3014866.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014867/pexels-photo-3014867.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img10.jpg",
+      "hall imges/hall img11.jpg",
+      "hall imges/hall img12.jpg"
     ],
     "capacity": 1000,
     "parking_capacity": 180,
@@ -217,15 +298,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 420000
+        "price": 420000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Air Conditioned Hall",
+          "Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 546000
+        "price": 546000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Air Conditioned Hall",
+          "Sound System",
+          "Bridal Room",
+          "LED Stage Lighting"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 672000
+        "price": 672000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting",
+          "Generator Backup",
+          "DJ Services",
+          "Photography"
+        ]
       }
     ],
     "reviews": [
@@ -247,13 +356,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": false,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/2306277/pexels-photo-2306277.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img10.jpg"
   },
   {
     "id": 5,
@@ -265,9 +373,9 @@
     "phone": "+92 333 1000685",
     "whatsapp": "+92 333 1000685",
     "gallery": [
-      "https://images.pexels.com/photos/3014868/pexels-photo-3014868.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014869/pexels-photo-3014869.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014870/pexels-photo-3014870.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img13.jpg",
+      "hall imges/hall img14.jpg",
+      "hall imges/hall img15.jpg"
     ],
     "capacity": 1000,
     "parking_capacity": 180,
@@ -281,15 +389,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 390000
+        "price": 390000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "Basic Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 507000
+        "price": 507000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 624000
+        "price": 624000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering",
+          "Separate Mehendi Lawn",
+          "Bridal Room",
+          "Event Coordinator"
+        ]
       }
     ],
     "reviews": [
@@ -311,13 +447,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": true,
     "outdoor": true,
     "stage": true,
-    "image": "https://images.pexels.com/photos/1779415/pexels-photo-1779415.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img13.jpg"
   },
   {
     "id": 6,
@@ -329,9 +464,9 @@
     "phone": "+92 345 1000822",
     "whatsapp": "+92 345 1000822",
     "gallery": [
-      "https://images.pexels.com/photos/3014871/pexels-photo-3014871.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014872/pexels-photo-3014872.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014873/pexels-photo-3014873.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img16.jpg",
+      "hall imges/hall img17.jpg",
+      "hall imges/hall img18.jpg"
     ],
     "capacity": 1500,
     "parking_capacity": 270,
@@ -345,15 +480,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 600000
+        "price": 600000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security"
+        ]
       },
       {
         "name": "Gold",
-        "price": 780000
+        "price": 780000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 960000
+        "price": 960000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge",
+          "Separate Mehendi Lawn",
+          "In-house Catering",
+          "Professional Sound System",
+          "LED Stage Lighting"
+        ]
       }
     ],
     "reviews": [
@@ -375,13 +539,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": false,
     "catering": false,
     "outdoor": true,
     "stage": false,
-    "image": "https://images.pexels.com/photos/1456613/pexels-photo-1456613.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img16.jpg"
   },
   {
     "id": 7,
@@ -393,9 +556,9 @@
     "phone": "+92 300 1000959",
     "whatsapp": "+92 300 1000959",
     "gallery": [
-      "https://images.pexels.com/photos/3014874/pexels-photo-3014874.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014875/pexels-photo-3014875.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306251/pexels-photo-2306251.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img19.jpg",
+      "hall imges/hall img20.jpg",
+      "hall imges/hall img21.jpg"
     ],
     "capacity": 1400,
     "parking_capacity": 250,
@@ -409,15 +572,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 550000
+        "price": 550000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall"
+        ]
       },
       {
         "name": "Gold",
-        "price": 715000
+        "price": 715000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 880000
+        "price": 880000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room",
+          "Decor Services",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "Valet Parking"
+        ]
       }
     ],
     "reviews": [
@@ -439,13 +631,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/931796/pexels-photo-931796.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img19.jpg"
   },
   {
     "id": 8,
@@ -457,9 +648,9 @@
     "phone": "+92 301 1001096",
     "whatsapp": "+92 301 1001096",
     "gallery": [
-      "https://images.pexels.com/photos/2306252/pexels-photo-2306252.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306253/pexels-photo-2306253.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306254/pexels-photo-2306254.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img22.jpg",
+      "hall imges/hall img23.jpg",
+      "hall imges/hall img24.jpg"
     ],
     "capacity": 1200,
     "parking_capacity": 220,
@@ -473,15 +664,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 500000
+        "price": 500000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Air Conditioned Hall",
+          "Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 650000
+        "price": 650000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 800000
+        "price": 800000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting",
+          "Generator Backup",
+          "Valet Parking",
+          "Event Coordinator"
+        ]
       }
     ],
     "reviews": [
@@ -503,13 +722,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": false,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img22.jpg"
   },
   {
     "id": 9,
@@ -521,9 +739,9 @@
     "phone": "+92 302 1001233",
     "whatsapp": "+92 302 1001233",
     "gallery": [
-      "https://images.pexels.com/photos/2306255/pexels-photo-2306255.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306256/pexels-photo-2306256.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306257/pexels-photo-2306257.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img25.jpg",
+      "hall imges/hall img26.jpg",
+      "hall imges/hall img27.jpg"
     ],
     "capacity": 1500,
     "parking_capacity": 270,
@@ -537,15 +755,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 650000
+        "price": 650000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "Basic Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 845000
+        "price": 845000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 1040000
+        "price": 1040000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering",
+          "Separate Mehendi Lawn",
+          "Bridal Room",
+          "DJ Services",
+          "Photography"
+        ]
       }
     ],
     "reviews": [
@@ -567,13 +814,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": true,
     "outdoor": true,
     "stage": true,
-    "image": "https://images.pexels.com/photos/265947/pexels-photo-265947.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img25.jpg"
   },
   {
     "id": 10,
@@ -585,9 +831,9 @@
     "phone": "+92 311 1001370",
     "whatsapp": "+92 311 1001370",
     "gallery": [
-      "https://images.pexels.com/photos/2306258/pexels-photo-2306258.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306259/pexels-photo-2306259.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306260/pexels-photo-2306260.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img28.jpg",
+      "hall imges/hall img29.jpg",
+      "hall imges/hall img30.jpg"
     ],
     "capacity": 1200,
     "parking_capacity": 220,
@@ -601,15 +847,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 480000
+        "price": 480000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security"
+        ]
       },
       {
         "name": "Gold",
-        "price": 624000
+        "price": 624000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 768000
+        "price": 768000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge",
+          "Separate Mehendi Lawn",
+          "In-house Catering",
+          "Professional Sound System"
+        ]
       }
     ],
     "reviews": [
@@ -631,13 +905,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": false,
     "catering": false,
     "outdoor": true,
     "stage": false,
-    "image": "https://images.pexels.com/photos/587740/pexels-photo-587740.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img28.jpg"
   },
   {
     "id": 11,
@@ -649,9 +922,9 @@
     "phone": "+92 321 1001507",
     "whatsapp": "+92 321 1001507",
     "gallery": [
-      "https://images.pexels.com/photos/2306261/pexels-photo-2306261.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306262/pexels-photo-2306262.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306263/pexels-photo-2306263.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img31.jpg",
+      "hall imges/hall img32.jpg",
+      "hall imges/hall img33.jpg"
     ],
     "capacity": 900,
     "parking_capacity": 160,
@@ -665,15 +938,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 350000
+        "price": 350000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall"
+        ]
       },
       {
         "name": "Gold",
-        "price": 455000
+        "price": 455000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 560000
+        "price": 560000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room",
+          "Decor Services",
+          "Professional Sound System",
+          "LED Stage Lighting"
+        ]
       }
     ],
     "reviews": [
@@ -695,13 +996,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img31.jpg"
   },
   {
     "id": 12,
@@ -713,9 +1013,9 @@
     "phone": "+92 333 1001644",
     "whatsapp": "+92 333 1001644",
     "gallery": [
-      "https://images.pexels.com/photos/2306264/pexels-photo-2306264.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306265/pexels-photo-2306265.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306266/pexels-photo-2306266.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img34.jpg",
+      "hall imges/hall img35.jpg",
+      "hall imges/hall img36.jpg"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -729,15 +1029,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 320000
+        "price": 320000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Air Conditioned Hall",
+          "Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 416000
+        "price": 416000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 512000
+        "price": 512000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting",
+          "Generator Backup",
+          "Valet Parking",
+          "DJ Services"
+        ]
       }
     ],
     "reviews": [
@@ -759,13 +1087,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": false,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/3074123/pexels-photo-3074123.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img34.jpg"
   },
   {
     "id": 13,
@@ -777,9 +1104,9 @@
     "phone": "+92 345 1001781",
     "whatsapp": "+92 345 1001781",
     "gallery": [
-      "https://images.pexels.com/photos/2306267/pexels-photo-2306267.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306268/pexels-photo-2306268.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306269/pexels-photo-2306269.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img37.jpg",
+      "hall imges/hall img38.jpg",
+      "hall imges/hall img39.jpg"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -793,15 +1120,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 300000
+        "price": 300000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "Basic Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 390000
+        "price": 390000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 480000
+        "price": 480000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering",
+          "Separate Mehendi Lawn",
+          "Bridal Room",
+          "Event Coordinator"
+        ]
       }
     ],
     "reviews": [
@@ -823,13 +1178,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": true,
     "outdoor": true,
     "stage": true,
-    "image": "https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img37.jpg"
   },
   {
     "id": 14,
@@ -841,9 +1195,9 @@
     "phone": "+92 300 1001918",
     "whatsapp": "+92 300 1001918",
     "gallery": [
-      "https://images.pexels.com/photos/2306270/pexels-photo-2306270.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1779416/pexels-photo-1779416.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1779417/pexels-photo-1779417.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img40.jpg",
+      "hall imges/hall img41.jpg",
+      "hall imges/hall img42.jpg"
     ],
     "capacity": 900,
     "parking_capacity": 160,
@@ -857,15 +1211,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 370000
+        "price": 370000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security"
+        ]
       },
       {
         "name": "Gold",
-        "price": 481000
+        "price": 481000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 592000
+        "price": 592000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge",
+          "Separate Mehendi Lawn",
+          "In-house Catering",
+          "Professional Sound System"
+        ]
       }
     ],
     "reviews": [
@@ -887,13 +1269,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": false,
     "catering": false,
     "outdoor": true,
     "stage": false,
-    "image": "https://images.pexels.com/photos/2306275/pexels-photo-2306275.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img40.jpg"
   },
   {
     "id": 15,
@@ -905,9 +1286,9 @@
     "phone": "+92 301 1002055",
     "whatsapp": "+92 301 1002055",
     "gallery": [
-      "https://images.pexels.com/photos/1779418/pexels-photo-1779418.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1779419/pexels-photo-1779419.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1779420/pexels-photo-1779420.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img43.jpg",
+      "hall imges/hall img44.jpg",
+      "hall imges/hall img45.jpg"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -921,15 +1302,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 340000
+        "price": 340000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall"
+        ]
       },
       {
         "name": "Gold",
-        "price": 442000
+        "price": 442000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 544000
+        "price": 544000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room",
+          "Decor Services",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "Valet Parking"
+        ]
       }
     ],
     "reviews": [
@@ -951,13 +1361,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/1395964/pexels-photo-1395964.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img43.jpg"
   },
   {
     "id": 16,
@@ -969,9 +1378,9 @@
     "phone": "+92 302 1002192",
     "whatsapp": "+92 302 1002192",
     "gallery": [
-      "https://images.pexels.com/photos/1779421/pexels-photo-1779421.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1779422/pexels-photo-1779422.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1779423/pexels-photo-1779423.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img46.jpg",
+      "hall imges/hall img47.jpg",
+      "hall imges/hall img48.jpg"
     ],
     "capacity": 1000,
     "parking_capacity": 180,
@@ -985,15 +1394,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 400000
+        "price": 400000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Air Conditioned Hall",
+          "Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 520000
+        "price": 520000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 640000
+        "price": 640000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting",
+          "Generator Backup",
+          "Valet Parking",
+          "Event Coordinator",
+          "Photography"
+        ]
       }
     ],
     "reviews": [
@@ -1015,13 +1453,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": false,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/2253879/pexels-photo-2253879.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img46.jpg"
   },
   {
     "id": 17,
@@ -1033,9 +1470,9 @@
     "phone": "+92 311 1002329",
     "whatsapp": "+92 311 1002329",
     "gallery": [
-      "https://images.pexels.com/photos/1779424/pexels-photo-1779424.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1024991/pexels-photo-1024991.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1024992/pexels-photo-1024992.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img49.jpg",
+      "hall imges/hall img50.jpg",
+      "hall imges/hall img51.jpg"
     ],
     "capacity": 1000,
     "parking_capacity": 180,
@@ -1049,15 +1486,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 380000
+        "price": 380000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "Basic Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 494000
+        "price": 494000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 608000
+        "price": 608000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering",
+          "Separate Mehendi Lawn",
+          "Bridal Room",
+          "DJ Services"
+        ]
       }
     ],
     "reviews": [
@@ -1079,13 +1544,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": true,
     "outdoor": true,
     "stage": true,
-    "image": "https://images.pexels.com/photos/1024989/pexels-photo-1024989.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img49.jpg"
   },
   {
     "id": 18,
@@ -1097,9 +1561,9 @@
     "phone": "+92 321 1002466",
     "whatsapp": "+92 321 1002466",
     "gallery": [
-      "https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1024994/pexels-photo-1024994.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1024995/pexels-photo-1024995.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img52.jpg",
+      "hall imges/hall img53.jpg",
+      "hall imges/hall img54.jpg"
     ],
     "capacity": 900,
     "parking_capacity": 160,
@@ -1113,15 +1577,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 360000
+        "price": 360000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security"
+        ]
       },
       {
         "name": "Gold",
-        "price": 468000
+        "price": 468000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 576000
+        "price": 576000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge",
+          "Separate Mehendi Lawn",
+          "In-house Catering",
+          "Professional Sound System"
+        ]
       }
     ],
     "reviews": [
@@ -1143,13 +1635,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": false,
     "catering": false,
     "outdoor": true,
     "stage": false,
-    "image": "https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img52.jpg"
   },
   {
     "id": 19,
@@ -1161,9 +1652,9 @@
     "phone": "+92 333 1002603",
     "whatsapp": "+92 333 1002603",
     "gallery": [
-      "https://images.pexels.com/photos/1024996/pexels-photo-1024996.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1024997/pexels-photo-1024997.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1024998/pexels-photo-1024998.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img55.jpg",
+      "hall imges/hall img56.jpg",
+      "hall imges/hall img57.jpg"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -1177,15 +1668,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 340000
+        "price": 340000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall"
+        ]
       },
       {
         "name": "Gold",
-        "price": 442000
+        "price": 442000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 544000
+        "price": 544000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room",
+          "Decor Services",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "Valet Parking"
+        ]
       }
     ],
     "reviews": [
@@ -1207,13 +1727,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/1024978/pexels-photo-1024978.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img55.jpg"
   },
   {
     "id": 20,
@@ -1225,9 +1744,9 @@
     "phone": "+92 345 1002740",
     "whatsapp": "+92 345 1002740",
     "gallery": [
-      "https://images.pexels.com/photos/1024999/pexels-photo-1024999.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1025000/pexels-photo-1025000.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1444443/pexels-photo-1444443.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img58.jpg",
+      "hall imges/hall img59.jpg",
+      "hall imges/hall img60.jpg"
     ],
     "capacity": 1000,
     "parking_capacity": 180,
@@ -1241,15 +1760,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 390000
+        "price": 390000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Air Conditioned Hall",
+          "Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 507000
+        "price": 507000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 624000
+        "price": 624000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting",
+          "Generator Backup",
+          "Valet Parking",
+          "Event Coordinator",
+          "DJ Services"
+        ]
       }
     ],
     "reviews": [
@@ -1271,13 +1819,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": false,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/1024976/pexels-photo-1024976.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img58.jpg"
   },
   {
     "id": 21,
@@ -1289,9 +1836,9 @@
     "phone": "+92 300 1002877",
     "whatsapp": "+92 300 1002877",
     "gallery": [
-      "https://images.pexels.com/photos/1444444/pexels-photo-1444444.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1444445/pexels-photo-1444445.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1444446/pexels-photo-1444446.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img61.jpg",
+      "hall imges/hall img62.jpg",
+      "hall imges/hall img63.jpg"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -1305,15 +1852,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 300000
+        "price": 300000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "Basic Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 390000
+        "price": 390000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 480000
+        "price": 480000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering",
+          "Separate Mehendi Lawn",
+          "Bridal Room",
+          "Event Coordinator"
+        ]
       }
     ],
     "reviews": [
@@ -1335,13 +1910,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": true,
     "outdoor": true,
     "stage": true,
-    "image": "https://images.pexels.com/photos/3038369/pexels-photo-3038369.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img61.jpg"
   },
   {
     "id": 22,
@@ -1353,9 +1927,9 @@
     "phone": "+92 301 1003014",
     "whatsapp": "+92 301 1003014",
     "gallery": [
-      "https://images.pexels.com/photos/1444447/pexels-photo-1444447.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1444448/pexels-photo-1444448.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1444449/pexels-photo-1444449.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img64.jpg",
+      "hall imges/hall img65.jpg",
+      "hall imges/hall img66.jpg"
     ],
     "capacity": 700,
     "parking_capacity": 130,
@@ -1369,15 +1943,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 280000
+        "price": 280000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security"
+        ]
       },
       {
         "name": "Gold",
-        "price": 364000
+        "price": 364000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 448000
+        "price": 448000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge",
+          "Separate Mehendi Lawn",
+          "In-house Catering",
+          "Professional Sound System"
+        ]
       }
     ],
     "reviews": [
@@ -1399,13 +2001,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": false,
     "catering": false,
     "outdoor": true,
     "stage": false,
-    "image": "https://images.pexels.com/photos/3038366/pexels-photo-3038366.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img64.jpg"
   },
   {
     "id": 23,
@@ -1417,9 +2018,9 @@
     "phone": "+92 302 1003151",
     "whatsapp": "+92 302 1003151",
     "gallery": [
-      "https://images.pexels.com/photos/1444450/pexels-photo-1444450.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1444451/pexels-photo-1444451.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1444452/pexels-photo-1444452.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img67.jpg",
+      "hall imges/hall img68.jpg",
+      "hall imges/hall img69.jpg"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -1433,15 +2034,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 320000
+        "price": 320000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall"
+        ]
       },
       {
         "name": "Gold",
-        "price": 416000
+        "price": 416000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 512000
+        "price": 512000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room",
+          "Decor Services",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "Valet Parking"
+        ]
       }
     ],
     "reviews": [
@@ -1463,13 +2093,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/3038368/pexels-photo-3038368.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img67.jpg"
   },
   {
     "id": 24,
@@ -1481,9 +2110,9 @@
     "phone": "+92 311 1003288",
     "whatsapp": "+92 311 1003288",
     "gallery": [
-      "https://images.pexels.com/photos/2306284/pexels-photo-2306284.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306285/pexels-photo-2306285.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306286/pexels-photo-2306286.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img70.jpg",
+      "hall imges/hall img71.jpg",
+      "hall imges/hall img72.jpg"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -1497,15 +2126,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 310000
+        "price": 310000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Air Conditioned Hall",
+          "Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 403000
+        "price": 403000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 496000
+        "price": 496000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting",
+          "Generator Backup",
+          "Valet Parking",
+          "Event Coordinator",
+          "Photography"
+        ]
       }
     ],
     "reviews": [
@@ -1527,13 +2185,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": false,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/2253880/pexels-photo-2253880.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img70.jpg"
   },
   {
     "id": 25,
@@ -1545,9 +2202,9 @@
     "phone": "+92 321 1003425",
     "whatsapp": "+92 321 1003425",
     "gallery": [
-      "https://images.pexels.com/photos/2306287/pexels-photo-2306287.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306288/pexels-photo-2306288.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306289/pexels-photo-2306289.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img73.jpg",
+      "hall imges/hall img74.jpg",
+      "hall imges/hall img75.jpg"
     ],
     "capacity": 700,
     "parking_capacity": 130,
@@ -1561,15 +2218,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 290000
+        "price": 290000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "Basic Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 377000
+        "price": 377000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 464000
+        "price": 464000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering",
+          "Separate Mehendi Lawn",
+          "Bridal Room",
+          "DJ Services"
+        ]
       }
     ],
     "reviews": [
@@ -1591,13 +2276,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": true,
     "outdoor": true,
     "stage": true,
-    "image": "https://images.pexels.com/photos/2253881/pexels-photo-2253881.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img73.jpg"
   },
   {
     "id": 26,
@@ -1609,9 +2293,9 @@
     "phone": "+92 333 1003562",
     "whatsapp": "+92 333 1003562",
     "gallery": [
-      "https://images.pexels.com/photos/2306290/pexels-photo-2306290.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306291/pexels-photo-2306291.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2306292/pexels-photo-2306292.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img76.jpg",
+      "hall imges/hall img77.jpg",
+      "hall imges/hall img78.jpg"
     ],
     "capacity": 700,
     "parking_capacity": 130,
@@ -1625,15 +2309,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 270000
+        "price": 270000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security"
+        ]
       },
       {
         "name": "Gold",
-        "price": 351000
+        "price": 351000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 432000
+        "price": 432000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge",
+          "Separate Mehendi Lawn",
+          "In-house Catering",
+          "Professional Sound System"
+        ]
       }
     ],
     "reviews": [
@@ -1655,13 +2367,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": false,
     "catering": false,
     "outdoor": true,
     "stage": false,
-    "image": "https://images.pexels.com/photos/1779414/pexels-photo-1779414.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img76.jpg"
   },
   {
     "id": 27,
@@ -1673,9 +2384,9 @@
     "phone": "+92 345 1003699",
     "whatsapp": "+92 345 1003699",
     "gallery": [
-      "https://images.pexels.com/photos/2306293/pexels-photo-2306293.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3038370/pexels-photo-3038370.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3038371/pexels-photo-3038371.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img79.jpg",
+      "hall imges/hall img80.jpg",
+      "hall imges/hall img81.jpg"
     ],
     "capacity": 600,
     "parking_capacity": 110,
@@ -1689,15 +2400,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 260000
+        "price": 260000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall"
+        ]
       },
       {
         "name": "Gold",
-        "price": 338000
+        "price": 338000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 416000
+        "price": 416000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room",
+          "Decor Services",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "Valet Parking"
+        ]
       }
     ],
     "reviews": [
@@ -1719,13 +2459,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/1779413/pexels-photo-1779413.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img79.jpg"
   },
   {
     "id": 28,
@@ -1737,9 +2476,9 @@
     "phone": "+92 300 1003836",
     "whatsapp": "+92 300 1003836",
     "gallery": [
-      "https://images.pexels.com/photos/3038372/pexels-photo-3038372.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3038373/pexels-photo-3038373.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3038374/pexels-photo-3038374.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img82.jpg",
+      "hall imges/hall img83.jpg",
+      "hall imges/hall img84.jpg"
     ],
     "capacity": 700,
     "parking_capacity": 130,
@@ -1753,15 +2492,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 280000
+        "price": 280000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Air Conditioned Hall",
+          "Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 364000
+        "price": 364000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 448000
+        "price": 448000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting",
+          "Generator Backup",
+          "Valet Parking",
+          "Event Coordinator"
+        ]
       }
     ],
     "reviews": [
@@ -1783,13 +2550,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": false,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/1779412/pexels-photo-1779412.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img82.jpg"
   },
   {
     "id": 29,
@@ -1801,9 +2567,9 @@
     "phone": "+92 301 1003973",
     "whatsapp": "+92 301 1003973",
     "gallery": [
-      "https://images.pexels.com/photos/3038375/pexels-photo-3038375.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3038376/pexels-photo-3038376.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3038377/pexels-photo-3038377.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img85.jpg",
+      "hall imges/hall img86.jpg",
+      "hall imges/hall img87.jpg"
     ],
     "capacity": 600,
     "parking_capacity": 110,
@@ -1817,15 +2583,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 250000
+        "price": 250000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "Basic Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 325000
+        "price": 325000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 400000
+        "price": 400000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering",
+          "Separate Mehendi Lawn",
+          "Bridal Room",
+          "DJ Services"
+        ]
       }
     ],
     "reviews": [
@@ -1847,13 +2641,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": true,
     "outdoor": true,
     "stage": true,
-    "image": "https://images.pexels.com/photos/1779411/pexels-photo-1779411.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img85.jpg"
   },
   {
     "id": 30,
@@ -1865,9 +2658,9 @@
     "phone": "+92 302 1004110",
     "whatsapp": "+92 302 1004110",
     "gallery": [
-      "https://images.pexels.com/photos/3038378/pexels-photo-3038378.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3038379/pexels-photo-3038379.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1456614/pexels-photo-1456614.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img88.jpg",
+      "hall imges/hall img89.jpg",
+      "hall imges/hall img90.jpg"
     ],
     "capacity": 700,
     "parking_capacity": 130,
@@ -1881,15 +2674,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 275000
+        "price": 275000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security"
+        ]
       },
       {
         "name": "Gold",
-        "price": 358000
+        "price": 358000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 440000
+        "price": 440000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge",
+          "Separate Mehendi Lawn",
+          "In-house Catering",
+          "Professional Sound System",
+          "LED Stage Lighting"
+        ]
       }
     ],
     "reviews": [
@@ -1911,13 +2733,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": false,
     "catering": false,
     "outdoor": true,
     "stage": false,
-    "image": "https://images.pexels.com/photos/1779410/pexels-photo-1779410.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img88.jpg"
   },
   {
     "id": 31,
@@ -1929,9 +2750,9 @@
     "phone": "+92 311 1004247",
     "whatsapp": "+92 311 1004247",
     "gallery": [
-      "https://images.pexels.com/photos/1456615/pexels-photo-1456615.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1456616/pexels-photo-1456616.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1456617/pexels-photo-1456617.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img91.jpg",
+      "hall imges/hall img92.jpg",
+      "hall imges/hall img93.jpg"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -1945,15 +2766,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 320000
+        "price": 320000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall"
+        ]
       },
       {
         "name": "Gold",
-        "price": 416000
+        "price": 416000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 512000
+        "price": 512000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room",
+          "Decor Services",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "Valet Parking"
+        ]
       }
     ],
     "reviews": [
@@ -1975,13 +2825,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/1730877/pexels-photo-1730877.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img91.jpg"
   },
   {
     "id": 32,
@@ -1993,9 +2842,9 @@
     "phone": "+92 321 1004384",
     "whatsapp": "+92 321 1004384",
     "gallery": [
-      "https://images.pexels.com/photos/1456618/pexels-photo-1456618.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1456619/pexels-photo-1456619.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1456620/pexels-photo-1456620.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img94.jpg",
+      "hall imges/hall img95.jpg",
+      "hall imges/hall img96.jpg"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -2009,15 +2858,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 300000
+        "price": 300000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Air Conditioned Hall",
+          "Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 390000
+        "price": 390000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 480000
+        "price": 480000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting",
+          "Generator Backup",
+          "Valet Parking",
+          "Event Coordinator"
+        ]
       }
     ],
     "reviews": [
@@ -2039,13 +2916,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": false,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/1730878/pexels-photo-1730878.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img94.jpg"
   },
   {
     "id": 33,
@@ -2057,9 +2933,9 @@
     "phone": "+92 333 1004521",
     "whatsapp": "+92 333 1004521",
     "gallery": [
-      "https://images.pexels.com/photos/1456621/pexels-photo-1456621.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1456622/pexels-photo-1456622.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/1456623/pexels-photo-1456623.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img97.jpg",
+      "hall imges/hall img98.jpg",
+      "hall imges/hall img99.jpg"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -2073,15 +2949,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 340000
+        "price": 340000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "Basic Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 442000
+        "price": 442000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 544000
+        "price": 544000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering",
+          "Separate Mehendi Lawn",
+          "Bridal Room",
+          "DJ Services",
+          "Photography"
+        ]
       }
     ],
     "reviews": [
@@ -2103,13 +3008,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": true,
     "outdoor": true,
     "stage": true,
-    "image": "https://images.pexels.com/photos/2253900/pexels-photo-2253900.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img97.jpg"
   },
   {
     "id": 34,
@@ -2121,9 +3025,9 @@
     "phone": "+92 345 1004658",
     "whatsapp": "+92 345 1004658",
     "gallery": [
-      "https://images.pexels.com/photos/931797/pexels-photo-931797.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/931798/pexels-photo-931798.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/931799/pexels-photo-931799.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img100.jpg",
+      "hall imges/hall img101.jpg",
+      "hall imges/hall img102.jpg"
     ],
     "capacity": 700,
     "parking_capacity": 130,
@@ -2137,15 +3041,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 280000
+        "price": 280000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security"
+        ]
       },
       {
         "name": "Gold",
-        "price": 364000
+        "price": 364000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 448000
+        "price": 448000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge",
+          "Separate Mehendi Lawn",
+          "In-house Catering",
+          "Professional Sound System"
+        ]
       }
     ],
     "reviews": [
@@ -2167,13 +3099,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": false,
     "catering": false,
     "outdoor": true,
     "stage": false,
-    "image": "https://images.pexels.com/photos/2253901/pexels-photo-2253901.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img100.jpg"
   },
   {
     "id": 35,
@@ -2185,9 +3116,9 @@
     "phone": "+92 300 1004795",
     "whatsapp": "+92 300 1004795",
     "gallery": [
-      "https://images.pexels.com/photos/931800/pexels-photo-931800.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/931801/pexels-photo-931801.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/931802/pexels-photo-931802.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img103.jpg",
+      "hall imges/hall img104.jpg",
+      "hall imges/hall img105.jpg"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -2201,15 +3132,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 330000
+        "price": 330000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall"
+        ]
       },
       {
         "name": "Gold",
-        "price": 429000
+        "price": 429000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 528000
+        "price": 528000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room",
+          "Decor Services",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "Valet Parking"
+        ]
       }
     ],
     "reviews": [
@@ -2231,13 +3191,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/2253902/pexels-photo-2253902.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img103.jpg"
   },
   {
     "id": 36,
@@ -2249,9 +3208,9 @@
     "phone": "+92 301 1004932",
     "whatsapp": "+92 301 1004932",
     "gallery": [
-      "https://images.pexels.com/photos/931803/pexels-photo-931803.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/931804/pexels-photo-931804.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/931805/pexels-photo-931805.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img106.jpg",
+      "hall imges/hall img107.jpg",
+      "hall imges/hall img108.jpg"
     ],
     "capacity": 900,
     "parking_capacity": 160,
@@ -2265,15 +3224,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 350000
+        "price": 350000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Air Conditioned Hall",
+          "Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 455000
+        "price": 455000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 560000
+        "price": 560000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting",
+          "Generator Backup",
+          "Valet Parking",
+          "Event Coordinator",
+          "Photography"
+        ]
       }
     ],
     "reviews": [
@@ -2295,13 +3283,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": false,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/2253903/pexels-photo-2253903.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img106.jpg"
   },
   {
     "id": 37,
@@ -2313,9 +3300,9 @@
     "phone": "+92 302 1005069",
     "whatsapp": "+92 302 1005069",
     "gallery": [
-      "https://images.pexels.com/photos/931806/pexels-photo-931806.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/587742/pexels-photo-587742.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/587743/pexels-photo-587743.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img109.jpg",
+      "hall imges/hall img110.jpg",
+      "hall imges/hall img1.jpg"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -2329,15 +3316,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 340000
+        "price": 340000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "Basic Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 442000
+        "price": 442000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 544000
+        "price": 544000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering",
+          "Separate Mehendi Lawn",
+          "Bridal Room",
+          "DJ Services"
+        ]
       }
     ],
     "reviews": [
@@ -2359,13 +3374,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": true,
     "outdoor": true,
     "stage": true,
-    "image": "https://images.pexels.com/photos/2253904/pexels-photo-2253904.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img109.jpg"
   },
   {
     "id": 38,
@@ -2377,9 +3391,9 @@
     "phone": "+92 311 1005206",
     "whatsapp": "+92 311 1005206",
     "gallery": [
-      "https://images.pexels.com/photos/587744/pexels-photo-587744.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/587745/pexels-photo-587745.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/587746/pexels-photo-587746.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img2.jpg",
+      "hall imges/hall img3.jpg",
+      "hall imges/hall img4.jpg"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -2393,15 +3407,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 330000
+        "price": 330000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security"
+        ]
       },
       {
         "name": "Gold",
-        "price": 429000
+        "price": 429000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 528000
+        "price": 528000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge",
+          "Separate Mehendi Lawn",
+          "In-house Catering",
+          "Professional Sound System"
+        ]
       }
     ],
     "reviews": [
@@ -2423,13 +3465,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": false,
     "catering": false,
     "outdoor": true,
     "stage": false,
-    "image": "https://images.pexels.com/photos/2253905/pexels-photo-2253905.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img2.jpg"
   },
   {
     "id": 39,
@@ -2441,9 +3482,9 @@
     "phone": "+92 321 1005343",
     "whatsapp": "+92 321 1005343",
     "gallery": [
-      "https://images.pexels.com/photos/587747/pexels-photo-587747.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/587748/pexels-photo-587748.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/587749/pexels-photo-587749.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img5.jpg",
+      "hall imges/hall img6.jpg",
+      "hall imges/hall img7.jpg"
     ],
     "capacity": 900,
     "parking_capacity": 160,
@@ -2457,15 +3498,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 360000
+        "price": 360000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall"
+        ]
       },
       {
         "name": "Gold",
-        "price": 468000
+        "price": 468000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 576000
+        "price": 576000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room",
+          "Decor Services",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "Valet Parking"
+        ]
       }
     ],
     "reviews": [
@@ -2487,13 +3557,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/3038367/pexels-photo-3038367.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img5.jpg"
   },
   {
     "id": 40,
@@ -2505,9 +3574,9 @@
     "phone": "+92 333 1005480",
     "whatsapp": "+92 333 1005480",
     "gallery": [
-      "https://images.pexels.com/photos/587750/pexels-photo-587750.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/587751/pexels-photo-587751.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2253906/pexels-photo-2253906.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img8.jpg",
+      "hall imges/hall img9.jpg",
+      "hall imges/hall img10.jpg"
     ],
     "capacity": 900,
     "parking_capacity": 160,
@@ -2521,15 +3590,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 345000
+        "price": 345000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Air Conditioned Hall",
+          "Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 448000
+        "price": 448000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 552000
+        "price": 552000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting",
+          "Generator Backup",
+          "Valet Parking",
+          "Event Coordinator"
+        ]
       }
     ],
     "reviews": [
@@ -2551,13 +3648,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": false,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/3038365/pexels-photo-3038365.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img8.jpg"
   },
   {
     "id": 41,
@@ -2569,9 +3665,9 @@
     "phone": "+92 345 1005617",
     "whatsapp": "+92 345 1005617",
     "gallery": [
-      "https://images.pexels.com/photos/2253907/pexels-photo-2253907.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2253908/pexels-photo-2253908.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2253909/pexels-photo-2253909.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img11.jpg",
+      "hall imges/hall img12.jpg",
+      "hall imges/hall img13.jpg"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -2585,15 +3681,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 300000
+        "price": 300000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "Basic Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 390000
+        "price": 390000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 480000
+        "price": 480000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering",
+          "Separate Mehendi Lawn",
+          "Bridal Room",
+          "Event Coordinator"
+        ]
       }
     ],
     "reviews": [
@@ -2615,13 +3739,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": true,
     "outdoor": true,
     "stage": true,
-    "image": "https://images.pexels.com/photos/3038364/pexels-photo-3038364.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img11.jpg"
   },
   {
     "id": 42,
@@ -2633,9 +3756,9 @@
     "phone": "+92 300 1005754",
     "whatsapp": "+92 300 1005754",
     "gallery": [
-      "https://images.pexels.com/photos/2253910/pexels-photo-2253910.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2253911/pexels-photo-2253911.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2253912/pexels-photo-2253912.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img14.jpg",
+      "hall imges/hall img15.jpg",
+      "hall imges/hall img16.jpg"
     ],
     "capacity": 700,
     "parking_capacity": 130,
@@ -2649,15 +3772,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 290000
+        "price": 290000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security"
+        ]
       },
       {
         "name": "Gold",
-        "price": 377000
+        "price": 377000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 464000
+        "price": 464000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge",
+          "Separate Mehendi Lawn",
+          "In-house Catering",
+          "Professional Sound System"
+        ]
       }
     ],
     "reviews": [
@@ -2679,13 +3830,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": false,
     "catering": false,
     "outdoor": true,
     "stage": false,
-    "image": "https://images.pexels.com/photos/3038363/pexels-photo-3038363.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img14.jpg"
   },
   {
     "id": 43,
@@ -2697,9 +3847,9 @@
     "phone": "+92 301 1005891",
     "whatsapp": "+92 301 1005891",
     "gallery": [
-      "https://images.pexels.com/photos/2253913/pexels-photo-2253913.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2253914/pexels-photo-2253914.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/2253915/pexels-photo-2253915.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img17.jpg",
+      "hall imges/hall img18.jpg",
+      "hall imges/hall img19.jpg"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -2713,15 +3863,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 310000
+        "price": 310000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall"
+        ]
       },
       {
         "name": "Gold",
-        "price": 403000
+        "price": 403000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 496000
+        "price": 496000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room",
+          "Decor Services",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "Valet Parking"
+        ]
       }
     ],
     "reviews": [
@@ -2743,13 +3922,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/3038362/pexels-photo-3038362.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img17.jpg"
   },
   {
     "id": 44,
@@ -2761,9 +3939,9 @@
     "phone": "+92 302 1006028",
     "whatsapp": "+92 302 1006028",
     "gallery": [
-      "https://images.pexels.com/photos/3014876/pexels-photo-3014876.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014877/pexels-photo-3014877.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014878/pexels-photo-3014878.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img20.jpg",
+      "hall imges/hall img21.jpg",
+      "hall imges/hall img22.jpg"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -2777,15 +3955,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 305000
+        "price": 305000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Air Conditioned Hall",
+          "Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 396000
+        "price": 396000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 488000
+        "price": 488000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting",
+          "Generator Backup",
+          "Valet Parking",
+          "Event Coordinator"
+        ]
       }
     ],
     "reviews": [
@@ -2807,13 +4013,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": false,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/3038361/pexels-photo-3038361.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img20.jpg"
   },
   {
     "id": 45,
@@ -2825,9 +4030,9 @@
     "phone": "+92 311 1006165",
     "whatsapp": "+92 311 1006165",
     "gallery": [
-      "https://images.pexels.com/photos/3014879/pexels-photo-3014879.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014880/pexels-photo-3014880.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014881/pexels-photo-3014881.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img23.jpg",
+      "hall imges/hall img24.jpg",
+      "hall imges/hall img25.jpg"
     ],
     "capacity": 800,
     "parking_capacity": 140,
@@ -2841,15 +4046,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 320000
+        "price": 320000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "Basic Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 416000
+        "price": 416000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 512000
+        "price": 512000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering",
+          "Separate Mehendi Lawn",
+          "Bridal Room",
+          "DJ Services",
+          "Photography"
+        ]
       }
     ],
     "reviews": [
@@ -2871,13 +4105,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": true,
     "outdoor": true,
     "stage": true,
-    "image": "https://images.pexels.com/photos/2306276/pexels-photo-2306276.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img23.jpg"
   },
   {
     "id": 46,
@@ -2889,9 +4122,9 @@
     "phone": "+92 321 1006302",
     "whatsapp": "+92 321 1006302",
     "gallery": [
-      "https://images.pexels.com/photos/3014882/pexels-photo-3014882.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014883/pexels-photo-3014883.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/3014884/pexels-photo-3014884.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img26.jpg",
+      "hall imges/hall img27.jpg",
+      "hall imges/hall img28.jpg"
     ],
     "capacity": 600,
     "parking_capacity": 110,
@@ -2905,15 +4138,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 250000
+        "price": 250000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security"
+        ]
       },
       {
         "name": "Gold",
-        "price": 325000
+        "price": 325000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 400000
+        "price": 400000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge",
+          "Separate Mehendi Lawn",
+          "In-house Catering",
+          "Professional Sound System"
+        ]
       }
     ],
     "reviews": [
@@ -2935,13 +4196,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": false,
     "catering": false,
     "outdoor": true,
     "stage": false,
-    "image": "https://images.pexels.com/photos/2306278/pexels-photo-2306278.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img26.jpg"
   },
   {
     "id": 47,
@@ -2953,9 +4213,9 @@
     "phone": "+92 333 1006439",
     "whatsapp": "+92 333 1006439",
     "gallery": [
-      "https://images.pexels.com/photos/3014885/pexels-photo-3014885.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/169199/pexels-photo-169199.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/169200/pexels-photo-169200.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img29.jpg",
+      "hall imges/hall img30.jpg",
+      "hall imges/hall img31.jpg"
     ],
     "capacity": 600,
     "parking_capacity": 110,
@@ -2969,15 +4229,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 240000
+        "price": 240000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall"
+        ]
       },
       {
         "name": "Gold",
-        "price": 312000
+        "price": 312000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 384000
+        "price": 384000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Elevator Access",
+          "Air Conditioned Hall",
+          "Family Lounge",
+          "Bridal Room",
+          "Decor Services",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "Valet Parking"
+        ]
       }
     ],
     "reviews": [
@@ -2999,13 +4288,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/2306279/pexels-photo-2306279.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img29.jpg"
   },
   {
     "id": 48,
@@ -3017,9 +4305,9 @@
     "phone": "+92 345 1006576",
     "whatsapp": "+92 345 1006576",
     "gallery": [
-      "https://images.pexels.com/photos/169201/pexels-photo-169201.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/169202/pexels-photo-169202.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/169203/pexels-photo-169203.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img32.jpg",
+      "hall imges/hall img33.jpg",
+      "hall imges/hall img34.jpg"
     ],
     "capacity": 600,
     "parking_capacity": 110,
@@ -3033,15 +4321,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 260000
+        "price": 260000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Air Conditioned Hall",
+          "Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 338000
+        "price": 338000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 416000
+        "price": 416000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Air Conditioned Hall",
+          "Professional Sound System",
+          "Bridal Room",
+          "LED Stage Lighting",
+          "Generator Backup",
+          "Valet Parking",
+          "Event Coordinator"
+        ]
       }
     ],
     "reviews": [
@@ -3063,13 +4379,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": false,
     "ac": true,
     "catering": false,
     "outdoor": false,
     "stage": true,
-    "image": "https://images.pexels.com/photos/2306280/pexels-photo-2306280.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img32.jpg"
   },
   {
     "id": 49,
@@ -3081,9 +4396,9 @@
     "phone": "+92 300 1006713",
     "whatsapp": "+92 300 1006713",
     "gallery": [
-      "https://images.pexels.com/photos/169204/pexels-photo-169204.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/169205/pexels-photo-169205.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/169206/pexels-photo-169206.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img35.jpg",
+      "hall imges/hall img36.jpg",
+      "hall imges/hall img37.jpg"
     ],
     "capacity": 600,
     "parking_capacity": 110,
@@ -3097,15 +4412,43 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 255000
+        "price": 255000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "Basic Sound System"
+        ]
       },
       {
         "name": "Gold",
-        "price": 332000
+        "price": 332000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 408000
+        "price": 408000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "Professional Sound System",
+          "LED Stage Lighting",
+          "In-house Catering",
+          "Separate Mehendi Lawn",
+          "Bridal Room",
+          "DJ Services"
+        ]
       }
     ],
     "reviews": [
@@ -3127,13 +4470,12 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": true,
     "catering": true,
     "outdoor": true,
     "stage": true,
-    "image": "https://images.pexels.com/photos/2306282/pexels-photo-2306282.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img35.jpg"
   },
   {
     "id": 50,
@@ -3145,9 +4487,9 @@
     "phone": "+92 301 1006850",
     "whatsapp": "+92 301 1006850",
     "gallery": [
-      "https://images.pexels.com/photos/169207/pexels-photo-169207.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/169208/pexels-photo-169208.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      "https://images.pexels.com/photos/10000/pexels-photo-10000.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+      "hall imges/hall img38.jpg",
+      "hall imges/hall img39.jpg",
+      "hall imges/hall img40.jpg"
     ],
     "capacity": 700,
     "parking_capacity": 130,
@@ -3161,15 +4503,44 @@
     "packages": [
       {
         "name": "Silver",
-        "price": 270000
+        "price": 270000,
+        "includes": [
+          "Hall Rent",
+          "Basic Setup",
+          "Standard Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security"
+        ]
       },
       {
         "name": "Gold",
-        "price": 351000
+        "price": 351000,
+        "includes": [
+          "Hall Rent",
+          "Premium Setup",
+          "Premium Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge"
+        ]
       },
       {
         "name": "Platinum",
-        "price": 432000
+        "price": 432000,
+        "includes": [
+          "Hall Rent",
+          "Luxury Setup & Decor",
+          "Luxury Chairs & Tables",
+          "Valet Parking",
+          "CCTV Security",
+          "Elevator Access",
+          "Family Lounge",
+          "Separate Mehendi Lawn",
+          "In-house Catering",
+          "Professional Sound System",
+          "LED Stage Lighting"
+        ]
       }
     ],
     "reviews": [
@@ -3191,12 +4562,11 @@
       "Easypaisa"
     ],
     "verified": false,
-    "data_status": "sample_placeholder",
     "parking": true,
     "ac": false,
     "catering": false,
     "outdoor": true,
     "stage": false,
-    "image": "https://images.pexels.com/photos/2306283/pexels-photo-2306283.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "image": "hall imges/hall img38.jpg"
   }
 ]

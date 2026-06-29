@@ -6,14 +6,14 @@
     "rating": 4.8,
     "starting_price": 8000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/dreamzcarz/600/400",
+    "image": "cars img/car img1.jpg",
     "address": "DHA Phase 5, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/dreamz1/900/600",
-      "https://picsum.photos/seed/dreamz2/900/600",
-      "https://picsum.photos/seed/dreamz3/900/600"
+      "cars img/car img1.jpg",
+      "cars img/car img2.jpg",
+      "cars img/car img3.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes E-Class", "BMW 5 Series"],
     "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive"],
@@ -69,14 +69,14 @@
     "rating": 4.7,
     "starting_price": 7000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/vigocar/600/400",
+    "image": "cars img/car img4.jpg",
     "address": "DHA Phase 6, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/vigo1/900/600",
-      "https://picsum.photos/seed/vigo2/900/600",
-      "https://picsum.photos/seed/vigo3/900/600"
+      "cars img/car img4.jpg",
+      "cars img/car img5.jpg",
+      "cars img/car img6.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Swift", "Toyota Fortuner"],
     "services": ["Wedding Car Rental", "Corporate Events", "Airport Transfer", "Guest Transport", "Chauffeur Drive"],
@@ -126,14 +126,14 @@
     "rating": 4.6,
     "starting_price": 9000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/brvcar/600/400",
+    "image": "cars img/car img7.jpg",
     "address": "DHA Phase 4, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/brv1/900/600",
-      "https://picsum.photos/seed/brv2/900/600",
-      "https://picsum.photos/seed/brv3/900/600"
+      "cars img/car img7.jpg",
+      "cars img/car img8.jpg",
+      "cars img/car img9.jpg"
     ],
     "fleet": ["Toyota Corolla Grande", "Honda Civic Rebirth", "Toyota Fortuner", "Land Cruiser", "Mercedes E-Class"],
     "services": ["Corporate Transportation", "Wedding Car Rental", "Executive Chauffeur Service", "Airport Transfer"],
@@ -184,14 +184,14 @@
     "rating": 4.5,
     "starting_price": 10000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/weddingeventcar/600/400",
+    "image": "cars img/car img10.jpg",
     "address": "DHA Phase 8, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/wedding1/900/600",
-      "https://picsum.photos/seed/wedding2/900/600",
-      "https://picsum.photos/seed/wedding3/900/600"
+      "cars img/car img10.jpg",
+      "cars img/car img11.jpg",
+      "cars img/car img12.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes S-Class", "BMW 7 Series"],
     "services": ["Wedding Car Rental", "Wedding Venue Booking", "Wedding Decor", "Full Wedding Planning"],
@@ -242,14 +242,14 @@
     "rating": 4.4,
     "starting_price": 8500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/capitalcar/600/400",
+    "image": "cars img/car img13.jpg",
     "address": "Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/capital1/900/600",
-      "https://picsum.photos/seed/capital2/900/600",
-      "https://picsum.photos/seed/capital3/900/600"
+      "cars img/car img13.jpg",
+      "cars img/car img14.jpg",
+      "cars img/car img15.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Kia Carnival"],
     "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Employee Transport", "Chauffeur Drive"],
@@ -298,14 +298,14 @@
     "rating": 4.5,
     "starting_price": 7500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/nafeescar/600/400",
+    "image": "cars img/car img16.jpg",
     "address": "Clifton Block 4, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/nafees1/900/600",
-      "https://picsum.photos/seed/nafees2/900/600",
-      "https://picsum.photos/seed/nafees3/900/600"
+      "cars img/car img16.jpg",
+      "cars img/car img17.jpg",
+      "cars img/car img18.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Kia Carnival"],
     "services": ["Wedding Car Rental", "Corporate Transport", "Employee Transport", "Airport Transfer", "Chauffeur Drive"],
@@ -356,14 +356,14 @@
     "rating": 4.5,
     "starting_price": 6000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/zjcar/600/400",
+    "image": "cars img/car img19.jpg",
     "address": "Clifton, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/zj1/900/600",
-      "https://picsum.photos/seed/zj2/900/600",
-      "https://picsum.photos/seed/zj3/900/600"
+      "cars img/car img19.jpg",
+      "cars img/car img20.jpg",
+      "cars img/car img21.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Alto", "Toyota Fortuner"],
     "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive"],
@@ -414,14 +414,14 @@
     "rating": 4.3,
     "starting_price": 6000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/lokalcar/600/400",
+    "image": "cars img/car img22.jpg",
     "address": "LOKAL Rooms, Shahrah-e-Faisal, Clifton, Karachi",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/lokal1/900/600",
-      "https://picsum.photos/seed/lokal2/900/600",
-      "https://picsum.photos/seed/lokal3/900/600"
+      "cars img/car img22.jpg",
+      "cars img/car img23.jpg",
+      "cars img/car img24.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Alto"],
     "services": ["Hotel Accommodation", "Car Rental Service", "Guest Transport", "Airport Transfer"],
@@ -464,14 +464,14 @@
     "rating": 4.6,
     "starting_price": 7000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/supremecar/600/400",
+    "image": "cars img/car img25.jpg",
     "address": "Clifton, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/supreme1/900/600",
-      "https://picsum.photos/seed/supreme2/900/600",
-      "https://picsum.photos/seed/supreme3/900/600"
+      "cars img/car img25.jpg",
+      "cars img/car img26.jpg",
+      "cars img/car img27.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner"],
     "services": ["Vacation Villa", "Car Rental Service", "Guest Transport", "Airport Pickup"],
@@ -514,14 +514,14 @@
     "rating": 4.4,
     "starting_price": 9000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/elitecar/600/400",
+    "image": "cars img/car img28.jpg",
     "address": "Clifton, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/elite1/900/600",
-      "https://picsum.photos/seed/elite2/900/600",
-      "https://picsum.photos/seed/elite3/900/600"
+      "cars img/car img28.jpg",
+      "cars img/car img29.jpg",
+      "cars img/car img30.jpg"
     ],
     "fleet": ["Mercedes E-Class", "BMW 5 Series", "Audi A6", "Land Cruiser", "Range Rover"],
     "services": ["Luxury Car Rental", "Executive Transport", "VIP Service", "Corporate Events"],
@@ -571,14 +571,14 @@
     "rating": 4.6,
     "starting_price": 7500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/royalcar/600/400",
+    "image": "cars img/car img31.jpg",
     "address": "PECHS Block 6, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/royal1/900/600",
-      "https://picsum.photos/seed/royal2/900/600",
-      "https://picsum.photos/seed/royal3/900/600"
+      "cars img/car img31.jpg",
+      "cars img/car img32.jpg",
+      "cars img/car img33.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Kia Carnival"],
     "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Guest Transport", "Chauffeur Drive"],
@@ -628,14 +628,14 @@
     "rating": 4.3,
     "starting_price": 5500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/starcar/600/400",
+    "image": "cars img/car img34.jpg",
     "address": "PECHS, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/star1/900/600",
-      "https://picsum.photos/seed/star2/900/600",
-      "https://picsum.photos/seed/star3/900/600"
+      "cars img/car img34.jpg",
+      "cars img/car img35.jpg",
+      "cars img/car img36.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Suzuki Swift", "Toyota Yaris"],
     "services": ["Wedding Car Rental", "Airport Transfer", "Self Drive", "Chauffeur Drive"],
@@ -679,14 +679,14 @@
     "rating": 4.4,
     "starting_price": 8000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/premiercar/600/400",
+    "image": "cars img/car img37.jpg",
     "address": "PECHS, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/premier1/900/600",
-      "https://picsum.photos/seed/premier2/900/600",
-      "https://picsum.photos/seed/premier3/900/600"
+      "cars img/car img37.jpg",
+      "cars img/car img38.jpg",
+      "cars img/car img39.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Kia Sportage"],
     "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Chauffeur Drive"],
@@ -736,14 +736,14 @@
     "rating": 4.2,
     "starting_price": 5000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/citycar/600/400",
+    "image": "cars img/car img40.jpg",
     "address": "PECHS, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/city1/900/600",
-      "https://picsum.photos/seed/city2/900/600",
-      "https://picsum.photos/seed/city3/900/600"
+      "cars img/car img40.jpg",
+      "cars img/car img41.jpg",
+      "cars img/car img42.jpg"
     ],
     "fleet": ["Toyota Corolla", "Suzuki Swift", "Honda City", "Toyota Yaris"],
     "services": ["City Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive"],
@@ -786,14 +786,14 @@
     "rating": 4.3,
     "starting_price": 6500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/metrocar/600/400",
+    "image": "cars img/car img43.jpg",
     "address": "PECHS, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/metro1/900/600",
-      "https://picsum.photos/seed/metro2/900/600",
-      "https://picsum.photos/seed/metro3/900/600"
+      "cars img/car img43.jpg",
+      "cars img/car img44.jpg",
+      "cars img/car img45.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner"],
     "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive"],
@@ -836,14 +836,14 @@
     "rating": 4.5,
     "starting_price": 7000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/grandcar/600/400",
+    "image": "cars img/car img46.jpg",
     "address": "Gulshan-e-Iqbal Block 6, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/grand1/900/600",
-      "https://picsum.photos/seed/grand2/900/600",
-      "https://picsum.photos/seed/grand3/900/600"
+      "cars img/car img46.jpg",
+      "cars img/car img47.jpg",
+      "cars img/car img48.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser"],
     "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Chauffeur Drive"],
@@ -892,14 +892,14 @@
     "rating": 4.4,
     "starting_price": 6500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/apexcar/600/400",
+    "image": "cars img/car img49.jpg",
     "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/apex1/900/600",
-      "https://picsum.photos/seed/apex2/900/600",
-      "https://picsum.photos/seed/apex3/900/600"
+      "cars img/car img49.jpg",
+      "cars img/car img50.jpg",
+      "cars img/car img51.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Kia Sportage"],
     "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive"],
@@ -942,14 +942,14 @@
     "rating": 4.6,
     "starting_price": 8500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/prestigecar/600/400",
+    "image": "cars img/car img52.jpg",
     "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/prestige1/900/600",
-      "https://picsum.photos/seed/prestige2/900/600",
-      "https://picsum.photos/seed/prestige3/900/600"
+      "cars img/car img52.jpg",
+      "cars img/car img53.jpg",
+      "cars img/car img54.jpg"
     ],
     "fleet": ["Toyota Corolla Grande", "Honda Civic Rebirth", "Toyota Fortuner", "Land Cruiser", "Mercedes E-Class"],
     "services": ["Prestige Car Rental", "Corporate Transport", "VIP Service", "Wedding Cars"],
@@ -999,14 +999,14 @@
     "rating": 4.3,
     "starting_price": 6000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/regalcar/600/400",
+    "image": "cars img/car img55.jpg",
     "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/regal1/900/600",
-      "https://picsum.photos/seed/regal2/900/600",
-      "https://picsum.photos/seed/regal3/900/600"
+      "cars img/car img55.jpg",
+      "cars img/car img56.jpg",
+      "cars img/car img57.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Suzuki Swift", "Toyota Yaris"],
     "services": ["Wedding Car Rental", "Airport Transfer", "Self Drive", "Chauffeur Drive"],
@@ -1049,14 +1049,14 @@
     "rating": 4.4,
     "starting_price": 7500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/silverstarcar/600/400",
+    "image": "cars img/car img58.jpg",
     "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/silver1/900/600",
-      "https://picsum.photos/seed/silver2/900/600",
-      "https://picsum.photos/seed/silver3/900/600"
+      "cars img/car img58.jpg",
+      "cars img/car img59.jpg",
+      "cars img/car img60.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser"],
     "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Chauffeur Drive"],
@@ -1105,14 +1105,14 @@
     "rating": 4.4,
     "starting_price": 7000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/goldenwheels/600/400",
+    "image": "cars img/car img61.jpg",
     "address": "Gulistan-e-Johar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/golden1/900/600",
-      "https://picsum.photos/seed/golden2/900/600",
-      "https://picsum.photos/seed/golden3/900/600"
+      "cars img/car img61.jpg",
+      "cars img/car img62.jpg",
+      "cars img/car img63.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Kia Sportage"],
     "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Self Drive"],
@@ -1155,14 +1155,14 @@
     "rating": 4.3,
     "starting_price": 6500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/primecar/600/400",
+    "image": "cars img/car img64.jpg",
     "address": "Gulistan-e-Johar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/prime1/900/600",
-      "https://picsum.photos/seed/prime2/900/600",
-      "https://picsum.photos/seed/prime3/900/600"
+      "cars img/car img64.jpg",
+      "cars img/car img65.jpg",
+      "cars img/car img66.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris", "Suzuki Swift"],
     "services": ["Wedding Car Rental", "Airport Transfer", "Self Drive", "Chauffeur Drive"],
@@ -1205,14 +1205,14 @@
     "rating": 4.5,
     "starting_price": 8000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/elitewheels/600/400",
+    "image": "cars img/car img67.jpg",
     "address": "Gulistan-e-Johar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/elitew1/900/600",
-      "https://picsum.photos/seed/elitew2/900/600",
-      "https://picsum.photos/seed/elitew3/900/600"
+      "cars img/car img67.jpg",
+      "cars img/car img68.jpg",
+      "cars img/car img69.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser", "Mercedes E-Class"],
     "services": ["Luxury Car Rental", "Corporate Transport", "VIP Service", "Wedding Cars"],
@@ -1262,14 +1262,14 @@
     "rating": 4.2,
     "starting_price": 5500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/royalwheels/600/400",
+    "image": "cars img/car img70.jpg",
     "address": "Gulistan-e-Johar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/royalw1/900/600",
-      "https://picsum.photos/seed/royalw2/900/600",
-      "https://picsum.photos/seed/royalw3/900/600"
+      "cars img/car img70.jpg",
+      "cars img/car img71.jpg",
+      "cars img/car img72.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Suzuki Swift"],
     "services": ["Wedding Car Rental", "Airport Transfer", "Self Drive"],
@@ -1312,14 +1312,14 @@
     "rating": 4.3,
     "starting_price": 6000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/dreamdrive/600/400",
+    "image": "cars img/car img73.jpg",
     "address": "Gulistan-e-Johar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/dreamdrive1/900/600",
-      "https://picsum.photos/seed/dreamdrive2/900/600",
-      "https://picsum.photos/seed/dreamdrive3/900/600"
+      "cars img/car img73.jpg",
+      "cars img/car img74.jpg",
+      "cars img/car img75.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Yaris"],
     "services": ["Wedding Car Rental", "Airport Transfer", "Self Drive", "Chauffeur Drive"],
@@ -1362,14 +1362,14 @@
     "rating": 4.2,
     "starting_price": 5000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/fasttrack/600/400",
+    "image": "cars img/car img76.jpg",
     "address": "Federal B Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/fast1/900/600",
-      "https://picsum.photos/seed/fast2/900/600",
-      "https://picsum.photos/seed/fast3/900/600"
+      "cars img/car img76.jpg",
+      "cars img/car img77.jpg",
+      "cars img/car img78.jpg"
     ],
     "fleet": ["Toyota Corolla", "Suzuki Swift", "Honda Civic"],
     "services": ["Fast Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive"],
@@ -1412,14 +1412,14 @@
     "rating": 4.3,
     "starting_price": 6000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/roadking/600/400",
+    "image": "cars img/car img79.jpg",
     "address": "Federal B Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/road1/900/600",
-      "https://picsum.photos/seed/road2/900/600",
-      "https://picsum.photos/seed/road3/900/600"
+      "cars img/car img79.jpg",
+      "cars img/car img80.jpg",
+      "cars img/car img81.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner"],
     "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Chauffeur Drive"],
@@ -1462,14 +1462,14 @@
     "rating": 4.1,
     "starting_price": 4500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/drivesafe/600/400",
+    "image": "cars img/car img82.jpg",
     "address": "Federal B Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/drivesafe1/900/600",
-      "https://picsum.photos/seed/drivesafe2/900/600",
-      "https://picsum.photos/seed/drivesafe3/900/600"
+      "cars img/car img82.jpg",
+      "cars img/car img83.jpg",
+      "cars img/car img84.jpg"
     ],
     "fleet": ["Toyota Corolla", "Suzuki Swift"],
     "services": ["Safe Transport", "Airport Transfer", "Self Drive"],
@@ -1512,14 +1512,14 @@
     "rating": 4.2,
     "starting_price": 5000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/citywheels/600/400",
+    "image": "cars img/car img85.jpg",
     "address": "Federal B Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/cityw1/900/600",
-      "https://picsum.photos/seed/cityw2/900/600",
-      "https://picsum.photos/seed/cityw3/900/600"
+      "cars img/car img85.jpg",
+      "cars img/car img86.jpg",
+      "cars img/car img87.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Suzuki Swift"],
     "services": ["City Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive"],
@@ -1562,14 +1562,14 @@
     "rating": 4.1,
     "starting_price": 4800,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/comfortcar/600/400",
+    "image": "cars img/car img88.jpg",
     "address": "Federal B Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/comfort1/900/600",
-      "https://picsum.photos/seed/comfort2/900/600",
-      "https://picsum.photos/seed/comfort3/900/600"
+      "cars img/car img88.jpg",
+      "cars img/car img89.jpg",
+      "cars img/car img90.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic"],
     "services": ["Comfort Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive"],
@@ -1612,14 +1612,14 @@
     "rating": 4.5,
     "starting_price": 9000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/luxurycar/600/400",
+    "image": "cars img/car img1.jpg",
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/lux1/900/600",
-      "https://picsum.photos/seed/lux2/900/600",
-      "https://picsum.photos/seed/lux3/900/600"
+      "cars img/car img1.jpg",
+      "cars img/car img2.jpg",
+      "cars img/car img3.jpg"
     ],
     "fleet": ["Mercedes E-Class", "BMW 5 Series", "Audi A6", "Land Cruiser", "Range Rover"],
     "services": ["Luxury Car Rental", "VIP Service", "Corporate Events", "Wedding Cars"],
@@ -1669,14 +1669,14 @@
     "rating": 4.4,
     "starting_price": 8500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/exclusivecar/600/400",
+    "image": "cars img/car img4.jpg",
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/excl1/900/600",
-      "https://picsum.photos/seed/excl2/900/600",
-      "https://picsum.photos/seed/excl3/900/600"
+      "cars img/car img4.jpg",
+      "cars img/car img5.jpg",
+      "cars img/car img6.jpg"
     ],
     "fleet": ["Toyota Corolla Grande", "Honda Civic Rebirth", "Toyota Fortuner", "Mercedes C-Class"],
     "services": ["Exclusive Car Rental", "Corporate Transport", "VIP Service", "Wedding Cars"],
@@ -1725,14 +1725,14 @@
     "rating": 4.3,
     "starting_price": 7000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/premierwheels/600/400",
+    "image": "cars img/car img7.jpg",
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/premw1/900/600",
-      "https://picsum.photos/seed/premw2/900/600",
-      "https://picsum.photos/seed/premw3/900/600"
+      "cars img/car img7.jpg",
+      "cars img/car img8.jpg",
+      "cars img/car img9.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner"],
     "services": ["Wedding Car Rental", "Corporate Transport", "Airport Transfer", "Chauffeur Drive"],
@@ -1775,14 +1775,14 @@
     "rating": 4.2,
     "starting_price": 6000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/stardrive/600/400",
+    "image": "cars img/car img10.jpg",
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/stardrive1/900/600",
-      "https://picsum.photos/seed/stardrive2/900/600",
-      "https://picsum.photos/seed/stardrive3/900/600"
+      "cars img/car img10.jpg",
+      "cars img/car img11.jpg",
+      "cars img/car img12.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Suzuki Swift"],
     "services": ["Wedding Car Rental", "Airport Transfer", "Self Drive"],
@@ -1825,14 +1825,14 @@
     "rating": 4.3,
     "starting_price": 7500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/royaldrive/600/400",
+    "image": "cars img/car img13.jpg",
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/royald1/900/600",
-      "https://picsum.photos/seed/royald2/900/600",
-      "https://picsum.photos/seed/royald3/900/600"
+      "cars img/car img13.jpg",
+      "cars img/car img14.jpg",
+      "cars img/car img15.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner", "Land Cruiser"],
     "services": ["Wedding Car Rental", "Corporate Transport", "VIP Service", "Chauffeur Drive"],
@@ -1881,14 +1881,14 @@
     "rating": 4.3,
     "starting_price": 5500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/speedcar/600/400",
+    "image": "cars img/car img16.jpg",
     "address": "Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/speed1/900/600",
-      "https://picsum.photos/seed/speed2/900/600",
-      "https://picsum.photos/seed/speed3/900/600"
+      "cars img/car img16.jpg",
+      "cars img/car img17.jpg",
+      "cars img/car img18.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Suzuki Swift"],
     "services": ["Speed Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive"],
@@ -1931,14 +1931,14 @@
     "rating": 4.2,
     "starting_price": 5000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/rapidrentals/600/400",
+    "image": "cars img/car img19.jpg",
     "address": "Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/rapid1/900/600",
-      "https://picsum.photos/seed/rapid2/900/600",
-      "https://picsum.photos/seed/rapid3/900/600"
+      "cars img/car img19.jpg",
+      "cars img/car img20.jpg",
+      "cars img/car img21.jpg"
     ],
     "fleet": ["Toyota Corolla", "Suzuki Swift"],
     "services": ["Rapid Transport", "Airport Transfer", "Self Drive"],
@@ -1981,14 +1981,14 @@
     "rating": 4.1,
     "starting_price": 4800,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/cruisecar/600/400",
+    "image": "cars img/car img22.jpg",
     "address": "Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/cruise1/900/600",
-      "https://picsum.photos/seed/cruise2/900/600",
-      "https://picsum.photos/seed/cruise3/900/600"
+      "cars img/car img22.jpg",
+      "cars img/car img23.jpg",
+      "cars img/car img24.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic"],
     "services": ["Cruise Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive"],
@@ -2031,14 +2031,14 @@
     "rating": 4.2,
     "starting_price": 5500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/highwaycar/600/400",
+    "image": "cars img/car img25.jpg",
     "address": "Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/highway1/900/600",
-      "https://picsum.photos/seed/highway2/900/600",
-      "https://picsum.photos/seed/highway3/900/600"
+      "cars img/car img25.jpg",
+      "cars img/car img26.jpg",
+      "cars img/car img27.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner"],
     "services": ["Highway Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive"],
@@ -2081,14 +2081,14 @@
     "rating": 4.3,
     "starting_price": 6500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/expresscar/600/400",
+    "image": "cars img/car img28.jpg",
     "address": "Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/express1/900/600",
-      "https://picsum.photos/seed/express2/900/600",
-      "https://picsum.photos/seed/express3/900/600"
+      "cars img/car img28.jpg",
+      "cars img/car img29.jpg",
+      "cars img/car img30.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Fortuner"],
     "services": ["Express Transport", "Airport Transfer", "Self Drive", "Chauffeur Drive"],
@@ -2131,14 +2131,14 @@
     "rating": 4.5,
     "starting_price": 6000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/ittehad/600/400",
+    "image": "cars img/car img31.jpg",
     "address": "F 89 Kiran Rd, Block F North Nazimabad Town, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/ittehad1/900/600",
-      "https://picsum.photos/seed/ittehad2/900/600",
-      "https://picsum.photos/seed/ittehad3/900/600"
+      "cars img/car img31.jpg",
+      "cars img/car img32.jpg",
+      "cars img/car img33.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Toyota Hiace", "Coaster Bus"],
     "services": ["Transport Service", "Car Rental", "Wedding Transport", "Corporate Transport", "School Transport"],
@@ -2187,14 +2187,14 @@
     "rating": 4.3,
     "starting_price": 5500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/northstar/600/400",
+    "image": "cars img/car img34.jpg",
     "address": "North Nazimabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/nstar1/900/600",
-      "https://picsum.photos/seed/nstar2/900/600",
-      "https://picsum.photos/seed/nstar3/900/600"
+      "cars img/car img34.jpg",
+      "cars img/car img35.jpg",
+      "cars img/car img36.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Suzuki Swift"],
     "services": ["Wedding Car Rental", "Airport Transfer", "Self Drive", "Chauffeur Drive"],
@@ -2237,14 +2237,14 @@
     "rating": 4.2,
     "starting_price": 5000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/nazimabadcar/600/400",
+    "image": "cars img/car img37.jpg",
     "address": "North Nazimabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/nazcar1/900/600",
-      "https://picsum.photos/seed/nazcar2/900/600",
-      "https://picsum.photos/seed/nazcar3/900/600"
+      "cars img/car img37.jpg",
+      "cars img/car img38.jpg",
+      "cars img/car img39.jpg"
     ],
     "fleet": ["Toyota Corolla", "Suzuki Swift", "Honda Civic"],
     "services": ["Nazimabad Transport", "Airport Transfer", "Self Drive"],
@@ -2287,14 +2287,14 @@
     "rating": 4.1,
     "starting_price": 4500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/nazimabadrentals/600/400",
+    "image": "cars img/car img40.jpg",
     "address": "North Nazimabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/nazrent1/900/600",
-      "https://picsum.photos/seed/nazrent2/900/600",
-      "https://picsum.photos/seed/nazrent3/900/600"
+      "cars img/car img40.jpg",
+      "cars img/car img41.jpg",
+      "cars img/car img42.jpg"
     ],
     "fleet": ["Toyota Corolla", "Suzuki Swift"],
     "services": ["Local Transport", "Airport Transfer", "Self Drive"],
@@ -2337,14 +2337,14 @@
     "rating": 4.2,
     "starting_price": 5200,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/northsiderentals/600/400",
+    "image": "cars img/car img43.jpg",
     "address": "North Nazimabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/nside1/900/600",
-      "https://picsum.photos/seed/nside2/900/600",
-      "https://picsum.photos/seed/nside3/900/600"
+      "cars img/car img43.jpg",
+      "cars img/car img44.jpg",
+      "cars img/car img45.jpg"
     ],
     "fleet": ["Toyota Corolla", "Honda Civic", "Suzuki Swift"],
     "services": ["North Side Transport", "Airport Transfer", "Self Drive"],
@@ -2387,14 +2387,14 @@
     "rating": 4.3,
     "starting_price": 4000,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/northkarachirentals/600/400",
+    "image": "cars img/car img46.jpg",
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/nkrent1/900/600",
-      "https://picsum.photos/seed/nkrent2/900/600",
-      "https://picsum.photos/seed/nkrent3/900/600"
+      "cars img/car img46.jpg",
+      "cars img/car img47.jpg",
+      "cars img/car img48.jpg"
     ],
     "fleet": ["Toyota Corolla", "Suzuki Swift", "Honda Civic"],
     "services": ["North Karachi Transport", "Airport Transfer", "Self Drive"],
@@ -2437,14 +2437,14 @@
     "rating": 4.2,
     "starting_price": 3800,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/karachinorthcar/600/400",
+    "image": "cars img/car img49.jpg",
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/knorth1/900/600",
-      "https://picsum.photos/seed/knorth2/900/600",
-      "https://picsum.photos/seed/knorth3/900/600"
+      "cars img/car img49.jpg",
+      "cars img/car img50.jpg",
+      "cars img/car img51.jpg"
     ],
     "fleet": ["Toyota Corolla", "Suzuki Swift"],
     "services": ["Karachi North Transport", "Airport Transfer", "Self Drive"],
@@ -2487,14 +2487,14 @@
     "rating": 4.1,
     "starting_price": 3500,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/northernwheels/600/400",
+    "image": "cars img/car img52.jpg",
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/nwheels1/900/600",
-      "https://picsum.photos/seed/nwheels2/900/600",
-      "https://picsum.photos/seed/nwheels3/900/600"
+      "cars img/car img52.jpg",
+      "cars img/car img53.jpg",
+      "cars img/car img54.jpg"
     ],
     "fleet": ["Toyota Corolla", "Suzuki Alto"],
     "services": ["Northern Transport", "Airport Transfer", "Self Drive"],
@@ -2537,14 +2537,14 @@
     "rating": 4.0,
     "starting_price": 3200,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/northgaterentals/600/400",
+    "image": "cars img/car img55.jpg",
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/ngate1/900/600",
-      "https://picsum.photos/seed/ngate2/900/600",
-      "https://picsum.photos/seed/ngate3/900/600"
+      "cars img/car img55.jpg",
+      "cars img/car img56.jpg",
+      "cars img/car img57.jpg"
     ],
     "fleet": ["Suzuki Alto", "Toyota Corolla"],
     "services": ["North Gate Transport", "Airport Transfer", "Self Drive"],
@@ -2587,14 +2587,14 @@
     "rating": 4.1,
     "starting_price": 3600,
     "price_type": "per day",
-    "image": "https://picsum.photos/seed/citynorthcar/600/400",
+    "image": "cars img/car img58.jpg",
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/cnorth1/900/600",
-      "https://picsum.photos/seed/cnorth2/900/600",
-      "https://picsum.photos/seed/cnorth3/900/600"
+      "cars img/car img58.jpg",
+      "cars img/car img59.jpg",
+      "cars img/car img60.jpg"
     ],
     "fleet": ["Toyota Corolla", "Suzuki Swift"],
     "services": ["City North Transport", "Airport Transfer", "Self Drive"],
