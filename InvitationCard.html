@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WedDream · AI Invitation Designer (Step-by-Step)</title>
+    <title>WedDream · AI Invitation Designer</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* ----- ROOT VARIABLES ----- */
         :root {
             --rose:        #b93b56;
             --rose-hover:  #a22f49;
@@ -51,7 +50,6 @@
             box-shadow: 0 8px 24px rgba(0,0,0,0.6);
         }
 
-        /* ----- APP LAYOUT ----- */
         .app {
             display: grid;
             grid-template-columns: 280px 1fr 320px;
@@ -62,7 +60,6 @@
             margin: 0 auto;
         }
 
-        /* ----- SIDEBAR LEFT (Wizard + Dynamic Inputs) ----- */
         .sidebar-left {
             position: sticky;
             top: 1.5rem;
@@ -150,7 +147,6 @@
             font-size: 1rem;
         }
 
-        /* Dynamic Input Area */
         .input-area {
             margin-top: 1.5rem;
             padding: 1rem;
@@ -169,9 +165,7 @@
             letter-spacing: 1px;
         }
 
-        .input-group {
-            margin-bottom: 0.8rem;
-        }
+        .input-group { margin-bottom: 0.8rem; }
 
         .input-group label {
             display: block;
@@ -183,7 +177,7 @@
             margin-bottom: 0.3rem;
         }
 
-        .input-group input, .input-group select {
+        .input-group input, .input-group select, .input-group textarea {
             width: 100%;
             padding: 0.6rem 0.8rem;
             border-radius: 12px;
@@ -196,20 +190,14 @@
             outline: none;
         }
 
-        .input-group input:focus, .input-group select:focus {
+        .input-group input:focus, .input-group select:focus, .input-group textarea:focus {
             border-color: var(--gold);
             box-shadow: 0 0 20px rgba(200, 155, 44, 0.1);
             background: rgba(255,255,255,0.06);
         }
 
-        .input-group input::placeholder {
-            color: rgba(255,255,255,0.2);
-        }
-
-        .input-group select option {
-            background: #1a1a1a;
-            color: var(--white);
-        }
+        .input-group input::placeholder, .input-group textarea::placeholder { color: rgba(255,255,255,0.2); }
+        .input-group select option { background: #1a1a1a; color: var(--white); }
 
         .step-indicator {
             font-size: 0.7rem;
@@ -220,7 +208,6 @@
             letter-spacing: 1px;
         }
 
-        /* ----- CENTER CANVAS ----- */
         .canvas-center {
             border-radius: 32px;
             background: var(--bg-charcoal);
@@ -240,11 +227,7 @@
             gap: 0.4rem;
         }
 
-        .canvas-toolbar .tool-group {
-            display: flex;
-            gap: 0.6rem;
-            align-items: center;
-        }
+        .canvas-toolbar .tool-group { display: flex; gap: 0.6rem; align-items: center; }
 
         .canvas-toolbar button {
             background: transparent;
@@ -286,10 +269,12 @@
         .invitation-preview {
             flex: 1;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 1.2rem 0.5rem;
             min-height: 540px;
+            gap: 1rem;
         }
 
         .invitation-card {
@@ -371,42 +356,16 @@
             min-height: 1.2rem;
         }
 
-        .invitation-card.empty .couple-names::before {
-            content: "Your Names Here";
-            color: #bbb;
-            font-weight: 300;
-            opacity: 0.5;
-        }
-
-        .invitation-card.empty .event-detail::before {
-            content: "Event Type";
-            color: #bbb;
-            font-weight: 300;
-            opacity: 0.5;
-        }
-
-        .invitation-card.empty .venue-text::before {
-            content: "Venue · Date";
-            color: #bbb;
-            font-weight: 300;
-            opacity: 0.5;
-        }
-
-        .invitation-card.empty .sub-text::before {
-            content: "— your invitation —";
-            color: #bbb;
-            font-weight: 300;
-            opacity: 0.5;
-        }
+        .invitation-card.empty .couple-names::before { content: "Your Names Here"; color: #bbb; font-weight: 300; opacity: 0.5; }
+        .invitation-card.empty .event-detail::before { content: "Event Type"; color: #bbb; font-weight: 300; opacity: 0.5; }
+        .invitation-card.empty .venue-text::before { content: "Venue · Date"; color: #bbb; font-weight: 300; opacity: 0.5; }
+        .invitation-card.empty .sub-text::before { content: "— your invitation —"; color: #bbb; font-weight: 300; opacity: 0.5; }
 
         .invitation-card:not(.empty) .couple-names::before,
         .invitation-card:not(.empty) .event-detail::before,
         .invitation-card:not(.empty) .venue-text::before,
-        .invitation-card:not(.empty) .sub-text::before {
-            display: none;
-        }
+        .invitation-card:not(.empty) .sub-text::before { display: none; }
 
-        /* ----- RIGHT AI PANEL ----- */
         .panel-right {
             border-radius: 28px;
             padding: 1.6rem 1.2rem;
@@ -461,6 +420,43 @@
             color: var(--white);
         }
 
+        .api-key-box {
+            background: rgba(200,155,44,0.06);
+            border: 1px solid rgba(200,155,44,0.18);
+            border-radius: 16px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .api-key-box label {
+            display: block;
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .api-key-box input {
+            width: 100%;
+            padding: 0.55rem 0.75rem;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: #fff;
+            font-size: 0.78rem;
+            outline: none;
+        }
+
+        .api-key-box input:focus { border-color: var(--gold); }
+
+        .api-key-box .hint {
+            font-size: 0.6rem;
+            color: rgba(255,255,255,0.3);
+            margin-top: 0.5rem;
+            line-height: 1.5;
+        }
+
         .ai-illustration {
             background: radial-gradient(circle at 30% 40%, rgba(200,155,44,0.08), transparent 70%);
             border-radius: 40px;
@@ -483,10 +479,7 @@
             transition: all 0.3s ease;
         }
 
-        .ai-illustration:hover i {
-            opacity: 0.8;
-            transform: scale(1.1);
-        }
+        .ai-illustration:hover i { opacity: 0.8; transform: scale(1.1); }
 
         .generate-btn {
             background: linear-gradient(135deg, var(--gold), #a87a1e);
@@ -515,7 +508,31 @@
             background: linear-gradient(135deg, var(--gold-light), var(--gold));
         }
 
-        /* ----- RESPONSIVE ----- */
+        .generate-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .action-btn {
+            border: none;
+            padding: 0.55rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 0.78rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.25s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .action-btn.gold { background: var(--gold); color: #0B0B0B; font-weight: 600; }
+        .action-btn.gold:hover { background: var(--gold-light); transform: scale(1.05); }
+        .action-btn.ghost { background: rgba(255,255,255,0.06); color: #fff; border: 1px solid rgba(255,255,255,0.1); }
+        .action-btn.ghost:hover { background: rgba(255,255,255,0.12); transform: scale(1.05); }
+
         @media (max-width: 1200px) {
             .app { grid-template-columns: 240px 1fr 260px; gap: 1rem; padding: 1rem; }
         }
@@ -531,7 +548,6 @@
             .invitation-card { max-width: 100%; padding: 1.5rem 1rem; }
         }
 
-        /* ----- FLOATING PARTICLES ----- */
         .particle {
             position: fixed;
             border-radius: 50%;
@@ -552,7 +568,6 @@
         .particle:nth-child(2) { width: 200px; height: 200px; bottom: 5%; right: 2%; animation-duration: 24s; }
         .particle:nth-child(3) { width: 80px; height: 80px; top: 40%; left: 40%; animation-duration: 14s; }
 
-        /* ----- AI OVERLAY ----- */
         #aiOverlay {
             display: none;
             position: fixed;
@@ -564,11 +579,11 @@
             justify-content: center;
             flex-direction: column;
             gap: 1.5rem;
+            text-align: center;
+            padding: 1rem;
         }
 
-        #aiOverlay.show {
-            display: flex;
-        }
+        #aiOverlay.show { display: flex; }
 
         #aiOverlay .loader-ring {
             width: 80px;
@@ -579,10 +594,7 @@
             animation: spin 0.9s linear infinite;
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
         #aiOverlay .title {
             font-family: 'Cinzel', serif;
@@ -592,10 +604,9 @@
             animation: pulse 1.5s ease-in-out infinite;
         }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+        #aiOverlay .sub { font-size: 0.8rem; color: var(--text-light); opacity: 0.6; max-width: 320px; }
 
         #closeOverlay {
             background: var(--gold);
@@ -609,17 +620,13 @@
             transition: all 0.3s ease;
         }
 
-        #closeOverlay:hover {
-            background: var(--gold-light);
-            transform: scale(1.05);
-        }
+        #closeOverlay:hover { background: var(--gold-light); transform: scale(1.05); }
     </style>
 </head>
 <body>
 
-    <!-- ================= NAVEBAR ================= -->
- <div id="nav-container"></div>
-
+<!-- ================= NAVBAR ================= -->
+<div id="nav-container"></div>
 
 <div class="particle"></div>
 <div class="particle"></div>
@@ -630,11 +637,10 @@
     <!-- LEFT SIDEBAR -->
     <aside class="sidebar-left">
         <div class="logo">✦ WedDream</div>
-        
-        <!-- Wizard Steps -->
+
         <div class="wizard-steps" id="wizardSteps">
-            <div class="wizard-step completed" data-step="1"><span class="step-num">01</span> Event <i class="fas fa-check-circle"></i></div>
-            <div class="wizard-step active" data-step="2"><span class="step-num">02</span> Couple Details</div>
+            <div class="wizard-step active" data-step="1"><span class="step-num">01</span> Event</div>
+            <div class="wizard-step" data-step="2"><span class="step-num">02</span> Couple Details</div>
             <div class="wizard-step" data-step="3"><span class="step-num">03</span> Event Details</div>
             <div class="wizard-step" data-step="4"><span class="step-num">04</span> Theme Selection</div>
             <div class="wizard-step" data-step="5"><span class="step-num">05</span> Fonts & Colors</div>
@@ -643,27 +649,12 @@
             <div class="wizard-step" data-step="8"><span class="step-num">08</span> Generate Invitation</div>
         </div>
 
-        <!-- Dynamic Input Area -->
         <div class="input-area" id="inputArea">
-            <div class="step-title" id="stepTitle">📝 Couple Details</div>
-            <div id="stepInputs">
-                <!-- Step 2: Couple Details (default) -->
-                <div class="input-group">
-                    <label><i class="fas fa-user"></i> Bride Name</label>
-                    <input type="text" id="brideName" placeholder="e.g. Fatima" value="">
-                </div>
-                <div class="input-group">
-                    <label><i class="fas fa-user"></i> Groom Name</label>
-                    <input type="text" id="groomName" placeholder="e.g. Ali" value="">
-                </div>
-                <div class="input-group">
-                    <label><i class="fas fa-users"></i> Hosted By</label>
-                    <input type="text" id="hostedBy" placeholder="e.g. Mr. & Mrs. Ahmed" value="">
-                </div>
-            </div>
+            <div class="step-title" id="stepTitle">🎉 Select Event</div>
+            <div id="stepInputs"></div>
         </div>
 
-        <div class="step-indicator" id="stepIndicator">✨ step 2 of 8 · fill details</div>
+        <div class="step-indicator" id="stepIndicator">✨ step 1 of 8 · choose event</div>
     </aside>
 
     <!-- CENTER WORKSPACE -->
@@ -715,619 +706,773 @@
             <div class="label">Color Palette</div>
             <div class="value">#C89B2C · #B93B56 · #FFFFFF</div>
         </div>
+
+        <div class="api-key-box">
+            <label><i class="fas fa-key"></i> Gemini API Key</label>
+            <input type="password" id="geminiKey" placeholder="Paste your Gemini API key">
+            <div class="hint">Get a free key at aistudio.google.com — used only in this browser session, never stored or sent anywhere except Google's API.</div>
+        </div>
+
         <div class="ai-illustration">
             <i class="fas fa-robot"></i>
             <div style="font-size:0.7rem; margin-top:0.3rem; opacity:0.5;">AI design intelligence</div>
         </div>
         <button class="generate-btn" id="generateBtn"><i class="fas fa-wand-magic-sparkles"></i> Generate Invitation</button>
-        <div style="margin-top:0.8rem; font-size:0.65rem; text-align:center; opacity:0.3;">premium · AI powered</div>
+        <div style="margin-top:0.8rem; font-size:0.65rem; text-align:center; opacity:0.3;">premium · Gemini + Pollinations AI</div>
     </aside>
 </div>
 
+<!-- ================= FOOTER ================= -->
+<div id="footer-container"></div>
+
 <!-- AI OVERLAY -->
 <div id="aiOverlay">
-    <div class="title">✨ AI is designing your masterpiece...</div>
-    <div class="loader-ring"></div>
-    <div class="sub">generating premium invitation with WedDream AI</div>
+    <div class="title" id="overlayTitle">✨ AI is designing your masterpiece...</div>
+    <div class="loader-ring" id="overlayLoader"></div>
+    <div class="sub" id="overlaySub">generating premium invitation with WedDream AI</div>
     <button id="closeOverlay">Close Preview</button>
 </div>
 
-<!-- ================= FOOTER ================= -->
- <div id="footer-container"></div>
-
-
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 
+  /* ── NAVBAR ── */
+  $(document).ready(() => {
+      $.get('navebar.html', (data) => {
+          $('#nav-container').html(data);
 
-  /* ── nave bar ── */
-$(document).ready(() => {
-    $.get('navebar.html', (data) => {
-        $('#nav-container').html(data);
+          var page = window.location.pathname.split('/').pop().replace('.html','').toLowerCase() || 'index';
 
-        // ✅ Navbar inject hone ke BAAD active set karo
-        var page = window.location.pathname.split('/').pop().replace('.html','').toLowerCase() || 'index';
+          var pageMap = {
+              'index'        : 'home',
+              'aboutme'      : 'about',
+              'services'     : 'services',
+              'decoration'   : 'services',
+              'guestlist'    : 'guestlist',
+              'gustlist'     : 'guestlist',
+              'photographers': 'vendors',
+              'makeup'       : 'vendors',
+              'catering'     : 'vendors',
+              'ai-planner'   : 'ai',
+              'invitation'   : 'ai'
+          };
 
-        var pageMap = {
-            'index'        : 'home',
-            'aboutme'      : 'about',
-            'services'     : 'services',
-            'decoration'   : 'services',
-            'guestlist'    : 'guestlist',
-            'gustlist'     : 'guestlist',
-            'photographers': 'vendors',
-            'makeup'       : 'vendors',
-            'catering'     : 'vendors',
-            'ai-planner'   : 'ai'
-        };
+          var activeKey = pageMap[page] || 'home';
 
-        var activeKey = pageMap[page] || 'home';
+          $('.wd-menu-link').removeClass('active');
+          $('.wd-mobile-list > li > a').removeClass('active');
 
-        $('.wd-menu-link').removeClass('active');
-        $('.wd-mobile-list > li > a').removeClass('active');
+          $('.wd-menu-link[data-nav="' + activeKey + '"]').addClass('active');
+          $('.wd-mobile-list > li > a[data-nav="' + activeKey + '"]').addClass('active');
+      });
+  });
 
-        $('.wd-menu-link[data-nav="' + activeKey + '"]').addClass('active');
-        $('.wd-mobile-list > li > a[data-nav="' + activeKey + '"]').addClass('active');
-    });
-});
+  /* ── FOOTER ── */
+  $(document).ready(() => {
+      $.get('footer.html', (data) => {
+          $('#footer-container').html(data);
+      });
+  });
 
-/* ── FOOTER ── */
+</script>
 
-$(document).ready(() => {
-    $.get('footer.html', (data) => {
-        $('#footer-container').html(data);
-    });
-});
+<script>
+(function(){
+    /* ============================================================
+       STATE
+    ============================================================ */
+    const data = {
+        eventType: 'Nikah',
+        bride: '', groom: '', hostedBy: '',
+        eventDate: '', eventTime: '', venue: '', city: '',
+        themeColor: '#c89b2c', themeStyle: 'Royal Gold',
+        fontStyle: 'Playfair Display', accentColor: '#c89b2c',
+        decorationStyle: 'Luxury Floral',
+        includePhoto: false, includeQuran: false, includeQR: false, includeRSVP: false
+    };
 
+    let aiPolishedPrompt = "";
+    let lastGeneratedImage = "";
 
-
-
-
-    (function(){
-        // --- STEP CONFIGURATION ---
-        const steps = [
-            { id: 1, name: 'Event', title: '🎉 Select Event', inputs: `
-                <div class="input-group">
-                    <label><i class="fas fa-calendar-alt"></i> Event Type</label>
-                    <select id="eventType">
-                        <option value="Nikah">Nikah</option>
-                        <option value="Mehndi">Mehndi</option>
-                        <option value="Barat">Barat</option>
-                        <option value="Walima">Walima</option>
-                        <option value="Reception">Reception</option>
-                        <option value="Engagement">Engagement</option>
-                    </select>
+    /* ============================================================
+       STEP DEFINITIONS
+    ============================================================ */
+    const steps = [
+        { id: 1, name: 'Event', title: '🎉 Select Event', inputs: `
+            <div class="input-group">
+                <label><i class="fas fa-calendar-alt"></i> Event Type</label>
+                <select id="eventType">
+                    <option value="Nikah">Nikah</option>
+                    <option value="Mehndi">Mehndi</option>
+                    <option value="Barat">Barat</option>
+                    <option value="Walima">Walima</option>
+                    <option value="Reception">Reception</option>
+                    <option value="Engagement">Engagement</option>
+                </select>
+            </div>
+        `},
+        { id: 2, name: 'Couple Details', title: '💑 Couple Details', inputs: `
+            <div class="input-group">
+                <label><i class="fas fa-user"></i> Bride Name</label>
+                <input type="text" id="brideName" placeholder="e.g. Fatima">
+            </div>
+            <div class="input-group">
+                <label><i class="fas fa-user"></i> Groom Name</label>
+                <input type="text" id="groomName" placeholder="e.g. Ali">
+            </div>
+            <div class="input-group">
+                <label><i class="fas fa-users"></i> Hosted By</label>
+                <input type="text" id="hostedBy" placeholder="e.g. Mr. & Mrs. Ahmed">
+            </div>
+        `},
+        { id: 3, name: 'Event Details', title: '📍 Event Details', inputs: `
+            <div class="input-group">
+                <label><i class="fas fa-calendar-day"></i> Date</label>
+                <input type="text" id="eventDate" placeholder="e.g. 15 Dec 2026">
+            </div>
+            <div class="input-group">
+                <label><i class="fas fa-clock"></i> Time</label>
+                <input type="text" id="eventTime" placeholder="e.g. 7:00 PM">
+            </div>
+            <div class="input-group">
+                <label><i class="fas fa-map-marker-alt"></i> Venue</label>
+                <input type="text" id="venue" placeholder="e.g. Grand Hall">
+            </div>
+            <div class="input-group">
+                <label><i class="fas fa-city"></i> City</label>
+                <input type="text" id="city" placeholder="e.g. Lahore">
+            </div>
+        `},
+        { id: 4, name: 'Theme Selection', title: '🎨 Theme Selection', inputs: `
+            <div class="input-group">
+                <label><i class="fas fa-palette"></i> Theme Color</label>
+                <select id="themeColor">
+                    <option value="#c89b2c">Gold</option>
+                    <option value="#b93b56">Rose Gold</option>
+                    <option value="#ffffff">White</option>
+                    <option value="#2e8b57">Emerald</option>
+                    <option value="#f5e6d3">Ivory</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label><i class="fas fa-paint-brush"></i> Theme Style</label>
+                <select id="themeStyle">
+                    <option value="Royal Gold">Royal Gold</option>
+                    <option value="Royal Black">Royal Black</option>
+                    <option value="Luxury Floral">Luxury Floral</option>
+                    <option value="Islamic Elegant">Islamic Elegant</option>
+                    <option value="Minimal White">Minimal White</option>
+                    <option value="Rose Gold">Rose Gold</option>
+                    <option value="Emerald Royal">Emerald Royal</option>
+                    <option value="Vintage">Vintage</option>
+                    <option value="Modern Luxury">Modern Luxury</option>
+                </select>
+            </div>
+        `},
+        { id: 5, name: 'Fonts & Colors', title: '✒️ Fonts & Colors', inputs: `
+            <div class="input-group">
+                <label><i class="fas fa-font"></i> Font Style</label>
+                <select id="fontStyle">
+                    <option value="Playfair Display">Playfair Display</option>
+                    <option value="Cinzel">Cinzel</option>
+                    <option value="Cormorant Garamond">Cormorant Garamond</option>
+                    <option value="Great Vibes">Great Vibes</option>
+                    <option value="Poppins">Poppins</option>
+                    <option value="Montserrat">Montserrat</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label><i class="fas fa-palette"></i> Accent Color</label>
+                <select id="accentColor">
+                    <option value="#c89b2c">Gold</option>
+                    <option value="#b93b56">Rose Gold</option>
+                    <option value="#ffffff">White</option>
+                    <option value="#2e8b57">Emerald</option>
+                    <option value="#f5e6d3">Ivory</option>
+                </select>
+            </div>
+        `},
+        { id: 6, name: 'Decorations', title: '✨ Decorations', inputs: `
+            <div class="input-group">
+                <label><i class="fas fa-border-all"></i> Decoration Style</label>
+                <select id="decorationStyle">
+                    <option value="Islamic Border">Islamic Border</option>
+                    <option value="Luxury Floral">Luxury Floral</option>
+                    <option value="Royal Frame">Royal Frame</option>
+                    <option value="Golden Leaves">Golden Leaves</option>
+                    <option value="Mandala">Mandala</option>
+                    <option value="Minimal Border">Minimal Border</option>
+                    <option value="Premium Corners">Premium Corners</option>
+                    <option value="Luxury Divider">Luxury Divider</option>
+                </select>
+            </div>
+            <div class="input-group" style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap; margin-top:0.5rem;">
+                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.78rem;">
+                    <input type="checkbox" id="includePhoto" style="width:auto;"> Include Photo
+                </label>
+                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.78rem;">
+                    <input type="checkbox" id="includeQuran" style="width:auto;"> Quran Verse
+                </label>
+                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.78rem;">
+                    <input type="checkbox" id="includeQR" style="width:auto;"> QR Code
+                </label>
+                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.78rem;">
+                    <input type="checkbox" id="includeRSVP" style="width:auto;"> RSVP
+                </label>
+            </div>
+        `},
+        { id: 7, name: 'AI Review', title: '🤖 AI Review', inputs: `
+            <div style="text-align:center; padding:1rem 0;">
+                <i class="fas fa-robot" style="font-size:2.5rem; color:var(--gold); opacity:0.6;"></i>
+                <p id="aiReviewStatus" style="margin-top:0.6rem; opacity:0.7; font-size:0.85rem;">Connecting to Gemini AI...</p>
+                <div style="width:100%; height:4px; background:rgba(255,255,255,0.05); border-radius:4px; margin-top:1rem; overflow:hidden;">
+                    <div style="width:70%; height:100%; background:linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius:4px; animation: pulse 1.5s ease-in-out infinite;"></div>
                 </div>
-            `},
-            { id: 2, name: 'Couple Details', title: '💑 Couple Details', inputs: `
-                <div class="input-group">
-                    <label><i class="fas fa-user"></i> Bride Name</label>
-                    <input type="text" id="brideName" placeholder="e.g. Fatima" value="">
-                </div>
-                <div class="input-group">
-                    <label><i class="fas fa-user"></i> Groom Name</label>
-                    <input type="text" id="groomName" placeholder="e.g. Ali" value="">
-                </div>
-                <div class="input-group">
-                    <label><i class="fas fa-users"></i> Hosted By</label>
-                    <input type="text" id="hostedBy" placeholder="e.g. Mr. & Mrs. Ahmed" value="">
-                </div>
-            `},
-            { id: 3, name: 'Event Details', title: '📍 Event Details', inputs: `
-                <div class="input-group">
-                    <label><i class="fas fa-calendar-day"></i> Date</label>
-                    <input type="text" id="eventDate" placeholder="e.g. 15 Dec 2026" value="">
-                </div>
-                <div class="input-group">
-                    <label><i class="fas fa-clock"></i> Time</label>
-                    <input type="text" id="eventTime" placeholder="e.g. 7:00 PM" value="">
-                </div>
-                <div class="input-group">
-                    <label><i class="fas fa-map-marker-alt"></i> Venue</label>
-                    <input type="text" id="venue" placeholder="e.g. Grand Hall" value="">
-                </div>
-                <div class="input-group">
-                    <label><i class="fas fa-city"></i> City</label>
-                    <input type="text" id="city" placeholder="e.g. Lahore" value="">
-                </div>
-            `},
-            { id: 4, name: 'Theme Selection', title: '🎨 Theme Selection', inputs: `
-                <div class="input-group">
-                    <label><i class="fas fa-palette"></i> Theme Color</label>
-                    <select id="themeColor">
-                        <option value="#c89b2c">Gold</option>
-                        <option value="#b93b56">Rose Gold</option>
-                        <option value="#ffffff">White</option>
-                        <option value="#2e8b57">Emerald</option>
-                        <option value="#f5e6d3">Ivory</option>
-                    </select>
-                </div>
-                <div class="input-group">
-                    <label><i class="fas fa-paint-brush"></i> Theme Style</label>
-                    <select id="themeStyle">
-                        <option value="Royal Gold">Royal Gold</option>
-                        <option value="Royal Black">Royal Black</option>
-                        <option value="Luxury Floral">Luxury Floral</option>
-                        <option value="Islamic Elegant">Islamic Elegant</option>
-                        <option value="Minimal White">Minimal White</option>
-                        <option value="Rose Gold">Rose Gold</option>
-                        <option value="Emerald Royal">Emerald Royal</option>
-                        <option value="Vintage">Vintage</option>
-                        <option value="Modern Luxury">Modern Luxury</option>
-                    </select>
-                </div>
-            `},
-            { id: 5, name: 'Fonts & Colors', title: '✒️ Fonts & Colors', inputs: `
-                <div class="input-group">
-                    <label><i class="fas fa-font"></i> Font Style</label>
-                    <select id="fontStyle">
-                        <option value="Playfair Display">Playfair Display</option>
-                        <option value="Cinzel">Cinzel</option>
-                        <option value="Cormorant Garamond">Cormorant Garamond</option>
-                        <option value="Great Vibes">Great Vibes</option>
-                        <option value="Poppins">Poppins</option>
-                        <option value="Montserrat">Montserrat</option>
-                    </select>
-                </div>
-                <div class="input-group">
-                    <label><i class="fas fa-palette"></i> Accent Color</label>
-                    <select id="accentColor">
-                        <option value="#c89b2c">Gold</option>
-                        <option value="#b93b56">Rose Gold</option>
-                        <option value="#ffffff">White</option>
-                        <option value="#2e8b57">Emerald</option>
-                        <option value="#f5e6d3">Ivory</option>
-                    </select>
-                </div>
-            `},
-            { id: 6, name: 'Decorations', title: '✨ Decorations', inputs: `
-                <div class="input-group">
-                    <label><i class="fas fa-border-all"></i> Decoration Style</label>
-                    <select id="decorationStyle">
-                        <option value="Islamic Border">Islamic Border</option>
-                        <option value="Luxury Floral">Luxury Floral</option>
-                        <option value="Royal Frame">Royal Frame</option>
-                        <option value="Golden Leaves">Golden Leaves</option>
-                        <option value="Mandala">Mandala</option>
-                        <option value="Minimal Border">Minimal Border</option>
-                        <option value="Premium Corners">Premium Corners</option>
-                        <option value="Luxury Divider">Luxury Divider</option>
-                    </select>
-                </div>
-                <div class="input-group" style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap; margin-top:0.5rem;">
-                    <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
-                        <input type="checkbox" id="includePhoto"> Include Photo
-                    </label>
-                    <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
-                        <input type="checkbox" id="includeQuran"> Quran Verse
-                    </label>
-                    <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
-                        <input type="checkbox" id="includeQR"> QR Code
-                    </label>
-                    <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
-                        <input type="checkbox" id="includeRSVP"> RSVP
-                    </label>
-                </div>
-            `},
-            { id: 7, name: 'AI Review', title: '🤖 AI Review', inputs: `
-                <div style="text-align:center; padding:1rem 0;">
-                    <i class="fas fa-robot" style="font-size:2.5rem; color:var(--gold); opacity:0.5;"></i>
-                    <p style="margin-top:0.5rem; opacity:0.6; font-size:0.85rem;">AI is analyzing your design...</p>
-                    <div style="width:100%; height:4px; background:rgba(255,255,255,0.05); border-radius:4px; margin-top:1rem; overflow:hidden;">
-                        <div style="width:70%; height:100%; background:linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius:4px; animation: pulse 1.5s ease-in-out infinite;"></div>
-                    </div>
-                </div>
-            `},
-            { id: 8, name: 'Generate Invitation', title: '🚀 Generate Invitation', inputs: `
-                <div style="text-align:center; padding:1rem 0;">
-                    <i class="fas fa-wand-magic-sparkles" style="font-size:2.5rem; color:var(--gold); opacity:0.5;"></i>
-                    <p style="margin-top:0.5rem; opacity:0.6; font-size:0.85rem;">Ready to generate your premium invitation</p>
-                    <button id="generateFromStep" class="generate-btn" style="margin-top:1rem; width:auto; padding:0.7rem 2rem; font-size:0.9rem;">
-                        <i class="fas fa-magic"></i> Generate Now
-                    </button>
-                </div>
-            `}
-        ];
+            </div>
+            <div id="aiPromptBox" style="margin-top:1rem; display:none;">
+                <label style="display:block; font-size:0.7rem; text-transform:uppercase; letter-spacing:1px; color:var(--gold-light); opacity:0.7; margin-bottom:0.4rem;">
+                    <i class="fas fa-feather"></i> AI Polished Prompt
+                </label>
+                <textarea id="polishedPromptText" rows="7" placeholder="Polished prompt will appear here..."></textarea>
+            </div>
+        `},
+        { id: 8, name: 'Generate Invitation', title: '🚀 Generate Invitation', inputs: `
+            <div style="text-align:center; padding:1rem 0;">
+                <i class="fas fa-wand-magic-sparkles" style="font-size:2.5rem; color:var(--gold); opacity:0.5;"></i>
+                <p style="margin-top:0.5rem; opacity:0.6; font-size:0.85rem;">Ready to generate your premium invitation</p>
+                <button id="generateFromStep" class="generate-btn" style="margin-top:1rem; width:auto; padding:0.7rem 2rem; font-size:0.9rem;">
+                    <i class="fas fa-magic"></i> Generate Now
+                </button>
+            </div>
+        `}
+    ];
 
-        // --- DOM REFS ---
-        const wizardSteps = document.querySelectorAll('.wizard-step');
-        const inputArea = document.getElementById('inputArea');
-        const stepTitle = document.getElementById('stepTitle');
-        const stepInputs = document.getElementById('stepInputs');
-        const stepIndicator = document.getElementById('stepIndicator');
+    /* ============================================================
+       DOM REFS
+    ============================================================ */
+    const wizardSteps = document.querySelectorAll('.wizard-step');
+    const stepTitle = document.getElementById('stepTitle');
+    const stepInputs = document.getElementById('stepInputs');
+    const stepIndicator = document.getElementById('stepIndicator');
 
-        // Card display elements
-        const coupleDisplay = document.getElementById('coupleNameDisplay');
-        const eventDisplay = document.getElementById('eventTypeDisplay');
-        const venueDisplay = document.getElementById('venueDisplay');
-        const subDisplay = document.getElementById('subTextDisplay');
-        const card = document.getElementById('invitationCard');
-        const cardDecoration = card.querySelector('.card-decoration');
-        const cardTitle = card.querySelector('.card-title');
+    const coupleDisplay = document.getElementById('coupleNameDisplay');
+    const eventDisplay = document.getElementById('eventTypeDisplay');
+    const venueDisplay = document.getElementById('venueDisplay');
+    const subDisplay = document.getElementById('subTextDisplay');
+    const card = document.getElementById('invitationCard');
+    const cardDecoration = card.querySelector('.card-decoration');
+    const cardTitle = card.querySelector('.card-title');
+    const previewContainer = document.getElementById('previewContainer');
 
-        // Global data store
-        const data = {
-            bride: '',
-            groom: '',
-            hostedBy: '',
-            eventType: 'Nikah',
-            eventDate: '',
-            eventTime: '',
-            venue: '',
-            city: '',
-            themeColor: '#c89b2c',
-            themeStyle: 'Royal Gold',
-            fontStyle: 'Playfair Display',
-            accentColor: '#c89b2c',
-            decorationStyle: 'Luxury Floral',
-            includePhoto: false,
-            includeQuran: false,
-            includeQR: false,
-            includeRSVP: false
-        };
+    /* ============================================================
+       CARD PREVIEW UPDATE
+    ============================================================ */
+    function updateCard() {
+        const { bride, groom, eventType, venue, eventDate, city, themeColor } = data;
 
-        // --- UPDATE CARD FUNCTION ---
-        function updateCard() {
-            const bride = data.bride;
-            const groom = data.groom;
-            const eventType = data.eventType;
-            const venue = data.venue;
-            const date = data.eventDate;
-            const city = data.city;
-            const themeColor = data.themeColor;
-            const hostedBy = data.hostedBy;
+        if (bride && groom) coupleDisplay.textContent = `${bride} & ${groom}`;
+        else if (bride) coupleDisplay.textContent = bride;
+        else if (groom) coupleDisplay.textContent = groom;
+        else coupleDisplay.textContent = '';
 
-            // Update couple names
-            if (bride && groom) {
-                coupleDisplay.textContent = `${bride} & ${groom}`;
-            } else if (bride) {
-                coupleDisplay.textContent = bride;
-            } else if (groom) {
-                coupleDisplay.textContent = groom;
+        eventDisplay.textContent = eventType || '';
+
+        let venueText = '';
+        if (venue) venueText += venue;
+        if (city) venueText += (venueText ? ', ' : '') + city;
+        if (eventDate) venueText += (venueText ? ' · ' : '') + eventDate;
+        venueDisplay.textContent = venueText;
+
+        subDisplay.textContent = (bride || groom || eventType || venue || eventDate) ? '— exclusive invitation —' : '';
+
+        const goldLines = card.querySelectorAll('.gold-line');
+        cardTitle.style.color = themeColor;
+        goldLines.forEach(line => line.style.background = themeColor);
+        cardDecoration.style.borderColor = themeColor + '66';
+
+        coupleDisplay.style.fontFamily = `'${data.fontStyle}', serif`;
+        eventDisplay.style.fontFamily = `'${data.fontStyle}', serif`;
+
+        const hasContent = bride || groom || eventType || venue || eventDate || city;
+        card.classList.toggle('empty', !hasContent);
+    }
+
+    /* ============================================================
+       LOAD STEP
+    ============================================================ */
+    function loadStep(stepId) {
+        const step = steps.find(s => s.id === stepId);
+        if (!step) return;
+
+        wizardSteps.forEach(s => {
+            const num = parseInt(s.dataset.step);
+            s.classList.remove('active');
+            if (num < stepId) {
+                s.classList.add('completed');
+                if (!s.querySelector('.fa-check-circle')) {
+                    const icon = document.createElement('i');
+                    icon.className = 'fas fa-check-circle';
+                    s.appendChild(icon);
+                }
+            } else if (num === stepId) {
+                s.classList.add('active');
             } else {
-                coupleDisplay.textContent = '';
+                s.classList.remove('completed');
+                const check = s.querySelector('.fa-check-circle');
+                if (check) check.remove();
             }
+        });
 
-            // Update event
-            eventDisplay.textContent = eventType || '';
+        stepTitle.textContent = step.title;
+        stepInputs.innerHTML = step.inputs;
+        bindInputs();
+        stepIndicator.textContent = `✨ step ${stepId} of 8 · ${step.name}`;
 
-            // Update venue & date & city
-            let venueText = '';
-            if (venue) venueText += venue;
-            if (city) venueText += (venueText ? ', ' : '') + city;
-            if (date) venueText += (venueText ? ' · ' : '') + date;
-            venueDisplay.textContent = venueText;
-
-            // Update sub text
-            if (bride || groom || eventType || venue || date) {
-                subDisplay.textContent = '— exclusive invitation —';
-            } else {
-                subDisplay.textContent = '';
-            }
-
-            // Update theme color
-            const goldLines = card.querySelectorAll('.gold-line');
-            cardTitle.style.color = themeColor;
-            goldLines.forEach(line => {
-                line.style.background = themeColor;
-            });
-            cardDecoration.style.borderColor = themeColor + '66';
-
-            // Update font
-            const fontFamily = data.fontStyle;
-            coupleDisplay.style.fontFamily = `'${fontFamily}', serif`;
-            eventDisplay.style.fontFamily = `'${fontFamily}', serif`;
-
-            // Toggle empty class
-            const hasContent = bride || groom || eventType || venue || date || city;
-            if (hasContent) {
-                card.classList.remove('empty');
-            } else {
-                card.classList.add('empty');
-            }
+        if (stepId === 7) {
+            setTimeout(runAIReview, 80);
         }
 
-        // --- LOAD STEP ---
-        function loadStep(stepId) {
-            const step = steps.find(s => s.id === stepId);
-            if (!step) return;
-
-            // Update wizard steps
-            wizardSteps.forEach(s => {
-                const num = parseInt(s.dataset.step);
-                s.classList.remove('active');
-                if (num < stepId) {
-                    s.classList.add('completed');
-                    if (!s.querySelector('.fa-check-circle')) {
-                        const icon = document.createElement('i');
-                        icon.className = 'fas fa-check-circle';
-                        s.appendChild(icon);
-                    }
-                } else if (num === stepId) {
-                    s.classList.add('active');
-                } else {
-                    s.classList.remove('completed');
-                    const check = s.querySelector('.fa-check-circle');
-                    if (check) check.remove();
-                }
-            });
-
-            // Update input area
-            stepTitle.textContent = step.title;
-            stepInputs.innerHTML = step.inputs;
-
-            // Re-bind inputs
-            bindInputs();
-
-            // Update indicator
-            stepIndicator.textContent = `✨ step ${stepId} of 8 · ${step.name}`;
-
-            // If step 8, add generate button listener
-            if (stepId === 8) {
-                const genFromStep = document.getElementById('generateFromStep');
-                if (genFromStep) {
-                    genFromStep.addEventListener('click', function() {
-                        document.getElementById('generateBtn').click();
-                    });
-                }
+        if (stepId === 8) {
+            const genFromStep = document.getElementById('generateFromStep');
+            if (genFromStep) {
+                genFromStep.addEventListener('click', () => generateInvitationImage());
             }
         }
+    }
 
-        // --- BIND INPUTS ---
-        function bindInputs() {
-            // Bind all input fields
-            document.querySelectorAll('#stepInputs input, #stepInputs select').forEach(el => {
-                // Skip checkbox
-                if (el.type === 'checkbox') {
-                    el.addEventListener('change', function() {
-                        const id = this.id;
-                        if (id === 'includePhoto') data.includePhoto = this.checked;
-                        else if (id === 'includeQuran') data.includeQuran = this.checked;
-                        else if (id === 'includeQR') data.includeQR = this.checked;
-                        else if (id === 'includeRSVP') data.includeRSVP = this.checked;
-                        updateCard();
-                    });
-                    return;
-                }
-
-                el.addEventListener('input', function() {
-                    const id = this.id;
-                    const value = this.value;
-                    if (id === 'brideName') data.bride = value;
-                    else if (id === 'groomName') data.groom = value;
-                    else if (id === 'hostedBy') data.hostedBy = value;
-                    else if (id === 'eventType') data.eventType = value;
-                    else if (id === 'eventDate') data.eventDate = value;
-                    else if (id === 'eventTime') data.eventTime = value;
-                    else if (id === 'venue') data.venue = value;
-                    else if (id === 'city') data.city = value;
-                    else if (id === 'themeColor') data.themeColor = value;
-                    else if (id === 'themeStyle') data.themeStyle = value;
-                    else if (id === 'fontStyle') data.fontStyle = value;
-                    else if (id === 'accentColor') data.accentColor = value;
-                    else if (id === 'decorationStyle') data.decorationStyle = value;
+    /* ============================================================
+       BIND INPUTS
+    ============================================================ */
+    function bindInputs() {
+        document.querySelectorAll('#stepInputs input, #stepInputs select').forEach(el => {
+            if (el.type === 'checkbox') {
+                el.addEventListener('change', function () {
+                    data[this.id] = this.checked;
                     updateCard();
                 });
-
-                // Also on change for selects
-                el.addEventListener('change', function() {
-                    const id = this.id;
-                    const value = this.value;
-                    if (id === 'eventType') data.eventType = value;
-                    else if (id === 'themeColor') data.themeColor = value;
-                    else if (id === 'themeStyle') data.themeStyle = value;
-                    else if (id === 'fontStyle') data.fontStyle = value;
-                    else if (id === 'accentColor') data.accentColor = value;
-                    else if (id === 'decorationStyle') data.decorationStyle = value;
-                    updateCard();
-                });
-            });
-
-            // Set initial values from data
-            document.querySelectorAll('#stepInputs input, #stepInputs select').forEach(el => {
-                const id = el.id;
-                if (id === 'brideName' && data.bride) el.value = data.bride;
-                else if (id === 'groomName' && data.groom) el.value = data.groom;
-                else if (id === 'hostedBy' && data.hostedBy) el.value = data.hostedBy;
-                else if (id === 'eventType' && data.eventType) el.value = data.eventType;
-                else if (id === 'eventDate' && data.eventDate) el.value = data.eventDate;
-                else if (id === 'eventTime' && data.eventTime) el.value = data.eventTime;
-                else if (id === 'venue' && data.venue) el.value = data.venue;
-                else if (id === 'city' && data.city) el.value = data.city;
-                else if (id === 'themeColor' && data.themeColor) el.value = data.themeColor;
-                else if (id === 'themeStyle' && data.themeStyle) el.value = data.themeStyle;
-                else if (id === 'fontStyle' && data.fontStyle) el.value = data.fontStyle;
-                else if (id === 'accentColor' && data.accentColor) el.value = data.accentColor;
-                else if (id === 'decorationStyle' && data.decorationStyle) el.value = data.decorationStyle;
-                else if (el.type === 'checkbox') {
-                    if (id === 'includePhoto') el.checked = data.includePhoto;
-                    else if (id === 'includeQuran') el.checked = data.includeQuran;
-                    else if (id === 'includeQR') el.checked = data.includeQR;
-                    else if (id === 'includeRSVP') el.checked = data.includeRSVP;
-                }
-            });
-        }
-
-        // --- WIZARD CLICK ---
-        wizardSteps.forEach(step => {
-            step.addEventListener('click', function() {
-                const stepId = parseInt(this.dataset.step);
-                loadStep(stepId);
-            });
-        });
-
-        // --- TOOLBAR CONTROLS ---
-        let scale = 1;
-        document.getElementById('zoomIn').addEventListener('click', () => {
-            scale = Math.min(scale + 0.1, 1.8);
-            card.style.transform = `scale(${scale})`;
-        });
-        document.getElementById('zoomOut').addEventListener('click', () => {
-            scale = Math.max(scale - 0.1, 0.6);
-            card.style.transform = `scale(${scale})`;
-        });
-        document.getElementById('fitScreen').addEventListener('click', () => {
-            scale = 1;
-            card.style.transform = 'scale(1)';
-        });
-
-        document.getElementById('fullscreen').addEventListener('click', () => {
-            if (!document.fullscreenElement) {
-                document.documentElement.requestFullscreen().catch(err => {});
-            } else {
-                document.exitFullscreen().catch(err => {});
+                return;
             }
-        });
-
-        // --- RESET ---
-        document.getElementById('resetCard').addEventListener('click', function() {
-            data.bride = '';
-            data.groom = '';
-            data.hostedBy = '';
-            data.eventType = 'Nikah';
-            data.eventDate = '';
-            data.eventTime = '';
-            data.venue = '';
-            data.city = '';
-            data.themeColor = '#c89b2c';
-            data.themeStyle = 'Royal Gold';
-            data.fontStyle = 'Playfair Display';
-            data.accentColor = '#c89b2c';
-            data.decorationStyle = 'Luxury Floral';
-            data.includePhoto = false;
-            data.includeQuran = false;
-            data.includeQR = false;
-            data.includeRSVP = false;
-
-            // Reload current step to reset inputs
-            const activeStep = document.querySelector('.wizard-step.active');
-            const stepId = activeStep ? parseInt(activeStep.dataset.step) : 2;
-            loadStep(stepId);
-            updateCard();
-        });
-
-        // --- UNDO/REDO (simple) ---
-        let history = [];
-        let historyIndex = -1;
-
-        function saveState() {
-            const state = JSON.parse(JSON.stringify(data));
-            history = history.slice(0, historyIndex + 1);
-            history.push(state);
-            historyIndex = history.length - 1;
-        }
-
-        function loadState(index) {
-            if (index >= 0 && index < history.length) {
-                const state = history[index];
-                Object.assign(data, state);
-                const activeStep = document.querySelector('.wizard-step.active');
-                const stepId = activeStep ? parseInt(activeStep.dataset.step) : 2;
-                loadStep(stepId);
+            el.addEventListener('input', function () {
+                data[this.id] = this.value;
                 updateCard();
-                return true;
-            }
-            return false;
-        }
-
-        // Save on any data change
-        document.addEventListener('input', saveState);
-        document.addEventListener('change', saveState);
-
-        document.getElementById('undoBtn').addEventListener('click', () => {
-            if (historyIndex > 0) {
-                historyIndex--;
-                loadState(historyIndex);
-            }
-        });
-
-        document.getElementById('redoBtn').addEventListener('click', () => {
-            if (historyIndex < history.length - 1) {
-                historyIndex++;
-                loadState(historyIndex);
-            }
-        });
-
-        // --- GENERATE BUTTON ---
-        const overlay = document.getElementById('aiOverlay');
-        const closeOverlay = document.getElementById('closeOverlay');
-        const generateBtn = document.getElementById('generateBtn');
-
-        generateBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            overlay.classList.add('show');
-            setTimeout(() => {
-                overlay.classList.remove('show');
-            }, 5000);
-        });
-
-        closeOverlay.addEventListener('click', function() {
-            overlay.classList.remove('show');
-        });
-
-        overlay.addEventListener('click', function(e) {
-            if (e.target === overlay) overlay.classList.remove('show');
-        });
-
-        // --- AI SUGGESTIONS ---
-        document.querySelectorAll('.ai-suggestion').forEach(el => {
-            el.addEventListener('click', function() {
-                const label = this.querySelector('.label')?.innerText || '';
-                const valueEl = this.querySelector('.value');
-                if (!valueEl) return;
-
-                if (label.includes('Theme')) {
-                    const themes = ['✨ Royal Gold · Classic', '✨ Rose Gold · Elegant', '✨ Emerald · Royal', '✨ Minimal White · Modern'];
-                    let current = valueEl.innerText;
-                    let idx = themes.indexOf(current);
-                    idx = (idx + 1) % themes.length;
-                    valueEl.innerText = themes[idx];
-                    // Update data
-                    const themeMap = {
-                        '✨ Royal Gold · Classic': 'Royal Gold',
-                        '✨ Rose Gold · Elegant': 'Rose Gold',
-                        '✨ Emerald · Royal': 'Emerald Royal',
-                        '✨ Minimal White · Modern': 'Minimal White'
-                    };
-                    data.themeStyle = themeMap[valueEl.innerText] || 'Royal Gold';
-                    updateCard();
-                } else if (label.includes('Font')) {
-                    const fonts = ['Playfair Display + Great Vibes', 'Cinzel + Cormorant', 'Montserrat + Poppins', 'Great Vibes + Playfair'];
-                    let current = valueEl.innerText;
-                    let idx = fonts.indexOf(current);
-                    idx = (idx + 1) % fonts.length;
-                    valueEl.innerText = fonts[idx];
-                    const fontMap = {
-                        'Playfair Display + Great Vibes': 'Playfair Display',
-                        'Cinzel + Cormorant': 'Cinzel',
-                        'Montserrat + Poppins': 'Montserrat',
-                        'Great Vibes + Playfair': 'Great Vibes'
-                    };
-                    data.fontStyle = fontMap[valueEl.innerText] || 'Playfair Display';
-                    updateCard();
-                } else if (label.includes('Decoration')) {
-                    const decors = ['Luxury Floral Border', 'Islamic Geometric', 'Royal Frame', 'Minimal Border'];
-                    let current = valueEl.innerText;
-                    let idx = decors.indexOf(current);
-                    idx = (idx + 1) % decors.length;
-                    valueEl.innerText = decors[idx];
-                } else if (label.includes('Color')) {
-                    const colors = ['#C89B2C · #B93B56 · #FFFFFF', '#D4AF37 · #8B0000 · #FFF', '#2E8B57 · #FFD700 · #FFF', '#C0C0C0 · #800020 · #FFF'];
-                    let current = valueEl.innerText;
-                    let idx = colors.indexOf(current);
-                    idx = (idx + 1) % colors.length;
-                    valueEl.innerText = colors[idx];
-                }
+            });
+            el.addEventListener('change', function () {
+                data[this.id] = this.value;
+                updateCard();
             });
         });
 
-        // --- INIT ---
-        saveState();
-        loadStep(2);
-        updateCard();
+        // restore values
+        document.querySelectorAll('#stepInputs input, #stepInputs select').forEach(el => {
+            const id = el.id;
+            if (el.type === 'checkbox') el.checked = !!data[id];
+            else if (data[id]) el.value = data[id];
+        });
+    }
 
-        console.log('✨ WedDream AI Invitation Designer — step-by-step mode fully working');
-    })();
+    /* ============================================================
+       WIZARD CLICK
+    ============================================================ */
+    wizardSteps.forEach(step => {
+        step.addEventListener('click', function () {
+            loadStep(parseInt(this.dataset.step));
+        });
+    });
+
+    /* ============================================================
+       TOOLBAR CONTROLS
+    ============================================================ */
+    let scale = 1;
+    document.getElementById('zoomIn').addEventListener('click', () => {
+        scale = Math.min(scale + 0.1, 1.8);
+        card.style.transform = `scale(${scale})`;
+    });
+    document.getElementById('zoomOut').addEventListener('click', () => {
+        scale = Math.max(scale - 0.1, 0.6);
+        card.style.transform = `scale(${scale})`;
+    });
+    document.getElementById('fitScreen').addEventListener('click', () => {
+        scale = 1;
+        card.style.transform = 'scale(1)';
+    });
+    document.getElementById('fullscreen').addEventListener('click', () => {
+        if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(()=>{});
+        else document.exitFullscreen().catch(()=>{});
+    });
+
+    document.getElementById('resetCard').addEventListener('click', function () {
+        Object.assign(data, {
+            eventType: 'Nikah', bride: '', groom: '', hostedBy: '',
+            eventDate: '', eventTime: '', venue: '', city: '',
+            themeColor: '#c89b2c', themeStyle: 'Royal Gold',
+            fontStyle: 'Playfair Display', accentColor: '#c89b2c',
+            decorationStyle: 'Luxury Floral',
+            includePhoto: false, includeQuran: false, includeQR: false, includeRSVP: false
+        });
+        aiPolishedPrompt = "";
+        lastGeneratedImage = "";
+        // remove generated result if present
+        const resultWrap = document.getElementById('aiResultWrap');
+        if (resultWrap) resultWrap.remove();
+        card.style.display = '';
+
+        const activeStep = document.querySelector('.wizard-step.active');
+        loadStep(activeStep ? parseInt(activeStep.dataset.step) : 1);
+        updateCard();
+    });
+
+    /* ============================================================
+       AI SUGGESTIONS (sidebar quick-cycle, also updates real data)
+    ============================================================ */
+    document.querySelectorAll('.ai-suggestion').forEach(el => {
+        el.addEventListener('click', function () {
+            const label = this.querySelector('.label')?.innerText || '';
+            const valueEl = this.querySelector('.value');
+            if (!valueEl) return;
+
+            if (label.includes('Theme')) {
+                const themeMap = {
+                    '✨ Royal Gold · Classic': 'Royal Gold',
+                    '✨ Rose Gold · Elegant': 'Rose Gold',
+                    '✨ Emerald · Royal': 'Emerald Royal',
+                    '✨ Minimal White · Modern': 'Minimal White'
+                };
+                const keys = Object.keys(themeMap);
+                let idx = (keys.indexOf(valueEl.innerText) + 1) % keys.length;
+                valueEl.innerText = keys[idx];
+                data.themeStyle = themeMap[keys[idx]];
+                updateCard();
+            } else if (label.includes('Font')) {
+                const fontMap = {
+                    'Playfair Display + Great Vibes': 'Playfair Display',
+                    'Cinzel + Cormorant': 'Cinzel',
+                    'Montserrat + Poppins': 'Montserrat',
+                    'Great Vibes + Playfair': 'Great Vibes'
+                };
+                const keys = Object.keys(fontMap);
+                let idx = (keys.indexOf(valueEl.innerText) + 1) % keys.length;
+                valueEl.innerText = keys[idx];
+                data.fontStyle = fontMap[keys[idx]];
+                updateCard();
+            } else if (label.includes('Decoration')) {
+                const decors = ['Luxury Floral Border', 'Islamic Geometric', 'Royal Frame', 'Minimal Border'];
+                let idx = (decors.indexOf(valueEl.innerText) + 1) % decors.length;
+                valueEl.innerText = decors[idx];
+                data.decorationStyle = decors[idx];
+            } else if (label.includes('Color')) {
+                const colors = ['#C89B2C · #B93B56 · #FFFFFF', '#D4AF37 · #8B0000 · #FFF', '#2E8B57 · #FFD700 · #FFF', '#C0C0C0 · #800020 · #FFF'];
+                let idx = (colors.indexOf(valueEl.innerText) + 1) % colors.length;
+                valueEl.innerText = colors[idx];
+            }
+        });
+    });
+
+    /* ============================================================
+       PROMPT BUILDING
+    ============================================================ */
+    function buildBasePrompt(d) {
+        // IMPORTANT: AI image models cannot render real, readable text or
+        // calligraphy reliably — every attempt produces fake gibberish
+        // letters. So we ask the AI for ONLY a decorative background/border
+        // (completely empty in the center), and the actual bride/groom
+        // names, date, venue etc. are rendered as real HTML text on top
+        // of this background afterwards. This guarantees crisp, readable,
+        // selectable text every time.
+        let p = `An empty, blank, completely textless ultra-premium ${d.themeStyle} wedding invitation card background for a ${d.eventType} ceremony. `;
+        p += `Ornamental ${d.decorationStyle} border and corner decorations only. `;
+        p += `Color palette centered on ${d.accentColor || d.themeColor}. `;
+        p += `The entire center area of the card must be empty, plain, blank negative space with no text, no letters, no calligraphy, no numbers, no words, no symbols of any language. `;
+        p += `Only decorative elements: ornamental frame, floral or geometric motifs, soft gradients, subtle texture, intricate gold detailing near the edges. `;
+        p += `Portrait orientation, luxury South Asian wedding aesthetic, 8K quality, soft elegant lighting, professional print-ready background design, empty card mockup style, blank invitation template.`;
+        return p;
+    }
+
+    /* ============================================================
+       GEMINI — PROMPT POLISHING (Step 7)
+    ============================================================ */
+    async function polishPromptWithGemini(basePrompt) {
+        const apiKey = (document.getElementById('geminiKey') || {}).value;
+        if (!apiKey || !apiKey.trim()) throw new Error('NO_KEY');
+
+        const systemInstruction =
+            "You are a world-class luxury wedding invitation art director. " +
+            "Rewrite the user's brief into a single, highly detailed, vivid AI " +
+            "image-generation prompt (max 100 words) for a BACKGROUND/BORDER " +
+            "ONLY design — the image must NOT contain any text, letters, words, " +
+            "numbers, or calligraphy of any kind, in any language. The center " +
+            "of the composition must stay empty, plain negative space, because " +
+            "real text will be added separately on top using HTML. " +
+            "Describe only: ornamental border/frame style, floral or geometric " +
+            "motifs, color grading, lighting, texture, and material feel. " +
+            "Always include the phrase 'no text, no letters, no calligraphy, " +
+            "blank empty center' in the prompt. Do NOT add quotation marks " +
+            "around the output. Respond with ONLY the final prompt text, nothing else.";
+
+        const response = await fetch(
+            `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${encodeURIComponent(apiKey.trim())}`,
+            {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    contents: [{ parts: [{ text: `${systemInstruction}\n\nBrief:\n${basePrompt}` }] }]
+                })
+            }
+        );
+
+        if (!response.ok) {
+            const errText = await response.text().catch(() => '');
+            throw new Error('GEMINI_HTTP_' + response.status + ': ' + errText);
+        }
+
+        const result = await response.json();
+        const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+        if (!text) throw new Error('GEMINI_EMPTY_RESPONSE');
+        return text.trim();
+    }
+
+    async function runAIReview() {
+        const base = buildBasePrompt(data);
+        const statusEl = document.getElementById('aiReviewStatus');
+        if (!statusEl) return;
+
+        try {
+            const polished = await polishPromptWithGemini(base);
+            aiPolishedPrompt = polished;
+
+            statusEl.textContent = '✅ Prompt ready — review or edit before generating';
+            statusEl.style.color = '#9fd9a0';
+            document.getElementById('aiPromptBox').style.display = 'block';
+            document.getElementById('polishedPromptText').value = polished;
+            document.getElementById('polishedPromptText').addEventListener('input', function () {
+                aiPolishedPrompt = this.value;
+            });
+        } catch (err) {
+            console.error('Gemini prompt polish failed:', err);
+            aiPolishedPrompt = base;
+
+            let msg = '⚠️ Could not reach Gemini — using a basic prompt instead.';
+            if (err.message === 'NO_KEY') msg = '⚠️ No Gemini API key found. Paste your key in the AI Assistant panel on the right.';
+
+            statusEl.textContent = msg;
+            statusEl.style.color = '#e0a060';
+            document.getElementById('aiPromptBox').style.display = 'block';
+            document.getElementById('polishedPromptText').value = base;
+            document.getElementById('polishedPromptText').addEventListener('input', function () {
+                aiPolishedPrompt = this.value;
+            });
+        }
+    }
+
+    /* ============================================================
+       POLLINATIONS — IMAGE GENERATION (Step 8)
+    ============================================================ */
+    function buildPollinationsURL(prompt) {
+        const cleanPrompt = encodeURIComponent(prompt.slice(0, 800));
+        const negative = encodeURIComponent('text, letters, words, calligraphy, numbers, watermark, signature, gibberish writing');
+        const seed = Math.floor(Math.random() * 1000000);
+        return `https://image.pollinations.ai/prompt/${cleanPrompt}?width=768&height=1024&seed=${seed}&nologo=true&negative=${negative}`;
+    }
+
+    function preloadImage(url) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.crossOrigin = 'anonymous';
+            img.onload = () => resolve(url);
+            img.onerror = () => reject(new Error('IMAGE_LOAD_FAILED'));
+            img.src = url;
+        });
+    }
+
+    const overlay = document.getElementById('aiOverlay');
+    const overlayTitle = document.getElementById('overlayTitle');
+    const overlaySub = document.getElementById('overlaySub');
+    const overlayLoader = document.getElementById('overlayLoader');
+    const closeOverlayBtn = document.getElementById('closeOverlay');
+    const generateBtn = document.getElementById('generateBtn');
+
+    async function generateInvitationImage() {
+        overlay.classList.add('show');
+        overlayTitle.textContent = '✨ AI is designing your masterpiece...';
+        overlaySub.textContent = 'Sending prompt to Pollinations AI';
+        overlayLoader.style.display = 'block';
+        if (generateBtn) generateBtn.disabled = true;
+
+        let promptToUse = aiPolishedPrompt && aiPolishedPrompt.trim()
+            ? aiPolishedPrompt
+            : buildBasePrompt(data);
+
+        try {
+            const url = buildPollinationsURL(promptToUse);
+            overlaySub.textContent = 'Rendering your invitation (10–20 seconds)...';
+
+            await preloadImage(url);
+            lastGeneratedImage = url;
+
+            overlayTitle.textContent = '✅ Your invitation is ready!';
+            overlaySub.textContent = 'Click "Close Preview" to view it';
+            overlayLoader.style.display = 'none';
+
+            injectGeneratedImageIntoCard(url);
+        } catch (err) {
+            console.error('Pollinations generation failed:', err);
+            overlayTitle.textContent = '⚠️ Generation failed';
+            overlaySub.textContent = 'Network or image service issue — please try again';
+            overlayLoader.style.display = 'none';
+        } finally {
+            if (generateBtn) generateBtn.disabled = false;
+        }
+    }
+
+    function injectGeneratedImageIntoCard(imageUrl) {
+        let resultWrap = document.getElementById('aiResultWrap');
+        if (!resultWrap) {
+            resultWrap = document.createElement('div');
+            resultWrap.id = 'aiResultWrap';
+            resultWrap.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:1rem;width:100%;';
+            previewContainer.appendChild(resultWrap);
+        }
+
+        const accent = data.accentColor || data.themeColor || '#c89b2c';
+        const fontFamily = data.fontStyle || 'Playfair Display';
+
+        // Build the real text content that goes ON TOP of the AI background.
+        // This is normal HTML, so it's always crisp, readable and correct.
+        let topText = '';
+        if (data.hostedBy) topText += `<div style="font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;opacity:0.85;">${escapeHtml(data.hostedBy)}</div>`;
+        if (data.eventType) topText += `<div style="font-family:'${fontFamily}',serif;font-size:1rem;letter-spacing:3px;text-transform:uppercase;margin-top:0.4rem;opacity:0.9;">${escapeHtml(data.eventType)}</div>`;
+
+        let namesText = '';
+        if (data.bride || data.groom) {
+            namesText = `
+                <div style="font-family:'Great Vibes',cursive;font-size:2.6rem;line-height:1.15;">${escapeHtml(data.bride || 'Bride')}</div>
+                <div style="font-family:'Great Vibes',cursive;font-size:1.6rem;margin:0.1rem 0;">&</div>
+                <div style="font-family:'Great Vibes',cursive;font-size:2.6rem;line-height:1.15;">${escapeHtml(data.groom || 'Groom')}</div>
+            `;
+        }
+
+        let detailsText = '';
+        if (data.eventDate || data.eventTime) {
+            detailsText += `<div style="font-size:0.85rem;letter-spacing:1px;">${escapeHtml(data.eventDate || '')}${data.eventTime ? ' · ' + escapeHtml(data.eventTime) : ''}</div>`;
+        }
+        if (data.venue || data.city) {
+            detailsText += `<div style="font-size:0.8rem;letter-spacing:0.5px;margin-top:0.25rem;opacity:0.9;">${escapeHtml(data.venue || '')}${data.city ? ', ' + escapeHtml(data.city) : ''}</div>`;
+        }
+        if (data.includeRSVP) {
+            detailsText += `<div style="font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;margin-top:0.7rem;opacity:0.65;border-top:1px solid rgba(255,255,255,0.25);padding-top:0.5rem;display:inline-block;">RSVP</div>`;
+        }
+
+        resultWrap.innerHTML = `
+            <div id="resultCard" style="position:relative;max-width:480px;width:100%;aspect-ratio:3/4;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.8), 0 0 0 1px rgba(200,155,44,0.3);">
+                <img id="resultBgImg" src="${imageUrl}" crossorigin="anonymous" alt="AI Generated Background"
+                     style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10% 14%;color:${accent};text-shadow:0 1px 6px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.4);">
+                    ${topText}
+                    <div style="margin:0.9rem 0 0.6rem;">${namesText}</div>
+                    ${detailsText}
+                </div>
+            </div>
+            <div style="display:flex; gap:0.7rem; flex-wrap:wrap; justify-content:center;">
+                <button id="downloadPngBtn" class="action-btn gold"><i class="fas fa-download"></i> Download PNG</button>
+                <button id="downloadPdfBtn" class="action-btn ghost"><i class="fas fa-file-pdf"></i> Download PDF</button>
+                <button id="shareWaBtn" class="action-btn ghost"><i class="fab fa-whatsapp"></i> Share WhatsApp</button>
+                <button id="regenerateBtn" class="action-btn ghost"><i class="fas fa-rotate"></i> Regenerate</button>
+            </div>
+        `;
+
+        card.style.display = 'none';
+
+        document.getElementById('downloadPngBtn').addEventListener('click', () => downloadCombinedCard('png'));
+        document.getElementById('downloadPdfBtn').addEventListener('click', () => downloadCombinedCard('pdf'));
+        document.getElementById('shareWaBtn').addEventListener('click', shareOnWhatsApp);
+        document.getElementById('regenerateBtn').addEventListener('click', generateInvitationImage);
+    }
+
+    function escapeHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str || '';
+        return div.innerHTML;
+    }
+
+    function ensureHtml2CanvasLoaded() {
+        return new Promise((resolve, reject) => {
+            if (window.html2canvas) return resolve();
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+            script.onload = () => resolve();
+            script.onerror = () => reject(new Error('HTML2CANVAS_LOAD_FAILED'));
+            document.head.appendChild(script);
+        });
+    }
+
+    async function downloadCombinedCard(type) {
+        const target = document.getElementById('resultCard');
+        if (!target) return;
+        try {
+            await ensureHtml2CanvasLoaded();
+            const canvas = await html2canvas(target, { scale: 2, useCORS: true, allowTaint: true, backgroundColor: null });
+            if (type === 'png') {
+                const link = document.createElement('a');
+                link.download = 'WedDream_Invitation.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            } else {
+                await ensureJsPDFLoaded();
+                const imgData = canvas.toDataURL('image/png');
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF({ orientation: 'portrait', unit: 'px', format: [canvas.width / 2, canvas.height / 2] });
+                pdf.addImage(imgData, 'PNG', 0, 0, canvas.width / 2, canvas.height / 2);
+                pdf.save('WedDream_Invitation.pdf');
+            }
+        } catch (err) {
+            console.error('Combined card export failed:', err);
+            alert('Export failed — this can happen due to image CORS restrictions. Try right-click > Save Image on the card instead.');
+        }
+    }
+
+    function ensureJsPDFLoaded() {
+        return new Promise((resolve, reject) => {
+            if (window.jspdf && window.jspdf.jsPDF) return resolve();
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+            script.onload = () => resolve();
+            script.onerror = () => reject(new Error('JSPDF_LOAD_FAILED'));
+            document.head.appendChild(script);
+        });
+    }
+
+    function shareOnWhatsApp() {
+        const text = encodeURIComponent(
+            `✦ Wedding Invitation ✦\n\n${data.bride || 'Bride'} & ${data.groom || 'Groom'}\n` +
+            `📅 ${data.eventDate || ''} ${data.eventTime || ''}\n📍 ${data.venue || ''}, ${data.city || ''}\n\n` +
+            `Created with WedDream AI`
+        );
+        window.open(`https://wa.me/?text=${text}`, '_blank');
+    }
+
+    /* ============================================================
+       GENERATE BUTTON (sidebar) + OVERLAY CLOSE
+    ============================================================ */
+    generateBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        generateInvitationImage();
+    });
+
+    closeOverlayBtn.addEventListener('click', function () {
+        overlay.classList.remove('show');
+    });
+
+    overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) overlay.classList.remove('show');
+    });
+
+    /* ============================================================
+       INIT
+    ============================================================ */
+    loadStep(1);
+    updateCard();
+
+    console.log('✨ WedDream AI Invitation Designer — Gemini prompt polishing + Pollinations image generation fully wired');
+})();
 </script>
 
 </body>
