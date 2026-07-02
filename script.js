@@ -533,6 +533,7 @@ document.querySelectorAll('#statsGrid').forEach(el => statsObserver.observe(el))
 /* ========== TOP RATED VENDORS JS ========== */
 // ============================================================
 // TOP VENDORS — Real Data (No Fake/Placeholder Entries)
+// PREMIUM EDITION — includes staggered scroll-reveal animation
 // ============================================================
 
 const TRV_VENDORS = [
@@ -691,6 +692,7 @@ const TRV_VENDORS = [
 let trvCurrentIdx = 0;
 let trvFiltered   = [...TRV_VENDORS];
 let trvAutoTimer;
+let trvObserver; // scroll-reveal observer (premium)
 
 function trvBuildStars(r) {
   const full = Math.floor(r), half = (r - full) >= 0.5 ? 1 : 0, empty = 5 - full - half;
@@ -712,8 +714,8 @@ function trvPerView() {
 }
 
 function trvRenderCards() {
-  document.getElementById('trvSlider').innerHTML = trvFiltered.map(v => `
-    <div class="trv-card" onclick="window.location.href='${v.detailPage}?id=${v.id}&cat=${v.cat}'">
+  document.getElementById('trvSlider').innerHTML = trvFiltered.map((v, i) => `
+    <div class="trv-card" style="animation-delay:${(i % trvPerView()) * 0.09}s" onclick="window.location.href='${v.detailPage}?id=${v.id}&cat=${v.cat}'">
       <div class="trv-card-img">
         <img src="${v.image}" alt="${v.name}" onerror="this.src='https://picsum.photos/seed/fallback/900/600'"/>
         <div class="trv-card-img-overlay"></div>
@@ -748,6 +750,7 @@ function trvRenderCards() {
   `).join('');
   trvCurrentIdx = 0;
   trvUpdateSlider();
+  trvObserveCards(); // premium: hook new cards into scroll-reveal
 }
 
 function trvUpdateSlider() {
@@ -794,6 +797,26 @@ function trvStartAuto() {
   }, 4500);
 }
 
+// ─── SCROLL REVEAL (PREMIUM) ────────────────────────────────────
+// Cards start hidden (opacity:0, translateY) via CSS, this observer
+// adds .trv-visible to trigger the staggered entrance animation
+// the first time each card scrolls into view.
+function trvObserveCards() {
+  if (!trvObserver) {
+    trvObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('trv-visible');
+          trvObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+  }
+  document.querySelectorAll('.trv-card:not(.trv-visible)').forEach(card => {
+    trvObserver.observe(card);
+  });
+}
+
 // ─── TAB FILTER ─────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', function() {
   const tabs = document.getElementById('trvTabs');
@@ -804,11 +827,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!tab) return;
     document.querySelectorAll('.trv-tab').forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
-    
+
     const cat = tab.dataset.cat;
     trvFiltered = cat === 'all' ? [...TRV_VENDORS] : TRV_VENDORS.filter(v => v.cat === cat);
     trvRenderCards();
-    
+
     clearInterval(trvAutoTimer);
     trvStartAuto();
   });
@@ -828,8 +851,6 @@ document.addEventListener('DOMContentLoaded', function() {
   trvRenderCards();
   trvStartAuto();
 });
-
-
 
 
 

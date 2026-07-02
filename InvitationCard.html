@@ -7,689 +7,744 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
-            --rose:        #b93b56;
-            --rose-hover:  #a22f49;
-            --gold:        #c89b2c;
-            --gold-light:  #e8b93c;
-            --white:       #ffffff;
-            --white-light: rgba(255,255,255,0.72);
-            --dark:        #070707;
-            --glass:       rgba(15,10,14,0.55);
-            --bg-deep:     #0B0B0B;
-            --bg-charcoal: #151515;
-            --text-light:  #D9D9D9;
-            --shadow-glow: 0 8px 32px rgba(200, 155, 44, 0.25);
-            --border-glow: 0 0 0 1px rgba(200, 155, 44, 0.3);
+            --paper:        #FAF1E2;
+            --maroon:       #6C1522;
+            --maroon-soft:  #8C2536;
+            --gold:         #B98A2E;
+            --gold-bright:  #EFCC72;
+            --gold-dim:     #7C5B21;
+            --ink:          #2A1710;
+            --bg-deep:      #130A08;
+            --bg-charcoal:  #1B100C;
+            --glass:        rgba(27, 16, 12, 0.58);
+            --text-light:   #D9C6AC;
+            --white:        #ffffff;
+
+            --font-eyebrow: 'Cinzel', serif;
+            --font-title:   'Cormorant Garamond', serif;
+            --font-script:  'Great Vibes', cursive;
+            --font-ui:      'Poppins', sans-serif;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+        }
+
         body {
-            background: var(--bg-deep);
+            background:
+                radial-gradient(ellipse 900px 500px at 12% -10%, rgba(185,138,46,0.10), transparent 60%),
+                radial-gradient(ellipse 800px 600px at 100% 110%, rgba(108,21,34,0.18), transparent 60%),
+                var(--bg-deep);
             color: var(--white);
-            font-family: 'Poppins', sans-serif;
+            font-family: var(--font-ui);
             font-weight: 300;
             line-height: 1.6;
             min-height: 100vh;
             overflow-x: hidden;
+            position: relative;
         }
 
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: var(--bg-charcoal); }
         ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 8px; }
+        ::selection { background: var(--gold); color: #1a0e08; }
+        :focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 3px; border-radius: 6px; }
 
-        .glass {
-            background: var(--glass);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255,255,255,0.06);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+        /* ============ AMBIENT MARIGOLD PETALS ============ */
+        .petal-field { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+        .petal {
+            position: absolute; top: -8%;
+            border-radius: 0% 62% 0% 62%;
+            background: linear-gradient(135deg, var(--gold-bright), var(--gold) 55%, var(--maroon-soft));
+            opacity: 0; filter: blur(0.2px);
+            animation: petalFall linear infinite;
         }
+        @keyframes petalFall {
+            0%   { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 0; }
+            8%   { opacity: 0.4; }
+            85%  { opacity: 0.22; }
+            100% { transform: translateY(112vh) translateX(40px) rotate(340deg); opacity: 0; }
+        }
+        .petal:nth-child(1) { left: 6%;  width: 12px; height: 12px; animation-duration: 19s; animation-delay: -2s; }
+        .petal:nth-child(2) { left: 18%; width: 9px;  height: 9px;  animation-duration: 23s; animation-delay: -9s; }
+        .petal:nth-child(3) { left: 33%; width: 14px; height: 14px; animation-duration: 17s; animation-delay: -4s; }
+        .petal:nth-child(4) { left: 52%; width: 10px; height: 10px; animation-duration: 26s; animation-delay: -14s; }
+        .petal:nth-child(5) { left: 67%; width: 13px; height: 13px; animation-duration: 21s; animation-delay: -7s; }
+        .petal:nth-child(6) { left: 79%; width: 8px;  height: 8px;  animation-duration: 18s; animation-delay: -11s; }
+        .petal:nth-child(7) { left: 90%; width: 15px; height: 15px; animation-duration: 24s; animation-delay: -1s; }
+        .petal:nth-child(8) { left: 43%; width: 11px; height: 11px; animation-duration: 20s; animation-delay: -16s; }
 
         .app {
             display: grid;
-            grid-template-columns: 280px 1fr 320px;
+            grid-template-columns: 300px 1fr 320px;
             gap: 1.5rem;
             padding: 1.5rem;
             min-height: 100vh;
-            max-width: 1600px;
+            max-width: 1650px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
+        /* ============ LEFT SIDEBAR ============ */
         .sidebar-left {
             position: sticky;
             top: 1.5rem;
             align-self: start;
             border-radius: 28px;
-            padding: 1.8rem 1.2rem;
+            padding: 1.6rem 1.1rem;
             background: var(--glass);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(239,204,114,0.07);
             box-shadow: 0 12px 40px rgba(0,0,0,0.7);
-            max-height: 90vh;
+            max-height: 92vh;
             overflow-y: auto;
         }
 
         .sidebar-left .logo {
-            font-family: 'Cinzel', serif;
+            font-family: var(--font-eyebrow);
             font-weight: 700;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             letter-spacing: 2px;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--gold-light), var(--gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            margin-bottom: 0.3rem;
+            background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            display: flex; align-items: center; gap: 0.4rem;
+        }
+        .logo .diya { -webkit-text-fill-color: var(--gold-bright); font-size: 1rem; }
+
+        .logo-sub {
+            font-family: var(--font-title); font-style: italic; font-size: 0.7rem;
+            color: var(--text-light); opacity: 0.55; letter-spacing: 1.2px; margin-bottom: 1rem;
         }
 
-        .wizard-step {
-            display: flex;
-            align-items: center;
-            gap: 0.9rem;
-            padding: 0.7rem 0.9rem;
-            margin-bottom: 0.6rem;
-            border-radius: 60px;
-            color: var(--text-light);
-            font-size: 0.85rem;
-            font-weight: 400;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: 1px solid transparent;
+        /* overall completeness bar */
+        .completeness { margin-bottom: 1.2rem; }
+        .completeness .cbar-track {
+            width: 100%; height: 5px; border-radius: 6px;
+            background: rgba(255,255,255,0.06); overflow: hidden;
+        }
+        .completeness .cbar-fill {
+            height: 100%; width: 0%;
+            background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+            border-radius: 6px; transition: width 0.5s cubic-bezier(.65,0,.35,1);
+            box-shadow: 0 0 8px rgba(239,204,114,0.5);
+        }
+        .completeness .cbar-label {
+            display: flex; justify-content: space-between;
+            font-family: var(--font-eyebrow); font-size: 0.6rem; letter-spacing: 1px;
+            color: var(--gold-bright); opacity: 0.7; margin-top: 0.4rem; text-transform: uppercase;
         }
 
-        .wizard-step:hover {
-            background: rgba(255,255,255,0.04);
-            color: var(--white);
-            transform: translateX(4px);
-        }
+        /* ============ ACCORDION ============ */
+        .accordion { display: flex; flex-direction: column; gap: 0.55rem; }
 
-        .wizard-step .step-num {
-            font-family: 'Cinzel', serif;
-            font-weight: 600;
-            font-size: 0.75rem;
-            background: rgba(255,255,255,0.04);
-            padding: 0.1rem 0.6rem;
-            border-radius: 40px;
-            color: var(--text-light);
-            letter-spacing: 0.5px;
-            transition: 0.3s;
-        }
-
-        .wizard-step.active {
-            background: rgba(200, 155, 44, 0.12);
-            border-color: var(--gold);
-            color: var(--white);
-            box-shadow: 0 0 20px rgba(200, 155, 44, 0.15);
-        }
-
-        .wizard-step.active .step-num {
-            background: var(--gold);
-            color: #0B0B0B;
-            font-weight: 700;
-        }
-
-        .wizard-step.completed .step-num {
-            background: var(--gold);
-            color: #0B0B0B;
-        }
-
-        .wizard-step.completed i {
-            color: var(--gold);
-            margin-left: auto;
-        }
-
-        .wizard-step i.fa-check-circle {
-            margin-left: auto;
-            font-size: 1rem;
-        }
-
-        .input-area {
-            margin-top: 1.5rem;
-            padding: 1rem;
+        .acc-item {
             border-radius: 16px;
             background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.04);
-            min-height: 200px;
-            transition: all 0.3s ease;
+            border: 1px solid rgba(239,204,114,0.09);
+            overflow: hidden;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+        .acc-item.open { border-color: rgba(239,204,114,0.35); background: rgba(255,255,255,0.03); }
+
+        .acc-header {
+            width: 100%;
+            display: flex; align-items: center; gap: 0.7rem;
+            padding: 0.7rem 0.85rem;
+            background: transparent; border: none; cursor: pointer;
+            color: var(--text-light);
+            font-family: var(--font-ui); font-size: 0.85rem;
+            text-align: left;
+        }
+        .acc-header:hover { color: var(--white); }
+
+        .acc-num {
+            font-family: var(--font-eyebrow); font-weight: 600; font-size: 0.68rem;
+            width: 24px; height: 24px; flex: 0 0 24px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(239,204,114,0.18);
+            color: var(--text-light);
+            transition: 0.3s;
+        }
+        .acc-item.open .acc-num {
+            background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+            color: #1a0e08; border-color: transparent; box-shadow: 0 0 10px rgba(239,204,114,0.55);
+        }
+        .acc-item.filled:not(.open) .acc-num {
+            background: rgba(239,204,114,0.15); color: var(--gold-bright); border-color: rgba(239,204,114,0.35);
         }
 
-        .input-area .step-title {
-            font-family: 'Cinzel', serif;
-            font-size: 0.9rem;
-            color: var(--gold-light);
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
+        .acc-name { flex: 1; font-weight: 400; }
+        .acc-item.open .acc-name { color: var(--white); }
 
-        .input-group { margin-bottom: 0.8rem; }
+        .acc-check { color: var(--gold-bright); font-size: 0.85rem; opacity: 0; transition: opacity 0.25s ease; }
+        .acc-item.filled .acc-check { opacity: 0.85; }
+
+        .acc-chevron { font-size: 0.7rem; opacity: 0.5; transition: transform 0.3s ease; }
+        .acc-item.open .acc-chevron { transform: rotate(180deg); opacity: 0.9; }
+
+        .acc-body {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.35s cubic-bezier(.4,0,.2,1);
+        }
+        .acc-item.open .acc-body { grid-template-rows: 1fr; }
+        .acc-body-inner { overflow: hidden; min-height: 0; }
+        .acc-body-content { padding: 0.2rem 0.9rem 1rem; }
+
+        .input-group { margin-bottom: 0.85rem; }
+        .input-group:last-child { margin-bottom: 0; }
 
         .input-group label {
-            display: block;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--gold-light);
-            opacity: 0.7;
-            margin-bottom: 0.3rem;
+            display: block; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1.4px;
+            color: var(--gold-bright); opacity: 0.65; margin-bottom: 0.35rem; font-family: var(--font-eyebrow);
         }
 
         .input-group input, .input-group select, .input-group textarea {
-            width: 100%;
-            padding: 0.6rem 0.8rem;
-            border-radius: 12px;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.06);
-            color: var(--white);
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.85rem;
-            transition: all 0.3s ease;
-            outline: none;
+            width: 100%; padding: 0.6rem 0.8rem; border-radius: 12px;
+            background: rgba(255,255,255,0.035); border: 1px solid rgba(239,204,114,0.12);
+            color: var(--white); font-family: var(--font-ui); font-size: 0.85rem;
+            transition: all 0.3s ease; outline: none;
         }
-
         .input-group input:focus, .input-group select:focus, .input-group textarea:focus {
-            border-color: var(--gold);
-            box-shadow: 0 0 20px rgba(200, 155, 44, 0.1);
-            background: rgba(255,255,255,0.06);
+            border-color: var(--gold); box-shadow: 0 0 0 3px rgba(185,138,46,0.14); background: rgba(255,255,255,0.06);
         }
+        .input-group input::placeholder, .input-group textarea::placeholder { color: rgba(255,255,255,0.22); }
+        .input-group select option { background: #241109; color: var(--white); }
 
-        .input-group input::placeholder, .input-group textarea::placeholder { color: rgba(255,255,255,0.2); }
-        .input-group select option { background: #1a1a1a; color: var(--white); }
+        .check-row { display: flex; gap: 0.9rem; align-items: center; flex-wrap: wrap; margin-top: 0.3rem; }
+        .check-row label { display: flex; align-items: center; gap: 0.45rem; cursor: pointer; font-size: 0.78rem; color: var(--text-light); }
+        .check-row input { width: auto; }
 
-        .step-indicator {
-            font-size: 0.7rem;
-            color: var(--text-light);
-            opacity: 0.4;
-            margin-top: 1.5rem;
-            text-align: center;
-            letter-spacing: 1px;
+        .acc-generate-btn {
+            width: 100%; margin-top: 0.3rem;
+            background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+            border: none; border-radius: 40px; padding: 0.65rem 1rem;
+            font-family: var(--font-eyebrow); font-weight: 600; color: #1a0e08; font-size: 0.82rem;
+            cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+            transition: all 0.3s ease;
         }
+        .acc-generate-btn:hover { transform: scale(1.02); box-shadow: 0 4px 20px rgba(185,138,46,0.4); }
 
+        .review-summary { font-size: 0.78rem; color: var(--text-light); line-height: 1.7; }
+        .review-summary b { color: var(--gold-bright); font-weight: 500; }
+
+        /* ============ CENTER CANVAS ============ */
         .canvas-center {
             border-radius: 32px;
-            background: var(--bg-charcoal);
+            background: radial-gradient(ellipse 600px 400px at 50% 0%, rgba(185,138,46,0.05), transparent 70%), var(--bg-charcoal);
             padding: 1.2rem;
-            box-shadow: inset 0 2px 20px rgba(0,0,0,0.8);
-            display: flex;
-            flex-direction: column;
+            box-shadow: inset 0 2px 26px rgba(0,0,0,0.85), 0 0 0 1px rgba(239,204,114,0.05);
+            display: flex; flex-direction: column;
         }
 
         .canvas-toolbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.4rem 0.8rem 0.8rem 0.8rem;
-            border-bottom: 1px solid rgba(255,255,255,0.04);
-            flex-wrap: wrap;
-            gap: 0.4rem;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.4rem 0.8rem 0.9rem 0.8rem;
+            border-bottom: 1px solid rgba(239,204,114,0.08);
+            flex-wrap: wrap; gap: 0.4rem;
         }
-
         .canvas-toolbar .tool-group { display: flex; gap: 0.6rem; align-items: center; }
-
         .canvas-toolbar button {
-            background: transparent;
-            border: none;
-            color: var(--text-light);
-            padding: 0.3rem 0.7rem;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            transition: all 0.25s ease;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
+            background: transparent; border: none; color: var(--text-light);
+            padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem;
+            display: flex; align-items: center; gap: 0.4rem;
+            transition: all 0.25s ease; cursor: pointer; font-family: var(--font-ui);
         }
-
-        .canvas-toolbar button:hover {
-            background: rgba(200, 155, 44, 0.12);
-            color: var(--white);
-            transform: scale(1.05);
-        }
-
+        .canvas-toolbar button:hover { background: rgba(185,138,46,0.14); color: var(--white); transform: scale(1.05); }
+        .canvas-toolbar button:disabled { opacity: 0.35; cursor: not-allowed; transform: none; }
+        .canvas-toolbar button:disabled:hover { background: transparent; }
         .canvas-toolbar .gold-btn {
-            background: var(--gold);
-            color: #0B0B0B;
-            font-weight: 500;
-            padding: 0.3rem 1.2rem;
-            border-radius: 40px;
-            transition: all 0.3s ease;
+            background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+            color: #1a0e08; font-weight: 500; padding: 0.35rem 1.2rem; border-radius: 40px; transition: all 0.3s ease;
         }
-
-        .canvas-toolbar .gold-btn:hover {
-            background: var(--gold-light);
-            color: #0B0B0B;
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(200, 155, 44, 0.3);
-        }
+        .canvas-toolbar .gold-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(185,138,46,0.4); }
+        #zoomLevel { font-size: 0.72rem; color: var(--text-light); opacity: 0.6; min-width: 38px; text-align: center; font-family: var(--font-eyebrow); }
 
         .invitation-preview {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 1.2rem 0.5rem;
-            min-height: 540px;
-            gap: 1rem;
+            flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 1.4rem 0.5rem; min-height: 540px; gap: 1rem; position: relative;
+        }
+
+        .jharokha-arch { position: absolute; top: -8px; width: min(120%, 620px); opacity: 0.16; pointer-events: none; z-index: 0; }
+
+        .card-zoom-wrap {
+            width: 100%; display: flex; flex-direction: column; align-items: center; gap: 1rem;
+            transition: transform 0.25s ease; transform-origin: 50% 30%;
         }
 
         .invitation-card {
-            width: 100%;
-            max-width: 480px;
-            aspect-ratio: 3/4;
-            background: #fcf7f0;
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.8), 0 0 0 1px rgba(200, 155, 44, 0.25);
+            width: 100%; max-width: 480px; aspect-ratio: 3/4;
+            background:
+                radial-gradient(circle at 18% 22%, rgba(239,204,114,0.14) 0%, transparent 55%),
+                radial-gradient(circle at 85% 85%, rgba(108,21,34,0.05) 0%, transparent 60%),
+                var(--paper);
+            border-radius: 20px;
+            box-shadow: 0 24px 64px rgba(0,0,0,0.85), 0 0 0 1px rgba(239,204,114,0.3);
             padding: 2rem 1.8rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            transition: all 0.3s ease;
-            color: #1e1a17;
-            background-image: radial-gradient(circle at 20% 30%, rgba(255,215,150,0.1) 0%, transparent 60%);
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            position: relative; color: var(--ink); z-index: 1;
+            animation: cardReveal 0.7s cubic-bezier(.2,.8,.2,1) both;
+        }
+        @keyframes cardReveal {
+            from { opacity: 0; transform: translateY(14px) scale(0.98); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
         }
 
-        .invitation-card .card-decoration {
-            position: absolute;
-            inset: 12px;
-            border: 1px solid rgba(200, 155, 44, 0.25);
-            border-radius: 18px;
-            pointer-events: none;
-            transition: all 0.4s ease;
+        .invitation-card .card-decoration { position: absolute; inset: 12px; border: 1px solid rgba(185,138,46,0.32); border-radius: 14px; pointer-events: none; transition: all 0.4s ease; }
+        .invitation-card .card-decoration::before { content: ""; position: absolute; inset: 5px; border: 1px solid rgba(185,138,46,0.16); border-radius: 10px; }
+
+        .card-corner { position: absolute; width: 48px; height: 48px; opacity: 0.6; }
+        .card-corner svg { width: 100%; height: 100%; overflow: visible; }
+        .card-corner path {
+            fill: none; stroke: var(--gold); stroke-width: 1.4; stroke-linecap: round;
+            stroke-dasharray: 1; stroke-dashoffset: 1; animation: drawCorner 1.1s ease forwards;
         }
+        .card-corner.tl { top: 12px; left: 12px; }
+        .card-corner.tr { top: 12px; right: 12px; transform: scaleX(-1); animation-delay: 0.12s; }
+        .card-corner.bl { bottom: 12px; left: 12px; transform: scaleY(-1); animation-delay: 0.24s; }
+        .card-corner.br { bottom: 12px; right: 12px; transform: scale(-1,-1); animation-delay: 0.36s; }
+        @keyframes drawCorner { to { stroke-dashoffset: 0; } }
 
-        .invitation-card .card-title {
-            font-family: 'Great Vibes', cursive;
-            font-size: 2.4rem;
-            color: var(--gold);
-            margin-bottom: 0.2rem;
-            letter-spacing: 1px;
-        }
+        .invitation-card .card-title { font-family: var(--font-script); font-size: 2.3rem; color: var(--gold); margin-bottom: 0.2rem; letter-spacing: 1px; }
+        .invitation-card .couple-names { font-family: var(--font-title); font-size: 2rem; font-weight: 600; margin: 0.2rem 0; color: var(--ink); min-height: 3rem; }
+        .invitation-card .event-detail { font-family: var(--font-title); font-size: 1.15rem; font-style: italic; letter-spacing: 1px; color: #4a3527; margin: 0.2rem 0; min-height: 1.8rem; }
+        .invitation-card .gold-line { width: 60px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0.5rem auto; opacity: 0.75; transition: all 0.3s ease; }
+        .invitation-card .venue-text { font-size: 0.9rem; font-weight: 300; color: #5a4739; min-height: 1.5rem; }
+        .invitation-card .sub-text { margin-top: 0.6rem; font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase; color: #8a715a; min-height: 1.2rem; font-family: var(--font-eyebrow); }
 
-        .invitation-card .couple-names {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            margin: 0.2rem 0;
-            color: #1e1a17;
-            transition: all 0.3s ease;
-            min-height: 3rem;
-        }
-
-        .invitation-card .event-detail {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
-            color: #3d352e;
-            margin: 0.2rem 0;
-            min-height: 1.8rem;
-        }
-
-        .invitation-card .gold-line {
-            width: 60px;
-            height: 2px;
-            background: var(--gold);
-            margin: 0.5rem auto;
-            opacity: 0.6;
-            transition: all 0.3s ease;
-        }
-
-        .invitation-card .venue-text {
-            font-size: 0.9rem;
-            font-weight: 300;
-            color: #4a4038;
-            min-height: 1.5rem;
-        }
-
-        .invitation-card .sub-text {
-            margin-top: 0.6rem;
-            font-size: 0.7rem;
-            letter-spacing: 1px;
-            color: #7a6b5a;
-            min-height: 1.2rem;
-        }
-
-        .invitation-card.empty .couple-names::before { content: "Your Names Here"; color: #bbb; font-weight: 300; opacity: 0.5; }
-        .invitation-card.empty .event-detail::before { content: "Event Type"; color: #bbb; font-weight: 300; opacity: 0.5; }
-        .invitation-card.empty .venue-text::before { content: "Venue · Date"; color: #bbb; font-weight: 300; opacity: 0.5; }
-        .invitation-card.empty .sub-text::before { content: "— your invitation —"; color: #bbb; font-weight: 300; opacity: 0.5; }
-
+        .invitation-card.empty .couple-names::before { content: "Your Names Here"; color: #b9ab94; font-weight: 300; opacity: 0.6; }
+        .invitation-card.empty .event-detail::before { content: "Event Type"; color: #b9ab94; font-weight: 300; opacity: 0.6; }
+        .invitation-card.empty .venue-text::before { content: "Venue · Date"; color: #b9ab94; font-weight: 300; opacity: 0.6; }
+        .invitation-card.empty .sub-text::before { content: "— your invitation —"; color: #b9ab94; font-weight: 300; opacity: 0.6; }
         .invitation-card:not(.empty) .couple-names::before,
         .invitation-card:not(.empty) .event-detail::before,
         .invitation-card:not(.empty) .venue-text::before,
         .invitation-card:not(.empty) .sub-text::before { display: none; }
 
+        /* ============ RIGHT PANEL ============ */
         .panel-right {
-            border-radius: 28px;
-            padding: 1.6rem 1.2rem;
-            background: var(--glass);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255,255,255,0.04);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.5);
-            position: sticky;
-            top: 1.5rem;
-            align-self: start;
+            border-radius: 28px; padding: 1.6rem 1.2rem; background: var(--glass);
+            backdrop-filter: blur(16px); border: 1px solid rgba(239,204,114,0.07);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.5); position: sticky; top: 1.5rem; align-self: start;
         }
-
         .panel-right h4 {
-            font-family: 'Cinzel', serif;
-            font-weight: 400;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-            color: var(--gold-light);
-            margin-bottom: 1.2rem;
-            border-bottom: 1px solid rgba(200,155,44,0.15);
-            padding-bottom: 0.6rem;
+            font-family: var(--font-title); font-style: italic; font-weight: 600; letter-spacing: 0.5px;
+            font-size: 1.15rem; color: var(--gold-bright); margin-bottom: 1.2rem;
+            border-bottom: 1px solid rgba(185,138,46,0.16); padding-bottom: 0.6rem;
+            display: flex; align-items: center; gap: 0.5rem;
         }
+        .panel-right h4 i { font-size: 0.95rem; opacity: 0.8; }
 
         .ai-suggestion {
-            background: rgba(255,255,255,0.02);
-            padding: 0.8rem 1rem;
-            border-radius: 16px;
-            margin-bottom: 1rem;
-            border-left: 2px solid var(--gold);
-            transition: all 0.3s ease;
-            cursor: pointer;
+            background: rgba(255,255,255,0.02); padding: 0.8rem 1rem; border-radius: 16px; margin-bottom: 0.9rem;
+            border-left: 2px solid var(--gold); transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;
         }
-
-        .ai-suggestion:hover {
-            background: rgba(255,255,255,0.06);
-            transform: translateX(4px);
-            border-left-color: var(--gold-light);
+        .ai-suggestion::after {
+            content: ""; position: absolute; top: 0; left: -60%; width: 40%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(239,204,114,0.12), transparent);
+            transform: skewX(-20deg); transition: left 0.6s ease;
         }
+        .ai-suggestion:hover::after { left: 130%; }
+        .ai-suggestion:hover { background: rgba(255,255,255,0.055); transform: translateX(4px); border-left-color: var(--gold-bright); }
+        .ai-suggestion .label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 1.4px; color: var(--gold-bright); opacity: 0.7; font-family: var(--font-eyebrow); }
+        .ai-suggestion .value { font-weight: 400; font-size: 0.9rem; margin-top: 0.15rem; color: var(--white); }
 
-        .ai-suggestion .label {
-            font-size: 0.6rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--gold-light);
-            opacity: 0.7;
-        }
-
-        .ai-suggestion .value {
-            font-weight: 400;
-            font-size: 0.9rem;
-            margin-top: 0.1rem;
-            color: var(--white);
-        }
-
-        .api-key-box {
-            background: rgba(200,155,44,0.06);
-            border: 1px solid rgba(200,155,44,0.18);
-            border-radius: 16px;
-            padding: 1rem;
-            margin-top: 1rem;
-        }
-
-        .api-key-box label {
-            display: block;
-            font-size: 0.62rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--gold-light);
-            margin-bottom: 0.5rem;
-        }
-
-        .api-key-box input {
-            width: 100%;
-            padding: 0.55rem 0.75rem;
-            border-radius: 10px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.08);
-            color: #fff;
-            font-size: 0.78rem;
-            outline: none;
-        }
-
-        .api-key-box input:focus { border-color: var(--gold); }
-
-        .api-key-box .hint {
-            font-size: 0.6rem;
-            color: rgba(255,255,255,0.3);
-            margin-top: 0.5rem;
-            line-height: 1.5;
-        }
+        .api-key-box { background: rgba(185,138,46,0.06); border: 1px solid rgba(185,138,46,0.2); border-radius: 16px; padding: 1rem; margin-top: 1rem; }
+        .api-key-box label { display: block; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--gold-bright); margin-bottom: 0.5rem; font-family: var(--font-eyebrow); }
+        .api-key-box input { width: 100%; padding: 0.55rem 0.75rem; border-radius: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: #fff; font-size: 0.78rem; outline: none; }
+        .api-key-box input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(185,138,46,0.14); }
+        .api-key-box .hint { font-size: 0.6rem; color: rgba(255,255,255,0.32); margin-top: 0.5rem; line-height: 1.5; }
 
         .ai-illustration {
-            background: radial-gradient(circle at 30% 40%, rgba(200,155,44,0.08), transparent 70%);
-            border-radius: 40px;
-            padding: 1.2rem 0.5rem;
-            text-align: center;
-            margin-top: 1rem;
-            border: 1px dashed rgba(200,155,44,0.15);
-            transition: all 0.3s ease;
+            background: radial-gradient(circle at 30% 40%, rgba(185,138,46,0.09), transparent 70%);
+            border-radius: 40px; padding: 1.2rem 0.5rem; text-align: center; margin-top: 1rem;
+            border: 1px dashed rgba(185,138,46,0.18); transition: all 0.3s ease;
         }
-
-        .ai-illustration:hover {
-            border-color: rgba(200,155,44,0.3);
-            background: radial-gradient(circle at 30% 40%, rgba(200,155,44,0.12), transparent 70%);
-        }
-
-        .ai-illustration i {
-            font-size: 2.2rem;
-            color: var(--gold);
-            opacity: 0.5;
-            transition: all 0.3s ease;
-        }
-
-        .ai-illustration:hover i { opacity: 0.8; transform: scale(1.1); }
+        .ai-illustration:hover { border-color: rgba(185,138,46,0.35); background: radial-gradient(circle at 30% 40%, rgba(185,138,46,0.14), transparent 70%); }
+        .ai-illustration i { font-size: 2.2rem; color: var(--gold-bright); opacity: 0.5; transition: all 0.3s ease; }
+        .ai-illustration:hover i { opacity: 0.85; transform: scale(1.1) rotate(-4deg); }
 
         .generate-btn {
-            background: linear-gradient(135deg, var(--gold), #a87a1e);
-            border: none;
-            border-radius: 60px;
-            padding: 0.9rem 1.6rem;
-            font-family: 'Cinzel', serif;
-            font-weight: 600;
-            color: #0B0B0B;
-            width: 100%;
-            font-size: 1rem;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 30px rgba(200, 155, 44, 0.35);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            margin-top: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.6rem;
+            background: linear-gradient(135deg, var(--gold-bright), var(--gold) 60%, var(--gold-dim));
+            background-size: 200% 100%; border: none; border-radius: 60px; padding: 0.9rem 1.6rem;
+            font-family: var(--font-eyebrow); font-weight: 600; color: #1a0e08; width: 100%; font-size: 0.98rem;
+            letter-spacing: 1px; box-shadow: 0 4px 30px rgba(185,138,46,0.4);
+            transition: all 0.3s ease, background-position 0.6s ease; cursor: pointer; margin-top: 1.2rem;
+            display: flex; align-items: center; justify-content: center; gap: 0.6rem;
         }
-
-        .generate-btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 40px rgba(200, 155, 44, 0.55);
-            background: linear-gradient(135deg, var(--gold-light), var(--gold));
-        }
-
-        .generate-btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transform: none;
-        }
+        .generate-btn:hover { transform: scale(1.02); box-shadow: 0 6px 40px rgba(185,138,46,0.6); background-position: 100% 0; }
+        .generate-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 
         .action-btn {
-            border: none;
-            padding: 0.55rem 1.2rem;
-            border-radius: 40px;
-            font-weight: 500;
-            font-size: 0.78rem;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            transition: all 0.25s ease;
-            font-family: 'Poppins', sans-serif;
+            border: none; padding: 0.55rem 1.2rem; border-radius: 40px; font-weight: 500; font-size: 0.78rem;
+            cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; transition: all 0.25s ease; font-family: var(--font-ui);
         }
-
-        .action-btn.gold { background: var(--gold); color: #0B0B0B; font-weight: 600; }
-        .action-btn.gold:hover { background: var(--gold-light); transform: scale(1.05); }
+        .action-btn.gold { background: linear-gradient(135deg, var(--gold-bright), var(--gold)); color: #1a0e08; font-weight: 600; }
+        .action-btn.gold:hover { transform: scale(1.05); box-shadow: 0 4px 18px rgba(185,138,46,0.4); }
         .action-btn.ghost { background: rgba(255,255,255,0.06); color: #fff; border: 1px solid rgba(255,255,255,0.1); }
         .action-btn.ghost:hover { background: rgba(255,255,255,0.12); transform: scale(1.05); }
 
-        @media (max-width: 1200px) {
-            .app { grid-template-columns: 240px 1fr 260px; gap: 1rem; padding: 1rem; }
+        /* ============ AI REVIEW — CHAT UI ============ */
+        .ai-chat { display: flex; flex-direction: column; gap: 0.9rem; }
+        .chat-msg { display: flex; gap: 0.55rem; align-items: flex-start; }
+        .chat-msg.user { flex-direction: row-reverse; }
+        .chat-avatar { width: 28px; height: 28px; border-radius: 50%; flex: 0 0 28px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; }
+        .chat-msg.ai .chat-avatar { background: linear-gradient(135deg, var(--gold-bright), var(--gold)); color: #1a0e08; box-shadow: 0 0 12px rgba(185,138,46,0.45); }
+        .chat-msg.user .chat-avatar { background: rgba(255,255,255,0.07); color: var(--text-light); border: 1px solid rgba(255,255,255,0.12); }
+        .chat-bubble { max-width: 86%; padding: 0.65rem 0.8rem; border-radius: 16px; font-size: 0.76rem; line-height: 1.55; position: relative; }
+        .chat-msg.user .chat-bubble { background: rgba(255,255,255,0.045); border: 1px solid rgba(255,255,255,0.08); border-top-right-radius: 4px; color: var(--text-light); }
+        .chat-msg.ai .chat-bubble { background: linear-gradient(160deg, rgba(185,138,46,0.16), rgba(108,21,34,0.08)); border: 1px solid rgba(185,138,46,0.28); border-top-left-radius: 4px; width: 100%; }
+        .chat-name { font-family: var(--font-eyebrow); font-size: 0.6rem; letter-spacing: 1.2px; text-transform: uppercase; color: var(--gold-bright); opacity: 0.85; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.4rem; }
+        .status-dot { width: 6px; height: 6px; border-radius: 50%; background: #9fd9a0; box-shadow: 0 0 6px #9fd9a0; flex: 0 0 6px; }
+        .status-dot.busy { background: var(--gold-bright); box-shadow: 0 0 6px var(--gold-bright); animation: pulse 1s ease-in-out infinite; }
+        .status-dot.warn { background: #e0a060; box-shadow: 0 0 6px #e0a060; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
+        .typing-dots { display: flex; gap: 4px; padding: 0.25rem 0 0.05rem; }
+        .typing-dots span { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-bright); opacity: 0.5; animation: typingBounce 1.2s infinite ease-in-out; }
+        .typing-dots span:nth-child(2) { animation-delay: 0.15s; }
+        .typing-dots span:nth-child(3) { animation-delay: 0.3s; }
+        @keyframes typingBounce { 0%, 60%, 100% { transform: translateY(0); opacity: 0.4; } 30% { transform: translateY(-4px); opacity: 1; } }
+        .chat-bubble textarea {
+            width: 100%; background: rgba(0,0,0,0.2); border: 1px solid rgba(185,138,46,0.25); border-radius: 10px;
+            padding: 0.6rem 0.7rem; color: var(--white); font-family: var(--font-ui); font-size: 0.75rem;
+            line-height: 1.6; resize: vertical; outline: none; margin-top: 0.1rem;
         }
-
-        @media (max-width: 992px) {
-            .app { grid-template-columns: 1fr; gap: 1.5rem; }
-            .sidebar-left, .panel-right { position: static; max-height: none; }
+        .chat-bubble textarea:focus { border-color: var(--gold-bright); box-shadow: 0 0 0 3px rgba(185,138,46,0.16); }
+        .chat-retry {
+            margin-top: 0.55rem; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+            color: var(--text-light); font-size: 0.68rem; padding: 0.35rem 0.8rem; border-radius: 30px;
+            cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; font-family: var(--font-ui);
+            transition: all 0.25s ease;
         }
+        .chat-retry:hover { background: rgba(255,255,255,0.12); color: var(--white); }
 
-        @media (max-width: 600px) {
-            .app { padding: 0.8rem; }
-            .canvas-toolbar { flex-direction: column; align-items: stretch; }
-            .invitation-card { max-width: 100%; padding: 1.5rem 1rem; }
-        }
+        @media (max-width: 1200px) { .app { grid-template-columns: 260px 1fr 260px; gap: 1rem; padding: 1rem; } }
+        @media (max-width: 992px) { .app { grid-template-columns: 1fr; gap: 1.5rem; } .sidebar-left, .panel-right { position: static; max-height: none; } }
+        @media (max-width: 600px) { .app { padding: 0.8rem; } .canvas-toolbar { flex-direction: column; align-items: stretch; } .invitation-card { max-width: 100%; padding: 1.5rem 1rem; } }
 
-        .particle {
-            position: fixed;
-            border-radius: 50%;
-            pointer-events: none;
-            background: radial-gradient(circle, var(--gold-light), transparent);
-            opacity: 0.12;
-            filter: blur(2px);
-            animation: float 18s infinite alternate ease-in-out;
-            z-index: 0;
-        }
-
-        @keyframes float {
-            0% { transform: translate(0,0) scale(1); opacity: 0.05; }
-            100% { transform: translate(60px, -80px) scale(1.8); opacity: 0.12; }
-        }
-
-        .particle:nth-child(1) { width: 120px; height: 120px; top: 10%; left: 5%; }
-        .particle:nth-child(2) { width: 200px; height: 200px; bottom: 5%; right: 2%; animation-duration: 24s; }
-        .particle:nth-child(3) { width: 80px; height: 80px; top: 40%; left: 40%; animation-duration: 14s; }
-
+        /* ============ AI OVERLAY ============ */
         #aiOverlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(7,7,7,0.9);
-            backdrop-filter: blur(12px);
-            z-index: 999;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 1.5rem;
-            text-align: center;
-            padding: 1rem;
+            display: none; position: fixed; inset: 0; background: rgba(10,5,4,0.92); backdrop-filter: blur(12px);
+            z-index: 999; align-items: center; justify-content: center; flex-direction: column; gap: 1.5rem;
+            text-align: center; padding: 1rem;
         }
-
         #aiOverlay.show { display: flex; }
-
-        #aiOverlay .loader-ring {
-            width: 80px;
-            height: 80px;
-            border: 2px solid rgba(200,155,44,0.15);
-            border-top: 2px solid var(--gold);
-            border-radius: 50%;
-            animation: spin 0.9s linear infinite;
-        }
-
+        .mandala-loader { position: relative; width: 88px; height: 88px; }
+        .mandala-loader svg { width: 100%; height: 100%; }
+        .mandala-loader .ring-outer { animation: spin 5s linear infinite; transform-origin: 50% 50%; }
+        .mandala-loader .ring-inner { animation: spin 3.2s linear infinite reverse; transform-origin: 50% 50%; }
+        .mandala-loader .ring-core { animation: pulseCore 1.4s ease-in-out infinite; transform-origin: 50% 50%; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-
-        #aiOverlay .title {
-            font-family: 'Cinzel', serif;
-            color: var(--gold-light);
-            font-size: 1.4rem;
-            letter-spacing: 3px;
-            animation: pulse 1.5s ease-in-out infinite;
-        }
-
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-
-        #aiOverlay .sub { font-size: 0.8rem; color: var(--text-light); opacity: 0.6; max-width: 320px; }
-
+        @keyframes pulseCore { 0%, 100% { opacity: 0.55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.12); } }
+        #aiOverlay .title { font-family: var(--font-title); font-style: italic; color: var(--gold-bright); font-size: 1.5rem; letter-spacing: 1px; animation: pulse 1.8s ease-in-out infinite; }
+        #aiOverlay .sub { font-size: 0.8rem; color: var(--text-light); opacity: 0.65; max-width: 320px; font-family: var(--font-ui); }
         #closeOverlay {
-            background: var(--gold);
-            border: none;
-            padding: 0.5rem 2rem;
-            border-radius: 40px;
-            font-weight: 600;
-            color: #0B0B0B;
-            cursor: pointer;
-            margin-top: 1rem;
-            transition: all 0.3s ease;
+            background: linear-gradient(135deg, var(--gold-bright), var(--gold)); border: none; padding: 0.5rem 2rem;
+            border-radius: 40px; font-weight: 600; color: #1a0e08; cursor: pointer; margin-top: 1rem; transition: all 0.3s ease;
         }
-
-        #closeOverlay:hover { background: var(--gold-light); transform: scale(1.05); }
+        #closeOverlay:hover { transform: scale(1.05); box-shadow: 0 4px 20px rgba(185,138,46,0.4); }
     </style>
 </head>
 <body>
 
-<!-- ================= NAVBAR ================= -->
 <div id="nav-container"></div>
 
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
+<div class="petal-field" aria-hidden="true">
+    <div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div>
+    <div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div>
+</div>
 
 <div class="app">
 
-    <!-- LEFT SIDEBAR -->
+    <!-- LEFT SIDEBAR — accordion form, everything stays in one flow, nothing to page through -->
     <aside class="sidebar-left">
-        <div class="logo">✦ WedDream</div>
+        <div class="logo"><span class="diya">✦</span> WedDream</div>
+        <div class="logo-sub">baraat-ready invitations, styled by AI</div>
 
-        <div class="wizard-steps" id="wizardSteps">
-            <div class="wizard-step active" data-step="1"><span class="step-num">01</span> Event</div>
-            <div class="wizard-step" data-step="2"><span class="step-num">02</span> Couple Details</div>
-            <div class="wizard-step" data-step="3"><span class="step-num">03</span> Event Details</div>
-            <div class="wizard-step" data-step="4"><span class="step-num">04</span> Theme Selection</div>
-            <div class="wizard-step" data-step="5"><span class="step-num">05</span> Fonts & Colors</div>
-            <div class="wizard-step" data-step="6"><span class="step-num">06</span> Decorations</div>
-            <div class="wizard-step" data-step="7"><span class="step-num">07</span> AI Review</div>
-            <div class="wizard-step" data-step="8"><span class="step-num">08</span> Generate Invitation</div>
+        <div class="completeness">
+            <div class="cbar-track"><div class="cbar-fill" id="cbarFill"></div></div>
+            <div class="cbar-label"><span>Details</span><span id="cbarText">0/6 ready</span></div>
         </div>
 
-        <div class="input-area" id="inputArea">
-            <div class="step-title" id="stepTitle">🎉 Select Event</div>
-            <div id="stepInputs"></div>
-        </div>
+        <div class="accordion" id="accordionList">
 
-        <div class="step-indicator" id="stepIndicator">✨ step 1 of 8 · choose event</div>
+            <div class="acc-item open" data-section="1">
+                <button class="acc-header" type="button">
+                    <span class="acc-num">01</span>
+                    <span class="acc-name">Event</span>
+                    <i class="fas fa-check acc-check"></i>
+                    <i class="fas fa-chevron-down acc-chevron"></i>
+                </button>
+                <div class="acc-body"><div class="acc-body-inner"><div class="acc-body-content">
+                    <div class="input-group">
+                        <label><i class="fas fa-calendar-alt"></i> Event Type</label>
+                        <select id="eventType" data-key="eventType">
+                            <option value="Nikah">Nikah</option>
+                            <option value="Mehndi">Mehndi</option>
+                            <option value="Barat">Barat</option>
+                            <option value="Walima">Walima</option>
+                            <option value="Reception">Reception</option>
+                            <option value="Engagement">Engagement</option>
+                            <option value="Engagement">Birthday Party</option>
+                            <option value="Farewell Party">Farewell Party</option>
+                            <option value="Welcome Party">Welcome Party</option>
+                            <option value="Dinner Party">Dinner Party</option>
+                        </select>
+                    </div>
+                </div></div></div>
+            </div>
+
+            <div class="acc-item" data-section="2">
+                <button class="acc-header" type="button">
+                    <span class="acc-num">02</span>
+                    <span class="acc-name">Couple Details</span>
+                    <i class="fas fa-check acc-check"></i>
+                    <i class="fas fa-chevron-down acc-chevron"></i>
+                </button>
+                <div class="acc-body"><div class="acc-body-inner"><div class="acc-body-content">
+                    <div class="input-group">
+                        <label><i class="fas fa-user"></i> Bride Name</label>
+                        <input type="text" id="bride" data-key="bride" placeholder="e.g. Fatima" autocomplete="off" name="wd_bride_name">
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-user"></i> Groom Name</label>
+                        <input type="text" id="groom" data-key="groom" placeholder="e.g. Ali" autocomplete="off" name="wd_groom_name">
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-users"></i> Hosted By</label>
+                        <input type="text" id="hostedBy" data-key="hostedBy" placeholder="e.g. Mr. & Mrs. Ahmed" autocomplete="off" name="wd_hosted_by">
+                    </div>
+                </div></div></div>
+            </div>
+
+            <div class="acc-item" data-section="3">
+                <button class="acc-header" type="button">
+                    <span class="acc-num">03</span>
+                    <span class="acc-name">Event Details</span>
+                    <i class="fas fa-check acc-check"></i>
+                    <i class="fas fa-chevron-down acc-chevron"></i>
+                </button>
+                <div class="acc-body"><div class="acc-body-inner"><div class="acc-body-content">
+                    <div class="input-group">
+                        <label><i class="fas fa-calendar-day"></i> Date</label>
+                        <input type="text" id="eventDate" data-key="eventDate" placeholder="e.g. 15 Dec 2026" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-clock"></i> Time</label>
+                        <input type="text" id="eventTime" data-key="eventTime" placeholder="e.g. 7:00 PM" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-map-marker-alt"></i> Venue</label>
+                        <input type="text" id="venue" data-key="venue" placeholder="e.g. Grand Hall" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-city"></i> City</label>
+                        <input type="text" id="city" data-key="city" placeholder="e.g. Lahore" autocomplete="off">
+                    </div>
+                </div></div></div>
+            </div>
+
+            <div class="acc-item" data-section="4">
+                <button class="acc-header" type="button">
+                    <span class="acc-num">04</span>
+                    <span class="acc-name">Theme Selection</span>
+                    <i class="fas fa-check acc-check"></i>
+                    <i class="fas fa-chevron-down acc-chevron"></i>
+                </button>
+                <div class="acc-body"><div class="acc-body-inner"><div class="acc-body-content">
+                    <div class="input-group">
+                        <label><i class="fas fa-palette"></i> Theme Color</label>
+                        <select id="themeColor" data-key="themeColor">
+                            <option value="#c89b2c">Gold</option>
+                            <option value="#b93b56">Rose Gold</option>
+                            <option value="#ffffff">White</option>
+                            <option value="#2e8b57">Emerald</option>
+                            <option value="#f5e6d3">Ivory</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-paint-brush"></i> Theme Style</label>
+                        <select id="themeStyle" data-key="themeStyle">
+                            <option value="Royal Gold">Royal Gold</option>
+                            <option value="Royal Black">Royal Black</option>
+                            <option value="Luxury Floral">Luxury Floral</option>
+                            <option value="Islamic Elegant">Islamic Elegant</option>
+                            <option value="Minimal White">Minimal White</option>
+                            <option value="Rose Gold">Rose Gold</option>
+                            <option value="Emerald Royal">Emerald Royal</option>
+                            <option value="Vintage">Vintage</option>
+                            <option value="Modern Luxury">Modern Luxury</option>
+                        </select>
+                    </div>
+                </div></div></div>
+            </div>
+
+            <div class="acc-item" data-section="5">
+                <button class="acc-header" type="button">
+                    <span class="acc-num">05</span>
+                    <span class="acc-name">Fonts & Colors</span>
+                    <i class="fas fa-check acc-check"></i>
+                    <i class="fas fa-chevron-down acc-chevron"></i>
+                </button>
+                <div class="acc-body"><div class="acc-body-inner"><div class="acc-body-content">
+                    <div class="input-group">
+                        <label><i class="fas fa-font"></i> Font Style</label>
+                        <select id="fontStyle" data-key="fontStyle">
+                            <option value="Playfair Display">Playfair Display</option>
+                            <option value="Cinzel">Cinzel</option>
+                            <option value="Cormorant Garamond">Cormorant Garamond</option>
+                            <option value="Great Vibes">Great Vibes</option>
+                            <option value="Poppins">Poppins</option>
+                            <option value="Montserrat">Montserrat</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-palette"></i> Accent Color</label>
+                        <select id="accentColor" data-key="accentColor">
+                            <option value="#c89b2c">Gold</option>
+                            <option value="#b93b56">Rose Gold</option>
+                            <option value="#ffffff">White</option>
+                            <option value="#2e8b57">Emerald</option>
+                            <option value="#f5e6d3">Ivory</option>
+                        </select>
+                    </div>
+                </div></div></div>
+            </div>
+
+            <div class="acc-item" data-section="6">
+                <button class="acc-header" type="button">
+                    <span class="acc-num">06</span>
+                    <span class="acc-name">Decorations</span>
+                    <i class="fas fa-check acc-check"></i>
+                    <i class="fas fa-chevron-down acc-chevron"></i>
+                </button>
+                <div class="acc-body"><div class="acc-body-inner"><div class="acc-body-content">
+                    <div class="input-group">
+                        <label><i class="fas fa-border-all"></i> Decoration Style</label>
+                        <select id="decorationStyle" data-key="decorationStyle">
+                            <option value="Islamic Border">Islamic Border</option>
+                            <option value="Luxury Floral">Luxury Floral</option>
+                            <option value="Royal Frame">Royal Frame</option>
+                            <option value="Golden Leaves">Golden Leaves</option>
+                            <option value="Mandala">Mandala</option>
+                            <option value="Minimal Border">Minimal Border</option>
+                            <option value="Premium Corners">Premium Corners</option>
+                            <option value="Luxury Divider">Luxury Divider</option>
+                        </select>
+                    </div>
+                    <div class="check-row">
+                        <label><input type="checkbox" id="includePhoto" data-key="includePhoto"> Include Photo</label>
+                        <label><input type="checkbox" id="includeQuran" data-key="includeQuran"> Quran Verse</label>
+                        <label><input type="checkbox" id="includeQR" data-key="includeQR"> QR Code</label>
+                        <label><input type="checkbox" id="includeRSVP" data-key="includeRSVP"> RSVP</label>
+                    </div>
+                </div></div></div>
+            </div>
+
+            <div class="acc-item" data-section="7">
+                <button class="acc-header" type="button">
+                    <span class="acc-num">07</span>
+                    <span class="acc-name">AI Review</span>
+                    <i class="fas fa-chevron-down acc-chevron"></i>
+                </button>
+                <div class="acc-body"><div class="acc-body-inner"><div class="acc-body-content">
+                    <div class="ai-chat">
+                        <div class="chat-msg user">
+                            <div class="chat-avatar"><i class="fas fa-user"></i></div>
+                            <div class="chat-bubble" id="userBriefBubble">Design a background for our invitation…</div>
+                        </div>
+                        <div class="chat-msg ai">
+                            <div class="chat-avatar"><i class="fas fa-sparkles"></i></div>
+                            <div class="chat-bubble">
+                                <div class="chat-name">
+                                    <span class="status-dot busy" id="aiStatusDot"></span>
+                                    Art Director AI · <span id="aiReviewStatus">drafting your prompt…</span>
+                                </div>
+                                <div class="typing-dots" id="aiTyping"><span></span><span></span><span></span></div>
+                                <div id="aiPromptBox" style="display:none;">
+                                    <textarea id="polishedPromptText" rows="6" placeholder="Polished prompt will appear here..."></textarea>
+                                    <button class="chat-retry" id="aiRetryBtn" type="button"><i class="fas fa-rotate"></i> Redraft prompt</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div></div>
+            </div>
+
+            <div class="acc-item" data-section="8">
+                <button class="acc-header" type="button">
+                    <span class="acc-num">08</span>
+                    <span class="acc-name">Generate Invitation</span>
+                    <i class="fas fa-chevron-down acc-chevron"></i>
+                </button>
+                <div class="acc-body"><div class="acc-body-inner"><div class="acc-body-content">
+                    <div class="review-summary" id="reviewSummary">Fill in the sections above to see a summary here.</div>
+                    <button class="acc-generate-btn" id="generateFromAccordion" type="button">
+                        <i class="fas fa-wand-magic-sparkles"></i> Generate Now
+                    </button>
+                </div></div></div>
+            </div>
+
+        </div>
     </aside>
 
     <!-- CENTER WORKSPACE -->
     <main class="canvas-center">
         <div class="canvas-toolbar">
             <div class="tool-group">
-                <button id="zoomOut"><i class="fas fa-search-minus"></i></button>
-                <button id="zoomIn"><i class="fas fa-search-plus"></i></button>
-                <button id="fitScreen"><i class="fas fa-arrows-alt"></i></button>
-                <button id="fullscreen"><i class="fas fa-expand"></i></button>
+                <button id="zoomOut" aria-label="Zoom out"><i class="fas fa-search-minus"></i></button>
+                <span id="zoomLevel">100%</span>
+                <button id="zoomIn" aria-label="Zoom in"><i class="fas fa-search-plus"></i></button>
+                <button id="fitScreen" aria-label="Fit to screen"><i class="fas fa-arrows-alt"></i></button>
+                <button id="fullscreen" aria-label="Fullscreen"><i class="fas fa-expand"></i></button>
             </div>
             <div class="tool-group">
-                <button id="undoBtn"><i class="fas fa-undo-alt"></i> Undo</button>
-                <button id="redoBtn"><i class="fas fa-redo-alt"></i> Redo</button>
+                <button id="undoBtn" aria-label="Undo"><i class="fas fa-undo-alt"></i> Undo</button>
+                <button id="redoBtn" aria-label="Redo"><i class="fas fa-redo-alt"></i> Redo</button>
                 <button class="gold-btn" id="resetCard"><i class="fas fa-undo"></i> Reset</button>
             </div>
         </div>
 
         <div class="invitation-preview" id="previewContainer">
-            <div class="invitation-card empty" id="invitationCard">
-                <div class="card-decoration"></div>
-                <div class="card-title">Wedding</div>
-                <div class="gold-line"></div>
-                <div class="couple-names" id="coupleNameDisplay"></div>
-                <div class="event-detail" id="eventTypeDisplay"></div>
-                <div class="gold-line" style="width:40px;"></div>
-                <div class="venue-text" id="venueDisplay"></div>
-                <div class="sub-text" id="subTextDisplay"></div>
+            <svg class="jharokha-arch" viewBox="0 0 300 200" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
+                <path d="M10,200 L10,95 C10,40 55,8 150,8 C245,8 290,40 290,95 L290,200" fill="none" stroke="var(--gold)" stroke-width="1.5"/>
+                <path d="M28,200 L28,98 C28,52 68,24 150,24 C232,24 272,52 272,98 L272,200" fill="none" stroke="var(--gold)" stroke-width="0.75" opacity="0.6"/>
+                <circle cx="150" cy="16" r="3" fill="var(--gold)"/>
+            </svg>
+
+            <div class="card-zoom-wrap" id="cardZoomWrap">
+                <div class="invitation-card empty" id="invitationCard">
+                    <div class="card-decoration"></div>
+                    <div class="card-corner tl"><svg viewBox="0 0 48 48"><path d="M2,20 C2,8 8,2 20,2 C26,2 26,10 20,10 C14,10 12,16 18,18 C22,19 24,15 21,13"/></svg></div>
+                    <div class="card-corner tr"><svg viewBox="0 0 48 48"><path d="M2,20 C2,8 8,2 20,2 C26,2 26,10 20,10 C14,10 12,16 18,18 C22,19 24,15 21,13"/></svg></div>
+                    <div class="card-corner bl"><svg viewBox="0 0 48 48"><path d="M2,20 C2,8 8,2 20,2 C26,2 26,10 20,10 C14,10 12,16 18,18 C22,19 24,15 21,13"/></svg></div>
+                    <div class="card-corner br"><svg viewBox="0 0 48 48"><path d="M2,20 C2,8 8,2 20,2 C26,2 26,10 20,10 C14,10 12,16 18,18 C22,19 24,15 21,13"/></svg></div>
+
+                    <div class="card-title">Wedding</div>
+                    <div class="gold-line"></div>
+                    <div class="couple-names" id="coupleNameDisplay"></div>
+                    <div class="event-detail" id="eventTypeDisplay"></div>
+                    <div class="gold-line" style="width:40px;"></div>
+                    <div class="venue-text" id="venueDisplay"></div>
+                    <div class="sub-text" id="subTextDisplay"></div>
+                </div>
             </div>
         </div>
     </main>
 
     <!-- RIGHT AI PANEL -->
     <aside class="panel-right">
-        <h4><i class="fas fa-sparkles" style="margin-right:6px;"></i> AI Assistant</h4>
+        <h4><i class="fas fa-sparkles"></i> AI Assistant</h4>
         <div class="ai-suggestion" id="themeSuggestion">
             <div class="label">Recommended Theme</div>
             <div class="value">✨ Royal Gold · Classic</div>
@@ -709,7 +764,7 @@
 
         <div class="api-key-box">
             <label><i class="fas fa-key"></i> Gemini API Key</label>
-            <input type="password" id="geminiKey" placeholder="Paste your Gemini API key">
+            <input type="password" id="geminiKey" placeholder="Paste your Gemini API key" autocomplete="off">
             <div class="hint">Get a free key at aistudio.google.com — used only in this browser session, never stored or sent anywhere except Google's API.</div>
         </div>
 
@@ -722,58 +777,42 @@
     </aside>
 </div>
 
-<!-- ================= FOOTER ================= -->
 <div id="footer-container"></div>
 
-<!-- AI OVERLAY -->
 <div id="aiOverlay">
-    <div class="title" id="overlayTitle">✨ AI is designing your masterpiece...</div>
-    <div class="loader-ring" id="overlayLoader"></div>
+    <div class="title" id="overlayTitle">AI is designing your masterpiece...</div>
+    <div class="mandala-loader" id="overlayLoader" aria-hidden="true">
+        <svg viewBox="0 0 100 100">
+            <circle class="ring-outer" cx="50" cy="50" r="44" fill="none" stroke="rgba(239,204,114,0.25)" stroke-width="1.5" stroke-dasharray="4 7"/>
+            <circle class="ring-inner" cx="50" cy="50" r="32" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-dasharray="60 30"/>
+            <circle class="ring-core" cx="50" cy="50" r="14" fill="none" stroke="var(--gold-bright)" stroke-width="2"/>
+        </svg>
+    </div>
     <div class="sub" id="overlaySub">generating premium invitation with WedDream AI</div>
     <button id="closeOverlay">Close Preview</button>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
-
-  /* ── NAVBAR ── */
   $(document).ready(() => {
       $.get('navebar.html', (data) => {
           $('#nav-container').html(data);
-
           var page = window.location.pathname.split('/').pop().replace('.html','').toLowerCase() || 'index';
-
           var pageMap = {
-              'index'        : 'home',
-              'aboutme'      : 'about',
-              'services'     : 'services',
-              'decoration'   : 'services',
-              'guestlist'    : 'guestlist',
-              'gustlist'     : 'guestlist',
-              'photographers': 'vendors',
-              'makeup'       : 'vendors',
-              'catering'     : 'vendors',
-              'ai-planner'   : 'ai',
-              'invitation'   : 'ai'
+              'index':'home','aboutme':'about','services':'services','decoration':'services',
+              'guestlist':'guestlist','gustlist':'guestlist','photographers':'vendors','makeup':'vendors',
+              'catering':'vendors','ai-planner':'ai','invitation':'ai'
           };
-
           var activeKey = pageMap[page] || 'home';
-
           $('.wd-menu-link').removeClass('active');
           $('.wd-mobile-list > li > a').removeClass('active');
-
           $('.wd-menu-link[data-nav="' + activeKey + '"]').addClass('active');
           $('.wd-mobile-list > li > a[data-nav="' + activeKey + '"]').addClass('active');
       });
   });
-
-  /* ── FOOTER ── */
   $(document).ready(() => {
-      $.get('footer.html', (data) => {
-          $('#footer-container').html(data);
-      });
+      $.get('footer.html', (data) => { $('#footer-container').html(data); });
   });
-
 </script>
 
 <script>
@@ -790,179 +829,84 @@
         decorationStyle: 'Luxury Floral',
         includePhoto: false, includeQuran: false, includeQR: false, includeRSVP: false
     };
+    const defaultData = JSON.parse(JSON.stringify(data));
 
     let aiPolishedPrompt = "";
     let lastGeneratedImage = "";
 
-    /* ============================================================
-       STEP DEFINITIONS
-    ============================================================ */
-    const steps = [
-        { id: 1, name: 'Event', title: '🎉 Select Event', inputs: `
-            <div class="input-group">
-                <label><i class="fas fa-calendar-alt"></i> Event Type</label>
-                <select id="eventType">
-                    <option value="Nikah">Nikah</option>
-                    <option value="Mehndi">Mehndi</option>
-                    <option value="Barat">Barat</option>
-                    <option value="Walima">Walima</option>
-                    <option value="Reception">Reception</option>
-                    <option value="Engagement">Engagement</option>
-                </select>
-            </div>
-        `},
-        { id: 2, name: 'Couple Details', title: '💑 Couple Details', inputs: `
-            <div class="input-group">
-                <label><i class="fas fa-user"></i> Bride Name</label>
-                <input type="text" id="brideName" placeholder="e.g. Fatima">
-            </div>
-            <div class="input-group">
-                <label><i class="fas fa-user"></i> Groom Name</label>
-                <input type="text" id="groomName" placeholder="e.g. Ali">
-            </div>
-            <div class="input-group">
-                <label><i class="fas fa-users"></i> Hosted By</label>
-                <input type="text" id="hostedBy" placeholder="e.g. Mr. & Mrs. Ahmed">
-            </div>
-        `},
-        { id: 3, name: 'Event Details', title: '📍 Event Details', inputs: `
-            <div class="input-group">
-                <label><i class="fas fa-calendar-day"></i> Date</label>
-                <input type="text" id="eventDate" placeholder="e.g. 15 Dec 2026">
-            </div>
-            <div class="input-group">
-                <label><i class="fas fa-clock"></i> Time</label>
-                <input type="text" id="eventTime" placeholder="e.g. 7:00 PM">
-            </div>
-            <div class="input-group">
-                <label><i class="fas fa-map-marker-alt"></i> Venue</label>
-                <input type="text" id="venue" placeholder="e.g. Grand Hall">
-            </div>
-            <div class="input-group">
-                <label><i class="fas fa-city"></i> City</label>
-                <input type="text" id="city" placeholder="e.g. Lahore">
-            </div>
-        `},
-        { id: 4, name: 'Theme Selection', title: '🎨 Theme Selection', inputs: `
-            <div class="input-group">
-                <label><i class="fas fa-palette"></i> Theme Color</label>
-                <select id="themeColor">
-                    <option value="#c89b2c">Gold</option>
-                    <option value="#b93b56">Rose Gold</option>
-                    <option value="#ffffff">White</option>
-                    <option value="#2e8b57">Emerald</option>
-                    <option value="#f5e6d3">Ivory</option>
-                </select>
-            </div>
-            <div class="input-group">
-                <label><i class="fas fa-paint-brush"></i> Theme Style</label>
-                <select id="themeStyle">
-                    <option value="Royal Gold">Royal Gold</option>
-                    <option value="Royal Black">Royal Black</option>
-                    <option value="Luxury Floral">Luxury Floral</option>
-                    <option value="Islamic Elegant">Islamic Elegant</option>
-                    <option value="Minimal White">Minimal White</option>
-                    <option value="Rose Gold">Rose Gold</option>
-                    <option value="Emerald Royal">Emerald Royal</option>
-                    <option value="Vintage">Vintage</option>
-                    <option value="Modern Luxury">Modern Luxury</option>
-                </select>
-            </div>
-        `},
-        { id: 5, name: 'Fonts & Colors', title: '✒️ Fonts & Colors', inputs: `
-            <div class="input-group">
-                <label><i class="fas fa-font"></i> Font Style</label>
-                <select id="fontStyle">
-                    <option value="Playfair Display">Playfair Display</option>
-                    <option value="Cinzel">Cinzel</option>
-                    <option value="Cormorant Garamond">Cormorant Garamond</option>
-                    <option value="Great Vibes">Great Vibes</option>
-                    <option value="Poppins">Poppins</option>
-                    <option value="Montserrat">Montserrat</option>
-                </select>
-            </div>
-            <div class="input-group">
-                <label><i class="fas fa-palette"></i> Accent Color</label>
-                <select id="accentColor">
-                    <option value="#c89b2c">Gold</option>
-                    <option value="#b93b56">Rose Gold</option>
-                    <option value="#ffffff">White</option>
-                    <option value="#2e8b57">Emerald</option>
-                    <option value="#f5e6d3">Ivory</option>
-                </select>
-            </div>
-        `},
-        { id: 6, name: 'Decorations', title: '✨ Decorations', inputs: `
-            <div class="input-group">
-                <label><i class="fas fa-border-all"></i> Decoration Style</label>
-                <select id="decorationStyle">
-                    <option value="Islamic Border">Islamic Border</option>
-                    <option value="Luxury Floral">Luxury Floral</option>
-                    <option value="Royal Frame">Royal Frame</option>
-                    <option value="Golden Leaves">Golden Leaves</option>
-                    <option value="Mandala">Mandala</option>
-                    <option value="Minimal Border">Minimal Border</option>
-                    <option value="Premium Corners">Premium Corners</option>
-                    <option value="Luxury Divider">Luxury Divider</option>
-                </select>
-            </div>
-            <div class="input-group" style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap; margin-top:0.5rem;">
-                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.78rem;">
-                    <input type="checkbox" id="includePhoto" style="width:auto;"> Include Photo
-                </label>
-                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.78rem;">
-                    <input type="checkbox" id="includeQuran" style="width:auto;"> Quran Verse
-                </label>
-                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.78rem;">
-                    <input type="checkbox" id="includeQR" style="width:auto;"> QR Code
-                </label>
-                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.78rem;">
-                    <input type="checkbox" id="includeRSVP" style="width:auto;"> RSVP
-                </label>
-            </div>
-        `},
-        { id: 7, name: 'AI Review', title: '🤖 AI Review', inputs: `
-            <div style="text-align:center; padding:1rem 0;">
-                <i class="fas fa-robot" style="font-size:2.5rem; color:var(--gold); opacity:0.6;"></i>
-                <p id="aiReviewStatus" style="margin-top:0.6rem; opacity:0.7; font-size:0.85rem;">Connecting to Gemini AI...</p>
-                <div style="width:100%; height:4px; background:rgba(255,255,255,0.05); border-radius:4px; margin-top:1rem; overflow:hidden;">
-                    <div style="width:70%; height:100%; background:linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius:4px; animation: pulse 1.5s ease-in-out infinite;"></div>
-                </div>
-            </div>
-            <div id="aiPromptBox" style="margin-top:1rem; display:none;">
-                <label style="display:block; font-size:0.7rem; text-transform:uppercase; letter-spacing:1px; color:var(--gold-light); opacity:0.7; margin-bottom:0.4rem;">
-                    <i class="fas fa-feather"></i> AI Polished Prompt
-                </label>
-                <textarea id="polishedPromptText" rows="7" placeholder="Polished prompt will appear here..."></textarea>
-            </div>
-        `},
-        { id: 8, name: 'Generate Invitation', title: '🚀 Generate Invitation', inputs: `
-            <div style="text-align:center; padding:1rem 0;">
-                <i class="fas fa-wand-magic-sparkles" style="font-size:2.5rem; color:var(--gold); opacity:0.5;"></i>
-                <p style="margin-top:0.5rem; opacity:0.6; font-size:0.85rem;">Ready to generate your premium invitation</p>
-                <button id="generateFromStep" class="generate-btn" style="margin-top:1rem; width:auto; padding:0.7rem 2rem; font-size:0.9rem;">
-                    <i class="fas fa-magic"></i> Generate Now
-                </button>
-            </div>
-        `}
-    ];
+    /* section -> which data keys count toward "filled" */
+    const sectionFields = {
+        1: ['eventType'],
+        2: ['bride', 'groom'],
+        3: ['eventDate', 'venue'],
+        4: ['themeStyle'],
+        5: ['fontStyle'],
+        6: ['decorationStyle']
+    };
 
     /* ============================================================
        DOM REFS
     ============================================================ */
-    const wizardSteps = document.querySelectorAll('.wizard-step');
-    const stepTitle = document.getElementById('stepTitle');
-    const stepInputs = document.getElementById('stepInputs');
-    const stepIndicator = document.getElementById('stepIndicator');
-
     const coupleDisplay = document.getElementById('coupleNameDisplay');
     const eventDisplay = document.getElementById('eventTypeDisplay');
     const venueDisplay = document.getElementById('venueDisplay');
     const subDisplay = document.getElementById('subTextDisplay');
     const card = document.getElementById('invitationCard');
+    const cardZoomWrap = document.getElementById('cardZoomWrap');
     const cardDecoration = card.querySelector('.card-decoration');
     const cardTitle = card.querySelector('.card-title');
     const previewContainer = document.getElementById('previewContainer');
+    const cbarFill = document.getElementById('cbarFill');
+    const cbarText = document.getElementById('cbarText');
+    const reviewSummary = document.getElementById('reviewSummary');
+
+    /* ============================================================
+       ACCORDION
+    ============================================================ */
+    const accItems = document.querySelectorAll('.acc-item');
+
+    accItems.forEach(item => {
+        const header = item.querySelector('.acc-header');
+        header.addEventListener('click', () => {
+            const wasOpen = item.classList.contains('open');
+            accItems.forEach(i => i.classList.remove('open'));
+            if (!wasOpen) {
+                item.classList.add('open');
+                const section = item.dataset.section;
+                if (section === '7') setTimeout(runAIReview, 60);
+                if (section === '8') updateReviewSummary();
+            }
+        });
+    });
+
+    function updateAccordionStatus() {
+        let filledCount = 0;
+        Object.keys(sectionFields).forEach(sec => {
+            const keys = sectionFields[sec];
+            const filled = keys.some(k => {
+                const v = data[k];
+                return typeof v === 'string' ? v.trim() !== '' : !!v;
+            });
+            const item = document.querySelector(`.acc-item[data-section="${sec}"]`);
+            if (item) item.classList.toggle('filled', filled);
+            if (filled) filledCount++;
+        });
+        if (cbarFill) cbarFill.style.width = `${(filledCount / 6) * 100}%`;
+        if (cbarText) cbarText.textContent = `${filledCount}/6 ready`;
+    }
+
+    function updateReviewSummary() {
+        if (!reviewSummary) return;
+        const names = (data.bride || data.groom) ? `${data.bride || '—'} & ${data.groom || '—'}` : 'not set yet';
+        const when = [data.eventDate, data.eventTime].filter(Boolean).join(' · ') || 'not set yet';
+        const where = [data.venue, data.city].filter(Boolean).join(', ') || 'not set yet';
+        reviewSummary.innerHTML = `
+            <b>${data.eventType}</b> for <b>${names}</b><br>
+            📅 ${when}<br>
+            📍 ${where}<br>
+            🎨 ${data.themeStyle} · ${data.decorationStyle}
+        `;
+    }
 
     /* ============================================================
        CARD PREVIEW UPDATE
@@ -987,7 +931,7 @@
 
         const goldLines = card.querySelectorAll('.gold-line');
         cardTitle.style.color = themeColor;
-        goldLines.forEach(line => line.style.background = themeColor);
+        goldLines.forEach(line => line.style.background = `linear-gradient(90deg, transparent, ${themeColor}, transparent)`);
         cardDecoration.style.borderColor = themeColor + '66';
 
         coupleDisplay.style.fontFamily = `'${data.fontStyle}', serif`;
@@ -995,105 +939,99 @@
 
         const hasContent = bride || groom || eventType || venue || eventDate || city;
         card.classList.toggle('empty', !hasContent);
+
+        updateAccordionStatus();
+        updateReviewSummary();
     }
 
     /* ============================================================
-       LOAD STEP
+       BIND INPUTS (bound once — all fields live in the DOM permanently now)
     ============================================================ */
-    function loadStep(stepId) {
-        const step = steps.find(s => s.id === stepId);
-        if (!step) return;
-
-        wizardSteps.forEach(s => {
-            const num = parseInt(s.dataset.step);
-            s.classList.remove('active');
-            if (num < stepId) {
-                s.classList.add('completed');
-                if (!s.querySelector('.fa-check-circle')) {
-                    const icon = document.createElement('i');
-                    icon.className = 'fas fa-check-circle';
-                    s.appendChild(icon);
-                }
-            } else if (num === stepId) {
-                s.classList.add('active');
-            } else {
-                s.classList.remove('completed');
-                const check = s.querySelector('.fa-check-circle');
-                if (check) check.remove();
-            }
+    function syncInputsFromData() {
+        document.querySelectorAll('[data-key]').forEach(el => {
+            const key = el.dataset.key;
+            if (el.type === 'checkbox') el.checked = !!data[key];
+            else el.value = data[key] !== undefined ? data[key] : '';
         });
-
-        stepTitle.textContent = step.title;
-        stepInputs.innerHTML = step.inputs;
-        bindInputs();
-        stepIndicator.textContent = `✨ step ${stepId} of 8 · ${step.name}`;
-
-        if (stepId === 7) {
-            setTimeout(runAIReview, 80);
-        }
-
-        if (stepId === 8) {
-            const genFromStep = document.getElementById('generateFromStep');
-            if (genFromStep) {
-                genFromStep.addEventListener('click', () => generateInvitationImage());
-            }
-        }
     }
 
-    /* ============================================================
-       BIND INPUTS
-    ============================================================ */
-    function bindInputs() {
-        document.querySelectorAll('#stepInputs input, #stepInputs select').forEach(el => {
-            if (el.type === 'checkbox') {
-                el.addEventListener('change', function () {
-                    data[this.id] = this.checked;
-                    updateCard();
-                });
-                return;
-            }
-            el.addEventListener('input', function () {
-                data[this.id] = this.value;
-                updateCard();
-            });
+    let historyStack = [JSON.stringify(data)];
+    let historyIndex = 0;
+    const undoBtn = document.getElementById('undoBtn');
+    const redoBtn = document.getElementById('redoBtn');
+
+    function refreshUndoRedoButtons() {
+        undoBtn.disabled = historyIndex <= 0;
+        redoBtn.disabled = historyIndex >= historyStack.length - 1;
+    }
+
+    function pushHistory() {
+        historyStack = historyStack.slice(0, historyIndex + 1);
+        historyStack.push(JSON.stringify(data));
+        if (historyStack.length > 60) historyStack.shift();
+        historyIndex = historyStack.length - 1;
+        refreshUndoRedoButtons();
+    }
+
+    function applyHistoryState() {
+        Object.assign(data, JSON.parse(historyStack[historyIndex]));
+        syncInputsFromData();
+        updateCard();
+        refreshUndoRedoButtons();
+    }
+
+    undoBtn.addEventListener('click', () => { if (historyIndex > 0) { historyIndex--; applyHistoryState(); } });
+    redoBtn.addEventListener('click', () => { if (historyIndex < historyStack.length - 1) { historyIndex++; applyHistoryState(); } });
+
+    document.querySelectorAll('[data-key]').forEach(el => {
+        if (el.type === 'checkbox') {
             el.addEventListener('change', function () {
-                data[this.id] = this.value;
+                data[this.dataset.key] = this.checked;
                 updateCard();
+                pushHistory();
             });
+            return;
+        }
+        el.addEventListener('input', function () {
+            data[this.dataset.key] = this.value;
+            updateCard();
         });
-
-        // restore values
-        document.querySelectorAll('#stepInputs input, #stepInputs select').forEach(el => {
-            const id = el.id;
-            if (el.type === 'checkbox') el.checked = !!data[id];
-            else if (data[id]) el.value = data[id];
+        el.addEventListener('change', function () {
+            data[this.dataset.key] = this.value;
+            updateCard();
+            pushHistory();
         });
-    }
-
-    /* ============================================================
-       WIZARD CLICK
-    ============================================================ */
-    wizardSteps.forEach(step => {
-        step.addEventListener('click', function () {
-            loadStep(parseInt(this.dataset.step));
-        });
+        // for free-typed text inputs, also snapshot history when the user pauses
+        if (el.tagName === 'INPUT' && el.type === 'text') {
+            let debounceTimer;
+            el.addEventListener('input', function () {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(pushHistory, 500);
+            });
+        }
     });
 
     /* ============================================================
-       TOOLBAR CONTROLS
+       TOOLBAR — ZOOM (applied to a dedicated wrapper so it never
+       fights the card's own entrance animation)
     ============================================================ */
     let scale = 1;
+    const zoomLevelEl = document.getElementById('zoomLevel');
+    function applyZoom() {
+        cardZoomWrap.style.transform = `scale(${scale})`;
+        if (zoomLevelEl) zoomLevelEl.textContent = `${Math.round(scale * 100)}%`;
+    }
     document.getElementById('zoomIn').addEventListener('click', () => {
         scale = Math.min(scale + 0.1, 1.8);
-        card.style.transform = `scale(${scale})`;
+        applyZoom();
     });
     document.getElementById('zoomOut').addEventListener('click', () => {
-        scale = Math.max(scale - 0.1, 0.6);
-        card.style.transform = `scale(${scale})`;
+        scale = Math.max(scale - 0.1, 0.5);
+        applyZoom();
     });
     document.getElementById('fitScreen').addEventListener('click', () => {
         scale = 1;
-        card.style.transform = 'scale(1)';
+        applyZoom();
     });
     document.getElementById('fullscreen').addEventListener('click', () => {
         if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(()=>{});
@@ -1101,24 +1039,19 @@
     });
 
     document.getElementById('resetCard').addEventListener('click', function () {
-        Object.assign(data, {
-            eventType: 'Nikah', bride: '', groom: '', hostedBy: '',
-            eventDate: '', eventTime: '', venue: '', city: '',
-            themeColor: '#c89b2c', themeStyle: 'Royal Gold',
-            fontStyle: 'Playfair Display', accentColor: '#c89b2c',
-            decorationStyle: 'Luxury Floral',
-            includePhoto: false, includeQuran: false, includeQR: false, includeRSVP: false
-        });
+        Object.assign(data, JSON.parse(JSON.stringify(defaultData)));
         aiPolishedPrompt = "";
         lastGeneratedImage = "";
-        // remove generated result if present
         const resultWrap = document.getElementById('aiResultWrap');
         if (resultWrap) resultWrap.remove();
         card.style.display = '';
-
-        const activeStep = document.querySelector('.wizard-step.active');
-        loadStep(activeStep ? parseInt(activeStep.dataset.step) : 1);
+        scale = 1;
+        applyZoom();
+        syncInputsFromData();
         updateCard();
+        historyStack = [JSON.stringify(data)];
+        historyIndex = 0;
+        refreshUndoRedoButtons();
     });
 
     /* ============================================================
@@ -1141,7 +1074,9 @@
                 let idx = (keys.indexOf(valueEl.innerText) + 1) % keys.length;
                 valueEl.innerText = keys[idx];
                 data.themeStyle = themeMap[keys[idx]];
+                syncInputsFromData();
                 updateCard();
+                pushHistory();
             } else if (label.includes('Font')) {
                 const fontMap = {
                     'Playfair Display + Great Vibes': 'Playfair Display',
@@ -1153,12 +1088,16 @@
                 let idx = (keys.indexOf(valueEl.innerText) + 1) % keys.length;
                 valueEl.innerText = keys[idx];
                 data.fontStyle = fontMap[keys[idx]];
+                syncInputsFromData();
                 updateCard();
+                pushHistory();
             } else if (label.includes('Decoration')) {
                 const decors = ['Luxury Floral Border', 'Islamic Geometric', 'Royal Frame', 'Minimal Border'];
                 let idx = (decors.indexOf(valueEl.innerText) + 1) % decors.length;
                 valueEl.innerText = decors[idx];
                 data.decorationStyle = decors[idx];
+                syncInputsFromData();
+                pushHistory();
             } else if (label.includes('Color')) {
                 const colors = ['#C89B2C · #B93B56 · #FFFFFF', '#D4AF37 · #8B0000 · #FFF', '#2E8B57 · #FFD700 · #FFF', '#C0C0C0 · #800020 · #FFF'];
                 let idx = (colors.indexOf(valueEl.innerText) + 1) % colors.length;
@@ -1171,13 +1110,6 @@
        PROMPT BUILDING
     ============================================================ */
     function buildBasePrompt(d) {
-        // IMPORTANT: AI image models cannot render real, readable text or
-        // calligraphy reliably — every attempt produces fake gibberish
-        // letters. So we ask the AI for ONLY a decorative background/border
-        // (completely empty in the center), and the actual bride/groom
-        // names, date, venue etc. are rendered as real HTML text on top
-        // of this background afterwards. This guarantees crisp, readable,
-        // selectable text every time.
         let p = `An empty, blank, completely textless ultra-premium ${d.themeStyle} wedding invitation card background for a ${d.eventType} ceremony. `;
         p += `Ornamental ${d.decorationStyle} border and corner decorations only. `;
         p += `Color palette centered on ${d.accentColor || d.themeColor}. `;
@@ -1188,7 +1120,7 @@
     }
 
     /* ============================================================
-       GEMINI — PROMPT POLISHING (Step 7)
+       GEMINI — PROMPT POLISHING (AI Review section)
     ============================================================ */
     async function polishPromptWithGemini(basePrompt) {
         const apiKey = (document.getElementById('geminiKey') || {}).value;
@@ -1213,9 +1145,7 @@
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    contents: [{ parts: [{ text: `${systemInstruction}\n\nBrief:\n${basePrompt}` }] }]
-                })
+                body: JSON.stringify({ contents: [{ parts: [{ text: `${systemInstruction}\n\nBrief:\n${basePrompt}` }] }] })
             }
         );
 
@@ -1223,7 +1153,6 @@
             const errText = await response.text().catch(() => '');
             throw new Error('GEMINI_HTTP_' + response.status + ': ' + errText);
         }
-
         const result = await response.json();
         const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
         if (!text) throw new Error('GEMINI_EMPTY_RESPONSE');
@@ -1233,38 +1162,52 @@
     async function runAIReview() {
         const base = buildBasePrompt(data);
         const statusEl = document.getElementById('aiReviewStatus');
+        const dotEl = document.getElementById('aiStatusDot');
+        const typingEl = document.getElementById('aiTyping');
+        const briefEl = document.getElementById('userBriefBubble');
+        const promptBox = document.getElementById('aiPromptBox');
         if (!statusEl) return;
+
+        if (briefEl) {
+            briefEl.textContent = `Design a premium ${data.themeStyle} background for our ${data.eventType} invitation, in ${data.decorationStyle} style.`;
+        }
+
+        statusEl.textContent = 'drafting your prompt…';
+        if (dotEl) dotEl.className = 'status-dot busy';
+        if (typingEl) typingEl.style.display = 'flex';
+        if (promptBox) promptBox.style.display = 'none';
 
         try {
             const polished = await polishPromptWithGemini(base);
             aiPolishedPrompt = polished;
 
-            statusEl.textContent = '✅ Prompt ready — review or edit before generating';
-            statusEl.style.color = '#9fd9a0';
-            document.getElementById('aiPromptBox').style.display = 'block';
+            statusEl.textContent = 'ready ✓';
+            if (dotEl) dotEl.className = 'status-dot';
+            if (typingEl) typingEl.style.display = 'none';
+            promptBox.style.display = 'block';
             document.getElementById('polishedPromptText').value = polished;
-            document.getElementById('polishedPromptText').addEventListener('input', function () {
-                aiPolishedPrompt = this.value;
-            });
         } catch (err) {
             console.error('Gemini prompt polish failed:', err);
             aiPolishedPrompt = base;
 
-            let msg = '⚠️ Could not reach Gemini — using a basic prompt instead.';
-            if (err.message === 'NO_KEY') msg = '⚠️ No Gemini API key found. Paste your key in the AI Assistant panel on the right.';
+            let msg = 'reachability issue — using a basic prompt';
+            if (err.message === 'NO_KEY') msg = 'no API key — paste one in the panel →';
 
             statusEl.textContent = msg;
-            statusEl.style.color = '#e0a060';
-            document.getElementById('aiPromptBox').style.display = 'block';
+            if (dotEl) dotEl.className = 'status-dot warn';
+            if (typingEl) typingEl.style.display = 'none';
+            promptBox.style.display = 'block';
             document.getElementById('polishedPromptText').value = base;
-            document.getElementById('polishedPromptText').addEventListener('input', function () {
-                aiPolishedPrompt = this.value;
-            });
         }
     }
 
+    document.getElementById('polishedPromptText').addEventListener('input', function () {
+        aiPolishedPrompt = this.value;
+    });
+    document.getElementById('aiRetryBtn').addEventListener('click', runAIReview);
+
     /* ============================================================
-       POLLINATIONS — IMAGE GENERATION (Step 8)
+       POLLINATIONS — IMAGE GENERATION
     ============================================================ */
     function buildPollinationsURL(prompt) {
         const cleanPrompt = encodeURIComponent(prompt.slice(0, 800));
@@ -1289,17 +1232,16 @@
     const overlayLoader = document.getElementById('overlayLoader');
     const closeOverlayBtn = document.getElementById('closeOverlay');
     const generateBtn = document.getElementById('generateBtn');
+    const generateFromAccordion = document.getElementById('generateFromAccordion');
 
     async function generateInvitationImage() {
         overlay.classList.add('show');
-        overlayTitle.textContent = '✨ AI is designing your masterpiece...';
+        overlayTitle.textContent = 'AI is designing your masterpiece...';
         overlaySub.textContent = 'Sending prompt to Pollinations AI';
         overlayLoader.style.display = 'block';
         if (generateBtn) generateBtn.disabled = true;
 
-        let promptToUse = aiPolishedPrompt && aiPolishedPrompt.trim()
-            ? aiPolishedPrompt
-            : buildBasePrompt(data);
+        let promptToUse = aiPolishedPrompt && aiPolishedPrompt.trim() ? aiPolishedPrompt : buildBasePrompt(data);
 
         try {
             const url = buildPollinationsURL(promptToUse);
@@ -1328,15 +1270,13 @@
         if (!resultWrap) {
             resultWrap = document.createElement('div');
             resultWrap.id = 'aiResultWrap';
-            resultWrap.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:1rem;width:100%;';
-            previewContainer.appendChild(resultWrap);
+            resultWrap.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:1rem;width:100%;animation:cardReveal 0.6s ease both;';
+            cardZoomWrap.appendChild(resultWrap);
         }
 
         const accent = data.accentColor || data.themeColor || '#c89b2c';
         const fontFamily = data.fontStyle || 'Playfair Display';
 
-        // Build the real text content that goes ON TOP of the AI background.
-        // This is normal HTML, so it's always crisp, readable and correct.
         let topText = '';
         if (data.hostedBy) topText += `<div style="font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;opacity:0.85;">${escapeHtml(data.hostedBy)}</div>`;
         if (data.eventType) topText += `<div style="font-family:'${fontFamily}',serif;font-size:1rem;letter-spacing:3px;text-transform:uppercase;margin-top:0.4rem;opacity:0.9;">${escapeHtml(data.eventType)}</div>`;
@@ -1362,7 +1302,7 @@
         }
 
         resultWrap.innerHTML = `
-            <div id="resultCard" style="position:relative;max-width:480px;width:100%;aspect-ratio:3/4;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.8), 0 0 0 1px rgba(200,155,44,0.3);">
+            <div id="resultCard" style="position:relative;max-width:480px;width:100%;aspect-ratio:3/4;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.8), 0 0 0 1px rgba(185,138,46,0.35);">
                 <img id="resultBgImg" src="${imageUrl}" crossorigin="anonymous" alt="AI Generated Background"
                      style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
                 <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10% 14%;color:${accent};text-shadow:0 1px 6px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.4);">
@@ -1450,28 +1390,23 @@
     }
 
     /* ============================================================
-       GENERATE BUTTON (sidebar) + OVERLAY CLOSE
+       GENERATE BUTTONS + OVERLAY CLOSE
     ============================================================ */
-    generateBtn.addEventListener('click', function (e) {
-        e.preventDefault();
-        generateInvitationImage();
-    });
+    generateBtn.addEventListener('click', function (e) { e.preventDefault(); generateInvitationImage(); });
+    generateFromAccordion.addEventListener('click', function (e) { e.preventDefault(); generateInvitationImage(); });
 
-    closeOverlayBtn.addEventListener('click', function () {
-        overlay.classList.remove('show');
-    });
-
-    overlay.addEventListener('click', function (e) {
-        if (e.target === overlay) overlay.classList.remove('show');
-    });
+    closeOverlayBtn.addEventListener('click', function () { overlay.classList.remove('show'); });
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) overlay.classList.remove('show'); });
 
     /* ============================================================
        INIT
     ============================================================ */
-    loadStep(1);
+    syncInputsFromData();
     updateCard();
+    applyZoom();
+    refreshUndoRedoButtons();
 
-    console.log('✨ WedDream AI Invitation Designer — Gemini prompt polishing + Pollinations image generation fully wired');
+    console.log('✨ WedDream AI Invitation Designer — accordion layout, working zoom/undo/redo, premium AI chat review');
 })();
 </script>
 
