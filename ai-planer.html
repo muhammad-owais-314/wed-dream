@@ -1,938 +1,1474 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eventique AI — Event Planner</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>AI Event Planner — WedDream | Aria Consultant</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;1,500;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<style>
+:root{
+  --rose:#b93b56;
+  --rose-hover:#a22f49;
+  --gold:#c89b2c;
+  --gold-light:#e8b93c;
+  --dark:#070707;
+  --dark-soft:#0d0a0b;
+  --glass:rgba(15,10,14,0.55);
+  --glass-soft:rgba(244,236,225,0.04);
+  --hair:rgba(200,155,44,0.16);
+  --hair-strong:rgba(200,155,44,0.32);
+  --ivory:#f4ece1;
+  --ivory-dim:rgba(244,236,225,0.66);
+  --ivory-faint:rgba(244,236,225,0.36);
+  --ok:#22c55e;
+  --warn:var(--gold-light);
+  --over:#e04a6a;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--dark);
+  color:var(--ivory);
+  min-height:100vh;
+  width:100%;
+  overflow-x:hidden;
+  position:relative;
+}
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+}
+:focus-visible{ outline:2px solid var(--gold-light); outline-offset:3px; border-radius:6px; }
+button{ font-family:inherit; }
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+/* ================= AMBIENT BACKGROUND ================= */
+#bgCanvas{position:fixed;inset:0;z-index:0;pointer-events:none;}
+.mesh-glow{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.mesh-glow span{position:absolute;border-radius:50%;filter:blur(90px);opacity:0.28;}
+.mesh-glow span.g1{width:520px;height:520px;background:var(--rose);top:-160px;left:-120px;animation:drift1 22s ease-in-out infinite;}
+.mesh-glow span.g2{width:460px;height:460px;background:var(--gold);bottom:-140px;right:-100px;animation:drift2 26s ease-in-out infinite;}
+.mesh-glow span.g3{width:380px;height:380px;background:#5b1f2e;top:40%;left:55%;animation:drift1 30s ease-in-out infinite reverse;}
+@keyframes drift1{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(60px,40px) scale(1.15);}}
+@keyframes drift2{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-50px,-30px) scale(1.1);}}
 
-    <style>
-        /* ===== ROOT TOKENS ===== */
-        :root {
-            --obsidian: #060506;
-            --obsidian-soft: #0d0b0d;
-            --panel: rgba(244, 236, 225, 0.035);
-            --panel-strong: rgba(244, 236, 225, 0.06);
-            --hair: rgba(201, 160, 78, 0.1);
-            --hair-strong: rgba(201, 160, 78, 0.22);
+.app-shell{position:relative;z-index:1;max-width:1320px;margin:0 auto;padding:0 clamp(16px,4vw,40px) 60px;}
 
-            --gold: #c9a04e;
-            --gold-bright: #eccb7a;
-            --gold-deep: #8f7028;
-            --garnet: #a83349;
-            --garnet-bright: #c9455f;
+/* ================= HERO ================= */
+.planner-hero{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:clamp(20px,4vw,50px);
+  align-items:center;
+  min-height:clamp(360px,60vh,460px);
+  padding:clamp(30px,6vw,60px) 0 clamp(20px,4vw,30px);
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--gold-light);
+  border:1px solid var(--hair-strong);
+  padding:6px 14px;border-radius:30px;
+  background:rgba(200,155,44,0.06);
+  margin-bottom:20px;
+}
+.hero-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--ok);box-shadow:0 0 10px var(--ok);animation:pulseDot 1.8s infinite;}
+.hero-eyebrow .dot.loading{background:var(--gold-light);box-shadow:0 0 10px var(--gold-light);}
+.hero-eyebrow .dot.error{background:var(--over);box-shadow:0 0 10px var(--over);animation:none;}
+@keyframes pulseDot{0%,100%{opacity:1;}50%{opacity:0.3;}}
 
-            --ivory: #f4ece1;
-            --ivory-dim: rgba(244, 236, 225, 0.64);
-            --ivory-faint: rgba(244, 236, 225, 0.32);
-        }
+.planner-hero h1{
+  font-family:'Playfair Display',serif;
+  font-weight:800;
+  font-size:clamp(2rem,5vw,3.4rem);
+  line-height:1.1;
+  margin-bottom:20px;
+  letter-spacing:-0.01em;
+}
+.planner-hero h1 em{
+  font-style:italic;
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.planner-hero .subtitle{
+  font-size:clamp(0.95rem,1.6vw,1.12rem);
+  color:var(--ivory-dim);
+  max-width:520px;
+  line-height:1.8;font-weight:300;
+  margin-bottom:30px;
+}
+.hero-btn{
+  background:linear-gradient(135deg,var(--rose),var(--rose-hover));
+  color:var(--ivory);border:none;
+  padding:16px clamp(24px,4vw,38px);border-radius:60px;
+  font-size:1rem;font-weight:700;cursor:pointer;
+  display:inline-flex;align-items:center;gap:12px;
+  box-shadow:0 10px 35px rgba(185,59,86,0.35);
+  transition:all .4s cubic-bezier(.175,.885,.32,1.275);
+}
+.hero-btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 16px 46px rgba(185,59,86,0.5);}
+.hero-btn:disabled{opacity:.55;cursor:not-allowed;transform:none;box-shadow:none;}
+.hero-btn i{color:var(--gold-light);}
+.hero-note{margin-top:10px;font-size:0.78rem;color:var(--ivory-faint);display:flex;align-items:center;gap:8px;min-height:1.2em;}
+.hero-note .retry-link{color:var(--gold-light);text-decoration:underline;cursor:pointer;background:none;border:none;font-size:inherit;font-family:inherit;}
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+.hero-stats{display:flex;gap:clamp(16px,3vw,30px);margin-top:34px;flex-wrap:wrap;}
+.hero-stats .stat b{font-family:'JetBrains Mono',monospace;font-size:1.3rem;color:var(--gold-light);display:block;}
+.hero-stats .stat span{font-size:0.72rem;color:var(--ivory-faint);letter-spacing:.05em;text-transform:uppercase;}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--obsidian);
-            min-height: 100vh;
-            color: var(--ivory);
-            overflow-x: hidden;
-            position: relative;
-        }
+/* ============ ORB ============ */
+.orb-wrap{position:relative;width:clamp(180px,26vw,290px);height:clamp(180px,26vw,290px);margin:0 auto;}
+.orb-ring{position:absolute;inset:-30px;border-radius:50%;border:1px solid var(--hair-strong);animation:spin 30s linear infinite;}
+.orb-ring::before,.orb-ring::after{content:'';position:absolute;width:8px;height:8px;border-radius:50%;background:var(--gold-light);box-shadow:0 0 12px var(--gold-light);}
+.orb-ring::before{top:-4px;left:50%;transform:translateX(-50%);}
+.orb-ring::after{bottom:-4px;left:50%;transform:translateX(-50%);background:var(--rose);box-shadow:0 0 12px var(--rose);}
+@keyframes spin{to{transform:rotate(360deg);}}
+.orb-halo{position:absolute;inset:-10px;border-radius:50%;background:radial-gradient(circle,rgba(200,155,44,0.28),transparent 70%);filter:blur(20px);animation:haloPulse 4.5s ease-in-out infinite;}
+@keyframes haloPulse{0%,100%{opacity:.5;transform:scale(1);}50%{opacity:1;transform:scale(1.08);}}
+.orb-core{position:absolute;inset:26px;border-radius:50%;background:conic-gradient(from 120deg,#5b1f2e,var(--gold-light),var(--rose),var(--gold),#5b1f2e);animation:facetTurn 24s linear infinite;box-shadow:inset -20px -20px 50px rgba(0,0,0,.7),0 0 60px rgba(200,155,44,.3);}
+@keyframes facetTurn{to{transform:rotate(360deg);}}
+.orb-glass{position:absolute;inset:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 40%,rgba(7,7,7,.15),rgba(7,7,7,.6) 75%);}
+.orb-letter{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:clamp(1.8rem,4vw,2.8rem);background:linear-gradient(160deg,var(--ivory),var(--gold-light) 70%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.orb-status{position:absolute;bottom:-4px;right:0;display:flex;align-items:center;gap:6px;background:rgba(7,7,7,.8);border:1px solid var(--hair-strong);padding:6px 14px 6px 10px;border-radius:40px;font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:.06em;color:var(--ivory-dim);backdrop-filter:blur(6px);white-space:nowrap;}
+.orb-status .dot{width:7px;height:7px;background:var(--ok);border-radius:50%;box-shadow:0 0 10px rgba(34,197,94,.7);animation:pulseDot 1.8s infinite;}
 
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.001ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.001ms !important;
-                scroll-behavior: auto !important;
-            }
-        }
+/* ============ PLANNER APP (chat + dashboard) ============ */
+.planner-app{display:none;grid-template-columns:1.15fr 0.85fr;gap:24px;margin-top:10px;}
+.planner-app.active{display:grid;animation:fadeUp .5s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
 
-        /* ===== AMBIENT BACKGROUND ===== */
-        body::before {
-            content: '';
-            position: fixed;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background:
-                radial-gradient(ellipse at 18% 45%, rgba(201, 160, 78, 0.06) 0%, transparent 55%),
-                radial-gradient(ellipse at 82% 15%, rgba(168, 51, 73, 0.05) 0%, transparent 50%),
-                radial-gradient(ellipse at 55% 85%, rgba(201, 160, 78, 0.04) 0%, transparent 55%);
-            z-index: -2;
-            animation: bg-shift 24s ease-in-out infinite alternate;
-        }
+.glass-panel{
+  background:var(--glass);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border:1px solid var(--hair);
+  border-radius:26px;
+  box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
 
-        /* film-grain texture for a tactile, printed feel */
-        body::after {
-            content: '';
-            position: fixed;
-            inset: 0;
-            z-index: -1;
-            pointer-events: none;
-            opacity: 0.05;
-            mix-blend-mode: overlay;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-        }
+/* chat */
+.chat-panel{padding:clamp(18px,3vw,32px);display:flex;flex-direction:column;min-height:520px;}
+.chat-head{display:flex;align-items:center;gap:14px;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid var(--hair);}
+.chat-head .av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:1.1rem;flex-shrink:0;}
+.chat-head .name{font-family:'Playfair Display',serif;font-weight:700;font-size:1.12rem;}
+.chat-head .status{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--ok);}
 
-        @keyframes bg-shift {
-            0% { transform: translate(0, 0) rotate(0deg); }
-            100% { transform: translate(2%, 1%) rotate(2deg); }
-        }
+.chat-body{flex:1;overflow-y:auto;max-height:56vh;padding-right:6px;margin-bottom:16px;}
+.chat-body::-webkit-scrollbar{width:4px;}
+.chat-body::-webkit-scrollbar-thumb{background:var(--gold);border-radius:10px;}
 
-        /* ===== SHARED SECTION EYEBROW ===== */
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.68rem;
-            font-weight: 500;
-            letter-spacing: 0.22em;
-            text-transform: uppercase;
-            color: var(--gold);
-        }
-        .eyebrow::before {
-            content: '◆';
-            font-size: 0.6rem;
-            color: var(--gold-bright);
-        }
+.msg{margin-bottom:16px;opacity:0;animation:msgIn .4s ease forwards;}
+@keyframes msgIn{to{opacity:1;transform:translateY(0);}}
+.msg.ai{display:flex;gap:10px;align-items:flex-start;}
+.msg.ai .av-sm{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:.8rem;flex-shrink:0;}
+.msg.ai .bubble{background:var(--glass-soft);padding:13px 18px;border-radius:16px 16px 16px 4px;border-left:2px solid var(--gold);max-width:85%;color:var(--ivory-dim);line-height:1.7;font-size:0.94rem;}
+.msg.ai .bubble b{color:var(--gold-light);font-family:'Playfair Display',serif;}
+.msg.user{display:flex;justify-content:flex-end;}
+.msg.user .bubble{background:rgba(185,59,86,0.16);padding:13px 18px;border-radius:16px 16px 4px 16px;max-width:75%;border-right:2px solid var(--rose);line-height:1.6;font-size:0.94rem;}
 
-        /* ===== MAIN WRAPPER ===== */
-        .app-wrapper {
-            max-width: 1280px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 30px 40px 40px;
-        }
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px 40px;}
+.chip{background:rgba(244,236,225,0.03);padding:7px 16px;border-radius:30px;border:1px solid var(--hair);color:var(--ivory-dim);cursor:pointer;font-size:0.82rem;font-weight:500;transition:all .25s ease;}
+.chip:hover{border-color:var(--gold);color:var(--gold-light);transform:translateY(-2px);}
+.chip:focus-visible{border-color:var(--gold-light);}
+.chip.selected{background:linear-gradient(135deg,var(--rose),var(--gold));color:var(--dark);border-color:transparent;font-weight:700;}
 
-        /* ===== HERO SECTION ===== */
-        .hero {
-            display: grid;
-            grid-template-columns: 1.05fr 0.95fr;
-            gap: 60px;
-            align-items: center;
-            padding: 40px 0 30px;
-            min-height: 480px;
-        }
+.typing{display:none;align-items:center;gap:8px;color:var(--ivory-faint);font-size:.85rem;margin:4px 0 4px 40px;}
+.typing.active{display:flex;}
+.typing .td{display:flex;gap:4px;}
+.typing .td span{width:6px;height:6px;background:var(--gold);border-radius:50%;animation:bounce 1.4s infinite;}
+.typing .td span:nth-child(2){animation-delay:.2s;}
+.typing .td span:nth-child(3){animation-delay:.4s;}
+@keyframes bounce{0%,60%,100%{transform:translateY(0);opacity:.3;}30%{transform:translateY(-6px);opacity:1;}}
 
-        .hero-content { position: relative; }
+.chat-input{display:flex;gap:10px;}
+.chat-input input{flex:1;padding:13px 18px;border-radius:40px;background:rgba(244,236,225,0.04);border:1px solid var(--hair);color:var(--ivory);font-size:0.95rem;outline:none;transition:border-color .3s;min-width:0;}
+.chat-input input:focus{border-color:var(--gold);}
+.chat-input input::placeholder{color:var(--ivory-faint);}
+.chat-input input:disabled{opacity:.5;}
+.chat-input button{padding:13px 22px;border-radius:40px;background:linear-gradient(135deg,var(--rose),var(--gold));color:var(--dark);border:none;font-weight:700;cursor:pointer;flex-shrink:0;transition:all .3s;}
+.chat-input button:hover{transform:scale(1.04);}
+.chat-input button:disabled{opacity:.5;cursor:not-allowed;transform:none;}
 
-        .hero-badge {
-            margin-bottom: 22px;
-            opacity: 0;
-            animation: fadeInUp 0.7s ease forwards;
-            animation-delay: 0.05s;
-        }
+/* dashboard */
+.dash-panel{padding:clamp(18px,3vw,28px);display:flex;flex-direction:column;gap:18px;}
+.dash-title{font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:8px;}
+.dash-title i{color:var(--gold);}
 
-        .hero-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.7rem;
-            font-weight: 800;
-            line-height: 1.08;
-            margin-bottom: 22px;
-            letter-spacing: -0.01em;
-        }
+.progress-wrap .bar-bg{height:6px;background:rgba(244,236,225,.07);border-radius:20px;overflow:hidden;margin:12px 0 8px;}
+.progress-wrap .bar-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--rose),var(--gold));border-radius:20px;transition:width .8s ease;box-shadow:0 0 16px rgba(200,155,44,.3);}
+.progress-wrap .row{display:flex;justify-content:space-between;font-size:.8rem;color:var(--ivory-dim);}
+.progress-wrap .row b{color:var(--gold-light);font-family:'JetBrains Mono',monospace;}
 
-        .hero-content h1 span {
-            display: inline-block;
-            opacity: 0;
-            animation: fadeInUp 0.7s ease forwards;
-        }
-        .hero-content h1 span:nth-child(1) { animation-delay: 0.15s; }
-        .hero-content h1 span:nth-child(2) { animation-delay: 0.28s; }
-        .hero-content h1 span:nth-child(3) { animation-delay: 0.41s; }
-        .hero-content h1 span:nth-child(4) { animation-delay: 0.54s; }
+.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.summary-item{background:rgba(244,236,225,.03);border:1px solid var(--hair);border-radius:14px;padding:12px 14px;}
+.summary-item .lbl{font-size:.62rem;font-weight:600;letter-spacing:.09em;color:var(--ivory-faint);text-transform:uppercase;font-family:'JetBrains Mono',monospace;}
+.summary-item .val{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.98rem;margin-top:4px;color:var(--ivory);word-break:break-word;}
 
-        .hero-content h1 .highlight {
-            background: linear-gradient(135deg, var(--gold), var(--gold-bright) 55%, #f5e2ad);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-style: italic;
-            font-weight: 700;
-        }
+.budget-bar-wrap{background:rgba(244,236,225,.03);border:1px solid var(--hair);border-radius:14px;padding:14px 16px;}
+.budget-bar-wrap .bb-row{display:flex;justify-content:space-between;font-size:.78rem;color:var(--ivory-dim);margin-bottom:8px;}
+.budget-bar-bg{height:8px;border-radius:20px;background:rgba(244,236,225,.07);overflow:hidden;}
+.budget-bar-fill{height:100%;border-radius:20px;transition:width .6s ease;}
+.budget-bar-fill.ok{background:linear-gradient(90deg,var(--ok),#4ade80);}
+.budget-bar-fill.warn{background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+.budget-bar-fill.over{background:linear-gradient(90deg,var(--rose),var(--over));}
+.budget-hint{margin-top:10px;font-size:.74rem;color:var(--ivory-faint);}
+.budget-hint.over{color:var(--over);}
+.budget-fix-btn{margin-top:10px;width:100%;background:rgba(200,155,44,0.1);border:1px solid var(--hair-strong);color:var(--gold-light);padding:8px 14px;border-radius:30px;font-size:.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .25s;}
+.budget-fix-btn:hover{background:rgba(200,155,44,0.18);}
 
-        .hero-content h1 .highlight-2 { color: var(--ivory); }
+.vendor-list{display:flex;flex-direction:column;gap:10px;max-height:260px;overflow-y:auto;padding-right:4px;}
+.vendor-list::-webkit-scrollbar{width:4px;}
+.vendor-list::-webkit-scrollbar-thumb{background:var(--gold);border-radius:10px;}
+.vendor-mini{display:flex;gap:10px;align-items:center;background:rgba(244,236,225,.03);border:1px solid var(--hair);border-radius:12px;padding:8px;}
+.vendor-mini img{width:52px;height:52px;border-radius:9px;object-fit:cover;flex-shrink:0;background:rgba(200,155,44,0.1);}
+.vendor-mini .vm-name{font-family:'Playfair Display',serif;font-weight:600;font-size:.86rem;}
+.vendor-mini .vm-meta{font-size:.72rem;color:var(--ivory-faint);font-family:'JetBrains Mono',monospace;}
 
-        .hero-content .subtitle {
-            font-size: 1.12rem;
-            color: var(--ivory-dim);
-            max-width: 500px;
-            line-height: 1.8;
-            font-weight: 300;
-            margin-bottom: 34px;
-            opacity: 0;
-            animation: fadeInUp 0.7s ease forwards;
-            animation-delay: 0.65s;
-        }
+/* vendor recommendation cards (in chat) */
+.vendor-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin:12px 0 4px 40px;}
+.vcard{background:rgba(244,236,225,.03);border:1px solid var(--hair);border-radius:16px;overflow:hidden;transition:all .3s ease;cursor:pointer;position:relative;}
+.vcard:hover{transform:translateY(-4px);border-color:var(--hair-strong);box-shadow:0 12px 30px rgba(0,0,0,.35);}
+.vcard.picked{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),0 12px 30px rgba(200,155,44,.2);}
+.vcard img{width:100%;height:110px;object-fit:cover;display:block;background:rgba(200,155,44,0.08);}
+.vcard .vc-body{padding:10px 12px;}
+.vcard .vc-name{font-family:'Playfair Display',serif;font-weight:700;font-size:.9rem;margin-bottom:2px;}
+.vcard .vc-meta{font-size:.72rem;color:var(--ivory-faint);font-family:'JetBrains Mono',monospace;margin-bottom:6px;}
+.vcard .vc-price{font-size:.82rem;color:var(--gold-light);font-weight:600;font-family:'JetBrains Mono',monospace;}
+.vcard .vc-pick{position:absolute;top:8px;right:8px;background:rgba(7,7,7,.7);border:1px solid var(--hair-strong);color:var(--ivory);font-size:.68rem;padding:4px 10px;border-radius:20px;font-weight:600;z-index:2;}
+.vcard.picked .vc-pick{background:var(--gold);color:var(--dark);}
+.vcard .vc-badge{position:absolute;top:8px;left:8px;background:linear-gradient(135deg,var(--rose),var(--gold));color:var(--dark);font-size:.62rem;font-weight:700;padding:4px 9px;border-radius:20px;z-index:2;letter-spacing:.03em;text-transform:uppercase;}
 
-        .hero-actions {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-            opacity: 0;
-            animation: fadeInUp 0.7s ease forwards;
-            animation-delay: 0.78s;
-        }
+/* final report */
+.report-actions{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 4px 40px;}
+.ra-btn{background:rgba(244,236,225,.04);border:1px solid var(--hair-strong);color:var(--ivory);padding:9px 18px;border-radius:30px;font-size:.82rem;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:all .3s;}
+.ra-btn:hover{border-color:var(--gold);color:var(--gold-light);}
+.ra-btn.primary{background:linear-gradient(135deg,var(--rose),var(--gold));color:var(--dark);border-color:transparent;}
+.ra-btn.primary:hover{color:var(--dark);opacity:.92;}
 
-        .hero-btn-primary {
-            background: linear-gradient(135deg, var(--gold), var(--gold-bright));
-            color: var(--obsidian);
-            border: none;
-            padding: 16px 38px;
-            border-radius: 60px;
-            font-size: 1.02rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 8px 35px rgba(201, 160, 78, 0.28);
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .hero-btn-primary:hover {
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 16px 50px rgba(201, 160, 78, 0.42);
-        }
-        .hero-btn-primary:focus-visible,
-        .hero-btn-secondary:focus-visible {
-            outline: 2px solid var(--gold-bright);
-            outline-offset: 3px;
-        }
+/* low budget panel */
+.ai-alert{margin:12px 0 4px 40px;background:rgba(185,59,86,.08);border:1px solid rgba(185,59,86,.35);border-radius:16px;padding:14px 18px;font-size:.88rem;color:var(--ivory-dim);line-height:1.7;}
+.ai-alert b{color:var(--gold-light);}
+.ai-alert.success{background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.35);}
 
-        .hero-btn-secondary {
-            background: transparent;
-            color: var(--ivory);
-            border: 1px solid rgba(244, 236, 225, 0.14);
-            padding: 16px 30px;
-            border-radius: 60px;
-            font-size: 0.98rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .hero-btn-secondary:hover {
-            border-color: var(--gold);
-            color: var(--gold-bright);
-            transform: translateY(-2px);
-        }
+/* boot / error banners injected into chat area before app starts */
+.boot-banner{max-width:640px;margin:14px auto 0;background:rgba(224,74,106,.08);border:1px solid rgba(224,74,106,.4);border-radius:16px;padding:16px 20px;font-size:.85rem;color:var(--ivory-dim);line-height:1.7;text-align:left;display:none;}
+.boot-banner.show{display:block;}
+.boot-banner b{color:var(--gold-light);}
+.boot-banner button{margin-top:10px;background:linear-gradient(135deg,var(--rose),var(--gold));border:none;color:var(--dark);font-weight:700;padding:8px 18px;border-radius:30px;cursor:pointer;font-size:.8rem;}
 
-        /* ===== SIGNATURE: THE ARIA ORB ===== */
-        .hero-visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
+@media (max-width:980px){
+  .planner-hero{grid-template-columns:1fr;text-align:center;min-height:auto;}
+  .planner-hero .subtitle{margin-left:auto;margin-right:auto;}
+  .hero-stats{justify-content:center;}
+  .hero-note{justify-content:center;}
+  .planner-app{grid-template-columns:1fr;}
+  .orb-wrap{margin-top:10px;}
+}
+@media (max-width:640px){
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+  .app-shell{padding:0 14px 40px;}
+  .chat-input{flex-wrap:wrap;}
+  .chat-input input{width:100%;}
+  .chat-input button{width:100%;justify-content:center;}
+  .chips,.vendor-cards,.report-actions,.ai-alert,.typing{margin-left:0;}
+  .msg.ai .bubble,.msg.user .bubble{max-width:92%;}
+  .chat-body{max-height:50vh;}
+  .summary-grid{grid-template-columns:1fr;}
+  .hero-btn{width:100%;justify-content:center;}
+}
 
-        .orb-scene {
-            position: relative;
-            width: 340px;
-            height: 340px;
-            opacity: 0;
-            animation: orbIntro 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-            animation-delay: 0.3s;
-        }
-
-        @keyframes orbIntro {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        .orb-halo {
-            position: absolute;
-            inset: -50px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(201, 160, 78, 0.22), transparent 70%);
-            filter: blur(18px);
-            animation: haloPulse 4.5s ease-in-out infinite;
-        }
-        @keyframes haloPulse {
-            0%, 100% { opacity: 0.55; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.08); }
-        }
-
-        .orb-ring {
-            position: absolute;
-            border-radius: 50%;
-            pointer-events: none;
-        }
-        .orb-ring.r1 {
-            inset: 4px;
-            border: 1px solid var(--hair-strong);
-            border-top-color: var(--gold-bright);
-            border-right-color: var(--gold-bright);
-            animation: spin 12s linear infinite;
-        }
-        .orb-ring.r2 {
-            inset: -20px;
-            border: 1px dashed rgba(201, 160, 78, 0.16);
-            animation: spin 28s linear infinite reverse;
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
-
-        .orb-particles {
-            position: absolute;
-            inset: 0;
-            animation: spin 20s linear infinite;
-        }
-        .orb-particles span {
-            position: absolute;
-            top: 50%; left: 50%;
-            width: 6px; height: 6px;
-            border-radius: 50%;
-            background: var(--gold-bright);
-            box-shadow: 0 0 12px rgba(236, 203, 122, 0.8);
-            animation: twinkle 2.6s ease-in-out infinite;
-        }
-        .orb-particles span:nth-child(1) { transform: rotate(20deg) translateX(168px); animation-delay: 0s; }
-        .orb-particles span:nth-child(2) { transform: rotate(95deg) translateX(168px); width: 4px; height: 4px; animation-delay: 0.5s; }
-        .orb-particles span:nth-child(3) { transform: rotate(160deg) translateX(168px); animation-delay: 1s; }
-        .orb-particles span:nth-child(4) { transform: rotate(215deg) translateX(168px); width: 5px; height: 5px; animation-delay: 1.5s; }
-        .orb-particles span:nth-child(5) { transform: rotate(275deg) translateX(168px); animation-delay: 0.8s; }
-        .orb-particles span:nth-child(6) { transform: rotate(330deg) translateX(168px); width: 4px; height: 4px; animation-delay: 1.9s; }
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.25; }
-            50% { opacity: 1; }
-        }
-
-        .orb-core {
-            position: absolute;
-            inset: 42px;
-            border-radius: 50%;
-            background: conic-gradient(from 120deg, #6f551d, #eccb7a, #a83349, #c9a04e, #6f551d);
-            animation: facetTurn 26s linear infinite;
-            box-shadow:
-                inset -22px -22px 55px rgba(0, 0, 0, 0.65),
-                inset 14px 14px 34px rgba(255, 255, 255, 0.14),
-                0 0 70px rgba(201, 160, 78, 0.32);
-        }
-        @keyframes facetTurn { to { transform: rotate(360deg); } }
-
-        .orb-core::before {
-            content: '';
-            position: absolute;
-            top: 14%; left: 18%;
-            width: 46%; height: 34%;
-            background: radial-gradient(ellipse, rgba(255, 255, 255, 0.55), transparent 70%);
-            border-radius: 50%;
-            filter: blur(6px);
-        }
-
-        .orb-glass {
-            position: absolute;
-            inset: 42px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: radial-gradient(circle at 50% 40%, rgba(6, 5, 6, 0.15), rgba(6, 5, 6, 0.55) 75%);
-            animation: float 6s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-14px); }
-        }
-
-        .orb-letter {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-weight: 700;
-            font-size: 3.4rem;
-            background: linear-gradient(160deg, var(--ivory), var(--gold-bright) 70%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 40px rgba(236, 203, 122, 0.35);
-        }
-
-        .orb-status {
-            position: absolute;
-            bottom: 6px;
-            right: 22px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(6, 5, 6, 0.75);
-            border: 1px solid var(--hair-strong);
-            padding: 6px 14px 6px 10px;
-            border-radius: 40px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.68rem;
-            letter-spacing: 0.08em;
-            color: var(--ivory-dim);
-            backdrop-filter: blur(6px);
-        }
-        .orb-status .dot {
-            width: 8px; height: 8px;
-            background: #22c55e;
-            border-radius: 50%;
-            box-shadow: 0 0 12px rgba(34, 197, 94, 0.7);
-            animation: pulse-dot 1.8s infinite;
-        }
-        @keyframes pulse-dot {
-            0% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.4; transform: scale(1.4); }
-            100% { opacity: 1; transform: scale(1); }
-        }
-
-        /* ===== CHAT SECTION ===== */
-        .chat-section {
-            background: var(--panel);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border-radius: 28px;
-            padding: 34px 38px;
-            margin: 36px 0 40px;
-            border: 1px solid var(--hair);
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-            opacity: 0;
-            transform: translateY(16px);
-        }
-        .chat-section.in-view {
-            animation: revealUp 0.7s ease forwards;
-        }
-        @keyframes revealUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .chat-section:hover {
-            border-color: var(--hair-strong);
-            box-shadow: 0 0 46px rgba(201, 160, 78, 0.04);
-        }
-
-        .chat-header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 22px;
-        }
-
-        .chat-header .avatar-sm {
-            width: 46px; height: 46px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--gold), var(--gold-bright));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--obsidian);
-            font-weight: 800;
-            font-size: 1.15rem;
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            box-shadow: 0 4px 20px rgba(201, 160, 78, 0.25);
-            flex-shrink: 0;
-        }
-
-        .chat-header .name {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            font-size: 1.18rem;
-            color: var(--ivory);
-        }
-
-        .chat-header .status {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.72rem;
-            letter-spacing: 0.05em;
-            color: #22c55e;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .chat-header .status i { font-size: 0.5rem; }
-
-        .chat-bubble {
-            background: rgba(244, 236, 225, 0.045);
-            padding: 20px 26px;
-            border-radius: 20px 20px 20px 4px;
-            max-width: 80%;
-            margin-bottom: 26px;
-            border-left: 2px solid var(--gold);
-            font-size: 1rem;
-            line-height: 1.75;
-            color: var(--ivory-dim);
-        }
-        .chat-bubble strong {
-            color: var(--gold-bright);
-            font-family: 'Playfair Display', serif;
-        }
-
-        .prompt-label {
-            font-weight: 600;
-            color: var(--ivory);
-            margin-bottom: 12px;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.02rem;
-        }
-        .prompt-label i { color: var(--gold); margin-right: 8px; }
-
-        .event-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .event-options .pill {
-            background: rgba(244, 236, 225, 0.03);
-            padding: 10px 24px;
-            border-radius: 40px;
-            border: 1px solid var(--hair);
-            font-weight: 500;
-            color: var(--ivory-dim);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.92rem;
-            letter-spacing: 0.2px;
-            user-select: none;
-        }
-        .event-options .pill:hover {
-            border-color: var(--hair-strong);
-            color: var(--gold-bright);
-            transform: translateY(-2px);
-        }
-        .event-options .pill.active {
-            background: linear-gradient(135deg, var(--gold), var(--gold-bright));
-            color: var(--obsidian);
-            border-color: transparent;
-            box-shadow: 0 8px 25px rgba(201, 160, 78, 0.22);
-            transform: translateY(-2px);
-        }
-
-        /* ===== DASHBOARD ===== */
-        .dashboard {
-            display: grid;
-            grid-template-columns: 0.9fr 1.6fr;
-            gap: 24px;
-            margin-bottom: 20px;
-            opacity: 0;
-            transform: translateY(16px);
-        }
-        .dashboard.in-view { animation: revealUp 0.7s ease forwards; animation-delay: 0.1s; }
-
-        .progress-card, .summary-grid {
-            background: var(--panel);
-            border-radius: 22px;
-            padding: 26px;
-            border: 1px solid var(--hair);
-            transition: border-color 0.3s ease;
-        }
-        .progress-card:hover, .summary-grid:hover { border-color: var(--hair-strong); }
-
-        .progress-card h3 {
-            font-weight: 600;
-            color: var(--ivory);
-            margin-bottom: 14px;
-            font-size: 1.02rem;
-            font-family: 'Playfair Display', serif;
-        }
-        .progress-card h3 i { color: var(--gold); margin-right: 8px; }
-
-        .progress-bar-bg {
-            height: 6px;
-            background: rgba(244, 236, 225, 0.07);
-            border-radius: 20px;
-            overflow: hidden;
-            margin: 14px 0 10px;
-        }
-        .progress-bar-fill {
-            height: 100%;
-            width: 0%;
-            background: linear-gradient(90deg, var(--gold), var(--gold-bright));
-            border-radius: 20px;
-            transition: width 0.8s ease;
-            box-shadow: 0 0 18px rgba(201, 160, 78, 0.3);
-        }
-        .progress-label {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.82rem;
-            font-family: 'JetBrains Mono', monospace;
-            color: var(--ivory-dim);
-        }
-        .progress-note {
-            margin-top: 18px;
-            font-size: 0.82rem;
-            color: var(--ivory-faint);
-        }
-        .progress-note i { color: #22c55e; margin-right: 6px; }
-
-        .summary-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        .summary-item { display: flex; flex-direction: column; }
-        .summary-item .label {
-            font-size: 0.64rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            color: var(--ivory-faint);
-            text-transform: uppercase;
-            font-family: 'JetBrains Mono', monospace;
-        }
-        .summary-item .value {
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 600;
-            font-size: 1.22rem;
-            color: var(--ivory);
-            margin-top: 4px;
-        }
-        .summary-item .value i { color: var(--gold); margin-right: 6px; }
-
-        /* ===== LOADING OVERLAY ===== */
-        .loading-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(6, 5, 6, 0.94);
-            backdrop-filter: blur(18px);
-            z-index: 999;
-            justify-content: center;
-            align-items: center;
-        }
-        .loading-overlay.show { display: flex; }
-
-        .loading-card {
-            background: var(--obsidian-soft);
-            padding: 46px 54px;
-            border-radius: 32px;
-            text-align: center;
-            max-width: 420px;
-            border: 1px solid var(--hair-strong);
-            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8);
-        }
-        .loading-card .spinner {
-            width: 58px; height: 58px;
-            border: 3px solid var(--hair);
-            border-top-color: var(--gold);
-            border-radius: 50%;
-            animation: spin-load 0.9s linear infinite;
-            margin: 0 auto 22px;
-        }
-        @keyframes spin-load { to { transform: rotate(360deg); } }
-
-        .loading-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.35rem;
-            color: var(--ivory);
-            font-weight: 600;
-        }
-        .loading-card p {
-            color: var(--ivory-dim);
-            margin-top: 10px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(24px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 1024px) {
-            .hero-content h1 { font-size: 3rem; }
-            .orb-scene { width: 280px; height: 280px; }
-        }
-
-        @media (max-width: 900px) {
-            .app-wrapper { padding: 20px 20px 30px; }
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-                padding: 20px 0;
-                gap: 34px;
-            }
-            .hero-content .subtitle { max-width: 100%; margin-left: auto; margin-right: auto; }
-            .hero-actions { justify-content: center; }
-            .hero-content h1 { font-size: 2.5rem; }
-            .dashboard { grid-template-columns: 1fr; }
-            .orb-scene { width: 240px; height: 240px; }
-            .chat-bubble { max-width: 100%; }
-        }
-
-        @media (max-width: 500px) {
-            .hero-content h1 { font-size: 2rem; }
-            .orb-scene { width: 190px; height: 190px; }
-            .orb-letter { font-size: 2.2rem; }
-            .chat-section { padding: 22px 20px; }
-            .hero-btn-primary, .hero-btn-secondary { width: 100%; justify-content: center; }
-            .loading-card { padding: 32px 22px; margin: 0 16px; }
-            .summary-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+/* ============ PRINT (Download Report as PDF) ============ */
+@media print{
+  #nav-container, #footer-container, .mesh-glow, #bgCanvas, .planner-hero, .chat-input, .typing,
+  .dash-panel, .chips, .vcard .vc-pick { display:none !important; }
+  body{ background:#fff; color:#111; }
+  .app-shell{ max-width:100%; padding:0; }
+  .planner-app{ display:block !important; }
+  .glass-panel{ background:#fff; border:1px solid #ccc; box-shadow:none; backdrop-filter:none; }
+  .msg.ai .bubble{ color:#222; }
+  .msg.user .bubble{ background:#f4ece1; color:#111; }
+}
+</style>
 </head>
 <body>
 
-    <!-- ================= NAVEBAR ================= -->
-    <div id="nav-container"></div>
+<!-- ================= NAVEBAR ================= -->
+<div id="nav-container"></div>
 
-    <!-- ===== MAIN CONTENT ===== -->
-    <div class="app-wrapper">
+<div class="mesh-glow"><span class="g1"></span><span class="g2"></span><span class="g3"></span></div>
+<canvas id="bgCanvas"></canvas>
 
-        <!-- HERO -->
-        <div class="hero">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="eyebrow">AI-Powered Consultant</span>
-                </div>
-                <h1>
-                    <span>Plan Your</span><br />
-                    <span class="highlight">Perfect Event</span><br />
-                    <span class="highlight-2">with Artificial</span><br />
-                    <span class="highlight">Intelligence</span>
-                </h1>
-                <p class="subtitle">
-                    Your intelligent AI consultant creates personalized event plans
-                    based on your budget, guests, location, and preferences.
-                </p>
-                <div class="hero-actions">
-                    <button class="hero-btn-primary" id="startPlanningBtn">
-                        <i class="fas fa-wand-magic-sparkles"></i> Start Planning →
-                    </button>
-                    <button class="hero-btn-secondary">
-                        <i class="fas fa-play-circle"></i> Watch Demo
-                    </button>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="orb-scene">
-                    <div class="orb-halo"></div>
-                    <div class="orb-ring r2"></div>
-                    <div class="orb-particles">
-                        <span></span><span></span><span></span>
-                        <span></span><span></span><span></span>
-                    </div>
-                    <div class="orb-core"></div>
-                    <div class="orb-ring r1"></div>
-                    <div class="orb-glass">
-                        <span class="orb-letter">AI</span>
-                    </div>
-                    <div class="orb-status"><span class="dot"></span> Online</div>
-                </div>
-            </div>
+<div class="app-shell">
+
+  <!-- ================= HERO ================= -->
+  <div class="planner-hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow"><span class="dot loading" id="statusDot"></span> <span id="statusLabel">ARIA · LOADING VENDOR NETWORK</span></div>
+      <h1>Plan Your <em>Dream Event</em><br/>With Artificial Intelligence</h1>
+      <p class="subtitle">Aria studies your budget, guest count, city and taste to hand-pick the halls, caterers, decorators, photographers and cars that fit — instantly, from WedDream's own verified vendor network.</p>
+      <button class="hero-btn" id="startBtn" disabled><i class="fas fa-wand-magic-sparkles"></i> Start Planning</button>
+      <div class="hero-note" id="heroNote">Loading vendor network…</div>
+      <div class="hero-stats">
+        <div class="stat"><b id="statHalls">—</b><span>Halls Indexed</span></div>
+        <div class="stat"><b id="statCaterers">—</b><span>Caterers</span></div>
+        <div class="stat"><b id="statVendors">—</b><span>Total Vendors</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="orb-wrap">
+        <div class="orb-ring"></div>
+        <div class="orb-halo"></div>
+        <div class="orb-core"></div>
+        <div class="orb-glass"><span class="orb-letter">Aria</span></div>
+        <div class="orb-status"><span class="dot"></span> Online</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="boot-banner" id="bootBanner">
+    <b>Couldn't load the vendor network.</b><br>
+    Aria needs <code>hallsDetails.json</code>, <code>caterersDetails.json</code>, <code>decoratorsDetails.json</code>, <code>photographersDetails.json</code> and <code>carrentalsDetails.json</code> to sit next to this page. Check that they exist and are reachable, then try again.
+    <br><button id="retryLoadBtn"><i class="fas fa-rotate"></i> Retry</button>
+  </div>
+
+  <!-- ================= PLANNER APP ================= -->
+  <div class="planner-app" id="plannerApp">
+
+    <!-- CHAT -->
+    <div class="glass-panel chat-panel">
+      <div class="chat-head">
+        <div class="av">A</div>
+        <div>
+          <div class="name">Aria — AI Event Consultant</div>
+          <div class="status"><i class="fas fa-circle" style="font-size:.5rem;"></i> Active</div>
         </div>
-
-        <!-- CHAT SECTION -->
-        <div class="chat-section">
-            <div class="chat-header">
-                <div class="avatar-sm">A</div>
-                <div>
-                    <div class="name">Aria — AI Event Consultant</div>
-                    <div class="status"><i class="fas fa-circle"></i> Active · Thinking...</div>
-                </div>
-            </div>
-            <div class="chat-bubble">
-                <strong>Hello! I'm Aria, your AI Event Consultant.</strong><br />
-                I'll help you design the perfect event tailored to your vision, budget, and style. Let's begin!
-            </div>
-            <div>
-                <p class="prompt-label">
-                    <i class="fas fa-calendar-check"></i>
-                    What type of event are you celebrating?
-                </p>
-                <div class="event-options" id="eventOptions">
-                    <span class="pill active" data-event="Wedding">💍 Wedding</span>
-                    <span class="pill" data-event="Birthday">🎂 Birthday</span>
-                    <span class="pill" data-event="Engagement">💕 Engagement</span>
-                    <span class="pill" data-event="Anniversary">🥂 Anniversary</span>
-                    <span class="pill" data-event="Corporate">🏢 Corporate</span>
-                    <span class="pill" data-event="Baby Shower">👶 Baby Shower</span>
-                    <span class="pill" data-event="Graduation">🎓 Graduation</span>
-                    <span class="pill" data-event="Custom Event">✨ Custom Event</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- DASHBOARD -->
-        <div class="dashboard">
-            <div class="progress-card">
-                <h3><i class="fas fa-chart-line"></i> Planning Progress</h3>
-                <div class="progress-bar-bg">
-                    <div class="progress-bar-fill" id="progressFill" style="width:0%;"></div>
-                </div>
-                <div class="progress-label">
-                    <span>AI Confidence:</span>
-                    <span id="confidenceText">Building...</span>
-                </div>
-                <div class="progress-note">
-                    <i class="fas fa-circle-check"></i> Ready to generate
-                </div>
-            </div>
-            <div class="summary-grid">
-                <div class="summary-item">
-                    <span class="label"><i class="fas fa-calendar"></i> EVENT TYPE</span>
-                    <span class="value" id="eventTypeDisplay">—</span>
-                </div>
-                <div class="summary-item">
-                    <span class="label"><i class="fas fa-users"></i> GUESTS</span>
-                    <span class="value" id="guestsDisplay">—</span>
-                </div>
-                <div class="summary-item">
-                    <span class="label"><i class="fas fa-location-dot"></i> CITY</span>
-                    <span class="value" id="cityDisplay">—</span>
-                </div>
-                <div class="summary-item">
-                    <span class="label"><i class="fas fa-clock"></i> DATE</span>
-                    <span class="value" id="dateDisplay">—</span>
-                </div>
-            </div>
-        </div>
-
+      </div>
+      <div class="chat-body" id="chatBody" aria-live="polite"></div>
+      <div class="typing" id="typingRow"><span style="color:var(--gold-light);">Aria is thinking</span><div class="td"><span></span><span></span><span></span></div></div>
+      <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Type your answer..." autocomplete="off" />
+        <button id="sendBtn" aria-label="Send"><i class="fas fa-paper-plane"></i></button>
+      </div>
     </div>
 
-    <!-- ================= FOOTER ================= -->
-    <div id="footer-container"></div>
-
-    <!-- ===== LOADING OVERLAY ===== -->
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="loading-card">
-            <div class="spinner"></div>
-            <h3>Aria is crafting your perfect plan...</h3>
-            <p>AI Confidence: <span id="aiConfidence">Building...</span></p>
+    <!-- DASHBOARD -->
+    <div class="glass-panel dash-panel">
+      <div>
+        <div class="dash-title"><i class="fas fa-chart-line"></i> Planning Progress</div>
+        <div class="progress-wrap">
+          <div class="bar-bg"><div class="bar-fill" id="progressFill"></div></div>
+          <div class="row"><span>AI Confidence</span><b id="confidenceText">0%</b></div>
         </div>
+      </div>
+
+      <div class="summary-grid">
+        <div class="summary-item"><div class="lbl">Event</div><div class="val" id="dEvent">—</div></div>
+        <div class="summary-item"><div class="lbl">Guests</div><div class="val" id="dGuests">—</div></div>
+        <div class="summary-item"><div class="lbl">City / Area</div><div class="val" id="dCity">—</div></div>
+        <div class="summary-item"><div class="lbl">Date</div><div class="val" id="dDate">—</div></div>
+        <div class="summary-item"><div class="lbl">Setting</div><div class="val" id="dSetting">—</div></div>
+        <div class="summary-item"><div class="lbl">Status</div><div class="val" id="dStatus" style="color:var(--gold-light);">Planning</div></div>
+      </div>
+
+      <div class="budget-bar-wrap">
+        <div class="bb-row"><span>Budget Used</span><span id="bbLabel">PKR 0 / 0</span></div>
+        <div class="budget-bar-bg"><div class="budget-bar-fill ok" id="budgetFill" style="width:0%"></div></div>
+        <div class="budget-hint" id="budgetHint"></div>
+        <button class="budget-fix-btn" id="findAffordableBtn" style="display:none;"><i class="fas fa-lightbulb"></i> Find the cheapest plan that fits</button>
+      </div>
+
+      <div>
+        <div class="dash-title"><i class="fas fa-store"></i> Selected Vendors</div>
+        <div class="vendor-list" id="vendorList">
+          <div style="font-size:.78rem;color:var(--ivory-faint);padding:8px 2px;">No vendors selected yet.</div>
+        </div>
+      </div>
     </div>
 
-    <!-- ===== SCRIPTS ===== -->
-    <script>
-        /* ── nave bar ── */
-        $(document).ready(() => {
-            $.get('navebar.html', (data) => {
-                $('#nav-container').html(data);
-                // ✅ Navbar inject hone ke BAAD active set karo
-                var page = window.location.pathname.split('/').pop().replace('.html', '').toLowerCase() || 'index';
-                var pageMap = {
-                    'index'        : 'home',
-                    'aboutme'      : 'about',
-                    'services'     : 'services',
-                    'decoration'   : 'services',
-                    'guestlist'    : 'guestlist',
-                    'gustlist'     : 'guestlist',
-                    'photographers': 'vendors',
-                    'makeup'       : 'vendors',
-                    'catering'     : 'vendors',
-                    'ai-planner'   : 'ai'
-                };
-                var activeKey = pageMap[page] || 'home';
-                $('.wd-menu-link').removeClass('active');
-                $('.wd-mobile-list > li > a').removeClass('active');
-                $('.wd-menu-link[data-nav="' + activeKey + '"]').addClass('active');
-                $('.wd-mobile-list > li > a[data-nav="' + activeKey + '"]').addClass('active');
-            });
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<div id="footer-container"></div>
+
+<script>
+$(function(){
+
+  /* =========================================================
+     NAVBAR / FOOTER
+  ========================================================= */
+  $.get('navebar.html', (data) => {
+      $('#nav-container').html(data);
+      var page = window.location.pathname.split('/').pop().replace('.html','').toLowerCase() || 'index';
+      var pageMap = {
+          'index':'home','aboutme':'about','services':'services','decoration':'services',
+          'guestlist':'guestlist','gustlist':'guestlist','photographers':'vendors','makeup':'vendors',
+          'catering':'vendors','ai-planner':'ai'
+      };
+      var activeKey = pageMap[page] || 'home';
+      $('.wd-menu-link').removeClass('active');
+      $('.wd-mobile-list > li > a').removeClass('active');
+      $('.wd-menu-link[data-nav="' + activeKey + '"]').addClass('active');
+      $('.wd-mobile-list > li > a[data-nav="' + activeKey + '"]').addClass('active');
+  });
+  $.get('footer.html', (data) => { $('#footer-container').html(data); });
+
+  /* =========================================================
+     AMBIENT BACKGROUND
+  ========================================================= */
+  const canvas = document.getElementById('bgCanvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [];
+  function resize(){ W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  const count = window.innerWidth < 640 ? 26 : 55;
+  for(let i=0;i<count;i++){
+    particles.push({ x:Math.random()*W, y:Math.random()*H, r:Math.random()*1.6+0.4, vx:(Math.random()-0.5)*0.15, vy:(Math.random()-0.5)*0.15, o:Math.random()*0.5+0.15 });
+  }
+  function tick(){
+    ctx.clearRect(0,0,W,H);
+    particles.forEach((p,i)=>{
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0)p.x=W; if(p.x>W)p.x=0; if(p.y<0)p.y=H; if(p.y>H)p.y=0;
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle = `rgba(200,155,44,${p.o})`;
+      ctx.fill();
+      for(let j=i+1;j<particles.length;j++){
+        const q = particles[j];
+        const dx=p.x-q.x, dy=p.y-q.y, dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<110){
+          ctx.beginPath();
+          ctx.moveTo(p.x,p.y); ctx.lineTo(q.x,q.y);
+          ctx.strokeStyle = `rgba(200,155,44,${0.06*(1-dist/110)})`;
+          ctx.lineWidth=1;
+          ctx.stroke();
+        }
+      }
+    });
+    requestAnimationFrame(tick);
+  }
+  tick();
+
+  /* =========================================================
+     VENDOR DATA
+  ========================================================= */
+  const VENDORS = { halls:[], caterers:[], decorators:[], photographers:[], carrentals:[] };
+  const CAT_TO_VENDOR_KEY = { hall:'halls', caterer:'caterers', decorator:'decorators', photographer:'photographers', carrental:'carrentals' };
+  let vendorsReady = false;
+
+  function setBootStatus(mode){
+    const $dot = $('#statusDot'), $label = $('#statusLabel'), $note = $('#heroNote'), $btn = $('#startBtn'), $banner = $('#bootBanner');
+    $dot.removeClass('loading error');
+    if(mode === 'loading'){
+      $dot.addClass('loading'); $label.text('ARIA · LOADING VENDOR NETWORK');
+      $note.text('Loading vendor network…'); $btn.prop('disabled', true);
+      $banner.removeClass('show');
+    } else if(mode === 'ready'){
+      $label.text('ARIA · AI EVENT CONSULTANT');
+      $note.text('Vendor network loaded — ready when you are.'); $btn.prop('disabled', false);
+      $banner.removeClass('show');
+    } else if(mode === 'error'){
+      $dot.addClass('error'); $label.text('ARIA · VENDOR NETWORK UNAVAILABLE');
+      $note.html('Could not load vendor data. <button class="retry-link" id="heroRetryLink">Retry</button>');
+      $btn.prop('disabled', true);
+      $banner.addClass('show');
+    }
+  }
+
+  function loadVendors(){
+    setBootStatus('loading');
+    $.when(
+      $.getJSON("hallsDetails.json"),
+      $.getJSON("caterersDetails.json"),
+      $.getJSON("decoratorsDetails.json"),
+      $.getJSON("photographersDetails.json"),
+      $.getJSON("carrentalsDetails.json")
+    ).done(function(hallsR, caterersR, decoratorsR, photographersR, carrentalsR){
+      VENDORS.halls = hallsR[0] || [];
+      VENDORS.caterers = caterersR[0] || [];
+      VENDORS.decorators = decoratorsR[0] || [];
+      VENDORS.photographers = photographersR[0] || [];
+      VENDORS.carrentals = carrentalsR[0] || [];
+      vendorsReady = true;
+      renderHeroStats();
+      setBootStatus('ready');
+    }).fail(function(){
+      vendorsReady = false;
+      console.warn("Could not load one or more vendor JSON files.");
+      setBootStatus('error');
+    });
+  }
+
+  function animateCount($el, target){
+    const dur = 700, start = performance.now(), from = 0;
+    function step(now){
+      const p = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      $el.text(Math.round(from + (target - from) * eased));
+      if(p < 1) requestAnimationFrame(step);
+      else $el.text(target);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function renderHeroStats(){
+    animateCount($("#statHalls"), VENDORS.halls.length || 0);
+    animateCount($("#statCaterers"), VENDORS.caterers.length || 0);
+    const total = VENDORS.halls.length + VENDORS.caterers.length + VENDORS.decorators.length + VENDORS.photographers.length + VENDORS.carrentals.length;
+    animateCount($("#statVendors"), total || 0);
+  }
+
+  $(document).on('click', '#retryLoadBtn, #heroRetryLink', function(){ loadVendors(); });
+  loadVendors();
+
+  /* =========================================================
+     STATE
+  ========================================================= */
+  const STORE_KEY = "wd_ai_planner_state";
+  const STEPS = ["event","guests","city","area","date","setting","budget","services","hall","caterer","decorator","photographer","carrental","done"];
+
+  let state = {
+    stepIndex: 0,
+    event:null, guests:null, city:null, area:null, date:null, setting:null, budget:null,
+    services:[],
+    picked:{ hall:null, caterer:null, decorator:null, photographer:null, carrental:null },
+    complete:false,
+    _serviceOrder:[],
+    _serviceCursor:0
+  };
+
+  function saveState(){ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }
+  function loadState(){
+    const raw = localStorage.getItem(STORE_KEY);
+    if(!raw) return false;
+    try{ state = Object.assign(state, JSON.parse(raw)); return true; }catch(e){ return false; }
+  }
+
+  /* =========================================================
+     RESTART PLAN
+  ========================================================= */
+  function restartPlan(){
+    if(confirm("🔄 Restart planning from scratch? All your selections will be cleared.")){
+      localStorage.removeItem(STORE_KEY);
+      location.reload();
+    }
+  }
+
+  function goToStep(stepName){
+    const idx = STEPS.indexOf(stepName);
+    if(idx === -1) return;
+    state.stepIndex = idx;
+    if(stepName === 'guests' || stepName === 'area' || stepName === 'budget' || stepName === 'services') {
+      state.picked = { hall:null, caterer:null, decorator:null, photographer:null, carrental:null };
+      state.complete = false;
+      state._serviceOrder = [];
+      state._serviceCursor = 0;
+    }
+    saveState();
+    renderStep(stepName);
+  }
+
+  /* =========================================================
+     CHAT HELPERS
+  ========================================================= */
+  const $chatBody = $("#chatBody");
+  const $typing = $("#typingRow");
+  const FALLBACK_IMG = (name) => `https://placehold.co/200x150/1a1015/e8b93c?font=playfair-display&text=${encodeURIComponent((name||'W').charAt(0))}`;
+
+  function imgTag(url, name, cls){
+    const fallback = FALLBACK_IMG(name);
+    return `<img class="${cls||''}" src="${url}" alt="${name||''}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';">`;
+  }
+
+  function scrollDown(){ $chatBody.stop().animate({scrollTop: $chatBody[0].scrollHeight}, 300); }
+
+  function aiMsg(html){
+    const $m = $(`<div class="msg ai"><div class="av-sm">A</div><div class="bubble">${html}</div></div>`);
+    $chatBody.append($m); scrollDown(); return $m;
+  }
+  function userMsg(text){
+    const $m = $(`<div class="msg user"><div class="bubble">${$('<div>').text(text).html()}</div></div>`);
+    $chatBody.append($m); scrollDown();
+  }
+  
+  function chips(options, onPick, multi=false){
+    const $wrap = $('<div class="chips" role="group"></div>');
+    const chosen = new Set();
+    options.forEach(opt=>{
+      const $c = $(`<button type="button" class="chip">${opt}</button>`);
+      $c.on('click', function(){
+        if(multi){
+          if(chosen.has(opt)){ chosen.delete(opt); $c.removeClass('selected'); }
+          else{ chosen.add(opt); $c.addClass('selected'); }
+        }else{
+          $wrap.find('.chip').removeClass('selected');
+          $c.addClass('selected');
+          onPick(opt);
+        }
+      });
+      $wrap.append($c);
+    });
+    if(multi){
+      const $done = $('<button type="button" class="chip" style="border-color:var(--gold);color:var(--gold-light);font-weight:700;">Done ✓</button>');
+      $done.on('click', ()=> onPick(Array.from(chosen)));
+      $wrap.append($done);
+    }
+    const $changeWrap = $('<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;width:100%;"></div>');
+    const $back = $('<button type="button" class="chip" style="border-color:var(--ivory-faint);color:var(--ivory-faint);font-size:0.7rem;">⬅️ Change Previous</button>');
+    $back.on('click', function(){
+      const currentStep = STEPS[state.stepIndex];
+      const idx = STEPS.indexOf(currentStep);
+      if(idx > 0) {
+        const prevStep = STEPS[idx - 1];
+        userMsg("⬅️ Go back to " + prevStep);
+        goToStep(prevStep);
+      }
+    });
+    $changeWrap.append($back);
+    const $restart = $('<button type="button" class="chip" style="border-color:var(--rose);color:var(--rose);font-size:0.7rem;">🔄 Restart Plan</button>');
+    $restart.on('click', function(){ restartPlan(); });
+    $changeWrap.append($restart);
+    $wrap.append($changeWrap);
+    $chatBody.append($wrap); scrollDown();
+    return $wrap;
+  }
+  
+  function showTyping(cb, delay){
+    $typing.addClass('active'); scrollDown();
+    setTimeout(()=>{ $typing.removeClass('active'); cb(); }, delay || (650 + Math.random()*500));
+  }
+  function lockInput(lock){ $("#chatInput").prop('disabled', lock); $("#sendBtn").prop('disabled', lock); }
+
+  /* =========================================================
+     PRICE HELPERS — FIXED: Caterers show TOTAL price (guests × per_head)
+  ========================================================= */
+  function fmtPKR(n){ 
+    if(n === undefined || n === null || isNaN(n)) return "PKR 0";
+    return "PKR " + Number(n).toLocaleString(); 
+  }
+  
+  function num(v, fallback){ 
+    return (typeof v === 'number' && !isNaN(v)) ? v : fallback; 
+  }
+
+  function getVendorPrice(vendor, category) {
+    if(!vendor) return 0;
+    switch(category) {
+      case 'hall': return vendor.starting_price || 0;
+      case 'caterer': 
+        // Total price = price_per_head × guests
+        return (vendor.price_per_head || 0) * (state.guests || 0);
+      case 'decorator': return vendor.starting_price || 0;
+      case 'photographer': return vendor.starting_price || 0;
+      case 'carrental': return vendor.starting_price || 0;
+      default: return vendor.starting_price || 0;
+    }
+  }
+
+  function getVendorDisplayPrice(vendor, category) {
+    if(!vendor) return '—';
+    const price = getVendorPrice(vendor, category);
+    
+    if(category === 'caterer') {
+      const perHead = vendor.price_per_head || 0;
+      const guests = state.guests || 0;
+      return fmtPKR(price) + ' total (PKR ' + Number(perHead).toLocaleString() + '/head × ' + guests + ' guests)';
+    } else if(category === 'carrental') {
+      return fmtPKR(price) + ' / day';
+    } else if(category === 'hall') {
+      return fmtPKR(price) + ' starting';
+    } else if(category === 'decorator') {
+      return fmtPKR(price) + ' starting';
+    } else if(category === 'photographer') {
+      return fmtPKR(price) + ' starting';
+    }
+    return fmtPKR(price);
+  }
+
+  /* =========================================================
+     FILTER BY AREA — Works for ALL categories
+  ========================================================= */
+  function filterByArea(vendors) {
+    if (!state.area) return vendors;
+    const areaLower = state.area.toLowerCase();
+    return vendors.filter(v => {
+      const vArea = (v.area || '').toLowerCase();
+      return vArea.includes(areaLower);
+    });
+  }
+
+  /* =========================================================
+     VENDOR MATCHING — Area filter applied FIRST
+  ========================================================= */
+  function matchHalls(){
+    const guests = state.guests || 200;
+    const budgetShare = (state.budget || 1000000) * 0.45;
+    
+    let list = filterByArea(VENDORS.halls);
+    list = list.filter(h => num(h.capacity, 0) >= guests * 0.85);
+    list = list.filter(h => num(h.starting_price, 0) <= budgetShare * 1.3);
+    
+    if(list.length === 0) {
+      list = VENDORS.halls.filter(h => num(h.capacity, 0) >= guests * 0.85);
+      if(list.length === 0) list = VENDORS.halls.slice();
+    }
+    return list.sort((a,b)=> num(b.rating,0)-num(a.rating,0)).slice(0,4);
+  }
+
+  function matchCaterers(){
+    const perHead = (state.budget||1000000) * 0.28 / (state.guests||200);
+    
+    let list = filterByArea(VENDORS.caterers);
+    list = list.filter(c => num(c.price_per_head,0) <= perHead*1.25);
+    
+    if(list.length === 0) {
+      list = VENDORS.caterers.filter(c => num(c.price_per_head,0) <= perHead*1.25);
+      if(list.length === 0) list = VENDORS.caterers.slice();
+    }
+    return list.sort((a,b)=> num(b.rating,0)-num(a.rating,0)).slice(0,4);
+  }
+
+  function matchDecorators(){
+    const share = (state.budget||1000000) * 0.15;
+    
+    let list = filterByArea(VENDORS.decorators);
+    list = list.filter(d => num(d.starting_price,0) <= share*1.3);
+    
+    if(list.length === 0) {
+      list = VENDORS.decorators.filter(d => num(d.starting_price,0) <= share*1.3);
+      if(list.length === 0) list = VENDORS.decorators.slice();
+    }
+    return list.sort((a,b)=> num(b.rating,0)-num(a.rating,0)).slice(0,4);
+  }
+
+  function matchPhotographers(){
+    const share = (state.budget||1000000) * 0.1;
+    
+    let list = filterByArea(VENDORS.photographers);
+    list = list.filter(p => num(p.starting_price,0) <= share*1.3);
+    
+    if(list.length === 0) {
+      list = VENDORS.photographers.filter(p => num(p.starting_price,0) <= share*1.3);
+      if(list.length === 0) list = VENDORS.photographers.slice();
+    }
+    return list.sort((a,b)=> num(b.rating,0)-num(a.rating,0)).slice(0,4);
+  }
+
+  function matchCarRentals(){
+    const share = (state.budget||1000000) * 0.07;
+    
+    let list = filterByArea(VENDORS.carrentals);
+    list = list.filter(c => num(c.starting_price,0) <= share*1.3);
+    
+    if(list.length === 0) {
+      list = VENDORS.carrentals.filter(c => num(c.starting_price,0) <= share*1.3);
+      if(list.length === 0) list = VENDORS.carrentals.slice();
+    }
+    return list.sort((a,b)=> num(b.rating,0)-num(a.rating,0)).slice(0,4);
+  }
+
+  /* =========================================================
+     VENDOR CARDS
+  ========================================================= */
+  function vendorCards(list, category, onSelect) {
+    const $wrap = $('<div class="vendor-cards"></div>');
+    if(list.length === 0) {
+      $wrap.append(`<div style="grid-column:1/-1;padding:20px;text-align:center;color:var(--ivory-dim);font-size:0.9rem;">
+        <i class="fas fa-search" style="color:var(--gold-light);"></i> No vendors found in <b>${state.area || 'your area'}</b>.<br>
+        <span style="font-size:0.8rem;">Try changing your area or budget.</span>
+      </div>`);
+      $chatBody.append($wrap); scrollDown();
+      return $wrap;
+    }
+    
+    list.forEach((v,i)=>{
+      const priceDisplay = getVendorDisplayPrice(v, category);
+      
+      let tags = '';
+      if(category === 'hall') {
+        if(v.capacity) tags += `<span class="vc-tag"><i class="fas fa-users"></i> ${v.capacity}</span>`;
+        if(v.parking_capacity) tags += `<span class="vc-tag"><i class="fas fa-car"></i> ${v.parking_capacity}</span>`;
+        if(v.parking === true) tags += `<span class="vc-tag"><i class="fas fa-parking"></i></span>`;
+        if(v.ac === true) tags += `<span class="vc-tag"><i class="fas fa-snowflake"></i> AC</span>`;
+        if(v.catering === true) tags += `<span class="vc-tag"><i class="fas fa-utensils"></i></span>`;
+        if(v.outdoor === true) tags += `<span class="vc-tag"><i class="fas fa-tree"></i> Outdoor</span>`;
+        if(v.stage === true) tags += `<span class="vc-tag"><i class="fas fa-stage"></i></span>`;
+      }
+      if(category === 'caterer') {
+        if(v.cuisine_types && v.cuisine_types.length) {
+          tags += `<span class="vc-tag"><i class="fas fa-utensils"></i> ${v.cuisine_types.slice(0,2).join(', ')}</span>`;
+        }
+        if(v.min_guests) tags += `<span class="vc-tag"><i class="fas fa-users"></i> Min ${v.min_guests}</span>`;
+        if(v.established) tags += `<span class="vc-tag"><i class="fas fa-calendar"></i> Est. ${v.established}</span>`;
+        // Show per head price in tags
+        if(v.price_per_head) tags += `<span class="vc-tag"><i class="fas fa-tag"></i> ${fmtPKR(v.price_per_head)}/head</span>`;
+      }
+      if(category === 'photographer') {
+        if(v.services && v.services.length) {
+          tags += `<span class="vc-tag"><i class="fas fa-camera"></i> ${v.services.slice(0,2).join(', ')}</span>`;
+        }
+        if(v.established) tags += `<span class="vc-tag"><i class="fas fa-calendar"></i> Est. ${v.established}</span>`;
+      }
+      if(category === 'decorator') {
+        if(v.events_types && v.events_types.length) {
+          tags += `<span class="vc-tag"><i class="fas fa-palette"></i> ${v.events_types.slice(0,2).join(', ')}</span>`;
+        }
+      }
+      if(category === 'carrental') {
+        if(v.fleet && v.fleet.length) {
+          tags += `<span class="vc-tag"><i class="fas fa-car"></i> ${v.fleet.slice(0,2).join(', ')}</span>`;
+        }
+      }
+
+      let areaBadge = '';
+      if(state.area && v.area && v.area.toLowerCase().includes(state.area.toLowerCase())) {
+        areaBadge = `<span class="vc-badge" style="background:var(--ok);color:#fff;left:auto;right:8px;">✓ ${v.area}</span>`;
+      }
+
+      const $c = $(`
+        <div class="vcard" data-id="${v.id}">
+          ${i===0 ? '<span class="vc-badge">Top match</span>' : ''}
+          ${v.verified ? '<span class="vc-badge" style="background:var(--ok);color:#fff;">✓ Verified</span>' : ''}
+          ${areaBadge}
+          <span class="vc-pick">Select</span>
+          ${imgTag(v.image, v.name)}
+          <div class="vc-body">
+            <div class="vc-name">${v.name}</div>
+            <div class="vc-meta"><i class="fas fa-star" style="color:var(--gold-light);"></i> ${num(v.rating,'—')} ${v.area? " · "+v.area : (v.city? " · "+v.city : "")}</div>
+            <div class="vc-price" style="color:var(--gold-light);font-weight:700;font-family:'JetBrains Mono',monospace;font-size:0.85rem;">${priceDisplay}</div>
+            <div class="vc-tags">${tags}</div>
+          </div>
+        </div>`);
+      $c.on('click', function(){
+        $wrap.find('.vcard').removeClass('picked');
+        $wrap.find('.vc-pick').text('Select');
+        $c.addClass('picked');
+        $c.find('.vc-pick').text('Selected ✓');
+        state.picked[category] = v;
+        updateDashboard();
+        saveState();
+        if(onSelect) onSelect(v);
+      });
+      $wrap.append($c);
+    });
+    
+    $chatBody.append($wrap); scrollDown();
+    return $wrap;
+  }
+
+  /* =========================================================
+     CONVERSATION ENGINE
+  ========================================================= */
+  function renderStep(name){
+    lockInput(false);
+    if(name === "event"){
+      showTyping(()=>{
+        aiMsg("👋 <b>Welcome! I'm Aria, your AI Event Consultant.</b><br>Let's design something beautiful together. What are we celebrating?");
+        chips(["Wedding","Walima","Mehndi","Engagement","Birthday","Anniversary","Corporate Event"], (opt)=>{
+          userMsg(opt); state.event = opt; saveState(); goToStep("guests");
         });
-
-        /* ── FOOTER ── */
-        $(document).ready(() => {
-            $.get('footer.html', (data) => {
-                $('#footer-container').html(data);
-            });
+      });
+    }
+    else if(name === "guests"){
+      showTyping(()=>{
+        aiMsg(`🎯 ${state.event ? 'For your <b>'+state.event+'</b>,' : ''} roughly how many guests are you expecting? <br><small>You can type any number directly in the chat box.</small>`);
+        chips(["100","200","300","500","800+"], (opt)=>{
+          userMsg(opt); 
+          const val = parseInt(opt.replace(/\+/g,'')) || 800;
+          state.guests = val; 
+          saveState();
+          goToStep("city");
         });
-
-        $(document).ready(function() {
-
-            // ─── DOM ELEMENTS ───
-            const eventPills = document.querySelectorAll('.pill');
-            const eventTypeDisplay = document.getElementById('eventTypeDisplay');
-            const guestsDisplay = document.getElementById('guestsDisplay');
-            const cityDisplay = document.getElementById('cityDisplay');
-            const dateDisplay = document.getElementById('dateDisplay');
-            const progressFill = document.getElementById('progressFill');
-            const confidenceText = document.getElementById('confidenceText');
-            const startBtn = document.getElementById('startPlanningBtn');
-            const loadingOverlay = document.getElementById('loadingOverlay');
-            const aiConfidenceSpan = document.getElementById('aiConfidence');
-
-            let selectedEvent = 'Wedding';
-
-            // ─── UPDATE DASHBOARD ───
-            function updateDashboard(eventType) {
-                eventTypeDisplay.textContent = eventType || '—';
-                const guests = Math.floor(Math.random() * 150) + 30;
-                guestsDisplay.textContent = guests;
-                cityDisplay.textContent = 'New York';
-                const now = new Date();
-                const dateStr = now.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-                dateDisplay.textContent = dateStr;
-                const progress = Math.min(60 + Math.floor(Math.random() * 25), 92);
-                progressFill.style.width = progress + '%';
-                confidenceText.textContent = progress + '%';
-            }
-
-            // ─── EVENT SELECTION ───
-            eventPills.forEach(pill => {
-                pill.addEventListener('click', function() {
-                    eventPills.forEach(p => p.classList.remove('active'));
-                    this.classList.add('active');
-                    selectedEvent = this.dataset.event;
-                    updateDashboard(selectedEvent);
-                });
-            });
-
-            updateDashboard('Wedding');
-
-            // ─── SCROLL REVEAL ───
-            const revealTargets = document.querySelectorAll('.chat-section, .dashboard');
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('in-view');
-                        io.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.15 });
-            revealTargets.forEach(el => io.observe(el));
-
-            // ─── START PLANNING ───
-            startBtn.addEventListener('click', async function() {
-                loadingOverlay.classList.add('show');
-                aiConfidenceSpan.textContent = 'Building...';
-                let progress = 0;
-                const interval = setInterval(() => {
-                    progress += Math.floor(Math.random() * 12) + 3;
-                    if (progress > 95) {
-                        progress = 95;
-                        clearInterval(interval);
-                    }
-                    aiConfidenceSpan.textContent = progress + '%';
-                }, 300);
-
-                try {
-                    await new Promise(resolve => setTimeout(resolve, 2000));
-
-                    setTimeout(() => {
-                        clearInterval(interval);
-                        aiConfidenceSpan.textContent = '100%';
-                        progressFill.style.width = '100%';
-                        confidenceText.textContent = '100%';
-                        loadingOverlay.classList.remove('show');
-
-                        alert('✅ Your AI-generated event plan is ready!\n\n' +
-                            'Event: ' + selectedEvent + '\n' +
-                            'Guests: ' + guestsDisplay.textContent + '\n' +
-                            'Venue: The Grand Hall (AI Recommended)\n' +
-                            'Catering: Gourmet Feast (AI Selected)\n\n' +
-                            '🎉 Check your email for the full plan!');
-                    }, 1500);
-                } catch (error) {
-                    clearInterval(interval);
-                    loadingOverlay.classList.remove('show');
-                    alert('❌ Oops! Something went wrong. Please try again.');
-                }
-            });
-
+        $("#chatInput").attr('placeholder', 'Or type a number (e.g. 350)');
+      });
+    }
+    else if(name === "city"){
+      showTyping(()=>{
+        aiMsg("📍 Which city will host the event?");
+        chips(["Karachi","Lahore","Islamabad"], (opt)=>{
+          userMsg(opt); state.city = opt; saveState(); goToStep("area");
         });
-    </script>
+      });
+    }
+    else if(name === "area"){
+      showTyping(()=>{
+        aiMsg(`📍 Any preferred area in ${state.city || 'your city'}? <br><small>Select one, or tap "Skip" to see all vendors.</small>`);
+        chips(["DHA Phase 5","DHA Phase 6","Clifton","Bahadurabad","Gulshan-e-Iqbal","North Nazimabad","Skip"], (opt)=>{
+          userMsg(opt); 
+          state.area = opt==="Skip" ? null : opt; 
+          state.picked = { hall:null, caterer:null, decorator:null, photographer:null, carrental:null };
+          state.complete = false;
+          saveState();
+          goToStep("date");
+        });
+      });
+    }
+    else if(name === "date"){
+      showTyping(()=>{
+        aiMsg("📅 Do you have a date in mind? Type it, or tap a season.");
+        chips(["Winter Season","Spring Season","Not decided yet"], (opt)=>{
+          userMsg(opt); state.date = opt; saveState(); goToStep("setting");
+        });
+        $("#chatInput").attr('placeholder', 'Or type a date (e.g. 12 Dec 2026)');
+      });
+    }
+    else if(name === "setting"){
+      showTyping(()=>{
+        aiMsg("🏛️ Should we plan for an indoor hall, an open-air lawn, or both?");
+        chips(["Indoor Hall","Open Lawn","Both / Flexible"], (opt)=>{
+          userMsg(opt); state.setting = opt; saveState(); goToStep("budget");
+        });
+      });
+    }
+    else if(name === "budget"){
+      showTyping(()=>{
+        aiMsg(`💰 What's your overall budget for the event? (PKR) <br><small>You can type any amount directly.</small>`);
+        chips(["800,000","1,500,000","2,500,000","4,000,000"], (opt)=>{
+          userMsg(opt);
+          const numVal = parseInt(opt.replace(/,/g,''));
+          state.budget = numVal;
+          saveState();
+          goToStep("services");
+        });
+        $("#chatInput").attr('placeholder', 'Or type your budget (e.g. 1200000)');
+      });
+    }
+    else if(name === "services"){
+      showTyping(()=>{
+        aiMsg("🎯 Which services should I arrange for you? Select all that apply, then tap <b>Done</b>. <br><small>You can skip any service by not selecting it.</small>");
+        chips(["Hall","Catering","Decoration","Photography","Car Rental"], (opts)=>{
+          const list = Array.isArray(opts) ? opts : [opts];
+          if(list.length===0){ 
+            aiMsg("⚠️ You need at least one service. Please select at least one.");
+            return; 
+          }
+          userMsg("Selected: " + list.join(", "));
+          state.services = list;
+          state.picked = { hall:null, caterer:null, decorator:null, photographer:null, carrental:null };
+          state.complete = false;
+          const order = ["Hall","Catering","Decoration","Photography","Car Rental"].filter(s=>list.includes(s));
+          state._serviceOrder = order;
+          state._serviceCursor = 0;
+          saveState();
+          proceedServices();
+        }, true);
+      });
+    }
+    else if(name === "done"){
+      renderFinalReport();
+    }
+  }
+
+  const serviceStepMap = {
+    "Hall":{step:"hall", cat:"hall", match:matchHalls},
+    "Catering":{step:"caterer", cat:"caterer", match:matchCaterers},
+    "Decoration":{step:"decorator", cat:"decorator", match:matchDecorators},
+    "Photography":{step:"photographer", cat:"photographer", match:matchPhotographers},
+    "Car Rental":{step:"carrental", cat:"carrental", match:matchCarRentals}
+  };
+
+  function proceedServices(){
+    const order = state._serviceOrder || [];
+    const cursor = state._serviceCursor || 0;
+    if(cursor >= order.length){ goToStep("done"); return; }
+    const serviceName = order[cursor];
+    const cfg = serviceStepMap[serviceName];
+    showTyping(()=>{
+      const list = cfg.match();
+      const areaText = state.area ? ' in <b>'+state.area+'</b>' : '';
+      aiMsg(`📍 Here are my top <b>${serviceName}</b> picks${areaText} based on your budget and ${state.guests} guests:`);
+      vendorCards(list, cfg.cat, ()=>{
+        state._serviceCursor = cursor+1;
+        saveState();
+        setTimeout(proceedServices, 500);
+      });
+      const $next = $('<div class="report-actions"></div>');
+      const $skip = $('<button type="button" class="ra-btn">⏭️ Skip this service</button>');
+      $skip.on('click', function(){
+        aiMsg(`⏭️ Skipped <b>${serviceName}</b>. Moving on...`);
+        state._serviceCursor = cursor+1;
+        saveState();
+        setTimeout(proceedServices, 600);
+      });
+      $next.append($skip);
+      const $area = $('<button type="button" class="ra-btn">📍 Change Area</button>');
+      $area.on('click', function(){
+        userMsg("📍 Change Area");
+        goToStep("area");
+      });
+      $next.append($area);
+      const $budget = $('<button type="button" class="ra-btn">💰 Change Budget</button>');
+      $budget.on('click', function(){
+        userMsg("💰 Change Budget");
+        goToStep("budget");
+      });
+      $next.append($budget);
+      const $restart = $('<button type="button" class="ra-btn" style="border-color:var(--rose);color:var(--rose);">🔄 Restart Plan</button>');
+      $restart.on('click', function(){ restartPlan(); });
+      $next.append($restart);
+      $chatBody.append($next); scrollDown();
+    });
+  }
+
+  function totalEstimate(){
+    let total = 0;
+    if(state.picked.hall) total += num(state.picked.hall.starting_price, 0);
+    if(state.picked.caterer) total += num(state.picked.caterer.price_per_head, 0) * (state.guests||0);
+    if(state.picked.decorator) total += num(state.picked.decorator.starting_price, 0);
+    if(state.picked.photographer) total += num(state.picked.photographer.starting_price, 0);
+    if(state.picked.carrental) total += num(state.picked.carrental.starting_price, 0);
+    return total;
+  }
+
+  /* =========================================================
+     CHEAPEST-PLAN SOLVER
+  ========================================================= */
+  function getActiveServiceOrder(){
+    if(state._serviceOrder && state._serviceOrder.length) return state._serviceOrder;
+    return ["Hall","Catering","Decoration","Photography","Car Rental"].filter(s => (state.services||[]).includes(s));
+  }
+
+  function cheapestVendorFor(cfg){
+    const vendorKey = CAT_TO_VENDOR_KEY[cfg.cat];
+    let pool = VENDORS[vendorKey] || [];
+    
+    if(state.area) {
+      pool = pool.filter(v => (v.area || '').toLowerCase().includes(state.area.toLowerCase()));
+    }
+    
+    if(cfg.cat === 'hall'){
+      const guests = state.guests || 200;
+      const capable = pool.filter(h => num(h.capacity,0) >= guests * 0.85);
+      pool = capable.length ? capable : pool;
+    }
+    if(!pool.length) return null;
+    const sortKey = cfg.cat === 'caterer' ? 'price_per_head' : 'starting_price';
+    return pool.slice().sort((a,b)=> num(a[sortKey],Infinity) - num(b[sortKey],Infinity))[0];
+  }
+
+  function costOf(cfg, vendor){
+    if(!vendor) return 0;
+    if(cfg.cat === 'caterer') return num(vendor.price_per_head,0) * (state.guests||0);
+    return num(vendor.starting_price,0);
+  }
+
+  function computeCheapestPlan(){
+    const order = getActiveServiceOrder();
+    const picks = {}; const lines = []; let minTotal = 0;
+    order.forEach(serviceName=>{
+      const cfg = serviceStepMap[serviceName];
+      if(!cfg) return;
+      const vendor = cheapestVendorFor(cfg);
+      if(!vendor){ lines.push(`${serviceName}: no vendors available`); return; }
+      picks[cfg.cat] = vendor;
+      const cost = costOf(cfg, vendor);
+      minTotal += cost;
+      lines.push(`${serviceName} — <b>${vendor.name}</b> · ${fmtPKR(cost)}`);
+    });
+    return { picks, lines, minTotal, order };
+  }
+
+  function showCheapestPlan(){
+    showTyping(()=>{
+      const order = getActiveServiceOrder();
+      if(!order.length){ aiMsg("Please select at least one service first."); goToStep("services"); return; }
+      const { picks, lines, minTotal } = computeCheapestPlan();
+      const budget = state.budget || 0;
+
+      if(minTotal <= budget){
+        Object.assign(state.picked, picks);
+        updateDashboard(); saveState();
+        aiMsg(`✅ <b>Found the cheapest plan that fits your budget!</b><br><br>${lines.join('<br>')}<br><br>Total: <b>${fmtPKR(minTotal)}</b> · Budget: ${fmtPKR(budget)} · You save <b style="color:#4ade80;">${fmtPKR(budget - minTotal)}</b>.`);
+        renderFinalReport();
+      } else {
+        aiMsg(`⚠️ Even the cheapest possible combination comes to <b>${fmtPKR(minTotal)}</b> — that's <b style="color:var(--rose);">${fmtPKR(minTotal - budget)}</b> more than your budget of ${fmtPKR(budget)}.<br><br>${lines.join('<br>')}`);
+        const $wrap = $('<div class="chips" style="margin-left:0;"></div>');
+        const $b1 = $('<button type="button" class="chip" style="border-color:var(--gold);color:var(--gold-light);">💰 Increase Budget</button>');
+        const $b2 = $('<button type="button" class="chip">📉 Reduce Guests</button>');
+        const $b3 = $('<button type="button" class="chip">⏭️ Remove a Service</button>');
+        const $b4 = $('<button type="button" class="chip" style="border-color:var(--rose);color:var(--rose);">🔄 Restart Plan</button>');
+        $b1.on('click', ()=>{ userMsg("💰 Increase Budget"); goToStep("budget"); });
+        $b2.on('click', ()=>{ userMsg("📉 Reduce Guests"); goToStep("guests"); });
+        $b3.on('click', ()=>{ userMsg("⏭️ Remove a Service"); goToStep("services"); });
+        $b4.on('click', ()=>{ restartPlan(); });
+        $wrap.append($b1,$b2,$b3,$b4);
+        $chatBody.append($wrap); scrollDown();
+      }
+    }, 900);
+  }
+
+  $('#findAffordableBtn').on('click', function(){ showCheapestPlan(); });
+
+  /* =========================================================
+     DASHBOARD
+  ========================================================= */
+  function updateDashboard(){
+    $("#dEvent").text(state.event || "—");
+    $("#dGuests").text(state.guests || "—");
+    $("#dCity").text(state.area ? `${state.area}, ${state.city}` : (state.city || "—"));
+    $("#dDate").text(state.date || "—");
+    $("#dSetting").text(state.setting || "—");
+    $("#dStatus").text(state.complete ? "✅ Complete" : "Planning...");
+    $("#dStatus").css("color", state.complete ? "var(--ok)" : "var(--gold-light)");
+
+    let progress = 0;
+    if(state.event) progress += 10;
+    if(state.guests) progress += 10;
+    if(state.city) progress += 10;
+    if(state.area) progress += 10;
+    if(state.date) progress += 10;
+    if(state.setting) progress += 10;
+    if(state.budget) progress += 10;
+    if(state.services && state.services.length) progress += 10;
+    const pickedCount = Object.values(state.picked).filter(Boolean).length;
+    progress += Math.min(pickedCount * 4, 20);
+    if(state.complete) progress = 100;
+    $("#progressFill").css("width", progress+"%");
+    $("#confidenceText").text(progress+"%");
+
+    const total = totalEstimate();
+    const budget = state.budget || 0;
+    $("#bbLabel").text(fmtPKR(total) + " / " + fmtPKR(budget));
+    let pct = budget ? Math.min((total/budget)*100, 100) : 0;
+    $("#budgetFill").css("width", pct+"%");
+    $("#budgetFill").removeClass("ok warn over");
+    const $hint = $('#budgetHint'); const $fixBtn = $('#findAffordableBtn');
+    if(!budget || total <= budget*0.85){
+      $("#budgetFill").addClass("ok");
+      $hint.removeClass('over').text(budget ? '✅ On track!' : 'Set a budget to see how far it goes.');
+      $fixBtn.hide();
+    } else if(total <= budget){
+      $("#budgetFill").addClass("warn");
+      $hint.removeClass('over').text('⚠️ Cutting it close — you have ' + fmtPKR(budget-total) + ' left.');
+      $fixBtn.hide();
+    } else {
+      $("#budgetFill").addClass("over");
+      $hint.addClass('over').text('❌ Over budget by ' + fmtPKR(total-budget) + '.');
+      $fixBtn.show();
+    }
+
+    const $vl = $("#vendorList").empty();
+    const cats = [["hall","Hall"],["caterer","Caterer"],["decorator","Decorator"],["photographer","Photographer"],["carrental","Car Rental"]];
+    let any = false;
+    cats.forEach(([key,label])=>{
+      const v = state.picked[key];
+      if(v){
+        any = true;
+        const priceDisplay = getVendorDisplayPrice(v, key);
+        $vl.append(`<div class="vendor-mini">${imgTag(v.image, v.name)}<div><div class="vm-name">${v.name}</div><div class="vm-meta">${label} · ⭐ ${num(v.rating,'—')} · ${priceDisplay}</div></div></div>`);
+      }
+    });
+    if(!any) $vl.append('<div style="font-size:.78rem;color:var(--ivory-faint);padding:8px 2px;">No vendors selected yet.</div>');
+    
+    const $dashRestart = $('<button class="budget-fix-btn" style="border-color:var(--rose);color:var(--rose);margin-top:6px;"><i class="fas fa-rotate-left"></i> Restart Plan</button>');
+    $dashRestart.on('click', function(){ restartPlan(); });
+    $vl.after($dashRestart);
+  }
+
+  /* =========================================================
+     FINAL REPORT
+  ========================================================= */
+  function renderFinalReport(){
+    state.complete = true;
+    updateDashboard();
+    saveState();
+    showTyping(()=>{
+      const total = totalEstimate();
+      const budget = state.budget || 0;
+      const remaining = budget - total;
+
+      let vendorSummary = '';
+      const cats = [["hall","Hall"],["caterer","Caterer"],["decorator","Decorator"],["photographer","Photographer"],["carrental","Car Rental"]];
+      cats.forEach(([key,label])=>{
+        const v = state.picked[key];
+        if(v){
+          vendorSummary += `<br>• ${label}: <b>${v.name}</b> (${getVendorDisplayPrice(v, key)})`;
+        }
+      });
+
+      if(remaining >= 0){
+        aiMsg(`🎉 <b>Your event plan is ready!</b><br><br>
+          📍 <b>Event:</b> ${state.event}<br>
+          📍 <b>Area:</b> ${state.area || 'Any'}<br>
+          👥 <b>Guests:</b> ${state.guests}<br>
+          📅 <b>Date:</b> ${state.date || 'Not set'}<br>
+          🏛️ <b>Setting:</b> ${state.setting || 'Flexible'}<br><br>
+          <b>Selected Vendors:</b>${vendorSummary}<br><br>
+          💰 <b>Estimated Total:</b> ${fmtPKR(total)}<br>
+          💵 <b>Remaining Budget:</b> <b style="color:#4ade80;">${fmtPKR(remaining)}</b><br><br>
+          ✅ Everything fits comfortably within your budget!`);
+      } else {
+        aiMsg(`📊 <b>Here's an honest look at the numbers.</b><br><br>
+          📍 <b>Event:</b> ${state.event}<br>
+          👥 <b>Guests:</b> ${state.guests}<br>
+          💰 <b>Your Budget:</b> ${fmtPKR(budget)}<br>
+          <b>Selected Vendors:</b>${vendorSummary}<br><br>
+          💰 <b>Estimated Total:</b> ${fmtPKR(total)}<br>
+          ⚠️ <b style="color:var(--rose);">Shortfall:</b> ${fmtPKR(Math.abs(remaining))}`);
+        aiAlertPanel(total, budget);
+      }
+
+      const $actions = $('<div class="report-actions"></div>');
+      const $pdf = $('<button type="button" class="ra-btn"><i class="fas fa-file-pdf"></i> Download Report</button>');
+      const $share = $('<button type="button" class="ra-btn"><i class="fab fa-whatsapp"></i> Share on WhatsApp</button>');
+      const $book = $('<button type="button" class="ra-btn primary"><i class="fas fa-calendar-check"></i> Book This Plan</button>');
+      const $restart = $('<button type="button" class="ra-btn" style="border-color:var(--rose);color:var(--rose);"><i class="fas fa-rotate-left"></i> Start Over</button>');
+      const $changeGuests = $('<button type="button" class="ra-btn">👥 Change Guests</button>');
+      const $changeArea = $('<button type="button" class="ra-btn">📍 Change Area</button>');
+      const $changeBudget = $('<button type="button" class="ra-btn">💰 Change Budget</button>');
+      
+      $changeGuests.on('click', ()=>{ userMsg("👥 Change Guests"); goToStep("guests"); });
+      $changeArea.on('click', ()=>{ userMsg("📍 Change Area"); goToStep("area"); });
+      $changeBudget.on('click', ()=>{ userMsg("💰 Change Budget"); goToStep("budget"); });
+
+      $pdf.on('click', ()=> window.print());
+      $share.on('click', function(){
+        const text = encodeURIComponent(`My WedDream AI event plan:\n${state.event} · ${state.guests} guests · ${state.area || state.city}\nEstimated: ${fmtPKR(total)}`);
+        window.open(`https://wa.me/?text=${text}`, "_blank");
+      });
+      $book.on('click', function(){ bookPlan(); });
+      $restart.on('click', function(){ restartPlan(); });
+
+      $actions.append($pdf, $share, $book, $changeGuests, $changeArea, $changeBudget, $restart);
+      $chatBody.append($actions); scrollDown();
+    }, 900);
+  }
+
+  function aiAlertPanel(total, budget){
+    const diff = total - budget;
+    const $panel = $(`
+      <div class="ai-alert">
+        <b>💡 Options to fix the budget:</b><br><br>
+        • 💰 <b>Increase Budget</b> — Add more funds<br>
+        • 📉 <b>Reduce Guest Count</b> — Fewer guests = lower cost<br>
+        • ⏭️ <b>Remove a Service</b> — Skip optional services<br>
+        • 🏛️ <b>Choose Cheaper Vendors</b> — Let me find the cheapest options<br><br>
+        <b>Current Shortfall:</b> <span style="color:var(--rose);">${fmtPKR(diff)}</span>
+      </div>`);
+    $chatBody.append($panel); scrollDown();
+    
+    const $wrap = $('<div class="chips" style="margin-left:0;"></div>');
+    const $b0 = $('<button type="button" class="chip" style="border-color:var(--gold);color:var(--gold-light);font-weight:700;">💡 Show Cheapest Plan</button>');
+    const $b1 = $('<button type="button" class="chip">💰 Increase Budget</button>');
+    const $b2 = $('<button type="button" class="chip">📉 Reduce Guests</button>');
+    const $b3 = $('<button type="button" class="chip">⏭️ Remove a Service</button>');
+    const $b4 = $('<button type="button" class="chip" style="border-color:var(--rose);color:var(--rose);">🔄 Restart Plan</button>');
+    
+    $b0.on('click', ()=>{ userMsg("💡 Show Cheapest Plan"); showCheapestPlan(); });
+    $b1.on('click', ()=>{ userMsg("💰 Increase Budget"); goToStep("budget"); });
+    $b2.on('click', ()=>{ userMsg("📉 Reduce Guests"); goToStep("guests"); });
+    $b3.on('click', ()=>{ userMsg("⏭️ Remove a Service"); goToStep("services"); });
+    $b4.on('click', ()=>{ restartPlan(); });
+    
+    $wrap.append($b0,$b1,$b2,$b3,$b4);
+    $chatBody.append($wrap); scrollDown();
+  }
+
+  function bookPlan(){
+    const bookings = JSON.parse(localStorage.getItem("wd_all_bookings") || "[]");
+    if(state.picked.hall){
+      bookings.push({
+        category: "hall",
+        venueName: state.picked.hall.name,
+        venueArea: state.picked.hall.area,
+        venueId: state.picked.hall.id,
+        guests: state.guests,
+        eventType: state.event,
+        date: state.date,
+        amount: state.picked.hall.starting_price,
+        source: "ai-planner",
+        createdAt: new Date().toISOString()
+      });
+    }
+    ["caterer","decorator","photographer","carrental"].forEach(cat=>{
+      if(state.picked[cat]){
+        const v = state.picked[cat];
+        const amount = cat==="caterer" ? v.price_per_head*(state.guests||0) : v.starting_price;
+        bookings.push({
+          category: cat,
+          venueName: v.name,
+          venueId: v.id,
+          eventType: state.event,
+          date: state.date,
+          amount: amount,
+          source: "ai-planner",
+          createdAt: new Date().toISOString()
+        });
+      }
+    });
+    localStorage.setItem("wd_all_bookings", JSON.stringify(bookings));
+    window.location.href = "index.html";
+  }
+
+  /* =========================================================
+     FREE-TEXT INPUT
+  ========================================================= */
+  function handleFreeText(){
+    const val = $("#chatInput").val().trim();
+    if(!val) return;
+    userMsg(val);
+    $("#chatInput").val("");
+    
+    if(val.toLowerCase().includes('restart') || val.toLowerCase().includes('start over')) {
+      restartPlan();
+      return;
+    }
+    
+    const current = STEPS[state.stepIndex];
+    
+    const guestMatch = val.match(/(\d+)\s*(guest|pax|people)?/i);
+    if(guestMatch && (current === "guests" || val.toLowerCase().includes('guest') || val.toLowerCase().includes('pax'))) {
+      const numVal = parseInt(guestMatch[1]);
+      if(!isNaN(numVal) && numVal>0){ 
+        state.guests = numVal; 
+        state.picked = { hall:null, caterer:null, decorator:null, photographer:null, carrental:null };
+        state.complete = false;
+        saveState();
+        aiMsg(`✅ Updated guests to <b>${numVal}</b>. I'll find new vendor matches for you.`);
+        updateDashboard();
+        if(state.services && state.services.length) {
+          const order = ["Hall","Catering","Decoration","Photography","Car Rental"].filter(s=>state.services.includes(s));
+          state._serviceOrder = order;
+          state._serviceCursor = 0;
+          saveState();
+          proceedServices();
+        } else {
+          goToStep("services");
+        }
+        return;
+      }
+    }
+    
+    const budgetMatch = val.match(/(\d+[,.]?\d*)\s*(pkr|lakh|crore)?/i);
+    if(budgetMatch && (current === "budget" || val.toLowerCase().includes('budget') || val.toLowerCase().includes('pkr'))) {
+      let numVal = parseInt(budgetMatch[1].replace(/,/g,''));
+      if(val.toLowerCase().includes('lakh')) numVal = numVal * 100000;
+      else if(val.toLowerCase().includes('crore')) numVal = numVal * 10000000;
+      if(!isNaN(numVal) && numVal>0){ 
+        state.budget = numVal; 
+        state.picked = { hall:null, caterer:null, decorator:null, photographer:null, carrental:null };
+        state.complete = false;
+        saveState();
+        aiMsg(`✅ Updated budget to <b>${fmtPKR(numVal)}</b>. I'll find new vendor matches for you.`);
+        updateDashboard();
+        if(state.services && state.services.length) {
+          const order = ["Hall","Catering","Decoration","Photography","Car Rental"].filter(s=>state.services.includes(s));
+          state._serviceOrder = order;
+          state._serviceCursor = 0;
+          saveState();
+          proceedServices();
+        } else {
+          goToStep("services");
+        }
+        return;
+      }
+    }
+    
+    const areaOptions = ["dha","clifton","gulshan","north","bahadurabad","phase 5","phase 6"];
+    const areaMatch = areaOptions.find(a => val.toLowerCase().includes(a));
+    if(areaMatch && (current === "area" || val.toLowerCase().includes('area') || val.toLowerCase().includes('change'))) {
+      const areaMap = {
+        'dha': 'DHA Phase 5',
+        'phase 5': 'DHA Phase 5',
+        'phase 6': 'DHA Phase 6',
+        'clifton': 'Clifton',
+        'gulshan': 'Gulshan-e-Iqbal',
+        'north': 'North Nazimabad',
+        'bahadurabad': 'Bahadurabad'
+      };
+      const newArea = areaMap[areaMatch] || areaMatch;
+      state.area = newArea;
+      state.picked = { hall:null, caterer:null, decorator:null, photographer:null, carrental:null };
+      state.complete = false;
+      saveState();
+      aiMsg(`📍 Changed area to <b>${newArea}</b>. I'll find vendors in this area.`);
+      updateDashboard();
+      if(state.services && state.services.length) {
+        const order = ["Hall","Catering","Decoration","Photography","Car Rental"].filter(s=>state.services.includes(s));
+        state._serviceOrder = order;
+        state._serviceCursor = 0;
+        saveState();
+        proceedServices();
+      } else {
+        goToStep("services");
+      }
+      return;
+    }
+    
+    if(current === "city"){ state.city = val; saveState(); goToStep("area"); }
+    else if(current === "date"){ state.date = val; saveState(); goToStep("setting"); }
+    else if(current === "budget"){
+      const numVal = parseInt(val.replace(/,/g,''));
+      if(!isNaN(numVal) && numVal>0){ state.budget = numVal; saveState(); goToStep("services"); }
+      else aiMsg("Please enter a valid number for your budget, e.g. 1500000.");
+    }
+    else if(current === "guests"){
+      const numVal = parseInt(val.replace(/,/g,''));
+      if(!isNaN(numVal) && numVal>0){ state.guests = numVal; saveState(); goToStep("city"); }
+      else aiMsg("Please enter a valid number of guests.");
+    }
+    else {
+      aiMsg("💡 You can change any option anytime using the 'Change' buttons below, or just type what you want to change like:<br>• '300 guests'<br>• 'DHA Phase 5'<br>• '1.5 million budget'<br>• 'Restart'");
+    }
+  }
+  
+  $("#sendBtn").on("click", handleFreeText);
+  $("#chatInput").on("keydown", function(e){ if(e.key==="Enter"){ e.preventDefault(); handleFreeText(); } });
+
+  /* =========================================================
+     BOOT
+  ========================================================= */
+  $("#startBtn").on("click", function(){
+    if(!vendorsReady) return;
+    $("#plannerApp").addClass("active");
+    $("html,body").animate({scrollTop: $("#plannerApp").offset().top - 30}, 500);
+    $(this).hide();
+    if($chatBody.children().length === 0){
+      goToStep("event");
+    }
+    $("#chatInput").trigger('focus');
+  });
+
+  if(loadState() && state.event){
+    $("#plannerApp").addClass("active");
+    $("#startBtn").hide();
+    const guestText = state.guests || '?';
+    aiMsg(`👋 <b>Welcome back!</b> I picked up right where we left off on your <b>${state.event}</b> plan.<br>👥 ${guestText} guests · ${state.area || 'Any area'} · 💰 ${state.budget ? fmtPKR(state.budget) : 'Budget not set'}`);
+    updateDashboard();
+    if(state.complete){ renderFinalReport(); }
+    else if(state.services && state.services.length) {
+      const order = ["Hall","Catering","Decoration","Photography","Car Rental"].filter(s=>state.services.includes(s));
+      state._serviceOrder = order;
+      state._serviceCursor = 0;
+      proceedServices();
+    }
+    else { renderStep(STEPS[state.stepIndex] || "event"); }
+  }
+
+  // CSS for vendor tags
+  $('<style>.vc-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;}.vc-tag{background:rgba(200,155,44,0.08);border:1px solid rgba(200,155,44,0.12);padding:2px 8px;border-radius:12px;font-size:0.6rem;color:var(--ivory-dim);display:inline-flex;align-items:center;gap:3px;}</style>').appendTo('head');
+
+});
+</script>
+
+<!-- =========================================================
+  OPTIONAL: Gemini API integration point (disabled by default)
+  ---------------------------------------------------------
+  Aria works fully offline using the rule-based engine above —
+  no API key required. If you later want Aria's *phrasing* to be
+  generated live by Gemini instead of the fixed script, call your
+  own backend proxy from here — never fetch generativelanguage.
+  googleapis.com directly from this page, since any key placed in
+  client-side JS is visible to every visitor in the browser
+  DevTools Network tab.
+========================================================= -->
 
 </body>
 </html>
