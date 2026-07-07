@@ -4,38 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>WedDream | Privacy Policy</title>
-  
+
   <!-- ===== GOOGLE FONTS ===== -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Josefin+Sans:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-  
-  <!-- ===== FONT AWESOME ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- ===== FONT AWESOME (fixed to fa-solid — see note below) ===== -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
+
   <!-- ===== BOOTSTRAP 5 ===== -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- ===== EMAILJS (for working Contact Privacy Team form) ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
   <style>
     /* =========================================================
-       PREMIUM WEDDING THEME - PRIVACY POLICY PAGE
+       WEDDREAM — PRIVACY POLICY (PREMIUM EDITION)
+       Signature element: a wax-seal monogram + covenant-style
+       roman-numeral sections, evoking a formal wedding decree
+       rather than a generic legal accordion.
     ========================================================= */
     :root {
       --rose: #b93b56;
       --rose-hover: #a22f49;
       --gold: #c89b2c;
       --gold-light: #e0b04a;
+      --gold-soft: rgba(200,155,44,0.14);
       --white: #ffffff;
       --white-light: rgba(255,255,255,0.72);
       --glass: rgba(15,10,14,0.55);
       --dark: #070707;
       --dark-card: #0d0a0e;
       --border-gold: rgba(200,155,44,0.25);
+      --ink: rgba(255,255,255,0.66);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; }
 
     body {
       background: var(--dark);
@@ -44,784 +48,889 @@
       color: var(--white-light);
     }
 
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+    }
+
+    ::selection { background: var(--gold); color:#100b0d; }
+
+    /* subtle film-grain texture overlay for a premium print-invitation feel */
+    .grain {
+      position: fixed; inset: 0; pointer-events: none; z-index: 1;
+      opacity: 0.035; mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
     /* =========================================================
-       NAVBAR (SAME AS MAIN WEBSITE)
+       NAVBAR (unchanged behavior)
     ========================================================= */
     .wd-nav {
-      width: 100%;
-      position: sticky;
-      top: 0;
-      z-index: 9999;
+      width: 100%; position: sticky; top: 0; z-index: 9999;
       background: rgba(4, 2, 6, 0.97);
       border-bottom: 1px solid rgba(200,155,44,0.25);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      height: 76px;
-      display: flex;
-      align-items: center;
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      height: 76px; display: flex; align-items: center;
       transition: height 0.25s ease, background 0.25s;
     }
-
-    .wd-nav.scrolled {
-      height: 66px;
-      background: rgba(4, 2, 6, 0.99);
-      border-bottom-color: rgba(200,155,44,0.4);
-    }
-
-    .wd-nav-inner {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 48px;
-      gap: 20px;
-    }
-
-    .wd-logo {
-      flex-shrink: 0;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-    }
-    .wd-logo img {
-      width: 190px;
-      object-fit: contain;
-      transition: width 0.2s ease;
-    }
-
-    .wd-menu {
-      display: flex;
-      align-items: center;
-      list-style: none;
-      gap: 4px;
-      margin: 0;
-      padding: 0;
-    }
-
+    .wd-nav.scrolled { height: 66px; background: rgba(4, 2, 6, 0.99); border-bottom-color: rgba(200,155,44,0.4); }
+    .wd-nav-inner { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; gap: 20px; }
+    .wd-logo { flex-shrink: 0; text-decoration: none; display: flex; align-items: center; }
+    .wd-logo img { width: 190px; object-fit: contain; transition: width 0.2s ease; }
+    .wd-menu { display: flex; align-items: center; list-style: none; gap: 4px; margin: 0; padding: 0; }
     .wd-menu-item { position: relative; }
-    
     .wd-menu-link {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      color: rgba(255,255,255,0.82);
-      text-decoration: none;
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 11.5px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 8px 14px;
-      border-radius: 8px;
-      position: relative;
-      transition: color 0.25s, background 0.25s;
+      display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.82);
+      text-decoration: none; font-family: 'Josefin Sans', sans-serif; font-size: 11.5px;
+      font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 8px 14px;
+      border-radius: 8px; position: relative; transition: color 0.25s, background 0.25s;
     }
-
-    .wd-menu-link:hover, .wd-menu-link.active {
-      color: #c89b2c;
-      background: rgba(200,155,44,0.07);
-    }
-
+    .wd-menu-link:hover, .wd-menu-link.active { color: #c89b2c; background: rgba(200,155,44,0.07); }
     .wd-menu-link::after {
-      content: '';
-      position: absolute;
-      bottom: 3px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 2px;
-      border-radius: 2px;
-      background: #c89b2c;
-      transition: width 0.3s;
+      content: ''; position: absolute; bottom: 3px; left: 50%; transform: translateX(-50%);
+      width: 0; height: 2px; border-radius: 2px; background: #c89b2c; transition: width 0.3s;
     }
     .wd-menu-link:hover::after, .wd-menu-link.active::after { width: 20px; }
-
     .wd-menu-link.wd-ai {
       background: linear-gradient(135deg, rgba(185,59,86,0.18), rgba(185,59,86,0.08));
-      border: 1px solid rgba(185,59,86,0.45);
-      color: #e06080;
-      border-radius: 50px;
+      border: 1px solid rgba(185,59,86,0.45); color: #e06080; border-radius: 50px;
     }
     .wd-menu-link.wd-ai::after { display: none; }
-
     .wd-dropdown {
-      position: absolute;
-      top: calc(100% + 12px);
-      left: 0;
-      min-width: 200px;
-      background: #0e0a12;
-      border: 1px solid rgba(200,155,44,0.2);
-      border-top: 2px solid #c89b2c;
-      border-radius: 12px;
-      padding: 8px 0;
-      list-style: none;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(8px);
-      transition: all 0.25s;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      position: absolute; top: calc(100% + 12px); left: 0; min-width: 200px;
+      background: #0e0a12; border: 1px solid rgba(200,155,44,0.2); border-top: 2px solid #c89b2c;
+      border-radius: 12px; padding: 8px 0; list-style: none; opacity: 0; visibility: hidden;
+      transform: translateY(8px); transition: all 0.25s; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
     }
-    .wd-menu-item:hover .wd-dropdown,
-    .wd-menu-item.open .wd-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
-    
+    .wd-menu-item:hover .wd-dropdown, .wd-menu-item.open .wd-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
     .wd-dropdown li a {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: rgba(255,255,255,0.65);
-      text-decoration: none;
-      padding: 11px 20px;
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 11px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
+      display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.65); text-decoration: none;
+      padding: 11px 20px; font-family: 'Josefin Sans', sans-serif; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
     }
     .wd-dropdown li a i { color: #c89b2c; width: 16px; }
-
-    .wd-nav-right {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-shrink: 0;
-    }
-
+    .wd-nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
     .wd-icon-btn {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.07);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(255,255,255,0.8);
-      text-decoration: none;
-      font-size: 15px;
-      transition: all 0.25s;
+      width: 40px; height: 40px; border-radius: 10px; background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: all 0.25s;
     }
-
     .wd-hamburger {
-      display: none;
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      flex-direction: column;
-      gap: 5px;
+      display: none; width: 40px; height: 40px; border-radius: 10px; background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08); align-items: center; justify-content: center; cursor: pointer;
+      flex-direction: column; gap: 5px;
     }
-    .wd-bar {
-      width: 20px;
-      height: 2px;
-      background: #fff;
-      border-radius: 2px;
-      transition: all 0.35s;
-    }
+    .wd-bar { width: 20px; height: 2px; background: #fff; border-radius: 2px; transition: all 0.35s; }
     .wd-bar:nth-child(2) { width: 14px; }
-
     .wd-mobile {
-      position: fixed;
-      top: 76px;
-      right: -100%;
-      width: 100%;
-      max-width: 360px;
-      height: calc(100vh - 76px);
-      background: #070409;
-      border-left: 1px solid rgba(200,155,44,0.2);
-      z-index: 9998;
-      transition: right 0.35s;
-      overflow-y: auto;
-      padding: 24px 0 48px;
+      position: fixed; top: 76px; right: -100%; width: 100%; max-width: 360px; height: calc(100vh - 76px);
+      background: #070409; border-left: 1px solid rgba(200,155,44,0.2); z-index: 9998;
+      transition: right 0.35s; overflow-y: auto; padding: 24px 0 48px;
     }
     .wd-mobile.open { right: 0; }
-    
     .wd-overlay {
-      position: fixed;
-      inset: 0;
-      top: 76px;
-      background: rgba(0,0,0,0.55);
-      z-index: 9997;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s;
-      backdrop-filter: blur(4px);
+      position: fixed; inset: 0; top: 76px; background: rgba(0,0,0,0.55); z-index: 9997;
+      opacity: 0; pointer-events: none; transition: opacity 0.3s; backdrop-filter: blur(4px);
     }
     .wd-overlay.open { opacity: 1; pointer-events: auto; }
-
     @media (min-width: 901px) { .wd-hamburger { display: none; } }
-    @media (max-width: 900px) {
-      .wd-menu { display: none; }
-      .wd-hamburger { display: flex; }
-    }
-    @media (max-width: 768px) {
-      .wd-nav-inner { padding: 0 24px; }
-      .wd-logo img { width: 160px; }
-    }
-    @media (max-width: 576px) {
-      .wd-nav-inner { padding: 0 16px; }
-      .wd-logo img { width: 140px; }
-      .wd-icon-btn, .wd-hamburger { width: 36px; height: 36px; }
-    }
+    @media (max-width: 900px) { .wd-menu { display: none; } .wd-hamburger { display: flex; } }
+    @media (max-width: 768px) { .wd-nav-inner { padding: 0 24px; } .wd-logo img { width: 160px; } }
+    @media (max-width: 576px) { .wd-nav-inner { padding: 0 16px; } .wd-logo img { width: 140px; } .wd-icon-btn, .wd-hamburger { width: 36px; height: 36px; } }
 
     /* =========================================================
-       PRIVACY POLICY PAGE STYLES
+       PRIVACY POLICY — PREMIUM LAYOUT
     ========================================================= */
-    .privacy-page {
-      padding: 80px 0 100px;
-      min-height: calc(100vh - 76px);
+    .privacy-page { position: relative; padding: 90px 0 110px; min-height: calc(100vh - 76px); }
+
+    .container-custom { max-width: 1280px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 2; }
+
+    .page-grid {
+      display: grid;
+      grid-template-columns: 260px minmax(0,1fr);
+      gap: 56px;
+      align-items: start;
     }
 
-    .container-custom {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 40px;
-    }
+    /* ── HERO / HEADER with wax-seal signature ── */
+    .privacy-header { text-align: center; margin-bottom: 34px; grid-column: 1 / -1; }
 
-    /* Gold divider */
-    .gold-divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 30px;
+    .seal-wrap { display:flex; justify-content:center; margin-bottom: 22px; }
+    .seal {
+      width: 84px; height: 84px; border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, var(--gold-light), var(--gold) 55%, #8a6a1c 100%);
+      display:flex; align-items:center; justify-content:center;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(200,155,44,0.35), inset 0 -6px 12px rgba(0,0,0,0.25), inset 0 4px 8px rgba(255,255,255,0.25);
+      animation: sealIn 0.9s cubic-bezier(.2,.9,.3,1.1) both;
     }
-    .gold-divider::before,
-    .gold-divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    .seal::before {
+      content:''; position:absolute; inset:-7px; border-radius:50%;
+      border: 1px dashed rgba(200,155,44,0.5);
+      animation: sealRotate 40s linear infinite;
     }
-    .divider-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--gold);
-      margin: 0 12px;
+    .seal-monogram {
+      font-family:'Cormorant Garamond', serif; font-style: italic; font-weight:700;
+      font-size: 26px; color: #1c1409; letter-spacing: 1px;
     }
+    @keyframes sealIn { from { opacity:0; transform: scale(0.4) rotate(-25deg);} to { opacity:1; transform: scale(1) rotate(0deg);} }
+    @keyframes sealRotate { to { transform: rotate(360deg); } }
 
-    /* Section header */
-    .privacy-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
     .privacy-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 14px;
+      display: inline-flex; align-items: center; gap: 8px; font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 14px;
     }
-    .privacy-eyebrow::before,
-    .privacy-eyebrow::after {
-      content: '';
-      width: 28px;
-      height: 1px;
-      background: var(--gold);
-      opacity: 0.6;
-    }
+    .privacy-eyebrow::before, .privacy-eyebrow::after { content:''; width:28px; height:1px; background: var(--gold); opacity:0.6; }
     .privacy-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(36px, 6vw, 56px);
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: 2px;
-      margin-bottom: 16px;
+      font-family: 'Cormorant Garamond', serif; font-size: clamp(38px, 6.2vw, 60px); font-weight: 700;
+      color: var(--white); letter-spacing: 2px; margin-bottom: 14px;
     }
-    .privacy-subtitle {
-      color: var(--white-light);
-      font-size: 14px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
+    .privacy-title em { color: var(--gold); font-style: italic; }
+    .privacy-subtitle { color: var(--white-light); font-size: 14.5px; max-width: 600px; margin: 0 auto; line-height:1.8; }
 
-    /* Last updated badge */
-    .last-updated-badge {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+    .last-updated-badge { text-align: center; margin: 22px 0 6px; }
     .update-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(200,155,44,0.12);
-      border: 1px solid rgba(200,155,44,0.25);
-      border-radius: 50px;
-      padding: 8px 24px;
-      font-size: 12px;
-      color: var(--gold);
+      display: inline-flex; align-items: center; gap: 8px; background: rgba(200,155,44,0.12);
+      border: 1px solid rgba(200,155,44,0.25); border-radius: 50px; padding: 8px 24px; font-size: 12px; color: var(--gold);
     }
 
-    /* Privacy cards grid */
-    .privacy-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
+    .ornament-divider { display:flex; align-items:center; justify-content:center; gap:14px; margin: 34px 0 0; }
+    .ornament-divider .line { width: 70px; height:1px; background: linear-gradient(90deg, transparent, var(--gold)); }
+    .ornament-divider .line.r { background: linear-gradient(90deg, var(--gold), transparent); }
+    .ornament-divider i { color: var(--gold); font-size: 12px; opacity: .8; }
+
+    /* ── STICKY TABLE OF CONTENTS (desktop) ── */
+    .toc {
+      position: sticky; top: 106px;
+      border: 1px solid var(--border-gold);
+      background: var(--dark-card);
+      border-radius: 16px;
+      padding: 22px 20px;
     }
+    .toc-title {
+      font-family:'Cormorant Garamond', serif; font-style: italic; color: var(--gold);
+      font-size: 15px; letter-spacing: 1px; margin-bottom: 14px; padding-bottom: 10px;
+      border-bottom: 1px solid rgba(200,155,44,0.15);
+    }
+    .toc-list { list-style: none; display:flex; flex-direction:column; gap: 2px; }
+    .toc-list a {
+      display:flex; align-items:baseline; gap:10px; text-decoration:none;
+      color: rgba(255,255,255,0.5); font-size: 12px; letter-spacing:.4px;
+      padding: 9px 8px; border-radius: 8px; transition: color .2s, background .2s;
+      font-family:'Josefin Sans', sans-serif;
+    }
+    .toc-list a .num { font-family:'Cormorant Garamond', serif; color: var(--gold); font-size: 12px; font-style: italic; flex-shrink:0; }
+    .toc-list a:hover { color: var(--white); background: rgba(200,155,44,0.06); }
+    .toc-list a.active { color: var(--gold-light); background: rgba(200,155,44,0.1); }
+    @media (max-width: 992px) { .toc { display:none; } .page-grid { grid-template-columns: 1fr; } }
+
+    /* ── PRIVACY CARDS (covenant / decree styling) ── */
+    .privacy-grid { display: flex; flex-direction: column; gap: 22px; }
+
     .privacy-card {
       background: var(--dark-card);
       border: 1px solid var(--border-gold);
-      border-radius: 20px;
+      border-radius: 18px;
       overflow: hidden;
-      transition: all 0.3s;
+      position: relative;
+      transition: border-color .3s, box-shadow .3s, transform .3s;
+      opacity: 0; transform: translateY(22px);
     }
-    .privacy-card:hover {
-      border-color: rgba(200,155,44,0.4);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-      transform: translateY(-2px);
+    .privacy-card.reveal { animation: cardIn .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    @keyframes cardIn { to { opacity:1; transform: translateY(0); } }
+
+    /* ornamental corner ticks */
+    .privacy-card::before, .privacy-card::after {
+      content:''; position:absolute; width:16px; height:16px; border: 1.5px solid var(--gold);
+      opacity: 0; transition: opacity .3s; pointer-events:none;
     }
+    .privacy-card::before { top:8px; left:8px; border-right:none; border-bottom:none; }
+    .privacy-card::after  { bottom:8px; right:8px; border-left:none; border-top:none; }
+    .privacy-card:hover { border-color: rgba(200,155,44,0.45); box-shadow: 0 16px 36px rgba(0,0,0,0.45); transform: translateY(-2px); }
+    .privacy-card:hover::before, .privacy-card:hover::after { opacity: .8; }
+
     .privacy-card-header {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 24px 32px;
-      background: rgba(200,155,44,0.04);
-      border-bottom: 1px solid rgba(200,155,44,0.1);
-      cursor: pointer;
+      display: flex; align-items: center; gap: 18px; padding: 24px 30px;
+      background: rgba(200,155,44,0.035); border-bottom: 1px solid rgba(200,155,44,0.1); cursor: pointer;
+    }
+    .privacy-roman {
+      flex-shrink:0; width: 46px; height:46px; border-radius:50%;
+      border: 1px solid rgba(200,155,44,0.5);
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:700;
+      color: var(--gold); font-size:15px;
+      background: linear-gradient(135deg, rgba(200,155,44,0.12), transparent);
     }
     .privacy-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
+      width: 46px; height: 46px; border-radius: 50%;
       background: linear-gradient(135deg, rgba(200,155,44,0.15), rgba(200,155,44,0.05));
-      border: 1px solid var(--gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      color: var(--gold);
+      border: 1px solid var(--gold); display: flex; align-items: center; justify-content: center;
+      font-size: 18px; color: var(--gold); flex-shrink:0;
     }
     .privacy-card-title {
-      flex: 1;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 22px;
-      font-weight: 600;
-      color: var(--white);
-      letter-spacing: 1px;
+      flex: 1; font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 600;
+      color: var(--white); letter-spacing: .6px;
     }
-    .privacy-toggle {
-      color: var(--gold);
-      font-size: 14px;
-      transition: transform 0.3s;
-    }
-    .privacy-card.open .privacy-toggle {
-      transform: rotate(180deg);
-    }
+    .privacy-toggle { color: var(--gold); font-size: 13px; transition: transform 0.35s; }
+    .privacy-card.open .privacy-toggle { transform: rotate(180deg); }
     .privacy-card-body {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      padding: 0 32px;
+      max-height: 0; overflow: hidden; transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1); padding: 0 30px;
     }
-    .privacy-card.open .privacy-card-body {
-      max-height: 800px;
-      padding: 24px 32px 28px;
-    }
-    .privacy-card-body p {
-      margin-bottom: 16px;
-      line-height: 1.7;
-      font-size: 15px;
-      color: var(--white-light);
-    }
-    .privacy-card-body p:last-child {
-      margin-bottom: 0;
-    }
-    .privacy-card-body ul, .privacy-card-body ol {
-      margin: 12px 0 16px 24px;
-    }
-    .privacy-card-body li {
-      margin: 8px 0;
-      line-height: 1.6;
-    }
-    .highlight {
-      color: var(--gold);
-      font-weight: 500;
-    }
+    .privacy-card.open .privacy-card-body { max-height: 900px; padding: 22px 30px 28px; }
+    .privacy-card-body p { margin-bottom: 15px; line-height: 1.75; font-size: 14.5px; color: var(--ink); }
+    .privacy-card-body p:last-child { margin-bottom: 0; }
+    .privacy-card-body ul, .privacy-card-body ol { margin: 10px 0 16px 22px; }
+    .privacy-card-body li { margin: 9px 0; line-height: 1.65; font-size: 14.5px; color: var(--ink); }
+    .highlight { color: var(--gold); font-weight: 500; }
     .data-badge {
-      display: inline-block;
-      background: rgba(185,59,86,0.15);
-      border: 1px solid rgba(185,59,86,0.3);
-      border-radius: 6px;
-      padding: 4px 12px;
-      font-size: 12px;
-      color: var(--rose);
-      margin-right: 8px;
-      margin-bottom: 8px;
+      display: inline-flex; align-items:center; gap:6px; background: rgba(185,59,86,0.13);
+      border: 1px solid rgba(185,59,86,0.3); border-radius: 8px; padding: 5px 13px;
+      font-size: 11.5px; color: #e0899a; margin-right: 8px; margin-bottom: 8px;
     }
 
-    /* Rights section */
+    /* ── RIGHTS / CONTACT CARD ── */
     .rights-card {
-      margin-top: 48px;
-      background: linear-gradient(135deg, rgba(200,155,44,0.08), rgba(15,10,14,0.95));
+      margin-top: 50px;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(200,155,44,0.1), transparent 55%),
+        linear-gradient(135deg, rgba(200,155,44,0.06), rgba(15,10,14,0.97));
       border: 1px solid rgba(200,155,44,0.3);
-      border-radius: 24px;
-      padding: 36px 32px;
-      text-align: center;
+      border-radius: 22px; padding: 40px 32px; text-align: center; position: relative; overflow:hidden;
     }
     .rights-card .icon {
-      font-size: 42px;
-      color: var(--gold);
-      margin-bottom: 16px;
+      width: 60px; height:60px; border-radius:50%; margin: 0 auto 18px;
+      display:flex; align-items:center; justify-content:center;
+      border: 1px solid var(--gold); font-size: 22px; color: var(--gold);
+      background: rgba(200,155,44,0.08);
     }
-    .rights-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 28px;
-      color: var(--white);
-      margin-bottom: 12px;
-    }
-    .rights-card p {
-      color: var(--white-light);
-      margin-bottom: 20px;
-    }
+    .rights-card h3 { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 27px; color: var(--white); margin-bottom: 12px; }
+    .rights-card p { color: var(--white-light); margin-bottom: 22px; max-width: 480px; margin-inline:auto; font-size:14px; line-height:1.7; }
     .contact-email-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--rose);
-      color: white;
-      text-decoration: none;
-      padding: 12px 28px;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: all 0.3s;
+      display: inline-flex; align-items: center; gap: 10px; background: var(--rose); color: white;
+      text-decoration: none; padding: 13px 30px; border-radius: 50px; font-weight: 600; font-size:13px;
+      letter-spacing:.5px; transition: all 0.3s; box-shadow: 0 10px 26px rgba(185,59,86,0.3);
     }
-    .contact-email-btn:hover {
-      background: var(--rose-hover);
-      transform: translateY(-2px);
-      color: white;
-    }
+    .contact-email-btn:hover { background: var(--rose-hover); transform: translateY(-2px); color: white; box-shadow: 0 14px 34px rgba(185,59,86,0.42); }
 
-    /* Footer mini */
-    .footer-mini {
-      padding: 30px 0;
-      text-align: center;
-      border-top: 1px solid rgba(200,155,44,0.15);
-      margin-top: 20px;
+    .footer-mini { padding: 30px 0; text-align: center; border-top: 1px solid rgba(200,155,44,0.15); margin-top: 20px; }
+    .footer-mini p { font-size: 12px; color: rgba(255,255,255,0.4); }
+
+    /* Back to top */
+    .back-top {
+      position: fixed; right: 26px; bottom: 26px; z-index: 50;
+      width: 46px; height: 46px; border-radius: 50%;
+      background: var(--dark-card); border: 1px solid var(--border-gold);
+      color: var(--gold); display:flex; align-items:center; justify-content:center;
+      opacity:0; pointer-events:none; transform: translateY(10px);
+      transition: opacity .3s, transform .3s, border-color .3s;
+      text-decoration:none; font-size:15px;
     }
-    .footer-mini p {
-      font-size: 12px;
-      color: rgba(255,255,255,0.4);
-    }
+    .back-top.show { opacity:1; pointer-events:auto; transform: translateY(0); }
+    .back-top:hover { border-color: rgba(200,155,44,0.6); color: var(--gold-light); }
 
     @media (max-width: 768px) {
-      .container-custom { padding: 0 24px; }
-      .privacy-card-header { padding: 18px 20px; }
-      .privacy-card-title { font-size: 18px; }
-      .privacy-icon { width: 42px; height: 42px; font-size: 18px; }
-      .rights-card { padding: 28px 20px; }
+      .container-custom { padding: 0 22px; }
+      .privacy-card-header { padding: 18px 18px; gap: 12px; }
+      .privacy-card-title { font-size: 17px; }
+      .privacy-roman, .privacy-icon { width: 38px; height: 38px; font-size: 14px; }
+      .rights-card { padding: 30px 20px; }
     }
+
+    /* =========================================================
+       CONTACT PRIVACY TEAM — MODAL FORM (working, sends to Gmail)
+    ========================================================= */
+    .pv-modal-overlay {
+      position: fixed; inset: 0; z-index: 10000;
+      background: rgba(0,0,0,0.72); backdrop-filter: blur(6px);
+      display: flex; align-items: center; justify-content: center;
+      padding: 20px;
+      opacity: 0; visibility: hidden; pointer-events: none;
+      transition: opacity .35s ease, visibility .35s ease;
+    }
+    .pv-modal-overlay.open { opacity: 1; visibility: visible; pointer-events: auto; }
+
+    .pv-modal {
+      width: 100%; max-width: 460px;
+      background: var(--dark-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 20px;
+      padding: 34px 30px;
+      position: relative;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+      transform: translateY(24px) scale(0.97);
+      transition: transform .4s cubic-bezier(.2,.8,.3,1.05);
+    }
+    .pv-modal-overlay.open .pv-modal { transform: translateY(0) scale(1); }
+
+    .pv-modal-close {
+      position: absolute; top: 16px; right: 16px;
+      width: 34px; height: 34px; border-radius: 50%;
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.6); display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 13px; transition: all .25s;
+    }
+    .pv-modal-close:hover { background: rgba(185,59,86,0.15); border-color: rgba(185,59,86,0.4); color: var(--rose); }
+
+    .pv-modal-icon {
+      width: 52px; height: 52px; border-radius: 50%; margin-bottom: 16px;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--gold); color: var(--gold); font-size: 20px;
+      background: rgba(200,155,44,0.08);
+    }
+    .pv-modal h4 {
+      font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--white);
+      font-size: 24px; margin-bottom: 6px;
+    }
+    .pv-modal-sub { font-size: 12.5px; color: rgba(255,255,255,0.45); margin-bottom: 24px; line-height: 1.6; }
+
+    .pv-label {
+      font-size: 10.5px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+      color: rgba(255,255,255,0.5); margin-bottom: 7px; display: block;
+    }
+    .pv-input, .pv-textarea {
+      width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(200,155,44,0.22);
+      border-radius: 9px; color: #fff; font-size: 13.5px; font-family: 'Jost', sans-serif;
+      padding: 12px 15px; margin-bottom: 16px; transition: border-color .3s, box-shadow .3s;
+    }
+    .pv-input::placeholder, .pv-textarea::placeholder { color: rgba(255,255,255,0.22); }
+    .pv-input:focus, .pv-textarea:focus {
+      outline: none; border-color: rgba(200,155,44,0.55); box-shadow: 0 0 0 3px rgba(200,155,44,0.08);
+    }
+    .pv-textarea { resize: vertical; min-height: 100px; }
+
+    .pv-field-error {
+      color: var(--rose); font-size: 11px; margin: -11px 0 14px; letter-spacing: .3px;
+      animation: pvFadeIn .3s ease;
+    }
+    @keyframes pvFadeIn { from { opacity:0; transform: translateY(-4px);} to { opacity:1; transform:translateY(0);} }
+    .pv-shake { animation: pvShake .4s ease; }
+    @keyframes pvShake {
+      0%,100% { transform: translateX(0); } 20% { transform: translateX(-6px); }
+      40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(4px); }
+    }
+
+    .pv-submit-btn {
+      width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;
+      background: linear-gradient(135deg, var(--rose) 0%, #8a1f34 100%);
+      color: #fff; border: none; border-radius: 9px; padding: 14px;
+      font-size: 12.5px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+      font-family: 'Jost', sans-serif; cursor: pointer;
+      transition: transform .25s, box-shadow .25s;
+      box-shadow: 0 10px 28px rgba(185,59,86,0.3);
+    }
+    .pv-submit-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(185,59,86,0.42); }
+    .pv-submit-btn.is-loading { animation: pvPulse 1.1s ease-in-out infinite; pointer-events: none; opacity: .85; }
+    @keyframes pvPulse {
+      0%,100% { box-shadow: 0 10px 28px rgba(185,59,86,0.3); }
+      50%     { box-shadow: 0 10px 40px rgba(185,59,86,0.55); }
+    }
+
+    /* Toast (English, animated) */
+    .wd-toast {
+      position: fixed; bottom: 28px; right: 28px; z-index: 10001;
+      background: rgba(8,6,8,0.97); border: 1px solid rgba(200,155,44,0.4);
+      border-radius: 12px; padding: 18px 22px; display: flex; align-items: flex-start; gap: 14px;
+      min-width: 290px; max-width: 380px;
+      visibility: hidden; pointer-events: none; opacity: 0; transform: translateY(20px);
+      transition: opacity .4s ease, transform .4s cubic-bezier(.34,1.56,.64,1), visibility .4s ease;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    }
+    .wd-toast.show { visibility: visible; pointer-events: auto; opacity: 1; transform: translateY(0); }
+    .wd-toast-icon { font-size: 21px; flex-shrink: 0; margin-top: 1px; }
+    .wd-toast-icon.success { color: #4caf50; }
+    .wd-toast-icon.error { color: var(--rose); }
+    .wd-toast-title { font-size: 13.5px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .wd-toast-msg { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+
+    /* Loading overlay for the form */
+    .pv-loading {
+      display: none; position: fixed; inset: 0; z-index: 10002;
+      background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);
+      align-items: center; justify-content: center; flex-direction: column; gap: 14px;
+    }
+    .pv-loading.active { display: flex; }
+    .pv-spinner {
+      width: 44px; height: 44px; border-radius: 50%;
+      border: 3px solid rgba(200,155,44,0.18); border-top-color: var(--gold);
+      animation: pvSpin .8s linear infinite;
+    }
+    @keyframes pvSpin { to { transform: rotate(360deg); } }
+    .pv-loading p { color: rgba(255,255,255,0.55); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
   </style>
 </head>
 <body>
 
-<!-- ================= NAVEBAR ================= -->
- <div id="nav-container"></div>
+<div class="grain"></div>
 
+<!-- ================= NAVEBAR ================= -->
+<div id="nav-container"></div>
 
 <!-- ========== PRIVACY POLICY MAIN CONTENT ========== -->
 <main class="privacy-page">
   <div class="container-custom">
-    
 
-    <!-- Header -->
-    <div class="privacy-header">
-      <div class="privacy-eyebrow">Your Privacy Matters</div>
-      <h1 class="privacy-title">Privacy Policy</h1>
-      <p class="privacy-subtitle">How we collect, use, and protect your personal information to create magical wedding experiences.</p>
-    </div>
+    <div class="page-grid">
 
-    <!-- Last Updated -->
-    <div class="last-updated-badge">
-      <span class="update-badge"><i class="fa-regular fa-calendar-alt"></i> Last Updated: June 04, 2026</span>
-    </div>
-
-    <!-- Privacy Accordion Cards -->
-    <div class="privacy-grid">
-      
-      <div class="privacy-card">
-        <div class="privacy-card-header">
-          <div class="privacy-icon"><i class="fa-regular fa-circle-info"></i></div>
-          <div class="privacy-card-title">Information We Collect</div>
-          <i class="fa-solid fa-chevron-down privacy-toggle"></i>
+      <!-- Header -->
+      <div class="privacy-header">
+        <div class="seal-wrap">
+          <div class="seal"><span class="seal-monogram">WD</span></div>
         </div>
-        <div class="privacy-card-body">
-          <p>WedDream collects information to provide better services to all our users. We collect:</p>
-          <ul>
-            <li><span class="highlight">Personal Information:</span> Name, email address, phone number, wedding date, and location when you register or book services.</li>
-            <li><span class="highlight">Payment Information:</span> Billing details, transaction history (processed securely via third-party payment gateways).</li>
-            <li><span class="highlight">Usage Data:</span> How you interact with our Platform, pages visited, features used, and time spent.</li>
-            <li><span class="highlight">Device Information:</span> IP address, browser type, device model, and operating system.</li>
-          </ul>
-          <p>We never collect sensitive data like government IDs or health information unless explicitly provided by you for special accommodations.</p>
+        <div class="privacy-eyebrow">A Covenant of Trust</div>
+        <h1 class="privacy-title">Privacy <em>Policy</em></h1>
+        <p class="privacy-subtitle">How we collect, use, and protect your personal information to create magical wedding experiences.</p>
+
+        <div class="last-updated-badge">
+          <span class="update-badge"><i class="fa-solid fa-calendar"></i> Last Updated: June 04, 2026</span>
+        </div>
+
+        <div class="ornament-divider">
+          <div class="line"></div>
+          <i class="fa-solid fa-gem"></i>
+          <div class="line r"></div>
         </div>
       </div>
 
-      <div class="privacy-card">
-        <div class="privacy-card-header">
-          <div class="privacy-icon"><i class="fa-regular fa-chart-line"></i></div>
-          <div class="privacy-card-title">How We Use Your Information</div>
-          <i class="fa-solid fa-chevron-down privacy-toggle"></i>
-        </div>
-        <div class="privacy-card-body">
-          <p>Your information helps us create unforgettable wedding experiences:</p>
-          <ul>
-            <li>✓ Connect you with trusted wedding vendors and planners</li>
-            <li>✓ Personalize your AI planning assistant recommendations</li>
-            <li>✓ Process bookings, payments, and confirmations</li>
-            <li>✓ Send wedding inspiration, offers, and important updates</li>
-            <li>✓ Improve our Platform performance and user experience</li>
-            <li>✓ Prevent fraud and ensure security of transactions</li>
-          </ul>
-          <p>We may also use anonymized data for analytics and marketing research to better serve our community.</p>
-        </div>
-      </div>
+      <!-- Sticky Table of Contents -->
+      <aside class="toc">
+        <div class="toc-title">Within This Policy</div>
+        <ul class="toc-list" id="tocList">
+          <li><a href="#sec-1"><span class="num">I</span> Information We Collect</a></li>
+          <li><a href="#sec-2"><span class="num">II</span> How We Use It</a></li>
+          <li><a href="#sec-3"><span class="num">III</span> Data Protection</a></li>
+          <li><a href="#sec-4"><span class="num">IV</span> Cookies &amp; Tracking</a></li>
+          <li><a href="#sec-5"><span class="num">V</span> Sharing &amp; Disclosure</a></li>
+          <li><a href="#sec-6"><span class="num">VI</span> Your Rights</a></li>
+          <li><a href="#sec-7"><span class="num">VII</span> Children's Privacy</a></li>
+          <li><a href="#sec-8"><span class="num">VIII</span> International Transfers</a></li>
+        </ul>
+      </aside>
 
-      <div class="privacy-card">
-        <div class="privacy-card-header">
-          <div class="privacy-icon"><i class="fa-regular fa-shield-haltered"></i></div>
-          <div class="privacy-card-title">Data Protection & Security</div>
-          <i class="fa-solid fa-chevron-down privacy-toggle"></i>
-        </div>
-        <div class="privacy-card-body">
-          <p>Your trust is our priority. We implement industry-standard security measures:</p>
-          <ul>
-            <li><span class="highlight">256-bit SSL Encryption</span> for all data transmission</li>
-            <li>Regular security audits and vulnerability assessments</li>
-            <li>Secure data centers with restricted access</li>
-            <li>Automated backup systems to prevent data loss</li>
-          </ul>
-          <p>However, no method of transmission over the Internet is 100% secure. While we strive to protect your data, we cannot guarantee absolute security. You are responsible for keeping your account credentials confidential.</p>
-          <div style="margin-top: 12px;">
-            <span class="data-badge"><i class="fa-regular fa-lock"></i> Encrypted Storage</span>
-            <span class="data-badge"><i class="fa-regular fa-server"></i> Secure Servers</span>
-            <span class="data-badge"><i class="fa-regular fa-key"></i> Access Control</span>
+      <!-- Privacy Accordion Cards -->
+      <div>
+        <div class="privacy-grid">
+
+          <div class="privacy-card" id="sec-1">
+            <div class="privacy-card-header">
+              <div class="privacy-roman">I</div>
+              <div class="privacy-card-title">Information We Collect</div>
+              <i class="fa-solid fa-chevron-down privacy-toggle"></i>
+            </div>
+            <div class="privacy-card-body">
+              <p>WedDream collects information to provide better services to all our users. We collect:</p>
+              <ul>
+                <li><span class="highlight">Personal Information:</span> Name, email address, phone number, wedding date, and location when you register or book services.</li>
+                <li><span class="highlight">Payment Information:</span> Billing details, transaction history (processed securely via third-party payment gateways).</li>
+                <li><span class="highlight">Usage Data:</span> How you interact with our Platform, pages visited, features used, and time spent.</li>
+                <li><span class="highlight">Device Information:</span> IP address, browser type, device model, and operating system.</li>
+              </ul>
+              <p>We never collect sensitive data like government IDs or health information unless explicitly provided by you for special accommodations.</p>
+            </div>
           </div>
+
+          <div class="privacy-card" id="sec-2">
+            <div class="privacy-card-header">
+              <div class="privacy-roman">II</div>
+              <div class="privacy-card-title">How We Use Your Information</div>
+              <i class="fa-solid fa-chevron-down privacy-toggle"></i>
+            </div>
+            <div class="privacy-card-body">
+              <p>Your information helps us create unforgettable wedding experiences:</p>
+              <ul>
+                <li>Connect you with trusted wedding vendors and planners</li>
+                <li>Personalize your AI planning assistant recommendations</li>
+                <li>Process bookings, payments, and confirmations</li>
+                <li>Send wedding inspiration, offers, and important updates</li>
+                <li>Improve our Platform performance and user experience</li>
+                <li>Prevent fraud and ensure security of transactions</li>
+              </ul>
+              <p>We may also use anonymized data for analytics and marketing research to better serve our community.</p>
+            </div>
+          </div>
+
+          <div class="privacy-card" id="sec-3">
+            <div class="privacy-card-header">
+              <div class="privacy-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="privacy-card-title">Data Protection &amp; Security</div>
+              <i class="fa-solid fa-chevron-down privacy-toggle"></i>
+            </div>
+            <div class="privacy-card-body">
+              <p>Your trust is our priority. We implement industry-standard security measures:</p>
+              <ul>
+                <li><span class="highlight">256-bit SSL Encryption</span> for all data transmission</li>
+                <li>Regular security audits and vulnerability assessments</li>
+                <li>Secure data centers with restricted access</li>
+                <li>Automated backup systems to prevent data loss</li>
+              </ul>
+              <p>However, no method of transmission over the Internet is 100% secure. While we strive to protect your data, we cannot guarantee absolute security. You are responsible for keeping your account credentials confidential.</p>
+              <div style="margin-top: 12px;">
+                <span class="data-badge"><i class="fa-solid fa-lock"></i> Encrypted Storage</span>
+                <span class="data-badge"><i class="fa-solid fa-server"></i> Secure Servers</span>
+                <span class="data-badge"><i class="fa-solid fa-key"></i> Access Control</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="privacy-card" id="sec-4">
+            <div class="privacy-card-header">
+              <div class="privacy-icon"><i class="fa-solid fa-cookie-bite"></i></div>
+              <div class="privacy-card-title">Cookies &amp; Tracking Technologies</div>
+              <i class="fa-solid fa-chevron-down privacy-toggle"></i>
+            </div>
+            <div class="privacy-card-body">
+              <p>We use cookies and similar technologies to enhance your experience:</p>
+              <ul>
+                <li><span class="highlight">Essential Cookies:</span> Required for login, bookings, and core functionality</li>
+                <li><span class="highlight">Preference Cookies:</span> Remember your language and display preferences</li>
+                <li><span class="highlight">Analytics Cookies:</span> Help us understand how users interact with our Platform</li>
+                <li><span class="highlight">Marketing Cookies:</span> Deliver relevant wedding inspiration and offers</li>
+              </ul>
+              <p>You can manage cookie preferences through your browser settings. However, disabling essential cookies may affect Platform functionality. We do not use cookies to track you across unrelated websites.</p>
+            </div>
+          </div>
+
+          <div class="privacy-card" id="sec-5">
+            <div class="privacy-card-header">
+              <div class="privacy-icon"><i class="fa-solid fa-share-nodes"></i></div>
+              <div class="privacy-card-title">Information Sharing &amp; Disclosure</div>
+              <i class="fa-solid fa-chevron-down privacy-toggle"></i>
+            </div>
+            <div class="privacy-card-body">
+              <p>We respect your privacy. We only share your information in these circumstances:</p>
+              <ul>
+                <li><span class="highlight">With Vendors:</span> When you book services, necessary details are shared with selected vendors</li>
+                <li><span class="highlight">Service Providers:</span> Trusted partners who help us operate (payment processors, hosting, analytics)</li>
+                <li><span class="highlight">Legal Requirements:</span> If required by law or to protect rights and safety</li>
+                <li><span class="highlight">Business Transfers:</span> In case of merger or acquisition, with notice to users</li>
+              </ul>
+              <p>We <strong>never sell</strong> your personal information to third parties for marketing purposes. Any data shared is strictly for providing or improving our services.</p>
+            </div>
+          </div>
+
+          <div class="privacy-card" id="sec-6">
+            <div class="privacy-card-header">
+              <div class="privacy-icon"><i class="fa-solid fa-user-check"></i></div>
+              <div class="privacy-card-title">Your Rights &amp; Choices</div>
+              <i class="fa-solid fa-chevron-down privacy-toggle"></i>
+            </div>
+            <div class="privacy-card-body">
+              <p>Depending on your location, you may have the following rights:</p>
+              <ul>
+                <li><span class="highlight">Access:</span> Request a copy of your personal data</li>
+                <li><span class="highlight">Correction:</span> Update inaccurate or incomplete information</li>
+                <li><span class="highlight">Deletion:</span> Request deletion of your account and data</li>
+                <li><span class="highlight">Opt-out:</span> Unsubscribe from marketing communications</li>
+                <li><span class="highlight">Data Portability:</span> Receive your data in a structured format</li>
+              </ul>
+              <p>To exercise these rights, contact us at <span class="highlight">privacy@weddream.com</span>. We will respond within 30 days. You may also update preferences directly in your account settings.</p>
+            </div>
+          </div>
+
+          <div class="privacy-card" id="sec-7">
+            <div class="privacy-card-header">
+              <div class="privacy-icon"><i class="fa-solid fa-child-reaching"></i></div>
+              <div class="privacy-card-title">Children's Privacy</div>
+              <i class="fa-solid fa-chevron-down privacy-toggle"></i>
+            </div>
+            <div class="privacy-card-body">
+              <p>WedDream is intended for users 18 years and older. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with data, please contact us immediately, and we will delete the information. Parents or legal guardians may manage wedding planning on behalf of minors.</p>
+            </div>
+          </div>
+
+          <div class="privacy-card" id="sec-8">
+            <div class="privacy-card-header">
+              <div class="privacy-icon"><i class="fa-solid fa-globe"></i></div>
+              <div class="privacy-card-title">International Data Transfers</div>
+              <i class="fa-solid fa-chevron-down privacy-toggle"></i>
+            </div>
+            <div class="privacy-card-body">
+              <p>Your information may be transferred to and processed in countries where our servers or service providers operate. We ensure appropriate safeguards are in place, such as standard contractual clauses approved by relevant authorities. By using WedDream, you consent to such transfers in accordance with this Privacy Policy.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Your Rights Contact Card -->
+        <div class="rights-card">
+          <div class="icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+          <h3>Questions About Your Privacy?</h3>
+          <p>Our Data Protection team is here to address any concerns about your personal information. We respond to all privacy inquiries within 48 hours.</p>
+          <button type="button" class="contact-email-btn" id="openPrivacyModal" style="border:none;cursor:pointer;">
+            <i class="fa-solid fa-envelope"></i> Contact Privacy Team
+          </button>
+        </div>
+
+        <div class="ornament-divider" style="margin: 44px 0 0;">
+          <div class="line"></div><i class="fa-solid fa-gem"></i><div class="line r"></div>
         </div>
       </div>
 
-      <div class="privacy-card">
-        <div class="privacy-card-header">
-          <div class="privacy-icon"><i class="fa-regular fa-cookie-bite"></i></div>
-          <div class="privacy-card-title">Cookies & Tracking Technologies</div>
-          <i class="fa-solid fa-chevron-down privacy-toggle"></i>
-        </div>
-        <div class="privacy-card-body">
-          <p>We use cookies and similar technologies to enhance your experience:</p>
-          <ul>
-            <li><span class="highlight">Essential Cookies:</span> Required for login, bookings, and core functionality</li>
-            <li><span class="highlight">Preference Cookies:</span> Remember your language and display preferences</li>
-            <li><span class="highlight">Analytics Cookies:</span> Help us understand how users interact with our Platform</li>
-            <li><span class="highlight">Marketing Cookies:</span> Deliver relevant wedding inspiration and offers</li>
-          </ul>
-          <p>You can manage cookie preferences through your browser settings. However, disabling essential cookies may affect Platform functionality. We do not use cookies to track you across unrelated websites.</p>
-        </div>
-      </div>
-
-      <div class="privacy-card">
-        <div class="privacy-card-header">
-          <div class="privacy-icon"><i class="fa-regular fa-share-nodes"></i></div>
-          <div class="privacy-card-title">Information Sharing & Disclosure</div>
-          <i class="fa-solid fa-chevron-down privacy-toggle"></i>
-        </div>
-        <div class="privacy-card-body">
-          <p>We respect your privacy. We only share your information in these circumstances:</p>
-          <ul>
-            <li><span class="highlight">With Vendors:</span> When you book services, necessary details are shared with selected vendors</li>
-            <li><span class="highlight">Service Providers:</span> Trusted partners who help us operate (payment processors, hosting, analytics)</li>
-            <li><span class="highlight">Legal Requirements:</span> If required by law or to protect rights and safety</li>
-            <li><span class="highlight">Business Transfers:</span> In case of merger or acquisition, with notice to users</li>
-          </ul>
-          <p>We <strong>never sell</strong> your personal information to third parties for marketing purposes. Any data shared is strictly for providing or improving our services.</p>
-        </div>
-      </div>
-
-      <div class="privacy-card">
-        <div class="privacy-card-header">
-          <div class="privacy-icon"><i class="fa-regular fa-user-check"></i></div>
-          <div class="privacy-card-title">Your Rights & Choices</div>
-          <i class="fa-solid fa-chevron-down privacy-toggle"></i>
-        </div>
-        <div class="privacy-card-body">
-          <p>Depending on your location, you may have the following rights:</p>
-          <ul>
-            <li><span class="highlight">Access:</span> Request a copy of your personal data</li>
-            <li><span class="highlight">Correction:</span> Update inaccurate or incomplete information</li>
-            <li><span class="highlight">Deletion:</span> Request deletion of your account and data</li>
-            <li><span class="highlight">Opt-out:</span> Unsubscribe from marketing communications</li>
-            <li><span class="highlight">Data Portability:</span> Receive your data in a structured format</li>
-          </ul>
-          <p>To exercise these rights, contact us at <span class="highlight">privacy@weddream.com</span>. We will respond within 30 days. You may also update preferences directly in your account settings.</p>
-        </div>
-      </div>
-
-      <div class="privacy-card">
-        <div class="privacy-card-header">
-          <div class="privacy-icon"><i class="fa-regular fa-children"></i></div>
-          <div class="privacy-card-title">Children's Privacy</div>
-          <i class="fa-solid fa-chevron-down privacy-toggle"></i>
-        </div>
-        <div class="privacy-card-body">
-          <p>WedDream is intended for users 18 years and older. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with data, please contact us immediately, and we will delete the information. Parents or legal guardians may manage wedding planning on behalf of minors.</p>
-        </div>
-      </div>
-
-      <div class="privacy-card">
-        <div class="privacy-card-header">
-          <div class="privacy-icon"><i class="fa-regular fa-globe"></i></div>
-          <div class="privacy-card-title">International Data Transfers</div>
-          <i class="fa-solid fa-chevron-down privacy-toggle"></i>
-        </div>
-        <div class="privacy-card-body">
-          <p>Your information may be transferred to and processed in countries where our servers or service providers operate. We ensure appropriate safeguards are in place, such as standard contractual clauses approved by relevant authorities. By using WedDream, you consent to such transfers in accordance with this Privacy Policy.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Your Rights Contact Card -->
-    <div class="rights-card">
-      <div class="icon"><i class="fa-regular fa-envelope-open-text"></i></div>
-      <h3>Questions About Your Privacy?</h3>
-      <p>Our Data Protection team is here to address any concerns about your personal information. We respond to all privacy inquiries within 48 hours.</p>
-      <a href="mailto:privacy@weddream.com" class="contact-email-btn"><i class="fa-regular fa-envelope"></i> Contact Privacy Team</a>
-    </div>
-
-    <div class="gold-divider" style="margin: 40px 0 20px;">
-      <div class="divider-dot"></div>
-    </div>
-
+    </div><!-- /page-grid -->
   </div>
 </main>
 
+<a href="#top" class="back-top" id="backTop"><i class="fa-solid fa-arrow-up"></i></a>
+
+<!-- ========== CONTACT PRIVACY TEAM — MODAL ========== -->
+<div class="pv-modal-overlay" id="pvModalOverlay">
+  <div class="pv-modal">
+    <div class="pv-modal-close" id="pvModalClose"><i class="fa-solid fa-xmark"></i></div>
+    <div class="pv-modal-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+    <h4>Contact Privacy Team</h4>
+    <p class="pv-modal-sub">Send us your question or concern and our Data Protection team will reply within 48 hours.</p>
+
+    <form id="pvForm" novalidate>
+      <label class="pv-label">Your Name <span style="color:var(--rose)">*</span></label>
+      <input type="text" class="pv-input" id="pv_name" placeholder="e.g. Ayesha Khan"/>
+
+      <label class="pv-label">Your Email <span style="color:var(--rose)">*</span></label>
+      <input type="email" class="pv-input" id="pv_email" placeholder="you@example.com"/>
+
+      <label class="pv-label">Your Message <span style="color:var(--rose)">*</span></label>
+      <textarea class="pv-textarea" id="pv_message" placeholder="Tell us your privacy question or concern…"></textarea>
+
+      <button type="submit" class="pv-submit-btn" id="pvSubmitBtn">
+        <i class="fa-solid fa-paper-plane"></i> Send to Privacy Team
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="wd-toast" id="wdToast">
+  <i class="wd-toast-icon fa-solid" id="toastIcon"></i>
+  <div>
+    <div class="wd-toast-title" id="toastTitle"></div>
+    <div class="wd-toast-msg" id="toastMsg"></div>
+  </div>
+</div>
+
+<!-- Loading overlay -->
+<div class="pv-loading" id="pvLoadingOverlay">
+  <div class="pv-spinner"></div>
+  <p>Sending message…</p>
+</div>
 
 <!-- ================= FOOTER ================= -->
- <div id="footer-container"></div>
+<div id="footer-container"></div>
 
-
-
- <!-- ========== SCRIPTS ========== -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- ========== SCRIPTS ========== -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <script>
 
-/* ================= NAVBAR LOAD ================= */
-
+/* ================= NAVBAR & FOOTER LOAD ================= */
 $(document).ready(function () {
-
-    // Navbar Load
-    $.get('navebar.html', function (data) {
-        $('#nav-container').html(data);
-    });
-
-    // Footer Load
-    $.get('footer.html', function (data) {
-        $('#footer-container').html(data);
-    });
-
+    $.get('navebar.html', function (data) { $('#nav-container').html(data); });
+    $.get('footer.html', function (data) { $('#footer-container').html(data); });
+    $('.privacy-card:first').addClass('open');
 });
 
+/* ================================================================
+   CONTACT PRIVACY TEAM — working form (EmailJS → Gmail)
+   Replace YOUR_EMAILJS_PUBLIC_KEY / YOUR_SERVICE_ID / YOUR_TEMPLATE_ID
+   with your real EmailJS credentials (emailjs.com — free tier works).
+   In your EmailJS template, set the "To Email" field to:
+   its.owaisansari314@gmail.com
+   ================================================================ */
+emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
+
+const PV_DESTINATION_EMAIL = "its.owaisansari314@gmail.com";
+
+const PV_REGEX = {
+  name:    /^[A-Za-z\s]{2,50}$/,
+  email:   /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+  message: /^(?=.*\S).{10,1000}$/
+};
+
+function pvShowToast(type, title, msg) {
+  const toast = document.getElementById('wdToast');
+  const icon  = document.getElementById('toastIcon');
+  document.getElementById('toastTitle').textContent = title;
+  document.getElementById('toastMsg').textContent   = msg;
+  icon.className = `wd-toast-icon fa-solid ${type === 'success' ? 'fa-circle-check success' : 'fa-circle-xmark error'}`;
+  toast.classList.remove('show');
+  void toast.offsetWidth;
+  toast.classList.add('show');
+  clearTimeout(pvShowToast._t);
+  pvShowToast._t = setTimeout(() => toast.classList.remove('show'), 5500);
+}
+
+function pvSetFieldError(inputEl, msg) {
+  let errorEl = inputEl.parentElement.querySelector('.pv-field-error');
+  if (!errorEl && msg) {
+    errorEl = document.createElement('div');
+    errorEl.className = 'pv-field-error';
+    inputEl.insertAdjacentElement('afterend', errorEl);
+  }
+  if (errorEl) errorEl.textContent = msg || '';
+  inputEl.style.borderColor = msg ? 'rgba(185,59,86,0.7)' : '';
+  if (msg) {
+    inputEl.classList.remove('pv-shake');
+    void inputEl.offsetWidth;
+    inputEl.classList.add('pv-shake');
+  }
+}
+
+function pvValidateField(id, regex, requiredMsg, invalidMsg) {
+  const el = document.getElementById(id);
+  const val = el.value.trim();
+  if (!val) { pvSetFieldError(el, requiredMsg); return false; }
+  if (!regex.test(val)) { pvSetFieldError(el, invalidMsg); return false; }
+  pvSetFieldError(el, '');
+  return true;
+}
+
+function pvValidateForm() {
+  const nameOk = pvValidateField('pv_name', PV_REGEX.name, 'Name is required.', 'Enter a valid name (letters only, 2-50 characters).');
+  const emailOk = pvValidateField('pv_email', PV_REGEX.email, 'Email is required.', 'Enter a valid email address, e.g. you@example.com');
+  const msgOk = pvValidateField('pv_message', PV_REGEX.message, 'Message is required.', 'Message must be at least 10 characters.');
+  return nameOk && emailOk && msgOk;
+}
+
+function pvOpenModal() {
+  document.getElementById('pvModalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function pvCloseModal() {
+  document.getElementById('pvModalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+$(document).on('click', '#openPrivacyModal', pvOpenModal);
+$(document).on('click', '#pvModalClose', pvCloseModal);
+$(document).on('click', '#pvModalOverlay', function (e) {
+  if (e.target === this) pvCloseModal();
+});
+$(document).on('keydown', function (e) {
+  if (e.key === 'Escape') pvCloseModal();
+});
+
+document.getElementById('pvForm').addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  if (!pvValidateForm()) {
+    pvShowToast('error', 'Invalid Input', 'Please check the highlighted fields and try again.');
+    return; // never proceeds to send on invalid/empty input
+  }
+
+  const name    = document.getElementById('pv_name').value.trim();
+  const email   = document.getElementById('pv_email').value.trim();
+  const message = document.getElementById('pv_message').value.trim();
+
+  const submitBtn = document.getElementById('pvSubmitBtn');
+  submitBtn.classList.add('is-loading');
+  document.getElementById('pvLoadingOverlay').classList.add('active');
+
+  try {
+    await emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+      to_email:   PV_DESTINATION_EMAIL,
+      from_name:  name,
+      from_email: email,
+      message:    message,
+      reply_to:   email,
+      sent_at:    new Date().toLocaleString('en-PK')
+    });
+
+    document.getElementById('pvLoadingOverlay').classList.remove('active');
+    submitBtn.classList.remove('is-loading');
+    pvShowToast('success', 'Message Sent!', 'Your message has been delivered. We will reply to ' + email + ' within 48 hours.');
+    document.getElementById('pvForm').reset();
+    document.querySelectorAll('.pv-field-error').forEach(el => el.textContent = '');
+    document.querySelectorAll('.pv-input, .pv-textarea').forEach(el => el.style.borderColor = '');
+    setTimeout(pvCloseModal, 1200);
+
+  } catch (err) {
+    document.getElementById('pvLoadingOverlay').classList.remove('active');
+    submitBtn.classList.remove('is-loading');
+    console.error('EmailJS error:', err);
+    pvShowToast('error', 'Send Failed', 'Something went wrong. Please try again or email us directly.');
+  }
+});
 
 /* ================= DROPDOWNS ================= */
-
-// Desktop Dropdown
 $(document).on('click', '.wd-drop-toggle', function (e) {
-
-    e.preventDefault();
-    e.stopPropagation();
-
+    e.preventDefault(); e.stopPropagation();
     const parent = $(this).closest('.wd-has-drop');
-
     $('.wd-has-drop').not(parent).removeClass('open');
-
     parent.toggleClass('open');
-
 });
-
-// Close dropdown when clicking outside
-$(document).on('click', function () {
-    $('.wd-has-drop').removeClass('open');
-});
-
+$(document).on('click', function () { $('.wd-has-drop').removeClass('open'); });
 
 /* ================= MOBILE SUBMENU ================= */
-
 $(document).on('click', '.wd-mob-toggle', function (e) {
-
     e.preventDefault();
-
     const subId = $(this).attr('data-sub');
-
     $('#' + subId).toggleClass('open');
-
 });
 
-
 /* ================= HAMBURGER MENU ================= */
-
 $(document).on('click', '#wdHamburger', function () {
-
     $(this).toggleClass('open');
     $('#wdMobile').toggleClass('open');
     $('#wdOverlay').toggleClass('open');
-
-    if ($('#wdMobile').hasClass('open')) {
-        $('body').css('overflow', 'hidden');
-    } else {
-        $('body').css('overflow', '');
-    }
-
+    $('body').css('overflow', $('#wdMobile').hasClass('open') ? 'hidden' : '');
 });
-
-
-/* ================= OVERLAY CLOSE ================= */
-
 $(document).on('click', '#wdOverlay', function () {
-
     $('#wdHamburger').removeClass('open');
     $('#wdMobile').removeClass('open');
     $('#wdOverlay').removeClass('open');
-
     $('body').css('overflow', '');
-
 });
-
 
 /* ================= NAVBAR SCROLL ================= */
-
 $(window).on('scroll', function () {
-
     const nav = $('#wdNav');
+    if ($(window).scrollTop() > 60) nav.addClass('scrolled'); else nav.removeClass('scrolled');
 
-    if ($(window).scrollTop() > 60) {
-        nav.addClass('scrolled');
-    } else {
-        nav.removeClass('scrolled');
-    }
-
+    // back-to-top visibility
+    if ($(window).scrollTop() > 500) $('#backTop').addClass('show'); else $('#backTop').removeClass('show');
 });
-
 
 /* ================= PRIVACY ACCORDION ================= */
-
 $(document).on('click', '.privacy-card-header', function () {
-
     $(this).closest('.privacy-card').toggleClass('open');
-
 });
 
-$(document).ready(function () {
-
-    $('.privacy-card:first').addClass('open');
-
+/* ================= TABLE OF CONTENTS: smooth scroll + scrollspy ================= */
+$(document).on('click', '.toc-list a', function (e) {
+    e.preventDefault();
+    const targetId = $(this).attr('href');
+    const target = document.querySelector(targetId);
+    if (!target) return;
+    // open the card being navigated to
+    $(target).addClass('open');
+    window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 96, behavior: 'smooth' });
 });
+
+const sections = document.querySelectorAll('.privacy-card');
+const tocLinks = document.querySelectorAll('.toc-list a');
+function updateActiveToc() {
+    let currentId = '';
+    sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top <= 140) currentId = sec.id;
+    });
+    tocLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+    });
+}
+window.addEventListener('scroll', updateActiveToc);
+updateActiveToc();
+
+/* ================= SCROLL REVEAL FOR CARDS ================= */
+if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.privacy-card').forEach(card => observer.observe(card));
+} else {
+    document.querySelectorAll('.privacy-card').forEach(card => card.classList.add('reveal'));
+}
 
 </script>
 

@@ -316,7 +316,7 @@ button{ font-family:inherit; }
       <div class="hero-stats">
         <div class="stat"><b id="statHalls">—</b><span>Halls Indexed</span></div>
         <div class="stat"><b id="statCaterers">—</b><span>Caterers</span></div>
-        <div class="stat"><b id="statVendors">—</b><span>Total Vendors</span></div>
+        <div class="stat"><b id="statVendors">—</b><span>All Services Vendors</span></div>
       </div>
     </div>
     <div class="hero-visual">
@@ -396,6 +396,36 @@ button{ font-family:inherit; }
 <!-- ================= FOOTER ================= -->
 <div id="footer-container"></div>
 
+<!--
+  =====================================================================
+  WedDream — ai-planner.html  |  PREMIUM UPGRADE — <script> BLOCK ONLY
+  =====================================================================
+  Kya naya add hua (HTML/CSS bilkul same, sirf JS):
+
+  1) TYPEWRITER EFFECT — Aria ke messages ab letter-by-letter type hote
+     hain (jaisay real AI), instant HTML dump nahi. Feels alive.
+
+  2) AI ANALYSIS STEPS — har category recommend karne se pehle ek
+     chhota animated checklist dikhta hai ("Scanning 42 halls...",
+     "Filtering by capacity...", "Ranking by budget fit..." — har line
+     spinner se check ✓ ho kar disappear hoti hai). Backend processing
+     ka premium illusion deta hai, bina kisi asal backend ke.
+
+  3) MATCH SCORE — har vendor card par ab "94% Match" score hai jo
+     rating + budget-fit + area-fit se calculate hota hai. Generic
+     list ki bajaye "AI ne socha aur choose kiya" wala feel.
+
+  4) LETTERHEAD PROPOSAL CARD — final report ab ek proper branded
+     "WedDream · AI-Generated Proposal" card hai (date, Aria ka
+     signature, gold divider, vendor list, budget bar) — existing
+     glass-panel / summary-grid / vendor-mini classes hi reuse ki
+     hain, koi CSS nahi chheda.
+
+  ISKO KAISE LAGAYEN:
+  ai-planner.html mein poore <script>...</script> block ko is poore
+  block se replace kar dein. <style> aur baaki HTML same rahega.
+  =====================================================================
+-->
 <script>
 $(function(){
 
@@ -551,9 +581,6 @@ $(function(){
     try{ state = Object.assign(state, JSON.parse(raw)); return true; }catch(e){ return false; }
   }
 
-  /* =========================================================
-     RESTART PLAN
-  ========================================================= */
   function restartPlan(){
     if(confirm("🔄 Restart planning from scratch? All your selections will be cleared.")){
       localStorage.removeItem(STORE_KEY);
@@ -589,15 +616,87 @@ $(function(){
 
   function scrollDown(){ $chatBody.stop().animate({scrollTop: $chatBody[0].scrollHeight}, 300); }
 
-  function aiMsg(html){
-    const $m = $(`<div class="msg ai"><div class="av-sm">A</div><div class="bubble">${html}</div></div>`);
-    $chatBody.append($m); scrollDown(); return $m;
+  /* ---- NEW: typewriter aiMsg — makes Aria feel like she's really "typing" ---- */
+  function aiMsg(html, opts){
+    opts = opts || {};
+    const $m = $(`<div class="msg ai"><div class="av-sm">A</div><div class="bubble"></div></div>`);
+    $chatBody.append($m); scrollDown();
+    const $bubble = $m.find('.bubble');
+    if(opts.instant){ $bubble.html(html); scrollDown(); return $m; }
+    const total = html.length;
+    const perChar = Math.max(4, Math.min(16, 700 / Math.max(total,1)));
+    let i = 0;
+    (function type(){
+      i += 2; // 2 chars per tick — smooth but not slow
+      $bubble.html(html.substring(0, Math.min(i,total)));
+      if(i % 6 === 0) scrollDown();
+      if(i < total) setTimeout(type, perChar);
+      else scrollDown();
+    })();
+    return $m;
   }
   function userMsg(text){
     const $m = $(`<div class="msg user"><div class="bubble">${$('<div>').text(text).html()}</div></div>`);
     $chatBody.append($m); scrollDown();
   }
-  
+
+  /* ---- NEW: AI "reasoning" checklist shown before recommendations ---- */
+  function showAnalysisSteps(steps, cb){
+    const $panel = $('<div class="ai-analysis"></div>');
+    $chatBody.append($panel); scrollDown();
+    let idx = 0;
+    function next(){
+      if(idx >= steps.length){
+        setTimeout(()=>{
+          $panel.fadeOut(280, function(){ $(this).remove(); });
+          setTimeout(cb, 200);
+        }, 300);
+        return;
+      }
+      const $item = $(`<div class="aa-item"><i class="fas fa-circle-notch fa-spin"></i><span>${steps[idx]}</span></div>`);
+      $panel.append($item); scrollDown();
+      setTimeout(()=>{
+        $item.find('i').removeClass('fa-circle-notch fa-spin').addClass('fa-check');
+        idx++;
+        next();
+      }, 360 + Math.random()*260);
+    }
+    next();
+  }
+
+  function getAnalysisSteps(serviceName){
+    const steps = {
+      "Hall": [
+        `Scanning ${VENDORS.halls.length} halls across the network…`,
+        `Filtering by capacity for ${state.guests || '—'} guests…`,
+        state.area ? `Prioritizing venues in ${state.area}…` : `Ranking across all areas…`,
+        `Matching against your hall budget allocation…`
+      ],
+      "Catering": [
+        `Scanning ${VENDORS.caterers.length} caterers…`,
+        `Calculating per-head cost for ${state.guests || '—'} guests…`,
+        `Matching cuisine and rating preferences…`,
+        `Finalizing best-fit caterers…`
+      ],
+      "Decoration": [
+        `Scanning ${VENDORS.decorators.length} decorators…`,
+        `Matching styles to your event type…`,
+        `Checking budget allocation for decor…`
+      ],
+      "Photography": [
+        `Scanning ${VENDORS.photographers.length} photographers…`,
+        `Matching packages to your guest count…`,
+        `Ranking by rating and experience…`
+      ],
+      "Car Rental": [
+        `Scanning ${VENDORS.carrentals.length} car rental fleets…`,
+        `Matching fleet options to your budget…`,
+        `Ranking by rating and availability…`
+      ]
+    };
+    return steps[serviceName] || [`Analyzing ${serviceName} options…`];
+  }
+
   function chips(options, onPick, multi=false){
     const $wrap = $('<div class="chips" role="group"></div>');
     const chosen = new Set();
@@ -639,7 +738,7 @@ $(function(){
     $chatBody.append($wrap); scrollDown();
     return $wrap;
   }
-  
+
   function showTyping(cb, delay){
     $typing.addClass('active'); scrollDown();
     setTimeout(()=>{ $typing.removeClass('active'); cb(); }, delay || (650 + Math.random()*500));
@@ -647,53 +746,51 @@ $(function(){
   function lockInput(lock){ $("#chatInput").prop('disabled', lock); $("#sendBtn").prop('disabled', lock); }
 
   /* =========================================================
-     PRICE HELPERS — FIXED: Caterers show TOTAL price (guests × per_head)
+     PRICE HELPERS
   ========================================================= */
-  function fmtPKR(n){ 
+  function fmtPKR(n){
     if(n === undefined || n === null || isNaN(n)) return "PKR 0";
-    return "PKR " + Number(n).toLocaleString(); 
+    return "PKR " + Number(n).toLocaleString();
   }
-  
-  function num(v, fallback){ 
-    return (typeof v === 'number' && !isNaN(v)) ? v : fallback; 
-  }
+  function num(v, fallback){ return (typeof v === 'number' && !isNaN(v)) ? v : fallback; }
 
   function getVendorPrice(vendor, category) {
     if(!vendor) return 0;
-    switch(category) {
-      case 'hall': return vendor.starting_price || 0;
-      case 'caterer': 
-        // Total price = price_per_head × guests
-        return (vendor.price_per_head || 0) * (state.guests || 0);
-      case 'decorator': return vendor.starting_price || 0;
-      case 'photographer': return vendor.starting_price || 0;
-      case 'carrental': return vendor.starting_price || 0;
-      default: return vendor.starting_price || 0;
-    }
+    if(category === 'caterer') return (vendor.price_per_head || 0) * (state.guests || 0);
+    return vendor.starting_price || 0;
   }
 
   function getVendorDisplayPrice(vendor, category) {
     if(!vendor) return '—';
     const price = getVendorPrice(vendor, category);
-    
     if(category === 'caterer') {
       const perHead = vendor.price_per_head || 0;
       const guests = state.guests || 0;
       return fmtPKR(price) + ' total (PKR ' + Number(perHead).toLocaleString() + '/head × ' + guests + ' guests)';
     } else if(category === 'carrental') {
       return fmtPKR(price) + ' / day';
-    } else if(category === 'hall') {
-      return fmtPKR(price) + ' starting';
-    } else if(category === 'decorator') {
-      return fmtPKR(price) + ' starting';
-    } else if(category === 'photographer') {
-      return fmtPKR(price) + ' starting';
     }
-    return fmtPKR(price);
+    return fmtPKR(price) + ' starting';
+  }
+
+  /* ---- NEW: AI match-confidence score per vendor (rating + budget fit + area fit) ---- */
+  function matchScore(v, cat){
+    let score = (num(v.rating,4)/5) * 45;
+    const shareMap = {hall:0.45, caterer:0.28, decorator:0.15, photographer:0.1, carrental:0.07};
+    const budget = state.budget || 1000000;
+    const share = budget * (shareMap[cat] || 0.15);
+    const price = cat === 'caterer' ? num(v.price_per_head,0) * (state.guests||0) : num(v.starting_price,0);
+    let fit = 0.5;
+    if(share > 0){ fit = Math.max(0, 1 - Math.abs(price - share*0.75) / share); }
+    score += Math.min(fit,1) * 35;
+    if(state.area && v.area && v.area.toLowerCase().includes(state.area.toLowerCase())) score += 14;
+    else score += 6;
+    if(v.verified) score += 5;
+    return Math.max(64, Math.min(98, Math.round(score)));
   }
 
   /* =========================================================
-     FILTER BY AREA — Works for ALL categories
+     FILTER BY AREA
   ========================================================= */
   function filterByArea(vendors) {
     if (!state.area) return vendors;
@@ -705,68 +802,54 @@ $(function(){
   }
 
   /* =========================================================
-     VENDOR MATCHING — Area filter applied FIRST
+     VENDOR MATCHING
   ========================================================= */
   function matchHalls(){
     const guests = state.guests || 200;
     const budgetShare = (state.budget || 1000000) * 0.45;
-    
     let list = filterByArea(VENDORS.halls);
     list = list.filter(h => num(h.capacity, 0) >= guests * 0.85);
     list = list.filter(h => num(h.starting_price, 0) <= budgetShare * 1.3);
-    
     if(list.length === 0) {
       list = VENDORS.halls.filter(h => num(h.capacity, 0) >= guests * 0.85);
       if(list.length === 0) list = VENDORS.halls.slice();
     }
     return list.sort((a,b)=> num(b.rating,0)-num(a.rating,0)).slice(0,4);
   }
-
   function matchCaterers(){
     const perHead = (state.budget||1000000) * 0.28 / (state.guests||200);
-    
     let list = filterByArea(VENDORS.caterers);
     list = list.filter(c => num(c.price_per_head,0) <= perHead*1.25);
-    
     if(list.length === 0) {
       list = VENDORS.caterers.filter(c => num(c.price_per_head,0) <= perHead*1.25);
       if(list.length === 0) list = VENDORS.caterers.slice();
     }
     return list.sort((a,b)=> num(b.rating,0)-num(a.rating,0)).slice(0,4);
   }
-
   function matchDecorators(){
     const share = (state.budget||1000000) * 0.15;
-    
     let list = filterByArea(VENDORS.decorators);
     list = list.filter(d => num(d.starting_price,0) <= share*1.3);
-    
     if(list.length === 0) {
       list = VENDORS.decorators.filter(d => num(d.starting_price,0) <= share*1.3);
       if(list.length === 0) list = VENDORS.decorators.slice();
     }
     return list.sort((a,b)=> num(b.rating,0)-num(a.rating,0)).slice(0,4);
   }
-
   function matchPhotographers(){
     const share = (state.budget||1000000) * 0.1;
-    
     let list = filterByArea(VENDORS.photographers);
     list = list.filter(p => num(p.starting_price,0) <= share*1.3);
-    
     if(list.length === 0) {
       list = VENDORS.photographers.filter(p => num(p.starting_price,0) <= share*1.3);
       if(list.length === 0) list = VENDORS.photographers.slice();
     }
     return list.sort((a,b)=> num(b.rating,0)-num(a.rating,0)).slice(0,4);
   }
-
   function matchCarRentals(){
     const share = (state.budget||1000000) * 0.07;
-    
     let list = filterByArea(VENDORS.carrentals);
     list = list.filter(c => num(c.starting_price,0) <= share*1.3);
-    
     if(list.length === 0) {
       list = VENDORS.carrentals.filter(c => num(c.starting_price,0) <= share*1.3);
       if(list.length === 0) list = VENDORS.carrentals.slice();
@@ -775,7 +858,7 @@ $(function(){
   }
 
   /* =========================================================
-     VENDOR CARDS
+     VENDOR CARDS  (now with AI match % score)
   ========================================================= */
   function vendorCards(list, category, onSelect) {
     const $wrap = $('<div class="vendor-cards"></div>');
@@ -787,10 +870,11 @@ $(function(){
       $chatBody.append($wrap); scrollDown();
       return $wrap;
     }
-    
+
     list.forEach((v,i)=>{
       const priceDisplay = getVendorDisplayPrice(v, category);
-      
+      const score = matchScore(v, category);
+
       let tags = '';
       if(category === 'hall') {
         if(v.capacity) tags += `<span class="vc-tag"><i class="fas fa-users"></i> ${v.capacity}</span>`;
@@ -799,32 +883,23 @@ $(function(){
         if(v.ac === true) tags += `<span class="vc-tag"><i class="fas fa-snowflake"></i> AC</span>`;
         if(v.catering === true) tags += `<span class="vc-tag"><i class="fas fa-utensils"></i></span>`;
         if(v.outdoor === true) tags += `<span class="vc-tag"><i class="fas fa-tree"></i> Outdoor</span>`;
-        if(v.stage === true) tags += `<span class="vc-tag"><i class="fas fa-stage"></i></span>`;
+        if(v.stage === true) tags += `<span class="vc-tag"><i class="fas fa-drum"></i></span>`;
       }
       if(category === 'caterer') {
-        if(v.cuisine_types && v.cuisine_types.length) {
-          tags += `<span class="vc-tag"><i class="fas fa-utensils"></i> ${v.cuisine_types.slice(0,2).join(', ')}</span>`;
-        }
+        if(v.cuisine_types && v.cuisine_types.length) tags += `<span class="vc-tag"><i class="fas fa-utensils"></i> ${v.cuisine_types.slice(0,2).join(', ')}</span>`;
         if(v.min_guests) tags += `<span class="vc-tag"><i class="fas fa-users"></i> Min ${v.min_guests}</span>`;
         if(v.established) tags += `<span class="vc-tag"><i class="fas fa-calendar"></i> Est. ${v.established}</span>`;
-        // Show per head price in tags
         if(v.price_per_head) tags += `<span class="vc-tag"><i class="fas fa-tag"></i> ${fmtPKR(v.price_per_head)}/head</span>`;
       }
       if(category === 'photographer') {
-        if(v.services && v.services.length) {
-          tags += `<span class="vc-tag"><i class="fas fa-camera"></i> ${v.services.slice(0,2).join(', ')}</span>`;
-        }
+        if(v.services && v.services.length) tags += `<span class="vc-tag"><i class="fas fa-camera"></i> ${v.services.slice(0,2).join(', ')}</span>`;
         if(v.established) tags += `<span class="vc-tag"><i class="fas fa-calendar"></i> Est. ${v.established}</span>`;
       }
       if(category === 'decorator') {
-        if(v.events_types && v.events_types.length) {
-          tags += `<span class="vc-tag"><i class="fas fa-palette"></i> ${v.events_types.slice(0,2).join(', ')}</span>`;
-        }
+        if(v.events_types && v.events_types.length) tags += `<span class="vc-tag"><i class="fas fa-palette"></i> ${v.events_types.slice(0,2).join(', ')}</span>`;
       }
       if(category === 'carrental') {
-        if(v.fleet && v.fleet.length) {
-          tags += `<span class="vc-tag"><i class="fas fa-car"></i> ${v.fleet.slice(0,2).join(', ')}</span>`;
-        }
+        if(v.fleet && v.fleet.length) tags += `<span class="vc-tag"><i class="fas fa-car"></i> ${v.fleet.slice(0,2).join(', ')}</span>`;
       }
 
       let areaBadge = '';
@@ -835,13 +910,13 @@ $(function(){
       const $c = $(`
         <div class="vcard" data-id="${v.id}">
           ${i===0 ? '<span class="vc-badge">Top match</span>' : ''}
-          ${v.verified ? '<span class="vc-badge" style="background:var(--ok);color:#fff;">✓ Verified</span>' : ''}
+          ${(i!==0 && v.verified) ? '<span class="vc-badge" style="background:var(--ok);color:#fff;">✓ Verified</span>' : ''}
           ${areaBadge}
           <span class="vc-pick">Select</span>
           ${imgTag(v.image, v.name)}
           <div class="vc-body">
             <div class="vc-name">${v.name}</div>
-            <div class="vc-meta"><i class="fas fa-star" style="color:var(--gold-light);"></i> ${num(v.rating,'—')} ${v.area? " · "+v.area : (v.city? " · "+v.city : "")}</div>
+            <div class="vc-meta"><i class="fas fa-star" style="color:var(--gold-light);"></i> ${num(v.rating,'—')} ${v.area? " · "+v.area : (v.city? " · "+v.city : "")} · <span style="color:var(--ok);font-weight:700;">${score}% match</span></div>
             <div class="vc-price" style="color:var(--gold-light);font-weight:700;font-family:'JetBrains Mono',monospace;font-size:0.85rem;">${priceDisplay}</div>
             <div class="vc-tags">${tags}</div>
           </div>
@@ -858,7 +933,7 @@ $(function(){
       });
       $wrap.append($c);
     });
-    
+
     $chatBody.append($wrap); scrollDown();
     return $wrap;
   }
@@ -880,9 +955,9 @@ $(function(){
       showTyping(()=>{
         aiMsg(`🎯 ${state.event ? 'For your <b>'+state.event+'</b>,' : ''} roughly how many guests are you expecting? <br><small>You can type any number directly in the chat box.</small>`);
         chips(["100","200","300","500","800+"], (opt)=>{
-          userMsg(opt); 
+          userMsg(opt);
           const val = parseInt(opt.replace(/\+/g,'')) || 800;
-          state.guests = val; 
+          state.guests = val;
           saveState();
           goToStep("city");
         });
@@ -901,8 +976,8 @@ $(function(){
       showTyping(()=>{
         aiMsg(`📍 Any preferred area in ${state.city || 'your city'}? <br><small>Select one, or tap "Skip" to see all vendors.</small>`);
         chips(["DHA Phase 5","DHA Phase 6","Clifton","Bahadurabad","Gulshan-e-Iqbal","North Nazimabad","Skip"], (opt)=>{
-          userMsg(opt); 
-          state.area = opt==="Skip" ? null : opt; 
+          userMsg(opt);
+          state.area = opt==="Skip" ? null : opt;
           state.picked = { hall:null, caterer:null, decorator:null, photographer:null, carrental:null };
           state.complete = false;
           saveState();
@@ -945,9 +1020,9 @@ $(function(){
         aiMsg("🎯 Which services should I arrange for you? Select all that apply, then tap <b>Done</b>. <br><small>You can skip any service by not selecting it.</small>");
         chips(["Hall","Catering","Decoration","Photography","Car Rental"], (opts)=>{
           const list = Array.isArray(opts) ? opts : [opts];
-          if(list.length===0){ 
+          if(list.length===0){
             aiMsg("⚠️ You need at least one service. Please select at least one.");
-            return; 
+            return;
           }
           userMsg("Selected: " + list.join(", "));
           state.services = list;
@@ -974,47 +1049,48 @@ $(function(){
     "Car Rental":{step:"carrental", cat:"carrental", match:matchCarRentals}
   };
 
+  /* ---- MODIFIED: analysis checklist now runs before vendor cards ---- */
   function proceedServices(){
     const order = state._serviceOrder || [];
     const cursor = state._serviceCursor || 0;
     if(cursor >= order.length){ goToStep("done"); return; }
     const serviceName = order[cursor];
     const cfg = serviceStepMap[serviceName];
-    showTyping(()=>{
-      const list = cfg.match();
-      const areaText = state.area ? ' in <b>'+state.area+'</b>' : '';
-      aiMsg(`📍 Here are my top <b>${serviceName}</b> picks${areaText} based on your budget and ${state.guests} guests:`);
-      vendorCards(list, cfg.cat, ()=>{
-        state._serviceCursor = cursor+1;
-        saveState();
-        setTimeout(proceedServices, 500);
+
+    $typing.addClass('active'); scrollDown();
+    setTimeout(()=>{
+      $typing.removeClass('active');
+      const steps = getAnalysisSteps(serviceName);
+      showAnalysisSteps(steps, function(){
+        const list = cfg.match();
+        const areaText = state.area ? ' in <b>'+state.area+'</b>' : '';
+        aiMsg(`📍 Here are my top <b>${serviceName}</b> picks${areaText} based on your budget and ${state.guests} guests:`);
+        vendorCards(list, cfg.cat, ()=>{
+          state._serviceCursor = cursor+1;
+          saveState();
+          setTimeout(proceedServices, 500);
+        });
+        const $next = $('<div class="report-actions"></div>');
+        const $skip = $('<button type="button" class="ra-btn">⏭️ Skip this service</button>');
+        $skip.on('click', function(){
+          aiMsg(`⏭️ Skipped <b>${serviceName}</b>. Moving on...`);
+          state._serviceCursor = cursor+1;
+          saveState();
+          setTimeout(proceedServices, 600);
+        });
+        $next.append($skip);
+        const $area = $('<button type="button" class="ra-btn">📍 Change Area</button>');
+        $area.on('click', function(){ userMsg("📍 Change Area"); goToStep("area"); });
+        $next.append($area);
+        const $budget = $('<button type="button" class="ra-btn">💰 Change Budget</button>');
+        $budget.on('click', function(){ userMsg("💰 Change Budget"); goToStep("budget"); });
+        $next.append($budget);
+        const $restart = $('<button type="button" class="ra-btn" style="border-color:var(--rose);color:var(--rose);">🔄 Restart Plan</button>');
+        $restart.on('click', function(){ restartPlan(); });
+        $next.append($restart);
+        $chatBody.append($next); scrollDown();
       });
-      const $next = $('<div class="report-actions"></div>');
-      const $skip = $('<button type="button" class="ra-btn">⏭️ Skip this service</button>');
-      $skip.on('click', function(){
-        aiMsg(`⏭️ Skipped <b>${serviceName}</b>. Moving on...`);
-        state._serviceCursor = cursor+1;
-        saveState();
-        setTimeout(proceedServices, 600);
-      });
-      $next.append($skip);
-      const $area = $('<button type="button" class="ra-btn">📍 Change Area</button>');
-      $area.on('click', function(){
-        userMsg("📍 Change Area");
-        goToStep("area");
-      });
-      $next.append($area);
-      const $budget = $('<button type="button" class="ra-btn">💰 Change Budget</button>');
-      $budget.on('click', function(){
-        userMsg("💰 Change Budget");
-        goToStep("budget");
-      });
-      $next.append($budget);
-      const $restart = $('<button type="button" class="ra-btn" style="border-color:var(--rose);color:var(--rose);">🔄 Restart Plan</button>');
-      $restart.on('click', function(){ restartPlan(); });
-      $next.append($restart);
-      $chatBody.append($next); scrollDown();
-    });
+    }, 500);
   }
 
   function totalEstimate(){
@@ -1038,11 +1114,7 @@ $(function(){
   function cheapestVendorFor(cfg){
     const vendorKey = CAT_TO_VENDOR_KEY[cfg.cat];
     let pool = VENDORS[vendorKey] || [];
-    
-    if(state.area) {
-      pool = pool.filter(v => (v.area || '').toLowerCase().includes(state.area.toLowerCase()));
-    }
-    
+    if(state.area) pool = pool.filter(v => (v.area || '').toLowerCase().includes(state.area.toLowerCase()));
     if(cfg.cat === 'hall'){
       const guests = state.guests || 200;
       const capable = pool.filter(h => num(h.capacity,0) >= guests * 0.85);
@@ -1085,10 +1157,10 @@ $(function(){
       if(minTotal <= budget){
         Object.assign(state.picked, picks);
         updateDashboard(); saveState();
-        aiMsg(`✅ <b>Found the cheapest plan that fits your budget!</b><br><br>${lines.join('<br>')}<br><br>Total: <b>${fmtPKR(minTotal)}</b> · Budget: ${fmtPKR(budget)} · You save <b style="color:#4ade80;">${fmtPKR(budget - minTotal)}</b>.`);
+        aiMsg(`✅ <b>Found the cheapest plan that fits your budget!</b><br><br>${lines.join('<br>')}<br><br>Total: <b>${fmtPKR(minTotal)}</b> · Budget: ${fmtPKR(budget)} · You save <b style="color:#4ade80;">${fmtPKR(budget - minTotal)}</b>.`, {instant:true});
         renderFinalReport();
       } else {
-        aiMsg(`⚠️ Even the cheapest possible combination comes to <b>${fmtPKR(minTotal)}</b> — that's <b style="color:var(--rose);">${fmtPKR(minTotal - budget)}</b> more than your budget of ${fmtPKR(budget)}.<br><br>${lines.join('<br>')}`);
+        aiMsg(`⚠️ Even the cheapest possible combination comes to <b>${fmtPKR(minTotal)}</b> — that's <b style="color:var(--rose);">${fmtPKR(minTotal - budget)}</b> more than your budget of ${fmtPKR(budget)}.<br><br>${lines.join('<br>')}`, {instant:true});
         const $wrap = $('<div class="chips" style="margin-left:0;"></div>');
         const $b1 = $('<button type="button" class="chip" style="border-color:var(--gold);color:var(--gold-light);">💰 Increase Budget</button>');
         const $b2 = $('<button type="button" class="chip">📉 Reduce Guests</button>');
@@ -1166,14 +1238,14 @@ $(function(){
       }
     });
     if(!any) $vl.append('<div style="font-size:.78rem;color:var(--ivory-faint);padding:8px 2px;">No vendors selected yet.</div>');
-    
+
     const $dashRestart = $('<button class="budget-fix-btn" style="border-color:var(--rose);color:var(--rose);margin-top:6px;"><i class="fas fa-rotate-left"></i> Restart Plan</button>');
     $dashRestart.on('click', function(){ restartPlan(); });
     $vl.after($dashRestart);
   }
 
   /* =========================================================
-     FINAL REPORT
+     FINAL REPORT — now a branded letterhead-style proposal card
   ========================================================= */
   function renderFinalReport(){
     state.complete = true;
@@ -1183,35 +1255,51 @@ $(function(){
       const total = totalEstimate();
       const budget = state.budget || 0;
       const remaining = budget - total;
+      const pct = budget ? Math.min((total/budget)*100,100) : 0;
+      const barClass = remaining >= budget*0.15 ? 'ok' : (remaining >= 0 ? 'warn' : 'over');
 
-      let vendorSummary = '';
-      const cats = [["hall","Hall"],["caterer","Caterer"],["decorator","Decorator"],["photographer","Photographer"],["carrental","Car Rental"]];
-      cats.forEach(([key,label])=>{
+      const cats = [["hall","Hall","fa-building"],["caterer","Caterer","fa-utensils"],["decorator","Decorator","fa-palette"],["photographer","Photographer","fa-camera"],["carrental","Car Rental","fa-car"]];
+      let vendorRows = '';
+      cats.forEach(([key,label,icon])=>{
         const v = state.picked[key];
         if(v){
-          vendorSummary += `<br>• ${label}: <b>${v.name}</b> (${getVendorDisplayPrice(v, key)})`;
+          vendorRows += `<div class="vendor-mini"><div style="width:52px;height:52px;border-radius:9px;background:rgba(200,155,44,0.08);display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:1.1rem;flex-shrink:0;"><i class="fas ${icon}"></i></div><div><div class="vm-name">${v.name}</div><div class="vm-meta">${label} · ⭐ ${num(v.rating,'—')} · ${getVendorDisplayPrice(v,key)}</div></div></div>`;
         }
       });
+      if(!vendorRows) vendorRows = '<div style="font-size:.8rem;color:var(--ivory-faint);">No vendors selected.</div>';
+
+      const $proposal = $(`
+        <div class="glass-panel" style="padding:clamp(18px,3vw,28px);margin:14px 0 4px 40px;max-width:620px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px;margin-bottom:14px;">
+            <div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.12em;color:var(--gold-light);text-transform:uppercase;">WedDream · AI-Generated Proposal</div>
+              <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;margin-top:4px;">${state.event || 'Event'} Plan</div>
+            </div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--ivory-faint);text-align:right;">${new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})}<br>Prepared by Aria</div>
+          </div>
+          <div style="height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:16px;"></div>
+          <div class="summary-grid" style="margin-bottom:16px;">
+            <div class="summary-item"><div class="lbl">Guests</div><div class="val">${state.guests || '—'}</div></div>
+            <div class="summary-item"><div class="lbl">Area</div><div class="val">${state.area || state.city || '—'}</div></div>
+            <div class="summary-item"><div class="lbl">Date</div><div class="val">${state.date || '—'}</div></div>
+            <div class="summary-item"><div class="lbl">Setting</div><div class="val">${state.setting || '—'}</div></div>
+          </div>
+          <div class="dash-title" style="margin-bottom:8px;"><i class="fas fa-store"></i> Selected Vendors</div>
+          <div class="vendor-list" style="max-height:none;margin-bottom:16px;">${vendorRows}</div>
+          <div class="budget-bar-wrap">
+            <div class="bb-row"><span>Estimated Total</span><b style="color:var(--gold-light);">${fmtPKR(total)}</b></div>
+            <div class="budget-bar-bg"><div class="budget-bar-fill ${barClass}" style="width:${pct}%;"></div></div>
+            <div class="budget-hint ${remaining<0?'over':''}" style="margin-top:8px;">
+              ${remaining>=0 ? '✅ Within budget · '+fmtPKR(remaining)+' remaining' : '⚠️ Over budget by '+fmtPKR(Math.abs(remaining))}
+            </div>
+          </div>
+        </div>`);
+      $chatBody.append($proposal); scrollDown();
 
       if(remaining >= 0){
-        aiMsg(`🎉 <b>Your event plan is ready!</b><br><br>
-          📍 <b>Event:</b> ${state.event}<br>
-          📍 <b>Area:</b> ${state.area || 'Any'}<br>
-          👥 <b>Guests:</b> ${state.guests}<br>
-          📅 <b>Date:</b> ${state.date || 'Not set'}<br>
-          🏛️ <b>Setting:</b> ${state.setting || 'Flexible'}<br><br>
-          <b>Selected Vendors:</b>${vendorSummary}<br><br>
-          💰 <b>Estimated Total:</b> ${fmtPKR(total)}<br>
-          💵 <b>Remaining Budget:</b> <b style="color:#4ade80;">${fmtPKR(remaining)}</b><br><br>
-          ✅ Everything fits comfortably within your budget!`);
+        aiMsg(`🎉 <b>Your plan is complete and fits comfortably within budget.</b> Ready to book, download, or share it below.`);
       } else {
-        aiMsg(`📊 <b>Here's an honest look at the numbers.</b><br><br>
-          📍 <b>Event:</b> ${state.event}<br>
-          👥 <b>Guests:</b> ${state.guests}<br>
-          💰 <b>Your Budget:</b> ${fmtPKR(budget)}<br>
-          <b>Selected Vendors:</b>${vendorSummary}<br><br>
-          💰 <b>Estimated Total:</b> ${fmtPKR(total)}<br>
-          ⚠️ <b style="color:var(--rose);">Shortfall:</b> ${fmtPKR(Math.abs(remaining))}`);
+        aiMsg(`I've laid out the full proposal above — right now it's <b style="color:var(--rose);">${fmtPKR(Math.abs(remaining))}</b> over budget. Here's how we can close that gap:`);
         aiAlertPanel(total, budget);
       }
 
@@ -1223,7 +1311,7 @@ $(function(){
       const $changeGuests = $('<button type="button" class="ra-btn">👥 Change Guests</button>');
       const $changeArea = $('<button type="button" class="ra-btn">📍 Change Area</button>');
       const $changeBudget = $('<button type="button" class="ra-btn">💰 Change Budget</button>');
-      
+
       $changeGuests.on('click', ()=>{ userMsg("👥 Change Guests"); goToStep("guests"); });
       $changeArea.on('click', ()=>{ userMsg("📍 Change Area"); goToStep("area"); });
       $changeBudget.on('click', ()=>{ userMsg("💰 Change Budget"); goToStep("budget"); });
@@ -1253,20 +1341,20 @@ $(function(){
         <b>Current Shortfall:</b> <span style="color:var(--rose);">${fmtPKR(diff)}</span>
       </div>`);
     $chatBody.append($panel); scrollDown();
-    
+
     const $wrap = $('<div class="chips" style="margin-left:0;"></div>');
     const $b0 = $('<button type="button" class="chip" style="border-color:var(--gold);color:var(--gold-light);font-weight:700;">💡 Show Cheapest Plan</button>');
     const $b1 = $('<button type="button" class="chip">💰 Increase Budget</button>');
     const $b2 = $('<button type="button" class="chip">📉 Reduce Guests</button>');
     const $b3 = $('<button type="button" class="chip">⏭️ Remove a Service</button>');
     const $b4 = $('<button type="button" class="chip" style="border-color:var(--rose);color:var(--rose);">🔄 Restart Plan</button>');
-    
+
     $b0.on('click', ()=>{ userMsg("💡 Show Cheapest Plan"); showCheapestPlan(); });
     $b1.on('click', ()=>{ userMsg("💰 Increase Budget"); goToStep("budget"); });
     $b2.on('click', ()=>{ userMsg("📉 Reduce Guests"); goToStep("guests"); });
     $b3.on('click', ()=>{ userMsg("⏭️ Remove a Service"); goToStep("services"); });
     $b4.on('click', ()=>{ restartPlan(); });
-    
+
     $wrap.append($b0,$b1,$b2,$b3,$b4);
     $chatBody.append($wrap); scrollDown();
   }
@@ -1315,19 +1403,19 @@ $(function(){
     if(!val) return;
     userMsg(val);
     $("#chatInput").val("");
-    
+
     if(val.toLowerCase().includes('restart') || val.toLowerCase().includes('start over')) {
       restartPlan();
       return;
     }
-    
+
     const current = STEPS[state.stepIndex];
-    
+
     const guestMatch = val.match(/(\d+)\s*(guest|pax|people)?/i);
     if(guestMatch && (current === "guests" || val.toLowerCase().includes('guest') || val.toLowerCase().includes('pax'))) {
       const numVal = parseInt(guestMatch[1]);
-      if(!isNaN(numVal) && numVal>0){ 
-        state.guests = numVal; 
+      if(!isNaN(numVal) && numVal>0){
+        state.guests = numVal;
         state.picked = { hall:null, caterer:null, decorator:null, photographer:null, carrental:null };
         state.complete = false;
         saveState();
@@ -1345,14 +1433,14 @@ $(function(){
         return;
       }
     }
-    
+
     const budgetMatch = val.match(/(\d+[,.]?\d*)\s*(pkr|lakh|crore)?/i);
     if(budgetMatch && (current === "budget" || val.toLowerCase().includes('budget') || val.toLowerCase().includes('pkr'))) {
       let numVal = parseInt(budgetMatch[1].replace(/,/g,''));
       if(val.toLowerCase().includes('lakh')) numVal = numVal * 100000;
       else if(val.toLowerCase().includes('crore')) numVal = numVal * 10000000;
-      if(!isNaN(numVal) && numVal>0){ 
-        state.budget = numVal; 
+      if(!isNaN(numVal) && numVal>0){
+        state.budget = numVal;
         state.picked = { hall:null, caterer:null, decorator:null, photographer:null, carrental:null };
         state.complete = false;
         saveState();
@@ -1370,18 +1458,13 @@ $(function(){
         return;
       }
     }
-    
+
     const areaOptions = ["dha","clifton","gulshan","north","bahadurabad","phase 5","phase 6"];
     const areaMatch = areaOptions.find(a => val.toLowerCase().includes(a));
     if(areaMatch && (current === "area" || val.toLowerCase().includes('area') || val.toLowerCase().includes('change'))) {
       const areaMap = {
-        'dha': 'DHA Phase 5',
-        'phase 5': 'DHA Phase 5',
-        'phase 6': 'DHA Phase 6',
-        'clifton': 'Clifton',
-        'gulshan': 'Gulshan-e-Iqbal',
-        'north': 'North Nazimabad',
-        'bahadurabad': 'Bahadurabad'
+        'dha': 'DHA Phase 5', 'phase 5': 'DHA Phase 5', 'phase 6': 'DHA Phase 6',
+        'clifton': 'Clifton', 'gulshan': 'Gulshan-e-Iqbal', 'north': 'North Nazimabad', 'bahadurabad': 'Bahadurabad'
       };
       const newArea = areaMap[areaMatch] || areaMatch;
       state.area = newArea;
@@ -1401,7 +1484,7 @@ $(function(){
       }
       return;
     }
-    
+
     if(current === "city"){ state.city = val; saveState(); goToStep("area"); }
     else if(current === "date"){ state.date = val; saveState(); goToStep("setting"); }
     else if(current === "budget"){
@@ -1418,7 +1501,7 @@ $(function(){
       aiMsg("💡 You can change any option anytime using the 'Change' buttons below, or just type what you want to change like:<br>• '300 guests'<br>• 'DHA Phase 5'<br>• '1.5 million budget'<br>• 'Restart'");
     }
   }
-  
+
   $("#sendBtn").on("click", handleFreeText);
   $("#chatInput").on("keydown", function(e){ if(e.key==="Enter"){ e.preventDefault(); handleFreeText(); } });
 
@@ -1440,7 +1523,7 @@ $(function(){
     $("#plannerApp").addClass("active");
     $("#startBtn").hide();
     const guestText = state.guests || '?';
-    aiMsg(`👋 <b>Welcome back!</b> I picked up right where we left off on your <b>${state.event}</b> plan.<br>👥 ${guestText} guests · ${state.area || 'Any area'} · 💰 ${state.budget ? fmtPKR(state.budget) : 'Budget not set'}`);
+    aiMsg(`👋 <b>Welcome back!</b> I picked up right where we left off on your <b>${state.event}</b> plan.<br>👥 ${guestText} guests · ${state.area || 'Any area'} · 💰 ${state.budget ? fmtPKR(state.budget) : 'Budget not set'}`, {instant:true});
     updateDashboard();
     if(state.complete){ renderFinalReport(); }
     else if(state.services && state.services.length) {
@@ -1452,11 +1535,23 @@ $(function(){
     else { renderStep(STEPS[state.stepIndex] || "event"); }
   }
 
-  // CSS for vendor tags
-  $('<style>.vc-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;}.vc-tag{background:rgba(200,155,44,0.08);border:1px solid rgba(200,155,44,0.12);padding:2px 8px;border-radius:12px;font-size:0.6rem;color:var(--ivory-dim);display:inline-flex;align-items:center;gap:3px;}</style>').appendTo('head');
+  /* ---- injected CSS: vendor tags + AI analysis checklist (no core CSS touched) ---- */
+  $(`<style>
+    .vc-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;}
+    .vc-tag{background:rgba(200,155,44,0.08);border:1px solid rgba(200,155,44,0.12);padding:2px 8px;border-radius:12px;font-size:0.6rem;color:var(--ivory-dim);display:inline-flex;align-items:center;gap:3px;}
+    .ai-analysis{margin:8px 0 4px 40px;background:rgba(244,236,225,0.02);border:1px solid var(--hair);border-radius:14px;padding:12px 16px;max-width:400px;}
+    .aa-item{display:flex;align-items:center;gap:10px;font-size:0.78rem;color:var(--ivory-faint);padding:4px 0;font-family:'JetBrains Mono',monospace;}
+    .aa-item i{width:14px;text-align:center;color:var(--gold-light);font-size:0.7rem;}
+    .aa-item i.fa-check{color:var(--ok);}
+    @media (max-width:640px){ .ai-analysis{margin-left:0;} }
+  </style>`).appendTo('head');
 
 });
 </script>
+
+<!-- =========================================================
+  OPTIONAL: Gemini API integration point (disabled by default)
+========================================================= -->
 
 <!-- =========================================================
   OPTIONAL: Gemini API integration point (disabled by default)
