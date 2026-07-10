@@ -541,28 +541,28 @@ const TRV_VENDORS = [
   {
     id: 1, cat: "hall", catLabel: "Hall / Banquet", catIcon: "fa-building-columns",
     name: "Royal Banquet DHA", area: "DHA", rating: 4.8, starting_price: 450000,
-    price_suffix: "/ event", image: "https://picsum.photos/seed/hall1/900/600",
+    price_suffix: "/ event", image: "hall imges/hall img1.jpg",
     verified: true, verifiedLabel: "Premium Verified",
     detailPage: "hall-detail.html", sectionPage: "halls.html", sectionLabel: "Browse All Halls"
   },
   {
     id: 2, cat: "hall", catLabel: "Hall / Banquet", catIcon: "fa-building-columns",
     name: "Al Noor Banquet DHA", area: "DHA", rating: 4.6, starting_price: 380000,
-    price_suffix: "/ event", image: "https://picsum.photos/seed/hall2/900/600",
+    price_suffix: "/ event", image: "hall imges/hall img2.jpg",
     verified: true, verifiedLabel: "Premium Verified",
     detailPage: "hall-detail.html", sectionPage: "halls.html", sectionLabel: "Browse All Halls"
   },
   {
     id: 3, cat: "hall", catLabel: "Hall / Banquet", catIcon: "fa-building-columns",
     name: "Pearl Marquee DHA", area: "DHA", rating: 4.7, starting_price: 500000,
-    price_suffix: "/ event", image: "https://picsum.photos/seed/hall3/900/600",
+    price_suffix: "/ event", image: "hall imges/hall img3.jpg",
     verified: true, verifiedLabel: "Premium Verified",
     detailPage: "hall-detail.html", sectionPage: "halls.html", sectionLabel: "Browse All Halls"
   },
   {
     id: 6, cat: "hall", catLabel: "Hall / Banquet", catIcon: "fa-building-columns",
     name: "Clifton Grand Hall", area: "Clifton", rating: 4.9, starting_price: 600000,
-    price_suffix: "/ event", image: "https://picsum.photos/seed/hall6/900/600",
+    price_suffix: "/ event", image: "hall imges/hall img6.jpg",
     verified: true, verifiedLabel: "Premium Verified",
     detailPage: "hall-detail.html", sectionPage: "halls.html", sectionLabel: "Browse All Halls"
   },
@@ -570,29 +570,29 @@ const TRV_VENDORS = [
   // ===== CATERING =====
   {
     id: 1, cat: "catering", catLabel: "Catering", catIcon: "fa-utensils",
-    name: "Marcem Event Solutions", area: "DHA", rating: 4.8, starting_price: 450000,
-    price_suffix: "/ event", image: "https://picsum.photos/seed/cater1/900/600",
+    name: "Marcem Caterers", area: "DHA", rating: 4.8, starting_price: 450000,
+    price_suffix: "/ event", image: "caterers img/caterers img1.jpg",
     verified: true, verifiedLabel: "Premium Caterer",
     detailPage: "catering-detail.html", sectionPage: "catering.html", sectionLabel: "Browse All Caterers"
   },
   {
     id: 11, cat: "catering", catLabel: "Catering", catIcon: "fa-utensils",
     name: "Hanif Rajput Caterers", area: "PECHS", rating: 4.9, starting_price: 450000,
-    price_suffix: "/ event", image: "https://picsum.photos/seed/cater11/900/600",
+    price_suffix: "/ event", image: "caterers img/caterers img11.jpg",
     verified: true, verifiedLabel: "ISO Certified | Brand of the Year",
     detailPage: "catering-detail.html", sectionPage: "catering.html", sectionLabel: "Browse All Caterers"
   },
   {
     id: 6, cat: "catering", catLabel: "Catering", catIcon: "fa-utensils",
     name: "Lals Catering", area: "Clifton", rating: 4.9, starting_price: 500000,
-    price_suffix: "/ event", image: "https://picsum.photos/seed/cater6/900/600",
+    price_suffix: "/ event", image: "caterers img/caterers img6.jpg",
     verified: true, verifiedLabel: "Premium Gourmet Caterer",
     detailPage: "catering-detail.html", sectionPage: "catering.html", sectionLabel: "Browse All Caterers"
   },
   {
     id: 2, cat: "catering", catLabel: "Catering", catIcon: "fa-utensils",
-    name: "Quality Catering Services", area: "DHA", rating: 4.4, starting_price: 350000,
-    price_suffix: "/ event", image: "https://picsum.photos/seed/cater2/900/600",
+    name: "Royal Caterers", area: "DHA", rating: 4.5, starting_price: 370000,
+    price_suffix: "/ event", image: "caterers img/caterers img2.jpg",
     verified: true, verifiedLabel: "Verified+10 Years | Est. 1996",
     detailPage: "catering-detail.html", sectionPage: "catering.html", sectionLabel: "Browse All Caterers"
   },
@@ -601,28 +601,28 @@ const TRV_VENDORS = [
   {
     id: 1, cat: "decorators", catLabel: "Decorators", catIcon: "fa-palette",
     name: "VMP Event Management", area: "DHA", rating: 4.8, starting_price: 120000,
-    price_suffix: "/ package", image: "https://picsum.photos/seed/decor1/900/600",
+    price_suffix: "/ package", image: "decoration img/decroations img1.jpg",
     verified: true, verifiedLabel: "Verified on Shadiyana.pk",
     detailPage: "decorating-detail.html", sectionPage: "decorating.html", sectionLabel: "Browse All Decorators"
   },
   {
     id: 6, cat: "decorators", catLabel: "Decorators", catIcon: "fa-palette",
     name: "DAWAT Event Management", area: "Clifton", rating: 4.9, starting_price: 180000,
-    price_suffix: "/ package", image: "https://picsum.photos/seed/decor6/900/600",
+    price_suffix: "/ package", image: "decoration img/decroations img6.jpg",
     verified: true, verifiedLabel: "Premium Event Management",
     detailPage: "decorating-detail.html", sectionPage: "decorating.html", sectionLabel: "Browse All Decorators"
   },
   {
     id: 21, cat: "decorators", catLabel: "Decorators", catIcon: "fa-palette",
     name: "Atelier III", area: "Gulistan-e-Johar", rating: 4.7, starting_price: 95000,
-    price_suffix: "/ project", image: "https://picsum.photos/seed/decor21/900/600",
+    price_suffix: "/ project", image: "decoration img/decroations img21.jpg",
     verified: true, verifiedLabel: "Verified on Banjaiga",
     detailPage: "decorating-detail.html", sectionPage: "decorating.html", sectionLabel: "Browse All Decorators"
   },
   {
     id: 11, cat: "decorators", catLabel: "Decorators", catIcon: "fa-palette",
-    name: "Gadit l ADS", area: "PECHS", rating: 4.7, starting_price: 90000,
-    price_suffix: "/ project", image: "https://picsum.photos/seed/decor11/900/600",
+    name: "Gadit ADS", area: "PECHS", rating: 4.7, starting_price: 90000,
+    price_suffix: "/ project", image: "decoration img/decroations img11.jpg",
     verified: true, verifiedLabel: "9 Reviews on Houzz",
     detailPage: "decorating-detail.html", sectionPage: "decorating.html", sectionLabel: "Browse All Decorators"
   },
@@ -631,28 +631,28 @@ const TRV_VENDORS = [
   {
     id: 1, cat: "photography", catLabel: "Photography", catIcon: "fa-camera",
     name: "AJ Studio Official", area: "DHA", rating: 4.9, starting_price: 65000,
-    price_suffix: "/ package", image: "https://picsum.photos/seed/photo1/900/600",
+    price_suffix: "/ package", image: "photographer img/photo1.jpg",
     verified: true, verifiedLabel: "Texas School of Photography",
     detailPage: "photographer-detail.html", sectionPage: "photographers.html", sectionLabel: "Browse All Photographers"
   },
   {
     id: 3, cat: "photography", catLabel: "Photography", catIcon: "fa-camera",
-    name: "K.Bridals Photography", area: "DHA", rating: 4.8, starting_price: 50000,
-    price_suffix: "/ package", image: "https://picsum.photos/seed/photo3/900/600",
+    name: "K.Bridals Photography and Film", area: "DHA", rating: 4.8, starting_price: 50000,
+    price_suffix: "/ package", image: "photographer img/photo3.jpg",
     verified: true, verifiedLabel: "Verified on B2C Pakistan",
     detailPage: "photographer-detail.html", sectionPage: "photographers.html", sectionLabel: "Browse All Photographers"
   },
   {
     id: 6, cat: "photography", catLabel: "Photography", catIcon: "fa-camera",
-    name: "Dossani's Studio", area: "Clifton", rating: 4.7, starting_price: 60000,
-    price_suffix: "/ package", image: "https://picsum.photos/seed/photo6/900/600",
+    name: "Eastriver Productions", area: "Clifton", rating: 4.4, starting_price: 45000,
+    price_suffix: "/ package", image: "photographer img/photo6.jpg",
     verified: true, verifiedLabel: "Embassy Approved | Est. 1970s",
     detailPage: "photographer-detail.html", sectionPage: "photographers.html", sectionLabel: "Browse All Photographers"
   },
   {
-    id: 9, cat: "photography", catLabel: "Photography", catIcon: "fa-camera",
+    id: 8, cat: "photography", catLabel: "Photography", catIcon: "fa-camera",
     name: "Maha Wajahat Khan", area: "Clifton", rating: 4.8, starting_price: 65000,
-    price_suffix: "/ package", image: "https://picsum.photos/seed/photo9/900/600",
+    price_suffix: "/ package", image: "photographer img/photo8.jpg",
     verified: true, verifiedLabel: "Featured on Bloom Pakistan",
     detailPage: "photographer-detail.html", sectionPage: "photographers.html", sectionLabel: "Browse All Photographers"
   },
@@ -661,28 +661,28 @@ const TRV_VENDORS = [
   {
     id: 1, cat: "carental", catLabel: "Car Rental", catIcon: "fa-car",
     name: "Dreamz Carz", area: "DHA", rating: 4.8, starting_price: 8000,
-    price_suffix: "/ day", image: "https://picsum.photos/seed/car1/900/600",
+    price_suffix: "/ day", image: "cars img/car img41.jpg",
     verified: true, verifiedLabel: "Most Rated & Recommended",
     detailPage: "carrental-detail.html", sectionPage: "carrentals.html", sectionLabel: "Browse All Car Rentals"
   },
   {
     id: 2, cat: "carental", catLabel: "Car Rental", catIcon: "fa-car",
     name: "Vigo Rent a Car", area: "DHA", rating: 4.7, starting_price: 7000,
-    price_suffix: "/ day", image: "https://picsum.photos/seed/car2/900/600",
+    price_suffix: "/ day", image: "cars img/car img42.jpg",
     verified: true, verifiedLabel: "Professional Chauffeur",
     detailPage: "carrental-detail.html", sectionPage: "carrentals.html", sectionLabel: "Browse All Car Rentals"
   },
   {
-    id: 6, cat: "carental", catLabel: "Car Rental", catIcon: "fa-car",
-    name: "BRV Rent a Car", area: "Clifton", rating: 4.6, starting_price: 9000,
-    price_suffix: "/ day", image: "https://picsum.photos/seed/car6/900/600",
+    id: 3, cat: "carental", catLabel: "Car Rental", catIcon: "fa-car",
+    name: "BRV Rent a Car", area: "DHA", rating: 4.6, starting_price: 9000,
+    price_suffix: "/ day", image: "cars img/car img43.jpg",
     verified: true, verifiedLabel: "Corporate Transportation",
     detailPage: "carrental-detail.html", sectionPage: "carrentals.html", sectionLabel: "Browse All Car Rentals"
   },
   {
-    id: 46, cat: "carental", catLabel: "Car Rental", catIcon: "fa-car",
-    name: "ZJ Rent A Car", area: "North Karachi", rating: 4.5, starting_price: 3500,
-    price_suffix: "/ day", image: "https://picsum.photos/seed/car46/900/600",
+    id: 7, cat: "carental", catLabel: "Car Rental", catIcon: "fa-car",
+    name: "ZJ Rent A Car", area: "Clifton", rating: 4.5, starting_price: 6000,
+    price_suffix: "/ day", image: "cars img/car img47.jpg",
     verified: true, verifiedLabel: "Special Rate PKR 3,500/day",
     detailPage: "carrental-detail.html", sectionPage: "carrentals.html", sectionLabel: "Browse All Car Rentals"
   }
