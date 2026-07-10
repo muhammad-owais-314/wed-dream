@@ -6,7 +6,7 @@
     "rating": 4.9,
     "starting_price": 65000,
     "price_type": "package",
-    "image": "aj_studio.jpg",
+    "image": "photographer img/photo1.jpg",
     "verified": true
   },
   {
@@ -16,7 +16,7 @@
     "rating": 4.7,
     "starting_price": 60000,
     "price_type": "package",
-    "image": "dossani_studio.jpg",
+    "image": "photographer img/photo2.jpg",
     "verified": true
   },
   {
@@ -26,7 +26,7 @@
     "rating": 4.8,
     "starting_price": 50000,
     "price_type": "package",
-    "image": "kbridals.jpg",
+    "image": "photographer img/photo3.jpg",
     "verified": true
   },
   {
@@ -36,7 +36,7 @@
     "rating": 4.6,
     "starting_price": 45000,
     "price_type": "package",
-    "image": "shakir_rehman.jpg",
+    "image": "photographer img/photo4.jpg",
     "verified": true
   },
   {
@@ -46,7 +46,7 @@
     "rating": 4.7,
     "starting_price": 55000,
     "price_type": "package",
-    "image": "twc_cinematics.jpg",
+    "image": "photographer img/photo5.jpg",
     "verified": true
   },
   {
@@ -56,7 +56,7 @@
     "rating": 4.4,
     "starting_price": 45000,
     "price_type": "package",
-    "image": "eastriver.jpg",
+    "image": "photographer img/photo6.jpg",
     "verified": true
   },
   {
@@ -66,7 +66,7 @@
     "rating": 4.6,
     "starting_price": 52000,
     "price_type": "package",
-    "image": "oshoot.jpg",
+    "image": "photographer img/photo7.jpg",
     "verified": true
   },
   {
@@ -76,7 +76,7 @@
     "rating": 4.8,
     "starting_price": 65000,
     "price_type": "package",
-    "image": "maha_wajahat.jpg",
+    "image": "photographer img/photo8.jpg",
     "verified": true
   },
   {
@@ -86,7 +86,7 @@
     "rating": 4.6,
     "starting_price": 50000,
     "price_type": "package",
-    "image": "wedding_station.jpg",
+    "image": "photographer img/photo9.jpg",
     "verified": true
   },
   {
@@ -96,7 +96,7 @@
     "rating": 4.5,
     "starting_price": 35000,
     "price_type": "package",
-    "image": "biyah_wedding.jpg",
+    "image": "photographer img/photo10.jpg",
     "verified": true
   },
   {
@@ -106,7 +106,7 @@
     "rating": 4.5,
     "starting_price": 35000,
     "price_type": "package",
-    "image": "sohail_asim.jpg",
+    "image": "photographer img/photo11.jpg",
     "verified": true
   },
   {
@@ -116,7 +116,7 @@
     "rating": 4.3,
     "starting_price": 28000,
     "price_type": "package",
-    "image": "zainbaba.jpg",
+    "image": "photographer img/photo12.jpg",
     "verified": true
   },
   {
@@ -126,7 +126,7 @@
     "rating": 4.5,
     "starting_price": 40000,
     "price_type": "package",
-    "image": "jobaed_khan.jpg",
+    "image": "photographer img/photo13.jpg",
     "verified": true
   },
   {
@@ -136,7 +136,7 @@
     "rating": 4.3,
     "starting_price": 30000,
     "price_type": "package",
-    "image": "shadigrapher.jpg",
+    "image": "photographer img/photo14.jpg",
     "verified": true
   },
   {
@@ -146,7 +146,7 @@
     "rating": 4.6,
     "starting_price": 40000,
     "price_type": "package",
-    "image": "shahida_weds.jpg",
+    "image": "photographer img/photo15.jpg",
     "verified": true
   },
   {
@@ -156,7 +156,7 @@
     "rating": 4.2,
     "starting_price": 25000,
     "price_type": "package",
-    "image": "smart_aperture.jpg",
+    "image": "photographer img/photo16.jpg",
     "verified": true
   },
   {
@@ -166,7 +166,7 @@
     "rating": 4.2,
     "starting_price": 25000,
     "price_type": "package",
-    "image": "akskaar.jpg",
+    "image": "photographer img/photo17.jpg",
     "verified": true
   },
   {
@@ -176,7 +176,7 @@
     "rating": 4.3,
     "starting_price": 30000,
     "price_type": "package",
-    "image": "qasimkhan.jpg",
+    "image": "photographer img/photo18.jpg",
     "verified": true
   },
   {
@@ -186,7 +186,7 @@
     "rating": 4.4,
     "starting_price": 35000,
     "price_type": "package",
-    "image": "hb_studio.jpg",
+    "image": "photographer img/photo19.jpg",
     "verified": true
   },
   {
@@ -196,7 +196,7 @@
     "rating": 4.4,
     "starting_price": 30000,
     "price_type": "package",
-    "image": "dees_creations.jpg",
+    "image": "photographer img/photo20.jpg",
     "verified": true
   },
   {
@@ -206,7 +206,7 @@
     "rating": 4.2,
     "starting_price": 28000,
     "price_type": "package",
-    "image": "aatif_photo.jpg",
+    "image": "photographer img/photo21.jpg",
     "verified": true
   },
   {
@@ -216,7 +216,7 @@
     "rating": 4.2,
     "starting_price": 25000,
     "price_type": "package",
-    "image": "nasir4u.jpg",
+    "image": "photographer img/photo22.jpg",
     "verified": true
   },
   {
@@ -226,7 +226,7 @@
     "rating": 4.4,
     "starting_price": 32500,
     "price_type": "package",
-    "image": "moin_shah.jpg",
+    "image": "photographer img/photo23.jpg",
     "verified": true
   },
   {
@@ -236,7 +236,7 @@
     "rating": 4.3,
     "starting_price": 28000,
     "price_type": "package",
-    "image": "sohailg.jpg",
+    "image": "photographer img/photo24.jpg",
     "verified": true
   },
   {
@@ -246,7 +246,7 @@
     "rating": 4.0,
     "starting_price": 25000,
     "price_type": "package",
-    "image": "abd_shutters.jpg",
+    "image": "photographer img/photo25.jpg",
     "verified": true
   },
   {
@@ -256,7 +256,7 @@
     "rating": 4.0,
     "starting_price": 18000,
     "price_type": "package",
-    "image": "fb_photo_hub.jpg",
+    "image": "photographer img/photo26.jpg",
     "verified": true
   },
   {
@@ -266,7 +266,7 @@
     "rating": 4.4,
     "starting_price": 40000,
     "price_type": "package",
-    "image": "bnw_collections.jpg",
+    "image": "photographer img/photo27.jpg",
     "verified": true
   },
   {
@@ -276,7 +276,7 @@
     "rating": 4.3,
     "starting_price": 28000,
     "price_type": "package",
-    "image": "wedders_photo.jpg",
+    "image": "photographer img/photo28.jpg",
     "verified": true
   },
   {
@@ -286,7 +286,7 @@
     "rating": 4.2,
     "starting_price": 25000,
     "price_type": "package",
-    "image": "party_popper_photo.jpg",
+    "image": "photographer img/photo29.jpg",
     "verified": true
   },
   {
@@ -296,7 +296,7 @@
     "rating": 4.1,
     "starting_price": 20000,
     "price_type": "package",
-    "image": "bahadurabad_photo.jpg",
+    "image": "photographer img/photo30.jpg",
     "verified": true
   },
   {
@@ -306,7 +306,7 @@
     "rating": 4.1,
     "starting_price": 22000,
     "price_type": "package",
-    "image": "elite_bahadurabad.jpg",
+    "image": "photographer img/photo31.jpg",
     "verified": true
   },
   {
@@ -316,7 +316,7 @@
     "rating": 4.3,
     "starting_price": 25000,
     "price_type": "package",
-    "image": "fotoclick.jpg",
+    "image": "photographer img/photo32.jpg",
     "verified": true
   },
   {
@@ -326,7 +326,7 @@
     "rating": 4.4,
     "starting_price": 35000,
     "price_type": "package",
-    "image": "anas_ahmad.jpg",
+    "image": "photographer img/photo33.jpg",
     "verified": true
   },
   {
@@ -336,7 +336,7 @@
     "rating": 4.1,
     "starting_price": 19000,
     "price_type": "package",
-    "image": "tariq_road_photo.jpg",
+    "image": "photographer img/photo34.jpg",
     "verified": true
   },
   {
@@ -346,7 +346,7 @@
     "rating": 4.2,
     "starting_price": 30000,
     "price_type": "package",
-    "image": "shadi_point.jpg",
+    "image": "photographer img/photo35.jpg",
     "verified": true
   },
   {
@@ -356,7 +356,7 @@
     "rating": 4.1,
     "starting_price": 28000,
     "price_type": "package",
-    "image": "luxury_tariq.jpg",
+    "image": "photographer img/photo36.jpg",
     "verified": true
   },
   {
@@ -366,7 +366,7 @@
     "rating": 4.1,
     "starting_price": 22000,
     "price_type": "package",
-    "image": "jugnoo.jpg",
+    "image": "photographer img/photo37.jpg",
     "verified": true
   },
   {
@@ -376,7 +376,7 @@
     "rating": 4.2,
     "starting_price": 25000,
     "price_type": "package",
-    "image": "smwaqar.jpg",
+    "image": "photographer img/photo38.jpg",
     "verified": true
   },
   {
@@ -386,7 +386,7 @@
     "rating": 4.0,
     "starting_price": 20000,
     "price_type": "package",
-    "image": "north_nazimabad_photo.jpg",
+    "image": "photographer img/photo39.jpg",
     "verified": true
   },
   {
@@ -396,7 +396,7 @@
     "rating": 4.1,
     "starting_price": 23000,
     "price_type": "package",
-    "image": "royal_nn_photo.jpg",
+    "image": "photographer img/photo40.jpg",
     "verified": true
   },
   {
@@ -406,7 +406,7 @@
     "rating": 4.1,
     "starting_price": 28000,
     "price_type": "package",
-    "image": "elite_nn_photo.jpg",
+    "image": "photographer img/photo41.jpg",
     "verified": true
   },
   {
@@ -416,7 +416,7 @@
     "rating": 4.4,
     "starting_price": 45000,
     "price_type": "package",
-    "image": "benchmarker.jpg",
+    "image": "photographer img/photo42.jpg",
     "verified": true
   },
   {
@@ -426,7 +426,7 @@
     "rating": 4.3,
     "starting_price": 40000,
     "price_type": "package",
-    "image": "artx_pro.jpg",
+    "image": "photographer img/photo43.jpg",
     "verified": true
   },
   {
@@ -436,7 +436,7 @@
     "rating": 3.9,
     "starting_price": 15000,
     "price_type": "package",
-    "image": "north_karachi_photo.jpg",
+    "image": "photographer img/photo44.jpg",
     "verified": true
   },
   {
@@ -446,7 +446,7 @@
     "rating": 4.0,
     "starting_price": 18000,
     "price_type": "package",
-    "image": "royal_nk_photo.jpg",
+    "image": "photographer img/photo45.jpg",
     "verified": true
   },
   {
@@ -456,7 +456,7 @@
     "rating": 3.8,
     "starting_price": 16000,
     "price_type": "package",
-    "image": "star_nk_photo.jpg",
+    "image": "photographer img/photo46.jpg",
     "verified": true
   },
   {
@@ -466,7 +466,7 @@
     "rating": 4.5,
     "starting_price": 48000,
     "price_type": "package",
-    "image": "lenscraft.jpg",
+    "image": "photographer img/photo47.jpg",
     "verified": true
   },
   {
@@ -476,7 +476,7 @@
     "rating": 4.3,
     "starting_price": 42000,
     "price_type": "package",
-    "image": "golden_frame.jpg",
+    "image": "photographer img/photo48.jpg",
     "verified": true
   },
   {
@@ -486,7 +486,7 @@
     "rating": 4.0,
     "starting_price": 22000,
     "price_type": "package",
-    "image": "dreamcatcher.jpg",
+    "image": "photographer img/photo49.jpg",
     "verified": true
   },
   {
@@ -496,7 +496,7 @@
     "rating": 4.4,
     "starting_price": 38000,
     "price_type": "package",
-    "image": "wedding_tales_hira.jpg",
+    "image": "photographer img/photo50.jpg",
     "verified": true
   }
 ]

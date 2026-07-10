@@ -6,15 +6,15 @@
     "rating": 4.8,
     "starting_price": 120000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/vmpevent/600/400",
+    "image": "decoration img/decroations img1.jpg",
     "verified": true,
     "address": "31/D Stadium Lane 4, Khayaban-e-Shamsher, Phase 5, DHA, Karachi, Pakistan",
     "phone": "+92 21 35878899",
     "whatsapp": "+92 21 35878899",
     "gallery": [
-      "https://picsum.photos/seed/vmp1/900/600",
-      "https://picsum.photos/seed/vmp2/900/600",
-      "https://picsum.photos/seed/vmp3/900/600"
+      "decoration img/decroations img1.jpg",
+      "decoration img/decroations img2.jpg",
+      "decoration img/decroations img3.jpg"
     ],
     "events_types": ["Wedding", "Dholki", "Walima", "Bridal Shower", "Engagement", "Nikkah", "Baraat planning", "Mehendi & Mayo", "Birthday Parties"],
     "staff_available": ["Male"],
@@ -71,15 +71,15 @@
     "rating": 4.7,
     "starting_price": 130000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/eventdesigner/600/400",
+    "image": "decoration img/decroations img4.jpg",
     "verified": true,
     "address": "DHA, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/edesigner1/900/600",
-      "https://picsum.photos/seed/edesigner2/900/600",
-      "https://picsum.photos/seed/edesigner3/900/600"
+      "decoration img/decroations img4.jpg",
+      "decoration img/decroations img5.jpg",
+      "decoration img/decroations img6.jpg"
     ],
     "events_types": ["Wedding", "Engagement", "Mehendi", "Walima", "Corporate Events"],
     "staff_available": ["Male", "Female"],
@@ -133,15 +133,15 @@
     "rating": 4.6,
     "starting_price": 100000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/sparkleevents/600/400",
+    "image": "decoration img/decroations img7.jpg",
     "verified": true,
     "address": "DHA, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/sparkle1/900/600",
-      "https://picsum.photos/seed/sparkle2/900/600",
-      "https://picsum.photos/seed/sparkle3/900/600"
+      "decoration img/decroations img7.jpg",
+      "decoration img/decroations img8.jpg",
+      "decoration img/decroations img9.jpg"
     ],
     "events_types": ["Wedding", "Birthday Parties", "Corporate Events", "Engagement", "Mehendi"],
     "staff_available": ["Male", "Female"],
@@ -196,15 +196,15 @@
     "rating": 4.5,
     "starting_price": 150000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/marcemevent/600/400",
+    "image": "decoration img/decroations img10.jpg",
     "verified": true,
     "address": "Khayaban-e-Shahbaz Commercial Lane 8, DHA Phase 6, Karachi, Pakistan",
     "phone": "+92 21 35878899",
     "whatsapp": "+92 21 35878899",
     "gallery": [
-      "https://picsum.photos/seed/marcem1/900/600",
-      "https://picsum.photos/seed/marcem2/900/600",
-      "https://picsum.photos/seed/marcem3/900/600"
+      "decoration img/decroations img10.jpg",
+      "decoration img/decroations img11.jpg",
+      "decoration img/decroations img12.jpg"
     ],
     "events_types": ["Wedding", "Corporate Events", "Engagement", "Walima", "Birthday Parties"],
     "staff_available": ["Male", "Female"],
@@ -259,15 +259,15 @@
     "rating": 4.4,
     "starting_price": 110000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/7thsky/600/400",
+    "image": "decoration img/decroations img13.jpg",
     "verified": true,
     "address": "DHA, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/7thsky1/900/600",
-      "https://picsum.photos/seed/7thsky2/900/600",
-      "https://picsum.photos/seed/7thsky3/900/600"
+      "decoration img/decroations img13.jpg",
+      "decoration img/decroations img14.jpg",
+      "decoration img/decroations img15.jpg"
     ],
     "events_types": ["Wedding", "Engagement", "Mehendi", "Walima", "Birthday Parties"],
     "staff_available": ["Male"],
@@ -320,15 +320,15 @@
     "rating": 4.9,
     "starting_price": 180000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/dawatevent/600/400",
+    "image": "decoration img/decroations img16.jpg",
     "verified": true,
     "address": "Ocean Mall G-22, Clifton, Karachi, Pakistan",
     "phone": "+92 321 7888061",
     "whatsapp": "+92 321 7888061",
     "gallery": [
-      "https://picsum.photos/seed/dawat1/900/600",
-      "https://picsum.photos/seed/dawat2/900/600",
-      "https://picsum.photos/seed/dawat3/900/600"
+      "decoration img/decroations img16.jpg",
+      "decoration img/decroations img17.jpg",
+      "decoration img/decroations img18.jpg"
     ],
     "events_types": ["Wedding", "Parties", "Corporate Events", "Destination Weddings", "Engagement", "Mehendi", "Walima"],
     "staff_available": ["Male", "Female"],
@@ -387,15 +387,15 @@
     "rating": 4.3,
     "starting_price": 80000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/multibusiness/600/400",
+    "image": "decoration img/decroations img19.jpg",
     "verified": true,
     "address": "303, 3rd floor, street 4th, near aqsa masjid street, punjab churangi, Clifton, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/multibiz1/900/600",
-      "https://picsum.photos/seed/multibiz2/900/600",
-      "https://picsum.photos/seed/multibiz3/900/600"
+      "decoration img/decroations img19.jpg",
+      "decoration img/decroations img20.jpg",
+      "decoration img/decroations img21.jpg"
     ],
     "events_types": ["Event Management", "Exhibitions", "Expo", "Wedding", "Corporate Events"],
     "staff_available": ["Male"],
@@ -451,15 +451,15 @@
     "rating": 4.5,
     "starting_price": 140000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/primeevents/600/400",
+    "image": "decoration img/decroations img22.jpg",
     "verified": true,
     "address": "#501, 5th Floor, Sky Mark Tower, Karachi, Pakistan",
     "phone": "+92 21 1234567",
     "whatsapp": "+92 21 1234567",
     "gallery": [
-      "https://picsum.photos/seed/prime1/900/600",
-      "https://picsum.photos/seed/prime2/900/600",
-      "https://picsum.photos/seed/prime3/900/600"
+      "decoration img/decroations img22.jpg",
+      "decoration img/decroations img23.jpg",
+      "decoration img/decroations img24.jpg"
     ],
     "events_types": ["Wedding", "Corporate Events", "Engagement", "Mehendi", "Birthday Parties"],
     "staff_available": ["Male", "Female"],
@@ -508,15 +508,15 @@
     "rating": 4.4,
     "starting_price": 120000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/partnersgroup/600/400",
+    "image": "decoration img/decroations img25.jpg",
     "verified": true,
     "address": "422, Mashrique Center, Block-14, Gulshan (Serves Clifton), Karachi, Pakistan",
     "phone": "+92 21 34947006",
     "whatsapp": "+92 21 34947006",
     "gallery": [
-      "https://picsum.photos/seed/partners1/900/600",
-      "https://picsum.photos/seed/partners2/900/600",
-      "https://picsum.photos/seed/partners3/900/600"
+      "decoration img/decroations img25.jpg",
+      "decoration img/decroations img26.jpg",
+      "decoration img/decroations img27.jpg"
     ],
     "events_types": ["Wedding", "Corporate Events", "Engagement", "Walima"],
     "staff_available": ["Male"],
@@ -565,15 +565,15 @@
     "rating": 4.3,
     "starting_price": 100000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/ziaulhaq/600/400",
+    "image": "decoration img/decroations img28.jpg",
     "verified": true,
     "address": "D-51, Block-9, Clifton, Karachi, Pakistan",
     "phone": "+92 21 5866841",
     "whatsapp": "+92 21 5866841",
     "gallery": [
-      "https://picsum.photos/seed/zia1/900/600",
-      "https://picsum.photos/seed/zia2/900/600",
-      "https://picsum.photos/seed/zia3/900/600"
+      "decoration img/decroations img28.jpg",
+      "decoration img/decroations img29.jpg",
+      "decoration img/decroations img30.jpg"
     ],
     "events_types": ["Wedding", "Event Management", "Decor Services"],
     "staff_available": ["Male"],
@@ -622,15 +622,15 @@
     "rating": 4.7,
     "starting_price": 90000,
     "price_type": "project",
-    "image": "https://picsum.photos/seed/gaditads/600/400",
+    "image": "decoration img/decroations img31.jpg",
     "verified": true,
     "address": "2nd Floor, D-141, Block II, PECHS, Karachi 75400, Pakistan",
     "phone": "+92 345 2893292",
     "whatsapp": "+92 345 2893292",
     "gallery": [
-      "https://picsum.photos/seed/gadit1/900/600",
-      "https://picsum.photos/seed/gadit2/900/600",
-      "https://picsum.photos/seed/gadit3/900/600"
+      "decoration img/decroations img31.jpg",
+      "decoration img/decroations img32.jpg",
+      "decoration img/decroations img33.jpg"
     ],
     "services": ["Architecture", "Interior Design", "Landscape", "Fountains", "Railings", "Woodwork", "Floor Patterns", "Bathrooms", "Kitchens"],
     "specialties": ["Architecture design studio", "Residential & commercial projects", "Design standards development"],
@@ -663,15 +663,15 @@
     "rating": 4.5,
     "starting_price": 85000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/therope/600/400",
+    "image": "decoration img/decroations img34.jpg",
     "verified": true,
     "address": "Suite #118, P.E.C.H.S. Shahrah-e-Faisal, Karachi, Pakistan",
     "phone": "+92 21 4542925",
     "whatsapp": "+92 21 4542925",
     "gallery": [
-      "https://picsum.photos/seed/rope1/900/600",
-      "https://picsum.photos/seed/rope2/900/600",
-      "https://picsum.photos/seed/rope3/900/600"
+      "decoration img/decroations img34.jpg",
+      "decoration img/decroations img35.jpg",
+      "decoration img/decroations img36.jpg"
     ],
     "events_types": ["Wedding", "Corporate Events", "Private Parties"],
     "staff_available": ["Male", "Female"],
@@ -720,15 +720,15 @@
     "rating": 4.4,
     "starting_price": 70000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/siddiquidecor/600/400",
+    "image": "decoration img/decroations img37.jpg",
     "verified": true,
     "address": "A-6, 1st Floor, Block-2 Main Tariq Road, PECHS, Karachi, Pakistan",
     "phone": "+92 21 4537279",
     "whatsapp": "+92 21 4537279",
     "gallery": [
-      "https://picsum.photos/seed/siddiqui1/900/600",
-      "https://picsum.photos/seed/siddiqui2/900/600",
-      "https://picsum.photos/seed/siddiqui3/900/600"
+      "decoration img/decroations img37.jpg",
+      "decoration img/decroations img38.jpg",
+      "decoration img/decroations img39.jpg"
     ],
     "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
@@ -777,15 +777,15 @@
     "rating": 4.3,
     "starting_price": 65000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/floraldesign/600/400",
+    "image": "decoration img/decroations img40.jpg",
     "verified": true,
     "address": "6-B, P.E.C.H.S. Shahrah-e-Faisal, Karachi, Pakistan",
     "phone": "+92 21 4537126",
     "whatsapp": "+92 21 4537126",
     "gallery": [
-      "https://picsum.photos/seed/floral1/900/600",
-      "https://picsum.photos/seed/floral2/900/600",
-      "https://picsum.photos/seed/floral3/900/600"
+      "decoration img/decroations img40.jpg",
+      "decoration img/decroations img41.jpg",
+      "decoration img/decroations img42.jpg"
     ],
     "events_types": ["Wedding", "Event Decoration", "Floral Arrangements"],
     "staff_available": ["Male"],
@@ -834,15 +834,15 @@
     "rating": 4.2,
     "starting_price": 75000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/decorstudio/600/400",
+    "image": "decoration img/decroations img43.jpg",
     "verified": true,
     "address": "PECHS, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/decorstudio1/900/600",
-      "https://picsum.photos/seed/decorstudio2/900/600",
-      "https://picsum.photos/seed/decorstudio3/900/600"
+      "decoration img/decroations img43.jpg",
+      "decoration img/decroations img44.jpg",
+      "decoration img/decroations img45.jpg"
     ],
     "events_types": ["Wedding", "Event Decor", "Party Decoration"],
     "staff_available": ["Male", "Female"],
@@ -880,15 +880,15 @@
     "rating": 4.6,
     "starting_price": 80000,
     "price_type": "project",
-    "image": "https://picsum.photos/seed/craftmaster/600/400",
+    "image": "decoration img/decroations img46.jpg",
     "verified": true,
     "address": "Suite 512, 5th Floor, Al-Fiza Glass Tower, Near Lasania Restaurant, Rashid Minhas Road, Gulshan e Iqbal Block 10A, Karachi 75300, Pakistan",
     "phone": "+92 332 7395822",
     "whatsapp": "+92 332 7395822",
     "gallery": [
-      "https://picsum.photos/seed/craft1/900/600",
-      "https://picsum.photos/seed/craft2/900/600",
-      "https://picsum.photos/seed/craft3/900/600"
+      "decoration img/decroations img46.jpg",
+      "decoration img/decroations img47.jpg",
+      "decoration img/decroations img48.jpg"
     ],
     "services": [
       "3D Rendering", "Bathroom Design", "Bedroom Design", "Closet Design", "Custom Cabinets", "Custom Furniture",
@@ -920,15 +920,15 @@
     "rating": 4.4,
     "starting_price": 75000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/aimzevents/600/400",
+    "image": "decoration img/decroations img49.jpg",
     "verified": true,
     "address": "M-9, Mez.floor, Room #2, Mashriq Centre, Block-14, Gulshan-e-iqbal, Karachi, Pakistan",
     "phone": "+92 21 35470555",
     "whatsapp": "+92 21 35470555",
     "gallery": [
-      "https://picsum.photos/seed/aimz1/900/600",
-      "https://picsum.photos/seed/aimz2/900/600",
-      "https://picsum.photos/seed/aimz3/900/600"
+      "decoration img/decroations img49.jpg",
+      "decoration img/decroations img50.jpg",
+      "decoration img/decroations img51.jpg"
     ],
     "events_types": ["Wedding", "Corporate Events", "Engagement", "Mehendi"],
     "staff_available": ["Male", "Female"],
@@ -977,15 +977,15 @@
     "rating": 4.3,
     "starting_price": 70000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/kamzkirz/600/400",
+    "image": "decoration img/decroations img52.jpg",
     "verified": true,
     "address": "Lsb Row #1, Street #3, Block-3, Gulshan-e-iqbal, Karachi, Pakistan",
     "phone": "+92 21 34973993",
     "whatsapp": "+92 21 34973993",
     "gallery": [
-      "https://picsum.photos/seed/kamz1/900/600",
-      "https://picsum.photos/seed/kamz2/900/600",
-      "https://picsum.photos/seed/kamz3/900/600"
+      "decoration img/decroations img52.jpg",
+      "decoration img/decroations img53.jpg",
+      "decoration img/decroations img54.jpg"
     ],
     "events_types": ["Wedding", "Event Decor", "Party Decoration"],
     "staff_available": ["Male"],
@@ -1023,15 +1023,15 @@
     "rating": 4.2,
     "starting_price": 65000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/gulshandecor/600/400",
+    "image": "decoration img/decroations img55.jpg",
     "verified": true,
     "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/gulshandecor1/900/600",
-      "https://picsum.photos/seed/gulshandecor2/900/600",
-      "https://picsum.photos/seed/gulshandecor3/900/600"
+      "decoration img/decroations img55.jpg",
+      "decoration img/decroations img56.jpg",
+      "decoration img/decroations img57.jpg"
     ],
     "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
@@ -1069,15 +1069,15 @@
     "rating": 4.1,
     "starting_price": 55000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/nipadecor/600/400",
+    "image": "decoration img/decroations img58.jpg",
     "verified": true,
     "address": "Near Nipa Chowrangi, Gulshan-e-Iqbal, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/nipa1/900/600",
-      "https://picsum.photos/seed/nipa2/900/600",
-      "https://picsum.photos/seed/nipa3/900/600"
+      "decoration img/decroations img58.jpg",
+      "decoration img/decroations img59.jpg",
+      "decoration img/decroations img60.jpg"
     ],
     "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
@@ -1115,15 +1115,15 @@
     "rating": 4.7,
     "starting_price": 95000,
     "price_type": "project",
-    "image": "https://picsum.photos/seed/atelier3/600/400",
+    "image": "decoration img/decroations img1.jpg",
     "verified": true,
     "address": "A-72/1 Sadabad Society, Gulistan-e-Jauhar Block 4, Karachi, Sindh 75230, Pakistan",
     "phone": "+92 343 0000000",
     "whatsapp": "+92 343 0000000",
     "gallery": [
-      "https://picsum.photos/seed/atelier1/900/600",
-      "https://picsum.photos/seed/atelier2/900/600",
-      "https://picsum.photos/seed/atelier3/900/600"
+      "decoration img/decroations img1.jpg",
+      "decoration img/decroations img2.jpg",
+      "decoration img/decroations img3.jpg"
     ],
     "services": ["Architectural Design", "Interior Design", "Exteriors", "Landscaping", "Project Execution"],
     "specialties": ["Residential Design", "Retail Design", "Commercial Design", "Corporate Design", "Academics Design", "Landscaping"],
@@ -1151,15 +1151,15 @@
     "rating": 4.5,
     "starting_price": 80000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/sevenaura/600/400",
+    "image": "decoration img/decroations img4.jpg",
     "verified": true,
     "address": "Suite G-5, B5 Street 1, Block 12, Gulistan-e-Johar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/aura1/900/600",
-      "https://picsum.photos/seed/aura2/900/600",
-      "https://picsum.photos/seed/aura3/900/600"
+      "decoration img/decroations img4.jpg",
+      "decoration img/decroations img5.jpg",
+      "decoration img/decroations img6.jpg"
     ],
     "events_types": ["Wedding", "Corporate Events", "Commercial Events", "Private Parties & Celebrations"],
     "staff_available": ["Male", "Female"],
@@ -1214,15 +1214,15 @@
     "rating": 4.4,
     "starting_price": 140000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/bellavista/600/400",
+    "image": "decoration img/decroations img7.jpg",
     "verified": true,
     "address": "Plot No-C-79, 80 Block, Gulistan-e-Jouhar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/bella1/900/600",
-      "https://picsum.photos/seed/bella2/900/600",
-      "https://picsum.photos/seed/bella3/900/600"
+      "decoration img/decroations img7.jpg",
+      "decoration img/decroations img8.jpg",
+      "decoration img/decroations img9.jpg"
     ],
     "events_types": ["Wedding", "Banquet Events", "Engagement", "Walima"],
     "staff_available": ["Male", "Female"],
@@ -1271,15 +1271,15 @@
     "rating": 4.3,
     "starting_price": 75000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/johargrand/600/400",
+    "image": "decoration img/decroations img10.jpg",
     "verified": true,
     "address": "Block 17, Gulistan-e-Johar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/jgrand1/900/600",
-      "https://picsum.photos/seed/jgrand2/900/600",
-      "https://picsum.photos/seed/jgrand3/900/600"
+      "decoration img/decroations img10.jpg",
+      "decoration img/decroations img11.jpg",
+      "decoration img/decroations img12.jpg"
     ],
     "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
@@ -1317,15 +1317,15 @@
     "rating": 4.2,
     "starting_price": 70000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/pearljohar/600/400",
+    "image": "decoration img/decroations img13.jpg",
     "verified": true,
     "address": "Block 19, Gulistan-e-Johar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/pearlj1/900/600",
-      "https://picsum.photos/seed/pearlj2/900/600",
-      "https://picsum.photos/seed/pearlj3/900/600"
+      "decoration img/decroations img13.jpg",
+      "decoration img/decroations img14.jpg",
+      "decoration img/decroations img15.jpg"
     ],
     "events_types": ["Wedding", "Engagement", "Mehendi", "Birthday Parties"],
     "staff_available": ["Male", "Female"],
@@ -1363,15 +1363,15 @@
     "rating": 4.3,
     "starting_price": 50000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/ahmedparty/600/400",
+    "image": "decoration img/decroations img16.jpg",
     "verified": true,
     "address": "Shop no. 6, near Masjid O Imam Bargah Hussaini, Federal B Area FC Area, Karachi, Pakistan",
     "phone": "+92 300 0000000",
     "whatsapp": "+92 300 0000000",
     "gallery": [
-      "https://picsum.photos/seed/ahmed1/900/600",
-      "https://picsum.photos/seed/ahmed2/900/600",
-      "https://picsum.photos/seed/ahmed3/900/600"
+      "decoration img/decroations img16.jpg",
+      "decoration img/decroations img17.jpg",
+      "decoration img/decroations img18.jpg"
     ],
     "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
@@ -1395,15 +1395,15 @@
     "rating": 4.2,
     "starting_price": 48000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/fbeventdecor/600/400",
+    "image": "decoration img/decroations img19.jpg",
     "verified": true,
     "address": "Federal B Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/fbevent1/900/600",
-      "https://picsum.photos/seed/fbevent2/900/600",
-      "https://picsum.photos/seed/fbevent3/900/600"
+      "decoration img/decroations img19.jpg",
+      "decoration img/decroations img20.jpg",
+      "decoration img/decroations img21.jpg"
     ],
     "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
@@ -1441,15 +1441,15 @@
     "rating": 4.1,
     "starting_price": 55000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/granddecor/600/400",
+    "image": "decoration img/decroations img22.jpg",
     "verified": true,
     "address": "FB Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/granddec1/900/600",
-      "https://picsum.photos/seed/granddec2/900/600",
-      "https://picsum.photos/seed/granddec3/900/600"
+      "decoration img/decroations img22.jpg",
+      "decoration img/decroations img23.jpg",
+      "decoration img/decroations img24.jpg"
     ],
     "events_types": ["Wedding", "Valima", "Mehndi", "Corporate Events"],
     "staff_available": ["Male"],
@@ -1487,15 +1487,15 @@
     "rating": 4.0,
     "starting_price": 45000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/starpartydecor/600/400",
+    "image": "decoration img/decroations img25.jpg",
     "verified": true,
     "address": "FB Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/stardec1/900/600",
-      "https://picsum.photos/seed/stardec2/900/600",
-      "https://picsum.photos/seed/stardec3/900/600"
+      "decoration img/decroations img25.jpg",
+      "decoration img/decroations img26.jpg",
+      "decoration img/decroations img27.jpg"
     ],
     "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
@@ -1527,15 +1527,15 @@
     "rating": 4.0,
     "starting_price": 42000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/fbdecorhub/600/400",
+    "image": "decoration img/decroations img28.jpg",
     "verified": true,
     "address": "Near KDA Market, FB Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/fbhub1/900/600",
-      "https://picsum.photos/seed/fbhub2/900/600",
-      "https://picsum.photos/seed/fbhub3/900/600"
+      "decoration img/decroations img28.jpg",
+      "decoration img/decroations img29.jpg",
+      "decoration img/decroations img30.jpg"
     ],
     "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
@@ -1567,15 +1567,15 @@
     "rating": 4.8,
     "starting_price": 100000,
     "price_type": "project",
-    "image": "https://picsum.photos/seed/vogueinterior/600/400",
+    "image": "decoration img/decroations img31.jpg",
     "verified": true,
     "address": "9, Bahadurabad, Block-3, Shaheed-e-Millat Road, Karachi, Pakistan",
     "phone": "+92 21 34924766",
     "whatsapp": "+92 21 34924766",
     "gallery": [
-      "https://picsum.photos/seed/vogue1/900/600",
-      "https://picsum.photos/seed/vogue2/900/600",
-      "https://picsum.photos/seed/vogue3/900/600"
+      "decoration img/decroations img31.jpg",
+      "decoration img/decroations img32.jpg",
+      "decoration img/decroations img33.jpg"
     ],
     "services": ["Interior Design", "Home Decor", "Event Styling"],
     "specialties": ["Interior Design", "Event Decor", "Home Styling"],
@@ -1598,15 +1598,15 @@
     "rating": 4.4,
     "starting_price": 70000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/weddersevent/600/400",
+    "image": "decoration img/decroations img34.jpg",
     "verified": true,
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/wedders1/900/600",
-      "https://picsum.photos/seed/wedders2/900/600",
-      "https://picsum.photos/seed/wedders3/900/600"
+      "decoration img/decroations img34.jpg",
+      "decoration img/decroations img35.jpg",
+      "decoration img/decroations img36.jpg"
     ],
     "events_types": ["Wedding", "Engagement", "Mehendi", "Walima"],
     "staff_available": ["Male", "Female"],
@@ -1644,15 +1644,15 @@
     "rating": 4.3,
     "starting_price": 65000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/partypopper/600/400",
+    "image": "decoration img/decroations img37.jpg",
     "verified": true,
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/popper1/900/600",
-      "https://picsum.photos/seed/popper2/900/600",
-      "https://picsum.photos/seed/popper3/900/600"
+      "decoration img/decroations img37.jpg",
+      "decoration img/decroations img38.jpg",
+      "decoration img/decroations img39.jpg"
     ],
     "events_types": ["Wedding", "Birthday Parties", "Corporate Events"],
     "staff_available": ["Male", "Female"],
@@ -1690,15 +1690,15 @@
     "rating": 4.2,
     "starting_price": 60000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/joyplanner/600/400",
+    "image": "decoration img/decroations img40.jpg",
     "verified": true,
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/joy1/900/600",
-      "https://picsum.photos/seed/joy2/900/600",
-      "https://picsum.photos/seed/joy3/900/600"
+      "decoration img/decroations img40.jpg",
+      "decoration img/decroations img41.jpg",
+      "decoration img/decroations img42.jpg"
     ],
     "events_types": ["Wedding", "Engagement", "Birthday Parties"],
     "staff_available": ["Male", "Female"],
@@ -1736,15 +1736,15 @@
     "rating": 4.1,
     "starting_price": 55000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/nayyerdecor/600/400",
+    "image": "decoration img/decroations img43.jpg",
     "verified": true,
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/nayyer1/900/600",
-      "https://picsum.photos/seed/nayyer2/900/600",
-      "https://picsum.photos/seed/nayyer3/900/600"
+      "decoration img/decroations img43.jpg",
+      "decoration img/decroations img44.jpg",
+      "decoration img/decroations img45.jpg"
     ],
     "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
@@ -1776,15 +1776,15 @@
     "rating": 4.6,
     "starting_price": 120000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/luxorbanquet/600/400",
+    "image": "decoration img/decroations img46.jpg",
     "verified": true,
     "address": "Main Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/luxor1/900/600",
-      "https://picsum.photos/seed/luxor2/900/600",
-      "https://picsum.photos/seed/luxor3/900/600"
+      "decoration img/decroations img46.jpg",
+      "decoration img/decroations img47.jpg",
+      "decoration img/decroations img48.jpg"
     ],
     "events_types": ["Wedding", "Banquet Events", "Engagement", "Walima"],
     "staff_available": ["Male", "Female"],
@@ -1828,15 +1828,15 @@
     "rating": 4.5,
     "starting_price": 100000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/libertyballroom/600/400",
+    "image": "decoration img/decroations img49.jpg",
     "verified": true,
     "address": "C-551, P.E.C.H.S Block 2, Near Liberty Signal, Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/liberty1/900/600",
-      "https://picsum.photos/seed/liberty2/900/600",
-      "https://picsum.photos/seed/liberty3/900/600"
+      "decoration img/decroations img49.jpg",
+      "decoration img/decroations img50.jpg",
+      "decoration img/decroations img51.jpg"
     ],
     "events_types": ["Wedding", "Banquet Events", "Engagement", "Walima"],
     "staff_available": ["Male", "Female"],
@@ -1874,15 +1874,15 @@
     "rating": 4.4,
     "starting_price": 70000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/siddiquitariq/600/400",
+    "image": "decoration img/decroations img52.jpg",
     "verified": true,
     "address": "A-6, 1st Floor, Block-2 Main Tariq Road, Karachi, Pakistan",
     "phone": "+92 21 4537279",
     "whatsapp": "+92 21 4537279",
     "gallery": [
-      "https://picsum.photos/seed/siddtariq1/900/600",
-      "https://picsum.photos/seed/siddtariq2/900/600",
-      "https://picsum.photos/seed/siddtariq3/900/600"
+      "decoration img/decroations img52.jpg",
+      "decoration img/decroations img53.jpg",
+      "decoration img/decroations img54.jpg"
     ],
     "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
@@ -1920,15 +1920,15 @@
     "rating": 4.3,
     "starting_price": 75000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/elitetariq/600/400",
+    "image": "decoration img/decroations img55.jpg",
     "verified": true,
     "address": "Dilkusha, Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/elitet1/900/600",
-      "https://picsum.photos/seed/elitet2/900/600",
-      "https://picsum.photos/seed/elitet3/900/600"
+      "decoration img/decroations img55.jpg",
+      "decoration img/decroations img56.jpg",
+      "decoration img/decroations img57.jpg"
     ],
     "events_types": ["Wedding", "Engagement", "Birthday Parties"],
     "staff_available": ["Male", "Female"],
@@ -1966,15 +1966,15 @@
     "rating": 4.2,
     "starting_price": 55000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/tariqdecor/600/400",
+    "image": "decoration img/decroations img58.jpg",
     "verified": true,
     "address": "Main Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/tcenter1/900/600",
-      "https://picsum.photos/seed/tcenter2/900/600",
-      "https://picsum.photos/seed/tcenter3/900/600"
+      "decoration img/decroations img58.jpg",
+      "decoration img/decroations img59.jpg",
+      "decoration img/decroations img60.jpg"
     ],
     "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
@@ -2006,15 +2006,15 @@
     "rating": 4.5,
     "starting_price": 70000,
     "price_type": "project",
-    "image": "https://picsum.photos/seed/kitchencorner/600/400",
+    "image": "decoration img/decroations img1.jpg",
     "verified": true,
     "address": "Showroom: Al-Fazal Plaza, Block-B, North Nazimabad, Karachi | Office: Suit-16, Al-Zahra Centre, Block-G, Karachi, Sindh, Pakistan",
     "phone": "+92 21 6646850",
     "whatsapp": "+92 21 6646850",
     "gallery": [
-      "https://picsum.photos/seed/kitchen1/900/600",
-      "https://picsum.photos/seed/kitchen2/900/600",
-      "https://picsum.photos/seed/kitchen3/900/600"
+      "decoration img/decroations img1.jpg",
+      "decoration img/decroations img2.jpg",
+      "decoration img/decroations img3.jpg"
     ],
     "services": ["Kitchen Design", "Interior Design", "Furniture Manufacturing"],
     "specialties": ["Kitchen cabinets", "Interior solutions", "Furniture manufacturing"],
@@ -2037,15 +2037,15 @@
     "rating": 4.4,
     "starting_price": 65000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/eventart/600/400",
+    "image": "decoration img/decroations img4.jpg",
     "verified": true,
     "address": "Suit #A-6, Shah Faisal Plaza, Block-B, Opp: McDonald, North Nazimabad, Karachi, Pakistan",
     "phone": "+92 21 36720201",
     "whatsapp": "+92 21 36720201",
     "gallery": [
-      "https://picsum.photos/seed/eventart1/900/600",
-      "https://picsum.photos/seed/eventart2/900/600",
-      "https://picsum.photos/seed/eventart3/900/600"
+      "decoration img/decroations img4.jpg",
+      "decoration img/decroations img5.jpg",
+      "decoration img/decroations img6.jpg"
     ],
     "events_types": ["Wedding", "Corporate Events", "Party Decoration"],
     "staff_available": ["Male", "Female"],
@@ -2083,15 +2083,15 @@
     "rating": 4.3,
     "starting_price": 60000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/aatimintl/600/400",
+    "image": "decoration img/decroations img7.jpg",
     "verified": true,
     "address": "R-15, block H, North Nazimabad, Karachi, Pakistan",
     "phone": "+92 300 8379355",
     "whatsapp": "+92 300 8379355",
     "gallery": [
-      "https://picsum.photos/seed/aatim1/900/600",
-      "https://picsum.photos/seed/aatim2/900/600",
-      "https://picsum.photos/seed/aatim3/900/600"
+      "decoration img/decroations img7.jpg",
+      "decoration img/decroations img8.jpg",
+      "decoration img/decroations img9.jpg"
     ],
     "events_types": ["Wedding", "Event Management", "Party Decoration"],
     "staff_available": ["Male"],
@@ -2129,15 +2129,15 @@
     "rating": 4.2,
     "starting_price": 55000,
     "price_type": "project",
-    "image": "https://picsum.photos/seed/alghani/600/400",
+    "image": "decoration img/decroations img10.jpg",
     "verified": true,
     "address": "SB-1, Block-F, North Nazimabad, Shahra-e-Humayoon, Karachi, Pakistan",
     "phone": "+92 21 36678893",
     "whatsapp": "+92 21 36678893",
     "gallery": [
-      "https://picsum.photos/seed/alghani1/900/600",
-      "https://picsum.photos/seed/alghani2/900/600",
-      "https://picsum.photos/seed/alghani3/900/600"
+      "decoration img/decroations img10.jpg",
+      "decoration img/decroations img11.jpg",
+      "decoration img/decroations img12.jpg"
     ],
     "services": ["Kitchen Design", "Interior Design"],
     "specialties": ["Kitchen Cabinets", "Interior Solutions"],
@@ -2160,15 +2160,15 @@
     "rating": 4.2,
     "starting_price": 58000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/royalnnevents/600/400",
+    "image": "decoration img/decroations img13.jpg",
     "verified": true,
     "address": "Block N, North Nazimabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/royalnn1/900/600",
-      "https://picsum.photos/seed/royalnn2/900/600",
-      "https://picsum.photos/seed/royalnn3/900/600"
+      "decoration img/decroations img13.jpg",
+      "decoration img/decroations img14.jpg",
+      "decoration img/decroations img15.jpg"
     ],
     "events_types": ["Wedding", "Engagement", "Birthday Parties"],
     "staff_available": ["Male", "Female"],
@@ -2206,15 +2206,15 @@
     "rating": 4.7,
     "starting_price": 55000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/moderndecorative/600/400",
+    "image": "decoration img/decroations img16.jpg",
     "verified": true,
     "address": "office no 510 near karachi medical and dental college north karachi, Karachi, Pakistan",
     "phone": "+92 311 2261377",
     "whatsapp": "+92 311 2261377",
     "gallery": [
-      "https://picsum.photos/seed/modern1/900/600",
-      "https://picsum.photos/seed/modern2/900/600",
-      "https://picsum.photos/seed/modern3/900/600"
+      "decoration img/decroations img16.jpg",
+      "decoration img/decroations img17.jpg",
+      "decoration img/decroations img18.jpg"
     ],
     "events_types": ["Wedding", "Event Decor", "Home Decor"],
     "staff_available": ["Male"],
@@ -2238,15 +2238,15 @@
     "rating": 4.0,
     "starting_price": 48000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/elitenkdecor/600/400",
+    "image": "decoration img/decroations img19.jpg",
     "verified": true,
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/elitenk1/900/600",
-      "https://picsum.photos/seed/elitenk2/900/600",
-      "https://picsum.photos/seed/elitenk3/900/600"
+      "decoration img/decroations img19.jpg",
+      "decoration img/decroations img20.jpg",
+      "decoration img/decroations img21.jpg"
     ],
     "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
@@ -2284,15 +2284,15 @@
     "rating": 4.2,
     "starting_price": 50000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/royalnkevents/600/400",
+    "image": "decoration img/decroations img22.jpg",
     "verified": true,
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/royalnk1/900/600",
-      "https://picsum.photos/seed/royalnk2/900/600",
-      "https://picsum.photos/seed/royalnk3/900/600"
+      "decoration img/decroations img22.jpg",
+      "decoration img/decroations img23.jpg",
+      "decoration img/decroations img24.jpg"
     ],
     "events_types": ["Wedding", "Engagement", "Birthday Parties"],
     "staff_available": ["Male", "Female"],
@@ -2330,15 +2330,15 @@
     "rating": 3.9,
     "starting_price": 42000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/stardecornk/600/400",
+    "image": "decoration img/decroations img25.jpg",
     "verified": true,
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/starnk1/900/600",
-      "https://picsum.photos/seed/starnk2/900/600",
-      "https://picsum.photos/seed/starnk3/900/600"
+      "decoration img/decroations img25.jpg",
+      "decoration img/decroations img26.jpg",
+      "decoration img/decroations img27.jpg"
     ],
     "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],
@@ -2370,15 +2370,15 @@
     "rating": 4.1,
     "starting_price": 45000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/tajdecor/600/400",
+    "image": "decoration img/decroations img28.jpg",
     "verified": true,
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/tajdec1/900/600",
-      "https://picsum.photos/seed/tajdec2/900/600",
-      "https://picsum.photos/seed/tajdec3/900/600"
+      "decoration img/decroations img28.jpg",
+      "decoration img/decroations img29.jpg",
+      "decoration img/decroations img30.jpg"
     ],
     "events_types": ["Wedding", "Party Decoration", "Event Decor"],
     "staff_available": ["Male"],

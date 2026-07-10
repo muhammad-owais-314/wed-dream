@@ -6,14 +6,14 @@
     "rating": 4.9,
     "starting_price": 65000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/ajstudio/600/400",
+    "image": "photographer img/photo1.jpg",
     "address": "19C, Stadium Lane 1, Phase V, DHA, Karachi, Pakistan",
     "phone": "+92-21-35846191",
     "whatsapp": "+92-21-35846191",
     "gallery": [
-      "https://picsum.photos/seed/ajstudio1/900/600",
-      "https://picsum.photos/seed/ajstudio2/900/600",
-      "https://picsum.photos/seed/ajstudio3/900/600"
+      "photographer img/photo1.jpg",
+      "photographer img/photo2.jpg",
+      "photographer img/photo3.jpg"
     ],
     "services": ["Wedding Photography", "Fine Art Portraits", "Cinematic Videography", "Pre-wedding Shoots"],
     "staff_available": ["Male"],
@@ -70,14 +70,14 @@
     "rating": 4.7,
     "starting_price": 60000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/dossani/600/400",
+    "image": "photographer img/photo4.jpg",
     "address": "14/C, Stadium Lane 1, Khayaban-e-Shamsheer, Phase V, DHA, Karachi, Pakistan",
     "phone": "+92-21-5848883-85",
     "whatsapp": "+92-21-5848883",
     "gallery": [
-      "https://picsum.photos/seed/dossani1/900/600",
-      "https://picsum.photos/seed/dossani2/900/600",
-      "https://picsum.photos/seed/dossani3/900/600"
+      "photographer img/photo4.jpg",
+      "photographer img/photo5.jpg",
+      "photographer img/photo6.jpg"
     ],
     "services": ["Wedding Photography", "Video Production", "Event Coverage", "Embassy Photography", "Commercial Photography"],
     "staff_available": ["Male"],
@@ -134,14 +134,14 @@
     "rating": 4.8,
     "starting_price": 50000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/kbridals/600/400",
+    "image": "photographer img/photo7.jpg",
     "address": "13-C, 1st Commercial Lane, Phase IV, DHA, Karachi, Pakistan",
     "phone": "+92 312-5274325",
     "whatsapp": "+92 312-5274325",
     "gallery": [
-      "https://picsum.photos/seed/kbridals1/900/600",
-      "https://picsum.photos/seed/kbridals2/900/600",
-      "https://picsum.photos/seed/kbridals3/900/600"
+      "photographer img/photo7.jpg",
+      "photographer img/photo8.jpg",
+      "photographer img/photo9.jpg"
     ],
     "services": ["Photography", "Videography", "Couple Portraits", "Bridal Event Photography", "Cinematic Videos"],
     "staff_available": ["Male"],
@@ -197,14 +197,14 @@
     "rating": 4.6,
     "starting_price": 45000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/shakirrehman/600/400",
+    "image": "photographer img/photo10.jpg",
     "address": "DHA, Karachi, Pakistan",
     "phone": "0313 2173103",
     "whatsapp": "0313 2173103",
     "gallery": [
-      "https://picsum.photos/seed/shakir1/900/600",
-      "https://picsum.photos/seed/shakir2/900/600",
-      "https://picsum.photos/seed/shakir3/900/600"
+      "photographer img/photo10.jpg",
+      "photographer img/photo11.jpg",
+      "photographer img/photo12.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Commercial Photography"],
     "staff_available": ["Male"],
@@ -260,14 +260,14 @@
     "rating": 4.7,
     "starting_price": 55000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/twccinematics/600/400",
+    "image": "photographer img/photo13.jpg",
     "address": "DHA, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/twc1/900/600",
-      "https://picsum.photos/seed/twc2/900/600",
-      "https://picsum.photos/seed/twc3/900/600"
+      "photographer img/photo13.jpg",
+      "photographer img/photo14.jpg",
+      "photographer img/photo15.jpg"
     ],
     "services": ["Wedding Photography", "Cinematic Videography", "Drone Coverage", "Pre-wedding Shoots"],
     "staff_available": ["Male"],
@@ -323,14 +323,14 @@
     "rating": 4.4,
     "starting_price": 45000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/eastriver/600/400",
+    "image": "photographer img/photo16.jpg",
     "address": "Clifton, Karachi, Pakistan",
     "phone": "(021) 35305446",
     "whatsapp": "(021) 35305446",
     "gallery": [
-      "https://picsum.photos/seed/eastriver1/900/600",
-      "https://picsum.photos/seed/eastriver2/900/600",
-      "https://picsum.photos/seed/eastriver3/900/600"
+      "photographer img/photo16.jpg",
+      "photographer img/photo17.jpg",
+      "photographer img/photo18.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
     "staff_available": ["Male"],
@@ -373,14 +373,14 @@
     "rating": 4.6,
     "starting_price": 52000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/oshoot/600/400",
+    "image": "photographer img/photo19.jpg",
     "address": "Clifton, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/oshoot1/900/600",
-      "https://picsum.photos/seed/oshoot2/900/600",
-      "https://picsum.photos/seed/oshoot3/900/600"
+      "photographer img/photo19.jpg",
+      "photographer img/photo20.jpg",
+      "photographer img/photo21.jpg"
     ],
     "services": ["Wedding Photography", "Creative Direction", "Film Production", "Brand Photography"],
     "staff_available": ["Male", "Female"],
@@ -430,14 +430,14 @@
     "rating": 4.8,
     "starting_price": 65000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/mahawajahat/600/400",
+    "image": "photographer img/photo22.jpg",
     "address": "Clifton, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/maha1/900/600",
-      "https://picsum.photos/seed/maha2/900/600",
-      "https://picsum.photos/seed/maha3/900/600"
+      "photographer img/photo22.jpg",
+      "photographer img/photo23.jpg",
+      "photographer img/photo24.jpg"
     ],
     "services": ["Bridal Photography", "Wedding Photography", "Fine Art Portraits", "Editorial Shoots"],
     "staff_available": ["Female"],
@@ -487,14 +487,14 @@
     "rating": 4.6,
     "starting_price": 50000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/weddingstation/600/400",
+    "image": "photographer img/photo25.jpg",
     "address": "Clifton, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/wedstation1/900/600",
-      "https://picsum.photos/seed/wedstation2/900/600",
-      "https://picsum.photos/seed/wedstation3/900/600"
+      "photographer img/photo25.jpg",
+      "photographer img/photo26.jpg",
+      "photographer img/photo27.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Pre-wedding Shoots", "Album Design"],
     "staff_available": ["Male", "Female"],
@@ -544,14 +544,14 @@
     "rating": 4.5,
     "starting_price": 35000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/biyah/600/400",
+    "image": "photographer img/photo28.jpg",
     "address": "Block, 43 H, 1, 6, PECHS, Karachi, Pakistan",
     "phone": "0342 2142524",
     "whatsapp": "0342 2142524",
     "gallery": [
-      "https://picsum.photos/seed/biyah1/900/600",
-      "https://picsum.photos/seed/biyah2/900/600",
-      "https://picsum.photos/seed/biyah3/900/600"
+      "photographer img/photo28.jpg",
+      "photographer img/photo29.jpg",
+      "photographer img/photo30.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Bridal Photography", "Album Design"],
     "staff_available": ["Male"],
@@ -595,14 +595,14 @@
     "rating": 4.5,
     "starting_price": 35000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/sohilasim/600/400",
+    "image": "photographer img/photo31.jpg",
     "address": "873/C PECHS-2, Karachi, Pakistan",
     "phone": "0213456477",
     "whatsapp": "0213456477",
     "gallery": [
-      "https://picsum.photos/seed/sohail1/900/600",
-      "https://picsum.photos/seed/sohail2/900/600",
-      "https://picsum.photos/seed/sohail3/900/600"
+      "photographer img/photo31.jpg",
+      "photographer img/photo32.jpg",
+      "photographer img/photo33.jpg"
     ],
     "services": ["Wedding Photography", "Videography", "Event Photography", "Portrait Photography"],
     "staff_available": ["Male"],
@@ -646,14 +646,14 @@
     "rating": 4.3,
     "starting_price": 28000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/zainbaba/600/400",
+    "image": "photographer img/photo34.jpg",
     "address": "Gulistan-e-Johar (serves PECHS), Karachi, Pakistan",
     "phone": "0322-2088037, 021-37830856",
     "whatsapp": "0322-2088037",
     "gallery": [
-      "https://picsum.photos/seed/zainbaba1/900/600",
-      "https://picsum.photos/seed/zainbaba2/900/600",
-      "https://picsum.photos/seed/zainbaba3/900/600"
+      "photographer img/photo34.jpg",
+      "photographer img/photo35.jpg",
+      "photographer img/photo36.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Album Design"],
     "staff_available": ["Male"],
@@ -696,14 +696,14 @@
     "rating": 4.5,
     "starting_price": 40000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/jobaed/600/400",
+    "image": "photographer img/photo37.jpg",
     "address": "Karachi, Pakistan (serves all areas)",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/jobaed1/900/600",
-      "https://picsum.photos/seed/jobaed2/900/600",
-      "https://picsum.photos/seed/jobaed3/900/600"
+      "photographer img/photo37.jpg",
+      "photographer img/photo38.jpg",
+      "photographer img/photo39.jpg"
     ],
     "services": ["Wedding Photography", "Wedding Filmmaking", "Portrait Photography", "Event Coverage"],
     "staff_available": ["Male"],
@@ -753,14 +753,14 @@
     "rating": 4.3,
     "starting_price": 30000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/shadigrapher/600/400",
+    "image": "photographer img/photo40.jpg",
     "address": "Karachi, Pakistan (serves all areas)",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/shadigrapher1/900/600",
-      "https://picsum.photos/seed/shadigrapher2/900/600",
-      "https://picsum.photos/seed/shadigrapher3/900/600"
+      "photographer img/photo40.jpg",
+      "photographer img/photo41.jpg",
+      "photographer img/photo42.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Pre-wedding Shoots", "Album Design"],
     "staff_available": ["Male"],
@@ -804,14 +804,14 @@
     "rating": 4.6,
     "starting_price": 40000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/shahidaweds/600/400",
+    "image": "photographer img/photo43.jpg",
     "address": "Waqas Heights, Shop No# 1, Block 13D-1, Gulshan-e-Iqbal, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/shahida1/900/600",
-      "https://picsum.photos/seed/shahida2/900/600",
-      "https://picsum.photos/seed/shahida3/900/600"
+      "photographer img/photo43.jpg",
+      "photographer img/photo44.jpg",
+      "photographer img/photo45.jpg"
     ],
     "services": ["Wedding Photography", "Pre-wedding Shoots", "Album Design", "Videography"],
     "staff_available": ["Male", "Female"],
@@ -863,14 +863,14 @@
     "rating": 4.2,
     "starting_price": 25000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/smartaperture/600/400",
+    "image": "photographer img/photo46.jpg",
     "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/smart1/900/600",
-      "https://picsum.photos/seed/smart2/900/600",
-      "https://picsum.photos/seed/smart3/900/600"
+      "photographer img/photo46.jpg",
+      "photographer img/photo47.jpg",
+      "photographer img/photo48.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
     "staff_available": ["Male"],
@@ -909,14 +909,14 @@
     "rating": 4.2,
     "starting_price": 25000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/akskaar/600/400",
+    "image": "photographer img/photo49.jpg",
     "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/akskaar1/900/600",
-      "https://picsum.photos/seed/akskaar2/900/600",
-      "https://picsum.photos/seed/akskaar3/900/600"
+      "photographer img/photo49.jpg",
+      "photographer img/photo50.jpg",
+      "photographer img/photo51.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Creative Photography"],
     "staff_available": ["Male"],
@@ -955,14 +955,14 @@
     "rating": 4.3,
     "starting_price": 30000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/qasimkhan/600/400",
+    "image": "photographer img/photo52.jpg",
     "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/qasim1/900/600",
-      "https://picsum.photos/seed/qasim2/900/600",
-      "https://picsum.photos/seed/qasim3/900/600"
+      "photographer img/photo52.jpg",
+      "photographer img/photo53.jpg",
+      "photographer img/photo54.jpg"
     ],
     "services": ["Wedding Photography", "Cinematic Films", "Event Coverage", "Pre-wedding Shoots"],
     "staff_available": ["Male"],
@@ -1001,14 +1001,14 @@
     "rating": 4.4,
     "starting_price": 35000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/hbstudio/600/400",
+    "image": "photographer img/photo55.jpg",
     "address": "Gulistan-e-Johar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/hbstudio1/900/600",
-      "https://picsum.photos/seed/hbstudio2/900/600",
-      "https://picsum.photos/seed/hbstudio3/900/600"
+      "photographer img/photo55.jpg",
+      "photographer img/photo56.jpg",
+      "photographer img/photo57.jpg"
     ],
     "services": ["Wedding Photography", "Cinematic Films", "Event Coverage", "Pre-wedding Shoots"],
     "staff_available": ["Male"],
@@ -1047,14 +1047,14 @@
     "rating": 4.4,
     "starting_price": 30000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/dees/600/400",
+    "image": "photographer img/photo58.jpg",
     "address": "Gulistan-e-Johar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/dees1/900/600",
-      "https://picsum.photos/seed/dees2/900/600",
-      "https://picsum.photos/seed/dees3/900/600"
+      "photographer img/photo58.jpg",
+      "photographer img/photo59.jpg",
+      "photographer img/photo60.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Creative Photography", "Album Design"],
     "staff_available": ["Male"],
@@ -1093,14 +1093,14 @@
     "rating": 4.2,
     "starting_price": 28000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/aatif/600/400",
+    "image": "photographer img/photo1.jpg",
     "address": "Gulistan-e-Johar, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/aatif1/900/600",
-      "https://picsum.photos/seed/aatif2/900/600",
-      "https://picsum.photos/seed/aatif3/900/600"
+      "photographer img/photo1.jpg",
+      "photographer img/photo2.jpg",
+      "photographer img/photo3.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
     "staff_available": ["Male"],
@@ -1139,14 +1139,14 @@
     "rating": 4.2,
     "starting_price": 25000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/nasir4u/600/400",
+    "image": "photographer img/photo4.jpg",
     "address": "Federal B Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/nasir1/900/600",
-      "https://picsum.photos/seed/nasir2/900/600",
-      "https://picsum.photos/seed/nasir3/900/600"
+      "photographer img/photo4.jpg",
+      "photographer img/photo5.jpg",
+      "photographer img/photo6.jpg"
     ],
     "services": ["Event Photography", "Wedding Coverage", "Party Photography"],
     "staff_available": ["Male"],
@@ -1185,14 +1185,14 @@
     "rating": 4.4,
     "starting_price": 32500,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/moinshah/600/400",
+    "image": "photographer img/photo7.jpg",
     "address": "Federal B Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/moin1/900/600",
-      "https://picsum.photos/seed/moin2/900/600",
-      "https://picsum.photos/seed/moin3/900/600"
+      "photographer img/photo7.jpg",
+      "photographer img/photo8.jpg",
+      "photographer img/photo9.jpg"
     ],
     "services": ["Cinematic Wedding Films", "Photography", "Drone Coverage", "Pre-wedding Shoots"],
     "staff_available": ["Male"],
@@ -1243,14 +1243,14 @@
     "rating": 4.3,
     "starting_price": 28000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/sohailg/600/400",
+    "image": "photographer img/photo10.jpg",
     "address": "Federal B Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/sohailg1/900/600",
-      "https://picsum.photos/seed/sohailg2/900/600",
-      "https://picsum.photos/seed/sohailg3/900/600"
+      "photographer img/photo10.jpg",
+      "photographer img/photo11.jpg",
+      "photographer img/photo12.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
     "staff_available": ["Male"],
@@ -1289,14 +1289,14 @@
     "rating": 4.0,
     "starting_price": 25000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/abdshutters/600/400",
+    "image": "photographer img/photo13.jpg",
     "address": "Azizabad Block 8 House Number 826/8, Karachi, 75950, Pakistan",
     "phone": "+92 333 3721389",
     "whatsapp": "+92 333 3721389",
     "gallery": [
-      "https://picsum.photos/seed/abd1/900/600",
-      "https://picsum.photos/seed/abd2/900/600",
-      "https://picsum.photos/seed/abd3/900/600"
+      "photographer img/photo13.jpg",
+      "photographer img/photo14.jpg",
+      "photographer img/photo15.jpg"
     ],
     "services": ["Wedding Photography", "Event Photography"],
     "staff_available": ["Male"],
@@ -1335,14 +1335,14 @@
     "rating": 4.0,
     "starting_price": 18000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/fbphotohub/600/400",
+    "image": "photographer img/photo16.jpg",
     "address": "Federal B Area, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/fbhub1/900/600",
-      "https://picsum.photos/seed/fbhub2/900/600",
-      "https://picsum.photos/seed/fbhub3/900/600"
+      "photographer img/photo16.jpg",
+      "photographer img/photo17.jpg",
+      "photographer img/photo18.jpg"
     ],
     "services": ["Event Photography", "Wedding Coverage", "Party Photography"],
     "staff_available": ["Male"],
@@ -1381,14 +1381,14 @@
     "rating": 4.4,
     "starting_price": 40000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/bnw/600/400",
+    "image": "photographer img/photo19.jpg",
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/bnw1/900/600",
-      "https://picsum.photos/seed/bnw2/900/600",
-      "https://picsum.photos/seed/bnw3/900/600"
+      "photographer img/photo19.jpg",
+      "photographer img/photo20.jpg",
+      "photographer img/photo21.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Black & White Photography"],
     "staff_available": ["Male"],
@@ -1427,14 +1427,14 @@
     "rating": 4.3,
     "starting_price": 28000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/wedders/600/400",
+    "image": "photographer img/photo22.jpg",
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/wedders1/900/600",
-      "https://picsum.photos/seed/wedders2/900/600",
-      "https://picsum.photos/seed/wedders3/900/600"
+      "photographer img/photo22.jpg",
+      "photographer img/photo23.jpg",
+      "photographer img/photo24.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
     "staff_available": ["Male", "Female"],
@@ -1473,14 +1473,14 @@
     "rating": 4.2,
     "starting_price": 25000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/partypopper/600/400",
+    "image": "photographer img/photo25.jpg",
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/popper1/900/600",
-      "https://picsum.photos/seed/popper2/900/600",
-      "https://picsum.photos/seed/popper3/900/600"
+      "photographer img/photo25.jpg",
+      "photographer img/photo26.jpg",
+      "photographer img/photo27.jpg"
     ],
     "services": ["Event Photography", "Party Photography", "Wedding Coverage"],
     "staff_available": ["Male"],
@@ -1519,14 +1519,14 @@
     "rating": 4.1,
     "starting_price": 20000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/bahadurabad/600/400",
+    "image": "photographer img/photo28.jpg",
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/bahphoto1/900/600",
-      "https://picsum.photos/seed/bahphoto2/900/600",
-      "https://picsum.photos/seed/bahphoto3/900/600"
+      "photographer img/photo28.jpg",
+      "photographer img/photo29.jpg",
+      "photographer img/photo30.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Local Event Photography"],
     "staff_available": ["Male"],
@@ -1565,14 +1565,14 @@
     "rating": 4.1,
     "starting_price": 22000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/elitebahadurabad/600/400",
+    "image": "photographer img/photo31.jpg",
     "address": "Bahadurabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/elitebah1/900/600",
-      "https://picsum.photos/seed/elitebah2/900/600",
-      "https://picsum.photos/seed/elitebah3/900/600"
+      "photographer img/photo31.jpg",
+      "photographer img/photo32.jpg",
+      "photographer img/photo33.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
     "staff_available": ["Male"],
@@ -1611,14 +1611,14 @@
     "rating": 4.3,
     "starting_price": 25000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/fotoclick/600/400",
+    "image": "photographer img/photo34.jpg",
     "address": "Tariq Road, Karachi, Pakistan",
     "phone": "+92 308 2995955",
     "whatsapp": "+92 308 2995955",
     "gallery": [
-      "https://picsum.photos/seed/fotoclick1/900/600",
-      "https://picsum.photos/seed/fotoclick2/900/600",
-      "https://picsum.photos/seed/fotoclick3/900/600"
+      "photographer img/photo34.jpg",
+      "photographer img/photo35.jpg",
+      "photographer img/photo36.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Product Photography"],
     "staff_available": ["Male"],
@@ -1657,14 +1657,14 @@
     "rating": 4.4,
     "starting_price": 35000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/anasahmad/600/400",
+    "image": "photographer img/photo37.jpg",
     "address": "Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/anas1/900/600",
-      "https://picsum.photos/seed/anas2/900/600",
-      "https://picsum.photos/seed/anas3/900/600"
+      "photographer img/photo37.jpg",
+      "photographer img/photo38.jpg",
+      "photographer img/photo39.jpg"
     ],
     "services": ["Wedding Photography", "Cinematic Films", "Event Coverage", "Pre-wedding Shoots"],
     "staff_available": ["Male"],
@@ -1703,14 +1703,14 @@
     "rating": 4.1,
     "starting_price": 19000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/tariqroad/600/400",
+    "image": "photographer img/photo40.jpg",
     "address": "Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/tariqstudio1/900/600",
-      "https://picsum.photos/seed/tariqstudio2/900/600",
-      "https://picsum.photos/seed/tariqstudio3/900/600"
+      "photographer img/photo40.jpg",
+      "photographer img/photo41.jpg",
+      "photographer img/photo42.jpg"
     ],
     "services": ["Wedding Photography", "Passport Photos", "Event Coverage", "Portrait Photography"],
     "staff_available": ["Male"],
@@ -1749,14 +1749,14 @@
     "rating": 4.2,
     "starting_price": 30000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/shadipoint/600/400",
+    "image": "photographer img/photo43.jpg",
     "address": "Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/shadipoint1/900/600",
-      "https://picsum.photos/seed/shadipoint2/900/600",
-      "https://picsum.photos/seed/shadipoint3/900/600"
+      "photographer img/photo43.jpg",
+      "photographer img/photo44.jpg",
+      "photographer img/photo45.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Album Design"],
     "staff_available": ["Male"],
@@ -1795,14 +1795,14 @@
     "rating": 4.1,
     "starting_price": 28000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/luxurytariq/600/400",
+    "image": "photographer img/photo46.jpg",
     "address": "Tariq Road, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/luxurytariq1/900/600",
-      "https://picsum.photos/seed/luxurytariq2/900/600",
-      "https://picsum.photos/seed/luxurytariq3/900/600"
+      "photographer img/photo46.jpg",
+      "photographer img/photo47.jpg",
+      "photographer img/photo48.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Luxury Shoots"],
     "staff_available": ["Male"],
@@ -1841,14 +1841,14 @@
     "rating": 4.1,
     "starting_price": 22000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/jugnoo/600/400",
+    "image": "photographer img/photo49.jpg",
     "address": "Shop # 2, Babar Vista Apartment, Block K, North Nazimabad, Karachi, Pakistan",
     "phone": "0311-2720797",
     "whatsapp": "0311-2720797",
     "gallery": [
-      "https://picsum.photos/seed/jugnoo1/900/600",
-      "https://picsum.photos/seed/jugnoo2/900/600",
-      "https://picsum.photos/seed/jugnoo3/900/600"
+      "photographer img/photo49.jpg",
+      "photographer img/photo50.jpg",
+      "photographer img/photo51.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Album Design"],
     "staff_available": ["Male"],
@@ -1887,14 +1887,14 @@
     "rating": 4.2,
     "starting_price": 25000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/smwaqar/600/400",
+    "image": "photographer img/photo52.jpg",
     "address": "North Nazimabad, Karachi, Pakistan",
     "phone": "0344 5478314",
     "whatsapp": "0344 5478314",
     "gallery": [
-      "https://picsum.photos/seed/smwaqar1/900/600",
-      "https://picsum.photos/seed/smwaqar2/900/600",
-      "https://picsum.photos/seed/smwaqar3/900/600"
+      "photographer img/photo52.jpg",
+      "photographer img/photo53.jpg",
+      "photographer img/photo54.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Cinematic Films"],
     "staff_available": ["Male"],
@@ -1933,14 +1933,14 @@
     "rating": 4.0,
     "starting_price": 20000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/northnazimabad/600/400",
+    "image": "photographer img/photo55.jpg",
     "address": "North Nazimabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/nnphoto1/900/600",
-      "https://picsum.photos/seed/nnphoto2/900/600",
-      "https://picsum.photos/seed/nnphoto3/900/600"
+      "photographer img/photo55.jpg",
+      "photographer img/photo56.jpg",
+      "photographer img/photo57.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Local Event Photography"],
     "staff_available": ["Male"],
@@ -1979,14 +1979,14 @@
     "rating": 4.1,
     "starting_price": 23000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/royalnn/600/400",
+    "image": "photographer img/photo58.jpg",
     "address": "North Nazimabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/royalnn1/900/600",
-      "https://picsum.photos/seed/royalnn2/900/600",
-      "https://picsum.photos/seed/royalnn3/900/600"
+      "photographer img/photo58.jpg",
+      "photographer img/photo59.jpg",
+      "photographer img/photo60.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
     "staff_available": ["Male"],
@@ -2025,14 +2025,14 @@
     "rating": 4.1,
     "starting_price": 28000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/elitenn/600/400",
+    "image": "photographer img/photo1.jpg",
     "address": "North Nazimabad, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/elitenn1/900/600",
-      "https://picsum.photos/seed/elitenn2/900/600",
-      "https://picsum.photos/seed/elitenn3/900/600"
+      "photographer img/photo1.jpg",
+      "photographer img/photo2.jpg",
+      "photographer img/photo3.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Cinematic Films"],
     "staff_available": ["Male"],
@@ -2071,14 +2071,14 @@
     "rating": 4.4,
     "starting_price": 45000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/benchmarker/600/400",
+    "image": "photographer img/photo4.jpg",
     "address": "M-2 Mezzanine Floor, Mina Avenue, Main Shahrah-e-Faisal Airport, Karachi, Pakistan",
     "phone": "+92 313 2343612",
     "whatsapp": "+92 313 2343612",
     "gallery": [
-      "https://picsum.photos/seed/benchmarker1/900/600",
-      "https://picsum.photos/seed/benchmarker2/900/600",
-      "https://picsum.photos/seed/benchmarker3/900/600"
+      "photographer img/photo4.jpg",
+      "photographer img/photo5.jpg",
+      "photographer img/photo6.jpg"
     ],
     "services": ["Wedding Photography", "Cinematic Videos", "Event Coverage", "Commercial Photography"],
     "staff_available": ["Male"],
@@ -2128,14 +2128,14 @@
     "rating": 4.3,
     "starting_price": 40000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/artxpro/600/400",
+    "image": "photographer img/photo7.jpg",
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/artx1/900/600",
-      "https://picsum.photos/seed/artx2/900/600",
-      "https://picsum.photos/seed/artx3/900/600"
+      "photographer img/photo7.jpg",
+      "photographer img/photo8.jpg",
+      "photographer img/photo9.jpg"
     ],
     "services": ["Wedding Photography", "Art Photography", "Event Coverage", "Creative Shoots"],
     "staff_available": ["Male"],
@@ -2174,14 +2174,14 @@
     "rating": 3.9,
     "starting_price": 15000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/nkstudio/600/400",
+    "image": "photographer img/photo10.jpg",
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/nkstudio1/900/600",
-      "https://picsum.photos/seed/nkstudio2/900/600",
-      "https://picsum.photos/seed/nkstudio3/900/600"
+      "photographer img/photo10.jpg",
+      "photographer img/photo11.jpg",
+      "photographer img/photo12.jpg"
     ],
     "services": ["Wedding Photography", "Passport Photos", "Event Coverage", "Local Photography"],
     "staff_available": ["Male"],
@@ -2220,14 +2220,14 @@
     "rating": 4.0,
     "starting_price": 18000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/royalnk/600/400",
+    "image": "photographer img/photo13.jpg",
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/royalnk1/900/600",
-      "https://picsum.photos/seed/royalnk2/900/600",
-      "https://picsum.photos/seed/royalnk3/900/600"
+      "photographer img/photo13.jpg",
+      "photographer img/photo14.jpg",
+      "photographer img/photo15.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography"],
     "staff_available": ["Male"],
@@ -2266,14 +2266,14 @@
     "rating": 3.8,
     "starting_price": 16000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/starnk/600/400",
+    "image": "photographer img/photo16.jpg",
     "address": "North Karachi, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/starnk1/900/600",
-      "https://picsum.photos/seed/starnk2/900/600",
-      "https://picsum.photos/seed/starnk3/900/600"
+      "photographer img/photo16.jpg",
+      "photographer img/photo17.jpg",
+      "photographer img/photo18.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Local Event Photography"],
     "staff_available": ["Male"],
@@ -2312,14 +2312,14 @@
     "rating": 4.5,
     "starting_price": 48000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/lenscraft/600/400",
+    "image": "photographer img/photo19.jpg",
     "address": "DHA, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/lenscraft1/900/600",
-      "https://picsum.photos/seed/lenscraft2/900/600",
-      "https://picsum.photos/seed/lenscraft3/900/600"
+      "photographer img/photo19.jpg",
+      "photographer img/photo20.jpg",
+      "photographer img/photo21.jpg"
     ],
     "services": ["Wedding Photography", "Cinematic Films", "Drone Coverage", "Pre-wedding Shoots"],
     "staff_available": ["Male"],
@@ -2369,14 +2369,14 @@
     "rating": 4.3,
     "starting_price": 42000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/goldenframe/600/400",
+    "image": "photographer img/photo22.jpg",
     "address": "Clifton, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/goldenframe1/900/600",
-      "https://picsum.photos/seed/goldenframe2/900/600",
-      "https://picsum.photos/seed/goldenframe3/900/600"
+      "photographer img/photo22.jpg",
+      "photographer img/photo23.jpg",
+      "photographer img/photo24.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Video Production"],
     "staff_available": ["Male", "Female"],
@@ -2421,14 +2421,14 @@
     "rating": 4.0,
     "starting_price": 22000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/dreamcatcher/600/400",
+    "image": "photographer img/photo25.jpg",
     "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/dreamcatcher1/900/600",
-      "https://picsum.photos/seed/dreamcatcher2/900/600",
-      "https://picsum.photos/seed/dreamcatcher3/900/600"
+      "photographer img/photo25.jpg",
+      "photographer img/photo26.jpg",
+      "photographer img/photo27.jpg"
     ],
     "services": ["Wedding Photography", "Event Coverage", "Portrait Photography", "Album Design"],
     "staff_available": ["Male"],
@@ -2467,14 +2467,14 @@
     "rating": 4.4,
     "starting_price": 38000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/weddingtales/600/400",
+    "image": "photographer img/photo28.jpg",
     "address": "PECHS, Karachi, Pakistan",
     "phone": "+92 300 1234567",
     "whatsapp": "+92 300 1234567",
     "gallery": [
-      "https://picsum.photos/seed/weddingtales1/900/600",
-      "https://picsum.photos/seed/weddingtales2/900/600",
-      "https://picsum.photos/seed/weddingtales3/900/600"
+      "photographer img/photo28.jpg",
+      "photographer img/photo29.jpg",
+      "photographer img/photo30.jpg"
     ],
     "services": ["Wedding Photography", "Bridal Photography", "Fine Art Portraits", "Pre-wedding Shoots"],
     "staff_available": ["Female"],

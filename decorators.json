@@ -6,7 +6,7 @@
     "rating": 4.8,
     "starting_price": 120000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/vmpevent/600/400",
+    "image": "decoration img/decroations img1.jpg",
     "verified": true
   },
   {
@@ -16,7 +16,7 @@
     "rating": 4.7,
     "starting_price": 130000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/eventdesigner/600/400",
+    "image": "decoration img/decroations img2.jpg",
     "verified": true
   },
   {
@@ -26,7 +26,7 @@
     "rating": 4.6,
     "starting_price": 100000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/sparkleevents/600/400",
+    "image": "decoration img/decroations img3.jpg",
     "verified": true
   },
   {
@@ -36,7 +36,7 @@
     "rating": 4.5,
     "starting_price": 150000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/marcemevent/600/400",
+    "image": "decoration img/decroations img4.jpg",
     "verified": true
   },
   {
@@ -46,7 +46,7 @@
     "rating": 4.4,
     "starting_price": 110000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/7thsky/600/400",
+    "image": "decoration img/decroations img5.jpg",
     "verified": true
   },
   {
@@ -56,7 +56,7 @@
     "rating": 4.9,
     "starting_price": 180000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/dawatevent/600/400",
+    "image": "decoration img/decroations img6.jpg",
     "verified": true
   },
   {
@@ -66,7 +66,7 @@
     "rating": 4.3,
     "starting_price": 80000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/multibusiness/600/400",
+    "image": "decoration img/decroations img7.jpg",
     "verified": true
   },
   {
@@ -76,7 +76,7 @@
     "rating": 4.5,
     "starting_price": 140000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/primeevents/600/400",
+    "image": "decoration img/decroations img8.jpg",
     "verified": true
   },
   {
@@ -86,7 +86,7 @@
     "rating": 4.4,
     "starting_price": 120000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/partnersgroup/600/400",
+    "image": "decoration img/decroations img9.jpg",
     "verified": true
   },
   {
@@ -96,7 +96,7 @@
     "rating": 4.3,
     "starting_price": 100000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/ziaulhaq/600/400",
+    "image": "decoration img/decroations img10.jpg",
     "verified": true
   },
   {
@@ -106,7 +106,7 @@
     "rating": 4.7,
     "starting_price": 90000,
     "price_type": "project",
-    "image": "https://picsum.photos/seed/gaditads/600/400",
+    "image": "decoration img/decroations img11.jpg",
     "verified": true
   },
   {
@@ -116,7 +116,7 @@
     "rating": 4.5,
     "starting_price": 85000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/therope/600/400",
+    "image": "decoration img/decroations img12.jpg",
     "verified": true
   },
   {
@@ -126,7 +126,7 @@
     "rating": 4.4,
     "starting_price": 70000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/siddiquidecor/600/400",
+    "image": "decoration img/decroations img13.jpg",
     "verified": true
   },
   {
@@ -136,7 +136,7 @@
     "rating": 4.3,
     "starting_price": 65000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/floraldesign/600/400",
+    "image": "decoration img/decroations img14.jpg",
     "verified": true
   },
   {
@@ -146,7 +146,7 @@
     "rating": 4.2,
     "starting_price": 75000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/decorstudio/600/400",
+    "image": "decoration img/decroations img15.jpg",
     "verified": true
   },
   {
@@ -156,7 +156,7 @@
     "rating": 4.6,
     "starting_price": 80000,
     "price_type": "project",
-    "image": "https://picsum.photos/seed/craftmaster/600/400",
+    "image": "decoration img/decroations img16.jpg",
     "verified": true
   },
   {
@@ -166,7 +166,7 @@
     "rating": 4.4,
     "starting_price": 75000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/aimzevents/600/400",
+    "image": "decoration img/decroations img17.jpg",
     "verified": true
   },
   {
@@ -176,7 +176,7 @@
     "rating": 4.3,
     "starting_price": 70000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/kamzkirz/600/400",
+    "image": "decoration img/decroations img18.jpg",
     "verified": true
   },
   {
@@ -186,7 +186,7 @@
     "rating": 4.2,
     "starting_price": 65000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/gulshandecor/600/400",
+    "image": "decoration img/decroations img19.jpg",
     "verified": true
   },
   {
@@ -196,7 +196,7 @@
     "rating": 4.1,
     "starting_price": 55000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/nipadecor/600/400",
+    "image": "decoration img/decroations img20.jpg",
     "verified": true
   },
   {
@@ -206,7 +206,7 @@
     "rating": 4.7,
     "starting_price": 95000,
     "price_type": "project",
-    "image": "https://picsum.photos/seed/atelier3/600/400",
+    "image": "decoration img/decroations img21.jpg",
     "verified": true
   },
   {
@@ -216,7 +216,7 @@
     "rating": 4.5,
     "starting_price": 80000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/sevenaura/600/400",
+    "image": "decoration img/decroations img22.jpg",
     "verified": true
   },
   {
@@ -226,7 +226,7 @@
     "rating": 4.4,
     "starting_price": 140000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/bellavista/600/400",
+    "image": "decoration img/decroations img23.jpg",
     "verified": true
   },
   {
@@ -236,7 +236,7 @@
     "rating": 4.3,
     "starting_price": 75000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/johargrand/600/400",
+    "image": "decoration img/decroations img24.jpg",
     "verified": true
   },
   {
@@ -246,7 +246,7 @@
     "rating": 4.2,
     "starting_price": 70000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/pearljohar/600/400",
+    "image": "decoration img/decroations img25.jpg",
     "verified": true
   },
   {
@@ -256,7 +256,7 @@
     "rating": 4.3,
     "starting_price": 50000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/ahmedparty/600/400",
+    "image": "decoration img/decroations img26.jpg",
     "verified": true
   },
   {
@@ -266,7 +266,7 @@
     "rating": 4.2,
     "starting_price": 48000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/fbeventdecor/600/400",
+    "image": "decoration img/decroations img27.jpg",
     "verified": true
   },
   {
@@ -276,7 +276,7 @@
     "rating": 4.1,
     "starting_price": 55000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/granddecor/600/400",
+    "image": "decoration img/decroations img28.jpg",
     "verified": true
   },
   {
@@ -286,7 +286,7 @@
     "rating": 4.0,
     "starting_price": 45000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/starpartydecor/600/400",
+    "image": "decoration img/decroations img29.jpg",
     "verified": true
   },
   {
@@ -296,7 +296,7 @@
     "rating": 4.0,
     "starting_price": 42000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/fbdecorhub/600/400",
+    "image": "decoration img/decroations img30.jpg",
     "verified": true
   },
   {
@@ -306,7 +306,7 @@
     "rating": 4.8,
     "starting_price": 100000,
     "price_type": "project",
-    "image": "https://picsum.photos/seed/vogueinterior/600/400",
+    "image": "decoration img/decroations img31.jpg",
     "verified": true
   },
   {
@@ -316,7 +316,7 @@
     "rating": 4.4,
     "starting_price": 70000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/weddersevent/600/400",
+    "image": "decoration img/decroations img32.jpg",
     "verified": true
   },
   {
@@ -326,7 +326,7 @@
     "rating": 4.3,
     "starting_price": 65000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/partypopper/600/400",
+    "image": "decoration img/decroations img33.jpg",
     "verified": true
   },
   {
@@ -336,7 +336,7 @@
     "rating": 4.2,
     "starting_price": 60000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/joyplanner/600/400",
+    "image": "decoration img/decroations img34.jpg",
     "verified": true
   },
   {
@@ -346,7 +346,7 @@
     "rating": 4.1,
     "starting_price": 55000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/nayyerdecor/600/400",
+    "image": "decoration img/decroations img35.jpg",
     "verified": true
   },
   {
@@ -356,7 +356,7 @@
     "rating": 4.6,
     "starting_price": 120000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/luxorbanquet/600/400",
+    "image": "decoration img/decroations img36.jpg",
     "verified": true
   },
   {
@@ -366,7 +366,7 @@
     "rating": 4.5,
     "starting_price": 100000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/libertyballroom/600/400",
+    "image": "decoration img/decroations img37.jpg",
     "verified": true
   },
   {
@@ -376,7 +376,7 @@
     "rating": 4.4,
     "starting_price": 70000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/siddiquitariq/600/400",
+    "image": "decoration img/decroations img38.jpg",
     "verified": true
   },
   {
@@ -386,7 +386,7 @@
     "rating": 4.3,
     "starting_price": 75000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/elitetariq/600/400",
+    "image": "decoration img/decroations img39.jpg",
     "verified": true
   },
   {
@@ -396,7 +396,7 @@
     "rating": 4.2,
     "starting_price": 55000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/tariqdecor/600/400",
+    "image": "decoration img/decroations img40.jpg",
     "verified": true
   },
   {
@@ -406,7 +406,7 @@
     "rating": 4.5,
     "starting_price": 70000,
     "price_type": "project",
-    "image": "https://picsum.photos/seed/kitchencorner/600/400",
+    "image": "decoration img/decroations img41.jpg",
     "verified": true
   },
   {
@@ -416,7 +416,7 @@
     "rating": 4.4,
     "starting_price": 65000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/eventart/600/400",
+    "image": "decoration img/decroations img42.jpg",
     "verified": true
   },
   {
@@ -426,7 +426,7 @@
     "rating": 4.3,
     "starting_price": 60000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/aatimintl/600/400",
+    "image": "decoration img/decroations img43.jpg",
     "verified": true
   },
   {
@@ -436,7 +436,7 @@
     "rating": 4.2,
     "starting_price": 55000,
     "price_type": "project",
-    "image": "https://picsum.photos/seed/alghani/600/400",
+    "image": "decoration img/decroations img44.jpg",
     "verified": true
   },
   {
@@ -446,7 +446,7 @@
     "rating": 4.2,
     "starting_price": 58000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/royalnnevents/600/400",
+    "image": "decoration img/decroations img45.jpg",
     "verified": true
   },
   {
@@ -456,7 +456,7 @@
     "rating": 4.7,
     "starting_price": 55000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/moderndecorative/600/400",
+    "image": "decoration img/decroations img46.jpg",
     "verified": true
   },
   {
@@ -466,7 +466,7 @@
     "rating": 4.0,
     "starting_price": 48000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/elitenkdecor/600/400",
+    "image": "decoration img/decroations img47.jpg",
     "verified": true
   },
   {
@@ -476,7 +476,7 @@
     "rating": 4.2,
     "starting_price": 50000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/royalnkevents/600/400",
+    "image": "decoration img/decroations img48.jpg",
     "verified": true
   },
   {
@@ -486,7 +486,7 @@
     "rating": 3.9,
     "starting_price": 42000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/stardecornk/600/400",
+    "image": "decoration img/decroations img49.jpg",
     "verified": true
   },
   {
@@ -496,7 +496,7 @@
     "rating": 4.1,
     "starting_price": 45000,
     "price_type": "package",
-    "image": "https://picsum.photos/seed/tajdecor/600/400",
+    "image": "decoration img/decroations img50.jpg",
     "verified": true
   }
 ]
