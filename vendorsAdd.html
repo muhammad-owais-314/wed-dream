@@ -13,8 +13,6 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
   <style>
     :root {
@@ -203,6 +201,7 @@
     .btn-submit:hover { transform:translateY(-2px); box-shadow:0 12px 40px rgba(185,59,86,0.45); }
     .btn-submit:active { transform:translateY(0); }
     .btn-submit i { font-size:15px; }
+    .btn-submit:disabled { opacity:.6; cursor:not-allowed; transform:none; }
 
     /* Toast */
   .wd-toast {
@@ -245,6 +244,28 @@
     @keyframes spin { to { transform:rotate(360deg); } }
     .loading-overlay p { color:rgba(255,255,255,0.6); font-size:13px; letter-spacing:2px; text-transform:uppercase; }
 
+    /* Field error text */
+    .field-error { color:#e07a8f; font-size:11px; margin-top:5px; letter-spacing:.3px; }
+
+    /* Login gate */
+    .login-gate-banner{
+      display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+      background:rgba(185,59,86,0.08); border:1px solid rgba(185,59,86,0.35);
+      border-radius:12px; padding:18px 22px; margin-bottom:32px;
+    }
+    .login-gate-banner i.fa-lock{font-size:22px;color:var(--rose);flex-shrink:0;}
+    .login-gate-title{font-size:13.5px;font-weight:600;color:#fff;margin-bottom:3px;}
+    .login-gate-msg{font-size:12px;color:rgba(255,255,255,0.55);line-height:1.5;max-width:420px;}
+    .login-gate-btn{
+      margin-left:auto; background:linear-gradient(135deg,var(--rose) 0%,#8a1f34 100%);
+      color:#fff; text-decoration:none; padding:10px 22px; border-radius:8px;
+      font-size:12px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase;
+      display:inline-flex; align-items:center; gap:8px; white-space:nowrap;
+      transition:transform .25s, box-shadow .25s;
+    }
+    .login-gate-btn:hover{transform:translateY(-2px); box-shadow:0 10px 30px rgba(185,59,86,0.4); color:#fff;}
+    fieldset[disabled] { opacity:.45; pointer-events:none; }
+
     /* Responsive */
     @media(max-width:768px) {
       .form-card { padding:30px 20px; }
@@ -266,6 +287,9 @@
     <div class="vr-badge"><i class="fa-solid fa-store"></i> Vendor Registration</div>
     <h1>List Your<span>Business</span></h1>
     <p class="vr-sub">Join Karachi's most trusted wedding platform and connect with thousands of couples planning their dream day.</p>
+    <p class="vr-sub" style="margin-top:8px;">
+      Already applied? <a href="my-applications.html" style="color:var(--gold);text-decoration:none;font-weight:600;">Track your application <i class="fa-solid fa-arrow-right" style="font-size:10px;"></i></a>
+    </p>
   </div>
 </section>
 
@@ -454,7 +478,7 @@
             </div>
 
             <div class="text-center">
-              <button type="submit" class="btn-submit">
+              <button type="submit" class="btn-submit" id="submitBtn">
                 <i class="fa-solid fa-paper-plane"></i> Submit for Review
               </button>
             </div>
@@ -488,9 +512,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-// ── EmailJS init — replace with your real keys ──
-emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
-
 // ── Inject Navbar & Footer ──
 $(document).ready(() => {
   $.get('navebar.html', data => {
@@ -571,122 +592,13 @@ function showToast(type, title, msg) {
   setTimeout(() => toast.classList.remove('show'), 5000);
 }
 
-// ── Form submit ──
-document.getElementById('vendorForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
+// ── Session helper (reads the same wd_session your navbar/login system writes) ──
+function wdGetSession() {
+  try { return JSON.parse(localStorage.getItem('wd_session') || 'null'); }
+  catch (err) { return null; }
+}
 
-  // Basic validation
-  const required = ['vendorType','businessName','area','address','phone','contactEmail','startingPrice','description','contactName'];
-  let valid = true;
-  required.forEach(id => {
-    const el = document.getElementById(id);
-    if (!el.value.trim()) { el.style.borderColor = 'rgba(185,59,86,0.6)'; valid = false; }
-    else el.style.borderColor = '';
-  });
-  if (!document.getElementById('agreeTerms').checked) {
-    showToast('error','Please Agree','Accept the terms & conditions to continue.'); return;
-  }
-  if (!valid) { showToast('error','Missing Fields','Please fill all required fields.'); return; }
-
-  // Build data object (matches JSON structure)
-  const packages = getPackages();
-  const features = getChecked('featuresGrid');
-  const otherFeatures = document.getElementById('otherFeatures').value.trim();
-  if (otherFeatures) features.push(...otherFeatures.split(',').map(s=>s.trim()).filter(Boolean));
-
-  const vendorData = {
-    name:             document.getElementById('businessName').value.trim(),
-    category:         document.getElementById('vendorType').value,
-    area:             document.getElementById('area').value,
-    address:          document.getElementById('address').value.trim(),
-    phone:            document.getElementById('phone').value.trim(),
-    whatsapp:         document.getElementById('whatsapp').value.trim(),
-    contactEmail:     document.getElementById('contactEmail').value.trim(),
-    social:           document.getElementById('social').value.trim(),
-    starting_price:   document.getElementById('startingPrice').value,
-    capacity:         document.getElementById('capacity').value,
-    parking_capacity: document.getElementById('parking').value,
-    packages:         packages,
-    features:         features,
-    payment_methods:  getChecked('paymentGrid'),
-    description:      document.getElementById('description').value.trim(),
-    contactName:      document.getElementById('contactName').value.trim(),
-    designation:      document.getElementById('designation').value.trim(),
-    submitted_at:     new Date().toLocaleString('en-PK')
-  };
-
-  // Format email body
-  const emailBody = `
-NEW VENDOR REGISTRATION — WED DREAM
-=====================================
-Business Name : ${vendorData.name}
-Category      : ${vendorData.category}
-Area          : ${vendorData.area}
-Address       : ${vendorData.address}
-Phone         : ${vendorData.phone}
-WhatsApp      : ${vendorData.whatsapp || '—'}
-Email         : ${vendorData.contactEmail}
-Social/Web    : ${vendorData.social || '—'}
-
-PRICING & CAPACITY
-Starting Price : PKR ${parseInt(vendorData.starting_price).toLocaleString()}
-Guest Capacity : ${vendorData.capacity || '—'}
-Parking        : ${vendorData.parking_capacity || '—'}
-
-PACKAGES
-${packages.length ? packages.map(p=>`  • ${p.name}: PKR ${parseInt(p.price).toLocaleString()}`).join('\n') : '  None provided'}
-
-FEATURES
-${features.length ? features.map(f=>`  • ${f}`).join('\n') : '  None selected'}
-
-PAYMENT METHODS
-${vendorData.payment_methods.length ? vendorData.payment_methods.join(', ') : '—'}
-
-ABOUT BUSINESS
-${vendorData.description}
-
-CONTACT PERSON
-Name        : ${vendorData.contactName}
-Designation : ${vendorData.designation || '—'}
-
-Submitted At: ${vendorData.submitted_at}
-=====================================`;
-
-  // Show loading
-  document.getElementById('loadingOverlay').classList.add('active');
-
-  try {
-    // Send via EmailJS
-    // Template params — set these up in your EmailJS template
-    await emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-      to_name:      "Wed Dream Team",
-      from_name:    vendorData.contactName,
-      from_email:   vendorData.contactEmail,
-      business_name: vendorData.name,
-      category:     vendorData.category,
-      message:      emailBody,
-      reply_to:     vendorData.contactEmail
-    });
-
-    document.getElementById('loadingOverlay').classList.remove('active');
-    showToast('success','Request Submitted!','We\'ll review your details and get back to you within 24–48 hours.');
-    document.getElementById('vendorForm').reset();
-    // uncheck all
-    document.querySelectorAll('#featuresGrid .check-item, #paymentGrid .check-item').forEach(el => {
-      el.classList.remove('selected');
-      el.querySelector('input').checked = false;
-    });
-    window.scrollTo({top:0, behavior:'smooth'});
-
-  } catch(err) {
-    document.getElementById('loadingOverlay').classList.remove('active');
-    console.error('EmailJS error:', err);
-    showToast('error','Send Failed','Something went wrong. Please try again or contact us directly.');
-  }
-});
-
-
-// ── Regex Validation (added) ──
+// ── Regex Validation ──
 const VENDOR_REGEX = {
   businessName:   /^[A-Za-z0-9\s.&'-]{3,80}$/,
   address:        /^[A-Za-z0-9\s,.\-#\/]{5,150}$/,
@@ -703,11 +615,15 @@ function setFieldError(inputEl, msg) {
   if (!errorEl) {
     errorEl = document.createElement('div');
     errorEl.className = 'field-error';
-    errorEl.style.cssText = 'color:#b93b56;font-size:11px;margin-top:5px;';
     inputEl.parentElement.appendChild(errorEl);
   }
   errorEl.textContent = msg || '';
   inputEl.style.borderColor = msg ? 'rgba(185,59,86,0.7)' : '';
+}
+
+function clearAllFieldErrors() {
+  document.querySelectorAll('.field-error').forEach(el => el.textContent = '');
+  document.querySelectorAll('#vendorForm .form-control, #vendorForm .form-select').forEach(el => el.style.borderColor = '');
 }
 
 function checkField(id, regex, requiredMsg, invalidMsg) {
@@ -719,10 +635,19 @@ function checkField(id, regex, requiredMsg, invalidMsg) {
   return true;
 }
 
+function checkSelect(id, requiredMsg) {
+  const el = document.getElementById(id);
+  if (!el.value) { setFieldError(el, requiredMsg); return false; }
+  setFieldError(el, '');
+  return true;
+}
+
 function validateVendorForm() {
   let ok = true;
-  ok = checkField('businessName', VENDOR_REGEX.businessName, 'Business name is required.', 'Enter a valid business name.') && ok;
-  ok = checkField('address', VENDOR_REGEX.address, 'Address is required.', 'Enter a valid address.') && ok;
+  ok = checkSelect('vendorType', 'Please select a category.') && ok;
+  ok = checkField('businessName', VENDOR_REGEX.businessName, 'Business name is required.', 'Enter a valid business name (3-80 characters).') && ok;
+  ok = checkSelect('area', 'Please select your area.') && ok;
+  ok = checkField('address', VENDOR_REGEX.address, 'Address is required.', 'Enter a valid address (5-150 characters).') && ok;
   ok = checkField('phone', VENDOR_REGEX.phone, 'Phone number is required.', 'Enter a valid number, e.g. 03XXXXXXXXX.') && ok;
   ok = checkField('contactEmail', VENDOR_REGEX.email, 'Email is required.', 'Enter a valid email address.') && ok;
   ok = checkField('startingPrice', VENDOR_REGEX.positiveNumber, 'Starting price is required.', 'Enter a valid price.') && ok;
@@ -731,7 +656,127 @@ function validateVendorForm() {
   return ok;
 }
 
+// ── Local "database" helpers (simulates a real backend) ──
+const VENDORS_STORAGE_KEY = 'weddream_vendor_submissions';
 
+function loadVendorSubmissions() {
+  try {
+    return JSON.parse(localStorage.getItem(VENDORS_STORAGE_KEY)) || [];
+  } catch (err) {
+    console.error('Could not read stored vendor submissions:', err);
+    return [];
+  }
+}
+
+function saveVendorSubmission(vendor) {
+  const all = loadVendorSubmissions();
+  all.push(vendor);
+  localStorage.setItem(VENDORS_STORAGE_KEY, JSON.stringify(all));
+}
+
+function generateVendorId() {
+  return 'WD-' + Date.now().toString(36).toUpperCase() + '-' + Math.floor(Math.random() * 900 + 100);
+}
+
+// Simulates a network round-trip to a real server so the UX feels genuine
+function simulateServerRequest(payload) {
+  return new Promise((resolve, reject) => {
+    const delay = 900 + Math.random() * 900; // 0.9s – 1.8s, feels like a real request
+    setTimeout(() => {
+      try {
+        saveVendorSubmission(payload);
+        resolve({ ok: true, id: payload.id });
+      } catch (err) {
+        reject(err);
+      }
+    }, delay);
+  });
+}
+
+// ── Form submit ──
+document.getElementById('vendorForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const session = wdGetSession();
+  if (!session) {
+    showToast('error','Not Logged In','You are not logged in to our website. Please login to submit a vendor application.');
+    return;
+  }
+
+  if (!validateVendorForm()) {
+    showToast('error','Missing Fields','Please check the highlighted fields and try again.');
+    document.querySelector('.field-error')?.closest('.col-12, .col-md-6, .mb-3, .mb-4')?.scrollIntoView({behavior:'smooth', block:'center'});
+    return;
+  }
+
+  if (!document.getElementById('agreeTerms').checked) {
+    showToast('error','Please Agree','Accept the terms & conditions to continue.');
+    return;
+  }
+
+  const packages = getPackages();
+  const features = getChecked('featuresGrid');
+  const otherFeatures = document.getElementById('otherFeatures').value.trim();
+  if (otherFeatures) features.push(...otherFeatures.split(',').map(s=>s.trim()).filter(Boolean));
+
+  const vendorData = {
+    id:               generateVendorId(),
+    status:           'pending',
+    name:             document.getElementById('businessName').value.trim(),
+    category:         document.getElementById('vendorType').value,
+    area:             document.getElementById('area').value,
+    address:          document.getElementById('address').value.trim(),
+    phone:            document.getElementById('phone').value.trim(),
+    whatsapp:         document.getElementById('whatsapp').value.trim(),
+    contactEmail:     session.email || document.getElementById('contactEmail').value.trim(),
+    social:           document.getElementById('social').value.trim(),
+    starting_price:   document.getElementById('startingPrice').value,
+    capacity:         document.getElementById('capacity').value,
+    parking_capacity: document.getElementById('parking').value,
+    packages:         packages,
+    features:         features,
+    payment_methods:  getChecked('paymentGrid'),
+    description:      document.getElementById('description').value.trim(),
+    contactName:      document.getElementById('contactName').value.trim(),
+    designation:      document.getElementById('designation').value.trim(),
+    submitted_at:     new Date().toISOString()
+  };
+
+  const submitBtn = document.getElementById('submitBtn');
+  submitBtn.disabled = true;
+  document.getElementById('loadingOverlay').classList.add('active');
+
+  try {
+    const result = await simulateServerRequest(vendorData);
+
+    document.getElementById('loadingOverlay').classList.remove('active');
+    submitBtn.disabled = false;
+    showToast('success','Request Submitted!', `Reference #${result.id} — we'll review your details within 24–48 hours. Track it anytime on "My Applications".`);
+    localStorage.setItem('weddream_last_applicant_email', vendorData.contactEmail);
+
+    document.getElementById('vendorForm').reset();
+    document.querySelectorAll('#featuresGrid .check-item, #paymentGrid .check-item').forEach(el => {
+      el.classList.remove('selected');
+      el.querySelector('input').checked = false;
+    });
+    // reset packages back to a single empty row
+    const pkgContainer = document.getElementById('packagesContainer');
+    pkgContainer.innerHTML = `
+      <div class="pkg-row mb-2">
+        <input type="text" class="form-control" placeholder="Package name (e.g. Silver)"/>
+        <input type="number" class="form-control" placeholder="Price PKR"/>
+        <button type="button" class="pkg-remove" onclick="removePkg(this)"><i class="fa-solid fa-xmark"></i></button>
+      </div>`;
+    clearAllFieldErrors();
+    window.scrollTo({top:0, behavior:'smooth'});
+
+  } catch(err) {
+    document.getElementById('loadingOverlay').classList.remove('active');
+    submitBtn.disabled = false;
+    console.error('Vendor submission error:', err);
+    showToast('error','Send Failed','Something went wrong. Please try again or contact us directly.');
+  }
+});
 </script>
 </body>
 </html>
